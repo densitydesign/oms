@@ -78,6 +78,8 @@ h2.section{
 
 
 .section-text{
+	position:relative;
+	z-index:2;
 	font-family:Georgia;
 	font-size:20px;
 	color:#222222;
@@ -90,4 +92,26 @@ h2.section{
 	font-style: bold;
 	margin-top:20px;
 	color:#222222;
+}
+.note{
+	font-family:Georgia;
+	position:relative;
+	position:relative;
+	z-index:1;
+	
+}
+.section-text b{
+	display:inline-block;
+	cursor:default;
+	background:transparent;
+}
+
+.bg-full{
+	background-color:#f96d6d;
+	padding-top:200px;
+	color:#FFFFFF !important;
+}
+
+.bg-full h1, .bg-full h2{
+	text-align: center;
 }
