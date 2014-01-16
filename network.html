@@ -29,6 +29,7 @@
   	</script>
   	
      <!-- Fixed navbar -->
+    
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
        
@@ -42,7 +43,8 @@
       </div>
     </div>
   
-    <div class="bg-full">
+  	
+    <section id="intro" class="intro bg-full">
     	<h2 class="section">section</h2>
     	<h1 class="title-full">Who are the actors of the controversy?</h1>
 	
@@ -72,7 +74,46 @@
 		
 		
 	</div>
-	</div>
+	</section>
+	
+	<section id="viz" class="viz">
+		
+		<div class="side-panel">
+			
+			<div class="adva-cont">
+			
+				<div class="adv-step" style="display:block;">
+					
+					<h4>STEP 1</h4>
+					<p>
+						Nevertheless, upon Stubb setting the anchor-watch after his supper was concluded; and when, accordingly, Queequeg and a forecastle seaman came on deck, no small excitement was created among the sharks; for immediately suspending the cutting stages over the side, and lowering three lanterns, so that they cast long gleams of light over the turbid sea, these two mariners, darting their long whaling-spades, kept up an incessant murdering of the sharks,* by striking the keen steel deep into their skulls, seemingly their only vital part. But in the foamy confusion of their mixed and struggling hosts, the marksmen could not always hit their mark; and this brought about new revelations of the incredible ferocity of the foe. 
+					</p>
+					
+				</div>
+			
+				<div class="adv-step">
+					
+					<h4>STEP 2</h4>
+					<p>
+						Nevertheless, upon Stubb setting the anchor-watch after his supper was concluded; and when, accordingly, Queequeg and a forecastle seaman came on deck, no small excitement was created among the sharks; for immediately suspending the cutting stages over the side, and lowering three lanterns, so that they cast long gleams of light over the turbid sea, these two mariners, darting their long whaling-spades, kept up an incessant murdering of the sharks,* by striking the keen steel deep into their skulls, seemingly their only vital part. But in the foamy confusion of their mixed and struggling hosts, the marksmen could not always hit their mark; and this brought about new revelations of the incredible ferocity of the foe. 
+					</p>
+					
+				</div>
+	
+			</div>
+		<div class="legend">
+			
+			<h4>LEGEND</h4>
+			<p>Blue is good<br/>
+			Red is bad</p>
+			
+		</div>
+			
+		</div>
+		
+		
+	</section>
+	
 	
 	<div id="protocol">
 			
@@ -84,27 +125,73 @@
 		  <ol class="carousel-indicators">
 		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
 		  </ol>
 		
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner">
-		    <div class="item">
-		    	<img src="img/protocol1.png"/>
-		    	<h3>1_TAGGING</h3>
-		    	<p>I will give you a complete account of the
-				system, and expound the actual teachings
-				of the great explorer of the truth.</p>
-		    </div>
+		    <div class="item active">
+		    	
+		    	<div class="step">
+		    		<img src="img/protocol1.png"/>
+				    	<h3>1_TAGGING</h3>
+				    	<p>I will give you a complete account of the
+						system, and expound the actual teachings
+						of the great explorer of the truth.</p>
+				    </div>
+				    
+				    <div class="step">
+		    		<img src="img/protocol1.png"/>
+				    	<h3>2_GROUPING</h3>
+				    	<p>I will give you a complete account of the
+						system, and expound the actual teachings
+						of the great explorer of the truth.</p>
+				    </div>
+				    
+				    <div class="step">
+		    		<img src="img/protocol1.png"/>
+				    	<h3>3_DANCING</h3>
+				    	<p>I will give you a complete account of the
+						system, and expound the actual teachings
+						of the great explorer of the truth.</p>
+						<button class="btn">Download Data</button>
+				    </div>
+
+		    	</div>
+		    	
+		    	
+		    	<div class="item">
+		    	
+		    	<div class="step">
+		    		<img src="img/protocol1.png"/>
+				    	<h3>4_PLANNING</h3>
+				    	<p>I will give you a complete account of the
+						system, and expound the actual teachings
+						of the great explorer of the truth.</p>
+				    </div>
+				    
+				    <div class="step">
+		    		<img src="img/protocol1.png"/>
+				    	<h3>5_TURING</h3>
+				    	<p>I will give you a complete account of the
+						system, and expound the actual teachings
+						of the great explorer of the truth.</p>
+						<button class="btn">Download Data</button>
+				    </div>
+				    
+				   <div class="step">
+		    		<img src="img/protocol1.png"/>
+				    	<h3>6_CURLING</h3>
+				    	<p>I will give you a complete account of the
+						system, and expound the actual teachings
+						of the great explorer of the truth.</p>
+				    </div>
+
+		    	</div>
+		    	
 		  </div>
 		
 		  <!-- Controls -->
-		  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-		    <span class="glyphicon glyphicon-chevron-left"></span>
-		  </a>
-		  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-		    <span class="glyphicon glyphicon-chevron-right"></span>
-		  </a>
+		  
 		</div>
 			
 	</div>
@@ -113,8 +200,14 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+
     
     <script>
+	
+	$('.carousel').carousel({
+	  "wrap":false
+	})
 	
 	$("#protocol").click(function() {
 		
@@ -131,14 +224,71 @@
 		height=$(this).position().top+4;
 		att = $(this).attr('note');
 		txt = notes[att]; 
-		$(".section-row").append('<div col-md-2 class="note" style="top:'+height+'px">'+txt+'</div>');
+		$(".section-text").append('<div class="note" style="float:right;">'+txt+'</div>');
 	},
 	
 	function() {
 		$(".note").remove();
 	})
 	
-	
+	//scroll viz div
+	fired=false;
+			
+		function fire() {
+			console.log("fire");
+			fired = true;
+			setTimeout(function(){fired=false}, 1000);		
+			return false;
+		}
+		
+	$(".viz").mousewheel(function(event){
+		
+		stat=0;
+
+    if(event.deltaY<=0 && !fired) {
+    		
+    	a=$(".adv-step:visible");
+    		
+    		if(a.next().length>0) {
+    			
+    			
+	    		fire();
+	    		stat=1;
+	    		//a.fadeOut(500,function(){a.next().fadeIn(500)});
+	    		//console.log("change to next");
+	    		
+	    		return false;
+    		}
+    		
+    		else {
+    			
+    			//go to next viz
+    			console.log("go on");
+    			fire();
+    			
+    		}
+    	}
+    	else if(event.deltaY>0 && !fired) {
+    		
+    		a=$(".adv-step:visible");
+    		
+    		
+    		if(a.prev().length>0) {
+    			fire();
+    			stat=-1;
+    			//a.fadeOut(500,function(){a.prev().fadeIn(500)});
+    			//console.log("change to prev");
+    			return false;
+    		}
+    		else {
+    			//go to next viz!
+    			console.log("go prev");
+    			fire();
+    			
+    		}
+    		
+    	}
+})
 	</script>
     
   </body>

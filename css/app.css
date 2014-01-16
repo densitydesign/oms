@@ -3,8 +3,8 @@ html{
 }
 
 body {
-  min-height: 100%;
-  padding-bottom:40px;
+  height: 100%;
+  
 }
 
 img.bg {
@@ -70,7 +70,7 @@ bottom:400px;
 	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 4px;
 	font-variant:small-caps;
-	
+	background:#FFFFFF;
 }
 
 h2.section{
@@ -110,6 +110,9 @@ h2.section{
 	position:relative;
 	position:relative;
 	z-index:1;
+	font-size:0.7em !important;
+	width:10%;
+	line-height:1em;
 	
 }
 .section-text b{
@@ -120,6 +123,7 @@ h2.section{
 
 .bg-full{
 	padding-top:100px;
+	
 }
 
 .bg-full h1, .bg-full h2{
@@ -138,6 +142,7 @@ h2.section{
 
 .section-text p{
 	width:80%;
+	
 }
 .pCanvas{
 	width:100%;
@@ -202,4 +207,80 @@ li.active a{
 	background:#ffffff !important;
 	color:#222222 !important;
 	font-weight:700;
+}
+
+.step{
+	width:33%;
+	float:left;
+	padding:20px;
+	text-align:center;
+	margin-top:100px;
+	border-left: 1px solid #fff;
+	height:80%;
+}
+
+.step:first-child{
+	border:none;
+}
+
+.step p{
+	width:80%;
+	text-align:left;
+	display:block;
+	margin:0 auto;
+
+}
+
+.carousel{
+	height: 100%;
+		width: 90%;
+	margin: 0 auto;
+}
+
+.carousel-control{
+	background:none !important;
+	display:none;
+}
+
+.carousel-inner{
+	height:100%;
+}
+
+.item{
+	height:80%;
+}
+.step-cont{
+	margin:0 auto;
+	width:auto;
+}
+section{
+	height:100%;
+}
+.side-panel{
+	width:20%;
+	padding:20px;
+	padding-top:100px;
+	border-right:1px solid #CBCCCE;
+	height:100%;
+}
+
+.adv-step{
+	display:none;
+}
+
+.adva-cont{
+	height:70%;
+	overflow:scroll;
+}
+.viz{
+	border-top:1px solid #CBCCCE;
+	border-bottom:1px solid #CBCCCE;
+}
+
+.legend{
+	border-top:1px solid #CBCCCE;
+}
+
+.protocol .btn{
+	margin-top:20px;
 }
