@@ -49,12 +49,12 @@
       </div>
     </div>
   
-    <div class="bg-intro">
-    	<h1 class="title">WHO'S WHO</h1>
-    	<img class="bg" src="img/background.jpg"/>
-	</div>
+    <div class="bg-full">
+    	<h2 class="section-full">Section</h2>
+    	<h1 class="title-full">WHO'S WHO</h1>
 	
-	<h2 class="section">Section</h2>
+	
+	
 	
 	<div class="container">
 		<div class="row section-row">
@@ -79,6 +79,8 @@
 		
 	</div>
 	
+	</div>
+	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -86,23 +88,15 @@
     
     <script>
 	
-	$("b").click(function() {
-		
-		att = $(this).attr('note');
-		
-		console.log("click")
-		if($("."+att).length>0) {
-			$("."+att).remove();
-		}
-		else {
-			
-		$(".note").remove();
-		 
+	$("b").hover(function() {
 		height=$(this).position().top+4;
-		
+		att = $(this).attr('note');
 		txt = notes[att]; 
-		$(".section-row").append('<div col-md-2 class="note '+att+'" style="top:'+height+'px">'+txt+'</div>');
-		}
+		$(".section-row").append('<div col-md-2 class="note" style="top:'+height+'px">'+txt+'</div>');
+	},
+	
+	function() {
+		$(".note").remove();
 	})
 	
 	
