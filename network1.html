@@ -64,18 +64,12 @@
 				
 				<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </p>
 				
-				<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </p>
-	
-				<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </p>
-
-				<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </p>
-
 				<!-- <div class="col-md-5 quote">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 				
 				</div> -->
 			
-				<p>Quisque volutpat condimentum <b note="velit">velit</b>. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. </p>
+				<p>Quisque volutpat condimentum <b note="velit">velit</b>. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. </p>
 		</div>
 			
 			
@@ -128,8 +122,8 @@
 	
 	<div id="protocol">
 			
-		<div class="proto-title">PROTOCOL_01</div>
-		<img class="close" src="img/cross.png"/>
+		<div class="proto-title closing">PROTOCOL_01</div>
+		<img class="close-btn closing" src="img/cross.png"/>
 		
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 		  <!-- Indicators -->
@@ -232,6 +226,10 @@
 	
 	$(document).ready(function(){
 	    
+	    $("#protocol").css("left","98%");
+	    
+	    
+	    
 	    //General interactions
 	
 		$('.carousel').carousel({
@@ -245,8 +243,11 @@
 			
 		})
 		
-		$(".close").click(function() {
-			$("#protocol").css("left","98%");
+		$(".closing").click(function() {
+			console.log($("#protocol").css("left"))
+			if($("#protocol").css("left")=="0px") {
+				$("#protocol").css("left","98%");
+			}
 		})
 		
 		
