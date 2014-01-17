@@ -280,6 +280,7 @@ li.active a{
 }
 section{
 	height:100%;
+	overflow:scroll;
 }
 .side-panel{
 	width:20%;
@@ -379,4 +380,7 @@ section{
 
 .closing{
 	cursor:pointer;
+}
+.long{
+	padding-bottom:250px;
 }

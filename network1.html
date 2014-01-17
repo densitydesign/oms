@@ -49,7 +49,7 @@
     </div>
   
   	
-    <section id="intro" class="intro bg-full">
+    <section id="intro" class="intro bg-full long">
     	<h2 class="section">section</h2>
     	<h1 class="title-full">Who are the actors of the controversy?</h1>
 	
@@ -59,6 +59,15 @@
 		<div class="row section-row">
 			<div class="col-md-10 col-md-offset-2 section-text">
 				
+				
+				<p>Lorem ipsum <b note="dolor">dolor</b> sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.  </p>
+				
+				<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </p>
+				
+				
+				<p>Lorem ipsum <b note="dolor">dolor</b> sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.  </p>
+				
+				<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </p>
 				
 				<p>Lorem ipsum <b note="dolor">dolor</b> sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.  </p>
 				
@@ -272,7 +281,7 @@
 		//=======================
 		//scroll interaction
 	        
-	    $('section').bind('scroll',chk_scroll);
+	    $('.long').bind('mousewheel',chk_scroll);
 
 
 		//general scroll behaviour
@@ -309,14 +318,21 @@
 	
 	function chk_scroll(e)
 	{
-	    console.log("section")
-	    var elem = $(e.currentTarget);
-	    
-	    if (!(elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight())) 
-	    {
-	    	console.log("section not at end")
-	        e.stopPropagation();
-	    }
+		if (timer==0) {
+		    var elem = $(e.currentTarget); 
+		    console.log(elem) 
+		    console.log(elem[0].scrollHeight - elem.scrollTop(),elem.outerHeight()) 
+		    if (!(elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight())) 
+		    {
+		    	console.log("keep scrolling!")
+		        e.stopPropagation();
+		    }
+		    else {
+		    	//timer=40;
+		    	console.log("set timer!")
+	
+		    }
+		}
 		
 	}
 	
@@ -373,9 +389,12 @@
 
   	//utility to animate transition between divs
   	function scrollToID(id, speed){
-		var offSet = 0;
-		var targetOffset = $(id).offset().top - offSet;
+
+		
+		var targetOffset = $(id).offset().top;
+		$(id).scrollTop(0);
 		$('html,body').animate({scrollTop:targetOffset}, speed);
+		
 	}
 		
 
