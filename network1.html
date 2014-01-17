@@ -252,7 +252,7 @@
 		
 		
 		$("b").hover(function() {
-			height=$(this).position().top+4;
+			height=$(this).offset().top;
 			att = $(this).attr('note');
 			txt = notes[att]; 
 			$(".section-text").append('<div class="note" style="float:right;">'+txt+'</div>');
@@ -345,12 +345,12 @@
   	//screens functions
   	
   	function intro() {
-  		scrollToID("#intro",300);
+  		scrollToID("#intro",600);
   		
   	}
   	
   	function viz() {
-  		scrollToID("#viz",300);
+  		scrollToID("#viz",600);
   		a=$(".adv-step:visible");
   		if (!a.hasClass("step1")) {
   			a.fadeOut(500,function(){$(".step1").fadeIn(500)});
