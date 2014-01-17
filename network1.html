@@ -248,7 +248,11 @@
 		
 		$("#protocol").click(function() {
 			
-			if($("#protocol").position().left >0) $("#protocol").css("left",0);
+			if($("#protocol").position().left >0){ 
+				$("#protocol").css("left",0);
+				$(".close-btn").css('-webkit-transform','rotate(90deg)');
+				$(".close-btn").css('-moz-transform','rotate(90deg)');
+			}
 			
 		})
 		
@@ -256,15 +260,17 @@
 			console.log($("#protocol").css("left"))
 			if($("#protocol").css("left")=="0px") {
 				$("#protocol").css("left","98%");
+				$(".close-btn").css('-webkit-transform','rotate(45deg)');
+				$(".close-btn").css('-moz-transform','rotate(45deg)');
 			}
 		})
 		
 		
 		$("b").hover(function() {
-			height=$(this).offset().top;
+			height=$(this).position().top;
 			att = $(this).attr('note');
 			txt = notes[att]; 
-			$(".section-text").append('<div class="note" style="float:right;">'+txt+'</div>');
+			$(".section-text").append('<div class="note" style="top:'+height+'px">'+txt+'</div>');
 		},
 		
 		function() {
@@ -305,7 +311,6 @@
 		  
 		  //timeout to check scroll updates
 		  timeoutid = setInterval('checkTime();', 100);
-
 	});
 	
 	//timing for scroll update
