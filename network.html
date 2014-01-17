@@ -206,91 +206,7 @@
     
     <script>
 	
-	var scrollLevel = 0;
-	var step = 0;
-	timer=0;
-	
-  	
-  
-  window.onmousewheel = document.onmousewheel = function(e) {
-	
-		var e = window.event || e; // old IE support
-		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-		scrollLevel -=delta
-		if(scrollLevel<0) scrollLevel=0;
-		if (scrollLevel>1000) scrollLevel=1000;
-		
-		checkLevel();
-		timer++;
-    if (e.preventDefault)
-        e.preventDefault();
-    e.returnValue = false;
-};
-
-  
-  	var checkPoints = {
-  		"0":"intro(0)",
-  		"120":"viz(120)",
-  		"240":"step2(240)",
-  		"1000":"boh()"
-  	};
-  	
-  	function checkLevel() {
-  		
-  		checks = d3.keys(checkPoints)
-  		console.log(checks, scrollLevel)
-  		curr=0
-  		for (i = 0; i< checks.length; i++) {
-  			if(scrollLevel < checks[i]) {
-  				curr = i-1;
-  				break;
-  			}
-  		}
-  		console.log(curr);
-  		maxRun=parseInt((checks[checks.length-2])) + 30;
-  		if(scrollLevel>maxRun) {
-  			scrollLevel=maxRun;
-  		}
-  		if(step!=curr) {
-  			eval(checkPoints[checks[curr]])
-  			step=curr;
-  		}
-  	}
-  	
-  	
-  	function intro(pos) {
-  		scrollToID("#intro",300);
-  		//scrollLevel=pos;
-  	}
-  	
-  	function viz(pos) {
-  		scrollToID("#viz",300);
-  		a=$(".adv-step:visible");
-  		if (!a.hasClass("step1")) {
-  			a.fadeOut(500,function(){$(".step1").fadeIn(500)});
-  		}
-  		//scrollLevel=pos;
-  	}
-  	
-  	function step2(pos) {
-  		a=$(".adv-step:visible");
-  		if (!a.hasClass("step2")) {
-  			a.fadeOut(500,function(){$(".step2").fadeIn(500)});
-  		}
-  		//scrollLevel=pos;
-  	}
-  	
-  	
-  	
-  	
-  	function scrollToID(id, speed){
-		var offSet = 0;
-		var targetOffset = $(id).offset().top - offSet;
-		$('html,body').animate({scrollTop:targetOffset}, speed);
-	}
-	  	
-  	
-  	
+	//General interactions
 	
 	$('.carousel').carousel({
 	  "wrap":false,
@@ -325,19 +241,124 @@
 	});
 	
 	
-	timeoutid = setInterval('checkTime();', 10);
+	
+	//scroll
+	
+	var step = 0;
+	var timer=0;
+	var direction=0;
+	
+  	
+  
+  window.onmousewheel = document.onmousewheel = function(e) {
+		if(timer==0) {
+			timer=20;
+			
+			var e = window.event || e; // old IE support
+			var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+			console.log(delta)
+			if(delta<0) direction="down"
+			else if(delta>0) direction="up";
+			
+			checkLevel();
+		}
+    if (e.preventDefault)
+        e.preventDefault();
+    e.returnValue = false;
+  };
+   
+
+
+  
+  	var checkPoints = [
+  		"intro()",
+  		"viz()",
+  		"step2()"
+  		];
+
+  	function checkLevel() {
+  		
+  	
+  		
+  		if (direction=="down" && step < checkPoints.length-1) {
+  			step++;
+  			eval(checkPoints[step]);
+  		}
+  		else if(direction=="up" && step>0) {
+  			step--;
+  			eval(checkPoints[step]);
+  			
+  		}
+  		
+  		// checks = d3.keys(checkPoints)
+  		// console.log(checks, scrollLevel)
+  		// curr=0
+  		// for (i = 0; i< checks.length; i++) {
+  			// if(scrollLevel < checks[i]) {
+  				// curr = i-1;
+  				// break;
+  			// }
+  		// }
+  		// console.log(curr);
+  		// maxRun=parseInt((checks[checks.length-2])) + 30;
+  		// if(scrollLevel>maxRun) {
+  			// scrollLevel=maxRun;
+  		// }
+  		// if(step!=curr) {
+  			// eval(checkPoints[checks[curr]])
+  			// step=curr;
+  		// }
+  	}
+  	
+  	
+  	function intro() {
+  		scrollToID("#intro",300);
+  		//scrollLevel=pos;
+  	}
+  	
+  	function viz() {
+  		scrollToID("#viz",300);
+  		a=$(".adv-step:visible");
+  		if (!a.hasClass("step1")) {
+  			a.fadeOut(500,function(){$(".step1").fadeIn(500)});
+  		}
+  		//scrollLevel=pos;
+  	}
+  	
+  	function step2() {
+  		a=$(".adv-step:visible");
+  		if (!a.hasClass("step2")) {
+  			a.fadeOut(500,function(){$(".step2").fadeIn(500)});
+  		}
+  		//scrollLevel=pos;
+  	}
+  	
+  	
+  	
+  	
+  	function scrollToID(id, speed){
+		var offSet = 0;
+		var targetOffset = $(id).offset().top - offSet;
+		$('html,body').animate({scrollTop:targetOffset}, speed);
+	}
+	  	
+	
+	
+	timeoutid = setInterval('checkTime();', 100);
 	function checkTime(){
 		
 		if (timer>0) {
 			timer--;
 			if (timer == 0) {
-				checks = d3.keys(checkPoints)
-				scrollLevel = checks[step];
+
+				scrollLevel = checkPoints[step];
 			}
 		}
 		
 		
 	}
+	
+
 		
 	// $(".viz").mousewheel(function(event){
 // 		
