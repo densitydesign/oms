@@ -82,7 +82,7 @@
 			
 			<div class="adva-cont">
 			
-				<div class="adv-step" style="display:block;">
+				<div class="adv-step step1" style="display:block;">
 					
 					<h4>STEP 1</h4>
 					<p>
@@ -91,7 +91,7 @@
 					
 				</div>
 			
-				<div class="adv-step">
+				<div class="adv-step step2">
 					
 					<h4>STEP 2</h4>
 					<p>
@@ -201,9 +201,96 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/d3.v3.min.js"></script>
 
     
     <script>
+	
+	var scrollLevel = 0;
+	var step = 0;
+	timer=0;
+	
+  	
+  
+  window.onmousewheel = document.onmousewheel = function(e) {
+	
+		var e = window.event || e; // old IE support
+		var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+		scrollLevel -=delta
+		if(scrollLevel<0) scrollLevel=0;
+		if (scrollLevel>1000) scrollLevel=1000;
+		
+		checkLevel();
+		timer++;
+    if (e.preventDefault)
+        e.preventDefault();
+    e.returnValue = false;
+};
+
+  
+  	var checkPoints = {
+  		"0":"intro(0)",
+  		"120":"viz(120)",
+  		"240":"step2(240)",
+  		"1000":"boh()"
+  	};
+  	
+  	function checkLevel() {
+  		
+  		checks = d3.keys(checkPoints)
+  		console.log(checks, scrollLevel)
+  		curr=0
+  		for (i = 0; i< checks.length; i++) {
+  			if(scrollLevel < checks[i]) {
+  				curr = i-1;
+  				break;
+  			}
+  		}
+  		console.log(curr);
+  		maxRun=parseInt((checks[checks.length-2])) + 30;
+  		if(scrollLevel>maxRun) {
+  			scrollLevel=maxRun;
+  		}
+  		if(step!=curr) {
+  			eval(checkPoints[checks[curr]])
+  			step=curr;
+  		}
+  	}
+  	
+  	
+  	function intro(pos) {
+  		scrollToID("#intro",300);
+  		//scrollLevel=pos;
+  	}
+  	
+  	function viz(pos) {
+  		scrollToID("#viz",300);
+  		a=$(".adv-step:visible");
+  		if (!a.hasClass("step1")) {
+  			a.fadeOut(500,function(){$(".step1").fadeIn(500)});
+  		}
+  		//scrollLevel=pos;
+  	}
+  	
+  	function step2(pos) {
+  		a=$(".adv-step:visible");
+  		if (!a.hasClass("step2")) {
+  			a.fadeOut(500,function(){$(".step2").fadeIn(500)});
+  		}
+  		//scrollLevel=pos;
+  	}
+  	
+  	
+  	
+  	
+  	function scrollToID(id, speed){
+		var offSet = 0;
+		var targetOffset = $(id).offset().top - offSet;
+		$('html,body').animate({scrollTop:targetOffset}, speed);
+	}
+	  	
+  	
+  	
 	
 	$('.carousel').carousel({
 	  "wrap":false,
@@ -238,7 +325,19 @@
 	});
 	
 	
-	
+	timeoutid = setInterval('checkTime();', 10);
+	function checkTime(){
+		
+		if (timer>0) {
+			timer--;
+			if (timer == 0) {
+				checks = d3.keys(checkPoints)
+				scrollLevel = checks[step];
+			}
+		}
+		
+		
+	}
 		
 	// $(".viz").mousewheel(function(event){
 // 		
