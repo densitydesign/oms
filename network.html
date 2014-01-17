@@ -206,7 +206,8 @@
     <script>
 	
 	$('.carousel').carousel({
-	  "wrap":false
+	  "wrap":false,
+	  "interval":false
 	})
 	
 	$("#protocol").click(function() {
@@ -231,64 +232,62 @@
 		$(".note").remove();
 	})
 	
-	//scroll viz div
-	fired=false;
-			
-		function fire() {
-			console.log("fire");
-			fired = true;
-			setTimeout(function(){fired=false}, 1000);		
-			return false;
-		}
 		
-	$(".viz").mousewheel(function(event){
+	$("#protocol").mousewheel(function(event){
+		return false;
+	});
+	
+	
+	
 		
-		stat=0;
-
-    if(event.deltaY<=0 && !fired) {
-    		
-    	a=$(".adv-step:visible");
-    		
-    		if(a.next().length>0) {
-    			
-    			
-	    		fire();
-	    		stat=1;
-	    		//a.fadeOut(500,function(){a.next().fadeIn(500)});
-	    		//console.log("change to next");
-	    		
-	    		return false;
-    		}
-    		
-    		else {
-    			
-    			//go to next viz
-    			console.log("go on");
-    			fire();
-    			
-    		}
-    	}
-    	else if(event.deltaY>0 && !fired) {
-    		
-    		a=$(".adv-step:visible");
-    		
-    		
-    		if(a.prev().length>0) {
-    			fire();
-    			stat=-1;
-    			//a.fadeOut(500,function(){a.prev().fadeIn(500)});
-    			//console.log("change to prev");
-    			return false;
-    		}
-    		else {
-    			//go to next viz!
-    			console.log("go prev");
-    			fire();
-    			
-    		}
-    		
-    	}
-})
+	// $(".viz").mousewheel(function(event){
+// 		
+		// stat=0;
+// 
+    // if(event.deltaY<=0 && !fired) {
+//     		
+    	// a=$(".adv-step:visible");
+//     		
+    		// if(a.next().length>0) {
+//     			
+//     			
+	    		// fire();
+	    		// stat=1;
+	    		// //a.fadeOut(500,function(){a.next().fadeIn(500)});
+	    		// //console.log("change to next");
+// 	    		
+	    		// return false;
+    		// }
+//     		
+    		// else {
+//     			
+    			// //go to next viz
+    			// console.log("go on");
+    			// fire();
+//     			
+    		// }
+    	// }
+    	// else if(event.deltaY>0 && !fired) {
+//     		
+    		// a=$(".adv-step:visible");
+//     		
+//     		
+    		// if(a.prev().length>0) {
+    			// fire();
+    			// stat=-1;
+    			// //a.fadeOut(500,function(){a.prev().fadeIn(500)});
+    			// //console.log("change to prev");
+    			// return false;
+    		// }
+    		// else {
+    			// //go to next viz!
+    			// console.log("go prev");
+    			// fire();
+//     			
+    		// }
+//     		
+    	// }
+// })
 	</script>
     
   </body>
