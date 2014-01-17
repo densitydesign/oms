@@ -59,6 +59,12 @@
 				
 				<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </p>
 				
+				<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </p>
+	
+				<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </p>
+
+				<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </p>
+
 				<!-- <div class="col-md-5 quote">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 				
@@ -206,80 +212,112 @@
     
     <script>
 	
-	//General interactions
 	
-	$('.carousel').carousel({
-	  "wrap":false,
-	  "interval":false
-	})
-	
-	$("#protocol").click(function() {
-		
-		if($("#protocol").position().left >0) $("#protocol").css("left",0);
-		
-	})
-	
-	$(".close").click(function() {
-		$("#protocol").css("left","98%");
-	})
-	
-	
-	$("b").hover(function() {
-		height=$(this).position().top+4;
-		att = $(this).attr('note');
-		txt = notes[att]; 
-		$(".section-text").append('<div class="note" style="float:right;">'+txt+'</div>');
-	},
-	
-	function() {
-		$(".note").remove();
-	})
-	
-		
-	$("#protocol").mousewheel(function(event){
-		return false;
-	});
-	
-	
-	
-	//scroll
-	
-	var step = 0;
-	var timer=0;
-	var direction=0;
-	
-  	
-  
-  window.onmousewheel = document.onmousewheel = function(e) {
-		if(timer==0) {
-			timer=20;
-			
-			var e = window.event || e; // old IE support
-			var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-			console.log(delta)
-			if(delta<0) direction="down"
-			else if(delta>0) direction="up";
-			
-			checkLevel();
-		}
-    if (e.preventDefault)
-        e.preventDefault();
-    e.returnValue = false;
-  };
-   
 
-
-  
   	var checkPoints = [
   		"intro()",
   		"viz()",
   		"step2()"
   		];
 
-  	function checkLevel() {
-  		
-  	
-  		
+	 var step = 0;
+		var timer=0;
+		var direction=0;
+	
+	
+	$(document).ready(function(){
+	    
+	    //General interactions
+	
+		$('.carousel').carousel({
+		  "wrap":false,
+		  "interval":false
+		})
+		
+		$("#protocol").click(function() {
+			
+			if($("#protocol").position().left >0) $("#protocol").css("left",0);
+			
+		})
+		
+		$(".close").click(function() {
+			$("#protocol").css("left","98%");
+		})
+		
+		
+		$("b").hover(function() {
+			height=$(this).position().top+4;
+			att = $(this).attr('note');
+			txt = notes[att]; 
+			$(".section-text").append('<div class="note" style="float:right;">'+txt+'</div>');
+		},
+		
+		function() {
+			$(".note").remove();
+		})
+		
+			
+		$("#protocol").mousewheel(function(event){
+			return false;
+		});
+		
+	
+	
+		//=======================
+		//scroll
+	        
+	    $('section').bind('scroll',chk_scroll);
+
+
+		//general scroll behaviour
+		  window.onmousewheel = document.onmousewheel = function(e) {
+				if(timer==0) {
+					timer=20;
+					
+					var e = window.event || e; // old IE support
+					var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+					console.log(delta)
+					if(delta<0) direction="down"
+					else if(delta>0) direction="up";
+					
+					checkLevel();
+				}
+		    if (e.preventDefault)
+		        e.preventDefault();
+		    e.returnValue = false;
+		  };
+		  
+		  //timeout to check scroll updates
+		  timeoutid = setInterval('checkTime();', 100);
+	  
+	  
+	});
+	
+	//timing for scroll update
+	function checkTime(){
+		
+		if (timer>0) {
+			timer--;
+		}
+		
+	}
+	
+	function chk_scroll(e)
+	{
+	    console.log("section")
+	    var elem = $(e.currentTarget);
+	    
+	    if (!(elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight())) 
+	    {
+	    	console.log("section not at end")
+	        e.stopPropagation();
+	    }
+		
+	}
+	
+	//load next or previous screen according to scroll direction
+	function checkLevel() {
+
   		if (direction=="down" && step < checkPoints.length-1) {
   			step++;
   			eval(checkPoints[step]);
@@ -289,31 +327,22 @@
   			eval(checkPoints[step]);
   			
   		}
-  		
-  		// checks = d3.keys(checkPoints)
-  		// console.log(checks, scrollLevel)
-  		// curr=0
-  		// for (i = 0; i< checks.length; i++) {
-  			// if(scrollLevel < checks[i]) {
-  				// curr = i-1;
-  				// break;
-  			// }
-  		// }
-  		// console.log(curr);
-  		// maxRun=parseInt((checks[checks.length-2])) + 30;
-  		// if(scrollLevel>maxRun) {
-  			// scrollLevel=maxRun;
-  		// }
-  		// if(step!=curr) {
-  			// eval(checkPoints[checks[curr]])
-  			// step=curr;
-  		// }
   	}
+  	
+  	//end scroll
+  	//====================
+  	
+  	
+  	
+  	
+  	
+  	//====================
+  	//screens functions
   	
   	
   	function intro() {
   		scrollToID("#intro",300);
-  		//scrollLevel=pos;
+  		
   	}
   	
   	function viz() {
@@ -322,7 +351,7 @@
   		if (!a.hasClass("step1")) {
   			a.fadeOut(500,function(){$(".step1").fadeIn(500)});
   		}
-  		//scrollLevel=pos;
+  		
   	}
   	
   	function step2() {
@@ -330,84 +359,22 @@
   		if (!a.hasClass("step2")) {
   			a.fadeOut(500,function(){$(".step2").fadeIn(500)});
   		}
-  		//scrollLevel=pos;
+  		
   	}
   	
-  	
-  	
-  	
+  	//end screens functions
+  	//=====================
+
+
+
+  	//utility to animate transition between divs
   	function scrollToID(id, speed){
 		var offSet = 0;
 		var targetOffset = $(id).offset().top - offSet;
 		$('html,body').animate({scrollTop:targetOffset}, speed);
 	}
-	  	
-	
-	
-	timeoutid = setInterval('checkTime();', 100);
-	function checkTime(){
 		
-		if (timer>0) {
-			timer--;
-			if (timer == 0) {
 
-				scrollLevel = checkPoints[step];
-			}
-		}
-		
-		
-	}
-	
-
-		
-	// $(".viz").mousewheel(function(event){
-// 		
-		// stat=0;
-// 
-    // if(event.deltaY<=0 && !fired) {
-//     		
-    	// a=$(".adv-step:visible");
-//     		
-    		// if(a.next().length>0) {
-//     			
-//     			
-	    		// fire();
-	    		// stat=1;
-	    		// //a.fadeOut(500,function(){a.next().fadeIn(500)});
-	    		// //console.log("change to next");
-// 	    		
-	    		// return false;
-    		// }
-//     		
-    		// else {
-//     			
-    			// //go to next viz
-    			// console.log("go on");
-    			// fire();
-//     			
-    		// }
-    	// }
-    	// else if(event.deltaY>0 && !fired) {
-//     		
-    		// a=$(".adv-step:visible");
-//     		
-//     		
-    		// if(a.prev().length>0) {
-    			// fire();
-    			// stat=-1;
-    			// //a.fadeOut(500,function(){a.prev().fadeIn(500)});
-    			// //console.log("change to prev");
-    			// return false;
-    		// }
-    		// else {
-    			// //go to next viz!
-    			// console.log("go prev");
-    			// fire();
-//     			
-    		// }
-//     		
-    	// }
-// })
 	</script>
     
   </body>
