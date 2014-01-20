@@ -11,7 +11,7 @@
 	 	teamBuffer = 20,
 	 	transitionDuration = 750,
 	 	fontSize = 12,
-	 	fontFamily = 'Arial';
+	 	fontFamily = 'Georgia';
 
 
     function slopeChart(selection){
@@ -38,8 +38,9 @@
 				    .append("text")
 				    .attr('x', function(d){return x(d) + (x.rangeBand()/2)})
 				    .attr('y', 20)
-				    .attr('font-family',fontFamily)
+				    .attr('font-family','Montserrat')
 				    .attr('font-size',13)
+				    .attr('font-weight',700)
 				    .attr('text-anchor','middle')
 				    .text(function(d){return d});
 
@@ -58,7 +59,7 @@
 
 				var yScale = d3.scale.linear()
 				.domain([d3.min(valuesList),d3.max(valuesList)])
-				.range([height-300,60]);
+				.range([height-20,60]);
 
 				_data.forEach(function(d){
 					d.yCoord = yScale(d['value'])
@@ -66,6 +67,18 @@
 				})
 
 				adjustYCoords(_data)
+
+				valuesList = _data.map(function(d){
+					return d['yCoord']
+				})
+
+				yScale = d3.scale.linear()
+				.domain([d3.min(valuesList),d3.max(valuesList)])
+				.range([60, height-20]);
+
+				_data.forEach(function(d){
+					d.yCoord = yScale(d.yCoord)
+				})
 
 			}
 
@@ -92,21 +105,26 @@
 			textGroup	
 				.enter()
 				.append("text")
+				.on("click", function(d){
+					console.log("ciao")
+				})
+				.style('cursor','pointer')
 				.attr("x",function(d){return x(d.step)+(x.rangeBand()/2)})
 				.attr('font-family',fontFamily)
 				.attr('font-size',fontSize)
 				//.attr('y', 0)
 				.attr('y', function(d,i){return d.yCoord;})
 				.attr("text-anchor", "middle")
-				.text(function(d) { return d['key'] + " " + d['value'] ; })
+				.html(function(d) { return d['key'] + " <tspan style='font-weight:bold;'>" + d['value'] + " </tspan>"; })
 					.transition()
 					.duration(transitionDuration)
 					.delay(100)
 					.attr('y', function(d,i){return d.yCoord;})
 
 
+
 			textGroup
-				.text(function(d) { return d['key'] + " " + d['value'] ; })
+				.html(function(d) { return d['key'] + " <tspan style='font-weight:bold;'>" + d['value'] + " </tspan>"; })
 				.transition()
 				.duration(transitionDuration)
 					.attr('y', function(d,i){return d.yCoord;});
@@ -123,27 +141,19 @@
 
 			var line = d3.svg.line()
 				.x(function(d) { return x(d.step)+(x.rangeBand()/2); })
-				.y(function(d) { return (d.yCoord+5); })
+				.y(function(d) { return (d.yCoord+3); })
 
 
 			var linesGroup = chart.selectAll('.lineGroup').data(nestValues)
 
 
 			linesGroup.enter().append("path")
-				.filter(function(d){
-					if(wordStep.length > 0){
-						var check = wordStep.indexOf(d['key']);
-						return check >= 0
-					}
-					else{return true}
-				})
 				.attr("class",function(d){return "g_" + d.key.replace(/\s+/g, '') + " lineGroup"})
 				.attr("d", function(d) { return line(d.values)})
 				.attr("fill", "none")
+				.attr("stroke-opacity", 0)
 				.attr("stroke", "grey")
 				.attr("stroke-width", 0.5)
-
-			linesGroup
 				.filter(function(d){
 					if(wordStep.length > 0){
 						var check = wordStep.indexOf(d['key']);
@@ -151,9 +161,21 @@
 					}
 					else{return true}
 				})
+				.attr("stroke-opacity", 0.7)
+
+			linesGroup
 				.transition()
 				.duration(transitionDuration)
 					.attr("d", function(d) { return line(d.values)})
+					.attr("stroke-opacity", 0)
+					.filter(function(d){
+					if(wordStep.length > 0){
+							var check = wordStep.indexOf(d['key']);
+							return check >= 0
+						}
+						else{return true}
+					})
+					.attr("stroke-opacity", 0.7)
 
 			linesGroup.exit().remove()
 
@@ -162,14 +184,6 @@
 			pointsGroup
 				.enter()
 				.append("g")
-				.filter(function(d){
-					if(wordStep.length > 0){
-
-						var check = wordStep.indexOf(d['key']);
-						return check >= 0
-					}
-					else{return true}
-				})
 				.attr("class",function(d){return "g_" + d.key.replace(/\s+/g, '') + " pointGroup"})
 
 			pointsGroup.exit().remove()
@@ -179,6 +193,13 @@
 
 			pointGroup
 				.enter().append("path")
+				// .attr("d", d3.svg.symbol()
+				// 	.size(function(d) { return 20; })
+				// 	.type(function(d) { return "circle"; }))
+				.attr("d", "M0,0 l6,0 A3,3 0 0,1 0,0 z")
+				.attr("fill", "grey")
+				.attr("fill-opacity", 0)
+				.attr("transform", function(d) { return "translate(" + (x(d.step)+(x.rangeBand()/2) -3) + "," + (d.yCoord+2) + ")"; })
 				.filter(function(d){
 					if(wordStep.length > 0){
 
@@ -187,13 +208,13 @@
 					}
 					else{return true}
 				})
-				.attr("d", d3.svg.symbol()
-					.size(function(d) { return 20; })
-					.type(function(d) { return "circle"; }))
-				.attr("fill", "grey")
-				.attr("transform", function(d) { return "translate(" + (x(d.step)+(x.rangeBand()/2)) + "," + (d.yCoord+5) + ")"; });
+				.attr("fill-opacity", 0.7)
 
 			pointGroup
+				.transition()
+				.duration(transitionDuration)
+				.attr("transform", function(d) { return "translate(" + (x(d.step)+(x.rangeBand()/2) -3) + "," + (d.yCoord+2) + ")"; })
+				.attr("fill-opacity", 0)
 				.filter(function(d){
 					if(wordStep.length > 0){
 
@@ -202,9 +223,8 @@
 					}
 					else{return true}
 				})
-				.transition()
-				.duration(transitionDuration)
-				.attr("transform", function(d) { return "translate(" + (x(d.step)+(x.rangeBand()/2)) + "," + (d.yCoord+5) + ")"; });
+				.attr("fill-opacity", 0.7)
+
 
 			pointGroup.exit().remove()
 
