@@ -1,334 +1,260 @@
-var graphWidth = 500; 
-var graphHeight = 600;
-var teamBuffer = 15;
-var transitionDuration = 750;
-var fontSize = 12;
-var fontFamily = 'Julius Sans One';
-var playoffColor = 'crimson';
-var nonPlayoffColor = 'black';
+(function(){
+
+  var who = window.who || (window.who = {});
+
+  who.slopeChart = function(){
+
+    var listStop = false,
+    	wordStep = [],
+        graphWidth = 900,
+ 		graphHeight = 600,
+	 	teamBuffer = 20,
+	 	transitionDuration = 750,
+	 	fontSize = 12,
+	 	fontFamily = 'Arial';
 
 
-$.getJSON('static/data.json', function(data) {
-	
-	var dates = $.map(data,function(value,index){return value['date']});
-	$.each(dates, function(key, value) {   
-	     $('#rightDateSelect')
-	          .append($('<option>', { value : key })
-	          .text(value)); 
-	     	$('#leftDateSelect')
-		          .append($('<option>', { value : key })
-		          .text(value));
-	});
-	
-	//callback for listening to when the date selects change
-	var onSelectChanged = function(){
-	    var leftIndex = $('#leftDateSelect').val();
-	    var rightIndex = $('#rightDateSelect').val();
-	    if(parseInt(leftIndex) <= parseInt(rightIndex)){
-	        var leftData = data[leftIndex];
-	        var rightData = data[rightIndex];
-	        var conferenceKey = $('#conferenceSelect').val();
-	        var conferenceText = $("#conferenceSelect option:selected").text();
-	  
-	        renderStandings(chart,leftData,rightData,{'key':conferenceKey,'title':conferenceText});
-	    }
-	}
-	
-	$('#leftDateSelect').change(onSelectChanged);
-	$('#rightDateSelect').change(onSelectChanged);
-	$('#conferenceSelect').change(onSelectChanged);
-	
-	//set the left select to initially be the lowest date
-	$('#leftDateSelect').val(0);
-	//set the right select to initially be the highest date
-	$('#rightDateSelect').val(dates.length-1);
-	
-	var leftData = data[0];
-	var rightData = data[dates.length-1];
-	
-	//sets up the basic container for the visualization
-	var chart = d3.select("#slopegraph").append("svg")
-	     .attr("width", graphWidth)
-	     .attr("height", graphHeight);
+    function slopeChart(selection){
+    	selection.each(function(data){
 
-	//initial rendering of the graph
-    renderStandings(chart,leftData,rightData,{'key':'westernConference','title':'Western Conference'});
-    
+        	var chart = selection
 
-});
+        	var x = d3.scale.ordinal().rangeRoundBands([0, graphWidth], 0.5, 0);
+        	var xDomain = data.map(function(d){return d.step})
+        	x.domain(xDomain);
 
-function renderStandings(chart,left,right,conferenceName){
-	
-	
-	var conference = conferenceName.key;
-	var leftDate = left.date;
-	var rightDate = right.date;
+        	var titleGroup = chart.select('.titleGroup')
+			//add a title based on the conference and dates
+			if(titleGroup.empty()){
+
+				titleGroup = chart.append("g");
+				titleGroup.attr('class','titleGroup');
+
+			    var stepTitles = titleGroup.append('g').attr("class", "stepsTitle")
+
+			    stepTitles.selectAll("text")
+				    .data(xDomain)
+				    .enter()
+				    .append("text")
+				    .attr('x', function(d){return x(d) + (x.rangeBand()/2)})
+				    .attr('y', 20)
+				    .attr('font-family',fontFamily)
+				    .attr('font-size',13)
+				    .attr('text-anchor','middle')
+				    .text(function(d){return d});
+
+			}
+			//if the title group exists, just change the text values
+			else{
+					//todo
+			}
+
+			var slopeModel = function(data, height, step){
+
+				var _data = data;
+				var valuesList = _data.map(function(d){
+					return d['value']
+				})
+
+				var yScale = d3.scale.linear()
+				.domain([d3.min(valuesList),d3.max(valuesList)])
+				.range([height-300,60]);
+
+				_data.forEach(function(d){
+					d.yCoord = yScale(d['value'])
+					d.step = step
+				})
+
+				adjustYCoords(_data)
+
+			}
+
+			data.forEach(function(d){
+				slopeModel(d.values, graphHeight, d.step)
+			})
 
 
-       
-        var titleGroup = chart.select('.titleGroup')
-		//add a title based on the conference and dates
-		if(titleGroup.empty()){
-		    titleGroup = chart.append("g");
-		    titleGroup.attr('class','titleGroup');
-		    titleGroup.append('text')
-				.attr('x', 195)
-				.attr('y', 20)
-				.attr('id','conference')
-				.attr('font-family',fontFamily)
-				.text(conferenceName.title);
-				
-		    //left hand date	
-		     titleGroup.append('text')
-		         .attr('x', 100)
-				 .attr('y', 20)
-				 .attr('font-family',fontFamily)
-				 .attr('font-size',13)
-				 .attr('id','leftDate')
-				 .text(leftDate);
+			/* new code */
 
-			//right hand date
-			 titleGroup.append('text')
-			    .attr('x', 400)
-				.attr('y', 20)
-				.attr('font-family',fontFamily)
-				.attr('font-size',13)
-				.attr('id','rightDate')
-				.text(rightDate);
-		}
-		//if the title group exists, just change the text values
-		else{
-			titleGroup.select('#conference').text(conferenceName.title);
-			titleGroup.select('#leftDate').text(leftDate);
-			titleGroup.select('#rightDate').text(rightDate);
-		}
-		
-		
-		
-	
-	
-	//get all the points into arrays
-	var conferencePointsLeft = $.map(left[conference],function(value,index){
-		    return value['points'];
-		});
-	var conferencePointsRight = $.map(right[conference],function(value,index){
-			    return value['points'];
-			});
-	
-	
-	//create an intial scale functions based on the points
-	var leftY = d3.scale.linear()
-					.domain([d3.min(conferencePointsLeft),d3.max(conferencePointsLeft)])
-					.range([graphHeight-300,60]);
-	var rightY = d3.scale.linear()
-					.domain([d3.min(conferencePointsRight),d3.max(conferencePointsRight)])
-					.range([graphHeight-300,60]);
-					
-	//setup the y coordinates for each data point
-	for(var i=0;i<left[conference].length;i++){
-		var val = left[conference][i];
-		val.yCoord = leftY(val.points);
-	}
-	for(var i=0;i<right[conference].length;i++){
-		var val = right[conference][i];
-		val.yCoord = rightY(val.points);
-	}
-	
-	/* to account for the fact that it is highly likely that
-	* teams can have the same number of points, and 
-	* that close point values might translate coords
-	* that cause overlapping text, apply a simple
-	* algorithm to adjust the positions to look nice
-	*/
-    adjustYCoords(left[conference]);
-    adjustYCoords(right[conference]); 	
-					
-	var leftGroup = chart.select('.leftGroup');
-	if(leftGroup.empty()){
-		leftGroup = chart.append("g");
-		leftGroup.attr("class","leftGroup");
-	}
-	
-	/* select any teams if there are any
-	*
-	* NOTE: the the function that is the argument to 'data'
-	* is key for doing updates. This sets up a data key
-	* so that when an update is performed, it can find existing elements
-	*
-	*/
-	var leftTeams = leftGroup.selectAll("text").data(left[conference],function(d) { return d.team; });
-	
-	//add teams if necessary
-	leftTeams
-	         .enter().append("text")
-			 .attr("x",100)
-			 .attr('font-family',fontFamily)
-			 .attr('font-size',fontSize)
-			 .attr('y', function(d,i){return d.yCoord;})
-			 .text(function(d, i) { return d.team; });
+
+			var textsGroup = chart.selectAll('.textGroup').data(data)
+
+			textsGroup
+				.enter()
+				.append("g")
+				.attr("class",function(d){return "g_" + d.step + " textGroup"})
+
+			textsGroup.exit().remove()
+
+			var textGroup = textsGroup.selectAll("text").data(function(d){return d.values})
+
 			
-	//update the y position and playoff coloring		
-	leftTeams.attr('fill',function(d,i){if(i<8) return playoffColor;else return nonPlayoffColor;}) //make the playoff bound teams standout
-			.transition()
-			.duration(transitionDuration)
-			.attr('y', function(d,i){return d.yCoord;});
-	
-	//remove teams if necessary		
-	leftTeams.exit().remove();
-	
-	//for all the other groups follow the same pattern as above: select, add/enter, update, exit/delete		
-	var leftPointsGroup = chart.select('.leftGroupPoints');
-	if(leftPointsGroup.empty()){
-		leftPointsGroup = chart.append("g");
-		leftPointsGroup.attr("class","leftGroupPoints");
-	}
+			textGroup	
+				.enter()
+				.append("text")
+				.attr("x",function(d){return x(d.step)+(x.rangeBand()/2)})
+				.attr('font-family',fontFamily)
+				.attr('font-size',fontSize)
+				//.attr('y', 0)
+				.attr('y', function(d,i){return d.yCoord;})
+				.attr("text-anchor", "middle")
+				.text(function(d) { return d['key'] + " " + d['value'] ; })
+					.transition()
+					.duration(transitionDuration)
+					.delay(100)
+					.attr('y', function(d,i){return d.yCoord;})
 
-    var leftPoints = leftPointsGroup.selectAll("text").data(left[conference],function(d) { return d.team; });
-    leftPoints.enter().append("text")
-              .attr("x",200)
-              .attr('y', function(d,i){return d.yCoord})
-              .attr('font-family',fontFamily) 
-			  .attr('font-size',fontSize);
 
-	leftPoints.text(function(d, i) { return d.points; })
-	         .transition()
-			 .duration(transitionDuration)
-	         .attr('y', function(d,i){return d.yCoord});
-	
-	leftPoints.exit().remove();
-			
-	var rightGroup = chart.select('.rightGroup');
-	if(rightGroup.empty()){
-		rightGroup = chart.append("g");
-		rightGroup.attr("class","rightGroup");
-	}
-	
-	//setup the right side teams and points
-	var rightTeams = rightGroup.selectAll("text").data(right[conference],function(d) { return d.team; });
-	
-		  rightTeams.enter().append("text")
-		  .attr("x",400)
-		  .attr('font-family',fontFamily)
-		  .attr('font-size',fontSize)
-		  .attr('y', function(d,i){return d.yCoord;})
-		  .text(function(d, i) { return d.team; });
-		
-	rightTeams.attr('fill',function(d,i){if(i<8) return playoffColor;else return nonPlayoffColor;}) //make the playoff bound teams standout
+			textGroup
+				.text(function(d) { return d['key'] + " " + d['value'] ; })
 				.transition()
 				.duration(transitionDuration)
-				.attr('y', function(d,i){return d.yCoord;});
-	rightTeams.exit().remove();
-		
-	var rightPointsGroup = chart.select('.rightGroupPoints');
-		if(rightPointsGroup.empty()){
-		   rightPointsGroup = chart.append("g");
-		   rightPointsGroup.attr("class","rightGroupPoints");
-		 }
+					.attr('y', function(d,i){return d.yCoord;});
 
-	var rightPoints = rightPointsGroup.selectAll("text").data(right[conference],function(d) { return d.team; });
-		rightPoints.enter().append("text")
-		    .attr("x",350)
-		    .attr('y', function(d,i){return d.yCoord})
-			.attr('font-family',fontFamily)
-			.attr('font-size',fontSize);
+			textGroup.exit().remove()
 
-	 rightPoints.text(function(d, i) { return d.points; })
-	        .transition()
-			.duration(transitionDuration)
-			.attr('y', function(d,i){return d.yCoord});
-	 rightPoints.exit().remove();
-	
-	//combine the coord values for drawing the slopes
-	var slopes = [];
-	for(var i=0;i<left[conference].length;i++){
-		var val = left[conference][i];
-		var slope = {};
-		slope.left = val.yCoord;
-		for(var j=0;j<right[conference].length;j++){
-			if(val.team === right[conference][j].team){
-				slope.right = right[conference][j].yCoord;
-				slope.team = right[conference][j].team;
-				break;
-			}	
-		}
-	    slopes.push(slope);	
-	}
-	
-	
-	var slopeGroup = chart.select('.slopeGroup');
-	if(slopeGroup.empty()){
-		slopeGroup = chart.append("g");
-		slopeGroup.attr("class","slopeGroup");
-	}
-	
-	var slopeLines = slopeGroup.selectAll("line").data(slopes,function(d){return d.team});
+			if (listStop) return;
 
-	 slopeLines.enter().append("line")
-	    .attr('x1', 220)
-		.attr('x2', 345)
-		.attr('y1',function(d,i){return d.left - (teamBuffer/2);})
-		.attr('y2',function(d,i){return d.right - (teamBuffer/2);})
-		.attr('opacity', .5)
-		.attr('stroke', 'black');	
-	
-	slopeLines.transition().duration(750)
-	                       .attr('y1',function(d,i){return d.left - (teamBuffer/2);})
-	                       .attr('y2',function(d,i){return d.right - (teamBuffer/2);});
-		
-	slopeLines.exit().remove();
-		
-	var leftEndPointGroup = chart.select('.leftEndPointsGroup');
-	if(leftEndPointGroup.empty()){
-		leftEndPointGroup = chart.append("g");
-		leftEndPointGroup.attr("class","leftEndPointsGroup");
-	}
-	var leftEndPoints = leftEndPointGroup.selectAll("path").data(slopes,function(d){return d.team});
-	
-	leftEndPoints
-		.enter().append("path")
-		.attr("d", d3.svg.symbol()
-		.size(function(d) { return 20; })
-		.type(function(d) { return "circle"; }))
-		.attr("transform", function(d) { return "translate(220," + (d.left-(teamBuffer/2)) + ")"; });
-		
-	leftEndPoints.transition().duration(transitionDuration).attr("transform", function(d) { return "translate(220," + (d.left-(teamBuffer/2)) + ")"; });
-	
-	leftEndPoints.exit().remove();
-    
-	var rightEndPointGroup = chart.select('.rightEndPointsGroup');
-	if(rightEndPointGroup.empty()){
-		rightEndPointGroup = chart.append("g");
-		rightEndPointGroup.attr("class","rightEndPointsGroup");
-	}
-	var rightEndPoints = rightEndPointGroup.selectAll("path").data(slopes,function(d){return d.team});
-	
-	rightEndPoints
-		.enter().append("path")
-		.attr("d", d3.svg.symbol()
-		.size(function(d) { return 20; })
-		.type(function(d) { return "circle"; }))
-		.attr("transform", function(d) { return "translate(345," + (d.right-(teamBuffer/2)) + ")"; });
-		
-	rightEndPoints.transition().duration(transitionDuration).attr("transform", function(d) { return "translate(345," + (d.right-(teamBuffer/2)) + ")"; });
-	
-	rightEndPoints.exit().remove();
+			var allValues = d3.merge(data.map(function(d){return d.values}))
 
-}
+			var nestValues = d3.nest()
+				.key(function(d) { return d.key; })
+				.entries(allValues);
 
-function adjustYCoords(conference){
-	//adjustment algorithm based on the one used in here: http://skedasis.com/d3/slopegraph/
-	for(var i=0;i< conference.length;i++){
-		var val = conference[i];
-		if(i > 0){
-			var previousVal = conference[i-1];
-			if((val.yCoord - teamBuffer) < previousVal.yCoord){
-				val.yCoord = val.yCoord + teamBuffer;
-				for(var j=i;j<conference.length;j++){
-					conference[j].yCoord = conference[j].yCoord + teamBuffer;
+			var line = d3.svg.line()
+				.x(function(d) { return x(d.step)+(x.rangeBand()/2); })
+				.y(function(d) { return (d.yCoord+5); })
+
+
+			var linesGroup = chart.selectAll('.lineGroup').data(nestValues)
+
+
+			linesGroup.enter().append("path")
+				.filter(function(d){
+					if(wordStep.length > 0){
+						var check = wordStep.indexOf(d['key']);
+						return check >= 0
+					}
+					else{return true}
+				})
+				.attr("class",function(d){return "g_" + d.key.replace(/\s+/g, '') + " lineGroup"})
+				.attr("d", function(d) { return line(d.values)})
+				.attr("fill", "none")
+				.attr("stroke", "grey")
+				.attr("stroke-width", 0.5)
+
+			linesGroup
+				.filter(function(d){
+					if(wordStep.length > 0){
+						var check = wordStep.indexOf(d['key']);
+						return check >= 0
+					}
+					else{return true}
+				})
+				.transition()
+				.duration(transitionDuration)
+					.attr("d", function(d) { return line(d.values)})
+
+			linesGroup.exit().remove()
+
+			var pointsGroup = chart.selectAll('.pointGroup').data(nestValues)
+
+			pointsGroup
+				.enter()
+				.append("g")
+				.filter(function(d){
+					if(wordStep.length > 0){
+
+						var check = wordStep.indexOf(d['key']);
+						return check >= 0
+					}
+					else{return true}
+				})
+				.attr("class",function(d){return "g_" + d.key.replace(/\s+/g, '') + " pointGroup"})
+
+			pointsGroup.exit().remove()
+
+			var pointGroup = pointsGroup.selectAll("path").data(function(d){return d.values})
+
+
+			pointGroup
+				.enter().append("path")
+				.filter(function(d){
+					if(wordStep.length > 0){
+
+						var check = wordStep.indexOf(d['key']);
+						return check >= 0
+					}
+					else{return true}
+				})
+				.attr("d", d3.svg.symbol()
+					.size(function(d) { return 20; })
+					.type(function(d) { return "circle"; }))
+				.attr("fill", "grey")
+				.attr("transform", function(d) { return "translate(" + (x(d.step)+(x.rangeBand()/2)) + "," + (d.yCoord+5) + ")"; });
+
+			pointGroup
+				.filter(function(d){
+					if(wordStep.length > 0){
+
+						var check = wordStep.indexOf(d['key']);
+						return check >= 0
+					}
+					else{return true}
+				})
+				.transition()
+				.duration(transitionDuration)
+				.attr("transform", function(d) { return "translate(" + (x(d.step)+(x.rangeBand()/2)) + "," + (d.yCoord+5) + ")"; });
+
+			pointGroup.exit().remove()
+
+			/* end new code */
+
+			//function to be implemented in a better way
+			function adjustYCoords(conference){
+				//adjustment algorithm based on the one used in here: http://skedasis.com/d3/slopegraph/
+				for(var i=0;i< conference.length;i++){
+					var val = conference[i];
+					if(i > 0){
+						var previousVal = conference[i-1];
+						if((val.yCoord - teamBuffer) < previousVal.yCoord){
+							val.yCoord = val.yCoord + teamBuffer;
+							for(var j=i;j<conference.length;j++){
+								conference[j].yCoord = conference[j].yCoord + teamBuffer;
+							}
+						}
+					}
 				}
 			}
-		}
-	}
-	
 
-}
+    	}); //end selection
+    } // end slopeChart
+
+    slopeChart.graphWidth = function(x){
+      if (!arguments.length) return graphWidth;
+      graphWidth = x;
+      return slopeChart;
+    }
+
+    slopeChart.graphHeight = function(x){
+      if (!arguments.length) return graphHeight;
+      graphHeight = x;
+      return slopeChart;
+    }
+
+    slopeChart.listStop = function(x){
+      if (!arguments.length) return listStop;
+      listStop = x;
+      return slopeChart;
+    }
+
+    slopeChart.wordStep = function(x){
+      if (!arguments.length) return wordStep;
+      wordStep = x;
+      return slopeChart;
+    }
+
+    return slopeChart;
+  }
+  
+})();
