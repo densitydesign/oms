@@ -106,11 +106,11 @@ $.getJSON('data/CS05_tf.json', function(dataTF) {
 
 	dataIDF.objects.forEach(function(d){
 
-		d.values = d.values.filter(function(f){
+		/*d.values = d.values.filter(function(f){
 			var check = filterTF.indexOf(f['key']);
 			return check >= 0
 		})
-
+*/
 		d.values.sort(function(a, b) {
     		return b['value'] -a['value'] ;
 		});
