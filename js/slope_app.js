@@ -1,9 +1,9 @@
 var graphWidth = 900; 
-var graphHeight = 600;
+var graphHeight = 5600;
 var teamBuffer = 20;
 var transitionDuration = 750;
 var fontSize = 12;
-var fontFamily = 'Julius Sans One';
+var fontFamily = '';
 
 
 $.getJSON('data/CS05_tfidf.json', function(dataIDF) {
@@ -87,11 +87,11 @@ $.getJSON('data/CS05_tf.json', function(dataTF) {
 	
 	dataTF.objects.forEach(function(d){
 
-		d.values = d.values.filter(function(f){
+		/*d.values = d.values.filter(function(f){
 			var check = filterTF.indexOf(f['key']);
 			return check >= 0
 		})
-
+*/
 		d.values.sort(function(a, b) {
     		return b['value'] -a['value'] ;
 		});
