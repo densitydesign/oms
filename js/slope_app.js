@@ -1,9 +1,8 @@
 var graphWidth = 900; 
-var graphHeight = 600;
+var graphHeight = 900;
 var teamBuffer = 20;
 var transitionDuration = 750;
-var fontSize = 12;
-var fontFamily = 'Julius Sans One';
+var fontSize = 10;
 
 
 $.getJSON('data/CS05_tfidf.json', function(dataIDF) {
@@ -37,7 +36,7 @@ $.getJSON('data/CS05_tf.json', function(dataTF) {
 	//sets up the basic container for the visualization
 	var chart = d3.select("#slopegraph").append("svg")
 	     .attr("width", graphWidth)
-	     .attr("height", graphHeight+200);
+	     .attr("height", graphHeight);
 
 	var filterTF = [
 			'baby',
@@ -125,7 +124,7 @@ $.getJSON('data/CS05_tf.json', function(dataTF) {
 	})
 
 
-    var slope = who.slopeChart().listStop(true)
+    var slope = who.slopeChart().listStop(true).graphHeight(graphHeight)
     chart.datum(dataTF.objects).call(slope)
 
 	});
