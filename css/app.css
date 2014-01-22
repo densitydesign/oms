@@ -258,6 +258,15 @@ li.active a{
 	font-weight: 900;
 }
 
+.step h5{
+	width:80%;
+	display:block;
+	font-size:16px;
+	margin:20px auto;
+	font-family:Georgia;
+	font-weight: 900;
+}
+
 
 .carousel{
 	height: 100%;
@@ -352,14 +361,13 @@ section{
 }
 
 .step .btn{
-	border: none;
 	font-family: 'Montserrat', sans-serif;
 	font-size: inherit;
 	color: #fff;
 	border: 3px solid #fff;
 	background: inherit;
 	cursor: pointer;
-	padding: 15px 30px;
+	padding: 10px 20px;
 	display: inline-block;
 	text-transform: uppercase;
 	letter-spacing: 1px;
