@@ -31,7 +31,6 @@ bottom:400px;
 	text-align:center;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
-	
 	text-transform: uppercase;
 }
 
@@ -225,11 +224,11 @@ li.active a{
 .step{
 	width:33%;
 	float:left;
-	padding:20px;
+	padding:0px;
 	text-align:center;
-	margin-top:100px;
-	border-left: 1px solid #fff;
-	height:80%;
+	margin-top:70px;
+	height:100%;
+	border-left: solid 1px #586D75;
 }
 
 .step:first-child{
@@ -242,9 +241,8 @@ li.active a{
 	display:block;
 	margin:0 auto;	
 	font-family:Georgia;
-	font-size:16px;
+	font-size:1em;
 	line-height: 170%;
-	padding-bottom: 20px;
 }
 
 .step h3{
@@ -259,18 +257,62 @@ li.active a{
 }
 
 .step h5{
-	width:80%;
-	display:block;
-	font-size:16px;
-	margin:20px auto;
-	font-family:Georgia;
-	font-weight: 900;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: normal;
+	text-align:left;
+	margin:10px auto;
+}
+
+.step a{
+	color:#fff;
+}
+.step a:hover{
+	color:#eee;
 }
 
 
+.details{
+	width:80%;	
+	margin:40px auto;
+	border-top: solid 4px #586D75;
+	border-bottom: solid 1px #586D75;
+	position: relative;
+}
+
+.link-download, .link-visualization{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	color: #fff;
+	letter-spacing: 1px;
+	font-weight: normal;
+    padding-top:10px;
+    padding-bottom: 10px;
+    text-align: left;
+	text-decoration: underline;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	border-top: solid 1px #586D75;
+}
+
+
+.link-download:before{
+content:url(../img/pro_download.png);
+margin-right:10px;
+}
+
+.link-visualization:before{
+content:url(../img/pro_viz.png);
+margin:0 10px 30px 0;
+}
+
 .carousel{
 	height: 100%;
-		width: 90%;
+	width: 90%;
 	margin: 0 auto;
 }
 
@@ -347,7 +389,7 @@ section{
 	margin: 20px 0 ;
 	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 4px;
-	font-weight: 900;
+	font-weight: 00;
 }
 
 .legend p{
@@ -360,34 +402,6 @@ section{
 	line-height: 170%;
 }
 
-.step .btn{
-	font-family: 'Montserrat', sans-serif;
-	font-size: inherit;
-	color: #fff;
-	border: 3px solid #fff;
-	background: inherit;
-	cursor: pointer;
-	padding: 10px 20px;
-	display: inline-block;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
-	outline: none;
-	position: relative;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	transition: all 0.5s;
-
-}
-
-.step .btn:hover {
-	border: 3px solid #fff;
-	background: #fff;
-	color: #425863;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	transition: all 0.5s;
-}
 
 .closing{
 	cursor:pointer;
