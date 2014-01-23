@@ -124,7 +124,15 @@ $.getJSON('data/CS05_tf.json', function(dataTF) {
 	})
 
 
-    var slope = who.slopeChart().listStop(true).graphHeight(graphHeight)
+    var slope = who.slopeChart()
+    			.listStop(true)
+    			.graphHeight(graphHeight)
+    			.on("clicked", function(d){
+    				console.log(d)
+    				slope.wordStep([d])
+					chart.call(slope)
+    			})
+
     chart.datum(dataTF.objects).call(slope)
 
 	});

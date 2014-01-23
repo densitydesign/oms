@@ -11,7 +11,8 @@
 	 	teamBuffer = 20,
 	 	transitionDuration = 750,
 	 	fontSize = 12,
-	 	fontFamily = 'Georgia';
+	 	fontFamily = 'Georgia',
+	 	dispatch = d3.dispatch("clicked");
 
 
     function slopeChart(selection){
@@ -106,7 +107,8 @@
 				.enter()
 				.append("text")
 				.on("click", function(d){
-					console.log("ciao")
+					//console.log(selection, chart, this)
+					dispatch.clicked(d.key);
 				})
 				.style('cursor','pointer')
 				.attr("x",function(d){return x(d.step)+(x.rangeBand()/2)})
@@ -273,6 +275,8 @@
       wordStep = x;
       return slopeChart;
     }
+
+    d3.rebind(slopeChart, dispatch, 'on');
 
     return slopeChart;
   }
