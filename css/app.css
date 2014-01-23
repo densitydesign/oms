@@ -395,3 +395,12 @@ section{
 .long{
 	padding-bottom:250px;
 }
+
+/* barchart analytics */
+
+.yvalue, .ylegend{
+	font-family: 'Montserrat';
+	color: "black";
+	font-weight: "700";
+	font-size: 12px;
+}
