@@ -24,7 +24,7 @@
           .sort(null)
           .size([diameter, diameter])
           .value(function(d){return d.value})
-          .padding(1.5);
+          .padding(3);
 
         if (!rScale){
           var _data = bubble.nodes({"key": "root", "children" : group.top(Infinity)})
@@ -41,7 +41,7 @@
         var bgBubbles = chart.selectAll(".bgBubble").data(bubble.nodes({"key": "root", "children" : group.top(Infinity)}))
 
         bgBubbles.enter().append("circle")
-          .attr("r", function(d) { return d.r; })
+          .attr("r", function(d) { return d.r - 1; }) //-1 to hide dashed border
           .attr("cx", function(d){return d.x})
           .attr("cy", function(d){return d.y})
           .attr("class", "bgBubble")
