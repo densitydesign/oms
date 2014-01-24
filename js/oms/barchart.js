@@ -47,6 +47,8 @@
           .attr("y", function(d) { return y(d.key) + 1; })
           .attr("x", 1)
           .attr("height", function(d) { return y.rangeBand()-2})
+          .attr("width", function(d){ return x(d.value)})
+          .filter(function(d){return x(d.value) >= 2})
           .attr("width", function(d){ return x(d.value) -2 })
 
     		var bars = chartContainer.selectAll(".bar")

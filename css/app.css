@@ -362,6 +362,14 @@ section{
 	padding-top:80px;
 	border-right:1px solid #CBCCCE;
 	height:100%;
+	float: left;
+}
+
+.main-panel{
+	width:80%;
+	padding-top:80px;
+	height:100%;
+	float: right;
 }
 
 .adv-step{
@@ -471,4 +479,10 @@ padding-left:0;
 	font-size:1.4em;
 	color:#222222;
 	padding-bottom:15px;
+}
+
+/* graph */
+
+#graph{
+	height: 100%;
 }

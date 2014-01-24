@@ -30,7 +30,7 @@ d3.csv('data/cs_analytics.csv', function(data) {
 	var domainContainer = d3.select("#domain")
 						.append("svg")
 	     					.attr("width", width)
-	     					.attr("height", height*5)
+	     					.attr("height", height*4)
 	     					.on("click", function(){
 	     						tagContainer.call(tagChart)
 	     						queryContainer.call(queryChart)
@@ -53,7 +53,7 @@ d3.csv('data/cs_analytics.csv', function(data) {
     				.group(tags)
 
     var domainChart = who.barChart()
-    				.height(height*6)
+    				.height(height*4)
     				.width(width)
     				.xMax(tlds.top(1)[0].value)
     				.dimension(tld)

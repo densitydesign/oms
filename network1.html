@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bootstrap 101 Template</title>
+    <title>WHO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -100,11 +100,20 @@
 			<h5>Legend</h5>
 			<p>Blue is good<br/>
 			Red is bad</p>
+			    <div id="buttons">
+      <button id="previous-step">previous</button>
+      <button id="next-step">next</button>
+    </div>
 			
 		</div>
 			
 		</div>
 		
+		<!-- main panel  -->
+
+		<div class="main-panel" >
+			<div id="graph"></div>
+		</div>
 		
 	</section>
 	
@@ -204,6 +213,11 @@
 	<script type="text/javascript" src="js/oms/barchart.js"></script>
 	<script type="text/javascript" src="js/oms/bubblechart.js"></script>
 	<script type="text/javascript" src="js/analytics_app.js"></script>
+	  <script type="text/javascript" src="js/sigma.min.js"></script>
+  <script type="text/javascript" src="js/sigma.parsers.json.js"></script>
+  <script type="text/javascript" src="js/sigma.layout.forceAtlas2.js"></script>
+  <script type="text/javascript" src="js/sigma.plugins.neighborhoods.js"></script>
+  <script type="text/javascript" src="js/graph_app.js"></script>
 
     
     <script>
