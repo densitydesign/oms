@@ -420,12 +420,18 @@ section{
 }
 
 
-.bgBubble{
-	fill: #ccc;
+.bgBubble, .bgBar{
+	fill: none;
+	stroke: #CBCCCE;
+	stroke-width: 1px;
+	stroke-linecap: round;
+	stroke-dasharray: 1,2;
 }
 
 .bar, .bubble{
 	fill: #84A594;
+	-webkit-transition:fill 0.3s ease-in-out;  
+	transition:fill 0.3s ease-in-out;
 }
 .bar:hover, .bubble:hover{
 	fill: #5c7367;

@@ -22,7 +22,7 @@
     				.rangeRoundBands([0, height], .4);
 
 			var x = d3.scale.linear()
-    				.range([0, width]);
+    				.range([0, width-80]);
 
 
     		x.domain([0, xMax]);
@@ -39,6 +39,16 @@
 
     		chartContainer.exit().remove()
     		
+        var bgBars = chartContainer.selectAll(".bgBar")
+            .data(function(d){ return d})
+
+        bgBars.enter().append("rect")
+          .attr("class", "bgBar")
+          .attr("y", function(d) { return y(d.key) + 1; })
+          .attr("x", 1)
+          .attr("height", function(d) { return y.rangeBand()-2})
+          .attr("width", function(d){ return x(d.value) -2 })
+
     		var bars = chartContainer.selectAll(".bar")
       			.data(function(d){ return d})
 
@@ -47,7 +57,6 @@
 		      .attr("y", function(d) { return y(d.key); })
 		      .attr("height", function(d) { return y.rangeBand()})
 		      .attr("width", function(d){ return x(d.value)})
-		      //.attr("fill", "#84A594")
 		      .style("cursor", "pointer")
 		      .on("click", function(d){
 		      	var bar = d3.select(this)
