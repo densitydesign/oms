@@ -469,6 +469,70 @@ section{
 	fill: #5c7367;
 }
 
+
+/* table section */
+
+.section-table h4 {
+	font-family:'Montserrat';
+	font-variant:small-caps;
+	font-size:19px;
+	margin:50px 0 40px 0;
+	font-weight: 900;
+	text-align:center;
+	}
+
+.row-table{
+	border-top: solid 1px #ccc;
+	padding:10px 0 15px 0;
+}
+
+.table-title{
+	font-family:'Montserrat', sans-serif;
+	font-variant:small-caps;
+	font-size:16px;
+}
+
+.table-descr{
+	font-family:Georgia;
+	font-size:16px;
+	color:#222222;
+	line-height: 150%;
+}
+
+.section-notes{
+	font-family:Georgia;
+	font-size:12px;
+	color:#222222;
+	line-height: 150%;
+}
+
+
+.section-notes h4{
+	font-variant:small-caps;
+	font-size:16px;
+	color:#222;
+	text-align:center;
+	margin:50px 0 20px 0;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 2px;
+	font-weight: 900;
+}
+
+#spazio{
+margin-top:40px;
+}
+
+ol {
+display: block;
+list-style-type: decimal;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 0px;
+}
+
+/*analytics*/
 .analytics {
 padding-left:0;
 }
