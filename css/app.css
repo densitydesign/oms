@@ -84,11 +84,32 @@ h2.section{
 	text-align:center;
 	margin:80px 0 30px 0;
 	font-family: 'Montserrat', sans-serif;
-	letter-spacing: 4px;
+	letter-spacing: 3px;
 	font-weight: 900;
 
 }
 
+h3.section{
+    font-variant:small-caps;
+	font-size:1.7em;
+	color:#222;
+	text-align:left;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 3px;
+	font-weight: 700;
+	border-bottom: 1px solid #cbccce
+}
+
+h4.section{
+    font-variant:small-caps;
+	font-size:1em;
+	color:#cbccce;
+	text-align:left;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 3px;
+	font-weight: 400;
+	line-height: 10%;
+}
 
 .section-text{
 	position:relative;
@@ -132,7 +153,7 @@ margin-top: 30px;
 }
 
 .bg-full{
-	padding-top:100px;
+	padding-top:60px;
 	
 }
 
@@ -288,11 +309,11 @@ li.active a{
 	font-size: 0.9em;
 	color: #fff;
 	letter-spacing: 1px;
-	font-weight: normal;
+	font-weight: 400;
     padding-top:8px;
     padding-bottom: 8px;
     text-align: left;
-	text-decoration: underline;
+	text-decoration: none;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
@@ -388,8 +409,8 @@ section{
 	color:#222;
 	margin: 20px 0 ;
 	font-family: 'Montserrat', sans-serif;
-	letter-spacing: 4px;
-	font-weight: 00;
+	letter-spacing: 2px;
+	font-weight: 400;
 }
 
 .legend p{
@@ -414,11 +435,10 @@ section{
 
 .yvalue, .ylegend, .bubbleLegend{
 	font-family: 'Montserrat';
-	color: "black";
+	color: "#222";
 	font-weight: "700";
 	font-size: 12px;
 }
-
 
 .bgBubble{
 	fill: #ccc;
@@ -432,4 +452,16 @@ section{
 }
 .bar.selected, .bubble.selected{
 	fill: #5c7367;
+}
+
+.analytics {
+padding-left:0;
+}
+
+.numbers{
+	z-index:2;
+	font-family:Georgia;
+	font-size:1.4em;
+	color:#222222;
+	padding-bottom:15px;
 }
