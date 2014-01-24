@@ -398,9 +398,24 @@ section{
 
 /* barchart analytics */
 
-.yvalue, .ylegend{
+.yvalue, .ylegend, .bubbleLegend{
 	font-family: 'Montserrat';
 	color: "black";
 	font-weight: "700";
 	font-size: 12px;
+}
+
+
+.bgBubble{
+	fill: #ccc;
+}
+
+.bar, .bubble{
+	fill: #84A594;
+}
+.bar:hover, .bubble:hover{
+	fill: #5c7367;
+}
+.bar.selected, .bubble.selected{
+	fill: #5c7367;
 }
