@@ -6,6 +6,8 @@
 
     var width = 600,
     	height = 600,
+    	query = [],
+    	xMax,
 	 	dimension,
 	 	group,
 	 	filter;
@@ -23,84 +25,84 @@
     				.range([0, width]);
 
 
-    		x.domain([0, group.top(1)[0].value]);
+    		x.domain([0, xMax]);
 
     		y.domain(group.top(Infinity).map(function(d){return d.key}))
 
-    		var chartContainer = chart.append("g").attr("transform", "translate(" + 80 + ",0)");
-    		
-    		chartContainer.selectAll(".bar")
-      			.data(group.top(Infinity))
-			    .enter().append("rect")
-			      .attr("class", "bar")
-			      .attr("y", function(d) { return y(d.key); })
-			      .attr("height", function(d) { return y.rangeBand()})
-			      .attr("width", function(d){ return x(d.value)})
-			      .attr("fill", "#84A594")
+    		var chartContainer = chart.selectAll("g")
+    			.data([group.top(Infinity)])
 
-			chartContainer.selectAll(".yvalue")
-      			.data(group.top(Infinity))
-			    .enter().append("text")
+    		chartContainer
+    			.enter()
+    			.append("g")
+    			.attr("transform", "translate(" + 80 + ",0)");
+
+    		chartContainer.exit().remove()
+    		
+    		var bars = chartContainer.selectAll(".bar")
+      			.data(function(d){ return d})
+
+		    bars.enter().append("rect")
+		      .attr("class", "bar")
+		      .attr("y", function(d) { return y(d.key); })
+		      .attr("height", function(d) { return y.rangeBand()})
+		      .attr("width", function(d){ return x(d.value)})
+		      //.attr("fill", "#84A594")
+		      .style("cursor", "pointer")
+		      .on("click", function(d){
+		      	var bar = d3.select(this)
+		      	var cl = checkSelected(bar.attr("class"))
+		      	bar.attr("class", cl)
+		      	checkQuery(d.key)
+		      	if(query.length == 0){dimension.filterAll()}
+		      	else(dimension.filter(function(d) { return query.indexOf(d) >= 0; }))
+		      })
+
+		    bars
+		    	.transition()
+		    	.duration(500)
+		      	.attr("width", function(d){ return x(d.value)})
+
+		    bars.exit().remove()
+
+			var yvalues = chartContainer.selectAll(".yvalue")
+      			.data(function(d){return d})
+
+			yvalues.enter().append("text")
 			      .attr("class", "yvalue")
 			      .attr("y", function(d) { return y(d.key) + y.rangeBand() -2; })
 			      .attr("x", 3)
 			      .text(function(d){return d.value})
 
-			chart.selectAll(".ylegend")
+
+      		yvalues
+      			.transition()
+      			.tween("text", function(d) {
+      				var i = d3.interpolateNumber(this.textContent, d.value);
+        			return function(t) {
+            			this.textContent = Math.round(i(t));
+        			};
+    			});
+
+			yvalues.exit().remove()
+      			
+
+			var ylegend = chart.selectAll(".ylegend")
       			.data(group.top(Infinity))
-			    .enter().append("text")
+			    
+			ylegend.enter().append("text")
 			      .attr("class", "ylegend")
 			      .attr("y", function(d) { return y(d.key) + y.rangeBand() -2; })
 			      .attr("x", 3)
 			      .text(function(d){return d.key})
 
-			/* 
+			ylegend
+				.text(function(d){return d.key})
 
+			ylegend.exit().remove()
 
-			var textsGroup = chart.selectAll('.textGroup').data(data)
+			d3.rebind(chart, bars, "on")
 
-			textsGroup
-				.enter()
-				.append("g")
-				.attr("class",function(d){return "g_" + d.step + " textGroup"})
-
-			textsGroup.exit().remove()
-
-			var textGroup = textsGroup.selectAll("text").data(function(d){return d.values})
-
-			
-			textGroup	
-				.enter()
-				.append("text")
-				.on("click", function(d){
-					console.log("ciao")
-				})
-				.style('cursor','pointer')
-				.attr("x",function(d){return x(d.step)+(x.rangeBand()/2)})
-				.attr('font-family',fontFamily)
-				.attr('font-size',fontSize)
-				//.attr('y', 0)
-				.attr('y', function(d,i){return d.yCoord;})
-				.attr("text-anchor", "middle")
-				.html(function(d) { return d['key'] + " <tspan style='font-weight:bold;'>" + d['value'] + " </tspan>"; })
-					.transition()
-					.duration(transitionDuration)
-					.delay(100)
-					.attr('y', function(d,i){return d.yCoord;})
-
-
-
-			textGroup
-				.html(function(d) { return d['key'] + " <tspan style='font-weight:bold;'>" + d['value'] + " </tspan>"; })
-				.transition()
-				.duration(transitionDuration)
-					.attr('y', function(d,i){return d.yCoord;});
-
-			textGroup.exit().remove()
-
-
-
-			*/
 
     	}); //end selection
     } // end barChart
@@ -114,6 +116,12 @@
     barChart.height = function(x){
       if (!arguments.length) return height;
       height = x;
+      return barChart;
+    }
+
+    barChart.xMax = function(x){
+      if (!arguments.length) return xMax;
+      xMax = x;
       return barChart;
     }
 
@@ -133,6 +141,16 @@
       if (!arguments.length) return filter;
       filter = x;
       return barChart;
+    }
+
+    function checkSelected(x){
+    	return x == 'bar' ? 'bar selected' : 'bar'
+    }
+
+    function checkQuery(x){
+    	var index = query.indexOf(x);
+    	if (index > -1){query.splice(index, 1)}
+    	else {query.push(x)}
     }
 
     return barChart;
