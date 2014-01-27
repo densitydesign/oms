@@ -62,10 +62,11 @@
     _s.graph.nodes().forEach(function(n) {
       for (k in config)
         if (k !== 'camera') {
-          if (!k.match(/color$/))
-            n['start_' + k] = n[k];
-          else
-            n['start_' + k] = parseColor(n[k]);
+          if (!k.match(/color$/)){
+            n['start_' + k] = n[k]; 
+            
+          }else
+            {n['start_' + k] = parseColor(n[k]);}
         }
     });
 
@@ -108,7 +109,7 @@
           for (k in camTarget)
             cam[k] = camPosition[k] * (1 - p) + camTarget[k] * p;
 
-        console.log(cam.x, cam.y);
+        //console.log(cam.x, cam.y);
         _s.refresh();
 
         window.requestAnimationFrame(step);
@@ -179,6 +180,46 @@
    * ****************
    */
 
+  sigma.utils.pkg('sigma.canvas.nodes');
+
+  sigma.canvas.nodes.who = function(node, context, settings) {
+    var prefix = settings('prefix') || '';
+
+    context.fillStyle = node.color || settings('defaultNodeColor');
+    context.beginPath();
+    context.arc(
+      node[prefix + 'x'],
+      node[prefix + 'y'],
+      node[prefix + 'size'],
+      0,
+      Math.PI * 2,
+      true
+    );
+
+    context.closePath();
+    context.fill();
+
+    if (settings('drawEdges')){
+      context.restore();
+
+      // Draw the border:
+      context.beginPath();
+      context.arc(
+        node[prefix + 'x'],
+        node[prefix + 'y'],
+        node[prefix + 'size'],
+        0,
+        Math.PI * 2,
+        true
+      );
+      context.lineWidth = node[prefix + 'size'] / 10;
+      //context.lineWidth = 0.5;
+      context.strokeStyle = settings('borderColor') || node.color;
+      context.stroke();
+    }
+  };
+
+
   var goodColors = {
     "M" : "#84A594",
     "C" : "#D6C33B",
@@ -208,6 +249,7 @@
           immutable: false,
           minNodeSize: 0,
           maxNodeSize: 0,
+          borderColor: "#fff",
           font: 'Montserrat'
         }
       }),
@@ -225,6 +267,7 @@
           n.file_size = n.size;
           n.file_x = n.x;
           n.file_y = n.y;
+          n.type = 'who';
 
           delete n.label;
 
@@ -353,6 +396,7 @@
                   l = _options.innerCircleCount,
                   labelToShow = ["nytimes.com", "celebritybabies.people.com"];
 
+              delete node.label;
               if (i < l) {
                 node.target_size = 2;
                 if (node.attributes.E == 'true'){ 
@@ -402,13 +446,17 @@
           init: function() {
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
-                  l = _options.innerCircleCount;
+                  l = _options.innerCircleCount,
+                  labelToShow = ["nytimes.com"];
+
+              node.label = null
 
               if (i < l) {
                 node.target_size = 2;
                 if (node.attributes.M == 'true'){ 
                   node.target_color = goodColors.M; // TODO: Apply good color
                   node.target_size = 4;
+                  if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;                    
                 }
                 else {node.target_color = '#ccc'}
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
@@ -427,7 +475,7 @@
           center: null,
           settings: {
             drawEdges: false,
-            labelThreshold: 8,
+            labelThreshold: 1,
             enableCamera: false
           },
           animation: {
@@ -452,13 +500,17 @@
           init: function() {
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
-                  l = _options.innerCircleCount;
+                  l = _options.innerCircleCount,
+                  labelToShow = ["nytimes.com"];
+
+                  node.label = null;
 
               if (i < l) {
                 node.target_size = 2;
                 if (node.attributes.C == 'true'){ 
                   node.target_color = goodColors.C; // TODO: Apply good color
                   node.target_size = 4;
+                  if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
                 }
                 else {node.target_color = '#ccc'}
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
@@ -477,7 +529,7 @@
           center: null,
           settings: {
             drawEdges: false,
-            labelThreshold: 8,
+            labelThreshold: 1,
             enableCamera: false
           },
           animation: {
@@ -505,6 +557,8 @@
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount;
+
+              node.label = null;
 
               if (i < l) {
                 node.target_size = 3;
@@ -553,14 +607,19 @@
           init: function() {
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
-                  l = _options.innerCircleCount;
+                  l = _options.innerCircleCount,
+                  labelToShow = ["who.int"]
 
+              node.label = null;
               node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
               if (i < l) {
+
+                if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
                 node.target_color = '#425863'; // TODO: Apply good color
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
                 node.target_x = _options.innerRadius * Math.cos(angle);
                 node.target_y = _options.innerRadius * Math.sin(angle);
+
               } else {
                 node.target_color = '#AAA'; // TODO: Apply good color
                 angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
@@ -574,7 +633,7 @@
           filter: null,
           settings: {
             drawEdges: true,
-            labelThreshold: 8,
+            labelThreshold: 1,
             enableCamera: false
           },
           animation: {
@@ -600,7 +659,10 @@
            */
           init: function() {
             _s.graph.nodes().forEach(function(node, i, a) {
+
               var l = _options.innerCircleCount;
+
+              
 
               if (i < l)
                 node.target_color = '#425863'; // TODO: Apply good color
