@@ -308,7 +308,7 @@
               if (i < l) {
                 node.target_size = 3;
                 //node.target_color = node.file_color; // TODO: Apply good color
-                node.target_color = '#ccc';
+                node.target_color = '#425863';
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
                 node.target_x = _options.innerRadius * Math.cos(angle);
                 node.target_y = _options.innerRadius * Math.sin(angle);
