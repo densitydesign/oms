@@ -258,7 +258,7 @@
 
 
     sigma.parsers.json(
-      'data/cs_crawl.json',
+      'data/cs_crawl_2.json',
       function(graph) {
         // Save the original data:
         graph.nodes.forEach(function(n) {
