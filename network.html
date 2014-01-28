@@ -8,6 +8,7 @@
     <link href="css/app.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -214,12 +215,17 @@
 			
 	</div>
 	
+	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
     <script src="js/d3.v3.min.js"></script>
+        <!-- styles needed by jScrollPane -->
+	<link type="text/css" href="css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+	<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+    
 
     
     <script>
@@ -238,10 +244,10 @@
 	
 	
 	$(document).ready(function(){
+			    
 	    
 	    $("#protocol").css("left","97%");
-	    
-	    
+	   
 	    
 	    //General interactions
 	
@@ -293,18 +299,30 @@
 		//=======================
 		//scroll interaction
 	        
-	    $('.long').bind('mousewheel',chk_scroll);
-	    $('.adva-cont').bind('mousewheel',disableScroll);
+	    $('.long').bind('mousewheel DOMMouseScroll',chk_scroll);
+	    $('.adva-cont').bind('mousewheel DOMMouseScroll',disableScroll);
 
 
 		//general scroll behaviour
-		  window.onmousewheel = document.onmousewheel = function(e) {
+		 $(document).on( "mousewheel DOMMouseScroll", function(e){
 				if(timer==0) {
 					timer=20;
 					
 					var e = window.event || e; // old IE support
-					var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-					console.log(delta)
+					
+					
+					if(e.wheelDelta != undefined) {
+					var delta = Math.max(-1, Math.min(1, (e.wheelDelta)));
+					console.log("scrollwheel")
+					}
+					
+					else if(e.originalEvent.detail!=0){
+						var delta = -e.originalEvent.detail;
+						console.log("detail", e.originalEvent)
+					}
+					else var delta = -e.originalEvent.deltaY
+					
+					console.log("delta",delta)
 					if(delta<0) direction="down"
 					else if(delta>0) direction="up";
 					
@@ -313,7 +331,7 @@
 		    if (e.preventDefault)
 		        e.preventDefault();
 		    e.returnValue = false;
-		  };
+		  });
 		  
 		  //timeout to check scroll updates
 		  timeoutid = setInterval('checkTime();', 100);

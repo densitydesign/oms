@@ -67,14 +67,14 @@ dsv_egg("data/threads.csv",function(d) {
 		
 	d3.select('#buttons').append("button").text('by Time')
 		.on("click", function(){
-			$("svg").fadeOut(200,function(){
+			
 				
-				pack.bindByTime()	
+				pack.bindByTime();
 				
-				$("svg").fadeIn(500);
+				
 				})
 			
-		})
+		
 
 	
     
