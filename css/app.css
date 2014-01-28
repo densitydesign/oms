@@ -4,8 +4,10 @@ html{
 
 body {
   height: 100%;
+  position:relative;
   
 }
+
 
 img.bg {
   /* Set rules to fill background */
@@ -355,7 +357,7 @@ margin:0 10px 30px 0;
 }
 section{
 	height:100%;
-	overflow:scroll;
+	overflow:auto;
 }
 .side-panel{
 	width:20%;
@@ -399,7 +401,7 @@ section{
 
 .adva-cont{
 	height:80%;
-	overflow:scroll;
+	overflow:auto;
 }
 .viz{
 	border-top:1px solid #CBCCCE;
@@ -549,4 +551,35 @@ padding-left:0;
 
 #graph{
 	height: 100%;
+}
+::-webkit-scrollbar {
+    display:none;
+}
+@-moz-document url-prefix(http://),url-prefix(https://) {
+scrollbar {
+   -moz-appearance: none !important;
+   background: rgb(0,255,0) !important;
+  
+}
+thumb,scrollbarbutton {
+   -moz-appearance: none !important;
+   background-color: rgb(0,0,255) !important;
+   
+}
+
+thumb:hover,scrollbarbutton:hover {
+   -moz-appearance: none !important;
+   background-color: rgb(255,0,0) !important;
+  
+}
+
+scrollbarbutton {
+   display: none !important;
+  
+}
+
+scrollbar[orient="vertical"] {
+	
+  min-width: 15px !important;
+}
 }
