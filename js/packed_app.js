@@ -44,36 +44,26 @@ dsv_egg("data/threads.csv",function(d) {
 
 	d3.select('#buttons').append("button").text('depth to 1')
 		.on("click", function(){
-			$("svg").fadeOut(200,function(){
-				$("svg").empty()
-				pack.depth(1)	
-				chart.datum(data).call(pack)
-				$("svg").fadeIn(200);
+			
+				pack.deep(1)	
+				
 				})
 			
-		})
+
 		
 	d3.select('#buttons').append("button").text('depth to 2')
 		.on("click", function(){
-			$("svg").fadeOut(200,function(){
-				
-				pack.depth(2)	
-				
-				$("svg").fadeIn(500);
-				})
 			
-		})
+			pack.deep(2);
+				})
+
     
     d3.select('#buttons').append("button").text('depth to 3')
 		.on("click", function(){
-			$("svg").fadeOut(200,function(){
-				
-				pack.depth(3)	
-				
-				$("svg").fadeIn(500);
-				})
 			
-		})
+			pack.deep(3);
+				})
+	
 		
 	d3.select('#buttons').append("button").text('by Time')
 		.on("click", function(){
