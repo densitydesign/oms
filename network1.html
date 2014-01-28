@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bootstrap 101 Template</title>
+    <title>WHO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -49,12 +49,9 @@
     </div>
   
   	
-    <section id="intro" class="intro bg-full long">
+     <section id="intro" class="intro bg-full long">
     	<h2 class="section">section</h2>
-    	<h1 class="title-full">The corpus</h1>
-	
-	
-	
+    	<h1 class="title-full">Network</h1>
 	<div class="container">
 		<div class="row section-row">
 			<div class="col-md-10 col-md-offset-2 section-text">
@@ -80,13 +77,25 @@
 			
 				<p>Quisque volutpat condimentum <b note="velit">velit</b>. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. </p>
 		</div>
-			
+
+
+
+			<div class="row section-row">
+			<div class="col-md-6">
+				<h3 class="section">results per query</h3>
+					<div  id="query"></div>
+			</div>
+
+			<div class="col-md-6">
+				<h3 class="section">results per category</h3>
+					<div  id="category"></div>
+				<h3 class="section">results per domain</h3>
+					<div  id="domain"></div>
+			</div>
+
+			</div>
 			
 		</div>
-		
-		
-		
-		
 	</div>
 	</section>
 	
@@ -117,91 +126,104 @@
 			</div>
 		<div class="legend">
 			
-			<h5>Step 2</h5>
+			<h5>Legend</h5>
 			<p>Blue is good<br/>
 			Red is bad</p>
+			    <div id="buttons">
+      <button id="previous-step">previous</button>
+      <button id="next-step">next</button>
+    </div>
 			
 		</div>
 			
 		</div>
 		
+		<!-- main panel  -->
+
+		<div class="main-panel" >
+			<div id="graph"></div>
+		</div>
 		
 	</section>
 	
 	
 	<div id="protocol">
 			
-		<div class="proto-title closing">PROTOCOL_01  <img class="close-btn" src="img/cross.png"/></div>
+		<div class="proto-title closing">PROTOCOL   <img class="close-btn" src="img/cross.png"/></div>
 		
 		
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-		  <!-- Indicators -->
+				  <!-- Indicators -->
 		  <ol class="carousel-indicators">
 		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
 		  </ol>
-		
+
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner">
 		    <div class="item active">
 		    	
 		    	<div class="step">
-		    		<img src="img/protocol1.png"/>
-				    	<h3>1_TAGGING</h3>
+		    		<img src="img/pro_query-net.png"/>
+				    	<h3>1.Querying<br>(corpus building)</h3>
 				    	<p>I will give you a complete account of the
 						system, and expound the actual teachings
 						of the great explorer of the truth.</p>
+						<div class="details">
+							<h5>Corpus: 336 webpages</h5>
+						</div>
 				    </div>
 				    
 				    <div class="step">
-		    		<img src="img/protocol1.png"/>
-				    	<h3>2_GROUPING</h3>
+
+		    		<img src="img/pro_clean.png"/>
+				    	<h3>2.Cleaning</h3>
 				    	<p>I will give you a complete account of the
 						system, and expound the actual teachings
 						of the great explorer of the truth.</p>
+						<div class="details">
+						<h5>Corpus: ? webpages </h5>
+				    		<a href="#"><div class="link-download">Download Data</div></a>
+							<a href="#"><div class="link-visualization">Go to the Visualization</div></a>
+						</div>
 				    </div>
 				    
 				    <div class="step">
-		    		<img src="img/protocol1.png"/>
-				    	<h3>3_DANCING</h3>
+		    		<img src="img/pro_tag-cs.png"/>
+				    	<h3>3.Tagging</h3>
 				    	<p>I will give you a complete account of the
 						system, and expound the actual teachings
 						of the great explorer of the truth.</p>
-						<button class="btn">Download Data</button>
+				    	<div class="details">
+				    	<h5>Corpus: 336 webpages </h5>
+				    		<a href="#"><div class="link-download">Download Data</div></a>
+							<a href="#"><div class="link-visualization">Go to the Visualization</div></a>
+						</div>
+
 				    </div>
 
 		    	</div>
-		    	
 		    	
 		    	<div class="item">
-		    	
-		    	<div class="step">
-		    		<img src="img/protocol1.png"/>
-				    	<h3>4_PLANNING</h3>
-				    	<p>I will give you a complete account of the
-						system, and expound the actual teachings
-						of the great explorer of the truth.</p>
-				    </div>
-				    
+		  
 				    <div class="step">
-		    		<img src="img/protocol1.png"/>
-				    	<h3>5_TURING</h3>
+		    		<img src="img/pro_crawl.png"/>
+				    	<h3>Crawling</h3>
 				    	<p>I will give you a complete account of the
 						system, and expound the actual teachings
 						of the great explorer of the truth.</p>
-						<button class="btn">Download Data</button>
+						<div class="details">
+							<h5>Corpus: 677 websites </h5>
+				    		<a href="#"><div class="link-download">Download Data</div></a>
+							<a href="#"><div class="link-visualization">Go to the Visualization</div></a>
+						</div>
 				    </div>
 				    
-				   <div class="step">
-		    		<img src="img/protocol1.png"/>
-				    	<h3>6_CURLING</h3>
-				    	<p>I will give you a complete account of the
-						system, and expound the actual teachings
-						of the great explorer of the truth.</p>
-				    </div>
+	
 
 		    	</div>
 		    	
+		  </div>
 		  </div>
 		
 		  <!-- Controls -->
@@ -216,6 +238,15 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
     <script src="js/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/crossfilter.js"></script>	
+	<script type="text/javascript" src="js/oms/barchart.js"></script>
+	<script type="text/javascript" src="js/oms/bubblechart.js"></script>
+	<script type="text/javascript" src="js/analytics_app.js"></script>
+	  <script type="text/javascript" src="js/sigma.min.js"></script>
+  <script type="text/javascript" src="js/sigma.parsers.json.js"></script>
+  <script type="text/javascript" src="js/sigma.layout.forceAtlas2.js"></script>
+  <script type="text/javascript" src="js/sigma.plugins.neighborhoods.js"></script>
+  <script type="text/javascript" src="js/graph_app.js"></script>
 
     
     <script>
