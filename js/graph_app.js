@@ -842,7 +842,7 @@
               node.size = _s.graph.degree(node.id, 'in') / _options.ratio;
             });
             _s.bind('clickNode', function(e) {
-                    console.log(e.data.node.label);
+                    console.log(e.data);
               });
           },
           forceAtlas2: false,
