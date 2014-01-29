@@ -679,7 +679,7 @@
           filter: null,
           settings: {
             drawEdges: true,
-            labelThreshold: 8,
+            labelThreshold: 1,
             enableCamera: false
           },
           animation: {
@@ -706,12 +706,16 @@
            */
           init: function() {
             _s.graph.nodes().forEach(function(node, i, a) {
-              var l = _options.innerCircleCount;
+              var l = _options.innerCircleCount,
+                labelToShow = ["who.int"]; //TODO: Put real labels
+
+              node.label = null;
+              if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
 
               if (node.attributes.E !== 'false')
-                node.target_color = '#f00'; // TODO: Apply good color
+                node.target_color = goodColors.E; // TODO: Apply good color
               else
-                node.target_color = node.file_color; // TODO: Apply good color
+                node.target_color = '#AAA'; // TODO: Apply good color
 
               node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
               node.target_x = node.file_x;
@@ -723,7 +727,7 @@
           filter: null,
           settings: {
             drawEdges: true,
-            labelThreshold: 8,
+            labelThreshold: 1,
             enableCamera: false
           },
           animation: {
@@ -747,12 +751,16 @@
            */
           init: function() {
             _s.graph.nodes().forEach(function(node, i, a) {
+              
+              node.label = node.file_label;
+              
               if (node.id === '825512d2-ebdf-480e-8ae7-bdad81f491b4')
-                node.target_color = '#fc0'; // TODO: Apply good color
+                node.target_color = '#425863'; // TODO: Apply good color
               else
-                node.target_color = node.file_color; // TODO: Apply good color
+                node.target_color = '#AAA'; // TODO: Apply good color
 
               node.size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              //node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
             });
           },
           forceAtlas2: true,
@@ -760,8 +768,48 @@
           filter: null,
           settings: {
             drawEdges: true,
-            labelThreshold: 6,
+            labelThreshold: 4,
             enableCamera: false
+          },
+                    animation: {
+            color: 'target_color',
+            size: 'target_size'
+          }
+        },
+        {
+          /**
+           * EGO NETWORK
+           * FORCE ATLAS 2
+           * CATEGORIES COLORS
+           * EDGES ARE DISPLAYED
+           * SIZES ARE INDEGREE
+           * ZOOM ON ONE CLUSTER: E
+           */
+          init: function() {
+            _s.graph.nodes().forEach(function(node, i, a) {
+              
+              node.label = node.file_label;
+              
+              if (node.id === '25a25d96-fadc-45ed-b6a6-777c12551fa0')
+                node.target_color = '#425863'; // TODO: Apply good color
+              else
+                node.target_color = '#AAA'; // TODO: Apply good color
+
+              node.size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              //node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+            });
+          },
+          forceAtlas2: true,
+          center: '25a25d96-fadc-45ed-b6a6-777c12551fa0',
+          filter: null,
+          settings: {
+            drawEdges: true,
+            labelThreshold: 4,
+            enableCamera: false
+          },
+          animation: {
+            color: 'target_color',
+            size: 'target_size'
           }
         },
         {
@@ -771,19 +819,31 @@
            * CATEGORIES COLORS
            * EDGES ARE DISPLAYED
            * SIZES ARE INDEGREE
-           * ZOOM ON ONE CLUSTER: E
            */
           init: function() {
             _s.graph.nodes().forEach(function(node, i, a) {
-              if (node.id === '825512d2-ebdf-480e-8ae7-bdad81f491b4')
-                node.target_color = '#fc0'; // TODO: Apply good color
+              var l = _options.innerCircleCount;
+              // if (i < l)
+              //   node.target_color = '#425863'; // TODO: Apply good color
+              // else
+              //   node.target_color = '#AAA'; // TODO: Apply good color
+
+              // node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              // node.target_x = node.file_x;
+              // node.target_y = node.file_y;
+
+              if (i < l)
+                node.color = '#425863'; // TODO: Apply good color
               else
-                node.target_color = node.file_color; // TODO: Apply good color
+                node.color = '#AAA'; // TODO: Apply good color
 
               node.x = node.file_x;
               node.y = node.file_y;
               node.size = _s.graph.degree(node.id, 'in') / _options.ratio;
             });
+            _s.bind('clickNode', function(e) {
+                    console.log(e.data.node.label);
+              });
           },
           forceAtlas2: false,
           center: null,
@@ -793,6 +853,19 @@
             labelThreshold: 6,
             enableCamera: true
           }
+          // ,
+          // animation: {
+          //   color: 'target_color',
+          //   size: 'target_size',
+          //   x: 'target_x',
+          //   y: 'target_y',
+          //   camera: {
+          //     x: 0,
+          //     y: 0,
+          //     ratio: 1,
+          //     angle: 0
+          //   }
+          // }
         }
       ];
 
