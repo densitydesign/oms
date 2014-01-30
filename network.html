@@ -227,75 +227,13 @@
     
     <script>
 	
-	
-
+  		
   	var checkPoints = [
-  		"intro()",
-  		"viz()",
-  		"step2()",
-  		"next()"
+  		"intro",
+  		["viz",1],
+  		["viz",2],
+  		"next"
   		];
-
-	
-  	
-  	//====================
-  	//screens functions
-  	
-  	function intro() {
-  		scrollToID("#intro",600);
-  		if( $('#intro').is(':empty') ) {
-  			$( "#intro" ).load( "sections/intro.html" );
-  		}
-  		
-  	}
-  	
-  	function viz() {
-  		
-  		scrollToID("#viz",600);
-  		
-  		a=$(".adv-step:visible");
-  		
-  		if( !$('#viz').html() ) {
-  			$( "#viz" ).load( "sections/viz.html" );
-  		}
-  		
-  		if (!a.hasClass("step1")) {
-  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step1").fadeIn(500)});
-  		}
-  		
-  		
-  	}
-  	
-  	function step2() {
-  		
-  		scrollToID("#viz",600);
-  		if( !$('#viz').html() ) {
-  			$( "#viz" ).load( "sections/viz.html" );
-  		}
-  		
-  		a=$(".adv-step:visible");
-  		
-  		if (!a.hasClass("step2")) {
-  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step2").fadeIn(500)});
-  		}
-  		
-  		
-  	}
-  	
-  	function next() {
-  		
-  		scrollToID("#next",600);
-  		if( !$('#next').html() ) {
-  			$("#next" ).load( "sections/next.html" );
-  		}
-  	}
-  	
-  	//end screens functions
-  	//=====================
-
-
-
-  	
 
 	</script>
     

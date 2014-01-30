@@ -59,7 +59,7 @@ $( document ).ready(function() {
 		
 
 		if (timer == 0) {
-			timer = 10;
+			timer = 13;
 						var e = window.event || e;
 			// old IE support
 
@@ -125,11 +125,14 @@ function checkLevel() {
 
 	if (direction == "down" && step < checkPoints.length - 1) {
 		step++;
-		eval(checkPoints[step]);
+		scrollToID(checkPoints[step]);
+		loadSection(checkPoints[step]);
+		
 		
 	} else if (direction == "up" && step > 0) {
 		step--;
-		eval(checkPoints[step]);
+		scrollToID(checkPoints[step]);
+		loadSection(checkPoints[step]);
 
 	}
 }
@@ -165,7 +168,7 @@ $(document).keydown(function(e) {
 
 //utility to animate transition between divs
 function scrollToID(id, speed) {
-
+	id="#"+id;
 	var targetOffset = $(id).offset().top;
 	$(id).scrollTop(0);
 	$('html,body').animate({
@@ -176,6 +179,36 @@ function scrollToID(id, speed) {
   		$(id).next("section").empty()
 		
 	});
+}
+	
+	function loadSection(sec) {
+
+		var id, subsec;
+		
+		if ($.isArray(sec)) {
+			id=sec[0];
+			subsec=sec[1];
+		}
+		else id=sec;
+		 
+	
+	if( !$('#'+id).html() ) {
+  			$( "#"+id ).load( "sections/"+id+".html", function() {	
+  				a=$(".adv-step:visible");
+  				
+  				if (subsec && !a.hasClass("step"+subsec)) {
+		  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
+		  		}
+  			} );
+  		}
+  		else {
+  			a=$(".adv-step:visible");
+  				
+  				if (subsec && !a.hasClass("step"+subsec)) {
+		  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
+		  		}
+  			}
+	}
 
 //Scrollwheel while loading
 	
@@ -186,7 +219,7 @@ $(document).on({
      ajaxStop: function() { $body.removeClass("loading"); }    
 });
 
-}
+
 
 
 

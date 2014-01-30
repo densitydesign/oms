@@ -571,11 +571,11 @@ padding-left:0;
                 50% 50% 
                 no-repeat;
                 
-    -webkit-transition: opacity .15s ease-in-out;
-    -moz-transition: opacity .15s ease-in-out;
-    -ms-transition: opacity .15s ease-in-out;
-    -o-transition: opacity .15s ease-in-out;
-    transition: opacity .15s ease-in-out;
+    -webkit-transition: opacity .85s ease-in-out;
+    -moz-transition: opacity .85s ease-in-out;
+    -ms-transition: opacity .85s ease-in-out;
+    -o-transition: opacity .85s ease-in-out;
+    transition: opacity .85s ease-in-out;
                 
 }
 
