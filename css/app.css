@@ -3,14 +3,10 @@ html{
 }
 
 body {
-<<<<<<< HEAD
-	height: 100%;
 
-=======
-  height: 100%;
-  position:relative;
-  
->>>>>>> b4e17b9e743809272294c5a9287e859c90fab5be
+	height: 100%;
+	position:relative;
+
 }
 
 
@@ -557,10 +553,7 @@ ol {
 #graph{
 	height: 100%;
 }
-<<<<<<< HEAD
 
-
-=======
 ::-webkit-scrollbar {
     display:none;
 }
@@ -600,4 +593,4 @@ body.loading .modal {
     display: block;
     opacity: 1;
 }
->>>>>>> b4e17b9e743809272294c5a9287e859c90fab5be
+
