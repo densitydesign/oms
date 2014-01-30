@@ -7,6 +7,15 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    
+     
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/d3.v3.min.js"></script>
+    
+	<script type="text/javascript" src="js/denseShow.js"></script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -65,14 +74,6 @@
 				<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </p>
 				
 				
-				<p>Lorem ipsum <b note="dolor">dolor</b> sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.  </p>
-				
-				<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </p>
-				
-				<p>Lorem ipsum <b note="dolor">dolor</b> sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.  </p>
-				
-				<p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </p>
-				
 				<!-- <div class="col-md-5 quote">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 				
@@ -90,7 +91,8 @@
 	</div>
 	</section>
 	
-	<section id="viz" class="viz">
+	<section id="viz" class="viz">	
+		
 		
 		<div class="side-panel">
 			
@@ -124,9 +126,11 @@
 		</div>
 			
 		</div>
-		
-		
 	</section>
+	
+	<section id="next"></section>
+	
+	
 	
 	
 	<div id="protocol">
@@ -214,12 +218,11 @@
 			
 	</div>
 	
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.mousewheel.js"></script>
-    <script src="js/d3.v3.min.js"></script>
+	
+	<div class="modal"><!-- Place at bottom of page --></div>
+	
+   
+    
 
     
     <script>
@@ -229,178 +232,62 @@
   	var checkPoints = [
   		"intro()",
   		"viz()",
-  		"step2()"
+  		"step2()",
+  		"next()"
   		];
 
-	 var step = 0;
-		var timer=0;
-		var direction=0;
 	
-	
-	$(document).ready(function(){
-	    
-	    $("#protocol").css("left","97%");
-	    
-	    
-	    
-	    //General interactions
-	
-		$('.carousel').carousel({
-		  "wrap":false,
-		  "interval":false
-		})
-		
-		$("#protocol").click(function() {
-			
-			if($("#protocol").position().left >0){ 
-				$("#protocol").css("left",0);
-				$(".close-btn").css('-webkit-transform','rotate(90deg)');
-				$(".close-btn").css('-moz-transform','rotate(90deg)');
-			}
-			
-		})
-		
-		$(".closing").click(function() {
-			console.log($("#protocol").css("left"))
-			if($("#protocol").css("left")=="0px") {
-
-				$("#protocol").css("left","97%");
-				$(".close-btn").css('-webkit-transform','rotate(45deg)');
-				$(".close-btn").css('-moz-transform','rotate(45deg)');
-
-			}
-		})
-		
-		
-		$("b").hover(function() {
-			height=$(this).position().top;
-			att = $(this).attr('note');
-			txt = notes[att]; 
-			$(".section-text").append('<div class="note" style="top:'+height+'px">'+txt+'</div>');
-		},
-		
-		function() {
-			$(".note").remove();
-		})
-		
-			
-		$("#protocol").mousewheel(function(event){
-			return false;
-		});
-		
-	
-	
-		//=======================
-		//scroll interaction
-	        
-	    $('.long').bind('mousewheel',chk_scroll);
-	    $('.adva-cont').bind('mousewheel',disableScroll);
-
-
-		//general scroll behaviour
-		  window.onmousewheel = document.onmousewheel = function(e) {
-				if(timer==0) {
-					timer=20;
-					
-					var e = window.event || e; // old IE support
-					var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-					console.log(delta)
-					if(delta<0) direction="down"
-					else if(delta>0) direction="up";
-					
-					checkLevel();
-				}
-		    if (e.preventDefault)
-		        e.preventDefault();
-		    e.returnValue = false;
-		  };
-		  
-		  //timeout to check scroll updates
-		  timeoutid = setInterval('checkTime();', 100);
-	});
-	
-	//timing for scroll update
-	function checkTime(){
-		
-		if (timer>0) {
-			timer--;
-		}
-		
-	}
-	
-	function chk_scroll(e)
-	{
-		if (timer==0) {
-		    var elem = $(e.currentTarget); 
-		   
-		    if (!(elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight())) 
-		    {
-		        e.stopPropagation();
-		    }
-		    else {
-		    	//timer=40;
-		    	console.log("set timer!")
-	
-		    }
-		}
-		
-	}
-	
-	function disableScroll(e,delta) {
-		var elem = $(e.currentTarget);
-		console.log(elem);
-		elem.scrollTop(elem.scrollTop() - (40 * delta));
-	    //set_bar();
-	    e.stopPropagation();
-	    return false;
-	}
-	
-	//load next or previous screen according to scroll direction
-	function checkLevel() {
-
-  		if (direction=="down" && step < checkPoints.length-1) {
-  			step++;
-  			eval(checkPoints[step]);
-  		}
-  		else if(direction=="up" && step>0) {
-  			step--;
-  			eval(checkPoints[step]);
-  			
-  		}
-  	}
-  	
-  	//end scroll
-  	//====================
-  	
-  	
-  	
-  	
   	
   	//====================
   	//screens functions
   	
   	function intro() {
   		scrollToID("#intro",600);
+  		if( $('#intro').is(':empty') ) {
+  			$( "#intro" ).load( "sections/intro.html" );
+  		}
   		
   	}
   	
   	function viz() {
   		
   		scrollToID("#viz",600);
+  		
   		a=$(".adv-step:visible");
+  		
+  		if( !$('#viz').html() ) {
+  			$( "#viz" ).load( "sections/viz.html" );
+  		}
+  		
   		if (!a.hasClass("step1")) {
   			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step1").fadeIn(500)});
   		}
+  		
   		
   	}
   	
   	function step2() {
   		
+  		scrollToID("#viz",600);
+  		if( !$('#viz').html() ) {
+  			$( "#viz" ).load( "sections/viz.html" );
+  		}
+  		
   		a=$(".adv-step:visible");
+  		
   		if (!a.hasClass("step2")) {
   			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step2").fadeIn(500)});
   		}
   		
+  		
+  	}
+  	
+  	function next() {
+  		
+  		scrollToID("#next",600);
+  		if( !$('#next').html() ) {
+  			$("#next" ).load( "sections/next.html" );
+  		}
   	}
   	
   	//end screens functions
@@ -408,16 +295,7 @@
 
 
 
-  	//utility to animate transition between divs
-  	function scrollToID(id, speed){
-
-		
-		var targetOffset = $(id).offset().top;
-		$(id).scrollTop(0);
-		$('html,body').animate({scrollTop:targetOffset}, speed);
-		
-	}
-		
+  	
 
 	</script>
     
