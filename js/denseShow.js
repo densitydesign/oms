@@ -59,7 +59,7 @@ $( document ).ready(function() {
 		
 
 		if (timer == 0) {
-			timer = 13;
+			timer = 18;
 						var e = window.event || e;
 			// old IE support
 
@@ -129,12 +129,14 @@ function checkLevel() {
 		loadSection(checkPoints[step]);
 		
 		
+		
 	} else if (direction == "up" && step > 0) {
 		step--;
 		scrollToID(checkPoints[step]);
 		loadSection(checkPoints[step]);
 
 	}
+	$("#sgnaf").css("width",step/(checkPoints.length-1)*100+"%");
 }
 
 //end scroll
@@ -218,6 +220,7 @@ $(document).on({
     ajaxStart: function() { $body.addClass("loading");    },
      ajaxStop: function() { $body.removeClass("loading"); }    
 });
+
 
 
 

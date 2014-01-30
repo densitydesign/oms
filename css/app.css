@@ -594,3 +594,15 @@ body.loading .modal {
     opacity: 1;
 }
 
+#sgnaf{
+	position:fixed;
+	left:0;
+	top:57px;
+	height:3px;
+	background-color:#84A594;
+	width:0%;
+	-webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+}
