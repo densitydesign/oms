@@ -54,13 +54,14 @@ $( document ).ready(function() {
 	$('.long').on('mousewheel DOMMouseScroll', chk_scroll);
 	$('.adva-cont').on('mousewheel DOMMouseScroll', disableScroll);
 	
+	//touch
 	
 	var hammerdoc = Hammer(document);
 	
 	 hammerdoc.on("drag", function(ev) {
         
         if (timer == 0) {
-			timer = 18;
+			timer = 20;
         direction = ev.gesture.direction=="down" ? "up" : "down";
         checkLevel();
         ev.gesture.preventDefault();
@@ -91,7 +92,6 @@ $( document ).ready(function() {
 
 		}
 	}
-        //$(this).scrollTop($(this).scrollTop() - event.gesture.deltaY/10);
     });
     
     
@@ -99,12 +99,13 @@ $( document ).ready(function() {
 	//general scroll behaviour
 	$(document).on("mousewheel DOMMouseScroll", function(e) {
 		
-
+		console.log("document", e)
 		if (timer == 0) {
 			timer = 18;
-						var e = window.event || e;
+			var e = window.event || e;
 			// old IE support
-
+			
+			
 			if (e.wheelDelta != undefined) {
 				var delta = Math.max(-1, Math.min(1, (e.wheelDelta)));
 				
@@ -118,12 +119,17 @@ $( document ).ready(function() {
 				direction = "down"
 			else if (delta > 0)
 				direction = "up";
-
-			checkLevel();
-		}
-		if (e.preventDefault)
+			
 			e.preventDefault();
-		e.returnValue = false;
+			checkLevel();
+			return false;
+		}
+		else {
+			e.preventDefault();
+			e.stopPropagation();
+			return false;
+		}
+		
 	});
 	
 	});
@@ -141,15 +147,32 @@ function checkTime() {
 }
 
 function chk_scroll(e) {
-	if (timer == 0) {
-		var elem = $(e.currentTarget);
+	
+	var elem = $(e.currentTarget);
+	
+	if(elem.attr("id") != checkPoints[step] && elem.attr("id") != checkPoints[step][0]) {
+		console.log("scaduto")
+		e.preventDefault();
+		e.originalEvent.returnValue=false;
+		e.returnValue=false;
+		return false;
+		
+	}
+	
+	if (timer < 1) {
 		
 
-		if (!(elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight())) {
+		if ((elem[0].scrollHeight - elem.scrollTop() > elem.outerHeight())) {
+			console.log("not to prevent", e)
 			e.stopPropagation();
 		} else {
-
+			
 		}
+	}
+	else {
+		e.preventDefault();
+		e.originalEvent.returnValue=false;
+		return false;
 	}
 }
 
@@ -166,12 +189,14 @@ function disableScroll(e, delta) {
 function checkLevel() {
 
 	if (direction == "down" && step < checkPoints.length - 1) {
-		stepDown();
+		step++;
+		loadSection(checkPoints[step]);
 		
 		
 		
 	} else if (direction == "up" && step > 0) {
-		stepUp()
+		step--;
+		loadSection(checkPoints[step]);
 
 	}
 	$("#sgnaf").css("width",step/(checkPoints.length-1)*100+"%");
@@ -190,11 +215,11 @@ $(document).keydown(function(e) {
 	
 
 	if (e.keyCode == 38 && step > 0) {
-		
+		e.preventDefault();
 		stepUp();
 		
 	} else if (e.keyCode == 40 && step < checkPoints.length - 1) {
-		
+		e.preventDefault();
 		stepDown();
 	}
 	if (e.preventDefault)
@@ -238,6 +263,9 @@ function scrollToID(id, speed) {
   				if (subsec && !a.hasClass("step"+subsec)) {
 		  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
 		  		}
+		  		
+		  		scrollToID(checkPoints[step]);
+		  		
   			} );
   		}
   		else {
@@ -246,6 +274,7 @@ function scrollToID(id, speed) {
   				if (subsec && !a.hasClass("step"+subsec)) {
 		  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
 		  		}
+		  	scrollToID(checkPoints[step]);
   			}
 	}
 
@@ -254,21 +283,18 @@ function scrollToID(id, speed) {
 $body = $("body");
 
 $(document).on({
-    ajaxStart: function() { $body.addClass("loading");    },
+    ajaxStart: function() { $body.addClass("loading"); },
      ajaxStop: function() { $body.removeClass("loading"); }    
 });
 
 function stepDown() {
-	
 	step++;
-	scrollToID(checkPoints[step]);
 	loadSection(checkPoints[step]);
 	
 }
 
 function stepUp() {
 	step--;
-	scrollToID(checkPoints[step]);
 	loadSection(checkPoints[step]);
 }
 
