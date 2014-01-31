@@ -53,7 +53,49 @@ $( document ).ready(function() {
 
 	$('.long').on('mousewheel DOMMouseScroll', chk_scroll);
 	$('.adva-cont').on('mousewheel DOMMouseScroll', disableScroll);
+	
+	
+	var hammerdoc = Hammer(document);
+	
+	 hammerdoc.on("drag", function(ev) {
+        
+        if (timer == 0) {
+			timer = 18;
+        direction = ev.gesture.direction=="down" ? "up" : "down";
+        checkLevel();
+        ev.gesture.preventDefault();
+        }
+        ev.gesture.preventDefault();
+        return false;
+    });
+    
+    $('section').hammer().on("drag",".adva-cont", function(event) {
+        event.gesture.stopPropagation();
+        event.stopPropagation();
+        event.preventDefault();
+        event.gesture.preventDefault();
+        $(this).scrollTop($(this).scrollTop() - event.gesture.deltaY/10);
+    });
+    
+    $(document).hammer().on("drag",".long", function(event) {
+    	
+    	
+        if (timer == 0) {
+		var elem = $(this);
+		
 
+		if (!(elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight())) {
+			event.stopPropagation();
+			event.gesture.stopPropagation();
+		} else {
+
+		}
+	}
+        //$(this).scrollTop($(this).scrollTop() - event.gesture.deltaY/10);
+    });
+    
+    
+    
 	//general scroll behaviour
 	$(document).on("mousewheel DOMMouseScroll", function(e) {
 		
