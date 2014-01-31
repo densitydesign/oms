@@ -525,6 +525,10 @@ section{
 	margin-top:40px;
 }
 
+#spazio_min{
+margin-top:20px;
+}
+
 ol {
 	display: block;
 	list-style-type: decimal;
