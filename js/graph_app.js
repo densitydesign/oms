@@ -63,12 +63,23 @@
       for (k in config)
         if (k !== 'camera') {
           if (!k.match(/color$/)){
-            n['start_' + k] = n[k]; 
-            
+            n['start_' + k] = n[k];
+
           }else
             {n['start_' + k] = parseColor(n[k]);}
         }
     });
+
+    // _s.graph.edges().forEach(function(n) {
+    //   for (k in config)
+    //     if (k !== 'camera') {
+    //       if (!k.match(/color$/)){
+    //         n['start_' + k] = n[k];
+
+    //       }else
+    //         {n['start_' + k] = parseColor(n[k]);}
+    //     }
+    // });
 
     if (config.camera) {
       camPosition = {
@@ -105,6 +116,18 @@
               );
         });
 
+        // _s.graph.edges().forEach(function(n) {
+        //   for (k in config)
+        //     if (!k.match(/color$/))
+        //       n[k] = n['start_' + k] + p * (n[config[k]] - n['start_' + k]);
+        //     else
+        //       n[k] = interpolateColors(
+        //         n['start_' + k],
+        //         parseColor(n[config[k]]),
+        //         p
+        //       );
+        // });
+
         if (camTarget)
           for (k in camTarget)
             cam[k] = camPosition[k] * (1 - p) + camTarget[k] * p;
@@ -118,6 +141,11 @@
           for (k in config)
             n[k] = n[config[k]];
         });
+
+        // _s.graph.edges().forEach(function(n) {
+        //   for (k in config)
+        //     n[k] = n[config[k]];
+        // });
 
         if (typeof callback === 'function')
           callback();
@@ -179,6 +207,56 @@
    * GLOBAL APP VARS:
    * ****************
    */
+
+  sigma.utils.pkg('sigma.canvas.labels');
+  sigma.canvas.labels.def = function(node, context, settings) {
+       var fontSize,
+        prefix = settings('prefix') || '',
+        size = node[prefix + 'size'];
+
+    if(node.selected){
+          fontSize = (settings('labelSize') === 'fixed') ?
+      settings('defaultLabelSize') :
+      settings('labelSizeRatio') * size;
+
+    context.font = (settings('fontStyle') ? settings('fontStyle') + ' ' : '') +
+      fontSize + 'px ' + settings('font');
+    context.fillStyle = (settings('labelColor') === 'node') ?
+      (node.color || settings('defaultNodeColor')) :
+      settings('defaultLabelColor');
+
+      context.fillText(
+        node.label,
+        Math.round(node[prefix + 'x'] + size + 3),
+        Math.round(node[prefix + 'y'] + fontSize / 3)
+      );
+    }
+
+    else if (size < settings('labelThreshold')){
+      return;
+    }
+
+    else if (typeof node.label !== 'string'){
+      return;
+    }
+    else{
+      fontSize = (settings('labelSize') === 'fixed') ?
+        settings('defaultLabelSize') :
+        settings('labelSizeRatio') * size;
+
+      context.font = (settings('fontStyle') ? settings('fontStyle') + ' ' : '') +
+        fontSize + 'px ' + settings('font');
+      context.fillStyle = (settings('labelColor') === 'node') ?
+        (node.color || settings('defaultNodeColor')) :
+        settings('defaultLabelColor');
+
+      context.fillText(
+        node.label,
+        Math.round(node[prefix + 'x'] + size + 3),
+        Math.round(node[prefix + 'y'] + fontSize / 3)
+      );
+    }
+    }
 
   sigma.utils.pkg('sigma.canvas.nodes');
 
@@ -258,7 +336,7 @@
 
 
     sigma.parsers.json(
-      'data/cs_crawl_2.json',
+      'cs_crawl_2.json',
       function(graph) {
         // Save the original data:
         graph.nodes.forEach(function(n) {
@@ -344,6 +422,7 @@
            * ALL GREYS
            */
           init: function() {
+            _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount;
@@ -362,6 +441,10 @@
                 node.target_x = _options.outerRadius * Math.cos(angle);
                 node.target_y = _options.outerRadius * Math.sin(angle);
               }
+            });
+
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = 'rgba(17, 17, 17, 0.1)'
             });
           },
           forceAtlas2: false,
@@ -391,6 +474,7 @@
            * CATEGORIES COLORS E
            */
           init: function() {
+            _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -399,7 +483,7 @@
               delete node.label;
               if (i < l) {
                 node.target_size = 2;
-                if (node.attributes.E == 'true'){ 
+                if (node.attributes.E == 'true'){
                   node.target_color = goodColors.E; // TODO: Apply good color
                   node.target_size = 4;
                   if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
@@ -415,6 +499,9 @@
                 node.target_x = _options.outerRadius * Math.cos(angle);
                 node.target_y = _options.outerRadius * Math.sin(angle);
               }
+            });
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = 'rgba(17, 17, 17, 0.1)'
             });
           },
           forceAtlas2: false,
@@ -444,6 +531,7 @@
            * CATEGORIES COLORS M
            */
           init: function() {
+            _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -453,10 +541,10 @@
 
               if (i < l) {
                 node.target_size = 2;
-                if (node.attributes.M == 'true'){ 
+                if (node.attributes.M == 'true'){
                   node.target_color = goodColors.M; // TODO: Apply good color
                   node.target_size = 4;
-                  if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;                    
+                  if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
                 }
                 else {node.target_color = '#ccc'}
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
@@ -469,6 +557,9 @@
                 node.target_x = _options.outerRadius * Math.cos(angle);
                 node.target_y = _options.outerRadius * Math.sin(angle);
               }
+            });
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = 'rgba(17, 17, 17, 0.1)'
             });
           },
           forceAtlas2: false,
@@ -498,6 +589,7 @@
            * CATEGORIES COLORS C
            */
           init: function() {
+            _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -507,7 +599,7 @@
 
               if (i < l) {
                 node.target_size = 2;
-                if (node.attributes.C == 'true'){ 
+                if (node.attributes.C == 'true'){
                   node.target_color = goodColors.C; // TODO: Apply good color
                   node.target_size = 4;
                   if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
@@ -523,6 +615,9 @@
                 node.target_x = _options.outerRadius * Math.cos(angle);
                 node.target_y = _options.outerRadius * Math.sin(angle);
               }
+            });
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = 'rgba(17, 17, 17, 0.1)'
             });
           },
           forceAtlas2: false,
@@ -554,6 +649,7 @@
            * SIZES ARE STILL HARDCODED
            */
           init: function() {
+            _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount;
@@ -573,6 +669,10 @@
                 node.target_x = _options.outerRadius * Math.cos(angle);
                 node.target_y = _options.outerRadius * Math.sin(angle);
               }
+            });
+
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color ='rgba(17, 17, 17, 0.1)'
             });
           },
           forceAtlas2: false,
@@ -605,6 +705,7 @@
            * SIZES ARE INDEGREE
            */
           init: function() {
+            _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -626,6 +727,9 @@
                 node.target_x = _options.outerRadius * Math.cos(angle);
                 node.target_y = _options.outerRadius * Math.sin(angle);
               }
+            });
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = 'rgba(17, 17, 17, 0.1)'
             });
           },
           forceAtlas2: false,
@@ -658,11 +762,12 @@
            * SIZES ARE INDEGREE
            */
           init: function() {
+            _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
 
               var l = _options.innerCircleCount;
 
-              
+
 
               if (i < l)
                 node.target_color = '#425863'; // TODO: Apply good color
@@ -672,6 +777,9 @@
               node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
               node.target_x = node.file_x;
               node.target_y = node.file_y;
+            });
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = 'rgba(17, 17, 17, 0.1)'
             });
           },
           forceAtlas2: false,
@@ -705,6 +813,7 @@
            * ZOOM ON ONE CLUSTER: E
            */
           init: function() {
+            _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
               var l = _options.innerCircleCount,
                 labelToShow = ["who.int"]; //TODO: Put real labels
@@ -720,6 +829,9 @@
               node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
               node.target_x = node.file_x;
               node.target_y = node.file_y;
+            });
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = 'rgba(17, 17, 17, 0.1)'
             });
           },
           forceAtlas2: false,
@@ -750,10 +862,11 @@
            * ZOOM ON ONE CLUSTER: E
            */
           init: function() {
+            _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
-              
+
               node.label = node.file_label;
-              
+
               if (node.id === '825512d2-ebdf-480e-8ae7-bdad81f491b4')
                 node.target_color = '#425863'; // TODO: Apply good color
               else
@@ -761,6 +874,9 @@
 
               node.size = _s.graph.degree(node.id, 'in') / _options.ratio;
               //node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+            });
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = 'rgba(17, 17, 17, 0.1)'
             });
           },
           forceAtlas2: true,
@@ -786,10 +902,11 @@
            * ZOOM ON ONE CLUSTER: E
            */
           init: function() {
+            _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
-              
+
               node.label = node.file_label;
-              
+
               if (node.id === '25a25d96-fadc-45ed-b6a6-777c12551fa0')
                 node.target_color = '#425863'; // TODO: Apply good color
               else
@@ -797,6 +914,9 @@
 
               node.size = _s.graph.degree(node.id, 'in') / _options.ratio;
               //node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+            });
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = 'rgba(17, 17, 17, 0.1)'
             });
           },
           forceAtlas2: true,
@@ -823,14 +943,6 @@
           init: function() {
             _s.graph.nodes().forEach(function(node, i, a) {
               var l = _options.innerCircleCount;
-              // if (i < l)
-              //   node.target_color = '#425863'; // TODO: Apply good color
-              // else
-              //   node.target_color = '#AAA'; // TODO: Apply good color
-
-              // node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
-              // node.target_x = node.file_x;
-              // node.target_y = node.file_y;
 
               if (i < l)
                 node.color = '#425863'; // TODO: Apply good color
@@ -842,7 +954,82 @@
               node.size = _s.graph.degree(node.id, 'in') / _options.ratio;
             });
             _s.bind('clickNode', function(e) {
-                    console.log(e.data);
+                var selected = e.data.node.selected
+                var cam = _s.cameras[0]
+                if(selected){
+                  _s.graph.nodes().forEach(function(node, i, a) {
+                        var l = _options.innerCircleCount;
+                        node.label = null;
+                        node.selected = false;
+
+                        if (i < l)
+                          node.target_color = '#425863'; // TODO: Apply good color
+                        else
+                          node.target_color = '#AAA'; // TODO: Apply good color
+                      });
+                   _s.graph.edges().forEach(function(edge, i, a) {
+                            edge.color = 'rgba(17, 17, 17, 0.1)'
+
+                   });
+                  var animation = {
+                      color : "target_color",
+                      camera: {
+                            x: cam.x,
+                            y: cam.y,
+                            ratio: cam.ratio,
+                            angle: cam.angle
+                      }
+                     }
+                    animate(animation, function() {
+                            //_s.settings(newView.settings);
+                            _s.refresh();
+                    });
+                }
+                else{
+                  var nh = _dbGraph.neighborhood(e.data.node.id)
+                     var nodes = nh.nodes;
+                     var edges = nh.edges;
+                     var idsN = nodes.map(function(d){return d.id});
+                     var idsE = edges.map(function(d){return d.id});
+                      _s.graph.nodes().forEach(function(node, i, a) {
+                          if(node.id == e.data.node.id){
+                            node.selected = true
+                            node.target_color = '#E93A32'
+                            node.label = node.file_label;
+                          }
+                          else if (idsN.indexOf(node.id) > -1){
+                            node.target_color = '#425863'
+                            node.selected = false
+                            node.label = node.file_label;
+                          }
+                          else{
+                            node.target_color = '#AAA'
+                            node.label = null;
+                            node.selected = false
+                          }
+                      });
+                      _s.graph.edges().forEach(function(edge, i, a) {
+                          if (idsE.indexOf(edge.id) > -1){
+                            edge.color = 'rgba(17, 17, 17, 0.1)'
+                          }
+                          else{
+                            edge.color = 'rgba(17, 17, 17, 0.0)'
+                          }
+                      });
+                     var animation = {
+                      color : "target_color",
+                      camera: {
+                            x: cam.x,
+                            y: cam.y,
+                            ratio: cam.ratio,
+                            angle: cam.angle
+                      }
+                     }
+                    animate(animation, function() {
+                            //_s.settings(newView.settings);
+                            _s.refresh();
+                    });
+                  }
               });
           },
           forceAtlas2: false,
@@ -850,7 +1037,7 @@
           filter: null,
           settings: {
             drawEdges: true,
-            labelThreshold: 6,
+            labelThreshold: 8,
             enableCamera: true
           }
           // ,
@@ -895,27 +1082,23 @@
         _s.startForceAtlas2();
       else
         _s.stopForceAtlas2();
-      setTimeout(secondPart, 100);
-    } else
-      secondPart();
-
-    function secondPart() {
-      // Settings:
-      _s.settings(newView.settings);
-
-      // Init:
-      if (newView.init)
-        newView.init();
-
-      // Animation:
-      if (newView.animation) {
-        _s.settings('drawEdges', false);
-        animate(newView.animation, function() {
-          _s.settings(newView.settings);
-          _s.refresh();
-        });
-      } else
-        _s.refresh();
     }
+
+    // Settings:
+    _s.settings(newView.settings);
+
+    // Init:
+    if (newView.init)
+      newView.init();
+
+    // Animation:
+    if (newView.animation) {
+      _s.settings('drawEdges', false);
+      animate(newView.animation, function() {
+        _s.settings(newView.settings);
+        _s.refresh();
+      });
+    } else
+      _s.refresh();
   }
 })();
