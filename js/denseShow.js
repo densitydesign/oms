@@ -44,14 +44,15 @@ $( document ).ready(function() {
 		$(".note").remove();
 	})
 
-	$("#protocol").mousewheel(function(event) {
+	$("#protocol").on("mousewheel DOMMouseScroll",function(event) {
+		e.preventDefault();
 		return false;
 	});
 
 	//=======================
 	//scroll interaction
 
-	$('.long').on('mousewheel DOMMouseScroll', chk_scroll);
+	//$('.long').on('mousewheel DOMMouseScroll', chk_scroll);
 	$('.adva-cont').on('mousewheel DOMMouseScroll', disableScroll);
 	
 	//touch
@@ -97,38 +98,42 @@ $( document ).ready(function() {
     
     
 	//general scroll behaviour
-	$(document).on("mousewheel DOMMouseScroll", function(e) {
+	//$(document).on("mousewheel DOMMouseScroll", function(e) {
+	
+	$(document).mousewheel(function(e) {
 		
-		console.log("document", e)
-		if (timer == 0) {
+		if (timer <1) {
 			timer = 18;
-			var e = window.event || e;
-			// old IE support
 			
-			
-			if (e.wheelDelta != undefined) {
-				var delta = Math.max(-1, Math.min(1, (e.wheelDelta)));
-				
-			} else if (e.originalEvent.detail != 0) {
+			if (e.deltaY != undefined) {
+				var delta = e.deltaY
+				console.log("a")
+			} 
+			else if (e.originalEvent.detail != 0) {
 				var delta = -e.originalEvent.detail;
-				
-			} else
+				console.log("b")	
+			} 
+			else {
 				var delta = -e.originalEvent.deltaY
-
+				console.log("c")
+				}
+				
 			if (delta < 0)
 				direction = "down"
 			else if (delta > 0)
 				direction = "up";
 			
-			e.preventDefault();
 			checkLevel();
-			return false;
 		}
 		else {
+			console.log(e)
 			e.preventDefault();
-			e.stopPropagation();
-			return false;
 		}
+		
+		e.preventDefault();
+		e.originalEvent.preventDefault();
+		e.cancelBubble = false;
+		return false;
 		
 	});
 	
@@ -151,19 +156,16 @@ function chk_scroll(e) {
 	var elem = $(e.currentTarget);
 	
 	if(elem.attr("id") != checkPoints[step] && elem.attr("id") != checkPoints[step][0]) {
-		console.log("scaduto")
+		
 		e.preventDefault();
 		e.originalEvent.returnValue=false;
 		e.returnValue=false;
 		return false;
-		
 	}
 	
 	if (timer < 1) {
 		
-
 		if ((elem[0].scrollHeight - elem.scrollTop() > elem.outerHeight())) {
-			console.log("not to prevent", e)
 			e.stopPropagation();
 		} else {
 			
