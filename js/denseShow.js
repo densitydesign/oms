@@ -124,16 +124,12 @@ function disableScroll(e, delta) {
 function checkLevel() {
 
 	if (direction == "down" && step < checkPoints.length - 1) {
-		step++;
-		scrollToID(checkPoints[step]);
-		loadSection(checkPoints[step]);
+		stepDown();
 		
 		
 		
 	} else if (direction == "up" && step > 0) {
-		step--;
-		scrollToID(checkPoints[step]);
-		loadSection(checkPoints[step]);
+		stepUp()
 
 	}
 	$("#sgnaf").css("width",step/(checkPoints.length-1)*100+"%");
@@ -153,12 +149,11 @@ $(document).keydown(function(e) {
 
 	if (e.keyCode == 38 && step > 0) {
 		
-		step--;
-		eval(checkPoints[step]);
+		stepUp();
+		
 	} else if (e.keyCode == 40 && step < checkPoints.length - 1) {
 		
-		step++;
-		eval(checkPoints[step]);
+		stepDown();
 	}
 	if (e.preventDefault)
 		e.preventDefault();
@@ -220,6 +215,36 @@ $(document).on({
     ajaxStart: function() { $body.addClass("loading");    },
      ajaxStop: function() { $body.removeClass("loading"); }    
 });
+
+function stepDown() {
+	
+	step++;
+	scrollToID(checkPoints[step]);
+	loadSection(checkPoints[step]);
+	
+}
+
+function stepUp() {
+	step--;
+	scrollToID(checkPoints[step]);
+	loadSection(checkPoints[step]);
+}
+
+function goToStep(i,s) {
+	
+	step = $.inArray([i,s],checkPoints)
+	
+	if(step<0) {
+		console.log("no section found");
+		return false;
+	}
+	
+	else {
+		loadSection(checkPoints[step]);
+		return true;
+	}
+	
+}
 
 
 
