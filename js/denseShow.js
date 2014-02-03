@@ -1,5 +1,6 @@
 var step = 0;
 var timer = 0;
+var scrolling = false;
 var direction = 0;
 var scrolltime = 10; //must be mutiplied by 100, value in millisecond for capturing the next scroll event
 
@@ -52,7 +53,7 @@ $( document ).ready(function() {
 	//=======================
 	//scroll interaction
 
-	//$('.long').on('mousewheel DOMMouseScroll', chk_scroll);
+	$('.long').on('mousewheel DOMMouseScroll', chk_scroll);
 	$('.adva-cont').on('mousewheel DOMMouseScroll', disableScroll);
 	
 	//touch
@@ -100,22 +101,43 @@ $( document ).ready(function() {
 	//general scroll behaviour
 	//$(document).on("mousewheel DOMMouseScroll", function(e) {
 	
-	$(document).mousewheel(function(e) {
+	
+	/*
+	if(navigator.userAgent.indexOf("AppleWebKit")>=0) {
+			
+			(function oneWheel(){
+			$(document).one('mousewheel',function(event, delta) {
+				console.log(event,delta)
+				event.preventDefault();
+				if(delta<0)
+					stepDown()
+				else
+					stepUp()
+				setTimeout(oneWheel,1000)
+				return false
+			})
+		})()
+		}
+	
 		
-		if (timer <1) {
-			timer = 18;
+		else {*/
+	
+	
+	$(document).on('mousewheel DOMMouseScroll', function(e) {
+		
+		if (!scrolling) {
+			scrolling=true;
 			
 			if (e.deltaY != undefined) {
 				var delta = e.deltaY
-				console.log("a")
+				
 			} 
 			else if (e.originalEvent.detail != 0) {
 				var delta = -e.originalEvent.detail;
-				console.log("b")	
+		
 			} 
 			else {
 				var delta = -e.originalEvent.deltaY
-				console.log("c")
 				}
 				
 			if (delta < 0)
@@ -126,30 +148,19 @@ $( document ).ready(function() {
 			checkLevel();
 		}
 		else {
-			console.log(e)
+			
 			e.preventDefault();
 		}
 		
 		e.preventDefault();
-		e.originalEvent.preventDefault();
-		e.cancelBubble = false;
 		return false;
 		
 	});
 	
+	
+	
 	});
-
-	//timeout to check scroll updates
-	timeoutid = setInterval('checkTime();', 100);
-
-//timing for scroll update
-function checkTime() {
-
-	if (timer > 0) {
-		timer--;
-	}
-
-}
+	
 
 function chk_scroll(e) {
 	
@@ -158,22 +169,20 @@ function chk_scroll(e) {
 	if(elem.attr("id") != checkPoints[step] && elem.attr("id") != checkPoints[step][0]) {
 		
 		e.preventDefault();
-		e.originalEvent.returnValue=false;
-		e.returnValue=false;
 		return false;
 	}
 	
-	if (timer < 1) {
+	if (!scrolling) {
 		
 		if ((elem[0].scrollHeight - elem.scrollTop() > elem.outerHeight())) {
 			e.stopPropagation();
 		} else {
+			e.preventDefault();
 			
 		}
 	}
 	else {
 		e.preventDefault();
-		e.originalEvent.returnValue=false;
 		return false;
 	}
 }
@@ -243,7 +252,11 @@ function scrollToID(id, speed) {
 		
 		$(id).prev("section").empty()
   		$(id).next("section").empty()
-		
+  		
+		setTimeout(function(){
+				scrolling=false;
+				scrollToID(id,speed)
+			},1000)
 	});
 }
 	
@@ -266,7 +279,7 @@ function scrollToID(id, speed) {
 		  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
 		  		}
 		  		
-		  		scrollToID(checkPoints[step]);
+		  		scrollToID(checkPoints[step],1000);
 		  		
   			} );
   		}
@@ -276,7 +289,7 @@ function scrollToID(id, speed) {
   				if (subsec && !a.hasClass("step"+subsec)) {
 		  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
 		  		}
-		  	scrollToID(checkPoints[step]);
+		  	scrollToID(checkPoints[step],1000);
   			}
 	}
 
