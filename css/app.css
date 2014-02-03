@@ -82,7 +82,7 @@ img.bg {
 
 h2.section{
 	font-variant:small-caps;
-	font-size:16px;
+	font-size:1.1em;
 	color:#222;
 	text-align:center;
 	margin:80px 0 30px 0;
@@ -552,6 +552,40 @@ ol {
 	padding-bottom:15px;
 }
 
+
+/* glossary */
+
+.glossary{
+	margin-top: 20%;
+}
+
+.glossary h3{
+	text-align: left;
+	margin-bottom: 0px;
+	font-size:1.1em;
+
+}
+
+.glossary h1{
+	text-align:left;
+	font-family:Georgia;
+	font-size:3em;
+	margin-bottom: 30px;
+}
+
+.glossary .section-text{
+	text-indent: -30px;
+	font-size: 1.2em;
+	margin-left:30px;
+}
+
+.glossary-name{
+	font-weight: bold;
+	font-variant:small-caps;
+	font-size: 1.4em;
+	letter-spacing: 2px;
+}
+
 /* graph */
 
 #graph{
@@ -601,7 +635,7 @@ body.loading .modal {
 #sgnaf{
 	position:fixed;
 	left:0;
-	top:57px;
+	top:56px;
 	height:3px;
 	background-color:#84A594;
 	width:0%;
