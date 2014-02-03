@@ -1,5 +1,6 @@
 var step = 0;
 var timer = 0;
+var scrolling = false;
 var direction = 0;
 var scrolltime = 10; //must be mutiplied by 100, value in millisecond for capturing the next scroll event
 
@@ -44,7 +45,8 @@ $( document ).ready(function() {
 		$(".note").remove();
 	})
 
-	$("#protocol").mousewheel(function(event) {
+	$("#protocol").on("mousewheel DOMMouseScroll",function(event) {
+		e.preventDefault();
 		return false;
 	});
 
@@ -97,81 +99,90 @@ $( document ).ready(function() {
     
     
 	//general scroll behaviour
-	$(document).on("mousewheel DOMMouseScroll", function(e) {
+	//$(document).on("mousewheel DOMMouseScroll", function(e) {
+	
+	
+	/*
+	if(navigator.userAgent.indexOf("AppleWebKit")>=0) {
+			
+			(function oneWheel(){
+			$(document).one('mousewheel',function(event, delta) {
+				console.log(event,delta)
+				event.preventDefault();
+				if(delta<0)
+					stepDown()
+				else
+					stepUp()
+				setTimeout(oneWheel,1000)
+				return false
+			})
+		})()
+		}
+	
 		
-		console.log("document", e)
-		if (timer == 0) {
-			timer = 18;
-			var e = window.event || e;
-			// old IE support
+		else {*/
+	
+	
+	$(document).on('mousewheel DOMMouseScroll', function(e) {
+		
+		if (!scrolling) {
+			scrolling=true;
 			
-			
-			if (e.wheelDelta != undefined) {
-				var delta = Math.max(-1, Math.min(1, (e.wheelDelta)));
+			if (e.deltaY != undefined) {
+				var delta = e.deltaY
 				
-			} else if (e.originalEvent.detail != 0) {
+			} 
+			else if (e.originalEvent.detail != 0) {
 				var delta = -e.originalEvent.detail;
-				
-			} else
+		
+			} 
+			else {
 				var delta = -e.originalEvent.deltaY
-
+				}
+				
 			if (delta < 0)
 				direction = "down"
 			else if (delta > 0)
 				direction = "up";
 			
-			e.preventDefault();
 			checkLevel();
-			return false;
 		}
 		else {
+			
 			e.preventDefault();
-			e.stopPropagation();
-			return false;
 		}
+		
+		e.preventDefault();
+		return false;
 		
 	});
 	
+	
+	
 	});
-
-	//timeout to check scroll updates
-	timeoutid = setInterval('checkTime();', 100);
-
-//timing for scroll update
-function checkTime() {
-
-	if (timer > 0) {
-		timer--;
-	}
-
-}
+	
 
 function chk_scroll(e) {
 	
 	var elem = $(e.currentTarget);
 	
 	if(elem.attr("id") != checkPoints[step] && elem.attr("id") != checkPoints[step][0]) {
-		console.log("scaduto")
-		e.preventDefault();
-		e.originalEvent.returnValue=false;
-		e.returnValue=false;
-		return false;
 		
+		e.preventDefault();
+		return false;
 	}
 	
-	if (timer < 1) {
+	if (!scrolling) {
 		
-
 		if ((elem[0].scrollHeight - elem.scrollTop() > elem.outerHeight())) {
-			console.log("not to prevent", e)
 			e.stopPropagation();
 		} else {
+			e.preventDefault();
 			
 		}
 	}
 	else {
 		e.preventDefault();
-		e.originalEvent.returnValue=false;
 		return false;
 	}
 }
@@ -241,7 +252,11 @@ function scrollToID(id, speed) {
 		
 		$(id).prev("section").empty()
   		$(id).next("section").empty()
-		
+  		
+		setTimeout(function(){
+				scrolling=false;
+				scrollToID(id,speed)
+			},500)
 	});
 }
 	
@@ -264,7 +279,7 @@ function scrollToID(id, speed) {
 		  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
 		  		}
 		  		
-		  		scrollToID(checkPoints[step]);
+		  		scrollToID(checkPoints[step],1500);
 		  		
   			} );
   		}
@@ -274,7 +289,7 @@ function scrollToID(id, speed) {
   				if (subsec && !a.hasClass("step"+subsec)) {
 		  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
 		  		}
-		  	scrollToID(checkPoints[step]);
+		  	scrollToID(checkPoints[step],1500);
   			}
 	}
 
