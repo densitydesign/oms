@@ -201,7 +201,14 @@
     });
   }
 
+  function getMinAttribute(graph, type, n, attribute, ev){
 
+  var ids = graph.nodes().filter(function(d){return d.attributes[attribute] === ev}).map(function(d){return d.id})
+  var attrValues = graph.degree(ids, type).sort(d3.descending).slice(0,n)
+
+  return d3.min(attrValues)
+
+  }
 
   /**
    * GLOBAL APP VARS:
@@ -336,7 +343,7 @@
 
 
     sigma.parsers.json(
-      'cs_crawl_2.json',
+      'data/cs_crawl_2.json',
       function(graph) {
         // Save the original data:
         graph.nodes.forEach(function(n) {
@@ -348,6 +355,8 @@
           n.type = 'who';
 
           delete n.label;
+
+
 
           if (!n.attributes.crwl)
             _options.innerCircleCount++;
@@ -386,6 +395,8 @@
 
         _graph = graph;
         _dbGraph = (new sigma.classes.graph(_s.settings)).read(_graph);
+
+
 
         // Bind buttons:
         document.getElementById('previous-step').addEventListener('click', function() {
@@ -478,7 +489,7 @@
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
-                  labelToShow = ["nytimes.com", "celebritybabies.people.com"];
+                  labelToShow = getMinAttribute(_dbGraph, 'in', 3, 'E', 'true');
 
               delete node.label;
               if (i < l) {
@@ -486,7 +497,7 @@
                 if (node.attributes.E == 'true'){
                   node.target_color = goodColors.E; // TODO: Apply good color
                   node.target_size = 4;
-                  if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
+                  if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
                 }
                 else {node.target_color = '#ccc'}
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
@@ -535,7 +546,7 @@
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
-                  labelToShow = ["nytimes.com"];
+                  labelToShow = getMinAttribute(_dbGraph, 'in', 3, 'M', 'true');;
 
               node.label = null
 
@@ -544,7 +555,7 @@
                 if (node.attributes.M == 'true'){
                   node.target_color = goodColors.M; // TODO: Apply good color
                   node.target_size = 4;
-                  if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
+                  if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
                 }
                 else {node.target_color = '#ccc'}
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
@@ -593,7 +604,7 @@
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
-                  labelToShow = ["nytimes.com"];
+                  labelToShow = getMinAttribute(_dbGraph, 'in', 3, 'C', 'true');
 
                   node.label = null;
 
@@ -602,7 +613,7 @@
                 if (node.attributes.C == 'true'){
                   node.target_color = goodColors.C; // TODO: Apply good color
                   node.target_size = 4;
-                  if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
+                  if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
                 }
                 else {node.target_color = '#ccc'}
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
@@ -709,7 +720,7 @@
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
-                  labelToShow = ["who.int"]
+                  labelToShow = ["who.int", "nih.gov", "ican-online.net", "childbirthconnection.org"]
 
               node.label = null;
               node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
@@ -816,16 +827,18 @@
             _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
               var l = _options.innerCircleCount,
-                labelToShow = ["who.int"]; //TODO: Put real labels
+                labelToShow = getMinAttribute(_dbGraph, 'in', 3, 'E', 'true')
 
               node.label = null;
-              if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
 
-              if (node.attributes.E !== 'false')
-                node.target_color = goodColors.E; // TODO: Apply good color
-              else
+              if (node.attributes.E !== 'false'){
+
+                node.target_color = goodColors.E; 
+                if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+
+              }else{
                 node.target_color = '#AAA'; // TODO: Apply good color
-
+              }
               node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
               node.target_x = node.file_x;
               node.target_y = node.file_y;
@@ -849,6 +862,57 @@
             y: 'target_y',
             camera: function(n) {
               return n.attributes.E !== 'false';
+            }
+          }
+        },
+        {
+          /**
+           * EVERY NODES
+           * FILE LAYOUT
+           * CATEGORIES COLORS
+           * EDGES ARE DISPLAYED
+           * SIZES ARE INDEGREE
+           * ZOOM ON ONE CLUSTER: modularity 56 [56,51,3,5,54,4,1]
+           */
+          init: function() {
+            _s.unbind('clickNode');
+            _s.graph.nodes().forEach(function(node, i, a) {
+              var l = _options.innerCircleCount,
+                labelToShow = getMinAttribute(_dbGraph, 'in', 3, "Modularity Class", "56")
+
+              node.label = null;
+
+              if (node.attributes["Modularity Class"] === '56'){
+
+                node.target_color = goodColors.M; 
+                if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+
+              }else{
+                node.target_color = '#AAA'; // TODO: Apply good color
+              }
+              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              node.target_x = node.file_x;
+              node.target_y = node.file_y;
+            });
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = 'rgba(17, 17, 17, 0.1)'
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          filter: null,
+          settings: {
+            drawEdges: true,
+            labelThreshold: 1,
+            enableCamera: false
+          },
+          animation: {
+            color: 'target_color',
+            size: 'target_size',
+            x: 'target_x',
+            y: 'target_y',
+            camera: function(n) {
+              return n.attributes["Modularity Class"] === '56';
             }
           }
         },
@@ -944,6 +1008,8 @@
             _s.graph.nodes().forEach(function(node, i, a) {
               var l = _options.innerCircleCount;
 
+              node.label = node.file_label;
+
               if (i < l)
                 node.color = '#425863'; // TODO: Apply good color
               else
@@ -959,7 +1025,7 @@
                 if(selected){
                   _s.graph.nodes().forEach(function(node, i, a) {
                         var l = _options.innerCircleCount;
-                        node.label = null;
+                        node.label = node.file_label;
                         node.selected = false;
 
                         if (i < l)
