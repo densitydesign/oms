@@ -279,7 +279,7 @@ function scrollToID(id, speed) {
 		  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
 		  		}
 		  		
-		  		scrollToID(checkPoints[step],1000);
+		  		scrollToID(checkPoints[step],1500);
 		  		
   			} );
   		}
@@ -289,7 +289,7 @@ function scrollToID(id, speed) {
   				if (subsec && !a.hasClass("step"+subsec)) {
 		  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
 		  		}
-		  	scrollToID(checkPoints[step],1000);
+		  	scrollToID(checkPoints[step],1500);
   			}
 	}
 
