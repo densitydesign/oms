@@ -14,8 +14,54 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    
+    
   </head>
   <body>
+  	
+  	<style>
+
+
+text {
+  font: 10px sans-serif;
+}
+
+.container{
+	height:100%;
+}
+.axis path {
+  display: none;
+}
+
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.group-label {
+  font-weight: bold;
+  text-anchor: end;
+}
+
+form {
+  position: relative;
+ top:20px;
+  float:right;
+}
+#birthcontrol,#familyplanning{
+	width: 100%;
+height: 100%;
+}
+.section-row{
+	width:100%;
+	height:40%;
+}
+.wikiviz{
+	height:100%;
+}
+
+</style>
   	
   	<script>
   		
@@ -49,8 +95,12 @@
     </div>
   
   	
-  	<section id="intro" class="intro bg-full long">
+  	<section id="intro" class="intro bg-full">
   	<div class="container">
+  		<form>
+		  <label><input type="radio" name="mode" value="multiples" checked> Multiples</label>
+		  <label><input type="radio" name="mode" value="stacked"> Stacked</label>
+		</form>
 		<div class="row section-row">
 			<h3 class="section">birth control</h3>
 			<div class="col-md-3 analytics">
@@ -64,8 +114,8 @@
 				<div class="numbers">845</div>
 			</div>
 
-			<div class="col-md-9">
-				<div  id="birth control">Qua ci vanno le barrette</div>
+			<div class="col-md-9 wikiviz">
+				<div  id="birthcontrol"></div>
 			</div>
 		</div>
 		<div class="row section-row">
@@ -81,48 +131,13 @@
 				<div class="numbers">845</div>
 			</div>
 
-			<div class="col-md-9">
-				<div  id="familyplanning">Qua ci vanno le barrette</div>
+			<div class="col-md-9 wikiviz">
+				<div  id="familyplanning"></div>
 			</div>
 		</div>
 		
 	</div>
 	</section>
-
-	<section id="viz" class="viz">
-		
-		<div class="side-panel">
-			
-			<div class="adva-cont">
-			
-				<div class="adv-step step1" style="display:block;">
-					
-					<h4>A short first title</h4>
-					<p>
-						Nevertheless, upon Stubb setting the anchor-watch after his supper was concluded; and when, accordingly, Queequeg and a forecastle seaman came on deck, no small excitement was created among the sharks; for immediately suspending the cutting stages over the side, and lowering three lanterns, so that they cast long gleams of light over the turbid sea, these two mariners, darting their long whaling-spades, kept up an incessant murdering of the sharks,* by striking the keen steel deep into their skulls, seemingly their only vital part. But in the foamy confusion of their mixed and struggling hosts, the marksmen could not always hit their mark; and this brought about new revelations of the incredible ferocity of the foe. 
-					</p>
-					
-				</div>
-			
-				<div class="adv-step step2">
-					
-					<h4>A short second title</h4>
-					<p>
-						Nevertheless, upon Stubb setting the anchor-watch after his supper was concluded; and when, accordingly, Queequeg and a forecastle seaman came on deck, no small excitement was created among the sharks; for immediately suspending the cutting stages over the side, and lowering three lanterns, so that they cast long gleams of light over the turbid sea, these two mariners, darting their long whaling-spades, kept up an incessant murdering of the sharks,* by striking the keen steel deep into their skulls, seemingly their only vital part. But in the foamy confusion of their mixed and struggling hosts, the marksmen could not always hit their mark; and this brought about new revelations of the incredible ferocity of the foe. 
-					</p>
-					
-				</div>
-	
-			</div>
-		<div class="legend">
-			
-			<h5>Legend</h5>
-			<p>Blue is good<br/>
-			Red is bad</p>
-			
-		</div>
-			
-		</div>
 	
 	
 	<div id="protocol">
@@ -216,21 +231,11 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
     <script src="js/d3.v3.min.js"></script>
-
+    <script src="js/oms/wiki.js"></script>
+	
     
     <script>
 	
-	
-
-  	var checkPoints = [
-  		"intro()",
-  		"viz()",
-  		"step2()"
-  		];
-
-	 var step = 0;
-		var timer=0;
-		var direction=0;
 	
 	
 	$(document).ready(function(){
@@ -253,11 +258,10 @@
 				$(".close-btn").css('-webkit-transform','rotate(90deg)');
 				$(".close-btn").css('-moz-transform','rotate(90deg)');
 			}
-			
 		})
 		
 		$(".closing").click(function() {
-			console.log($("#protocol").css("left"))
+			
 			if($("#protocol").css("left")=="0px") {
 
 				$("#protocol").css("left","97%");
@@ -283,139 +287,22 @@
 		$("#protocol").mousewheel(function(event){
 			return false;
 		});
-		
-	
-	
-		//=======================
-		//scroll interaction
-	        
-	    $('.long').bind('mousewheel',chk_scroll);
-	    $('.adva-cont').bind('mousewheel',disableScroll);
-
-
-		//general scroll behaviour
-		  window.onmousewheel = document.onmousewheel = function(e) {
-				if(timer==0) {
-					timer=20;
-					
-					var e = window.event || e; // old IE support
-					var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-					console.log(delta)
-					if(delta<0) direction="down"
-					else if(delta>0) direction="up";
-					
-					checkLevel();
-				}
-		    if (e.preventDefault)
-		        e.preventDefault();
-		    e.returnValue = false;
-		  };
-		  
-		  //timeout to check scroll updates
-		  timeoutid = setInterval('checkTime();', 100);
 	});
 	
-	//timing for scroll update
-	function checkTime(){
-		
-		if (timer>0) {
-			timer--;
-		}
-		
-	}
 	
-	function chk_scroll(e)
-	{
-		if (timer==0) {
-		    var elem = $(e.currentTarget); 
-		   
-		    if (!(elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight())) 
-		    {
-		        e.stopPropagation();
-		    }
-		    else {
-		    	//timer=40;
-		    	console.log("set timer!")
-	
-		    }
-		}
-		
-	}
-	
-	function disableScroll(e,delta) {
-		var elem = $(e.currentTarget);
-		console.log(elem);
-		elem.scrollTop(elem.scrollTop() - (40 * delta));
-	    //set_bar();
-	    e.stopPropagation();
-	    return false;
-	}
-	
-	//load next or previous screen according to scroll direction
-	function checkLevel() {
-
-  		if (direction=="down" && step < checkPoints.length-1) {
-  			step++;
-  			eval(checkPoints[step]);
-  		}
-  		else if(direction=="up" && step>0) {
-  			step--;
-  			eval(checkPoints[step]);
-  			
-  		}
-  	}
-  	
-  	//end scroll
-  	//====================
-  	
-  	
-  	
-  	
-  	
-  	//====================
-  	//screens functions
-  	
-  	function intro() {
-  		scrollToID("#intro",600);
-  		
-  	}
-  	
-  	function viz() {
-  		
-  		scrollToID("#viz",600);
-  		a=$(".adv-step:visible");
-  		if (!a.hasClass("step1")) {
-  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step1").fadeIn(500)});
-  		}
-  		
-  	}
-  	
-  	function step2() {
-  		
-  		a=$(".adv-step:visible");
-  		if (!a.hasClass("step2")) {
-  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step2").fadeIn(500)});
-  		}
-  		
-  	}
-  	
-  	//end screens functions
-  	//=====================
-
-
-
-  	//utility to animate transition between divs
-  	function scrollToID(id, speed){
-
-		
-		var targetOffset = $(id).offset().top;
-		$(id).scrollTop(0);
-		$('html,body').animate({scrollTop:targetOffset}, speed);
-		
-	}
 		
 
 	</script>
+	
+	
+	<script>
+		
+		
+		var graph1=wikiGraph("birthcontrol","data/birtcontrol.csv");
+		var graph2=wikiGraph("familyplanning","data/familyplanning.csv");
+		
+	
+</script>
     
   </body>
 </html>
