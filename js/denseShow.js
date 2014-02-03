@@ -256,7 +256,7 @@ function scrollToID(id, speed) {
 		setTimeout(function(){
 				scrolling=false;
 				scrollToID(id,speed)
-			},1000)
+			},500)
 	});
 }
 	
