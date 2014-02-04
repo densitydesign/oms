@@ -1,18 +1,19 @@
 
-function wikiGraph(id,dataFile) {
-	
+(function(){
 
+  var who = window.who || (window.who = {});
+
+  who.chart = function(){
+	
+	
+    
+    var id = "", // default width
+      dataFile = ""; // default height	
 		
 	var parseDate = d3.time.format("%Y-%m").parse,
     formatYear = d3.format("02d"),
     formatDate = function(d) { return formatYear(d.getFullYear()); };
-    
-var margin = {top: 10, right: 20, bottom: 20, left: 60},
-    width = $("#"+id).width() - margin.left - margin.right,
-    height = $("#"+id).height() - margin.top - margin.bottom;
-
-var y0 = d3.scale.ordinal()
-    .rangeRoundBands([height, 0], .2);
+    var w,h;
 
 var yst = d3.scale.linear();
 
@@ -20,17 +21,35 @@ var y1 = d3.scale.linear();
 
 var y2 = d3.scale.linear();
 
-var x = d3.scale.ordinal()
+var y0;
+
+var svg;
+
+
+	function chart(selection){
+		
+		
+    	selection.each(function(data){
+    		
+    		console.log(data)
+		
+var margin = {top: 10, right: 10, bottom: 20, left: 60},
+    width = w - margin.left - margin.right,
+    height = h - margin.top - margin.bottom;
+	
+	
+	var x = d3.scale.ordinal()
     .rangeRoundBands([0, width], .1, 0);
     
 var xlab = d3.time.scale()
 
+	y0 = d3.scale.ordinal()
+    .rangeRoundBands([height, 0], .2);
 
 var xAxis = d3.svg.axis()
     .scale(xlab)
     .orient("bottom")
-    //.ticks(d3.time.years,5)
-    //.tickFormat(formatDate)
+
 
 var nest = d3.nest()
     .key(function(d) { return d.group; });
@@ -43,13 +62,11 @@ var stack = d3.layout.stack()
 
 var color = d3.scale.ordinal().range(["#3c5863","#ef3528","#d4c439","#83a292"]);
 
-var svg = d3.select("#"+id).append("svg")
+	svg = selection.append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-d3.tsv(dataFile, function(error, data) {
 	
 	
 	xlab.domain([new Date(data[0].date), d3.time.day.offset(new Date(data[data.length - 1].date), 1)])
@@ -96,41 +113,109 @@ d3.tsv(dataFile, function(error, data) {
       .style("fill", function(d) { return color(d.group); })
       .attr("x", function(d) { return x(d.date); })
       .attr("y", function(d) { return y1(d.value); })
-      .attr("width", x.rangeBand())
+      .attr("width", x.rangeBand()-1)
       .attr("height", function(d) { return y0.rangeBand() - y1(d.value); });
 
   group.filter(function(d, i) { return !i; }).append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + y0.rangeBand() + ")")
       .call(xAxis);
+      
+      
+      stack = function() {
+      	 	
+      }
 
-  d3.selectAll("input").on("change", change);
-
-
-  function change() {
-    
-    if (this.value === "multiples") transitionMultiples();
-    else transitionStacked();
-  }
-
-  function transitionMultiples() {
-    var t = svg.transition().duration(750),
-        g = t.selectAll(".group").attr("transform", function(d) { return "translate(0," + y0(d.key) + ")"; });
-    g.selectAll("rect").attr("y", function(d) { return y1(d.value); })
-    .attr("height",function(d) { return (y0.rangeBand() - y1(d.value)); })
-    g.select(".group-label").attr("y", function(d) { return y1(d.values[0].value / 2); })
-    .style("opacity",1)
-  }
-
-  function transitionStacked() {
-  	
-    var t = svg.transition().duration(750),
-        g = t.selectAll(".group").attr("transform", "translate(0," + y0(y0.domain()[0]) + ")");
-    g.selectAll("rect")
-    .attr("height",function(d) { return (y0.rangeBand() - y1(d.value))*4; })
-    .attr("y", function(d) { return y1(d.value*4 + d.valueOffset*4); });
-    g.select(".group-label").attr("y", function(d) { return y1(d.values[0].value / 2 + d.values[0].valueOffset); })
-    .style("opacity",0)
-  }
 });
+
+};
+
+
+chart.transitionStacked=function() {
+  	
+  	console.log("Ahi!")
+  	
+  	svg=chart.svg();
+  	 var t = svg.transition().duration(750),
+        g = t.selectAll(".group").attr("transform", "translate(0," + chart.y0()(chart.y0().domain()[0]) + ")");
+	    g.selectAll("rect")
+	    .attr("height",function(d) { return (chart.y0().rangeBand() - chart.y1()(d.value))*4; })
+	    .attr("y", function(d) { return chart.y1()(d.value*4 + d.valueOffset*4); });
+	    g.select(".group-label").attr("y", function(d) { return chart.y1()(d.values[0].value / 2 + d.values[0].valueOffset); })
+	    .style("opacity",0)
+   
+    return chart;
+  }
+
+chart.transitionMultiples=function() {
+	
+	console.log("ehi!")
+	
+	svg=chart.svg();
+    var t = svg.transition().duration(750),
+    g = t.selectAll(".group").attr("transform", function(d) { return "translate(0," + chart.y0()(d.key) + ")"; });
+    g.selectAll("rect").attr("y", function(d) { return chart.y1()(d.value); })
+    .attr("height",function(d) { return (chart.y0().rangeBand() - chart.y1()(d.value)); })
+    g.select(".group-label").attr("y", function(d) { return chart.y1()(d.values[0].value / 2); })
+    .style("opacity",1)
+    
+    return chart;
+  }
+
+
+chart.change=function (x) {
+    
+    if (x === "multiples") chart.transitionMultiples();
+    else chart.transitionStacked();
+    return chart;
+  }
+
+chart.y0 = function() {
+	if (!arguments.length) return y0;
 }
+
+chart.y1 = function() {
+	 if (!arguments.length) return y1;
+}
+
+chart.id = function(value) {
+    if (!arguments.length) return id;
+    id = value;
+    return chart;
+  };
+  
+  
+chart.svg = function(value) {
+    if (!arguments.length) return svg;
+    svg = value;
+    return chart;
+  };
+  
+chart.w = function(value) {
+    if (!arguments.length) return w;
+    
+    w = value;
+    console.log(w);
+    return chart;
+  };
+  
+chart.h = function(value) {
+    if (!arguments.length) return h;
+    h = value;
+    console.log(h);
+    return chart;
+  };
+
+
+  chart.dataFile = function(value) {
+    if (!arguments.length) return dataFile;
+    dataFile = value;
+    return chart;
+  };
+
+
+
+return chart;
+
+}
+})();

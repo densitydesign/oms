@@ -324,16 +324,6 @@ li.active a{
 }
 
 
-.link-download:before{
-	content:url(../img/pro_download.png);
-	margin-right:10px;
-}
-
-.link-visualization:before{
-	content:url(../img/pro_viz.png);
-	margin:0 10px 30px 0;
-}
-
 .carousel{
 	height: 100%;
 	width: 90%;

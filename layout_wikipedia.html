@@ -97,7 +97,7 @@ height: 100%;
   	
   	<section id="intro" class="intro bg-full">
   	<div class="container">
-  		<form>
+  		<form id ="rad" >
 		  <label><input type="radio" name="mode" value="multiples" checked> Multiples</label>
 		  <label><input type="radio" name="mode" value="stacked"> Stacked</label>
 		</form>
@@ -298,8 +298,54 @@ height: 100%;
 	<script>
 		
 		
-		var graph1=wikiGraph("birthcontrol","data/birtcontrol.csv");
-		var graph2=wikiGraph("familyplanning","data/familyplanning.csv");
+		var bc = d3.select("#birthcontrol");
+		
+		var bcdata;
+		
+		
+		 var bcChart = who.chart()
+		 .w($("#birthcontrol").width())
+		 .h($("#birthcontrol").height());
+		 
+		d3.tsv("data/birtcontrol.csv",function(error, data) {
+			
+			bcdata=data;
+			bc.datum(bcdata).call(bcChart)
+			
+		});
+		
+		
+		var fp = d3.select("#familyplanning");
+		
+		var bcdata;
+		
+		
+		 var fpChart = who.chart()
+		 .w($("#familyplanning").width())
+		 .h($("#familyplanning").height());
+		 
+		d3.tsv("data/familyplanning.csv",function(error, data) {
+			
+			fpdata=data;
+			fp.datum(fpdata).call(fpChart)
+			
+		});
+		
+		
+		$('input').on("change", function() {
+			
+			v=$( "input:radio:checked" ).val()
+			fpChart.change(v);
+			bcChart.change(v);
+		});
+		
+		
+		 
+		 
+		 
+		 
+				
+
 		
 	
 </script>
