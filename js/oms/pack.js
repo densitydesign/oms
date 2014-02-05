@@ -9,7 +9,7 @@
  		graphHeight = 600,
 	 	transitionDuration = 750,
 	 	fontSize = 12,
-	 	depth=3,
+	 	dep=3,
 	 	fontFamily = 'Arial',
 	 	pack;
 	 	
@@ -27,15 +27,15 @@
         	var diameter = 900,
 		    format = d3.format(",d");
 		
-			pack = d3.layout.pack()
+			pack = d3.layout.partition()
+			.sort(function(d){return d.time})
 			.children(function(d) {return d.values})
-		    .size([diameter - 4, diameter - 4])
-		    .padding(1)
 		    .value(function(d) { return 1; });
 		    
+		    var rect = chart.selectAll("rect");
 		    
 		   var node = chart.datum(finData).selectAll(".node")
-	       .data(pack.nodes)
+	       .data(partition(d3.entries(finData)[0]))
 	       //.data(function(d) )
 	       
 	        node.enter().append("g")
@@ -44,18 +44,18 @@
 	       //.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })	
 			
 			
-			circles=node.filter(function(d){if(d.depth>depth) return false; else return true})
-			.append("circle")
-      		//.attr("r", function(d) { return d.r; })
-      		.style("opacity",function(d){if (d.depth==3) return 1; else return 0.25})
-      		.style("fill",function(d){if (d.depth==3) return "#ff7f0e"; else return "#C6DBEB"})
-      		
-      		.attr("cx", function(d) { return d.x; })
-		    .attr("cy", function(d) { return d.y; })
-		    .attr("r", function(d) { return d.r; });	
+			rect=node.
+			.append("rect")
+      		.attr("x", function(d) { return x(d.x); })
+      .attr("y", function(d) { return y(d.y); })
+      .attr("width", function(d) { return x(d.dx); })
+      .attr("height", function(d) { return y(d.dy); })
+      .attr("fill", function(d) { d.parent ? return "#348512" : return "#882976"})
       		
       		
-      		$(".node:first-child").remove();
+      		
+      		
+      		//$(".node:first-child").remove();
       		//node.filter(function(d){return d.depth<=depth})
       		
       		node.exit().remove();
@@ -73,9 +73,9 @@
 
 		  
 		    circles.transition()
-		        .duration(500)
-		        //.attr("cx", function(d) { return d.x; })
-		    //.attr("cy", function(d) { return d.y; })
+		        .duration(1000)
+		        .attr("cx", function(d) { return d.x; })
+		    	.attr("cy", function(d) { return d.y; })
 		        .attr("r", function(d) { return d.r; });
       		}
       		
@@ -91,26 +91,23 @@
 
 		  
 		    circles.transition()
-		        .duration(500)
+		        .duration(1000)
 		        .attr("cx", function(d) { return d.x; })
-		    .attr("cy", function(d) { return d.y; })
+		    	.attr("cy", function(d) { return d.y; })
 		        .attr("r", function(d) {return d.r; });
       		}
       		
       		deep = function(x) {
-      			depth=x;
+      			dep=x;
       			
-      		circles.transition().filter(function(d){if(d.depth>depth) return false; else return true})
-      		.style("opacity",function(d){console.log(d); if (d.depth>2) return 1; else return 0.25});
+      		d3.selectAll("circle").transition().duration(500).filter(function(d){if(d.depth>dep) return false; else return true})
+      		.style("opacity",function(d){ if (d.depth>2) {return 1} else {return 0.25}});
 		    
-  			circles.transition().filter(function(d){if(d.depth>depth) return true; else return false})
-		    .style("opacity",0);
+  			d3.selectAll("circle").transition().duration(500).filter(function(d){if(d.depth>dep) return true; else return false})
+		    .style("opacity",function(){ return 0});
       		
       		}
-      		
-      		
-      		
-	
+
     	}); //end selection
     } // end packed
 

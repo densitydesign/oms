@@ -73,11 +73,16 @@ dsv_egg("data/threads.csv",function(d) {
 				
 				
 				})
+				
+	d3.select('#buttons').append("button").text('default')
+		.on("click", function(){
 			
-		
+				
+				pack.defaultData();
+				
+				
+				})
 
-	
-    
 
 	});
 
