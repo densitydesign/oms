@@ -322,10 +322,10 @@
   var _options = {
         innerCircleCount: 0,
         innerRadius: 500,
-        outerRadius: 674,
+        outerRadius: 1000,
         duration: 500,
         action: 0,
-        ratio: 3
+        ratio: 50
       },
       _s = new sigma({
         renderer: {
@@ -350,16 +350,20 @@
       _graph,
       _dbGraph;
 
-      var queryPosition = d3.scale.ordinal()
-        .domain(["Cs delivery", "Cesarean delivery", "Cesarean", "C-Section", "Operative delivery", "Abdominal delivery", "Surgical delivery", "Caesarean delivery", "Caesarean"])
-        .range([0,1,2,3,4,5,6,7,8])
-
     sigma.parsers.json(
-      'data/cs_query.json',
+      'data/cs_af_it.json',
       function(graph) {
         // Save the original data:
         graph.nodes.forEach(function(n) {
-          n.file_label = n.label;
+          
+          if(n.attributes["role"] != 'forum'){
+            n.file_label = n.label;
+          }else{
+            var l = n.label.split('_')
+
+            n.label = l.slice(1,-2).join(" ")
+            n.file_label = n.label
+          }
           n.file_color = n.color;
           n.file_size = n.size;
           n.file_x = n.x;
@@ -370,7 +374,7 @@
 
 
 
-          if (n.attributes["Type"] == 'query')
+          if (n.attributes["role"] == 'forum')
             _options.innerCircleCount++;
         });
 
@@ -396,7 +400,7 @@
 
 
           node.size = 0;
-          if (node.attributes["Type"] == 'query') {
+          if (node.attributes["role"] == 'forum') {
             angle = Math.PI * 2 * i / l - Math.PI / 2;
             node.x = node.file_x;
             node.y = node.file_y;
@@ -454,10 +458,9 @@
 
                 node.labelAdjust = false;
 
-              if (node.attributes["Type"] == 'query') {
+              if (node.attributes["role"] == 'forum') {
                 node.target_size = 3;
                 node.target_color = '#425863';
-                angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
                 node.target_x = node.file_x;
                 node.target_y = node.file_y;
                 node.label = node.file_label
@@ -512,10 +515,9 @@
               node.label = null;
               node.labelAdjust = false;
 
-              if (node.attributes["Type"] == 'query')  {
+              if (node.attributes["role"] == 'forum')  {
                 node.target_size = 3;
                 node.target_color = '#425863'; // TODO: Apply good color
-                angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
                  node.target_x = node.file_x;
                 node.target_y = node.file_y;
                  node.label = node.file_label
@@ -570,10 +572,9 @@
               node.label = null;
               node.labelAdjust = false;
               
-              if (node.attributes["Type"] == 'query') {
+              if (node.attributes["role"] == 'forum') {
                 node.target_size = _s.graph.degree(node.id, 'out')/ _options.ratio;
                 node.target_color = '#425863'; // TODO: Apply good color
-                angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
                  node.target_x = node.file_x;
                 node.target_y = node.file_y;
                  node.label = node.file_label
@@ -628,7 +629,7 @@
                 node.label = null;
 
 
-              if (node.attributes["Type"] == 'query'){
+              if (node.attributes["role"] == 'forum'){
                 node.target_color = '#425863'; // TODO: Apply good color
                 node.target_size = _s.graph.degree(node.id, 'out') / _options.ratio;
                 node.label = node.file_label
@@ -683,17 +684,79 @@
               node.label = null;
               node.labelAdjust = false;
 
-               if (node.attributes["Type"] == 'query'){
+               if (node.attributes["role"] == 'forum'){
 
                 node.target_color = '#425863'; // TODO: Apply good color
                 node.target_size = _s.graph.degree(node.id, 'out') / _options.ratio;
-
+                node.label = node.file_label
               }else{
 
-                if(_s.graph.degree(node.id, 'in') > 1){
+                if(_s.graph.degree(node.id, 'in') > 1 && _s.graph.degree(node.id, 'in') < 3){
                 node.target_color = goodColors.E; // TODO: Apply good color
-                node.labelAdjust = true;
+                //node.labelAdjust = true;
+                //node.label = node.file_label
+
+                  }
+                else{
+                  node.target_color = '#AAA'; 
+                }
+              }
+              node.target_x = node.file_x;
+              node.target_y = node.file_y;
+            });
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = 'rgba(17, 17, 17, 0.1)'
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          filter: null,
+          settings: {
+            drawEdges: true,
+            labelThreshold: 1,
+            enableCamera: false
+          },
+          animation: {
+            color: 'target_color',
+            size: 'target_size',
+            x: 'target_x',
+            y: 'target_y',
+            camera: {
+              x: 0,
+              y: 0,
+              ratio: 1,
+              angle: 0
+            }
+          }
+        },
+        {
+          /**
+           * EVERY NODES
+           * FILE LAYOUT
+           * CATEGORIES COLORS
+           * EDGES ARE DISPLAYED
+           * SIZES ARE INDEGREE
+           * ZOOM ON ONE CLUSTER: E
+           */
+          init: function() {
+            _s.unbind('clickNode');
+            _s.graph.nodes().forEach(function(node, i, a) {
+              var l = _options.innerCircleCount
+
+              node.label = null;
+              node.labelAdjust = false;
+
+               if (node.attributes["role"] == 'forum'){
+
+                node.target_color = '#425863'; // TODO: Apply good color
+                node.target_size = _s.graph.degree(node.id, 'out') / _options.ratio;
                 node.label = node.file_label
+              }else{
+
+                if(_s.graph.degree(node.id, 'in') > 2 ){
+                node.target_color = goodColors.M; // TODO: Apply good color
+                //node.labelAdjust = true;
+                //node.label = node.file_label
 
                   }
                 else{
@@ -744,7 +807,7 @@
               node.labelAdjust = false;
 
 
-              if (node.attributes["Type"] == 'query'){
+              if (node.attributes["role"] == 'forum'){
                 node.target_color = '#425863'; // TODO: Apply good color
                 node.target_size = _s.graph.degree(node.id, 'out') / _options.ratio;
               }
@@ -766,7 +829,7 @@
                         node.label = node.file_label;
                         node.selected = false;
 
-                         if (node.attributes["Type"] == 'query'){
+                         if (node.attributes["role"] == 'forum'){
                           node.target_color = '#425863'; // TODO: Apply good color
                         }else{
                           node.target_color = '#AAA'; // TODO: Apply good color
