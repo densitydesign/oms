@@ -210,6 +210,15 @@
 
   }
 
+  var scale = 22,
+    GOLDEN_ANGLE = Math.PI * (3 - Math.sqrt(5));
+
+  function place(n) {
+  var r = Math.sqrt(n),
+      a = n * GOLDEN_ANGLE;
+    return [scale * r * Math.cos(a), scale * r * Math.sin(a)];
+  }
+
   /**
    * GLOBAL APP VARS:
    * ****************
@@ -312,6 +321,8 @@
     }
   };
 
+  var bis1 = {nodes : [], edges: []},
+      bis2 = {nodes : [], edges: []};
 
   var goodColors = {
     "M" : "#84A594",
@@ -373,7 +384,6 @@
           delete n.label;
 
 
-
           if (n.attributes["role"] == 'forum')
             _options.innerCircleCount++;
         });
@@ -384,13 +394,13 @@
 
         // Sort nodes:
         graph.nodes = graph.nodes.sort(function(a, b) {
-          // var c = +!!a.attributes.crwl,
-          //     d = +!!b.attributes.crwl;
-          // // a = a.label.toLowerCase();
-          // // b = b.label.toLowerCase();
-          // a = a.file_label.toLowerCase();
-          // b = b.file_label.toLowerCase();
-          // return c < d ? -1 : c > d ? 1 : a < b ? -1 : a > b ? 1 : 0;
+
+            var c = a.attributes.role == 'forum' ? 0 : 1,
+                d = b.attributes.role == 'forum' ? 0 : 1,
+                a = a.attributes['In-Degree'] > 1 && a.attributes['In-Degree'] < 3 ? 1 : 0,
+                b = b.attributes['In-Degree'] > 1 && b.attributes['In-Degree'] < 3 ? 1 : 0;
+
+           return c < d ? -1 : c > d ? 1 : a < b ? -1 : a > b ? 1 : 0;
         });
 
         graph.nodes.forEach(function(node, i, a) {
@@ -414,7 +424,44 @@
         _graph = graph;
         _dbGraph = (new sigma.classes.graph(_s.settings)).read(_graph);
 
+        var bis1Id =["it_aspettare_un_figlio_reduced_authors", "it_desiderio_de_maternita_reduced_authors"]
+        var bis2Id =["it_aspettare_un_figlio_reduced_authors", "it_parto_reduced_authors"]
+        bis1.nodes = bis1.nodes.concat(bis1Id)
+        bis2.nodes = bis2.nodes.concat(bis2Id)
 
+        console.log(bis1,bis2)
+
+        _dbGraph.nodes().forEach(function(d){
+
+          if(_dbGraph.degree(d.id, 'in') == 2){
+                 var g = _dbGraph.neighborhood(d.id);
+                 var n = g.nodes.map(function(e){return e.id})
+
+
+                 if (n.indexOf(bis1Id[0]) > -1 && n.indexOf(bis1Id[1]) > -1 ){
+                  
+                  if (bis1.nodes.indexOf(n[0]) == -1){
+                    bis1.nodes.push(n[0])
+                  }
+
+                  g.edges.forEach(function(f){
+                    bis1.edges.push(f.id)
+                  })
+                 }
+
+                 if (n.indexOf(bis2Id[0]) > -1 && n.indexOf(bis2Id[1]) > -1 ){
+
+                  if (bis2.nodes.indexOf(n[0]) == -1){
+                      bis2.nodes.push(n[0])
+                    }
+
+                  g.edges.forEach(function(f){
+                    bis2.edges.push(f.id)
+                  })
+                 }
+              }
+
+        })
 
         // Bind buttons:
         document.getElementById('previous-step').addEventListener('click', function() {
@@ -466,10 +513,12 @@
                 node.label = node.file_label
               } else {
                 node.target_size = 0;
-                node.target_color = node.file_color; // TODO: Apply good color
+                node.target_color = "AAA"; // TODO: Apply good color
                 angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
-                node.target_x = _options.outerRadius * Math.cos(angle);
-                node.target_y = _options.outerRadius * Math.sin(angle);
+                //node.target_x = _options.outerRadius * Math.cos(angle);
+                //node.target_y = _options.outerRadius * Math.sin(angle);
+                node.target_x = place(i - l)[0]
+                node.target_y = place(i - l)[1]
               }
 
             });
@@ -525,8 +574,10 @@
                 node.target_size = 2;
                 node.target_color = '#AAA'; // TODO: Apply good color
                 angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
-                node.target_x = _options.outerRadius * Math.cos(angle);
-                node.target_y = _options.outerRadius * Math.sin(angle);
+                //node.target_x = _options.outerRadius * Math.cos(angle);
+                //node.target_y = _options.outerRadius * Math.sin(angle);
+                node.target_x = place(i - l)[0]
+                node.target_y = place(i - l)[1]
 
               }
             });
@@ -580,10 +631,14 @@
                  node.label = node.file_label
 
               } else {
-                node.target_color = '#AAA'; // TODO: Apply good color
-                angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
-                node.target_x = _options.outerRadius * Math.cos(angle);
-                node.target_y = _options.outerRadius * Math.sin(angle);
+                if(_s.graph.degree(node.id, 'in') > 1 && _s.graph.degree(node.id, 'in') < 3){
+                node.target_color = goodColors.E;
+                  }
+                else{
+                  node.target_color = goodColors.M; 
+                }
+                node.target_x = place(i - l)[0]
+                node.target_y = place(i - l)[1]
               }
             });
             _s.graph.edges().forEach(function(edge, i, a) {
@@ -594,7 +649,7 @@
           center: null,
           filter: null,
           settings: {
-            drawEdges: true,
+            drawEdges: false,
             labelThreshold: 1,
             enableCamera: false
           },
@@ -635,77 +690,89 @@
                 node.label = node.file_label
               }
               else{
-                node.target_color = '#AAA'; // TODO: Apply good color
-              }
-
-              node.target_x = node.file_x;
-              node.target_y = node.file_y;
-
-            });
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = 'rgba(17, 17, 17, 0.1)'
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: true,
-            labelThreshold: 1,
-            enableCamera: false
-          },
-          animation: {
-            color: 'target_color',
-            size: 'target_size',
-            x: 'target_x',
-            y: 'target_y',
-            camera: {
-              x: 0,
-              y: 0,
-              ratio: 1,
-              angle: 0
-            }
-          }
-        },
-        {
-          /**
-           * EVERY NODES
-           * FILE LAYOUT
-           * CATEGORIES COLORS
-           * EDGES ARE DISPLAYED
-           * SIZES ARE INDEGREE
-           * ZOOM ON ONE CLUSTER: E
-           */
-          init: function() {
-            _s.unbind('clickNode');
-            _s.graph.nodes().forEach(function(node, i, a) {
-              var l = _options.innerCircleCount
-
-              node.label = null;
-              node.labelAdjust = false;
-
-               if (node.attributes["role"] == 'forum'){
-
-                node.target_color = '#425863'; // TODO: Apply good color
-                node.target_size = _s.graph.degree(node.id, 'out') / _options.ratio;
-                node.label = node.file_label
-              }else{
-
                 if(_s.graph.degree(node.id, 'in') > 1 && _s.graph.degree(node.id, 'in') < 3){
-                node.target_color = goodColors.E; // TODO: Apply good color
-                //node.labelAdjust = true;
-                //node.label = node.file_label
+                node.target_color = goodColors.E;
+                  }
+                else{
+                  node.target_color = goodColors.M; 
+                }
+              }
+
+              node.target_x = node.file_x;
+              node.target_y = node.file_y;
+
+            });
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = 'rgba(17, 17, 17, 0.1)'
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          filter: null,
+          settings: {
+            drawEdges: false,
+            labelThreshold: 1,
+            enableCamera: false
+          },
+          animation: {
+            color: 'target_color',
+            size: 'target_size',
+            x: 'target_x',
+            y: 'target_y',
+            camera: {
+              x: 0,
+              y: 0,
+              ratio: 1,
+              angle: 0
+            }
+          }
+        },
+        {
+          /**
+           * EVERY NODES
+           * FILE LAYOUT
+           * CATEGORIES COLORS
+           * EDGES ARE DISPLAYED
+           * SIZES ARE INDEGREE
+           * ZOOM ON ONE CLUSTER: E
+           */
+          init: function() {
+            _s.unbind('clickNode');
+            _s.graph.nodes().forEach(function(node, i, a) {
+              var l = _options.innerCircleCount
+
+              node.label = null;
+              node.labelAdjust = false;
+
+               if (node.attributes["role"] == 'forum'){
+
+                node.target_color = '#425863'; // TODO: Apply good color
+                node.target_size = _s.graph.degree(node.id, 'out') / _options.ratio;
+                node.label = node.file_label
+              }else{
+
+                if(bis1.nodes.indexOf(node.id) > -1){
+                node.target_color = goodColors.E;
 
                   }
                 else{
-                  node.target_color = '#AAA'; 
+                  node.target_color = "#AAA"; 
                 }
               }
               node.target_x = node.file_x;
               node.target_y = node.file_y;
             });
+
             _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = 'rgba(17, 17, 17, 0.1)'
+              
+              if(bis1.edges.indexOf(edge.id) > -1 ) {
+                edge.color = 'rgba(17, 17, 17, 0.1)'
+              }else{
+                edge.color = 'rgba(17, 17, 17, 0)'
+              }
+              // "it_aspettare_un_figlio_reduced_authors"
+              // "it_parto_reduced_authors"
+              // "it_desiderio_de_maternita_reduced_authors"
             });
           },
           forceAtlas2: false,
@@ -753,21 +820,25 @@
                 node.label = node.file_label
               }else{
 
-                if(_s.graph.degree(node.id, 'in') > 2 ){
-                node.target_color = goodColors.M; // TODO: Apply good color
-                //node.labelAdjust = true;
-                //node.label = node.file_label
+                if(bis2.nodes.indexOf(node.id) > -1){
+                node.target_color = goodColors.E;
 
                   }
                 else{
-                  node.target_color = '#AAA'; 
+                  node.target_color = "#AAA"; 
                 }
               }
               node.target_x = node.file_x;
               node.target_y = node.file_y;
             });
+
             _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = 'rgba(17, 17, 17, 0.1)'
+              
+              if(bis2.edges.indexOf(edge.id) > -1 ) {
+                edge.color = 'rgba(17, 17, 17, 0.1)'
+              }else{
+                edge.color = 'rgba(17, 17, 17, 0)'
+              }
             });
           },
           forceAtlas2: false,
@@ -812,13 +883,24 @@
                 node.target_size = _s.graph.degree(node.id, 'out') / _options.ratio;
               }
               else{
-                node.target_color = '#AAA'; // TODO: Apply good color
+                if(_s.graph.degree(node.id, 'in') > 1 && _s.graph.degree(node.id, 'in') < 3){
+                node.target_color = goodColors.E;
+                  }
+                else{
+                  node.target_color = goodColors.M; 
+                }
               }
 
               node.target_x = node.file_x;
               node.target_y = node.file_y;
 
             });
+
+            _s.graph.edges().forEach(function(edge, i, a) {
+               edge.color = 'rgba(17, 17, 17, 0.1)'
+
+             });
+
             _s.bind('clickNode', function(e) {
                 var selected = e.data.node.selected
                 var cam = _s.cameras[0]
@@ -832,7 +914,12 @@
                          if (node.attributes["role"] == 'forum'){
                           node.target_color = '#425863'; // TODO: Apply good color
                         }else{
-                          node.target_color = '#AAA'; // TODO: Apply good color
+                          if(_s.graph.degree(node.id, 'in') > 1 && _s.graph.degree(node.id, 'in') < 3){
+                            node.target_color = goodColors.E;
+                              }
+                            else{
+                              node.target_color = goodColors.M; 
+                            }
                         }
                       });
                    _s.graph.edges().forEach(function(edge, i, a) {
