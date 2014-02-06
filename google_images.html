@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="js/d3.v3.min.js"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>	
+	<script type="text/javascript" src="js/oms/pack.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+	
+	<title>WHO Caesarean Section - Google images analysis</title>
+</head>
+
+<style>
+
+
+
+text {
+  font: 10px sans-serif;
+}
+
+</style>
+<body>
+
+<script>
+var data;
+
+var dsv_egg = d3.dsv(";", "text/plain");
+dsv_egg("data/CS_img.csv",function(d) {
+  return {
+  	keyword: d.keyword,
+    image: d.image,
+    lang: d.lang,
+    rank: +d.rank
+  };
+}, 
+	function(error, rows) {
+	  
+		//COMMENT EN	 
+    	
+   		data = d3.nest()
+   		.key(function(d) {return d.lang; })
+        .key(function(d) {return d.keyword; })
+        .entries(rows);
+        
+        viz()
+     });
+     
+     var margin = {top: 40, right: 10, bottom: 10, left: 10},
+    width = 1360 - margin.left - margin.right,
+    height = 800 - margin.top - margin.bottom;
+     
+     var svg, langs, tags;
+     var div = d3.select("body").append("svg")
+    
+    .attr("width", (width + margin.left + margin.right))
+    .attr("height", (height + margin.top + margin.bottom))
+    
+   
+    
+    var langScale = d3.scale.linear()
+    .domain[(0, d3.max(data.forEach(function (d,i) {
+    	
+    	return d.values.length;
+    	
+    })))]
+    .range([0, height]) 
+     
+     function viz() {
+     	
+   
+    
+    langs = svg.data(data)
+    .append("rect")
+    
+     	
+     }
+     
+     
+     
+</script>
+
+
+</body>
+</html>

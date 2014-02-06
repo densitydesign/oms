@@ -108,9 +108,7 @@ var div = d3.select("body").append("svg")
     
 
 function viz() {
-	
-	
-	
+
 	data={"key":"data",
         	"values":data}
 	
@@ -202,7 +200,6 @@ function step4() {
     .call(position)
     .style("opacity", function(d) { if(d.depth<3) return 0;  else return 1  });
 	
-	
 	d3.selectAll(".text").remove();  
     
 }
@@ -217,8 +214,6 @@ function step5() {
     .duration(500)
     .call(position)
     .style("opacity", function(d) { if(d.depth<3) return 0;  else return 1  });
-	
-	
 	
 	d3.selectAll(".text").remove();
 }
@@ -259,7 +254,6 @@ function createText(lvl) {
 	.attr("dx", txtScale(lvl)*0.7+"em")
 	.attr("dy", txtScale(lvl)*1.4+"em")
 	.text(function(d){return d.key});
-	
 }
 
 </script>
