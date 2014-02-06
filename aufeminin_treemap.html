@@ -9,7 +9,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto;
   position: relative;
- 
+ padding:10px;
 }
 
 form {
@@ -18,16 +18,29 @@ form {
   top: 10px;
 }
 
+.step{
+	background-color:#CBCCCE;
+	padding:3px 5px;
+	float:left;
+	border:1px solid #444;
+	color:#444;
+	text-decoration:none;
+	margin-right:5px;
+}
+
 
 </style>
 
 
 <body>
 	
-	<form>
-  <label><input type="radio" name="mode" value="size" checked> Size</label>
-  <label><input type="radio" name="mode" value="count"> Count</label>
-</form>
+<a id="step1" class="step" href="#" onclick="step1()">Step 1 - IT vs FR</a>
+<a id="step2" class="step" href="#" onclick="step2()">Step 2 - Forum structure</a>
+<a id="step3" class="step" href="#" onclick="step3()">Step 3 - Post count</a>
+<a id="step4" class="step" href="#" onclick="step4()">Step 4 - Sort by Replies</a>
+<a id="step5" class="step" href="#" onclick="step5()">Step 5 - Sort by duration</a>
+<a id="step6" class="step" href="#" onclick="step6()">Step 6 - Sort by authors</a>
+
 
 <br/>
 <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -115,7 +128,7 @@ function viz() {
 
   d3.selectAll("input").on("change", function change() {
     var value = this.value === "count"
-        ? function(d) { return d.nb_authors+1; }
+        ? function(d) { return d.nb_authors; }
         : function(d) { return 1.00; };
 
     node
@@ -142,6 +155,7 @@ function position() {
 }
 
 function step1() {
+	console.log("1")
 	node
 	.transition()
 	.duration(500)
@@ -151,6 +165,8 @@ function step1() {
 }
 
 function step2() {
+	
+	console.log("2")
 	node
 	.transition()
 	.duration(500)
@@ -160,9 +176,62 @@ function step2() {
 }
 
 function step3() {
+	
+	console.log("3")
 	node
-	.transition()
-	.duration(500)
+    .data(treemap.value(function(d) { return 1; }).nodes)
+    .transition()
+    .duration(500)
+    .call(position)
+    .style("opacity", function(d) { if(d.depth<3) return 0;  else return 1  });
+    
+	d3.selectAll(".text").remove();  
+}
+
+
+function step4() {
+	
+	
+	val=function(d) {return d.nb_replies;}
+	console.log("4")
+	
+	node
+    .data(treemap.value(val).nodes)
+    .transition()
+    .duration(500)
+    .call(position)
+    .style("opacity", function(d) { if(d.depth<3) return 0;  else return 1  });
+	
+	
+	d3.selectAll(".text").remove();  
+    
+}
+
+
+function step5() {
+	
+	console.log("5")
+	node
+    .data(treemap.value(function(d) { return d.time; }).nodes)
+    .transition()
+    .duration(500)
+    .call(position)
+    .style("opacity", function(d) { if(d.depth<3) return 0;  else return 1  });
+	
+	
+	
+	d3.selectAll(".text").remove();
+}
+
+
+function step6() {
+	
+	console.log("6")
+	node
+    .data(treemap.value(function(d) { return d.nb_authors; }).nodes)
+    .transition()
+    .duration(500)
+    .call(position)
 	.style("opacity", function(d) { if(d.depth<3) return 0;  else return 1  })
 	
 	d3.selectAll(".text").remove();
