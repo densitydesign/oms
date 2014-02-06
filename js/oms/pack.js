@@ -27,15 +27,16 @@
         	var diameter = 900,
 		    format = d3.format(",d");
 		
-			pack = d3.layout.partition()
+			pack = d3.layout.pack()
 			.sort(function(d){return d.time})
 			.children(function(d) {return d.values})
+		    .size([diameter - 4, diameter - 4])
+		    .padding(1)
 		    .value(function(d) { return 1; });
 		    
-		    var rect = chart.selectAll("rect");
 		    
 		   var node = chart.datum(finData).selectAll(".node")
-	       .data(partition(d3.entries(finData)[0]))
+	       .data(pack.nodes)
 	       //.data(function(d) )
 	       
 	        node.enter().append("g")
@@ -44,18 +45,18 @@
 	       //.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })	
 			
 			
-			rect=node.
-			.append("rect")
-      		.attr("x", function(d) { return x(d.x); })
-      .attr("y", function(d) { return y(d.y); })
-      .attr("width", function(d) { return x(d.dx); })
-      .attr("height", function(d) { return y(d.dy); })
-      .attr("fill", function(d) { d.parent ? return "#348512" : return "#882976"})
+			circles=node.filter(function(d){if(d.depth>dep) return false; else return true})
+			.append("circle")
+      		//.attr("r", function(d) { return d.r; })
+      		.style("opacity",function(d){if (d.depth==3) return 1; else return 0.25})
+      		.style("fill",function(d){if (d.depth==3) return "#ff7f0e"; else return "#C6DBEB"})
+      		
+      		.attr("cx", function(d) { return d.x; })
+		    .attr("cy", function(d) { return d.y; })
+		    .attr("r", function(d) { return d.r; });	
       		
       		
-      		
-      		
-      		//$(".node:first-child").remove();
+      		$(".node:first-child").remove();
       		//node.filter(function(d){return d.depth<=depth})
       		
       		node.exit().remove();
