@@ -165,10 +165,12 @@
 		    	
 		    	<div class="step">
 		    		<img src="img/pro_query-net.png"/>
-				    	<h3>1.Querying<br>(corpus building)</h3>
-				    	<p>I will give you a complete account of the
-						system, and expound the actual teachings
-						of the great explorer of the truth.</p>
+				    	<h3>1.harvesting the web corpus<br>[corpus]</h3>
+				    	<p>We collected the first 100 Google.com (in incognito mode) results harvesting their URL for each of the following queries:<br>"C-Section", "CS delivery", "Surgical delivery", "Abdominal delivery", "Cesarean delivery", "Caesarean delivery", "Operative delivery", Caesarean, Cesarean<br>The different queries have been designed to address as much as possible "nuances" of the CS concept: from the more technical and medical ones ("Caesarean delivery", "Operative delivery") to the more ordinary ones ("C-Section", "CS delivery").
+						</p>
+						<div class="link_ref"> <a href="http://www.govcom.org/publications/full_list/rogers_inculpable_engine_2009.pdf">Rogers, Richard. "The Googlization Question, and the Inculpable Engine."</a>
+						</div>
+
 						<div class="details">
 							<h5>Corpus: 336 webpages</h5>
 						</div>
@@ -177,23 +179,20 @@
 				    <div class="step">
 
 		    		<img src="img/pro_clean.png"/>
-				    	<h3>2.Cleaning</h3>
-				    	<p>I will give you a complete account of the
-						system, and expound the actual teachings
-						of the great explorer of the truth.</p>
-						<div class="details">
-						<h5>Corpus: ? webpages </h5>
-				    		<a href="#"><div class="link-download">Download Data</div></a>
-							<a href="#"><div class="link-visualization">Go to the Visualization</div></a>
-						</div>
+				    	<h3>2.Cleaning and tagging the webpages</h3>
+				    	<p>We qualified and tagged all the webpages accordingly to their contents and excluding from the corpus the pages not concerned with CS (i.e. PDF, Videos but also cesarean section on animals). In this way we obtained three main webpages groups:<br>a) Medical Information;<br>b) Contentious Information;<br>c) Experiential Information. 
+						</p>
 				    </div>
 				    
 				    <div class="step">
 		    		<img src="img/pro_tag-cs.png"/>
-				    	<h3>3.Tagging</h3>
-				    	<p>I will give you a complete account of the
-						system, and expound the actual teachings
-						of the great explorer of the truth.</p>
+				    	<h3>3.Crawling the hyperlinks</h3>
+				    	<p>We followed the web corpus hyperlinks to discovering other relevant URLs. From this new web corpus have been eliminated all the websites considered too general (i.e Facebook, Twitter) and the non relevant ones (i.e maps.Google, Youtube). Furthermore, also the websites with an in-degree index smaller than 3 have been excluded.<br>For this step we used <a href="https://github.com/medialab/Hypertext-Corpus-Initiative">HYPHE</a> a software developed at m&eacute;dialab | SciencesPo
+						</p>
+				    	
+						<div class="link_ref"> <a href="http://www.govcom.org/publications/full_list/Rogers_Digital_Cognitive_Technologies_preprint_Wiley_2009.pdf">Rogers, Richard. "Mapping public web space with the Issuecrawler." Digital cognitive technologies: Epistemology and the knowledge economy (2010): 89-99.</a>
+						</div>
+
 				    	<div class="details">
 				    	<h5>Corpus: 336 webpages </h5>
 				    		<a href="#"><div class="link-download">Download Data</div></a>
@@ -208,10 +207,16 @@
 		  
 				    <div class="step">
 		    		<img src="img/pro_crawl.png"/>
-				    	<h3>Crawling</h3>
-				    	<p>I will give you a complete account of the
-						system, and expound the actual teachings
-						of the great explorer of the truth.</p>
+				    	<h3>4. (VISUAL) NETWORK ANALYSIS</h3>
+				    	<p>We examined through co-link / social networking analysis the network produced with the crawling. Furthermore, we analyzed visually the network using GEPHI, an open-source network analysis and visualization software package. Thanks to its force-based algorithm, ForceAtlas2, we produced the qualitative interpretation of the graph.</p>
+
+				    	<div class="link_ref"> <a href="http://sebastien.pro/draft_Exploratory_Network_Analysis_Visualization_and_Interaction.pdf">S&eacute;bastien Heymann and B&eacute;n&eacute;dicte Le Grand. "Exploratory Network Analysis: Visualization and Interaction" to appear in Hocine Cherifi (editor), Complex Networks and their Applications, Cambridge University Press.</a><br>
+				    	<a href="http://www.medialab.sciences-po.fr/publications/Gephi%20paper.pdf">Bastian, Mathieu, S&eacute;bastien Heymann, and Mathieu Jacomy. "Gephi: an open source software for exploring and manipulating networks." ICWSM. 2009.</a><br>
+				    	<a href="http://www.medialab.sciences-po.fr/publications/Jacomy_Heymann_Venturini-Force_Atlas2.pdf">Jacomy, Mathieu, et al. "ForceAtlas2, A Continuous Graph Layout Algorithm for Handy Network Visualization."</a>
+
+						</div>
+
+
 						<div class="details">
 							<h5>Corpus: 677 websites </h5>
 				    		<a href="#"><div class="link-download">Download Data</div></a>
