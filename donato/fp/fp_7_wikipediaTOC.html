@@ -1,261 +1,376 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<style>
+<html>
+  <head>
+    <title>WHO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-rect {
-  stroke: none;
-}
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: auto;
-  position: relative;
- padding:10px;
-}
-
-form {
-  position: absolute;
-  left: 30px;
-  top: 10px;
-}
-
-.step{
-	background-color:#CBCCCE;
-	padding:3px 5px;
-	float:left;
-	border:1px solid #444;
-	color:#444;
-	text-decoration:none;
-	margin-right:5px;
-}
-
-
-</style>
-
-
-<body>
-	
-<a id="step1" class="step" href="#" onclick="step1()">Step 1 - IT vs FR</a>
-<a id="step2" class="step" href="#" onclick="step2()">Step 2 - Forum structure</a>
-<a id="step3" class="step" href="#" onclick="step3()">Step 3 - Post count</a>
-<a id="step4" class="step" href="#" onclick="step4()">Step 4 - Sort by Replies</a>
-<a id="step5" class="step" href="#" onclick="step5()">Step 5 - Sort by duration</a>
-<a id="step6" class="step" href="#" onclick="step6()">Step 6 - Sort by authors</a>
-
-
-<br/>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script>
-
-var data,treemap,cell,rects,node
-
-var dsv_egg = d3.dsv(";", "text/plain");
-
-dsv_egg("data/threads.csv",function(d) {
-  return {
-  	lang: d.lang,
-    forum: d.forum,
-    title: d.title,
-    orig_author: d.original_author,
-    time : +d.time,
-    nb_authors : +d.nb_authors,
-    nb_replies : +d.nb_replies,
-    post_length : +d.avg_post_length
-  };
-}, 
-	function(error, rows) {
-	  
-		//COMMENT EN	 
-      	rows=rows.filter(function(row){
-	    if(row.lang=="en") return false;
-	    else return true; 
-	  });
-    	
-   		data = d3.nest()
-        .key(function(d) {return d.lang; })
-        .key(function(d) {return d.forum; })
-        .entries(rows);
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <script>
+      
+      var notes = {
         
-        viz();
-     });
-
-
-
-var margin = {top: 40, right: 10, bottom: 10, left: 10},
-    width = 1360 - margin.left - margin.right,
-    height = 800 - margin.top - margin.bottom;
-    
-var txtScale = d3.scale.linear().domain([1,4]).range([1,0.4])
-
-var color = d3.scale.ordinal().range([
-"#D5C23A",
-"#E83931",
-"#83A493",
-"#415762",
-"#351D11"
-]);
-
-var treemap = d3.layout.treemap()
-    .size([width, height])
-    .sticky(true)
-    .padding(function(d) {return 10-(d.depth*2)})
-    .children(function(d) { return d.values; })
-    .value(function(d) { return 1 });
-
-var div = d3.select("body").append("svg")
-    
-    .attr("width", (width + margin.left + margin.right))
-    .attr("height", (height + margin.top + margin.bottom))
-    
-
-function viz() {
-
-	data={"key":"data",
-        	"values":data}
-	
-   node = div.datum(data).selectAll(".node")
-      .data(treemap.nodes)
-    .enter().append("rect")
-      .attr("class", "node")
-      .call(position)
-      .style("fill", function(d) { if(!d.depth>1) return "#83A493"; else if (d.depth>0) return "638774"; else return "none" })
-      .style("opacity", 1)
-      .on("click", function(d){console.log(d)});
-      //.text(function(d) { return d.children ? null : d.depth; });
-
-	createText(1);
-
-  d3.selectAll("input").on("change", function change() {
-    var value = this.value === "count"
-        ? function(d) { return d.nb_authors; }
-        : function(d) { return 1.00; };
-
-    node
-        .data(treemap.value(value).nodes)
-      .transition()
-        .duration(500)
-        .call(position);
+        "dolor":"dolor m, f (plural dolors) pain of a continuing nature, especially that of rheumatism; sorrow or grief of a continuing nature",
+        "velit":"third-person singular present active subjunctive of volo"
         
-     d3.selectAll(".text")
-     .transition()
-     .duration(500)
-     .attr("x", function(d){return d.x})
-	.attr("y", function(d){return d.y})   
+      } 
+      
+    </script>
+    
+     <!-- Fixed navbar -->
+    
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+       
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./intro.html">intro</a></li>
+            <li class="active"><a href="./network1.html">corpus</a></li>
+            <li><a href="./network2.html">network</a></li>
+            <li><a href="./network3.html">text</a></li>
+            <li><a href="./network4.html">images</a></li>
+            <li><a href="./intro1.html">aufeminin</a></li>
+            <li><a href="./network5.html">forums</a></li>
+            <li><a href="./network6.html">users</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  
+    
+     <section id="intro" class="intro bg-full long">
+      <h2 class="section">section</h2>
+      <h1 class="title-full">WikipediaTOC</h1>
+  <div class="container">
+    <div class="row section-row">
+      <div class="col-md-10 col-md-offset-2 section-text">
+        
+        
+        <p>DA FARE. </p>
+        
+    </div>
+
+
+
+      
+      
+    </div>
+  </div>
+  </section>
+  
+  
+  
+  <div id="protocol">
+      
+    <div class="proto-title closing">PROTOCOL   <img class="close-btn" src="img/cross.png"/></div>
     
     
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          
+          <div class="step">
+            <img src="img/pro_query-net.png"/>
+              <h3>1.Querying<br>(corpus building)</h3>
+              <p>I will give you a complete account of the
+            system, and expound the actual teachings
+            of the great explorer of the truth.</p>
+            <div class="details">
+              <h5>Corpus: 336 webpages</h5>
+            </div>
+            </div>
+            
+            <div class="step">
+
+            <img src="img/pro_clean.png"/>
+              <h3>2.Cleaning</h3>
+              <p>I will give you a complete account of the
+            system, and expound the actual teachings
+            of the great explorer of the truth.</p>
+            <div class="details">
+            <h5>Corpus: ? webpages </h5>
+                <a href="#"><div class="link-download">Download Data</div></a>
+              <a href="#"><div class="link-visualization">Go to the Visualization</div></a>
+            </div>
+            </div>
+            
+            <div class="step">
+            <img src="img/pro_tag-cs.png"/>
+              <h3>3.Tagging</h3>
+              <p>I will give you a complete account of the
+            system, and expound the actual teachings
+            of the great explorer of the truth.</p>
+              <div class="details">
+              <h5>Corpus: 336 webpages </h5>
+                <a href="#"><div class="link-download">Download Data</div></a>
+              <a href="#"><div class="link-visualization">Go to the Visualization</div></a>
+            </div>
+
+            </div>
+
+          </div>
+          
+          <div class="item">
+      
+            <div class="step">
+            <img src="img/pro_crawl.png"/>
+              <h3>Crawling</h3>
+              <p>I will give you a complete account of the
+            system, and expound the actual teachings
+            of the great explorer of the truth.</p>
+            <div class="details">
+              <h5>Corpus: 677 websites </h5>
+                <a href="#"><div class="link-download">Download Data</div></a>
+              <a href="#"><div class="link-visualization">Go to the Visualization</div></a>
+            </div>
+            </div>
+            
+  
+
+          </div>
+          
+      </div>
+      </div>
+    
+      <!-- Controls -->
+      
+    </div>
+      
+  </div>
+  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/crossfilter.js"></script>  
+  <script type="text/javascript" src="js/oms/barchart.js"></script>
+  <script type="text/javascript" src="js/oms/bubblechart.js"></script>
+  <script type="text/javascript" src="js/analytics_app.js"></script>
+    <script type="text/javascript" src="js/sigma.min.js"></script>
+  <script type="text/javascript" src="js/sigma.parsers.json.js"></script>
+  <script type="text/javascript" src="js/sigma.layout.forceAtlas2.js"></script>
+  <script type="text/javascript" src="js/sigma.plugins.neighborhoods.js"></script>
+  <script type="text/javascript" src="js/graph_CS_affr_app.js"></script>
+
+    
+    <script>
+  
+  
+
+    var checkPoints = [
+      "intro()",
+      "viz()",
+      "step2()"
+      ];
+
+   var step = 0;
+    var timer=0;
+    var direction=0;
+  
+  
+  $(document).ready(function(){
+      
+      $("#protocol").css("left","97%");
+      
+      
+      
+      //General interactions
+  
+    $('.carousel').carousel({
+      "wrap":false,
+      "interval":false
+    })
+    
+    $("#protocol").click(function() {
+      
+      if($("#protocol").position().left >0){ 
+        $("#protocol").css("left",0);
+        $(".close-btn").css('-webkit-transform','rotate(90deg)');
+        $(".close-btn").css('-moz-transform','rotate(90deg)');
+      }
+      
+    })
+    
+    $(".closing").click(function() {
+      console.log($("#protocol").css("left"))
+      if($("#protocol").css("left")=="0px") {
+
+        $("#protocol").css("left","97%");
+        $(".close-btn").css('-webkit-transform','rotate(45deg)');
+        $(".close-btn").css('-moz-transform','rotate(45deg)');
+
+      }
+    })
+    
+    
+    $("b").hover(function() {
+      height=$(this).position().top;
+      att = $(this).attr('note');
+      txt = notes[att]; 
+      $(".section-text").append('<div class="note" style="top:'+height+'px">'+txt+'</div>');
+    },
+    
+    function() {
+      $(".note").remove();
+    })
+    
+      
+    $("#protocol").mousewheel(function(event){
+      return false;
+    });
+    
+  
+  
+    //=======================
+    //scroll interaction
+          
+      $('.long').bind('mousewheel',chk_scroll);
+      $('.adva-cont').bind('mousewheel',disableScroll);
+
+
+    //general scroll behaviour
+      window.onmousewheel = document.onmousewheel = function(e) {
+        if(timer==0) {
+          timer=20;
+          
+          var e = window.event || e; // old IE support
+          var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+          console.log(delta)
+          if(delta<0) direction="down"
+          else if(delta>0) direction="up";
+          
+          checkLevel();
+        }
+        if (e.preventDefault)
+            e.preventDefault();
+        e.returnValue = false;
+      };
+      
+      //timeout to check scroll updates
+      timeoutid = setInterval('checkTime();', 100);
   });
-};
-
-function position() {
-  this.attr("x", function(d) { return d.x ; })
-      .attr("y", function(d) { return d.y ; })
-      .attr("width", function(d) { return Math.max(0, d.dx - 1) ; })
-      .attr("height", function(d) { return Math.max(0, d.dy - 1) ; });
-}
-
-function step1() {
-	console.log("1")
-	node
-	.transition()
-	.duration(500)
-	.style("opacity", 1 )
-	
-	createText(1);
-}
-
-function step2() {
-	
-	console.log("2")
-	node
-	.transition()
-	.duration(500)
-	.style("opacity", function(d) { if(d.depth>1) return 1;  else return 0 })
-	
-	createText(2);
-}
-
-function step3() {
-	
-	console.log("3")
-	node
-    .data(treemap.value(function(d) { return 1; }).nodes)
-    .transition()
-    .duration(500)
-    .call(position)
-    .style("opacity", function(d) { if(d.depth<3) return 0;  else return 1  });
+  
+  //timing for scroll update
+  function checkTime(){
     
-	d3.selectAll(".text").remove();  
-}
-
-
-function step4() {
-	
-	
-	val=function(d) {return d.nb_replies;}
-	console.log("4")
-	
-	node
-    .data(treemap.value(val).nodes)
-    .transition()
-    .duration(500)
-    .call(position)
-    .style("opacity", function(d) { if(d.depth<3) return 0;  else return 1  });
-	
-	d3.selectAll(".text").remove();  
+    if (timer>0) {
+      timer--;
+    }
     
-}
+  }
+  
+  function chk_scroll(e)
+  {
+    if (timer==0) {
+        var elem = $(e.currentTarget); 
+       
+        if (!(elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight())) 
+        {
+            e.stopPropagation();
+        }
+        else {
+          //timer=40;
+          console.log("set timer!")
+  
+        }
+    }
+    
+  }
+  
+  function disableScroll(e,delta) {
+    var elem = $(e.currentTarget);
+    console.log(elem);
+    elem.scrollTop(elem.scrollTop() - (40 * delta));
+      //set_bar();
+      e.stopPropagation();
+      return false;
+  }
+  
+  //load next or previous screen according to scroll direction
+  function checkLevel() {
+
+      if (direction=="down" && step < checkPoints.length-1) {
+        step++;
+        eval(checkPoints[step]);
+      }
+      else if(direction=="up" && step>0) {
+        step--;
+        eval(checkPoints[step]);
+        
+      }
+    }
+    
+    //end scroll
+    //====================
+    
+    
+    
+    
+    
+    //====================
+    //screens functions
+    
+    function intro() {
+      scrollToID("#intro",600);
+      
+    }
+    
+    function viz() {
+      
+      scrollToID("#viz",600);
+      a=$(".adv-step:visible");
+      if (!a.hasClass("step1")) {
+        a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step1").fadeIn(500)});
+      }
+      
+    }
+    
+    function step2() {
+      
+      a=$(".adv-step:visible");
+      if (!a.hasClass("step2")) {
+        a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step2").fadeIn(500)});
+      }
+      
+    }
+    
+    //end screens functions
+    //=====================
 
 
-function step5() {
-	
-	console.log("5")
-	node
-    .data(treemap.value(function(d) { return d.time; }).nodes)
-    .transition()
-    .duration(500)
-    .call(position)
-    .style("opacity", function(d) { if(d.depth<3) return 0;  else return 1  });
-	
-	d3.selectAll(".text").remove();
-}
 
+    //utility to animate transition between divs
+    function scrollToID(id, speed){
 
-function step6() {
-	
-	console.log("6")
-	node
-    .data(treemap.value(function(d) { return d.nb_authors; }).nodes)
-    .transition()
-    .duration(500)
-    .call(position)
-	.style("opacity", function(d) { if(d.depth<3) return 0;  else return 1  })
-	
-	d3.selectAll(".text").remove();
-}
+    
+    var targetOffset = $(id).offset().top;
+    $(id).scrollTop(0);
+    $('html,body').animate({scrollTop:targetOffset}, speed);
+    
+  }
+    
 
-
-function createText(lvl) {
-	
-	d3.selectAll(".text").remove();
-	
-	div.selectAll(".text")
-	.data(treemap.nodes)
-    .enter()
-	.append("text")
-	.filter(function(d){if(d.depth==lvl && d.dx>100) return true; else return false;})
-	.attr("class","text")
-	.attr("font-family", "sans-serif")
-	.attr("font-size", txtScale(lvl)+"em")
-	.attr("fill", "white")
-	.transition()
-	.duration(500)
-	.attr("opacity",0.7)
-	.attr("x", function(d){console.log(d); return d.x})
-	.attr("y", function(d){return d.y})
-	.attr("dx", txtScale(lvl)*0.7+"em")
-	.attr("dy", txtScale(lvl)*1.4+"em")
-	.text(function(d){return d.key});
-}
-
-</script>
-
-
+  </script>
+    
+  </body>
+</html>
