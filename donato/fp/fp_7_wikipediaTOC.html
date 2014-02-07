@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+rect {
+  stroke: none;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+ padding:10px;
+}
+
+form {
+  position: absolute;
+  left: 30px;
+  top: 10px;
+}
+
+.step{
+	background-color:#CBCCCE;
+	padding:3px 5px;
+	float:left;
+	border:1px solid #444;
+	color:#444;
+	text-decoration:none;
+	margin-right:5px;
+}
+
+
+</style>
+
+
+<body>
+	
+<a id="step1" class="step" href="#" onclick="step1()">Step 1 - IT vs FR</a>
+<a id="step2" class="step" href="#" onclick="step2()">Step 2 - Forum structure</a>
+<a id="step3" class="step" href="#" onclick="step3()">Step 3 - Post count</a>
+<a id="step4" class="step" href="#" onclick="step4()">Step 4 - Sort by Replies</a>
+<a id="step5" class="step" href="#" onclick="step5()">Step 5 - Sort by duration</a>
+<a id="step6" class="step" href="#" onclick="step6()">Step 6 - Sort by authors</a>
+
+
+<br/>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var data,treemap,cell,rects,node
+
+var dsv_egg = d3.dsv(";", "text/plain");
+
+dsv_egg("data/threads.csv",function(d) {
+  return {
+  	lang: d.lang,
+    forum: d.forum,
+    title: d.title,
+    orig_author: d.original_author,
+    time : +d.time,
+    nb_authors : +d.nb_authors,
+    nb_replies : +d.nb_replies,
+    post_length : +d.avg_post_length
+  };
+}, 
+	function(error, rows) {
+	  
+		//COMMENT EN	 
+      	rows=rows.filter(function(row){
+	    if(row.lang=="en") return false;
+	    else return true; 
+	  });
+    	
+   		data = d3.nest()
+        .key(function(d) {return d.lang; })
+        .key(function(d) {return d.forum; })
+        .entries(rows);
+        
+        viz();
+     });
+
+
+
+var margin = {top: 40, right: 10, bottom: 10, left: 10},
+    width = 1360 - margin.left - margin.right,
+    height = 800 - margin.top - margin.bottom;
+    
+var txtScale = d3.scale.linear().domain([1,4]).range([1,0.4])
+
+var color = d3.scale.ordinal().range([
+"#D5C23A",
+"#E83931",
+"#83A493",
+"#415762",
+"#351D11"
+]);
+
+var treemap = d3.layout.treemap()
+    .size([width, height])
+    .sticky(true)
+    .padding(function(d) {return 10-(d.depth*2)})
+    .children(function(d) { return d.values; })
+    .value(function(d) { return 1 });
+
+var div = d3.select("body").append("svg")
+    
+    .attr("width", (width + margin.left + margin.right))
+    .attr("height", (height + margin.top + margin.bottom))
+    
+
+function viz() {
+
+	data={"key":"data",
+        	"values":data}
+	
+   node = div.datum(data).selectAll(".node")
+      .data(treemap.nodes)
+    .enter().append("rect")
+      .attr("class", "node")
+      .call(position)
+      .style("fill", function(d) { if(!d.depth>1) return "#83A493"; else if (d.depth>0) return "638774"; else return "none" })
+      .style("opacity", 1)
+      .on("click", function(d){console.log(d)});
+      //.text(function(d) { return d.children ? null : d.depth; });
+
+	createText(1);
+
+  d3.selectAll("input").on("change", function change() {
+    var value = this.value === "count"
+        ? function(d) { return d.nb_authors; }
+        : function(d) { return 1.00; };
+
+    node
+        .data(treemap.value(value).nodes)
+      .transition()
+        .duration(500)
+        .call(position);
+        
+     d3.selectAll(".text")
+     .transition()
+     .duration(500)
+     .attr("x", function(d){return d.x})
+	.attr("y", function(d){return d.y})   
+    
+    
+  });
+};
+
+function position() {
+  this.attr("x", function(d) { return d.x ; })
+      .attr("y", function(d) { return d.y ; })
+      .attr("width", function(d) { return Math.max(0, d.dx - 1) ; })
+      .attr("height", function(d) { return Math.max(0, d.dy - 1) ; });
+}
+
+function step1() {
+	console.log("1")
+	node
+	.transition()
+	.duration(500)
+	.style("opacity", 1 )
+	
+	createText(1);
+}
+
+function step2() {
+	
+	console.log("2")
+	node
+	.transition()
+	.duration(500)
+	.style("opacity", function(d) { if(d.depth>1) return 1;  else return 0 })
+	
+	createText(2);
+}
+
+function step3() {
+	
+	console.log("3")
+	node
+    .data(treemap.value(function(d) { return 1; }).nodes)
+    .transition()
+    .duration(500)
+    .call(position)
+    .style("opacity", function(d) { if(d.depth<3) return 0;  else return 1  });
+    
+	d3.selectAll(".text").remove();  
+}
+
+
+function step4() {
+	
+	
+	val=function(d) {return d.nb_replies;}
+	console.log("4")
+	
+	node
+    .data(treemap.value(val).nodes)
+    .transition()
+    .duration(500)
+    .call(position)
+    .style("opacity", function(d) { if(d.depth<3) return 0;  else return 1  });
+	
+	d3.selectAll(".text").remove();  
+    
+}
+
+
+function step5() {
+	
+	console.log("5")
+	node
+    .data(treemap.value(function(d) { return d.time; }).nodes)
+    .transition()
+    .duration(500)
+    .call(position)
+    .style("opacity", function(d) { if(d.depth<3) return 0;  else return 1  });
+	
+	d3.selectAll(".text").remove();
+}
+
+
+function step6() {
+	
+	console.log("6")
+	node
+    .data(treemap.value(function(d) { return d.nb_authors; }).nodes)
+    .transition()
+    .duration(500)
+    .call(position)
+	.style("opacity", function(d) { if(d.depth<3) return 0;  else return 1  })
+	
+	d3.selectAll(".text").remove();
+}
+
+
+function createText(lvl) {
+	
+	d3.selectAll(".text").remove();
+	
+	div.selectAll(".text")
+	.data(treemap.nodes)
+    .enter()
+	.append("text")
+	.filter(function(d){if(d.depth==lvl && d.dx>100) return true; else return false;})
+	.attr("class","text")
+	.attr("font-family", "sans-serif")
+	.attr("font-size", txtScale(lvl)+"em")
+	.attr("fill", "white")
+	.transition()
+	.duration(500)
+	.attr("opacity",0.7)
+	.attr("x", function(d){console.log(d); return d.x})
+	.attr("y", function(d){return d.y})
+	.attr("dx", txtScale(lvl)*0.7+"em")
+	.attr("dy", txtScale(lvl)*1.4+"em")
+	.text(function(d){return d.key});
+}
+
+</script>
+
+
