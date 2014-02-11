@@ -9,15 +9,27 @@ $.getJSON('data/CS05_tfidf.json', function(dataIDF) {
 
 $.getJSON('data/CS05_tf.json', function(dataTF) {
 
+	d3.select('#buttons').append("button").text('show cat')
+		.on("click", function(){
+			slope.showCat(["M", "C", "E"])
+			chart.call(slope)
+	})
+
+	d3.select('#buttons').append("button").text('show cat 2')
+		.on("click", function(){
+			slope.showCat(["C", "E"])
+			chart.call(slope)
+	})
+
 	d3.select('#buttons').append("button").text('filter word link')
 		.on("click", function(){
-			slope.listStop(false).wordStep(["risk", "incision"])
+			slope.showLines(true).wordStep(["risk", "incision"])
 			chart.call(slope)
 	})
 
 	d3.select('#buttons').append("button").text('display all links')
 		.on("click", function(){
-			slope.listStop(false).wordStep([])
+			slope.showLines(true).wordStep([])
 			chart.call(slope)
 	})
 
@@ -125,7 +137,6 @@ $.getJSON('data/CS05_tf.json', function(dataTF) {
 
 
     var slope = who.slopeChart()
-    			.listStop(true)
     			.graphHeight(graphHeight)
     			.on("clicked", function(d){
     				console.log(d)

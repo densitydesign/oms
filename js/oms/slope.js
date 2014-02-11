@@ -5,6 +5,8 @@
   who.slopeChart = function(){
 
     var listStop = false,
+    	showLines = false,
+    	showCat = [],
     	wordStep = [],
         graphWidth = 900,
  		graphHeight = 600,
@@ -18,38 +20,29 @@
     function slopeChart(selection){
     	selection.each(function(data){
 
-        	var chart = selection
+        	var chart = selection,
+        		_data;
+
+        	if(!showCat.length){
+	        	var wordsList = data[0].values.map(function(d){return d.key})
+	        	_data = [{"step": "words list", values : []}]
+
+	        	wordsList.forEach(function(d){
+		        		_data[0].values.push({
+		        			key: d,
+		        			value : 1
+		        		})
+	        		})
+        	}else{
+        		_data = data.filter(function(d){if(showCat.indexOf(d.step) > -1) return true});
+        		//_data.sort(function(a, b){return a.step - b.step})
+        	}
+
 
         	var x = d3.scale.ordinal().rangeRoundBands([0, graphWidth], 0.5, 0);
-        	var xDomain = data.map(function(d){return d.step})
+        	var xDomain = _data.map(function(d){return d.step})
         	x.domain(xDomain);
 
-        	var titleGroup = chart.select('.titleGroup')
-			//add a title based on the conference and dates
-			if(titleGroup.empty()){
-
-				titleGroup = chart.append("g");
-				titleGroup.attr('class','titleGroup');
-
-			    var stepTitles = titleGroup.append('g').attr("class", "stepsTitle")
-
-			    stepTitles.selectAll("text")
-				    .data(xDomain)
-				    .enter()
-				    .append("text")
-				    .attr('x', function(d){return x(d) + (x.rangeBand()/2)})
-				    .attr('y', 20)
-				    .attr('font-family','Montserrat')
-				    .attr('font-size',13)
-				    .attr('font-weight',700)
-				    .attr('text-anchor','middle')
-				    .text(function(d){return d});
-
-			}
-			//if the title group exists, just change the text values
-			else{
-					//todo
-			}
 
 			var slopeModel = function(data, height, step){
 
@@ -83,59 +76,108 @@
 
 			}
 
-			data.forEach(function(d){
+			_data.forEach(function(d){
 				slopeModel(d.values, graphHeight, d.step)
 			})
 
 
 			/* new code */
 
+			var titleGroup = chart.select('.titleGroup')
 
-			var textsGroup = chart.selectAll('.textGroup').data(data)
+			if(titleGroup.empty()){
+				titleGroup = chart.append("g").attr('class','titleGroup');
+			}
+
+		    var stepTitles = titleGroup.selectAll('text').data(xDomain, function(d){return d})
+
+		    stepTitles
+				.text(function(d){return d})
+				.transition()
+				.duration(transitionDuration)
+				.attr('x', function(d){return x(d) + (x.rangeBand()/2)})
+
+		    stepTitles
+			    .enter()
+			    .append("text")
+			    .attr('x', graphWidth)
+			    .attr('y', 20)
+			    .attr('opacity', 0)
+			    .attr('font-family','Montserrat')
+			    .attr('font-size',13)
+			    .attr('font-weight',700)
+			    .attr('text-anchor','middle')
+			    .text(function(d){return d})
+			    	.transition()
+					.duration(transitionDuration)
+					.attr('opacity', 1)
+					.attr('x', function(d){return x(d) + (x.rangeBand()/2)})
+
+			stepTitles.exit()
+				.transition()
+				.duration(transitionDuration)
+				.attr('opacity', 0)
+				.remove()
+
+
+
+			var textsGroup = chart.selectAll('.textGroup').data(_data, function(d){return d.step})
+
+			textsGroup
+				.attr("class",function(d){return "g_" + d.step.replace(" ", "_") + " textGroup"});
 
 			textsGroup
 				.enter()
 				.append("g")
-				.attr("class",function(d){return "g_" + d.step + " textGroup"})
+				.attr("class",function(d){return "g_" + d.step.replace(" ", "_") + " textGroup"})
+				.attr('opacity', 1);
 
-			textsGroup.exit().remove()
+			textsGroup.exit()
+				.transition()
+				.duration(transitionDuration)
+				.attr('opacity', 0)
+				.remove()
 
-			var textGroup = textsGroup.selectAll("text").data(function(d){return d.values})
-
-			
-			textGroup	
-				.enter()
-				.append("text")
-				.on("click", function(d){
-					//console.log(selection, chart, this)
-					dispatch.clicked(d.key);
-				})
-				.style('cursor','pointer')
-				.attr("x",function(d){return x(d.step)+(x.rangeBand()/2)})
-				.attr('font-family',fontFamily)
-				.attr('font-size',fontSize)
-				//.attr('y', 0)
-				.attr('y', function(d,i){return d.yCoord;})
-				.attr("text-anchor", "middle")
-				.html(function(d) { return d['key'] + " <tspan style='font-weight:bold;'>" + d['value'] + " </tspan>"; })
-					.transition()
-					.duration(transitionDuration)
-					.delay(100)
-					.attr('y', function(d,i){return d.yCoord;})
-
-
+			var textGroup = textsGroup.selectAll("text").data(function(d){return d.values}, function(d){return d.key})
 
 			textGroup
 				.html(function(d) { return d['key'] + " <tspan style='font-weight:bold;'>" + d['value'] + " </tspan>"; })
 				.transition()
 				.duration(transitionDuration)
-					.attr('y', function(d,i){return d.yCoord;});
+					.attr('y', function(d){return d.yCoord;})
+					.attr("x",function(d){return x(d.step)+(x.rangeBand()/2)});
+			
+			textGroup	
+				.enter()
+				.append("text")
+				.on("click", function(d){
+					dispatch.clicked(d.key);
+				})
+				.style('cursor','pointer')
+				.attr('opacity', 0)
+				.attr("x",graphWidth)
+				//.attr("x",function(d){return x(d.step)+(x.rangeBand()/2)})
+				.attr('font-family',fontFamily)
+				.attr('font-size',fontSize)
+				.attr('y', function(d){return d.yCoord;})
+				.attr("text-anchor", "middle")
+				.html(function(d) { return d['key'] + " <tspan style='font-weight:bold;'>" + d['value'] + " </tspan>"; })
+					.transition()
+					.duration(transitionDuration)
+					.attr('opacity', 1)
+					.attr('y', function(d){return d.yCoord;})
+					.attr("x",function(d){return x(d.step)+(x.rangeBand()/2)})
 
-			textGroup.exit().remove()
 
-			if (listStop) return;
+			textGroup.exit()
+				.transition()
+				.duration(transitionDuration)
+				.attr('opacity', 0)
+				.remove()
 
-			var allValues = d3.merge(data.map(function(d){return d.values}))
+			if (!showLines) return;
+
+			var allValues = d3.merge(_data.map(function(d){return d.values}))
 
 			var nestValues = d3.nest()
 				.key(function(d) { return d.key; })
@@ -146,7 +188,21 @@
 				.y(function(d) { return (d.yCoord+3); })
 
 
-			var linesGroup = chart.selectAll('.lineGroup').data(nestValues)
+			var linesGroup = chart.selectAll('.lineGroup').data(nestValues, function(d){return d.key})
+
+			linesGroup
+				.transition()
+				.duration(transitionDuration)
+					.attr("d", function(d) { return line(d.values)})
+					.attr("stroke-opacity", 0)
+					.filter(function(d){
+					if(wordStep.length > 0){
+							var check = wordStep.indexOf(d['key']);
+							return check >= 0
+						}
+						else{return true}
+					})
+					.attr("stroke-opacity", 0.7)
 
 
 			linesGroup.enter().append("path")
@@ -163,34 +219,50 @@
 					}
 					else{return true}
 				})
-				.attr("stroke-opacity", 0.7)
-
-			linesGroup
 				.transition()
 				.duration(transitionDuration)
-					.attr("d", function(d) { return line(d.values)})
-					.attr("stroke-opacity", 0)
-					.filter(function(d){
-					if(wordStep.length > 0){
-							var check = wordStep.indexOf(d['key']);
-							return check >= 0
-						}
-						else{return true}
-					})
 					.attr("stroke-opacity", 0.7)
 
-			linesGroup.exit().remove()
 
-			var pointsGroup = chart.selectAll('.pointGroup').data(nestValues)
+			linesGroup.exit()
+				.transition()
+				.duration(transitionDuration)
+				.attr("stroke-opacity", 0)
+				.remove()
+
+			var pointsGroup = chart.selectAll('.pointGroup').data(nestValues, function(d){return d.key})
+
+			pointsGroup
+				.attr("class",function(d){return "g_" + d.key.replace(/\s+/g, '') + " pointGroup"})
 
 			pointsGroup
 				.enter()
 				.append("g")
 				.attr("class",function(d){return "g_" + d.key.replace(/\s+/g, '') + " pointGroup"})
+				.attr("opacity", 1)
 
-			pointsGroup.exit().remove()
+			pointsGroup.exit()
+				.transition()
+				.duration(transitionDuration)
+				.attr("opacity", 0)
+				.remove()
 
 			var pointGroup = pointsGroup.selectAll("path").data(function(d){return d.values})
+
+			pointGroup
+				.transition()
+				.duration(transitionDuration)
+				.attr("transform", function(d) { return "translate(" + (x(d.step)+(x.rangeBand()/2) -3) + "," + (d.yCoord+2) + ")"; })
+				.attr("fill-opacity", 0)
+				.filter(function(d){
+					if(wordStep.length > 0){
+
+						var check = wordStep.indexOf(d['key']);
+						return check >= 0
+					}
+					else{return true}
+				})
+				.attr("fill-opacity", 0.7)
 
 
 			pointGroup
@@ -210,25 +282,17 @@
 					}
 					else{return true}
 				})
-				.attr("fill-opacity", 0.7)
-
-			pointGroup
 				.transition()
 				.duration(transitionDuration)
-				.attr("transform", function(d) { return "translate(" + (x(d.step)+(x.rangeBand()/2) -3) + "," + (d.yCoord+2) + ")"; })
+					.attr("fill-opacity", 0.7)
+
+
+
+			pointGroup.exit()
+				.transition()
+				.duration(transitionDuration)
 				.attr("fill-opacity", 0)
-				.filter(function(d){
-					if(wordStep.length > 0){
-
-						var check = wordStep.indexOf(d['key']);
-						return check >= 0
-					}
-					else{return true}
-				})
-				.attr("fill-opacity", 0.7)
-
-
-			pointGroup.exit().remove()
+				.remove()
 
 			/* end new code */
 
@@ -273,6 +337,18 @@
     slopeChart.wordStep = function(x){
       if (!arguments.length) return wordStep;
       wordStep = x;
+      return slopeChart;
+    }
+
+    slopeChart.showLines = function(x){
+      if (!arguments.length) return showLines;
+      showLines = x;
+      return slopeChart;
+    }
+
+	slopeChart.showCat = function(x){
+      if (!arguments.length) return showCat;
+      showCat = x;
       return slopeChart;
     }
 
