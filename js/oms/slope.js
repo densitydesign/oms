@@ -8,6 +8,7 @@
     	showLines = false,
     	showCat = [],
     	wordStep = [],
+    	normalized = true,
         graphWidth = 900,
  		graphHeight = 600,
 	 	teamBuffer = 20,
@@ -34,8 +35,7 @@
 		        		})
 	        		})
         	}else{
-        		_data = data.filter(function(d){if(showCat.indexOf(d.step) > -1) return true});
-        		//_data.sort(function(a, b){return a.step - b.step})
+        		_data = data.filter(function(d){console.log(d);if(showCat.indexOf(d.step) > -1) return true});
         	}
 
 
@@ -44,16 +44,39 @@
         	x.domain(xDomain);
 
 
+        	var range = []
+        	_data.forEach(function(d){
+        		var max = d3.max(d.values.map(function(e){return e.value}));
+        		var min = d3.min(d.values.map(function(e){return e.value}));
+
+        		if(range[1] === undefined) range[1] = max
+        		else if (range[1] < max)  range[1] = max;
+
+        		if(range[0] === undefined) range[0] = min
+        		else if (range[0] > min)  range[0] = min;
+
+        	})
+
+
 			var slopeModel = function(data, height, step){
 
 				var _data = data;
+
+				
+
 				var valuesList = _data.map(function(d){
 					return d['value']
 				})
 
 				var yScale = d3.scale.linear()
-				.domain([d3.min(valuesList),d3.max(valuesList)])
-				.range([height-20,60]);
+				.range([height-20,60])
+				.domain(range);
+
+				if(normalized){
+					yScale.domain([d3.min(valuesList),d3.max(valuesList)])
+				}else{
+					yScale.domain(range)
+				}
 
 				_data.forEach(function(d){
 					d.yCoord = yScale(d['value'])
@@ -62,24 +85,44 @@
 
 				adjustYCoords(_data)
 
-				valuesList = _data.map(function(d){
-					return d['yCoord']
-				})
-
-				yScale = d3.scale.linear()
-				.domain([d3.min(valuesList),d3.max(valuesList)])
-				.range([60, height-20]);
-
-				_data.forEach(function(d){
-					d.yCoord = yScale(d.yCoord)
-				})
-
 			}
 
 			_data.forEach(function(d){
 				slopeModel(d.values, graphHeight, d.step)
 			})
 
+			 var range2 = []
+        	_data.forEach(function(d){
+        		var max = d3.max(d.values.map(function(e){return e['yCoord']}));
+        		var min = d3.min(d.values.map(function(e){return e['yCoord']}));
+
+        		if(range2[1] === undefined) range2[1] = max
+        		else if (range2[1] < max)  range2[1] = max;
+
+        		if(range2[0] === undefined) range2[0] = min
+        		else if (range2[0] > min)  range2[0] = min;
+
+        	})
+
+        	_data.forEach(function(d){
+        		var yScale = d3.scale.linear()
+				.range([60, graphHeight-20]);
+
+				var valuesList = d.values.map(function(d){
+					return d['yCoord']
+				})
+
+				if(normalized){
+					yScale.domain([d3.min(valuesList),d3.max(valuesList)])
+				}else{
+					yScale.domain(range2)
+				}
+
+        		d.values.forEach(function(e){
+					e.yCoord = yScale(e['yCoord'])
+				})
+
+			})
 
 			/* new code */
 
@@ -156,7 +199,6 @@
 				.style('cursor','pointer')
 				.attr('opacity', 0)
 				.attr("x",graphWidth)
-				//.attr("x",function(d){return x(d.step)+(x.rangeBand()/2)})
 				.attr('font-family',fontFamily)
 				.attr('font-size',fontSize)
 				.attr('y', function(d){return d.yCoord;})
@@ -267,9 +309,6 @@
 
 			pointGroup
 				.enter().append("path")
-				// .attr("d", d3.svg.symbol()
-				// 	.size(function(d) { return 20; })
-				// 	.type(function(d) { return "circle"; }))
 				.attr("d", "M0,0 l6,0 A3,3 0 0,1 0,0 z")
 				.attr("fill", "grey")
 				.attr("fill-opacity", 0)
@@ -349,6 +388,12 @@
 	slopeChart.showCat = function(x){
       if (!arguments.length) return showCat;
       showCat = x;
+      return slopeChart;
+    }
+
+	slopeChart.normalized = function(x){
+      if (!arguments.length) return normalized;
+      normalized = x;
       return slopeChart;
     }
 

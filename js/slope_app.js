@@ -1,13 +1,13 @@
 var graphWidth = 900; 
-var graphHeight = 900;
+var graphHeight = 800;
 var teamBuffer = 20;
 var transitionDuration = 750;
 var fontSize = 10;
 
 
-$.getJSON('data/CS05_tfidf.json', function(dataIDF) {
+$.getJSON('data/CS_tfidf.json', function(dataIDF) {
 
-$.getJSON('data/CS05_tf.json', function(dataTF) {
+$.getJSON('data/CS_tf.json', function(dataTF) {
 
 	d3.select('#buttons').append("button").text('show cat')
 		.on("click", function(){
@@ -33,16 +33,28 @@ $.getJSON('data/CS05_tf.json', function(dataTF) {
 			chart.call(slope)
 	})
 
+	d3.select('#buttons').append("button").text('not normalized')
+		.on("click", function(){
+			slope.normalized(false)
+			chart.call(slope)
+	})
+
+	d3.select('#buttons').append("button").text('normalized')
+		.on("click", function(){
+			slope.normalized(true)
+			chart.call(slope)
+	})
+
 	d3.select('#buttons').append("button").text('TF')
 		.on("click", function(){
 			slope.listStop(false)
-			chart.datum(dataTF.objects).call(slope)
+			chart.datum(dataTF).call(slope)
 	})
 
 	d3.select('#buttons').append("button").text('TFIDF')
 		.on("click", function(){
 			slope.listStop(false)
-			chart.datum(dataIDF.objects).call(slope)
+			chart.datum(dataIDF).call(slope)
 	})
 
 	//sets up the basic container for the visualization
@@ -95,8 +107,8 @@ $.getJSON('data/CS05_tf.json', function(dataTF) {
 		'figure',
 		'scar section'
 		]
-	
-	dataTF.objects.forEach(function(d){
+
+	dataTF.forEach(function(d){
 
 		d.values = d.values.filter(function(f){
 			var check = filterTF.indexOf(f['key']);
@@ -107,16 +119,18 @@ $.getJSON('data/CS05_tf.json', function(dataTF) {
     		return b['value'] -a['value'] ;
 		});
 
-		var nScale = d3.scale.linear().domain([d3.min(d.values, function(f){return f['value']}), d3.max(d.values, function(f){return f['value']})]).range([0,1])
+		// var nScale = d3.scale.linear().domain([d3.min(d.values, function(f){return f['value']}), d3.max(d.values, function(f){return f['value']})]).range([0,1])
 		
-		d.values.forEach(function(f){
-				f['value'] = d3.round(nScale(f['value']),2)
-			})
-
+		// d.values.forEach(function(f){
+		// 		f['value'] = d3.round(nScale(f['value']),2)
+		// 	})
+			d.values.forEach(function(f){
+		 		f['value'] = d3.round(f['value'],2)
+		 	})
 	})
 
 
-	dataIDF.objects.forEach(function(d){
+	dataIDF.forEach(function(d){
 
 		d.values = d.values.filter(function(f){
 			var check = filterTF.indexOf(f['key']);
@@ -127,11 +141,14 @@ $.getJSON('data/CS05_tf.json', function(dataTF) {
     		return b['value'] -a['value'] ;
 		});
 
-		var nScale = d3.scale.linear().domain([d3.min(d.values, function(f){return f['value']}), d3.max(d.values, function(f){return f['value']})]).range([0,1])
+		// var nScale = d3.scale.linear().domain([d3.min(d.values, function(f){return f['value']}), d3.max(d.values, function(f){return f['value']})]).range([0,1])
 		
+		// d.values.forEach(function(f){
+		// 		f['value'] = d3.round(nScale(f['value']),2)
+		// 	})
 		d.values.forEach(function(f){
-				f['value'] = d3.round(nScale(f['value']),2)
-			})
+		 		f['value'] = d3.round(f['value'],2)
+		 })
 
 	})
 
@@ -144,7 +161,7 @@ $.getJSON('data/CS05_tf.json', function(dataTF) {
 					chart.call(slope)
     			})
 
-    chart.datum(dataTF.objects).call(slope)
+    chart.datum(dataTF).call(slope)
 
 	});
 });

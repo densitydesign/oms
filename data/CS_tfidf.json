@@ -1,0 +1,6262 @@
+[
+    {
+        "values": [
+            {
+                "key": "sections",
+                "step": "C",
+                "value": 2.4539894299498943
+            },
+            {
+                "key": "child",
+                "step": "C",
+                "value": 0.8325698229041315
+            },
+            {
+                "key": "woman",
+                "step": "C",
+                "value": 6.35511881773382
+            },
+            {
+                "key": "doctor",
+                "step": "C",
+                "value": 2.0795796253441017
+            },
+            {
+                "key": "placenta",
+                "step": "C",
+                "value": 0.6071431379401516
+            },
+            {
+                "key": "pregnant woman",
+                "step": "C",
+                "value": 0.24678229692520287
+            },
+            {
+                "key": "birth story",
+                "step": "C",
+                "value": 0.17953667953667954
+            },
+            {
+                "key": "delivery",
+                "step": "C",
+                "value": 1.8361947423104141
+            },
+            {
+                "key": "incision",
+                "step": "C",
+                "value": 0.58614470831549
+            },
+            {
+                "key": "problem",
+                "step": "C",
+                "value": 0.732770799852022
+            },
+            {
+                "key": "information",
+                "step": "C",
+                "value": 1.0315920035146557
+            },
+            {
+                "key": "labour",
+                "step": "C",
+                "value": 2.712894948287592
+            },
+            {
+                "key": "caesarean",
+                "step": "C",
+                "value": 6.85649581097368
+            },
+            {
+                "key": "allergy",
+                "step": "C",
+                "value": 0.8085371465351853
+            },
+            {
+                "key": "bay tampa times",
+                "step": "C",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "police",
+                "step": "C",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "next child",
+                "step": "C",
+                "value": 0.05263157894736842
+            },
+            {
+                "key": "risk",
+                "step": "C",
+                "value": 4.116021870047279
+            },
+            {
+                "key": "emergency",
+                "step": "C",
+                "value": 0.46745257285676217
+            },
+            {
+                "key": "caesarean section",
+                "step": "C",
+                "value": 2.963623907048503
+            },
+            {
+                "key": "foot",
+                "step": "C",
+                "value": 0.14024482093125404
+            },
+            {
+                "key": "repeat CS",
+                "step": "C",
+                "value": 1.0014056776556777
+            },
+            {
+                "key": "general hospital tampa",
+                "step": "C",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "jordan bucher",
+                "step": "C",
+                "value": 0.14285714285714285
+            },
+            {
+                "key": "epidural",
+                "step": "C",
+                "value": 0.624106001448609
+            },
+            {
+                "key": "recommendation",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "home",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "energetic discussion",
+                "step": "C",
+                "value": 0.058823529411764705
+            },
+            {
+                "key": "jerry yankowitz",
+                "step": "C",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "hill home spring",
+                "step": "C",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "decision",
+                "step": "C",
+                "value": 0.8063336632074434
+            },
+            {
+                "key": "use",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "pressure",
+                "step": "C",
+                "value": 0.10268009332742119
+            },
+            {
+                "key": "rain",
+                "step": "C",
+                "value": 0.03571428571428571
+            },
+            {
+                "key": "caesarean surgery",
+                "step": "C",
+                "value": 0.049076520054594286
+            },
+            {
+                "key": "cesarean operation",
+                "step": "C",
+                "value": 0.054759238521836506
+            },
+            {
+                "key": "hbac",
+                "step": "C",
+                "value": 0.09845559845559845
+            },
+            {
+                "key": "florida",
+                "step": "C",
+                "value": 0.04842342342342342
+            },
+            {
+                "key": "honor",
+                "step": "C",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "removal surgical",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "grade",
+                "step": "C",
+                "value": 0.25
+            },
+            {
+                "key": "baby boy",
+                "step": "C",
+                "value": 0.05952380952380952
+            },
+            {
+                "key": "rupture uterine",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "select",
+                "step": "C",
+                "value": 0.08834586466165413
+            },
+            {
+                "key": "story",
+                "step": "C",
+                "value": 0.5341159807513055
+            },
+            {
+                "key": "question",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "vaginal birth",
+                "step": "C",
+                "value": 1.521582542431841
+            },
+            {
+                "key": "ph",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "kid",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "lisa epsteen",
+                "step": "C",
+                "value": 0.08333333333333333
+            },
+            {
+                "key": "babycenter",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "cesarean delivery",
+                "step": "C",
+                "value": 3.8994368743996746
+            },
+            {
+                "key": "challenge",
+                "step": "C",
+                "value": 0.14183846386118515
+            },
+            {
+                "key": "cbac",
+                "step": "C",
+                "value": 0.10845559845559846
+            },
+            {
+                "key": "cesarean awareness month",
+                "step": "C",
+                "value": 0.09845559845559845
+            },
+            {
+                "key": "recover",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "toolkit",
+                "step": "C",
+                "value": 0.16363636363636364
+            },
+            {
+                "key": "labouring primigravida",
+                "step": "C",
+                "value": 0.058823529411764705
+            },
+            {
+                "key": "another child",
+                "step": "C",
+                "value": 0.05449725058915946
+            },
+            {
+                "key": "first child",
+                "step": "C",
+                "value": 0.06345835519030132
+            },
+            {
+                "key": "wound",
+                "step": "C",
+                "value": 0.18063283335460323
+            },
+            {
+                "key": "chest",
+                "step": "C",
+                "value": 0.10599921784085853
+            },
+            {
+                "key": "experienced",
+                "step": "C",
+                "value": 0.34802628331766516
+            },
+            {
+                "key": "general nature",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "pitocin",
+                "step": "C",
+                "value": 0.10003439169495033
+            },
+            {
+                "key": "discomfort",
+                "step": "C",
+                "value": 0.2730716885792734
+            },
+            {
+                "key": "inspiration",
+                "step": "C",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "next baby",
+                "step": "C",
+                "value": 0.08507431391959522
+            },
+            {
+                "key": "date due",
+                "step": "C",
+                "value": 0.1885772481860309
+            },
+            {
+                "key": "mode relationship",
+                "step": "C",
+                "value": 0.058823529411764705
+            },
+            {
+                "key": "order",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "babydaddy kanye west",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "anxious FTM",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "mom",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "drape sterile",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "brisbane",
+                "step": "C",
+                "value": 0.05
+            },
+            {
+                "key": "birth supportive woman",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "elective CS",
+                "step": "C",
+                "value": 0.25372721907345286
+            },
+            {
+                "key": "velashape",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "pregnancy stop",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "rest",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "noninvasive anticellulite",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "pain relief",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "planning",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "affluent subset",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "depth overview",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "new story",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "careful",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "fibroid last march",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "many year",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "surgical skill",
+                "step": "C",
+                "value": 0.05
+            },
+            {
+                "key": "kardashian",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "another baby",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "fit",
+                "step": "C",
+                "value": 0.059927877001047736
+            },
+            {
+                "key": "range upper",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "issue specific",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "vida",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "another four week",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "source",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "cohort study",
+                "step": "C",
+                "value": 0.07532720690615427
+            },
+            {
+                "key": "treatment",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "sydney",
+                "step": "C",
+                "value": 0.05666666666666667
+            },
+            {
+                "key": "birth live",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "input",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "save",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "warrant",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "setting",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "full term",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "dad",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "dvla",
+                "step": "C",
+                "value": 0.09679144385026739
+            },
+            {
+                "key": "emedicine",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "question scar section",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "little medical knowledge",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "kardashian partner ray sex tape",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "stop",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "physical recovery",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "birth section",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "answer",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "medium report",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "actress",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "anonymous",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "downtime",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "without condom",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "maternal",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "buggy",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "following information",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "celebrate",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "right caesarean section",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "term",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "safe caesarean delivery",
+                "step": "C",
+                "value": 0.05
+            },
+            {
+                "key": "celebrity hip way",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "I know something",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "body life",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "difficult labour",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "weather",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "immediate threat",
+                "step": "C",
+                "value": 0.140625
+            },
+            {
+                "key": "campaign concepts international",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "C",
+                "value": 1.2482150243821535
+            },
+            {
+                "key": "key recommendation",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "hour labour",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "toll",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "busy tertiary centre",
+                "step": "C",
+                "value": 0.05
+            },
+            {
+                "key": "a second room",
+                "step": "C",
+                "value": 0.1323529411764706
+            },
+            {
+                "key": "instruction",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "health professional",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "ken law",
+                "step": "C",
+                "value": 0.1
+            },
+            {
+                "key": "house",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "horrible image",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "operating room",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "culture",
+                "step": "C",
+                "value": 0.11523079406833507
+            },
+            {
+                "key": "result",
+                "step": "C",
+                "value": 0.2674243625391401
+            },
+            {
+                "key": "surgery",
+                "step": "C",
+                "value": 1.4274618692675116
+            },
+            {
+                "key": "tutorial",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "really",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "patient safety",
+                "step": "C",
+                "value": 0.10834212227401081
+            },
+            {
+                "key": "financial information",
+                "step": "C",
+                "value": 0.045454545454545456
+            },
+            {
+                "key": "change publication",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "driving",
+                "step": "C",
+                "value": 0.045454545454545456
+            },
+            {
+                "key": "normal",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "increase",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "birth less painful",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "daunting experience",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "health",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "turn",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "pain strong",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "dr ken law section",
+                "step": "C",
+                "value": 0.05
+            },
+            {
+                "key": "information leaflet local patient",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "humble start",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "womb",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "brentwood area",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "breathing problem",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "facial injection",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "scar treatment",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "opening",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "children livingston",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "spacing",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "haven sneeze",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "agreement",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "call father",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "modeling",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "estimate",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "amount patient pay",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "likelihood",
+                "step": "C",
+                "value": 0.09589911462463577
+            },
+            {
+                "key": "NICE clinical guideline",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "stage",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "bills",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "spinal anaesthesia",
+                "step": "C",
+                "value": 0.07151741293532339
+            },
+            {
+                "key": "language",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "creative chorus",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "gynecology obstetric",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "second clip",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "face macy s",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "melbourne",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "etc",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "dynamic player",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "opinion",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "obstetrician",
+                "step": "C",
+                "value": 0.35235143234886224
+            },
+            {
+                "key": "city conscious new york",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "lurker",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "new son",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "community ican",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "doc fertility",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "feel soreness",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "britney spears",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "ultrasound",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "no spelling error",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "another way",
+                "step": "C",
+                "value": 0.058823529411764705
+            },
+            {
+                "key": "nhs",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "news",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "contributor",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "lower abdomen",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "different experience",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "service",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "even more savings",
+                "step": "C",
+                "value": 0.058823529411764705
+            },
+            {
+                "key": "cesarean section surgery rate",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "america class",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "live",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "camilla alves mcconaughey",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "food junk",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "percentageage",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "tell",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "health specific",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "ashley roman",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "practical issue",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "fine healing",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "common physical adjustments",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "scar section",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "birth cesarean elective",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "delivery women",
+                "step": "C",
+                "value": 0.05
+            },
+            {
+                "key": "lower belly area",
+                "step": "C",
+                "value": 0.06666666666666667
+            },
+            {
+                "key": "good body massage",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "mud star",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "designer handbag",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "consent",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "fatima mother",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "celebrity delivery many",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "doctor right",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "many wait",
+                "step": "C",
+                "value": 0.045454545454545456
+            },
+            {
+                "key": "educational purpose",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "childbirthconnection org",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "every woman",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "tummy",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "kim kardashian",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "contrary",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "hand",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "center medical montefiore",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "husband matthew mcconaughey",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "voice",
+                "step": "C",
+                "value": 0.24982057534844068
+            },
+            {
+                "key": "opening surgical",
+                "step": "C",
+                "value": 0.06666666666666667
+            },
+            {
+                "key": "care",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "birth labour",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "bill size",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "courageous woman",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "figure",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "center medical nyu",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "celebrity life",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "things happen",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "raw",
+                "step": "C",
+                "value": 0.058823529411764705
+            },
+            {
+                "key": "baby women",
+                "step": "C",
+                "value": 0.08563974987216852
+            },
+            {
+                "key": "mexican restaurant",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "tracy anderson method",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "doctors orders",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "madonna",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "scar",
+                "step": "C",
+                "value": 0.4886480783147581
+            },
+            {
+                "key": "pregnancy risk",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "real caeasarean section",
+                "step": "C",
+                "value": 0.05
+            },
+            {
+                "key": "insurance motor",
+                "step": "C",
+                "value": 0.045454545454545456
+            },
+            {
+                "key": "incision initial make",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "complication",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "defiant",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "insider one",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "recent pregnancy",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "chairman",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "little thing",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "good answer",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "los angeles",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "extra procedures section",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "concern",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "appropriate care",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "picture",
+                "step": "C",
+                "value": 0.3628147148315582
+            },
+            {
+                "key": "star",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "cesarean story",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "goldman susan",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "reach",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "abdomen",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "variation",
+                "step": "C",
+                "value": 0.409284721986939
+            },
+            {
+                "key": "possible",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "the model didn’t elabourate",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "bernstein peter",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "really tough pregnancy",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "clinical guideline update",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "court",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "america",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "expectant mom",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "childbirth connection like",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "job new",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "newser",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "carer",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "normal delivery",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "waist",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "instrumental delivery",
+                "step": "C",
+                "value": 0.08007245832143234
+            },
+            {
+                "key": "groundbreaking book",
+                "step": "C",
+                "value": 0.058823529411764705
+            },
+            {
+                "key": "request",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "thurs plu",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "C",
+                "value": 0.24088473846402345
+            },
+            {
+                "key": "tech",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "essay picture",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "healthcare",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "corry maureen",
+                "step": "C",
+                "value": 0
+            },
+            {
+                "key": "quantity",
+                "step": "C",
+                "value": 0.06083560184637235
+            }
+        ],
+        "step": "C"
+    },
+    {
+        "values": [
+            {
+                "key": "sections",
+                "step": "E",
+                "value": 0.8737996823453219
+            },
+            {
+                "key": "child",
+                "step": "E",
+                "value": 0.32519563790013184
+            },
+            {
+                "key": "woman",
+                "step": "E",
+                "value": 0.9961783884820381
+            },
+            {
+                "key": "doctor",
+                "step": "E",
+                "value": 0.723112823768025
+            },
+            {
+                "key": "placenta",
+                "step": "E",
+                "value": 0.14462161102719903
+            },
+            {
+                "key": "pregnant woman",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "birth story",
+                "step": "E",
+                "value": 0.10810810810810811
+            },
+            {
+                "key": "delivery",
+                "step": "E",
+                "value": 0.3811193606834433
+            },
+            {
+                "key": "incision",
+                "step": "E",
+                "value": 0.17238644947766857
+            },
+            {
+                "key": "problem",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "E",
+                "value": 0.5633311310544854
+            },
+            {
+                "key": "labour",
+                "step": "E",
+                "value": 0.45222302539880815
+            },
+            {
+                "key": "caesarean",
+                "step": "E",
+                "value": 0.5616573474138268
+            },
+            {
+                "key": "allergy",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "bay tampa times",
+                "step": "E",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "police",
+                "step": "E",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "next child",
+                "step": "E",
+                "value": 0.05263157894736842
+            },
+            {
+                "key": "risk",
+                "step": "E",
+                "value": 0.415770226437112
+            },
+            {
+                "key": "emergency",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "caesarean section",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "foot",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "repeat CS",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "general hospital tampa",
+                "step": "E",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "jordan bucher",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "epidural",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "recommendation",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "home",
+                "step": "E",
+                "value": 0.09512935815693908
+            },
+            {
+                "key": "energetic discussion",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "jerry yankowitz",
+                "step": "E",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "hill home spring",
+                "step": "E",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "decision",
+                "step": "E",
+                "value": 0.18884186306943757
+            },
+            {
+                "key": "use",
+                "step": "E",
+                "value": 0.22512919896640826
+            },
+            {
+                "key": "pressure",
+                "step": "E",
+                "value": 0.06638246192358693
+            },
+            {
+                "key": "rain",
+                "step": "E",
+                "value": 0.03571428571428571
+            },
+            {
+                "key": "caesarean surgery",
+                "step": "E",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "cesarean operation",
+                "step": "E",
+                "value": 0.05263157894736842
+            },
+            {
+                "key": "hbac",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "florida",
+                "step": "E",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "honor",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "removal surgical",
+                "step": "E",
+                "value": 0.025
+            },
+            {
+                "key": "grade",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "baby boy",
+                "step": "E",
+                "value": 0.07738095238095238
+            },
+            {
+                "key": "rupture uterine",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "select",
+                "step": "E",
+                "value": 0.08834586466165413
+            },
+            {
+                "key": "story",
+                "step": "E",
+                "value": 0.25423225423225426
+            },
+            {
+                "key": "question",
+                "step": "E",
+                "value": 0.20886213159807931
+            },
+            {
+                "key": "vaginal birth",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "ph",
+                "step": "E",
+                "value": 0.05555555555555555
+            },
+            {
+                "key": "kid",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "lisa epsteen",
+                "step": "E",
+                "value": 0.08333333333333333
+            },
+            {
+                "key": "babycenter",
+                "step": "E",
+                "value": 0.05555555555555555
+            },
+            {
+                "key": "cesarean delivery",
+                "step": "E",
+                "value": 0.10521208272126759
+            },
+            {
+                "key": "challenge",
+                "step": "E",
+                "value": 0.11443722203215875
+            },
+            {
+                "key": "cbac",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "cesarean awareness month",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "recover",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "toolkit",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "labouring primigravida",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "another child",
+                "step": "E",
+                "value": 0.07048872180451127
+            },
+            {
+                "key": "first child",
+                "step": "E",
+                "value": 0.06220522235822113
+            },
+            {
+                "key": "wound",
+                "step": "E",
+                "value": 0.1334251639870181
+            },
+            {
+                "key": "chest",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "experienced",
+                "step": "E",
+                "value": 0.17997036824612242
+            },
+            {
+                "key": "general nature",
+                "step": "E",
+                "value": 0.05555555555555555
+            },
+            {
+                "key": "pitocin",
+                "step": "E",
+                "value": 0.08695652173913043
+            },
+            {
+                "key": "discomfort",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "inspiration",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "next baby",
+                "step": "E",
+                "value": 0.05263157894736842
+            },
+            {
+                "key": "date due",
+                "step": "E",
+                "value": 0.13993120700437772
+            },
+            {
+                "key": "mode relationship",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "order",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "babydaddy kanye west",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "anxious FTM",
+                "step": "E",
+                "value": 0.027777777777777776
+            },
+            {
+                "key": "mom",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "drape sterile",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "brisbane",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "birth supportive woman",
+                "step": "E",
+                "value": 0.02702702702702703
+            },
+            {
+                "key": "elective CS",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "velashape",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "pregnancy stop",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "rest",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "noninvasive anticellulite",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "pain relief",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "planning",
+                "step": "E",
+                "value": 0.10154738878143134
+            },
+            {
+                "key": "affluent subset",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "depth overview",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "new story",
+                "step": "E",
+                "value": 0.02702702702702703
+            },
+            {
+                "key": "careful",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "fibroid last march",
+                "step": "E",
+                "value": 0.027777777777777776
+            },
+            {
+                "key": "many year",
+                "step": "E",
+                "value": 0.09090909090909091
+            },
+            {
+                "key": "surgical skill",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "kardashian",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "another baby",
+                "step": "E",
+                "value": 0.09090909090909091
+            },
+            {
+                "key": "fit",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "range upper",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "issue specific",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "vida",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "another four week",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "source",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "cohort study",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "treatment",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "sydney",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "birth live",
+                "step": "E",
+                "value": 0.05263157894736842
+            },
+            {
+                "key": "input",
+                "step": "E",
+                "value": 0.027777777777777776
+            },
+            {
+                "key": "save",
+                "step": "E",
+                "value": 0.027777777777777776
+            },
+            {
+                "key": "warrant",
+                "step": "E",
+                "value": 0.14705882352941177
+            },
+            {
+                "key": "setting",
+                "step": "E",
+                "value": 0.08834586466165413
+            },
+            {
+                "key": "full term",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "dad",
+                "step": "E",
+                "value": 0.15517241379310345
+            },
+            {
+                "key": "dvla",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "emedicine",
+                "step": "E",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "question scar section",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "little medical knowledge",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "kardashian partner ray sex tape",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "stop",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "physical recovery",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "birth section",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "answer",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "medium report",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "actress",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "anonymous",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "downtime",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "without condom",
+                "step": "E",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "maternal",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "buggy",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "following information",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "celebrate",
+                "step": "E",
+                "value": 0.02702702702702703
+            },
+            {
+                "key": "right caesarean section",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "term",
+                "step": "E",
+                "value": 0.08258258258258258
+            },
+            {
+                "key": "safe caesarean delivery",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "celebrity hip way",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "I know something",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "body life",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "difficult labour",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "weather",
+                "step": "E",
+                "value": 0.03571428571428571
+            },
+            {
+                "key": "immediate threat",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "campaign concepts international",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "key recommendation",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "hour labour",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "toll",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "busy tertiary centre",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "a second room",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "instruction",
+                "step": "E",
+                "value": 0.03571428571428571
+            },
+            {
+                "key": "health professional",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "ken law",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "house",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "horrible image",
+                "step": "E",
+                "value": 0.027777777777777776
+            },
+            {
+                "key": "operating room",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "culture",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "result",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "surgery",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "tutorial",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "really",
+                "step": "E",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "patient safety",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "financial information",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "change publication",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "driving",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "normal",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "increase",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "birth less painful",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "daunting experience",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "health",
+                "step": "E",
+                "value": 0.3112765221903905
+            },
+            {
+                "key": "turn",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "pain strong",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "dr ken law section",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "information leaflet local patient",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "humble start",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "womb",
+                "step": "E",
+                "value": 0.05896069287141905
+            },
+            {
+                "key": "body",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "brentwood area",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "breathing problem",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "facial injection",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "scar treatment",
+                "step": "E",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "opening",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "children livingston",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "spacing",
+                "step": "E",
+                "value": 0.09090909090909091
+            },
+            {
+                "key": "haven sneeze",
+                "step": "E",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "agreement",
+                "step": "E",
+                "value": 0.05555555555555555
+            },
+            {
+                "key": "call father",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "modeling",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "estimate",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "amount patient pay",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "likelihood",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "NICE clinical guideline",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "stage",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "bills",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "spinal anaesthesia",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "language",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "creative chorus",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "gynecology obstetric",
+                "step": "E",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "second clip",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "face macy s",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "melbourne",
+                "step": "E",
+                "value": 0.03571428571428571
+            },
+            {
+                "key": "etc",
+                "step": "E",
+                "value": 0.027777777777777776
+            },
+            {
+                "key": "dynamic player",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "opinion",
+                "step": "E",
+                "value": 0.07976190476190476
+            },
+            {
+                "key": "obstetrician",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "city conscious new york",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "lurker",
+                "step": "E",
+                "value": 0.027777777777777776
+            },
+            {
+                "key": "new son",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "community ican",
+                "step": "E",
+                "value": 0.02702702702702703
+            },
+            {
+                "key": "doc fertility",
+                "step": "E",
+                "value": 0.027777777777777776
+            },
+            {
+                "key": "feel soreness",
+                "step": "E",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "britney spears",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "ultrasound",
+                "step": "E",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "no spelling error",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "another way",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "nhs",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "news",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "contributor",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "lower abdomen",
+                "step": "E",
+                "value": 0.07912087912087912
+            },
+            {
+                "key": "different experience",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "service",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "even more savings",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "cesarean section surgery rate",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "america class",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "live",
+                "step": "E",
+                "value": 0.12173913043478261
+            },
+            {
+                "key": "camilla alves mcconaughey",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "food junk",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "percentageage",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "tell",
+                "step": "E",
+                "value": 0.027777777777777776
+            },
+            {
+                "key": "health specific",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "ashley roman",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "practical issue",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "fine healing",
+                "step": "E",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "common physical adjustments",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "scar section",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "birth cesarean elective",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "delivery women",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "lower belly area",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "good body massage",
+                "step": "E",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "mud star",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "designer handbag",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "consent",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "fatima mother",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "celebrity delivery many",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "E",
+                "value": 0.09701551303252225
+            },
+            {
+                "key": "doctor right",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "many wait",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "educational purpose",
+                "step": "E",
+                "value": 0.05555555555555555
+            },
+            {
+                "key": "childbirthconnection org",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "every woman",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "tummy",
+                "step": "E",
+                "value": 0.10046697193634674
+            },
+            {
+                "key": "kim kardashian",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "contrary",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "hand",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "center medical montefiore",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "husband matthew mcconaughey",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "voice",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "opening surgical",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "care",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "birth labour",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "bill size",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "courageous woman",
+                "step": "E",
+                "value": 0.02702702702702703
+            },
+            {
+                "key": "figure",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "center medical nyu",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "celebrity life",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "things happen",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "raw",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "baby women",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "mexican restaurant",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "tracy anderson method",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "doctors orders",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "madonna",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "scar",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "pregnancy risk",
+                "step": "E",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "real caeasarean section",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "insurance motor",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "incision initial make",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "complication",
+                "step": "E",
+                "value": 0.12086233673635913
+            },
+            {
+                "key": "defiant",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "insider one",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "recent pregnancy",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "chairman",
+                "step": "E",
+                "value": 0.041666666666666664
+            },
+            {
+                "key": "little thing",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "good answer",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "los angeles",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "extra procedures section",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "concern",
+                "step": "E",
+                "value": 0.08275621720741203
+            },
+            {
+                "key": "appropriate care",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "picture",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "star",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "cesarean story",
+                "step": "E",
+                "value": 0.02702702702702703
+            },
+            {
+                "key": "goldman susan",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "reach",
+                "step": "E",
+                "value": 0.09090909090909091
+            },
+            {
+                "key": "abdomen",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "variation",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "possible",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "the model didn’t elabourate",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "bernstein peter",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "really tough pregnancy",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "clinical guideline update",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "court",
+                "step": "E",
+                "value": 0.23571428571428574
+            },
+            {
+                "key": "america",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "expectant mom",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "childbirth connection like",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "job new",
+                "step": "E",
+                "value": 0.027777777777777776
+            },
+            {
+                "key": "newser",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "carer",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "normal delivery",
+                "step": "E",
+                "value": 0.05263157894736842
+            },
+            {
+                "key": "waist",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "instrumental delivery",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "groundbreaking book",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "request",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "thurs plu",
+                "step": "E",
+                "value": 0.027777777777777776
+            },
+            {
+                "key": "person",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "tech",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "essay picture",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "healthcare",
+                "step": "E",
+                "value": 0.05555555555555555
+            },
+            {
+                "key": "corry maureen",
+                "step": "E",
+                "value": 0
+            },
+            {
+                "key": "quantity",
+                "step": "E",
+                "value": 0
+            }
+        ],
+        "step": "E"
+    },
+    {
+        "values": [
+            {
+                "key": "sections",
+                "step": "M",
+                "value": 3.8639462179534463
+            },
+            {
+                "key": "child",
+                "step": "M",
+                "value": 1.1748685780259926
+            },
+            {
+                "key": "woman",
+                "step": "M",
+                "value": 10.079010727009122
+            },
+            {
+                "key": "doctor",
+                "step": "M",
+                "value": 3.9975147055937095
+            },
+            {
+                "key": "placenta",
+                "step": "M",
+                "value": 1.3659973397162473
+            },
+            {
+                "key": "pregnant woman",
+                "step": "M",
+                "value": 0.571491614774833
+            },
+            {
+                "key": "birth story",
+                "step": "M",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "delivery",
+                "step": "M",
+                "value": 4.347684170201743
+            },
+            {
+                "key": "incision",
+                "step": "M",
+                "value": 3.221653112295185
+            },
+            {
+                "key": "problem",
+                "step": "M",
+                "value": 1.255378456846937
+            },
+            {
+                "key": "information",
+                "step": "M",
+                "value": 1.2575296871284023
+            },
+            {
+                "key": "labour",
+                "step": "M",
+                "value": 6.551284976541529
+            },
+            {
+                "key": "caesarean",
+                "step": "M",
+                "value": 10.205641904840087
+            },
+            {
+                "key": "allergy",
+                "step": "M",
+                "value": 0.8128661508641898
+            },
+            {
+                "key": "bay tampa times",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "police",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "next child",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "emergency",
+                "step": "M",
+                "value": 1.2339575840924546
+            },
+            {
+                "key": "caesarean section",
+                "step": "M",
+                "value": 7.333253369369976
+            },
+            {
+                "key": "foot",
+                "step": "M",
+                "value": 0.378296926570474
+            },
+            {
+                "key": "repeat CS",
+                "step": "M",
+                "value": 1.0155945396411499
+            },
+            {
+                "key": "general hospital tampa",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "jordan bucher",
+                "step": "M",
+                "value": 0.14285714285714285
+            },
+            {
+                "key": "epidural",
+                "step": "M",
+                "value": 0.7578559268655818
+            },
+            {
+                "key": "recommendation",
+                "step": "M",
+                "value": 0.4618027480231563
+            },
+            {
+                "key": "home",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "energetic discussion",
+                "step": "M",
+                "value": 0.058823529411764705
+            },
+            {
+                "key": "jerry yankowitz",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "hill home spring",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "decision",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "use",
+                "step": "M",
+                "value": 0.8112505586443473
+            },
+            {
+                "key": "pressure",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "rain",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "caesarean surgery",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "cesarean operation",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "hbac",
+                "step": "M",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "florida",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "honor",
+                "step": "M",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "removal surgical",
+                "step": "M",
+                "value": 0.11729733811504967
+            },
+            {
+                "key": "grade",
+                "step": "M",
+                "value": 0.25
+            },
+            {
+                "key": "baby boy",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "rupture uterine",
+                "step": "M",
+                "value": 0.8885528304187764
+            },
+            {
+                "key": "select",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "story",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "M",
+                "value": 0.8509210465239572
+            },
+            {
+                "key": "vaginal birth",
+                "step": "M",
+                "value": 2.93459755901064
+            },
+            {
+                "key": "ph",
+                "step": "M",
+                "value": 0.08841093117408907
+            },
+            {
+                "key": "kid",
+                "step": "M",
+                "value": 0.6666666666666667
+            },
+            {
+                "key": "lisa epsteen",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "babycenter",
+                "step": "M",
+                "value": 0.07168458781362007
+            },
+            {
+                "key": "cesarean delivery",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "challenge",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "cbac",
+                "step": "M",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "cesarean awareness month",
+                "step": "M",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "recover",
+                "step": "M",
+                "value": 0.5701415155634846
+            },
+            {
+                "key": "toolkit",
+                "step": "M",
+                "value": 0.16363636363636364
+            },
+            {
+                "key": "labouring primigravida",
+                "step": "M",
+                "value": 0.058823529411764705
+            },
+            {
+                "key": "another child",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "first child",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "wound",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "chest",
+                "step": "M",
+                "value": 0.28292924298486316
+            },
+            {
+                "key": "experienced",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "M",
+                "value": 0.05555555555555555
+            },
+            {
+                "key": "pitocin",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "discomfort",
+                "step": "M",
+                "value": 0.38421817883044707
+            },
+            {
+                "key": "inspiration",
+                "step": "M",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "next baby",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "date due",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "mode relationship",
+                "step": "M",
+                "value": 0.058823529411764705
+            },
+            {
+                "key": "order",
+                "step": "M",
+                "value": 0.3945414888713924
+            },
+            {
+                "key": "babydaddy kanye west",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "anxious FTM",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "mom",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "drape sterile",
+                "step": "M",
+                "value": 0.11730990751050806
+            },
+            {
+                "key": "brisbane",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "birth supportive woman",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "elective CS",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "velashape",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "pregnancy stop",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "rest",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "noninvasive anticellulite",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "pain relief",
+                "step": "M",
+                "value": 0.3817814204318281
+            },
+            {
+                "key": "planning",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "affluent subset",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "depth overview",
+                "step": "M",
+                "value": 0.125
+            },
+            {
+                "key": "new story",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "careful",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "fibroid last march",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "many year",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "surgical skill",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "kardashian",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "another baby",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "fit",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "range upper",
+                "step": "M",
+                "value": 0.2
+            },
+            {
+                "key": "issue specific",
+                "step": "M",
+                "value": 0.0625
+            },
+            {
+                "key": "vida",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "another four week",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "source",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "cohort study",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "treatment",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "sydney",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "birth live",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "input",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "save",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "warrant",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "setting",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "full term",
+                "step": "M",
+                "value": 0.13636363636363635
+            },
+            {
+                "key": "dad",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "dvla",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "emedicine",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "question scar section",
+                "step": "M",
+                "value": 0.06666666666666667
+            },
+            {
+                "key": "little medical knowledge",
+                "step": "M",
+                "value": 0.15384615384615385
+            },
+            {
+                "key": "kardashian partner ray sex tape",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "stop",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "physical recovery",
+                "step": "M",
+                "value": 0.2661105424399566
+            },
+            {
+                "key": "birth section",
+                "step": "M",
+                "value": 0.2053014553014553
+            },
+            {
+                "key": "answer",
+                "step": "M",
+                "value": 0.30933749334580296
+            },
+            {
+                "key": "medium report",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "actress",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "anonymous",
+                "step": "M",
+                "value": 0.045454545454545456
+            },
+            {
+                "key": "downtime",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "without condom",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "maternal",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "buggy",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "following information",
+                "step": "M",
+                "value": 0.07112068965517242
+            },
+            {
+                "key": "celebrate",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "right caesarean section",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "term",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "safe caesarean delivery",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "celebrity hip way",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "I know something",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "body life",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "difficult labour",
+                "step": "M",
+                "value": 0.10572386425834703
+            },
+            {
+                "key": "weather",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "immediate threat",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "campaign concepts international",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "key recommendation",
+                "step": "M",
+                "value": 0.15384615384615385
+            },
+            {
+                "key": "hour labour",
+                "step": "M",
+                "value": 0.1335323383084577
+            },
+            {
+                "key": "toll",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "busy tertiary centre",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "a second room",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "instruction",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "health professional",
+                "step": "M",
+                "value": 0.17789474864103932
+            },
+            {
+                "key": "ken law",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "house",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "horrible image",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "operating room",
+                "step": "M",
+                "value": 0.28026629212850657
+            },
+            {
+                "key": "culture",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "result",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "surgery",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "tutorial",
+                "step": "M",
+                "value": 0.1607142857142857
+            },
+            {
+                "key": "really",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "patient safety",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "financial information",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "change publication",
+                "step": "M",
+                "value": 0.05
+            },
+            {
+                "key": "driving",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "normal",
+                "step": "M",
+                "value": 0.08338173606108017
+            },
+            {
+                "key": "increase",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "birth less painful",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "daunting experience",
+                "step": "M",
+                "value": 0.125
+            },
+            {
+                "key": "health",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "turn",
+                "step": "M",
+                "value": 0.16525837032166146
+            },
+            {
+                "key": "pain strong",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "dr ken law section",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "information leaflet local patient",
+                "step": "M",
+                "value": 0.15384615384615385
+            },
+            {
+                "key": "humble start",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "womb",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "brentwood area",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "breathing problem",
+                "step": "M",
+                "value": 0.23105731821855005
+            },
+            {
+                "key": "facial injection",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "scar treatment",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "opening",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "children livingston",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "spacing",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "haven sneeze",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "agreement",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "call father",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "modeling",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "estimate",
+                "step": "M",
+                "value": 0.23145004309191952
+            },
+            {
+                "key": "amount patient pay",
+                "step": "M",
+                "value": 0.2
+            },
+            {
+                "key": "likelihood",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "NICE clinical guideline",
+                "step": "M",
+                "value": 0.21239055967856169
+            },
+            {
+                "key": "stage",
+                "step": "M",
+                "value": 0.13206257748511271
+            },
+            {
+                "key": "bills",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "spinal anaesthesia",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "language",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "creative chorus",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "gynecology obstetric",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "second clip",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "face macy s",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "melbourne",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "etc",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "dynamic player",
+                "step": "M",
+                "value": 0.14285714285714285
+            },
+            {
+                "key": "opinion",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "obstetrician",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "city conscious new york",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "lurker",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "new son",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "community ican",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "doc fertility",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "feel soreness",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "britney spears",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "ultrasound",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "no spelling error",
+                "step": "M",
+                "value": 0.13636363636363635
+            },
+            {
+                "key": "another way",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "nhs",
+                "step": "M",
+                "value": 0.1961086524692355
+            },
+            {
+                "key": "news",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "contributor",
+                "step": "M",
+                "value": 0.2888563049853372
+            },
+            {
+                "key": "lower abdomen",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "different experience",
+                "step": "M",
+                "value": 0.14285714285714285
+            },
+            {
+                "key": "service",
+                "step": "M",
+                "value": 0.24598112307301598
+            },
+            {
+                "key": "even more savings",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "cesarean section surgery rate",
+                "step": "M",
+                "value": 0.07692307692307693
+            },
+            {
+                "key": "america class",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "live",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "camilla alves mcconaughey",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "food junk",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "percentageage",
+                "step": "M",
+                "value": 1.7078910263246534
+            },
+            {
+                "key": "tell",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "health specific",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "ashley roman",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "practical issue",
+                "step": "M",
+                "value": 0.06666666666666667
+            },
+            {
+                "key": "fine healing",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "common physical adjustments",
+                "step": "M",
+                "value": 0.0625
+            },
+            {
+                "key": "scar section",
+                "step": "M",
+                "value": 0.28499727223131477
+            },
+            {
+                "key": "birth cesarean elective",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "delivery women",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "lower belly area",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "good body massage",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "mud star",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "designer handbag",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "consent",
+                "step": "M",
+                "value": 0.3416049029710659
+            },
+            {
+                "key": "fatima mother",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "celebrity delivery many",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "doctor right",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "many wait",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "educational purpose",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "childbirthconnection org",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "every woman",
+                "step": "M",
+                "value": 0.2146550930422972
+            },
+            {
+                "key": "tummy",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "kim kardashian",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "contrary",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "hand",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "center medical montefiore",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "husband matthew mcconaughey",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "voice",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "opening surgical",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "care",
+                "step": "M",
+                "value": 0.7337146494975529
+            },
+            {
+                "key": "birth labour",
+                "step": "M",
+                "value": 0.18484046512988553
+            },
+            {
+                "key": "bill size",
+                "step": "M",
+                "value": 0.2
+            },
+            {
+                "key": "courageous woman",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "figure",
+                "step": "M",
+                "value": 0.23999005686652156
+            },
+            {
+                "key": "center medical nyu",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "celebrity life",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "things happen",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "raw",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "baby women",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "mexican restaurant",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "tracy anderson method",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "doctors orders",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "madonna",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "scar",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "pregnancy risk",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "real caeasarean section",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "insurance motor",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "incision initial make",
+                "step": "M",
+                "value": 0.07692307692307693
+            },
+            {
+                "key": "complication",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "defiant",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "insider one",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "recent pregnancy",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "chairman",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "little thing",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "good answer",
+                "step": "M",
+                "value": 0.13636363636363635
+            },
+            {
+                "key": "los angeles",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "extra procedures section",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "concern",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "appropriate care",
+                "step": "M",
+                "value": 0.053571428571428575
+            },
+            {
+                "key": "picture",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "star",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "cesarean story",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "goldman susan",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "reach",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "abdomen",
+                "step": "M",
+                "value": 0.6005223231971173
+            },
+            {
+                "key": "variation",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "possible",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "the model didn’t elabourate",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "bernstein peter",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "really tough pregnancy",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "clinical guideline update",
+                "step": "M",
+                "value": 0.05
+            },
+            {
+                "key": "court",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "america",
+                "step": "M",
+                "value": 0.10256979889939066
+            },
+            {
+                "key": "expectant mom",
+                "step": "M",
+                "value": 0.1461646136618141
+            },
+            {
+                "key": "childbirth connection like",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "job new",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "newser",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "carer",
+                "step": "M",
+                "value": 0.15597381342062194
+            },
+            {
+                "key": "normal delivery",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "waist",
+                "step": "M",
+                "value": 0.18792995488667494
+            },
+            {
+                "key": "instrumental delivery",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "groundbreaking book",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "request",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "thurs plu",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "tech",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "essay picture",
+                "step": "M",
+                "value": 0.07692307692307693
+            },
+            {
+                "key": "healthcare",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "corry maureen",
+                "step": "M",
+                "value": 0
+            },
+            {
+                "key": "quantity",
+                "step": "M",
+                "value": 0
+            }
+        ],
+        "step": "M"
+    },
+    {
+        "values": [
+            {
+                "key": "sections",
+                "step": "V",
+                "value": 0.055971479500891264
+            },
+            {
+                "key": "child",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "woman",
+                "step": "V",
+                "value": 0.03636363636363636
+            },
+            {
+                "key": "doctor",
+                "step": "V",
+                "value": 0.026040061633281972
+            },
+            {
+                "key": "placenta",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "pregnant woman",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "birth story",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "delivery",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "incision",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "problem",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "information",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "labour",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "caesarean",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "allergy",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "bay tampa times",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "police",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "next child",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "emergency",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "caesarean section",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "foot",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "repeat CS",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "general hospital tampa",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "jordan bucher",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "epidural",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "recommendation",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "home",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "energetic discussion",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "jerry yankowitz",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "hill home spring",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "decision",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "use",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "pressure",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "rain",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "caesarean surgery",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "cesarean operation",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "hbac",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "florida",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "honor",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "removal surgical",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "grade",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "baby boy",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "rupture uterine",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "select",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "story",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "vaginal birth",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "ph",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "kid",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "lisa epsteen",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "babycenter",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "cesarean delivery",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "challenge",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "cbac",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "cesarean awareness month",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "recover",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "toolkit",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "labouring primigravida",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "another child",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "first child",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "wound",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "chest",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "experienced",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "pitocin",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "discomfort",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "inspiration",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "next baby",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "date due",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "mode relationship",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "order",
+                "step": "V",
+                "value": 0.03655699567962778
+            },
+            {
+                "key": "babydaddy kanye west",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "anxious FTM",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "mom",
+                "step": "V",
+                "value": 0.03636363636363636
+            },
+            {
+                "key": "drape sterile",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "brisbane",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "birth supportive woman",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "elective CS",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "velashape",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "pregnancy stop",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "rest",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "noninvasive anticellulite",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "pain relief",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "planning",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "affluent subset",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "depth overview",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "new story",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "careful",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "fibroid last march",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "many year",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "surgical skill",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "kardashian",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "another baby",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "fit",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "range upper",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "issue specific",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "vida",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "another four week",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "source",
+                "step": "V",
+                "value": 0.0784313725490196
+            },
+            {
+                "key": "cohort study",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "treatment",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "sydney",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "birth live",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "input",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "save",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "warrant",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "setting",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "full term",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "dad",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "dvla",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "emedicine",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "question scar section",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "little medical knowledge",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "kardashian partner ray sex tape",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "stop",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "physical recovery",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "birth section",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "answer",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "medium report",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "actress",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "anonymous",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "downtime",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "without condom",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "maternal",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "buggy",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "following information",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "celebrate",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "right caesarean section",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "term",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "safe caesarean delivery",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "celebrity hip way",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "I know something",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "body life",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "difficult labour",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "weather",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "immediate threat",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "campaign concepts international",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "study",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "key recommendation",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "hour labour",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "toll",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "busy tertiary centre",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "a second room",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "instruction",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "health professional",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "ken law",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "house",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "horrible image",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "operating room",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "culture",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "result",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "surgery",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "tutorial",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "really",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "patient safety",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "financial information",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "change publication",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "driving",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "normal",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "increase",
+                "step": "V",
+                "value": 0.03636363636363636
+            },
+            {
+                "key": "birth less painful",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "daunting experience",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "health",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "turn",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "pain strong",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "dr ken law section",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "information leaflet local patient",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "humble start",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "womb",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "brentwood area",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "breathing problem",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "facial injection",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "scar treatment",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "opening",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "children livingston",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "spacing",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "haven sneeze",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "agreement",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "call father",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "modeling",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "estimate",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "amount patient pay",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "likelihood",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "NICE clinical guideline",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "stage",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "bills",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "spinal anaesthesia",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "language",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "creative chorus",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "gynecology obstetric",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "second clip",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "face macy s",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "melbourne",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "etc",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "dynamic player",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "opinion",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "obstetrician",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "city conscious new york",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "lurker",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "new son",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "community ican",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "doc fertility",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "feel soreness",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "britney spears",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "ultrasound",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "no spelling error",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "another way",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "nhs",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "news",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "contributor",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "lower abdomen",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "different experience",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "service",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "even more savings",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "cesarean section surgery rate",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "america class",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "live",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "camilla alves mcconaughey",
+                "step": "V",
+                "value": 0.05084745762711865
+            },
+            {
+                "key": "food junk",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "percentageage",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "tell",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "health specific",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "ashley roman",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "practical issue",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "fine healing",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "common physical adjustments",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "scar section",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "birth cesarean elective",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "delivery women",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "lower belly area",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "good body massage",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "mud star",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "designer handbag",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "consent",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "fatima mother",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "celebrity delivery many",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "physician",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "doctor right",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "many wait",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "educational purpose",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "childbirthconnection org",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "every woman",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "tummy",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "kim kardashian",
+                "step": "V",
+                "value": 0.0392156862745098
+            },
+            {
+                "key": "contrary",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "hand",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "center medical montefiore",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "husband matthew mcconaughey",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "voice",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "opening surgical",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "care",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "birth labour",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "bill size",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "courageous woman",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "figure",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "center medical nyu",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "celebrity life",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "things happen",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "raw",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "baby women",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "mexican restaurant",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "tracy anderson method",
+                "step": "V",
+                "value": 0.0392156862745098
+            },
+            {
+                "key": "doctors orders",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "madonna",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "scar",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "pregnancy risk",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "real caeasarean section",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "insurance motor",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "incision initial make",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "complication",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "defiant",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "insider one",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "recent pregnancy",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "chairman",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "little thing",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "good answer",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "los angeles",
+                "step": "V",
+                "value": 0.053506148222000664
+            },
+            {
+                "key": "extra procedures section",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "concern",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "appropriate care",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "picture",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "star",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "cesarean story",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "goldman susan",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "reach",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "abdomen",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "variation",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "possible",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "the model didn’t elabourate",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "bernstein peter",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "really tough pregnancy",
+                "step": "V",
+                "value": 0.01694915254237288
+            },
+            {
+                "key": "clinical guideline update",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "court",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "america",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "expectant mom",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "childbirth connection like",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "job new",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "newser",
+                "step": "V",
+                "value": 0.0196078431372549
+            },
+            {
+                "key": "carer",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "normal delivery",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "waist",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "instrumental delivery",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "groundbreaking book",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "request",
+                "step": "V",
+                "value": 0.03636363636363636
+            },
+            {
+                "key": "thurs plu",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "tech",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "essay picture",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "healthcare",
+                "step": "V",
+                "value": 0
+            },
+            {
+                "key": "corry maureen",
+                "step": "V",
+                "value": 0.00909090909090909
+            },
+            {
+                "key": "quantity",
+                "step": "V",
+                "value": 0
+            }
+        ],
+        "step": "V"
+    }
+]
