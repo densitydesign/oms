@@ -673,6 +673,20 @@ body.loading .modal {
 	font-style: italic;
 }
 
+.img-cont{
+	 
+	float:left;
+	transition: width 2s;
+-webkit-transition: width 0.2s; /* Safari */
+transition: height 2s;
+-webkit-transition: height 0.2s; /* Safari */
+}
+.smallImg{
+	width:100%;
+	height:auto;
+}
+
+
 @media (max-width: 767px) {
 	.intro-message {
 		padding-bottom: 15%;
@@ -701,8 +715,31 @@ body.loading .modal {
 	background-color: #f8f8f8;
 	height:500px;
 }
+<<<<<<< HEAD
 
 .content-section-a {
 	background-color: #f8f8f8;
 	padding: 50px 0;
+=======
+.imgs{
+	float:left;
+	width:700px;
+	overflow:auto;
+}
+.slider{
+	width:700px;
+	float:left;
+	clear:right;
+	margin-top:40px;
+	margin-bottom:40px;
+}
+.btn, .btn:hover,.btn:focus {
+	background:#83A493;
+	border:1px solid white;
+	color:#fff;
+}
+.rad{
+	margin-left: 20px;
+	margin-top:30px;
+>>>>>>> 8741f730e23628f80517b35a4435975c69a4df69
 }
