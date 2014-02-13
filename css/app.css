@@ -727,9 +727,10 @@ transition: height 2s;
 	margin-top:40px;
 	margin-bottom:40px;
 }
-.rad .btn {
+.btn, .btn:hover,.btn:focus {
 	background:#83A493;
 	border:1px solid white;
+	color:#fff;
 }
 .rad{
 	margin-left: 20px;
