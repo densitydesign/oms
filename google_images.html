@@ -2,10 +2,12 @@
 <html>
 <head>
 	<script type="text/javascript" src="js/d3.v3.min.js"></script>
-	<script src="https://code.jquery.com/jquery.js"></script>	
-	<script type="text/javascript" src="js/oms/pack.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>		
+	<script src="js/bootstrap-slider.js"></script>		
+	 <link href="css/bootstrap.min.css" rel="stylesheet">
+	 <link href="css/slider.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
 	
 	<title>WHO Caesarean Section - Google images analysis</title>
 </head>
@@ -25,10 +27,15 @@ text {
         transition: fill .3s ease;
 }
 
+svg {
+	margin-top:40px;
+}
 </style>
 <body>
 
 <script>
+var col=true;
+var siz=50;
 var data;
 var langLvl=0;
 var langScale,tagScale;
@@ -39,7 +46,8 @@ dsv_egg("data/CS_img.csv",function(d) {
   	keyword: d.keyword,
     image: d.image,
     lang: d.lang,
-    rank: +d.rank
+    rank: +d.rank,
+    color: d.color
   };
 }, 
 	function(error, rows) {
@@ -62,21 +70,51 @@ dsv_egg("data/CS_img.csv",function(d) {
 	    });
 	    
 		viz();
-		
-		});
+	});
      
      var margin = {top: 40, right: 10, bottom: 10, left: 10},
-    width = 1360 - margin.left - margin.right,
-    height = 800 - margin.top - margin.bottom;
+    width = 700 - margin.left - margin.right,
+    height = 900 - margin.top - margin.bottom;
      
      
-     var listW = width*0.2;
+     var listW = width*0.45;
      
      var svg, langs, tags;
      svg = d3.select("body").append("svg")
     .attr("width", (width + margin.left + margin.right))
     .attr("height", (height + margin.top + margin.bottom))
+    .attr("style", "float:left")
     
+    d3.select("body").append("div")
+    .attr("class","slider")
+    
+    $(".slider").slider({'min':10,'max':100, 'value':50})
+    .on('slide', function(ev){
+    	changeSize(ev.value)
+    });
+    
+    d3.select("body").append("div")
+    .attr("class","rad")
+    .attr("style","float:left; clear:right")
+    
+    $(".rad").append('<div class="btn-group" data-toggle="buttons"> \
+        <label class="btn btn-primary"> \
+            <input type="radio" name="options" id="option1"> Pictures \
+        </label> \
+        <label class="btn btn-primary"> \
+            <input type="radio" name="options" id="option2"> Colors \
+        </label> \
+    </div>')
+    
+    
+    d3.select("body").append("div")
+    .attr("class","imgs")
+    
+    
+    offset=$(".imgs").position().top
+    $(".imgs").height(height-offset);
+    
+    var t=d3.select("svg").append("g").attr("class","tag-group")
     
      function viz() {
     
@@ -122,13 +160,15 @@ dsv_egg("data/CS_img.csv",function(d) {
 	.text(function(d){console.log(d);return d.key})
       
     }
-     
-     
+
+
      function elastify(d) {
      	
      	//compute height
      	tagH=0
-
+		
+		//t.attr("transform","rotate(30)")
+		
      	d['values'].sort(function(a,b) {
      		return b['values'].length-a['values'].length
      		})
@@ -153,11 +193,10 @@ dsv_egg("data/CS_img.csv",function(d) {
      		
      		vals+=e.h	
      	})
-     	
-     	
+     	  	
      	//draw section
-     	//t=svg.append("g")
-     	tags= svg.selectAll(".tag").data(d.values,function(e){return e.key})
+     	
+     	tags= t.selectAll(".tag").data(d.values,function(e){return e.key})
      	
 	    var enter = tags.enter()
 	    .append("rect")
@@ -175,18 +214,27 @@ dsv_egg("data/CS_img.csv",function(d) {
 	    	//color current selection
 	    	d3.select(".tag.sel").classed("sel",false)
 	    	d3.select(this).classed("sel",true)
+	    	console.log(d);
+	    	loadImages(d);
     	});
 	    
 	    //transition on existing
 	    tags.transition().duration(500)
 	    .attr("y", function(e){return e.y})
 		.attr("height", function(e) {return e.h })
+		.each("end",function() {
+			
+			rawH=t[0][0].getBBox().height;
+			//console.log(height/rawH)
+			
+			t.transition().duration(100).attr("transform","scale(1,"+height/rawH+")")
+		})
 	    
 	    //remove old elements
 	    tags.exit().remove();
 	    
 	    //Text
-	    txt = svg.selectAll(".tag-txt")
+	    txt = t.selectAll(".tag-txt")
 	    .data(d.values,function(e){return e.key})
 	    
 	    txtEnt=txt.enter()
@@ -201,17 +249,31 @@ dsv_egg("data/CS_img.csv",function(d) {
 		.attr("dx", "0.4em")
 		.attr("dy", "1.3em")
 		.style("fill","#222222")
-		.text(function(d){console.log(d);return d.key})
+		.text(function(d){return d.key})
 		
 		txt.transition().duration(500)
 		.attr("y", function(e){return e.y})
-		
+
 		txt.exit().remove()
-		
-	    
-	    
-	    
-	    
+     }
+     
+     function loadImages(d) {
+     	$(".imgs").empty();
+     	d.values.forEach(function(e,i) {
+     		if (!col) {
+     			$(".imgs").append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px'><img class='smallImg' src='img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
+     		}
+     		else {
+     			$(".imgs").append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'></div>")
+     		}
+     	})
+     	
+     }
+     
+     function changeSize(n) {
+     siz=n;
+     $(".img-cont").css("width",n+"px")
+     $(".img-cont").css("height",n+"px")
      }
 
      
