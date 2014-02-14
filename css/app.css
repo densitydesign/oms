@@ -3,10 +3,8 @@ html{
 }
 
 body {
-
 	height: 100%;
 	position:relative;
-
 }
 
 
@@ -118,7 +116,7 @@ h4.section{
 	position:relative;
 	z-index:2;
 	font-family:Georgia;
-	font-size:20px;
+	font-size:1.5em;
 	color:#222222;
 	line-height: 170%;
 	margin-bottom: 50px;
@@ -148,6 +146,14 @@ h4.section{
 	cursor:default;
 	background:transparent;
 }
+
+
+.section-text b{
+	display:inline-block;
+	cursor:default;
+	background:transparent;
+}
+
 
 .link-section {
 	font-size:1em;
@@ -708,6 +714,55 @@ body.loading .modal {
 
 .content-section-a {
 	background-color: #f8f8f8;
-	padding: 50px 0;
 }
 
+<<<<<<< HEAD
+
+.text-partners{
+	position:relative;
+	z-index:2;
+	font-family:Georgia;
+	font-size:1.5em;
+	color:#222222;
+	line-height: 170%;
+	padding-left: 15px;
+
+}
+
+.logo-partners{
+	width:100%;
+	height:400px;
+	background-color: #000;
+}
+
+h2.heading-partners{
+	text-transform: uppercase;
+	font-size:1.3em;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 4px;
+	font-weight: 900;
+	padding-top: 30px;
+	padding-left: 15px;
+}
+
+.imgs{
+	float:left;
+	width:700px;
+	overflow:auto;
+}
+.slider{
+	width:700px;
+	float:left;
+	clear:right;
+	margin-top:40px;
+	margin-bottom:40px;
+}
+.btn, .btn:hover,.btn:focus {
+	background:#83A493;
+	border:1px solid white;
+	color:#fff;
+}
+.rad{
+	margin-left: 20px;
+	margin-top:30px;
+}
