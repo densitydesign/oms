@@ -679,18 +679,6 @@ body.loading .modal {
 	font-style: italic;
 }
 
-.img-cont{
-	 
-	float:left;
-	transition: width 2s;
--webkit-transition: width 0.2s; /* Safari */
-transition: height 2s;
--webkit-transition: height 0.2s; /* Safari */
-}
-.smallImg{
-	width:100%;
-	height:auto;
-}
 
 
 @media (max-width: 767px) {
@@ -723,10 +711,12 @@ transition: height 2s;
 }
 
 
+
 .content-section-a {
 	background-color: #f8f8f8;
 }
 
+<<<<<<< HEAD
 
 .text-partners{
 	position:relative;
