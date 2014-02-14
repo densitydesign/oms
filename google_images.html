@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<script type="text/javascript" src="js/d3.v3.min.js"></script>
-	<script src="https://code.jquery.com/jquery.js"></script>	
-	<script type="text/javascript" src="js/oms/pack.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
-	
-	<title>WHO Caesarean Section - Google images analysis</title>
-</head>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <script src="js/bootstrap.min.js"></script>		
+    <script src="js/bootstrap-slider.js"></script>		
+	 <link href="css/slider.css" rel="stylesheet">
+	  <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/d3.v3.min.js"></script>
 
-<style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+    
+  </head>
+  <body>
+  	<style>
 
 
 text {
@@ -25,10 +39,230 @@ text {
         transition: fill .3s ease;
 }
 
-</style>
-<body>
+svg {
+	margin-top:40px;
+}
 
-<script>
+#viz{
+	margin-top:4%;
+}
+.container{
+	height:90%;
+}
+.imgs{
+	float:left;
+	width:45%;
+	overflow:auto;
+}
+.slider{
+	width:45% !important;
+	float:left;
+	clear:right;
+	margin-top:40px;
+	margin-bottom:10px;
+}
+.btn, .btn:hover,.btn:focus {
+	background:#83A493;
+	border:1px solid white;
+	color:#fff;
+}
+.rad{
+	margin:0px 0px 10px 0px;
+	
+}
+.img-cont{
+	 
+	float:left;
+	transition: width 2s;
+-webkit-transition: width 0.2s; /* Safari */
+transition: height 2s;
+-webkit-transition: height 0.2s; /* Safari */
+}
+.smallImg{
+	width:100%;
+	height:auto;
+}
+
+</style>
+  	
+  	
+  	
+     <!-- Fixed navbar -->
+    
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+       
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="./intro.html">intro</a></li>
+            <li class="active"><a href="./network1.html">corpus</a></li>
+            <li><a href="./network2.html">network</a></li>
+            <li><a href="./network3.html">text</a></li>
+            <li><a href="./network4.html">images</a></li>
+            <li><a href="./intro1.html">aufeminin</a></li>
+            <li><a href="./network5.html">forums</a></li>
+            <li><a href="./network6.html">users</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  
+  	<div class="container">
+  	<section id="viz" class="row section-row">
+  		
+  	</section>
+  	</div>
+	
+	<div id="protocol">
+			
+		<div class="proto-title closing">PROTOCOL   <img class="close-btn" src="img/cross.png"/></div>
+		
+		
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner">
+		    <div class="item active">
+		    	
+		    	<div class="step">
+		    		<img src="img/pro_query-net.png"/>
+				    	<h3>1.Querying<br>(corpus building)</h3>
+				    	<p>I will give you a complete account of the
+						system, and expound the actual teachings
+						of the great explorer of the truth.</p>
+						<div class="details">
+							<h5>Corpus: 336 webpages</h5>
+						</div>
+				    </div>
+				    
+				    <div class="step">
+
+		    		<img src="img/pro_clean.png"/>
+				    	<h3>2.Cleaning</h3>
+				    	<p>I will give you a complete account of the
+						system, and expound the actual teachings
+						of the great explorer of the truth.</p>
+						<div class="details">
+						<h5>Corpus: ? webpages </h5>
+				    		<a href="#"><div class="link-download">Download Data</div></a>
+							<a href="#"><div class="link-visualization">Go to the Visualization</div></a>
+						</div>
+				    </div>
+				    
+				    <div class="step">
+		    		<img src="img/pro_tag-cs"/>
+				    	<h3>3.Tagging</h3>
+				    	<p>I will give you a complete account of the
+						system, and expound the actual teachings
+						of the great explorer of the truth.</p>
+				    	<div class="details">
+				    	<h5>Corpus: 336 webpages </h5>
+				    		<a href="#"><div class="link-download">Download Data</div></a>
+							<a href="#"><div class="link-visualization">Go to the Visualization</div></a>
+						</div>
+
+				    </div>
+
+		    	</div>
+		    	
+		    	<div class="item">
+		  
+				    <div class="step">
+		    		<img src="img/pro_crawl.png"/>
+				    	<h3>Crawling</h3>
+				    	<p>I will give you a complete account of the
+						system, and expound the actual teachings
+						of the great explorer of the truth.</p>
+						<div class="details">
+							<h5>Corpus: 677 websites </h5>
+				    		<a href="#"><div class="link-download">Download Data</div></a>
+							<a href="#"><div class="link-visualization">Go to the Visualization</div></a>
+						</div>
+				    </div>
+				    
+	
+
+		    	</div>
+		    	
+		  </div>
+		  </div>
+		
+		  <!-- Controls -->
+		  
+		</div>
+			
+	</div>
+	
+    
+    <script>
+	
+	
+	
+	$(document).ready(function(){
+	    
+	    $("#protocol").css("left","97%");
+	    
+	    
+	    
+	    //General interactions
+	
+		$('.carousel').carousel({
+		  "wrap":false,
+		  "interval":false
+		})
+		
+		$("#protocol").click(function() {
+			
+			if($("#protocol").position().left >0){ 
+				$("#protocol").css("left",0);
+				$(".close-btn").css('-webkit-transform','rotate(90deg)');
+				$(".close-btn").css('-moz-transform','rotate(90deg)');
+			}
+		})
+		
+		$(".closing").click(function() {
+			
+			if($("#protocol").css("left")=="0px") {
+
+				$("#protocol").css("left","97%");
+				$(".close-btn").css('-webkit-transform','rotate(45deg)');
+				$(".close-btn").css('-moz-transform','rotate(45deg)');
+
+			}
+		})
+		
+		
+		$("b").hover(function() {
+			height=$(this).position().top;
+			att = $(this).attr('note');
+			txt = notes[att]; 
+			$(".section-text").append('<div class="note" style="top:'+height+'px">'+txt+'</div>');
+		},
+		
+		function() {
+			$(".note").remove();
+		})
+		
+			
+		$("#protocol").mousewheel(function(event){
+			return false;
+		});
+	});
+	
+	
+		
+
+	</script>
+	
+	
+	<script>
+var col=true;
+var siz=50;
 var data;
 var langLvl=0;
 var langScale,tagScale;
@@ -39,7 +273,8 @@ dsv_egg("data/CS_img.csv",function(d) {
   	keyword: d.keyword,
     image: d.image,
     lang: d.lang,
-    rank: +d.rank
+    rank: +d.rank,
+    color: d.color
   };
 }, 
 	function(error, rows) {
@@ -62,21 +297,43 @@ dsv_egg("data/CS_img.csv",function(d) {
 	    });
 	    
 		viz();
-		
-		});
+	});
      
      var margin = {top: 40, right: 10, bottom: 10, left: 10},
-    width = 1360 - margin.left - margin.right,
-    height = 800 - margin.top - margin.bottom;
+    width = $("#viz").width()*.45 - margin.left - margin.right,
+    height =  $("#viz").height() - margin.top - margin.bottom;
      
      
-     var listW = width*0.2;
+     var listW = width*0.45;
      
      var svg, langs, tags;
-     svg = d3.select("body").append("svg")
+     svg = d3.select("#viz").append("svg")
     .attr("width", (width + margin.left + margin.right))
     .attr("height", (height + margin.top + margin.bottom))
+    .attr("style", "float:left")
     
+    d3.select("#viz").append("div")
+    .attr("class","slider")
+    
+    $(".slider").slider({'min':10,'max':100, 'value':50})
+    .on('slide', function(ev){
+    	changeSize(ev.value)
+    });
+    
+    d3.select("#viz").append("div")
+    .attr("class","rad")
+    .attr("style","float:left; clear:right")
+    
+    $(".rad").append('<button class="btn">Toggle pictures / colors</button>')
+    
+    
+    d3.select("#viz").append("div")
+    .attr("class","imgs")
+ 
+    offset=$(".imgs").position().top
+    $(".imgs").height(height-offset);
+    
+    var t=d3.select("svg").append("g").attr("class","tag-group")
     
      function viz() {
     
@@ -103,8 +360,19 @@ dsv_egg("data/CS_img.csv",function(d) {
     	d3.select(".lang.sel").classed("sel",false)
     	d3.select(this).classed("sel",true)
     	
+    	
+    	
     	//ealstify list
-    	elastify(d)});
+    	elastify(d)
+    	if($(".tag.sel").length) {
+    		console.log(d)
+    		k=d3.select(".tag.sel")[0][0].__data__.key
+    		el=d.values.filter(function(e){return e.key==k})
+    		loadImages(el[0])
+    	}
+    	
+    	
+    	});
     
     //labels for languages 
     svg.selectAll(".lang-txt")
@@ -122,13 +390,15 @@ dsv_egg("data/CS_img.csv",function(d) {
 	.text(function(d){console.log(d);return d.key})
       
     }
-     
-     
+
+
      function elastify(d) {
      	
      	//compute height
      	tagH=0
-
+		
+		//t.attr("transform","rotate(30)")
+		
      	d['values'].sort(function(a,b) {
      		return b['values'].length-a['values'].length
      		})
@@ -153,11 +423,10 @@ dsv_egg("data/CS_img.csv",function(d) {
      		
      		vals+=e.h	
      	})
-     	
-     	
+
      	//draw section
-     	//t=svg.append("g")
-     	tags= svg.selectAll(".tag").data(d.values,function(e){return e.key})
+     	
+     	tags= t.selectAll(".tag").data(d.values,function(e){return e.key})
      	
 	    var enter = tags.enter()
 	    .append("rect")
@@ -175,18 +444,27 @@ dsv_egg("data/CS_img.csv",function(d) {
 	    	//color current selection
 	    	d3.select(".tag.sel").classed("sel",false)
 	    	d3.select(this).classed("sel",true)
+	    	console.log(d);
+	    	loadImages(d);
     	});
 	    
 	    //transition on existing
 	    tags.transition().duration(500)
 	    .attr("y", function(e){return e.y})
 		.attr("height", function(e) {return e.h })
+		.each("end",function() {
+			
+			rawH=t[0][0].getBBox().height;
+			//console.log(height/rawH)
+			
+			t.transition().duration(100).attr("transform","scale(1,"+height/rawH+")")
+		})
 	    
 	    //remove old elements
 	    tags.exit().remove();
 	    
 	    //Text
-	    txt = svg.selectAll(".tag-txt")
+	    txt = t.selectAll(".tag-txt")
 	    .data(d.values,function(e){return e.key})
 	    
 	    txtEnt=txt.enter()
@@ -201,22 +479,38 @@ dsv_egg("data/CS_img.csv",function(d) {
 		.attr("dx", "0.4em")
 		.attr("dy", "1.3em")
 		.style("fill","#222222")
-		.text(function(d){console.log(d);return d.key})
+		.text(function(d){return d.key})
 		
 		txt.transition().duration(500)
 		.attr("y", function(e){return e.y})
-		
+
 		txt.exit().remove()
-		
-	    
-	    
-	    
-	    
+     }
+     
+     function loadImages(d) {
+     	$(".imgs").empty();
+     	d.values.forEach(function(e,i) {
+     		$(".imgs").append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
+     		if (!col) {
+     			$(".imgs img").hide();
+     		} 		
+     	})
+     }
+     
+     function changeSize(n) {
+     siz=n;
+     $(".img-cont").css("width",n+"px")
+     $(".img-cont").css("height",n+"px")
      }
 
-     
+     $(".btn").on("click",function(e){
+     	col=!col;
+     	if(col) $(".imgs img").fadeIn(300)
+     	else $(".imgs img").fadeOut(300)
+     })
 </script>
-
-
-</body>
+	
+	
+    
+  </body>
 </html>
