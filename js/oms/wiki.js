@@ -99,6 +99,50 @@ var color = d3.scale.ordinal().range(["#3c5863","#ef3528","#d4c439","#83a292"]);
   .attr("y2",function(d) { return y1(d.values[0].value / 2)+1; })
   .style("stroke","#666")
   
+ /* 
+  group.append("line")
+  .attr("x1",width)
+  .attr("y1",function(d) { return y1(d.values[0].value / 2)+1; })
+  .attr("x2",width)
+  .attr("y2",function(d) { return y1(d.values[0].value / 2)-y0.rangeBand(); })
+  .style("stroke","#666")*/
+  
+  group.append("line")
+  .attr("class","axis-multi")
+  .attr("x1",0)
+  .attr("y1",function(d) { return y1(d.values[0].value / 2)-y0.rangeBand()/3; })
+  .attr("x2",width)
+  .attr("y2",function(d) { return y1(d.values[0].value / 2)-y0.rangeBand()/3; })
+  .style("stroke","#eee")
+  
+  group.append("line")
+  .attr("class","axis-multi")
+  .attr("x1",0)
+  .attr("y1",function(d) { return y1(d.values[0].value / 2)-2*y0.rangeBand()/3; })
+  .attr("x2",width)
+  .attr("y2",function(d) { return y1(d.values[0].value / 2)-2*y0.rangeBand()/3; })
+  .style("stroke","#eee")
+  
+
+  group.append("text")
+      .attr("class", "axis-multi")
+      .attr("x", -6)
+      .attr("y", function(d) { return y1(d.values[0].value / 2)-y0.rangeBand()/3; })
+      .attr("dy", ".35em")
+      .style("fill","#bbb")
+      .style("font-size","0.6em")
+      .text(function(d) { return d3.round(y1.invert(y1(d.values[0].value / 2)-y0.rangeBand()/3)) });
+      
+  group.append("text")
+      .attr("class", "axis-multi")
+      .attr("x", -6)
+      .attr("y", function(d) { return y1(d.values[0].value / 2)-2*y0.rangeBand()/3; })
+      .attr("dy", ".35em")
+      .style("fill","#bbb")
+      .style("font-size","0.6em")
+      .text(function(d) { return d3.round(y1.invert(y1(d.values[0].value / 2)-2*y0.rangeBand()/3)) });
+      
+
 
   group.append("text")
       .attr("class", "group-label")
@@ -114,7 +158,10 @@ var color = d3.scale.ordinal().range(["#3c5863","#ef3528","#d4c439","#83a292"]);
       .attr("x", function(d) { return x(d.date); })
       .attr("y", function(d) { return y1(d.value); })
       .attr("width", x.rangeBand()-1)
-      .attr("height", function(d) { return y0.rangeBand() - y1(d.value); });
+      .attr("height", function(d) { return y0.rangeBand() - y1(d.value); })
+      .on("click", function(d) {
+      	console.log(d);
+      })
 
   group.filter(function(d, i) { return !i; }).append("g")
       .attr("class", "x axis")
@@ -143,6 +190,10 @@ chart.transitionStacked=function() {
 	    .attr("y", function(d) { return chart.y1()(d.value*4 + d.valueOffset*4); });
 	    g.select(".group-label").attr("y", function(d) { return chart.y1()(d.values[0].value / 2 + d.values[0].valueOffset); })
 	    .style("opacity",0)
+	    
+   $(".axis-multi").fadeOut(250)
+   
+   
    
     return chart;
   }
@@ -158,6 +209,8 @@ chart.transitionMultiples=function() {
     .attr("height",function(d) { return (chart.y0().rangeBand() - chart.y1()(d.value)); })
     g.select(".group-label").attr("y", function(d) { return chart.y1()(d.values[0].value / 2); })
     .style("opacity",1)
+    
+    $(".axis-multi").fadeIn(750)
     
     return chart;
   }
