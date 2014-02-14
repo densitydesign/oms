@@ -360,8 +360,19 @@ dsv_egg("data/CS_img.csv",function(d) {
     	d3.select(".lang.sel").classed("sel",false)
     	d3.select(this).classed("sel",true)
     	
+    	
+    	
     	//ealstify list
-    	elastify(d)});
+    	elastify(d)
+    	if($(".tag.sel").length) {
+    		console.log(d)
+    		k=d3.select(".tag.sel")[0][0].__data__.key
+    		el=d.values.filter(function(e){return e.key==k})
+    		loadImages(el[0])
+    	}
+    	
+    	
+    	});
     
     //labels for languages 
     svg.selectAll(".lang-txt")
@@ -482,10 +493,8 @@ dsv_egg("data/CS_img.csv",function(d) {
      		$(".imgs").append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
      		if (!col) {
      			$(".imgs img").hide();
-     		}
-     		
+     		} 		
      	})
-     	
      }
      
      function changeSize(n) {
