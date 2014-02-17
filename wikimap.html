@@ -19,15 +19,28 @@
   #map { position:absolute; top:0; bottom:0; width:100%; }
   .marker-cluster-small, .marker-cluster-medium, .marker-cluster-large   {
   	background-color:rgba(52, 205, 135, 0.79);
+  	border-radius:100%;
  }
  
    .marker-cluster-small-2, .marker-cluster-medium-2, .marker-cluster-large-2   {
   	background-color:rgba(212, 81, 88, 0.79);
+  	border-radius:100%;
  }
 
-.marker-cluster-small div, .marker-cluster-medium div, .marker-cluster-large div {
+.marker-cluster-small div, .marker-cluster-medium div, .marker-cluster-large div, .marker-cluster-small-2 div, .marker-cluster-medium-2 div, .marker-cluster-large-2 div {
 	background-color:transparent;
 	color:white;
+	width:100%;
+	height:100%;
+	margin:0;
+	
+	
+}
+
+.marker-cluster-small span, .marker-cluster-medium span, .marker-cluster-large span, .marker-cluster-small-2 span, .marker-cluster-medium-2 span, .marker-cluster-large-2 span {
+	
+text-align: center;
+
 }
 
 .leaflet-marker-icon {
@@ -45,6 +58,7 @@
 
 <script>
 var mapdata;
+var s = d3.scale.linear().range([20,80]).domain([2,100]).clamp(true)
 
 d3.tsv("data/wiki_map.tsv",function(error, data) {
 		
@@ -59,7 +73,7 @@ function drawMap() {
 
 	console.log("mapdata",mapdata);
 	
-    var markers = new L.MarkerClusterGroup({showCoverageOnHover:false});
+    var markers = new L.MarkerClusterGroup({showCoverageOnHover:false,iconCreateFunction: spoilCluster});
     var markers2 = new L.MarkerClusterGroup({showCoverageOnHover:false, iconCreateFunction: notSpoilCluster});
 
     for (var i = 0; i < mapdata.length; i++) {
@@ -111,8 +125,24 @@ function drawMap() {
 		} else {
 			c += 'large';
 		}
+		
+		return new L.DivIcon({ html: '<div><span style="line-height:'+s(childCount)+'px;">' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(s(childCount), s(childCount)) });
+	}
+	
+	
+	 function spoilCluster(cluster) {
+		var childCount = cluster.getChildCount();
+
+		var c = ' marker-cluster-';
+		if (childCount < 10) {
+			c += 'small';
+		} else if (childCount < 100) {
+			c += 'medium';
+		} else {
+			c += 'large';
+		}
 		c+="-2"
-		return new L.DivIcon({ html: '<div><span>' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
+		return new L.DivIcon({ html: '<div><span style="line-height:'+s(childCount)+'px;">' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(s(childCount), s(childCount)) });
 	}
    
 </script>
