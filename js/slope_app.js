@@ -11,7 +11,7 @@ $.getJSON('data/CS_tf.json', function(dataTF) {
 
 	d3.select('#buttons').append("button").text('show cat')
 		.on("click", function(){
-			slope.showCat(["M", "C", "E"])
+			slope.showCat(["M", "C", "E", "V"])
 			chart.call(slope)
 	})
 
