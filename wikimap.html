@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Leaflet Markercluster</title>
+
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+
+<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
+<script src="js/d3.v3.min.js"></script>
+<link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+<link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
+
+
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+  .marker-cluster-small, .marker-cluster-medium, .marker-cluster-large   {
+  	background-color:rgba(52, 205, 135, 0.79);
+ }
+ 
+   .marker-cluster-small-2, .marker-cluster-medium-2, .marker-cluster-large-2   {
+  	background-color:rgba(212, 81, 88, 0.79);
+ }
+
+.marker-cluster-small div, .marker-cluster-medium div, .marker-cluster-large div {
+	background-color:transparent;
+	color:white;
+}
+
+.leaflet-marker-icon {
+	opacity:0.79 !important;
+}
+  
+</style>
+</head>
+<body>
+
+
+
+
+<div id='map'></div>
+
+<script>
+var mapdata;
+
+d3.tsv("data/wiki_map.tsv",function(error, data) {
+		
+			mapdata=data;
+			drawMap();
+			
+		});
+
+function drawMap() {
+    var map = L.mapbox.map('map', 'fenicento.ha4jo7ff')
+        .setView([18.95, 18.08333], 3);
+
+	console.log("mapdata",mapdata);
+	
+    var markers = new L.MarkerClusterGroup({showCoverageOnHover:false});
+    var markers2 = new L.MarkerClusterGroup({showCoverageOnHover:false, iconCreateFunction: notSpoilCluster});
+
+    for (var i = 0; i < mapdata.length; i++) {
+        var a = mapdata[i];
+        console.log(a)
+        if(a.lat!="" && a.lon!="" && a.type=="spoil") {
+        var title = a['revid'];
+        
+        var marker = L.marker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
+            icon: L.mapbox.marker.icon({ 'marker-color': '34CD87'}),
+            title: title
+        });
+        marker.bindPopup(title);
+        markers.addLayer(marker);
+       }
+       
+       else if(a.lat!="" && a.lon!="" && a.type!="spoil") {
+       	
+       	var title = a['revid'];
+        
+        var marker = L.marker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
+            icon: L.mapbox.marker.icon({ 'marker-color': 'd45158'}),
+            title: title
+        });
+        marker.bindPopup(title);
+        markers2.addLayer(marker);
+       	
+       }
+       
+        
+        
+    }
+    
+
+
+    map.addLayer(markers);
+    map.addLayer(markers2);
+   }
+   
+   
+   function notSpoilCluster(cluster) {
+		var childCount = cluster.getChildCount();
+
+		var c = ' marker-cluster-';
+		if (childCount < 10) {
+			c += 'small';
+		} else if (childCount < 100) {
+			c += 'medium';
+		} else {
+			c += 'large';
+		}
+		c+="-2"
+		return new L.DivIcon({ html: '<div><span>' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
+	}
+   
+</script>
+
+
+</body>
+</html>
