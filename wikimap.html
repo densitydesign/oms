@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>Leaflet Markercluster</title>
+<title>WHO - Wikipedia page spoils</title>
 
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
@@ -45,6 +45,10 @@ text-align: center;
 
 .leaflet-marker-icon {
 	opacity:0.79 !important;
+	-webkit-transition: -webkit-transform 0.5s ease-in; /* Changed here */ 
+	-moz-transition: -moz-transform 0.5s ease-in, width 0.5s;
+	-o-transition: -o-transform 0.5s ease-in, width 0.5s;
+	transition: transform 0.5s ease-in, width 0.5s;
 }
   
 </style>
@@ -59,78 +63,79 @@ text-align: center;
 <script>
 var mapdata;
 var s = d3.scale.linear().range([20,80]).domain([2,100]).clamp(true)
+var map,markers, markers2;
 
 d3.tsv("data/wiki_map.tsv",function(error, data) {
 		
 			mapdata=data;
-			drawMap();
-			
+			drawMap();			
 		});
 
 function drawMap() {
-    var map = L.mapbox.map('map', 'fenicento.ha4jo7ff')
+    map = L.mapbox.map('map', 'fenicento.ha4jo7ff')
         .setView([18.95, 18.08333], 3);
-
-	console.log("mapdata",mapdata);
 	
-    var markers = new L.MarkerClusterGroup({showCoverageOnHover:false,iconCreateFunction: spoilCluster});
-    var markers2 = new L.MarkerClusterGroup({showCoverageOnHover:false, iconCreateFunction: notSpoilCluster});
+    markers = new L.MarkerClusterGroup({showCoverageOnHover:false,iconCreateFunction: spoilCluster, animateAddingMarkers:true,spiderfyOnMaxZoom:true});
+    markers2 = new L.MarkerClusterGroup({showCoverageOnHover:false, iconCreateFunction: notSpoilCluster,animateAddingMarkers:true,spiderfyOnMaxZoom:true});
 
     for (var i = 0; i < mapdata.length; i++) {
         var a = mapdata[i];
-        console.log(a)
-        if(a.lat!="" && a.lon!="" && a.type=="spoil") {
+       
+        if(a.lat!="" && a.lon!="" && a.page=="Birth Control") {
         var title = a['revid'];
+        var type = a['type'];
+        var date = a['date'];
+        var comment = a['comment'];
+        var user = a['user'];
         
-        var marker = L.marker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
-            icon: L.mapbox.marker.icon({ 'marker-color': '34CD87'}),
-            title: title
+        var marker = L.circleMarker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
+            //icon: L.mapbox.marker.icon({ 'marker-color': 'd45158'}),
+            radius: 5,
+        	fillColor: "#d45158",
+        	stroke: false,
+        	fillOpacity: 0.69,
+            title: title,
+            date: date,
+            user: user,
+            comment: comment,
+            type: type
         });
-        marker.bindPopup(title);
+        marker.bindPopup("<br/><div><b>Date:</b> "+date+"</div><div><b>User:</b> "+user+"</div><div><b>Revision id:</b> "+title+"</div><div><b>type:</b> "+type+"</div><div><b>Comment:</b> "+comment+"</div>");
         markers.addLayer(marker);
        }
        
-       else if(a.lat!="" && a.lon!="" && a.type!="spoil") {
+       else if(a.lat!="" && a.lon!="" && a.page=="Family Planning") {
        	
-       	var title = a['revid'];
+        var title = a['revid'];
+        var type = a['type'];
+        var date = a['date'];
+        var comment = a['comment'];
+        var user = a['user'];
         
-        var marker = L.marker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
-            icon: L.mapbox.marker.icon({ 'marker-color': 'd45158'}),
-            title: title
+        var marker = L.circleMarker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
+            //icon: L.mapbox.marker.icon({ 'marker-color': '34CD87'}),
+            radius: 5,
+        	fillColor: "#34CD87",
+        	stroke: false,
+        	fillOpacity: 0.69,
+            title: title,
+            date: date,
+            user: user,
+            comment: comment,
+            type: type
         });
-        marker.bindPopup(title);
+        marker.bindPopup("<br/><div><b>Date:</b> "+date+"</div><div><b>User:</b> "+user+"</div><div><b>Revision id:</b> "+title+"</div><div><b>type:</b> "+type+"</div><div><b>Comment:</b> "+comment+"</div>");
         markers2.addLayer(marker);
        	
        }
-       
-        
-        
     }
-    
-
 
     map.addLayer(markers);
     map.addLayer(markers2);
    }
    
    
-   function notSpoilCluster(cluster) {
-		var childCount = cluster.getChildCount();
-
-		var c = ' marker-cluster-';
-		if (childCount < 10) {
-			c += 'small';
-		} else if (childCount < 100) {
-			c += 'medium';
-		} else {
-			c += 'large';
-		}
-		
-		return new L.DivIcon({ html: '<div><span style="line-height:'+s(childCount)+'px;">' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(s(childCount), s(childCount)) });
-	}
-	
-	
-	 function spoilCluster(cluster) {
+   function spoilCluster(cluster) {
 		var childCount = cluster.getChildCount();
 
 		var c = ' marker-cluster-';
@@ -144,7 +149,42 @@ function drawMap() {
 		c+="-2"
 		return new L.DivIcon({ html: '<div><span style="line-height:'+s(childCount)+'px;">' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(s(childCount), s(childCount)) });
 	}
+	
+	
+	 function notSpoilCluster(cluster) {
+		var childCount = cluster.getChildCount();
+
+		var c = ' marker-cluster-';
+		if (childCount < 10) {
+			c += 'small';
+		} else if (childCount < 100) {
+			c += 'medium';
+		} else {
+			c += 'large';
+		}
+		
+		return new L.DivIcon({ html: '<div><span style="line-height:'+s(childCount)+'px;">' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(s(childCount), s(childCount)) });
+	}
    
+   function removeSpoil() {
+   	
+   	//birth control
+   	markers.eachLayer(function (layer) {
+   		if(layer.options.type!="spoil") markers.removeLayer(layer)
+   	})
+   	
+   	//family planning
+   	markers2.eachLayer(function (layer) {
+   		if(layer.options.type!="spoil") markers2.removeLayer(layer)
+   	})
+   }
+   
+   
+   function pilipinos() {
+   	
+   	map.setView([11.583333, 122.75],6,{animate:true});
+   	
+   }
 </script>
 
 
