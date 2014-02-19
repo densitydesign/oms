@@ -181,9 +181,14 @@ section h1{
 }
 
 .section-text p{
-	width:80%;
-	
+	width:100%;
 }
+
+.section-text2 p{
+	width:100%;
+}
+
+
 .pCanvas{
 	width:100%;
 	height:500px;
@@ -522,7 +527,7 @@ section{
 }
 
 #spazio_min{
-margin-top:20px;
+	margin-top:20px;
 }
 
 ol {
@@ -589,43 +594,43 @@ ol {
 }
 
 ::-webkit-scrollbar {
-    display:none;
+	display:none;
 }
 
 /* Load wheel */
 .modal {
-    display:    none;
-    opacity: 	0;
-    position:   fixed;
-    z-index:    1000;
-    top:        0;
-    left:       0;
-    height:     100%;
-    width:      100%;
-    background: rgba( 255, 255, 255, .8 ) 
-                url('../img/load.gif') 
-                50% 50% 
-                no-repeat;
-                
-    -webkit-transition: opacity .85s ease-in-out;
-    -moz-transition: opacity .85s ease-in-out;
-    -ms-transition: opacity .85s ease-in-out;
-    -o-transition: opacity .85s ease-in-out;
-    transition: opacity .85s ease-in-out;
-                
+	display:    none;
+	opacity: 	0;
+	position:   fixed;
+	z-index:    1000;
+	top:        0;
+	left:       0;
+	height:     100%;
+	width:      100%;
+	background: rgba( 255, 255, 255, .8 ) 
+	url('../img/load.gif') 
+	50% 50% 
+	no-repeat;
+	
+	-webkit-transition: opacity .85s ease-in-out;
+	-moz-transition: opacity .85s ease-in-out;
+	-ms-transition: opacity .85s ease-in-out;
+	-o-transition: opacity .85s ease-in-out;
+	transition: opacity .85s ease-in-out;
+	
 }
 
 /* When the body has the loading class, we turn
-   the scrollbar off with overflow:hidden */
+the scrollbar off with overflow:hidden */
 body.loading {
-    overflow: hidden;   
+	overflow: hidden;   
 }
 
 /* Anytime the body has the loading class, our
-   modal element will be visible */
+modal element will be visible */
 body.loading .modal {
-    display: block;
-    opacity: 1;
+	display: block;
+	opacity: 1;
 }
 
 #sgnaf{
@@ -636,9 +641,9 @@ body.loading .modal {
 	background-color:#84A594;
 	width:0%;
 	-webkit-transition: width 1s ease-in-out;
-    -moz-transition: width 1s ease-in-out;
-    -o-transition: width 1s ease-in-out;
-    transition: width 1s ease-in-out;
+	-moz-transition: width 1s ease-in-out;
+	-o-transition: width 1s ease-in-out;
+	transition: width 1s ease-in-out;
 }
 
 
@@ -680,7 +685,6 @@ body.loading .modal {
 }
 
 
-
 @media (max-width: 767px) {
 	.intro-message {
 		padding-bottom: 15%;
@@ -705,48 +709,95 @@ body.loading .modal {
 	}
 }
 
+
 .cs-thumb, .fp-thumb {
 	background-color: #f8f8f8;
 	height:500px;
 }
 
 
+/* Home Page Case Studies*/
 
+
+
+#fp {
+	background-color: #84A594;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+#fp:hover {
+	background-color: #74897D;
+}
+
+#cs {
+	background-color: #D6C33B;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+#cs:hover {
+	background-color: #C6B239;
+}
+
+
+.case-studies {
+	height:600px;
+
+}
+
+.case-studies h1{
+	font-size: 3em;
+	font-family:'Montserrat', sans-serif;
+	text-align: center;
+	vertical-align: middle;
+	margin-top:240px;
+	text-decoration:underline;
+}
+
+@media (max-width: 767px) {
+	.case-studies h1{
+		font-size: 2em;
+		margin-top:0px;
+		padding-top: 150px;
+	}
+
+	.case-studies {
+		height:300px;
+
+	}
+}
 
 /* Home Page Partners*/
 
 .partners{
-height:300px;
-border-top: 1px solid #fff;
-background-color: #F2F2F2;
+	border-top: 1px solid #fff;
+	background-color: #F2F2F2;
 }
 
-.partners .carousel{
-width: 100%; !important;
+.partners h2{
+	margin: 80px auto 0px;
 }
 
-.partners .carousel-control{
-}
-
-.partners .carousel-inner{
-}
-
-.partners .item{
+.partners .section-text {
+	font-size:1em;
+	padding-right: 20px;
+	padding-left: 20px;
 }
 
 
 .partners .logo{
 	width:300px;
-	height:300px;
-	background-color: #000;
+	height:200px;
+	margin:0px auto;
 }
 
-.partners .section-text{
-	padding-top: 50px;
-	padding-bottom: 50px;
-	font-size: 1.3em;
-
-}
 
 .partners .info-partner{
 	padding-top: 50px;
@@ -775,23 +826,35 @@ width: 100%; !important;
 	transform:rotate(-90deg) translate(-50%, 51.5%);
 	cursor:pointer;
 	position:relative;
+	opacity:0.5;
 
 }
 
-.partners .show-team{
-	position:absolute;
-	top:70px;
-	margin-left:99%;
-	height:100%;
-	width:300px;
+
+.member {
+	background-color: #fff;
 }
 
-.partners .show-back{
-	position:absolute;
-	top:150px;
-	margin-left:2px;
-	height:100%;
-	width:30px;
+.member-pic {
+	margin-top:20px;
+}
+
+.member-pic img{
+	width:100%;
+}
+
+.member-details h3{
+	text-align: center;
+	font-size: 1.3em;
+	text-transform: uppercase;;
+	font-family:'Montserrat', sans-serif;
+}
+
+.member-details h4{
+	text-align: center;
+	font-size: 1em;
+	text-transform: uppercase;;
+	font-family:'Montserrat', sans-serif;
 }
 
 #who-logo{
@@ -803,7 +866,6 @@ width: 100%; !important;
 	-moz-background-size:cover; 
 	-webkit-background-size:cover; 
 	background-size:cover;
-	background-color: #84A594;
 }
 
 #dd-logo{
@@ -815,5 +877,24 @@ width: 100%; !important;
 	-moz-background-size:cover; 
 	-webkit-background-size:cover; 
 	background-size:cover;
-	background-color: #84A594;
 }
+
+#sp-logo{
+	background: url(../img/sp-logo.png);
+	background-position:50% 50%; 
+	background-repeat:no-repeat; 
+	display:block; 
+	text-indent:-9999px;
+	-moz-background-size:cover; 
+	-webkit-background-size:cover; 
+	background-size:cover;
+}
+
+/* Footer*/
+
+.footer{
+	margin-top: 50px;
+	background-color: #222222;
+	height: 300px;
+}
+
