@@ -85,13 +85,11 @@ $( document ).ready(function() {
     	
         if (timer == 0) {
 		var elem = $(this);
-		
 
 		if (!(elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight())) {
 			event.stopPropagation();
 			event.gesture.stopPropagation();
 		} else {
-
 		}
 	}
     });
@@ -243,19 +241,20 @@ $(document).keydown(function(e) {
 
 //utility to animate transition between divs
 function scrollToID(id, speed) {
-	id="#"+id;
-	var targetOffset = $(id).offset().top;
-	$(id).scrollTop(0);
+	console.log("id",id)
+	cid="#"+id;
+	var targetOffset = $(cid).offset().top;
+	$(cid).scrollTop(0);
 	$('html,body').animate({
 		scrollTop : targetOffset
 	}, speed, function(){
 		
-		$(id).prev("section").empty()
-  		$(id).next("section").empty()
+		$(cid).prev("section").empty()
+  		$(cid).next("section").empty()
   		
 		setTimeout(function(){
 				scrolling=false;
-				scrollToID(id,speed)
+				//scrollToID(id,speed)
 			},500)
 	});
 }
@@ -272,22 +271,31 @@ function scrollToID(id, speed) {
 		 
 	
 	if( !$('#'+id).html() ) {
-  			$( "#"+id ).load( "sections/"+id+".html", function() {	
+		$.ajax({ url: "sections/"+id+".html", success: function(data) {
+			
+			$('#'+id).html(data);
+			
+			/*$('#'+id).find("script").each(function(i) {
+                    eval($(this).text());
+                });*/
+  			//$( "#"+id ).load( "sections/"+id+".html", function() {	
   				a=$(".adv-step:visible");
   				
   				if (subsec && !a.hasClass("step"+subsec)) {
-		  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
+  					
+		  			a.fadeOut(500,function(){ $(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
 		  		}
 		  		
 		  		scrollToID(checkPoints[step],1500);
 		  		
-  			} );
-  		}
+  			}
+  })
+ }
   		else {
   			a=$(".adv-step:visible");
   				
   				if (subsec && !a.hasClass("step"+subsec)) {
-		  			a.fadeOut(500,function(){$(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
+		  			a.fadeOut(500,function(){eval("step"+subsec+"()"); $(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
 		  		}
 		  	scrollToID(checkPoints[step],1500);
   			}

@@ -184,9 +184,6 @@ transition: height 2s;
 							<a href="#"><div class="link-visualization">Go to the Visualization</div></a>
 						</div>
 				    </div>
-				    
-	
-
 		    	</div>
 		    	
 		  </div>
@@ -200,15 +197,10 @@ transition: height 2s;
 	
     
     <script>
-	
-	
-	
 	$(document).ready(function(){
 	    
 	    $("#protocol").css("left","97%");
-	    
-	    
-	    
+
 	    //General interactions
 	
 		$('.carousel').carousel({
@@ -253,12 +245,8 @@ transition: height 2s;
 			return false;
 		});
 	});
-	
-	
-		
 
 	</script>
-	
 	
 	<script>
 var col=true;
@@ -340,9 +328,7 @@ dsv_egg("data/CS_img.csv",function(d) {
     //scale function 	
 	langScale = d3.scale.linear().domain([0, maxH]);
 	langScale.range([0, height]) 
-	
-	
-	
+
 	//draw lang rects
     langs = svg.selectAll(".lang").data(data)
     .enter()
@@ -360,8 +346,6 @@ dsv_egg("data/CS_img.csv",function(d) {
     	d3.select(".lang.sel").classed("sel",false)
     	d3.select(this).classed("sel",true)
     	
-    	
-    	
     	//ealstify list
     	elastify(d)
     	if($(".tag.sel").length) {
@@ -370,8 +354,6 @@ dsv_egg("data/CS_img.csv",function(d) {
     		el=d.values.filter(function(e){return e.key==k})
     		loadImages(el[0])
     	}
-    	
-    	
     	});
     
     //labels for languages 
@@ -413,14 +395,11 @@ dsv_egg("data/CS_img.csv",function(d) {
      	
      	tagScale = d3.scale.linear().range([height/37, height/1.75]); 
      	tagScale.domain([0, tagH]).clamp(true)
-     	
-     	
      	vals=0
      	d['values'].forEach(function(e,i){
      		
      		e.y=vals;
      		e.h=tagScale(e['values'].length)
-     		
      		vals+=e.h	
      	})
 
@@ -444,7 +423,6 @@ dsv_egg("data/CS_img.csv",function(d) {
 	    	//color current selection
 	    	d3.select(".tag.sel").classed("sel",false)
 	    	d3.select(this).classed("sel",true)
-	    	console.log(d);
 	    	loadImages(d);
     	});
 	    
@@ -455,7 +433,6 @@ dsv_egg("data/CS_img.csv",function(d) {
 		.each("end",function() {
 			
 			rawH=t[0][0].getBBox().height;
-			//console.log(height/rawH)
 			
 			t.transition().duration(100).attr("transform","scale(1,"+height/rawH+")")
 		})
@@ -498,9 +475,9 @@ dsv_egg("data/CS_img.csv",function(d) {
      }
      
      function changeSize(n) {
-     siz=n;
-     $(".img-cont").css("width",n+"px")
-     $(".img-cont").css("height",n+"px")
+	     siz=n;
+	     $(".img-cont").css("width",n+"px")
+	     $(".img-cont").css("height",n+"px")
      }
 
      $(".btn").on("click",function(e){
