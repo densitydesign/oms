@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
+    <link href="css/app2.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -71,6 +71,9 @@
 			
 				<p>Quisque volutpat condimentum <b note="velit">velit</b>. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. </p>
 				</div>
+				
+		<!-- Table categories -->
+
 				<div class="col-md-10" id="spazio">
 					<div class="section-table">
 					<h4>tagging phase: categories description</h4>
@@ -159,6 +162,7 @@
 		
 	</section>
 	
+	<!-- Protocol carousel -->
 	
 	<div id="protocol">
 			
@@ -166,75 +170,86 @@
 		
 		
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-				  <!-- Indicators -->
+	
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner">
+		    <div class="item">
+		    	<div class="col-md-3 col-md-offset-1 proto-img">
+				<img src="img/pro_01try.png" alt="step 1"> </div>
+
+				<div class="col-md-6 proto-descr">
+				   <h3>HARVESTING THE WEB CORPUS</h3>
+				    <p>We collected the first 100 Google.com results (in incognito mode) harvesting their URL for each of the following queries: </p>
+				   <div class="col-md-4 query-list"><p>C-Section"<br>"CS delivery"<br>"Surgical delivery"</p>
+					</div>
+					<div class="col-md-4 query-list">
+				    <p>"Abdominal delivery"<br>"Cesarean delivery"<br>"Caesarean delivery"</p>
+					</div>
+					<div class="col-md-4 query-list">
+				    <p>"Operative delivery"<br>Caesarean<br>Cesarean</p>
+				    </div>
+				    
+				   <p>The different queries have been designed to address as much as possible "nuances" of the CS concept: from the more technical and medical ones ("Caesarean delivery", "Operative delivery") to the more ordinary ones ("C-Section", "CS delivery"). </p>
+					<div class="link-ref"> 
+						<div class="link-icon"> <img src="img/pro_ref.png"> </div>
+					<a href="http://www.govcom.org/publications/full_list/rogers_inculpable_engine_2009.pdf">Rogers, Richard. "The Googlization Question, and the Inculpable Engine."</a>
+					</div>
+				</div>
+			</div>
+			<div class="item active">
+				<div class="col-md-3 col-md-offset-1 proto-img">    
+				<img src="img/pro_02try.png" alt="step 2"> </div>
+
+				<div class="col-md-6 proto-descr">
+				   <h3>CLEANING &amp; TAGGING THE WEBPAGES</h3>
+				    <p>We qualified and tagged all the webpages accordingly to their contents and excluding from the corpus pages not concerned with CS (i.e. PDF, Videos but also cesarean section on animals). In this way we obtained three main webpages groups:</p>
+				   <ul class="list-group">
+				   		<li>Medical Information;</li>
+				   		<li>Contentious Information;</li>
+				   		<li>Experiential Information.</li>
+				   	</ul>
+				</div>
+			</div>
+
+				<div class="item">
+				<div class="col-md-3 col-md-offset-1 proto-img">    
+				<img src="img/pro_04try.png" alt="step 3"> </div>
+
+				<div class="col-md-6 proto-descr">
+				   <h3>CRAWLING THE HYPERLINKS</h3>
+				    <p>We followed the web corpus hyperlinks to discovering other relevant URLs. From this new web corpus have been eliminated all the websites considered too general (i.e facebook, twitter) and the non relevant ones (i.e maps.google, youtube). Furthermore, also the websites with an in-degree index smaller than 3 have been excluded.</p>
+				    <p>For this step we used <a href="https://github.com/medialab/Hypertext-Corpus-Initiative">HYPHE</a> a software developed at m&eacute;dialab | SciencesPo</p>
+				</div>
+			</div>
+
+
+			<div class="item">
+				<div class="col-md-3 col-md-offset-1 proto-img">    
+				<img src="img/pro_04try.png" alt="step 4"> </div>
+
+				<div class="col-md-6 proto-descr">
+				   <h3>(VISUAL) NETWORK ANALYSIS</h3>
+				    <p>We examined through co-link / social networking analysis the network produced with the crawling. Furthermore, we analyzed visually the network using GEPHI, an open-source network analysis and visualization software package. Thanks to its force-based algorithm, ForceAtlas2, we produced the qualitative interpretation of the graph.</p>
+					<div class="link-ref">
+					<div class="link-icon"> <img src="img/pro_ref.png"> </div>
+					<ul class="list-ref">
+					<li><a href="http://sebastien.pro/draft_Exploratory_Network_Analysis_Visualization_and_Interaction.pdf">S&eacute;bastien Heymann and B&eacute;n&eacute;dicte Le Grand. "Exploratory Network Analysis: Visualization and Interaction"</a></li>
+					<li><a href="http://www.medialab.sciences-po.fr/publications/Gephi%20paper.pdf">Bastian, Mathieu, S&eacute;bastien Heymann, and Mathieu Jacomy. "Gephi: an open source software for  exploring and manipulating networks."</a></li>
+					<li><a href="http://www.medialab.sciences-po.fr/publications/Jacomy_Heymann_Venturini-Force_Atlas2.pdf">Jacomy, Mathieu, et al. "ForceAtlas2, A Continuous Graph Layout Algorithm for Handy Network Visualization."</a></li>
+					<li><a href="http://www.tommasoventurini.it/wp/wp-content/uploads/2013/05/VisualNetworkAnalysis-example.pdf">Tommaso Venturini, "An	Example	of	Visual	Network	Analysis"</a></li>
+				</ul>
+					</div>
+				</div>
+			</div>
+
+		  </div>
+
+		  			  <!-- Indicators -->
 		  <ol class="carousel-indicators">
 		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
 		  </ol>
 
-		  <!-- Wrapper for slides -->
-		  <div class="carousel-inner">
-		    <div class="item active">
-		    	
-		    	<div class="step">
-		    		<img src="img/pro_query-net.png"/>
-				    	<h3>1.Querying<br>(corpus building)</h3>
-				    	<p>I will give you a complete account of the
-						system, and expound the actual teachings
-						of the great explorer of the truth.</p>
-						<div class="details">
-							<h5>Corpus: 336 webpages</h5>
-						</div>
-				    </div>
-				    
-				    <div class="step">
-
-		    		<img src="img/pro_clean.png"/>
-				    	<h3>2.Cleaning</h3>
-				    	<p>I will give you a complete account of the
-						system, and expound the actual teachings
-						of the great explorer of the truth.</p>
-						<div class="details">
-						<h5>Corpus: ? webpages </h5>
-				    		<a href="#"><div class="link-download">Download Data</div></a>
-							<a href="#"><div class="link-visualization">Go to the Visualization</div></a>
-						</div>
-				    </div>
-				    
-				    <div class="step">
-		    		<img src="img/pro_tag-cs.png"/>
-				    	<h3>3.Tagging</h3>
-				    	<p>I will give you a complete account of the
-						system, and expound the actual teachings
-						of the great explorer of the truth.</p>
-				    	<div class="details">
-				    	<h5>Corpus: 336 webpages </h5>
-				    		<a href="#"><div class="link-download">Download Data</div></a>
-							<a href="#"><div class="link-visualization">Go to the Visualization</div></a>
-						</div>
-
-				    </div>
-
-		    	</div>
-		    	
-		    	<div class="item">
-		  
-				    <div class="step">
-		    		<img src="img/pro_crawl.png"/>
-				    	<h3>Crawling</h3>
-				    	<p>I will give you a complete account of the
-						system, and expound the actual teachings
-						of the great explorer of the truth.</p>
-						<div class="details">
-							<h5>Corpus: 677 websites </h5>
-				    		<a href="#"><div class="link-download">Download Data</div></a>
-							<a href="#"><div class="link-visualization">Go to the Visualization</div></a>
-						</div>
-				    </div>
-				    
-	
-
-		    	</div>
 		    	
 		  </div>
 		  </div>
