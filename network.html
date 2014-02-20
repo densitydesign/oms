@@ -16,6 +16,14 @@
 	<script src="js/d3.v3.min.js"></script>
 	<script src="js/hammer.min.js"></script>
 	<script src="js/jquery.hammer.min.js"></script>
+	
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+
+<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
+<script src="js/d3.v3.min.js"></script>
+<link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+<link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
 
 	<script type="text/javascript" src="js/denseShow.js"></script>
 
@@ -95,6 +103,8 @@
 
 		</div>
 	</section>
+	
+	<section id="wikimap" class="wikimap"></section>
 	
 	<section id="viz" class="viz"></section>
 	
@@ -198,6 +208,7 @@
 
 				var checkPoints = [
 				"intro",
+				"wikimap",
 				["viz",1],
 				["viz",2],
 				["viz",3],
