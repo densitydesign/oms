@@ -94,33 +94,6 @@ $( document ).ready(function() {
 	}
     });
     
-    
-    
-	//general scroll behaviour
-	//$(document).on("mousewheel DOMMouseScroll", function(e) {
-	
-	
-	/*
-	if(navigator.userAgent.indexOf("AppleWebKit")>=0) {
-			
-			(function oneWheel(){
-			$(document).one('mousewheel',function(event, delta) {
-				console.log(event,delta)
-				event.preventDefault();
-				if(delta<0)
-					stepDown()
-				else
-					stepUp()
-				setTimeout(oneWheel,1000)
-				return false
-			})
-		})()
-		}
-	
-		
-		else {*/
-	
-	
 	$(document).on('mousewheel DOMMouseScroll', function(e) {
 		
 		if (!scrolling) {
@@ -271,7 +244,7 @@ function scrollToID(id, speed) {
 		 
 	
 	if( !$('#'+id).html() ) {
-		$.ajax({ url: "sections/"+id+".html", success: function(data) {
+		$.ajax({ url: "sections/"+id+".html", dataType: "html",success: function(data) {
 			
 			$('#'+id).html(data);
 			
