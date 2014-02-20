@@ -8,6 +8,9 @@ $( document ).ready(function() {
 
 	$("#protocol").css("left", "97%");
 
+
+	loadSection(checkPoints[0])
+	
 	//General interactions
 
 	$('.carousel').carousel({
@@ -256,7 +259,7 @@ function scrollToID(id, speed) {
   				
   				if (subsec && !a.hasClass("step"+subsec)) {
   					
-		  			a.fadeOut(500,function(){ $(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
+		  			a.fadeOut(500,function(){eval("step"+subsec+"()"); $(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
 		  		}
 		  		
 		  		scrollToID(checkPoints[step],1500);
