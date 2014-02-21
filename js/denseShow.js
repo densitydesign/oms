@@ -11,9 +11,12 @@ $( document ).ready(function() {
 	if(window.location.hash!="") {
 		
 		ar=window.location.hash.replace("#","").split("_")
-		ar[1]=parseInt(ar[1])
+		if(ar[1]) { 
+			ar[1]=parseInt(ar[1])
+			goToStep(ar[0],ar[1])
+		}
+		else goToStep(ar[0],null);
 		
-		goToStep(ar[0],ar[1])
 		}
 	else {
 		console.log("mh",window.location.hash)
@@ -320,7 +323,7 @@ function goToStep(id,s) {
 				break;
 				}	
 			}
-		else if(checkPoints[i]==ind) {
+		else if(checkPoints[i]==id) {
 			step = i;
 			found=true;
 			break;
