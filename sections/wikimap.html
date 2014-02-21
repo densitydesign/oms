@@ -37,8 +37,8 @@
 		<div class="legend">
 			
 			<h5>Legend</h5>
-			<div class="legend-dot" style="background:#d45158"></div><p>Birth Control</p><br/>
-			<div class="legend-dot" style="background:#34CD87"></div><p>Family Planning</p>
+			<div><div class="legend-dot" style="background:#d45158"></div><p>Birth Control</p></div>
+			<div><div class="legend-dot" style="background:#34CD87"></div><p>Family Planning</p></div>
 			
 		</div>
 </div>
@@ -89,12 +89,14 @@ text-align: center;
 }
 
 .legend-dot{
-	width:30px;
-	height:30px;
+	width:20px;
+	height:20px;
 	border-radius:100%;
 	float:left;
+	opacity:0.69;
 	margin-right:5px;
 }
+
 .legend-dot p{
 	display:block;
 	float:left;
@@ -126,9 +128,9 @@ function drawMap() {
     markers_sp_fp = new L.MarkerClusterGroup({showCoverageOnHover:false, iconCreateFunction: fpCluster,spiderfyOnMaxZoom:true});
 
  	addAllMarkers();	
- 	logLayers();
+ 
  	step1();
- 	logLayers();
+ 
  	
    }
 
@@ -170,7 +172,8 @@ function drawMap() {
    	
    	map.addLayer(markers_cs);
    	map.addLayer(markers_fp);
-			  
+	
+	map.setView([18.95, 18.08333], 3,{animate:true});
 	}
    
    function step2() {
@@ -178,11 +181,10 @@ function drawMap() {
    	if (map.hasLayer(markers_cs)) map.removeLayer(markers_cs);
    	if (map.hasLayer(markers_fp)) map.removeLayer(markers_fp);
    	
-   	logLayers();
+  
    	map.addLayer(markers_sp_cs);
-   	logLayers();
    	map.addLayer(markers_sp_fp);
-   	logLayers();
+  
    	
    	map.setView([18.95, 18.08333], 3,{animate:true});
    	}
@@ -190,19 +192,9 @@ function drawMap() {
    
    function step3() {
    	step2();
-   	map.setView([11.583333, 122.75],6,{animate:true});
-   	logLayers();
-   	
+   	map.setView([11.583333, 122.75],6,{animate:true});	
    }
-   
-   function logLayers() {
-   		console.log("1",markers_cs.getLayers())
-   		console.log("2",markers_fp.getLayers())
-   		console.log("3",markers_sp_cs.getLayers())
-   		console.log("4",markers_sp_fp.getLayers())
-   		
-   }
-   
+     
    function addAllMarkers () {
    	for (var i = 0; i < mapdata.length; i++) {
         var a = mapdata[i];
