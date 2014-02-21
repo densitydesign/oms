@@ -313,6 +313,13 @@ function createText(lvl) {
 	.text(function(d){return d.key});
 }
 
+	d3.select(window)
+    .on("resize", function() {
+    	console.log("augh")
+    	d3.select("svg").attr("width",window.outerWidth*0.7);	
+    	d3.select("svg").attr("height",window.outerHeight*0.8);	
+    });
+
 </script>
 		
 		
