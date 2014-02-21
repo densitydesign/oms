@@ -7,9 +7,18 @@ var scrolltime = 10; //must be mutiplied by 100, value in millisecond for captur
 $( document ).ready(function() {
 
 	$("#protocol").css("left", "97%");
-
-
-	loadSection(checkPoints[0])
+	
+	if(window.location.hash!="") {
+		
+		ar=window.location.hash.replace("#","").split("_")
+		ar[1]=parseInt(ar[1])
+		
+		goToStep(ar[0],ar[1])
+		}
+	else {
+		console.log("mh",window.location.hash)
+		loadSection(checkPoints[0])
+	}
 	
 	//General interactions
 
@@ -184,7 +193,6 @@ function checkLevel() {
 		loadSection(checkPoints[step]);
 
 	}
-	$("#sgnaf").css("width",step/(checkPoints.length-1)*100+"%");
 }
 
 //end scroll
@@ -237,6 +245,7 @@ function scrollToID(id, speed) {
 	
 	function loadSection(sec) {
 
+		$("#sgnaf").css("width",step/(checkPoints.length-1)*100+"%");
 		var id, subsec;
 		
 		if ($.isArray(sec)) {
@@ -275,6 +284,8 @@ function scrollToID(id, speed) {
 		  		}
 		  	scrollToID(checkPoints[step],1500);
   			}
+  			
+  			window.location.hash= subsec ? id+"_"+subsec : id; 
 	}
 
 //Scrollwheel while loading
@@ -297,11 +308,27 @@ function stepUp() {
 	loadSection(checkPoints[step]);
 }
 
-function goToStep(i,s) {
+function goToStep(id,s) {
 	
-	step = $.inArray([i,s],checkPoints)
+	found = false;
 	
-	if(step<0) {
+	for( var i = 0; i < checkPoints.length; i++) {
+		if(s) {
+			if($.isArray(checkPoints[i]) && checkPoints[i][0]==id && checkPoints[i][1]==s) {
+				step = i;
+				found=true;
+				break;
+				}	
+			}
+		else if(checkPoints[i]==ind) {
+			step = i;
+			found=true;
+			break;
+		}
+		
+	} 
+	
+	if(!found) {
 		console.log("no section found");
 		return false;
 	}
