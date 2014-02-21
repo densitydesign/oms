@@ -93,6 +93,7 @@ form {
 #viz-container {
 	float:left;
 	width: 78%;
+	height:96%;
 	margin-top:6%;
 	padding-left:2%;
 }
@@ -137,8 +138,8 @@ dsv_egg("data/threads.csv",function(d) {
 
 
 var margin = {top: 40, right: 10, bottom: 10, left: 10},
-    width = 1360 - margin.left - margin.right,
-    height = 800 - margin.top - margin.bottom;
+    width = window.outerWidth*0.7 - margin.left - margin.right,
+    height = window.outerHeight*0.8 - margin.top - margin.bottom;
     
 var txtScale = d3.scale.linear().domain([1,4]).range([1,0.4])
 
