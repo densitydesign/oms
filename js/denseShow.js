@@ -9,17 +9,9 @@ $( document ).ready(function() {
 	$("#protocol").css("left", "97%");
 	
 	if(window.location.hash!="") {
-		
-		ar=window.location.hash.replace("#","").split("_")
-		if(ar[1]) { 
-			ar[1]=parseInt(ar[1])
-			goToStep(ar[0],ar[1])
-		}
-		else goToStep(ar[0],null);
-		
-		}
+		goToStep(window.location.hash.replace("#sect-",""),null);	
+	}
 	else {
-		console.log("mh",window.location.hash)
 		loadSection(checkPoints[0])
 	}
 	
@@ -241,7 +233,6 @@ function scrollToID(id, speed) {
   		
 		setTimeout(function(){
 				scrolling=false;
-				//scrollToID(id,speed)
 			},500)
 	});
 }
@@ -288,7 +279,7 @@ function scrollToID(id, speed) {
 		  	scrollToID(checkPoints[step],1500);
   			}
   			
-  			window.location.hash= subsec ? id+"_"+subsec : id; 
+  			window.location.hash= "sect-"+id; 
 	}
 
 //Scrollwheel while loading
@@ -312,7 +303,7 @@ function stepUp() {
 }
 
 function goToStep(id,s) {
-	
+	console.log(id,s)
 	found = false;
 	
 	for( var i = 0; i < checkPoints.length; i++) {
@@ -323,7 +314,7 @@ function goToStep(id,s) {
 				break;
 				}	
 			}
-		else if(checkPoints[i]==id) {
+		else if(checkPoints[i]==id || checkPoints[i][0]==id) {
 			step = i;
 			found=true;
 			break;
