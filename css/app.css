@@ -65,18 +65,21 @@ img.bg {
 
 .navbar{
 	margin:0 !important;
-	background:transparent;
 	border-bottom: 1px solid #cbccce;
 	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 4px;
 	font-variant:small-caps;
 	background:#FFFFFF;
+	font-size: 1em;
 }
 
 
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
 	color:#425863;
+
 }
+
+
 
 h2.section{
 	font-variant:small-caps;
@@ -87,7 +90,6 @@ h2.section{
 	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 3px;
 	font-weight: 900;
-
 }
 
 h3.section{
@@ -898,5 +900,26 @@ body.loading .modal {
 	margin-top: 50px;
 	background-color: #222222;
 	height: 300px;
+}
+
+
+.scrolldown{
+position: fixed;
+bottom: 0;
+width: 100%;
+height: 55px;
+background-color: #fff;
+z-index: 1000;
+border-top: 1px solid #cbccce;
+
+}
+
+.scrolldown-arrow{
+	background: url(../img/scroll.png);
+	z-index: 1200;
+	margin:0 auto;
+	height:55px;
+		background-position:50% 50%; 
+	background-repeat:no-repeat; 
 }
 
