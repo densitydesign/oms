@@ -20,6 +20,16 @@ $(document).ready(function() {
 		"interval" : false
 	})
 
+	$(".arrow-prev").on('click', function() {
+		console.log("pressed")
+		stepUp();
+	});
+
+	$(".arrow-next").on('click', function() {
+		console.log("pressed")
+		stepDown();
+	});
+
 	//=======================
 	//scroll interaction
 
@@ -251,14 +261,18 @@ $(document).on({
 });
 
 function stepDown() {
-	step++;
-	loadSection(checkPoints[step]);
+	if (step < checkPoints.length - 1) {
+		step++;
+		loadSection(checkPoints[step]);
+	}
 
 }
 
 function stepUp() {
-	step--;
-	loadSection(checkPoints[step]);
+	if (step > 0) {
+		step--;
+		loadSection(checkPoints[step]);
+	}
 }
 
 function goToStep(id, s) {
