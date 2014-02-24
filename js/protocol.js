@@ -44,9 +44,6 @@ function() {
 })
 
 
-$("#protocol").mousewheel(function(event){
-  return false;
-});
 });
 
 
