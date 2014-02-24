@@ -2,19 +2,17 @@ var step = 0;
 var timer = 0;
 var scrolling = false;
 var direction = 0;
-var scrolltime = 10; //must be mutiplied by 100, value in millisecond for capturing the next scroll event
+var scrolltime = 10;
+//must be mutiplied by 100, value in millisecond for capturing the next scroll event
 
-$( document ).ready(function() {
+$(document).ready(function() {
 
-	$("#protocol").css("left", "97%");
-	
-	if(window.location.hash!="") {
-		goToStep(window.location.hash.replace("#sect-",""),null);	
-	}
-	else {
+	if (window.location.hash != "") {
+		goToStep(window.location.hash.replace("#sect-", ""), null);
+	} else {
 		loadSection(checkPoints[0])
 	}
-	
+
 	//General interactions
 
 	$('.carousel').carousel({
@@ -27,104 +25,96 @@ $( document ).ready(function() {
 
 	$('.long').on('mousewheel DOMMouseScroll', chk_scroll);
 	$('.adva-cont').on('mousewheel DOMMouseScroll', disableScroll);
-	
-	//touch
-	
-	var hammerdoc = Hammer(document);
-	
-	 hammerdoc.on("drag", function(ev) {
-        
-        if (timer == 0) {
-			timer = 20;
-        direction = ev.gesture.direction=="down" ? "up" : "down";
-        checkLevel();
-        ev.gesture.preventDefault();
-        }
-        ev.gesture.preventDefault();
-        return false;
-    });
-    
-    $('section').hammer().on("drag",".adva-cont", function(event) {
-        event.gesture.stopPropagation();
-        event.stopPropagation();
-        event.preventDefault();
-        event.gesture.preventDefault();
-        $(this).scrollTop($(this).scrollTop() - event.gesture.deltaY/10);
-    });
-    
-    $(document).hammer().on("drag",".long", function(event) {
-    	
-    	
-        if (timer == 0) {
-		var elem = $(this);
 
-		if (!(elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight())) {
-			event.stopPropagation();
-			event.gesture.stopPropagation();
-		} else {
+	//touch
+
+	var hammerdoc = Hammer(document);
+
+	hammerdoc.on("drag", function(ev) {
+
+		if (timer == 0) {
+			timer = 20;
+			direction = ev.gesture.direction == "down" ? "up" : "down";
+			checkLevel();
+			ev.gesture.preventDefault();
 		}
-	}
-    });
-    
+		ev.gesture.preventDefault();
+		return false;
+	});
+
+	$('section').hammer().on("drag", ".adva-cont", function(event) {
+		event.gesture.stopPropagation();
+		event.stopPropagation();
+		event.preventDefault();
+		event.gesture.preventDefault();
+		$(this).scrollTop($(this).scrollTop() - event.gesture.deltaY / 10);
+	});
+
+	$(document).hammer().on("drag", ".long", function(event) {
+
+		if (timer == 0) {
+			var elem = $(this);
+
+			if (!(elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight())) {
+				event.stopPropagation();
+				event.gesture.stopPropagation();
+			} else {
+			}
+		}
+	});
+
 	$(document).on('mousewheel DOMMouseScroll', function(e) {
-		
+
 		if (!scrolling) {
-			scrolling=true;
-			
+			scrolling = true;
+
 			if (e.deltaY != undefined) {
 				var delta = e.deltaY
-				
-			} 
-			else if (e.originalEvent.detail != 0) {
+
+			} else if (e.originalEvent.detail != 0) {
 				var delta = -e.originalEvent.detail;
-		
-			} 
-			else {
+
+			} else {
 				var delta = -e.originalEvent.deltaY
-				}
-				
+			}
+
 			if (delta < 0)
 				direction = "down"
 			else if (delta > 0)
 				direction = "up";
-			
+
 			checkLevel();
-		}
-		else {
-			
+		} else {
+
 			e.preventDefault();
 		}
-		
+
 		e.preventDefault();
 		return false;
-		
+
 	});
-	
-	
-	
-	});
-	
+
+});
 
 function chk_scroll(e) {
-	
+
 	var elem = $(e.currentTarget);
-	
-	if(elem.attr("id") != checkPoints[step] && elem.attr("id") != checkPoints[step][0]) {
-		
+
+	if (elem.attr("id") != checkPoints[step] && elem.attr("id") != checkPoints[step][0]) {
+
 		e.preventDefault();
 		return false;
 	}
-	
+
 	if (!scrolling) {
-		
+
 		if ((elem[0].scrollHeight - elem.scrollTop() > elem.outerHeight())) {
 			e.stopPropagation();
 		} else {
 			e.preventDefault();
-			
+
 		}
-	}
-	else {
+	} else {
 		e.preventDefault();
 		return false;
 	}
@@ -132,7 +122,7 @@ function chk_scroll(e) {
 
 function disableScroll(e, delta) {
 	var elem = $(e.currentTarget);
-	
+
 	elem.scrollTop(elem.scrollTop() - (40 * delta));
 	//set_bar();
 	e.stopPropagation();
@@ -145,9 +135,7 @@ function checkLevel() {
 	if (direction == "down" && step < checkPoints.length - 1) {
 		step++;
 		loadSection(checkPoints[step]);
-		
-		
-		
+
 	} else if (direction == "up" && step > 0) {
 		step--;
 		loadSection(checkPoints[step]);
@@ -165,12 +153,10 @@ $(document).keydown(function(e) {
 
 	e = e || window.event;
 
-	
-
 	if (e.keyCode == 38 && step > 0) {
 		e.preventDefault();
 		stepUp();
-		
+
 	} else if (e.keyCode == 40 && step < checkPoints.length - 1) {
 		e.preventDefault();
 		stepDown();
@@ -185,81 +171,89 @@ $(document).keydown(function(e) {
 
 //utility to animate transition between divs
 function scrollToID(id, speed) {
-	console.log("id",id)
-	cid="#"+id;
+	console.log("id", id)
+	cid = "#" + id;
 	var targetOffset = $(cid).offset().top;
 	$(cid).scrollTop(0);
 	$('html,body').animate({
 		scrollTop : targetOffset
-	}, speed, function(){
-		
+	}, speed, function() {
+
 		$(cid).prev("section").empty()
-  		$(cid).next("section").empty()
-  		
-		setTimeout(function(){
-				scrolling=false;
-			},500)
+		$(cid).next("section").empty()
+
+		setTimeout(function() {
+			scrolling = false;
+		}, 500)
 	});
 }
-	
-	function loadSection(sec) {
 
-		$("#sgnaf").css("width",step/(checkPoints.length-1)*100+"%");
-		var id, subsec;
-		
-		if ($.isArray(sec)) {
-			id=sec[0];
-			subsec=sec[1];
+function loadSection(sec) {
+
+	$("#sgnaf").css("width", step / (checkPoints.length - 1) * 100 + "%");
+	var id, subsec;
+
+	if ($.isArray(sec)) {
+		id = sec[0];
+		subsec = sec[1];
+	} else
+		id = sec;
+
+	if (!$('#' + id).html()) {
+		$.ajax({
+			url : "sections/" + id + ".html",
+			dataType : "html",
+			success : function(data) {
+
+				$('#' + id).html(data);
+				a = $(".adv-step:visible");
+
+				if (subsec && !a.hasClass("step" + subsec)) {
+
+					a.fadeOut(500, function() {
+						eval("step" + subsec + "()");
+						$(".adva-cont").scrollTop(0);
+						$(".step" + subsec).fadeIn(500)
+					});
+				}
+
+				scrollToID(checkPoints[step], 1500);
+
+			}
+		})
+	} else {
+		a = $(".adv-step:visible");
+
+		if (subsec && !a.hasClass("step" + subsec)) {
+			a.fadeOut(500, function() {
+				eval("step" + subsec + "()");
+				$(".adva-cont").scrollTop(0);
+				$(".step" + subsec).fadeIn(500)
+			});
 		}
-		else id=sec;
-		 
-	
-	if( !$('#'+id).html() ) {
-		$.ajax({ url: "sections/"+id+".html", dataType: "html",success: function(data) {
-			
-			$('#'+id).html(data);
-			
-			/*$('#'+id).find("script").each(function(i) {
-                    eval($(this).text());
-                });*/
-  			//$( "#"+id ).load( "sections/"+id+".html", function() {	
-  				a=$(".adv-step:visible");
-  				
-  				if (subsec && !a.hasClass("step"+subsec)) {
-  					
-		  			a.fadeOut(500,function(){eval("step"+subsec+"()"); $(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
-		  		}
-		  		
-		  		scrollToID(checkPoints[step],1500);
-		  		
-  			}
-  })
- }
-  		else {
-  			a=$(".adv-step:visible");
-  				
-  				if (subsec && !a.hasClass("step"+subsec)) {
-		  			a.fadeOut(500,function(){eval("step"+subsec+"()"); $(".adva-cont").scrollTop(0); $(".step"+subsec).fadeIn(500)});
-		  		}
-		  	scrollToID(checkPoints[step],1500);
-  			}
-  			
-  			window.location.hash= "sect-"+id; 
+		scrollToID(checkPoints[step], 1500);
 	}
 
+	window.location.hash = "sect-" + id;
+}
+
 //Scrollwheel while loading
-	
+
 $body = $("body");
 
 $(document).on({
-    ajaxStart: function() { $body.addClass("loading"); },
-     ajaxStop: function() { $body.removeClass("loading"); }    
+	ajaxStart : function() {
+		$body.addClass("loading");
+	},
+	ajaxStop : function() {
+		$body.removeClass("loading");
+	}
 });
 
 function stepDown() {
 	step++;
 	loadSection(checkPoints[step]);
-	
+
 }
 
 function stepUp() {
@@ -267,40 +261,32 @@ function stepUp() {
 	loadSection(checkPoints[step]);
 }
 
-function goToStep(id,s) {
-	console.log(id,s)
+function goToStep(id, s) {
+	console.log(id, s)
 	found = false;
-	
-	for( var i = 0; i < checkPoints.length; i++) {
-		if(s) {
-			if($.isArray(checkPoints[i]) && checkPoints[i][0]==id && checkPoints[i][1]==s) {
+
+	for (var i = 0; i < checkPoints.length; i++) {
+		if (s) {
+			if ($.isArray(checkPoints[i]) && checkPoints[i][0] == id && checkPoints[i][1] == s) {
 				step = i;
-				found=true;
+				found = true;
 				break;
-				}	
 			}
-		else if(checkPoints[i]==id || checkPoints[i][0]==id) {
+		} else if (checkPoints[i] == id || checkPoints[i][0] == id) {
 			step = i;
-			found=true;
+			found = true;
 			break;
 		}
-		
-	} 
-	
-	if(!found) {
+
+	}
+
+	if (!found) {
 		console.log("no section found");
 		return false;
-	}
-	
-	else {
+	} else {
 		loadSection(checkPoints[step]);
 		return true;
 	}
-	
+
 }
-
-
-
-
-
 
