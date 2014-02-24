@@ -22,41 +22,6 @@ $( document ).ready(function() {
 		"interval" : false
 	})
 
-	$("#protocol").click(function() {
-
-		if ($("#protocol").position().left > 0) {
-			$("#protocol").css("left", 0);
-			$(".close-btn").css('-webkit-transform', 'rotate(90deg)');
-			$(".close-btn").css('-moz-transform', 'rotate(90deg)');
-		}
-
-	})
-
-	$(".closing").click(function() {
-		
-		if ($("#protocol").css("left") == "0px") {
-
-			$("#protocol").css("left", "97%");
-			$(".close-btn").css('-webkit-transform', 'rotate(45deg)');
-			$(".close-btn").css('-moz-transform', 'rotate(45deg)');
-
-		}
-	})
-
-	$("b").hover(function() {
-		height = $(this).position().top;
-		att = $(this).attr('note');
-		txt = notes[att];
-		$(".section-text").append('<div class="note" style="top:' + height + 'px">' + txt + '</div>');
-	}, function() {
-		$(".note").remove();
-	})
-
-	$("#protocol").on("mousewheel DOMMouseScroll",function(event) {
-		e.preventDefault();
-		return false;
-	});
-
 	//=======================
 	//scroll interaction
 
