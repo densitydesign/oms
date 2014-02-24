@@ -85,7 +85,7 @@
            .attr("cx", function(d){return d.x})
           .attr("cy", function(d){return d.y})
           }
-        var bubbles = chart.selectAll(".bubble").data(bubble.nodes({"key": "root", "children" : group.top(Infinity)}))
+        var bubbles = chart.selectAll(".bubble").data(bubble.nodes({"key": "root", "children" : initValues}))
 
         bubbles.enter().append("circle")
           .on("click", function(d){
@@ -96,7 +96,7 @@
              if(query.length == 0){dimension.filterAll()}
              else(dimension.filter(function(d) { return query.indexOf(d) >= 0; }))
           })
-          .attr("r", function(d) { return d.r })
+          .attr("r", function(d){return d.r})
           .attr("cx", function(d){return d.x})
           .attr("cy", function(d){return d.y})
           .attr("class", "bubble")
@@ -107,14 +107,13 @@
 
         if(resize){
            bubbles.transition().duration(500)
-           //.attr("r", function(d) {return  d.r; })
-            .attr("r", function(d) {return rScale(d.value); })
+            .attr("r", function(d,i) {if(group.top(Infinity)[i-1]) return rScale(group.top(Infinity)[i-1].value); })
            .attr("cx", function(d){return d.x})
             .attr("cy", function(d){return d.y})
           }
           else{
         bubbles.transition().duration(500)
-          .attr("r", function(d) {return rScale(d.value); })
+          .attr("r", function(d,i) {if(group.top(Infinity)[i-1]) return rScale(group.top(Infinity)[i-1].value); })
         }
 
         bubbles.exit().remove()

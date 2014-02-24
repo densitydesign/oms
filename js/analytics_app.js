@@ -15,8 +15,6 @@ d3.csv('data/cs_analytics.csv', function(data) {
 	url = category.dimension(function(d) { return d.URL; }),
 	urls = tld.group();
 
-	var width = 300,
-		height = 100;
 
 	var tagContainer = d3.select("#category")
 								.on("click", function(){
@@ -31,13 +29,10 @@ d3.csv('data/cs_analytics.csv', function(data) {
 	     					})
 
 	 var queryContainer = d3.select("#query")
-	// 					.append("svg")
-	//      					.attr("width", '100%')
-	//      					.attr("height", '100%')
-	//      					.on("click", function(){
-	//      						tagContainer.call(tagChart)
-	//      						domainContainer.call(domainChart)
-	//      					})
+	     					.on("click", function(){
+	     						tagContainer.call(tagChart)
+	     						domainContainer.call(domainChart)
+	     					})
 
     var tagChart = who.barChart()
     				//.xMax(tags.top(1)[0].value)
