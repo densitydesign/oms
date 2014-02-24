@@ -236,7 +236,7 @@ body {
 	padding-top:80px;
 	border-right:1px solid #CCCCCC;
 	height:100%;
-	margin-bottom: 55px;
+
 }
 
 .adv-step{
@@ -276,6 +276,7 @@ body {
 	-ms-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 }
+
 .proto-title{
 	font-family:'Montserrat', sans-serif;
 	font-size:1.00em;
@@ -306,6 +307,10 @@ body {
 	transition: all 0.5s;
 }
 
+.proto-content{
+	width: 400px;
+	padding:45px;
+}
 
 /* Media Queries */
 
