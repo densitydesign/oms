@@ -157,6 +157,25 @@ body {
 	line-height: 170%;
 }
 
+.proto-content h2{
+	text-align:center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size:1.8em;
+	letter-spacing: 2px;
+}
+
+.proto-content p{
+	position:relative;
+	z-index:2;
+	font-family:Georgia;
+	font-size:1em;
+	color:#222222;
+	line-height: 170%;
+	text-align:justify;
+}
+
 /* NavBars*/
 .navbar{
 	background-color: #fff;
@@ -270,6 +289,7 @@ body {
 	position:fixed;
 	top:0;
 	background:#CCCCCC;
+	overflow:auto;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
@@ -293,7 +313,7 @@ body {
 	-ms-transform:rotate(-90deg) translate(-50%, 51.5%);
 	transform-origin:0 50%;
 	transform:rotate(-90deg) translate(-50%, 51.5%);
-	position:absolute;
+	position:fixed;
 	top:0;
 	bottom:0;
 	cursor:default;
@@ -305,11 +325,18 @@ body {
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
+	position:fixed;
 }
 
 .proto-content{
 	width: 400px;
-	padding:45px;
+	padding-left:65px;
+	padding-right:40px;
+	padding-top: 60px;
+}
+
+.proto-content img{
+	width: 100%;
 }
 
 /* Media Queries */
