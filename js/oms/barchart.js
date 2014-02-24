@@ -6,7 +6,10 @@
 
     var width = 600,
     	height = 600,
+      responsive = false,
+      resize = false,
     	query = [],
+      bgBars,
     	xMax,
 	 	dimension,
 	 	group,
@@ -16,7 +19,26 @@
     function barChart(selection){
     	selection.each(function(data){
 
-        	var chart = selection
+          var chart;
+
+
+             
+          if(responsive){
+             width = $(selection.node()).width(), 
+             height = $(selection.node()).height() > 0 ? $(selection.node()).height() : 600;
+           }
+
+          if (selection.select('svg').empty()){
+            chart = selection.append('svg')
+              .attr('width', width)
+              .attr('height', height)
+          }
+          else
+          {
+            chart = selection.select('svg')
+                  .attr('width', width)
+                  .attr('height', height)
+          }
 
         	var y = d3.scale.ordinal()
     				.rangeRoundBands([0, height], .4);
@@ -38,9 +60,14 @@
     			.attr("transform", "translate(" + 80 + ",0)");
 
     		chartContainer.exit().remove()
+
     		
-        var bgBars = chartContainer.selectAll(".bgBar")
-            .data(function(d){ return d})
+        if(chartContainer.selectAll(".bgBar").empty()){
+          
+          var bgData = $.extend(true, [], group.top(Infinity));
+
+        bgBars = chartContainer.selectAll(".bgBar")
+            .data(bgData)
 
         bgBars.enter().append("rect")
           .attr("class", "bgBar")
@@ -50,6 +77,18 @@
           .attr("width", function(d){ return x(d.value)})
           .filter(function(d){return x(d.value) >= 2})
           .attr("width", function(d){ return x(d.value) -2 })
+        }
+
+        if (resize && !chartContainer.selectAll(".bgBar").empty()){
+
+         bgBars
+          .transition()
+          .duration(500)
+            .attr("width", function(d){return x(d.value)})
+            .attr("y", function(d) { return y(d.key) + 1; })
+            .attr("x", 1)
+            .attr("height", function(d) { return y.rangeBand()-2})
+          }
 
     		var bars = chartContainer.selectAll(".bar")
       			.data(function(d){ return d})
@@ -69,10 +108,12 @@
 		      	else(dimension.filter(function(d) { return query.indexOf(d) >= 0; }))
 		      })
 
-		    bars
+        bars
 		    	.transition()
 		    	.duration(500)
 		      	.attr("width", function(d){ return x(d.value)})
+            .attr("y", function(d) { return y(d.key); })
+            .attr("height", function(d) { return y.rangeBand()})
 
 		    bars.exit().remove()
 
@@ -88,6 +129,9 @@
 
       		yvalues
       			.transition()
+            .duration(500)
+            .attr("y", function(d) { return y(d.key) + y.rangeBand() -2; })
+            .attr("x", 3)
       			.tween("text", function(d) {
       				var i = d3.interpolateNumber(this.textContent, d.value);
         			return function(t) {
@@ -109,11 +153,16 @@
 
 			ylegend
 				.text(function(d){return d.key})
+        .transition()
+        .duration(500)
+           .attr("y", function(d) { return y(d.key) + y.rangeBand() -2; })
+            .attr("x", 3)
 
 			ylegend.exit().remove()
 
 			d3.rebind(chart, bars, "on")
 
+      resize = false
 
     	}); //end selection
     } // end barChart
@@ -145,6 +194,18 @@
     barChart.group = function(x){
       if (!arguments.length) return group;
       group = x;
+      return barChart;
+    }
+
+    barChart.responsive = function(x){
+      if (!arguments.length) return responsive;
+      responsive = x;
+      return barChart;
+    }
+
+    barChart.resize = function(x){
+      if (!arguments.length) return resize;
+      resize = x;
       return barChart;
     }
 
