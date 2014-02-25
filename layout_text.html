@@ -14,13 +14,14 @@
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.mousewheel.js"></script>
+  <script src="js/jquery.scrollTo.min.js"></script>
   <script src="js/d3.v3.min.js"></script>
   <script src="js/hammer.min.js"></script>
   <script src="js/jquery.hammer.min.js"></script>
   <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
   <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
   <script src="js/d3.v3.min.js"></script>
-  <script type="text/javascript" src="js/denseShow.js"></script>
+  <!--<script type="text/javascript" src="js/denseShow.js"></script>-->
   <script src="js/processing.js"></script> 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,13 +29,14 @@
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
+
 </head>
 <body>
 
   <!-- Fixed navbar -->
   <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
-      <div class="navbar-header">
+      <div class="navbar-header" id="main-nav">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -43,9 +45,13 @@
         </button>
         <a class="navbar-brand" href="#"></a>
       </div>
-      <div class="navbar-collapse collapse">
+      <div class="navbar-collapse collapse" id="main-index">
         <ul class="nav navbar-nav">
-          <li><a href="#">intro</a></li>
+          <li id="one"><a href="#">intro bella lunga che ci st&agrave;</a></li>
+          <li id="two"><a href="#">un bel capitolo</a></li>
+          <li id="three"><a href="#">che storia sto cs</a></li>
+          <li id="four"><a href="#">immagini inguardabili</a></li>
+          <li id="five"><a href="#">finalmente l'ultimo</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -58,6 +64,13 @@
         <h3>introduction</h3>
         <h1>This is what this is about</h1>
         <hr>
+        <span id="stocazzo">
+          <a id="one">1</a>-
+          <a id="two">2</a>-
+          <a id="three">3</a>-
+          <a id="four">4</a>-
+          <a id="five">5</a>
+        </span>
         <p>Caesarean section is a life-saving surgical procedure for both, mother and baby, used when certain complications arise during pregnancy or childbirth. As with other medical interventions and procedures, its use follows the global pattern of health care inequity: underuse in low-income settings and adequate or even overuse in middle- and high-income settings.</p>
         <p>Deliveries by caesarean section (as opposed to vaginal or "normal" delivery) are growing in an unprecedented and uncontrolled manner. In 1985 the World Health Organization (WHO) stated: "There is no justification for any region to have caesarean section rates higher than 10-15%". Despite this recommendation, the proportion of babies delivered by caesarean section has been steadily increasing over the last decades, becoming a major public health concern and a cause of considerable polarized debate and discussions. Recent figures show that most of the middle- and high-income countries exceed this recommendation and many present caesarean section rates over 30%. There is lack of scientific evidence indicating any substantial maternal and perinatal benefits from increasing rates, and some studies have shown that high caesarean section rates could be linked to negative consequences in maternal and child health.</p>
         <div class="col-md-5 quote">
@@ -75,5 +88,183 @@
       <div class="arrow-next"></div>
     </div>
   </div>
+  <div class="overlay overlay-slidedown">
+  <button type="button" class="overlay-close">Close</button>
+  <nav>
+    <ul>
+        <li id="one"><a href="#">intro bella lunga che ci st&agrave;</a></li>
+        <li id="two"><a href="#">un bel capitolo</a></li>
+        <li id="three"><a href="#">che storia sto cs</a></li>
+        <li id="four"><a href="#">immagini inguardabili</a></li>
+        <li id="five"><a href="#">finalmente l'ultimo</a></li>
+    </ul>
+  </nav>
+</div>
+<script type="text/javascript">
+$('#stocazzo a').click(function(){
+  $('#main-index').scrollTo( $('#' + $(this).attr('id')), 200 );
+});
+var triggerBttn = $('#main-index' ),
+overlay = $( 'div.overlay' ),
+closeBttn = $( 'div.overlay > button.overlay-close' );
+function toggleOverlay() {
+  if ($(window).width() < 768){ 
+    return;
+  }
+
+  if( overlay.hasClass( "open" )) {
+    overlay.removeClass("open")
+  }
+  else if( !overlay.hasClass( "open" ) ) {
+    overlay.addClass("open")
+  }
+}
+
+triggerBttn.click(toggleOverlay);
+closeBttn.click(toggleOverlay);
+
+$(window).resize(function(){
+    if( overlay.hasClass( "open" ) && $(window).width() < 768) {
+    overlay.removeClass("open")
+    $('#main-index').collapse('show')
+  }
+})
+
+</script>
+    <style>
+    @media (min-width: 768px){
+      
+      #main-index{
+          text-align: center;
+          overflow: hidden!important;
+      }
+
+      #main-index>ul {
+        max-height: 55px;
+        float: none;
+
+      }
+
+      #main-index>ul>li {
+        float: none;
+        max-height: 55px;
+        margin-left: -55px;
+      }
+
+    };
+  </style>
+  <style type="text/css">
+      #main-nav>.navbar-toggle {
+      border-color: white;
+      border-radius: 0px;
+    };
+
+    #main-index>.who-title{
+      height: 55px;
+      width: 55px;
+      }
+
+    #main-index>.who-title {
+      padding: 15px 15px;
+      font-size: 18px;
+      line-height: 20px;
+      }
+
+        /* Overlay style */
+    .overlay {
+      z-index: 10000;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(153,204,51,0.9);
+    }
+
+    /* Overlay closing cross */
+    .overlay .overlay-close {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      overflow: hidden;
+      border: none;
+      background: url(../img/cross.png) no-repeat center center;
+      text-indent: 200%;
+      color: transparent;
+      outline: none;
+      z-index: 100;
+    }
+
+    /* Menu style */
+    .overlay nav {
+      text-align: center;
+      position: relative;
+      top: 50%;
+      height: 60%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+    .overlay ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      display: inline-block;
+      height: 100%;
+      position: relative;
+    }
+
+    .overlay ul li {
+      display: block;
+      height: 20%;
+      height: calc(100% / 5);
+      min-height: 54px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .overlay ul li a {
+      font-size: 54px;
+      font-weight: 300;
+      display: block;
+      color: #fff;
+      -webkit-transition: color 0.2s;
+      transition: color 0.2s;
+    }
+
+    .overlay ul li a:hover,
+    .overlay ul li a:focus {
+      color: #e3fcb1;
+    }
+
+    /* Effects */
+    .overlay-slidedown {
+      visibility: hidden;
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+      transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+    }
+
+    .overlay-slidedown.open {
+      visibility: visible;
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+      -webkit-transition: -webkit-transform 0.4s ease-in-out;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    @media screen and (max-height: 30.5em) {
+      .overlay nav {
+        height: 70%;
+        font-size: 34px;
+      }
+      .overlay ul li {
+        min-height: 34px;
+      }
+    }
+  </style>
 </body>
-</html>]]]
+</html>
