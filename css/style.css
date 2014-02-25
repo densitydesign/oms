@@ -414,14 +414,14 @@ body {
 	padding-bottom: 50px;
 	height:100%;
 	color: #f8f8f8;
-	background: url(../img/intro-bg.jpg) no-repeat center center;
+	background-color: #D6C33B;
 	background-size: cover;
 	text-align: center;
 }
 
 .intro-message {
 	position: relative;
-	padding-top: 20%;
+	padding-top: 25%;
 	padding-bottom: 20%;
 }
 
@@ -485,6 +485,7 @@ body {
 	vertical-align: middle;
 	margin-top:240px;
 	text-decoration:underline;
+	text-transform: uppercase;
 }
 
 #partners{
@@ -557,8 +558,18 @@ body {
 .member-details h4{
 	text-align: center;
 	font-size: 1em;
-	text-transform: uppercase;;
-	font-family:'Montserrat', sans-serif;
+	font-family:'Montserrat';
+	text-transform: uppercase;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+
+.member-details h5{
+	text-align: center;
+	font-size: 1em;
+	font-family:Georgia;
+	padding-bottom: 10px;
+	font-style: italic;
 }
 
 
@@ -640,6 +651,32 @@ body {
 	.case-studies {
 		height:300px;
 
+	}
+
+	.intro-message {
+		padding-bottom: 15%;
+	}
+
+	.intro-message > h1 {
+		font-size: 3em;
+	}
+
+	ul.intro-social-buttons > li {
+		display: block;
+		margin-bottom: 20px;
+		padding: 0;
+	}
+
+	ul.intro-social-buttons > li:last-child {
+		margin-bottom: 0;
+	}
+
+	.intro-divider {
+		width: 100%;
+	}
+
+	.intro-header {
+		height:70%;
 	}
 }
 
