@@ -47,3 +47,17 @@ margin-bottom: 50px;
 	line-height: 10%;
 	margin-bottom: 20px;
 }
+
+.btn-container{
+	margin: 10px 10px 0 20px;
+}
+
+.btn-container span{
+	
+	margin-left:10px;
+}
+.pressed{
+	background-color: #ebebeb;
+}
+
+
