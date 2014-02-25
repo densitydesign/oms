@@ -162,8 +162,10 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
-	font-size:1.8em;
+	font-size:1em;
 	letter-spacing: 2px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .proto-content p{
@@ -174,6 +176,32 @@ body {
 	color:#222222;
 	line-height: 170%;
 	text-align:justify;
+}
+
+.proto-content ul{
+	z-index:2;
+	font-family:Georgia;
+	font-size:1em;
+	color:#222222;
+	line-height: 170%;
+	margin-left: 0;
+	padding: 0;
+	list-style: none;
+
+}
+
+.proto-content .reference{
+	z-index:2;
+	font-family:Georgia;
+	font-size:1em;
+	color:#222222;
+	line-height: 170%;
+}
+
+.reference a{
+	font-size:1em;
+	color:#222222;
+	line-height: 170%;
 }
 
 /* NavBars*/
@@ -313,7 +341,7 @@ body {
 	-ms-transform:rotate(-90deg) translate(-50%, 51.5%);
 	transform-origin:0 50%;
 	transform:rotate(-90deg) translate(-50%, 51.5%);
-	position:fixed;
+	position:absolute;
 	top:0;
 	bottom:0;
 	cursor:default;
@@ -325,18 +353,31 @@ body {
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
-	position:fixed;
 }
 
 .proto-content{
 	width: 400px;
-	padding-left:65px;
-	padding-right:40px;
+	padding-left:75px;
+	padding-right:30px;
 	padding-top: 60px;
+	padding-bottom: 60px;
 }
 
 .proto-content img{
 	width: 100%;
+}
+
+.proto-content hr{
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.reference{
+	background-image: url(../img/pro_ref.png);
+	background-repeat: no-repeat;
+	margin-top: 20px;
+	padding-left: 30px;  /* width of the image plus a little extra padding */
+	display: block;  /* may not need this, but I've found I do */
 }
 
 /* Media Queries */
