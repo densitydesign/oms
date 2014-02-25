@@ -334,7 +334,7 @@ body {
 
 #protocol{
 	color:#FFFFFF;
-	z-index:1031;
+	z-index:0;
 	width:400px;
 	right:-360px;
 	height:100%;
@@ -365,10 +365,11 @@ body {
 	-ms-transform:rotate(-90deg) translate(-50%, 51.5%);
 	transform-origin:0 50%;
 	transform:rotate(-90deg) translate(-50%, 51.5%);
-	position:absolute;
-	top:0;
-	bottom:0;
 	cursor:default;
+}
+
+.closing{
+	height: 350px;
 }
 
 .close-btn{
@@ -380,11 +381,12 @@ body {
 }
 
 .proto-content{
-	width: 400px;
-	padding-left:75px;
-	padding-right:30px;
-	padding-top: 60px;
-	padding-bottom: 60px;
+	width: 100%;
+	padding-left:0px;
+	padding-right:10px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+
 }
 
 .proto-content img{
