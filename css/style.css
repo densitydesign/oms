@@ -935,9 +935,15 @@ h4.section{
 .tt{
 	background:#fff;
 	padding:5px 2px;
-	border: 1px solid #aaa;
-	padding: 5px 10px;
+	border: 1px solid #ccc;
+	padding:20px;
 	line-height: 1.5em;
+	font-size: 1em;
+	display: block;
+	text-transform: capitalize;
+	text-align: left;
+	font-family: Georgia;
+	min-width: 250px;
 }
 
 .tt:before{
@@ -947,6 +953,22 @@ h4.section{
 	border-top: 10px solid transparent;
 	border-bottom: 10px solid transparent; 
 }
+
+.tt b{
+	font-size: 1em;
+	display: block;
+	text-transform: uppercase;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.tt p{
+	padding-bottom:7px; 
+}
+
 
 
 /* Media Queries */
