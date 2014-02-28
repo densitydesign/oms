@@ -928,15 +928,16 @@ h4.section{
 }
 
 
+/* Treemap */
 
-
-/* Tooltips */
+.label-tree {
+	text-transform: capitalize;
+}
 
 .tt{
 	background:#fff;
-	padding:5px 2px;
 	border: 1px solid #ccc;
-	padding:20px;
+	padding:15px;
 	line-height: 1.5em;
 	font-size: 1em;
 	display: block;
@@ -966,7 +967,7 @@ h4.section{
 }
 
 .tt p{
-	padding-bottom:7px; 
+	padding-bottom:1px; 
 }
 
 
