@@ -44,8 +44,8 @@ svg {
 }
 
 #viz{
-	margin-top:4%;
 	width:100%;
+	height:90%;
 }
 .container{
 	height:90%;
@@ -59,19 +59,20 @@ svg{
 	margin-right: 2%;
 }
 .slider{
-	width:45% !important;
+	width:20% !important;
 	float:left;
 	clear:right;
-	margin-top:40px;
+	margin-top:10px;
 	margin-bottom:10px;
 }
 .btn, .btn:hover,.btn:focus {
 	background:#83A493;
 	border:1px solid white;
 	color:#fff;
+	
 }
 .rad{
-	margin:0px 0px 10px 0px;
+	margin:0px 0px 10px 1%;
 	
 }
 .img-cont{
@@ -86,6 +87,48 @@ transition: height 2s;
 	width:100%;
 	height:auto;
 }
+
+.labels{
+	margin-top:100px;
+	margin-left:1%;
+}
+
+.labels h3{
+	font-size:1.2em !important;
+	
+}
+
+.list-labels{
+	width:45%;
+	float: left;
+}
+.cmd-labels{
+	width:45%;
+	float:left;
+}
+
+.cmd-labels h3{
+	display:inline-block;
+	margin-right:1%;
+	width:45%;
+	
+}
+.list-labels h3{
+	display:inline-block;
+	margin-right:3%;
+	width:45%;
+}
+
+.slider .tooltip{
+	display:none;
+	bottom:auto;
+	border-width: 5px !important;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	margin-top:270%;
+	border-bottom: 5px solid black;	
+}
+
 
 </style>
   	
@@ -112,6 +155,17 @@ transition: height 2s;
     </div>
   
   	<div class="container">
+  		<div class="labels row">
+  			<div class="list-labels">
+  			<h3>Google language</h3>
+  			<h3>Category</h3>
+  			</div>
+  			<div class="cmd-labels">
+  			<h3>Size</h3>
+  			<h3>Show</h3>
+  			</div>
+  			
+  		</div> 
   	<section id="viz" class="row section-row">
   		
   	</section>
@@ -263,14 +317,14 @@ dsv_egg("data/CS_img.csv",function(d) {
     .attr("class","rad")
     .attr("style","float:left; clear:right")
     
-    $(".rad").append('<button class="btn">Toggle pictures / colors</button>')
+    $(".rad").append('<div class="btn-group show-lvl"><button id="language" type="button" class="btn btn-default">Images</button><button id="forum" type="button" class="btn btn-default">Colors</button></div>')
     
     
     d3.select("#viz").append("div")
     .attr("class","imgs")
  
     offset=$(".imgs").position().top
-    $(".imgs").height(height-offset);
+    $(".imgs").height(height);
     
     var t=d3.select("svg").append("g").attr("class","tag-group")
     
@@ -363,7 +417,7 @@ dsv_egg("data/CS_img.csv",function(d) {
 	    
 	    //enter new elements
 	    enter.attr("class","tag")
-	    .attr("x",  40+listW)
+	    .attr("x",  width*.1+listW)
 		.attr("y", function(e){return e.y})
 	    .attr("width", listW)
 		.attr("height", function(e) {return e.h })
@@ -402,7 +456,7 @@ dsv_egg("data/CS_img.csv",function(d) {
 	    .attr("class", "tag-txt")
 	    .attr("font-family", "serif")
 		.attr("font-size", "1em")
-		.attr("x",  40+listW)
+		.attr("x",  width*.12+listW)
 		.attr("y", function(e){return e.y})
 		.attr("dx", "0.4em")
 		.attr("dy", "1.3em")
@@ -438,8 +492,13 @@ dsv_egg("data/CS_img.csv",function(d) {
      })
      
      d3.select(window).on("resize", function() {
-		d3.select("svg").attr("width", $("#viz").width()*0.45);
+     	width=$("#viz").width()*0.45
+     	listW = width*0.45;
+		d3.select("svg").attr("width", width);
 		d3.select("svg").attr("height", $("#viz").height());
+		d3.selectAll("rect").attr("width", listW)
+		d3.selectAll(".tag") .attr("x",  width*.1+listW)
+		d3.selectAll(".tag-txt").attr("x",  width*.1+listW)
 	});
      
 </script>
