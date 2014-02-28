@@ -753,6 +753,14 @@ h4.section{
 	line-height: 1.5em;
 }
 
+.tt:before{
+	width: 0; 
+	height: 0; 
+	background:#fff;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent; 
+}
+
 
 /* Media Queries */
 
