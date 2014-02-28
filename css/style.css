@@ -122,6 +122,33 @@ body {
 	margin-bottom: 30px;
 }
 
+h3.section{
+	font-variant:small-caps;
+	font-size:1.7em;
+	color:#222;
+	text-align:left;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 3px;
+	font-weight: 700;
+}
+
+h4.section{
+	font-variant:small-caps;
+	font-size:1em;
+	color:#cbccce;
+	text-align:left;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 2px;
+	font-weight: 400;
+	line-height: 10%;
+}
+
+.section-row hr{
+	margin-bottom:20px;
+	margin-top:0px;
+	color: #CCC;
+}
+
 
 .adv-step h3{
 	text-align:left;
@@ -251,7 +278,7 @@ body {
 .navbar-brand:focus {
 	background-color: #000;
 }
- 
+
 .scrolldown {
 	position: fixed;
 	bottom: 0;
@@ -586,20 +613,71 @@ body {
 	height: 300px;
 }
 
+/*analytics*/
 
+.cont-analytics{
+	padding-top: 60px;
+}
+
+.analytics {
+	padding-left:0;
+}
+
+.numbers{
+	z-index:2;
+	font-family:Georgia;
+	font-size:1.4em;
+	color:#222222;
+	padding-bottom:15px;
+}
+
+/* barchart analytics */
+
+.yvalue, .ylegend, .bubbleLegend{
+	font-family: 'Montserrat';
+	color: "#222";
+	font-weight: "700";
+	font-size: 12px;
+}
+
+
+.bgBubble, .bgBar{
+	fill: none;
+	stroke: #CBCCCE;
+	stroke-width: 1px;
+	stroke-linecap: round;
+	stroke-dasharray: 1,2;
+}
+
+.bar, .bubble{
+	fill: #84A594;
+	-webkit-transition:fill 0.3s ease-in-out;  
+	transition:fill 0.3s ease-in-out;
+}
+.bar:hover, .bubble:hover{
+	fill: #5c7367;
+}
+.bar.selected, .bubble.selected{
+	fill: #5c7367;
+}
+
+.toggle-wiki{
+	float:right;
+	margin-bottom:-20px;
+}
 
 
 /* Components */
 
 #custom p {
-margin-bottom: 50px;
+	margin-bottom: 50px;
 }
 
 /*Single Buttons*/
 #custom .btn {
 	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 1px;
-    -webkit-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
@@ -621,7 +699,7 @@ margin-bottom: 50px;
 	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-    -webkit-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
@@ -655,7 +733,7 @@ margin-bottom: 50px;
 }
 
 .btn-container span{
-	
+
 	margin-left:10px;
 }
 .pressed{
@@ -679,57 +757,57 @@ margin-bottom: 50px;
 /* Media Queries */
 
 @media (max-width: 992px) {
-	
+
 	.legend{
-	border:none;
-	padding-left: 20px;
+		border:none;
+		padding-left: 20px;
 	}
 
 	.side-panel{
-	height:30%;
-	overflow:auto;
-	border-bottom: 1px solid #CCCCCC;
+		height:30%;
+		overflow:auto;
+		border-bottom: 1px solid #CCCCCC;
 	}
 }
 
 @media (max-width: 767px) {
-	
+
 	.title{
-	font-size:2.5em;	
+		font-size:2.5em;	
 	}
 
 	.subtitle{
-	font-size:1.5em;	
+		font-size:1.5em;	
 	}
 
 	.section-text p{
-	font-size:1.2em;
-	line-height: 170%;
+		font-size:1.2em;
+		line-height: 170%;
 	}
 
 	.section-text h1{
-	font-size:2em;
+		font-size:2em;
 	}
 
 	.section-text h3{
-	font-size:0.7em;
+		font-size:0.7em;
 	}
 
 	.section-text .quote {
-	line-height: 170%;
-	margin-left: 0px;
+		line-height: 170%;
+		margin-left: 0px;
 	}
 
 
 	.side-panel{
-	height:30%;
-	overflow:auto;
-	border-bottom: 1px solid #CCCCCC;
+		height:30%;
+		overflow:auto;
+		border-bottom: 1px solid #CCCCCC;
 	}
 
 	.legend{
-	border:none;
-	padding-left: 10px;
+		border:none;
+		padding-left: 10px;
 	}
 
 	.case-studies h1{
