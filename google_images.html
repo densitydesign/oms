@@ -45,6 +45,7 @@ svg {
 
 #viz{
 	margin-top:4%;
+	width:100%;
 }
 .container{
 	height:90%;
@@ -53,6 +54,9 @@ svg {
 	float:left;
 	width:45%;
 	overflow:auto;
+}
+svg{
+	margin-right: 2%;
 }
 .slider{
 	width:45% !important;
@@ -194,59 +198,6 @@ transition: height 2s;
 		</div>
 			
 	</div>
-	
-    
-    <script>
-	$(document).ready(function(){
-	    
-	    $("#protocol").css("left","97%");
-
-	    //General interactions
-	
-		$('.carousel').carousel({
-		  "wrap":false,
-		  "interval":false
-		})
-		
-		$("#protocol").click(function() {
-			
-			if($("#protocol").position().left >0){ 
-				$("#protocol").css("left",0);
-				$(".close-btn").css('-webkit-transform','rotate(90deg)');
-				$(".close-btn").css('-moz-transform','rotate(90deg)');
-			}
-		})
-		
-		$(".closing").click(function() {
-			
-			if($("#protocol").css("left")=="0px") {
-
-				$("#protocol").css("left","97%");
-				$(".close-btn").css('-webkit-transform','rotate(45deg)');
-				$(".close-btn").css('-moz-transform','rotate(45deg)');
-
-			}
-		})
-		
-		
-		$("b").hover(function() {
-			height=$(this).position().top;
-			att = $(this).attr('note');
-			txt = notes[att]; 
-			$(".section-text").append('<div class="note" style="top:'+height+'px">'+txt+'</div>');
-		},
-		
-		function() {
-			$(".note").remove();
-		})
-		
-			
-		$("#protocol").mousewheel(function(event){
-			return false;
-		});
-	});
-
-	</script>
 	
 	<script>
 var col=true;
@@ -485,6 +436,12 @@ dsv_egg("data/CS_img.csv",function(d) {
      	if(col) $(".imgs img").fadeIn(300)
      	else $(".imgs img").fadeOut(300)
      })
+     
+     d3.select(window).on("resize", function() {
+		d3.select("svg").attr("width", $("#viz").width()*0.45);
+		d3.select("svg").attr("height", $("#viz").height());
+	});
+     
 </script>
 	
 	
