@@ -665,7 +665,15 @@ margin-bottom: 50px;
 
 
 
+/* Tooltips */
 
+.tt{
+	background:#fff;
+	padding:5px 2px;
+	border: 1px solid #aaa;
+	padding: 5px 10px;
+	line-height: 1.5em;
+}
 
 
 /* Media Queries */

@@ -111,327 +111,380 @@
 						</div>
 					</div>
 
-					</div>
-			
+				</div>
 
-					<div class="col-md-12 col-sm-3 col-xs-3 legend">
-						<h3>key</h3>
-						<p>
-							Blue is good
-							<br/>
-							Red is bad
-						</p>
-					</div>
+				<div class="col-md-12 col-sm-3 col-xs-3 legend">
+					<h3>key</h3>
+					<p>
+						Blue is good
+						<br/>
+						Red is bad
+					</p>
 				</div>
 			</div>
-			<div class="col-md-9 col-sm-12 main-viz"></div>
 		</div>
+		<div class="col-md-9 col-sm-12 main-viz"></div>
+	</div>
+</div>
+
+<div id="protocol">
+
+	<div class="proto-title closing">
+		PROTOCOL_01 <img class="close-btn" src="img/cross.png"/>
 	</div>
 
-	<div id="protocol">
+</div>
 
-		<div class="proto-title closing">
-			PROTOCOL_01 <img class="close-btn" src="img/cross.png"/>
-		</div>
+<style>
+	rect {
+		stroke: none;
+	}
 
-	</div>
+	form {
+		position: absolute;
+		left: 30px;
+		top: 10px;
+	}
 
-	<style>
-		rect {
-			stroke: none;
-		}
+	section {
+		height: 100%;
+	}
 
-		form {
-			position: absolute;
-			left: 30px;
-			top: 10px;
-		}
+	.main-viz {
+		padding-top: 80px;
+	}
 
-		section {
-			height: 100%;
-		}
+</style>
 
-		.main-viz {
-			padding-top: 80px;
-		}
+<script>
+	console.log("loaded")
+	var data, treemap, cell, rects, node, x, y, root, n
 
-	</style>
+	var dsv_egg = d3.dsv(";", "text/plain");
 
-	<script>
-		console.log("loaded")
-		var data, treemap, cell, rects, node
-
-		var dsv_egg = d3.dsv(";", "text/plain");
-
-		dsv_egg("data/threads.csv", function(d) {
-			return {
-				lang : d.lang,
-				forum : d.forum,
-				title : d.title,
-				orig_author : d.original_author,
-				time : +d.time,
-				nb_authors : +d.nb_authors,
-				nb_replies : +d.nb_replies,
-				post_length : +d.avg_post_length
-			};
-		}, function(error, rows) {
-
-			//COMMENT EN
-			rows = rows.filter(function(row) {
-				if (row.lang == "en")
-					return false;
-				else
-					return true;
-			});
-
-			data = d3.nest().key(function(d) {
-				return d.lang;
-			}).key(function(d) {
-				return d.forum;
-			}).entries(rows);
-
-			viz();
-		});
-
-		var margin = {
-			top : 10,
-			right : 10,
-			bottom : 10,
-			left : 10
-		}, width = window.outerWidth * 0.7 - margin.left - margin.right, height = window.outerHeight * 0.8 - margin.top - margin.bottom;
-
-		var txtScale = d3.scale.linear().domain([1, 4]).range([1, 0.4])
-
-		var color = d3.scale.ordinal().range(["#D5C23A", "#E83931", "#83A493", "#415762", "#351D11"]);
-
-		var treemap = d3.layout.treemap().size([width, height]).sticky(true).padding(function(d) {
-			return 10 - (d.depth * 2)
-		}).children(function(d) {
-			return d.values;
-		}).value(function(d) {
-			return 1
-		});
-
-		var div = d3.select(".main-viz").append("svg").attr("width", (width + margin.left + margin.right)).attr("height", (height + margin.top + margin.bottom))
-
-		function viz() {
-
-			data = {
-				"key" : "data",
-				"values" : data
-			}
-
-			node = div.datum(data).selectAll(".node").data(treemap.nodes).enter().append("rect").attr("class", "node").call(position).style("fill", function(d) {
-				if (!d.depth > 1)
-					return "#83A493";
-				else if (d.depth > 0)
-					return d.lang == 'it' || d.key == 'it' || d.parent.key == 'it' ? "#83A493" : '#D6C33B';
-				else
-					return "none"
-			}).style("opacity", 1).on("click", function(d) {
-				console.log(d)
-			});
-			//.text(function(d) { return d.children ? null : d.depth; });
-
-			createText(1);
-
-			d3.selectAll("input").on("change", function change() {
-				var value = this.value === "count" ? function(d) {
-					return d.nb_authors;
-				} : function(d) {
-					return 1.00;
-				};
-
-				node.data(treemap.value(value).nodes).transition().duration(500).call(position);
-
-				d3.selectAll(".text").transition().duration(500).attr("x", function(d) {
-					return d.x
-				}).attr("y", function(d) {
-					return d.y
-				})
-			});
+	dsv_egg("data/threads.csv", function(d) {
+		return {
+			lang : d.lang,
+			forum : d.forum,
+			title : d.title,
+			orig_author : d.original_author,
+			time : +d.time,
+			nb_authors : +d.nb_authors,
+			nb_replies : +d.nb_replies,
+			post_length : +d.avg_post_length
 		};
+	}, function(error, rows) {
 
-		function position() {
-			this.attr("x", function(d) {
-				return d.x;
-			}).attr("y", function(d) {
-				return d.y;
-			}).attr("width", function(d) {
-				return Math.max(0, d.dx - 1);
-			}).attr("height", function(d) {
-				return Math.max(0, d.dy - 1);
-			});
+		//COMMENT EN
+		rows = rows.filter(function(row) {
+			if (row.lang == "en")
+				return false;
+			else
+				return true;
+		});
+
+		data = d3.nest().key(function(d) {
+			return d.lang;
+		}).key(function(d) {
+			return d.forum;
+		}).entries(rows);
+
+		viz();
+	});
+
+	var margin = {
+		top : 10,
+		right : 10,
+		bottom : 10,
+		left : 10
+	}, width = window.outerWidth * 0.7 - margin.left - margin.right, height = window.outerHeight * 0.8 - margin.top - margin.bottom;
+
+	var txtScale = d3.scale.linear().domain([1, 4]).range([1, 0.4])
+	x = d3.scale.linear().range([0, width / 2])
+	y = d3.scale.linear().range([0, height / 2])
+
+	var color = d3.scale.ordinal().range(["#D5C23A", "#E83931", "#83A493", "#415762", "#351D11"]);
+
+	var treemap = d3.layout.treemap().size([width, height]).sticky(true).padding(function(d) {
+		return 8 - (d.depth * 2)
+	}).children(function(d) {
+		return d.values;
+	}).value(function(d) {
+		return 1
+	});
+
+	var div = d3.select(".main-viz").append("svg").attr("width", (width + margin.left + margin.right)).attr("height", (height + margin.top + margin.bottom))
+	var tt = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
+
+	function viz() {
+
+		data = {
+			"key" : "data",
+			"values" : data
 		}
+		n = root = data;
+		console.log(n);
 
-		function step1() {
-			node.transition().duration(500).style("opacity", 1)
-			createText(1);
-		}
-
-		function step2() {
-
-			console.log("2")
-			node.transition().duration(500).style("opacity", function(d) {
-				if (d.depth > 1)
-					return 1;
-				else
-					return 0
-			})
-			createText(2);
-		}
-
-		function step3() {
-
-			node.data(treemap.value(function(d) {
-				return 1;
-			}).nodes).transition().duration(500).call(position).style("opacity", function(d) {
-				if (d.depth < 3)
-					return 0;
-				else
-					return 1
-			});
-
-			d3.selectAll(".text").remove();
-		}
-
-		function step4() {
-
-			val = function(d) {
-				return d.nb_replies;
+		node = div.datum(data).selectAll(".node").data(treemap.nodes).enter().append("rect").attr("class", "node").call(position).style("fill", function(d) {
+			if (!d.depth > 1)
+				return "#83A493";
+			else if (d.depth > 0)
+				return d.lang == 'it' || d.key == 'it' || d.parent.key == 'it' ? "#83A493" : '#D6C33B';
+			else
+				return "none"
+		}).style("opacity", 1).on("click", function(d) {
+			console.log(d)
+		}).attr("class", function(d) {
+			return "lvl-" + d.depth
+		}).on('click', function(d) {
+			if (l == d.depth) {
+				
+					drawTt(d);
+					
+				
 			}
+		})
+		//.text(function(d) { return d.children ? null : d.depth; });
 
-			node.data(treemap.value(val).nodes).transition().duration(500).call(position).style("opacity", function(d) {
-				if (d.depth < 3)
-					return 0;
-				else
-					return 1
-			});
+		createText(1);
 
-			d3.selectAll(".text").remove();
-
-		}
-
-		function step5() {
-
-			node.data(treemap.value(function(d) {
-				return d.time;
-			}).nodes).transition().duration(500).call(position).style("opacity", function(d) {
-				if (d.depth < 3)
-					return 0;
-				else
-					return 1
-			});
-
-			d3.selectAll(".text").remove();
-		}
-
-		function step6() {
-
-			console.log("6")
-			node.data(treemap.value(function(d) {
+		d3.selectAll("input").on("change", function change() {
+			var value = this.value === "count" ? function(d) {
 				return d.nb_authors;
-			}).nodes).transition().duration(500).call(position).style("opacity", function(d) {
-				if (d.depth < 3)
-					return 0;
-				else
-					return 1
-			})
+			} : function(d) {
+				return 1.00;
+			};
 
-			d3.selectAll(".text").remove();
-		}
+			node.data(treemap.value(value).nodes).transition().duration(500).call(position);
 
-		function step7() {
-			step6()
-		}
-
-		function createText(lvl) {
-
-			d3.selectAll(".text").remove();
-
-			div.selectAll(".text").data(treemap.nodes).enter().append("text").filter(function(d) {
-				if (d.depth == lvl && d.dx > 100 && d.dy > 20)
-					return true;
-				else
-					return false;
-			}).attr("class", "text").attr("font-family", "sans-serif").attr("font-size", txtScale(lvl) + "em").attr("fill", "white").transition().duration(500).attr("opacity", 0.7).attr("x", function(d) {
-				console.log(d);
+			d3.selectAll(".text").transition().duration(500).attr("x", function(d) {
 				return d.x
 			}).attr("y", function(d) {
 				return d.y
-			}).attr("dx", txtScale(lvl) * 0.7 + "em").attr("dy", txtScale(lvl) * 1.4 + "em").text(function(d) {
-				return d.key
-			});
+			})
+		});
+	};
+	
+	function drawTt(d) {
+		
+		tt.style("opacity", 1);
+		if(d.depth==1) {
+			tt.html('<div class="tt"><div><b>Site language:</b> '+d.key+'</div><div><b>Forum count:</b> '+d.values.length+'</div></div>').style("left", (d3.event.pageX) + "px").style("top", (d3.event.pageY - 28) + "px");
+		}
+		else if(d.depth==2) {
+			tt.html('<div class="tt"><div><b>Forum title:</b> '+d.key+'</div><div><b>Post count:</b> '+d.values.length+'</div></div>').style("left", (d3.event.pageX) + "px").style("top", (d3.event.pageY - 28) + "px");
+		}
+		else if(d.depth==3) {
+			tt.html('<div class="tt"><div><b>Author: </b>'+d.orig_author+'</div><div><b>Post title:</b> '+d.title+'</div><div><b>Forum:</b> '+d.forum+'</div></div>').style("left", (d3.event.pageX) + "px").style("top", (d3.event.pageY - 28) + "px");
+		}
+	}
+	
+	function position() {
+		this.attr("x", function(d) {
+			return d.x;
+		}).attr("y", function(d) {
+			return d.y;
+		}).attr("width", function(d) {
+			return Math.max(0, d.dx - 1);
+		}).attr("height", function(d) {
+			return Math.max(0, d.dy - 1);
+		});
+	}
+
+	function step1() {
+		node.transition().duration(500).style("opacity", 1)
+		createText(1);
+		setLvl(1)
+	}
+
+	function step2() {
+
+		console.log("2")
+		node.transition().duration(500).style("opacity", function(d) {
+			if (d.depth > 1)
+				return 1;
+			else
+				return 0
+		})
+		createText(2);
+		setLvl(2)
+	}
+
+	function step3() {
+
+		node.data(treemap.value(function(d) {
+			return 1;
+		}).nodes).transition().duration(500).call(position).style("opacity", function(d) {
+			if (d.depth < 3)
+				return 0;
+			else
+				return 1
+		
+		});
+		setLvl(3)
+		d3.selectAll(".text").remove();
+	}
+
+	function step4() {
+
+		val = function(d) {
+			return d.nb_replies;
 		}
 
-		// CONTROLS
-
-		var l = 0;
-
-		d3.select(window).on("resize", function() {
-			d3.select("svg").attr("width", window.outerWidth * 0.7);
-			d3.select("svg").attr("height", window.outerHeight * 0.8);
+		node.data(treemap.value(val).nodes).transition().duration(500).call(position).style("opacity", function(d) {
+			if (d.depth < 3)
+				return 0;
+			else
+				return 1
 		});
+		setLvl(3)
+		d3.selectAll(".text").remove();
 
-		d3.select("#language").on('click', function() {
-			d3.select(".show-lvl .pressed").classed("pressed", false)
-			d3.select(this).classed("pressed", true)
-			node.filter(function(d) {
-				return d.depth == 1
-			}).transition().duration(500).style("opacity", 1)
-			l = 1;
-			createText(1);
-		})
+	}
 
-		d3.select("#forum").on('click', function() {
-			d3.select(".show-lvl .pressed").classed("pressed", false)
-			d3.select(this).classed("pressed", true)
-			node.filter(function(d) {return d.depth > 1}).transition().duration(500).style("opacity", 1)
-			node.filter(function(d) {return d.depth <= 1}).transition().duration(500).style("opacity", 0)
-			l = 2;
-			createText(2);
-			
-			
-		})
-		d3.select("#post").on('click', function() {
-			d3.select(".show-lvl .pressed").classed("pressed", false)
-			d3.select(this).classed("pressed", true)
-			d3.selectAll(".text").remove();
-			node.filter(function(d) {
-				return d.depth <= 2
-			}).transition().duration(500).style("opacity", 0)
-		})
+	function step5() {
 
-		d3.select("#by-replies").on("click", function() {
-			d3.select(".sort-by .pressed").classed("pressed", false)
-			d3.select(this).classed("pressed", true)
-			val = function(d) {
-				return d.nb_replies;
-			}
-			node.data(treemap.value(val).nodes).transition().duration(500).call(position)
-			if (l>0) createText(l);
-			
-		})
+		node.data(treemap.value(function(d) {
+			return d.time;
+		}).nodes).transition().duration(500).call(position).style("opacity", function(d) {
+			if (d.depth < 3)
+				return 0;
+			else
+				return 1
+		});
+		setLvl(3)
+		d3.selectAll(".text").remove();
+	}
 
-		d3.select("#by-time").on("click", function() {
-			d3.select(".sort-by .pressed").classed("pressed", false)
-			d3.select(this).classed("pressed", true)
-			val = function(d) {
-				return d.time;
-			}
-			node.data(treemap.value(val).nodes).transition().duration(500).call(position)
-			if (l>0) createText(l);
-		})
+	function step6() {
 
-		d3.select("#by-author").on("click", function() {
-			d3.select(".sort-by .pressed").classed("pressed", false)
-			d3.select(this).classed("pressed", true)
-			val = function(d) {
-				return d.nb_authors;
-			}
-			node.data(treemap.value(val).nodes).transition().duration(500).call(position)
-			if (l>0) createText(l);
+		console.log("6")
+		node.data(treemap.value(function(d) {
+			return d.nb_authors;
+		}).nodes).transition().duration(500).call(position).style("opacity", function(d) {
+			if (d.depth < 3)
+				return 0;
+			else
+				return 1
 		})
+		setLvl(3)
+		d3.selectAll(".text").remove();
+	}
 
-	</script>
+	function step7() {
+		step6()
+		
+	}
+
+	function setLvl(n) {
+		tt.style("opacity", 0);
+		l = n;
+		for ( i = 0; i < 4; i++) {
+			if (i != n)
+				$(".lvl-" + i).css("pointer-events", "none");
+		}
+		$(".lvl-" + n).css("pointer-events", "auto");
+	}
+
+	function createText(lvl) {
+
+		d3.selectAll(".text").remove();
+
+		div.selectAll(".text").data(treemap.nodes).enter().append("text").filter(function(d) {
+			if (d.depth == lvl && d.dx > 100 && d.dy > 20)
+				return true;
+			else
+				return false;
+		}).attr("class", "text").attr("font-family", "sans-serif").attr("font-size", txtScale(lvl) + "em").attr("fill", "white").transition().duration(500).attr("opacity", 0.7).attr("x", function(d) {
+			console.log(d);
+			return d.x
+		}).attr("y", function(d) {
+			return d.y
+		}).attr("dx", txtScale(lvl) * 0.7 + "em").attr("dy", txtScale(lvl) * 1.4 + "em").text(function(d) {
+			return d.key
+		});
+	}
+
+	// CONTROLS
+
+	var l = 0;
+
+	d3.select(window).on("resize", function() {
+		d3.select("svg").attr("width", window.outerWidth * 0.7);
+		d3.select("svg").attr("height", window.outerHeight * 0.8);
+	});
+
+	d3.select("#language").on('click', function() {
+		d3.select(".show-lvl .pressed").classed("pressed", false)
+		d3.select(this).classed("pressed", true)
+		node.filter(function(d) {
+			return d.depth == 1
+		}).transition().duration(500).style("opacity", 1)
+		setLvl(1)
+
+		createText(1);
+	})
+
+	d3.select("#forum").on('click', function() {
+		d3.select(".show-lvl .pressed").classed("pressed", false)
+		d3.select(this).classed("pressed", true)
+		node.filter(function(d) {
+			return d.depth > 1
+		}).transition().duration(500).style("opacity", 1)
+		node.filter(function(d) {
+			return d.depth <= 1
+		}).transition().duration(500).style("opacity", 0)
+		setLvl(2)
+
+		createText(2);
+
+	})
+	d3.select("#post").on('click', function() {
+		d3.select(".show-lvl .pressed").classed("pressed", false)
+		d3.select(this).classed("pressed", true)
+		d3.selectAll(".text").remove();
+		setLvl(3)
+
+		node.filter(function(d) {
+			return d.depth <= 2
+		}).transition().duration(500).style("opacity", 0)
+	})
+
+	d3.select("#by-replies").on("click", function() {
+		d3.select(".sort-by .pressed").classed("pressed", false)
+		d3.select(this).classed("pressed", true)
+		val = function(d) {
+			return d.nb_replies;
+		}
+		node.data(treemap.value(val).nodes).transition().duration(500).call(position)
+		if (l > 0)
+			createText(l);
+		tt.style("opacity", 0);
+	})
+
+	d3.select("#by-time").on("click", function() {
+		d3.select(".sort-by .pressed").classed("pressed", false)
+		d3.select(this).classed("pressed", true)
+		val = function(d) {
+			return d.time;
+		}
+		node.data(treemap.value(val).nodes).transition().duration(500).call(position)
+		if (l > 0)
+			createText(l);
+		tt.style("opacity", 0);
+	})
+
+	d3.select("#by-author").on("click", function() {
+		d3.select(".sort-by .pressed").classed("pressed", false)
+		d3.select(this).classed("pressed", true)
+		val = function(d) {
+			return d.nb_authors;
+		}
+		node.data(treemap.value(val).nodes).transition().duration(500).call(position)
+		if (l > 0)
+			createText(l);
+		tt.style("opacity", 0);
+	})
+
+</script>
 
