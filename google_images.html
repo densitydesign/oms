@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bootstrap 101 Template</title>
+    <title>Who</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <script src="js/bootstrap.min.js"></script>		
     <script src="js/bootstrap-slider.js"></script>		
-	 <link href="css/slider.css" rel="stylesheet">
-	  <script src="js/jquery.mousewheel.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
     <script src="js/d3.v3.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -29,6 +28,8 @@
 
 text {
   font: 10px sans-serif;
+  font-family: Montserrat;
+  text-transform: capitalize;
 }
 
 .sel {
@@ -66,12 +67,7 @@ svg{
 	margin-top:10px;
 	margin-bottom:10px;
 }
-.btn, .btn:hover,.btn:focus {
-	background:#83A493;
-	border:1px solid white;
-	color:#fff;
-	
-}
+
 .rad{
 	margin:0px 0px 10px 1%;
 	
@@ -90,12 +86,20 @@ transition: height 2s;
 }
 
 .labels{
-	margin-top:100px;
+	margin-top:70px;
 	margin-left:1%;
 }
 
 .labels h3{
-	font-size:1.2em !important;
+	text-transform: uppercase;
+	font-size:0.8em;
+	color:#000;
+	text-align:left;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 2px;
+	font-weight: 400;
+	line-height: 10%;
+	margin-bottom: 20px;
 	
 }
 
@@ -110,7 +114,7 @@ transition: height 2s;
 
 .cmd-labels h3{
 	display:inline-block;
-	margin-right:1%;
+	margin-right:1	%;
 	width:45%;
 	
 }
@@ -142,14 +146,6 @@ transition: height 2s;
        
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="./intro.html">intro</a></li>
-            <li class="active"><a href="./network1.html">corpus</a></li>
-            <li><a href="./network2.html">network</a></li>
-            <li><a href="./network3.html">text</a></li>
-            <li><a href="./network4.html">images</a></li>
-            <li><a href="./intro1.html">aufeminin</a></li>
-            <li><a href="./network5.html">forums</a></li>
-            <li><a href="./network6.html">users</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -170,88 +166,7 @@ transition: height 2s;
   	<section id="viz" class="row section-row">
   		
   	</section>
-  	</div>
-	
-	<div id="protocol">
-			
-		<div class="proto-title closing">PROTOCOL   <img class="close-btn" src="img/cross.png"/></div>
-		
-		
-		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-				  <!-- Indicators -->
-		  <ol class="carousel-indicators">
-		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-		  </ol>
-
-		  <!-- Wrapper for slides -->
-		  <div class="carousel-inner">
-		    <div class="item active">
-		    	
-		    	<div class="step">
-		    		<img src="img/pro_query-net.png"/>
-				    	<h3>1.Querying<br>(corpus building)</h3>
-				    	<p>I will give you a complete account of the
-						system, and expound the actual teachings
-						of the great explorer of the truth.</p>
-						<div class="details">
-							<h5>Corpus: 336 webpages</h5>
-						</div>
-				    </div>
-				    
-				    <div class="step">
-
-		    		<img src="img/pro_clean.png"/>
-				    	<h3>2.Cleaning</h3>
-				    	<p>I will give you a complete account of the
-						system, and expound the actual teachings
-						of the great explorer of the truth.</p>
-						<div class="details">
-						<h5>Corpus: ? webpages </h5>
-				    		<a href="#"><div class="link-download">Download Data</div></a>
-							<a href="#"><div class="link-visualization">Go to the Visualization</div></a>
-						</div>
-				    </div>
-				    
-				    <div class="step">
-		    		<img src="img/pro_tag-cs"/>
-				    	<h3>3.Tagging</h3>
-				    	<p>I will give you a complete account of the
-						system, and expound the actual teachings
-						of the great explorer of the truth.</p>
-				    	<div class="details">
-				    	<h5>Corpus: 336 webpages </h5>
-				    		<a href="#"><div class="link-download">Download Data</div></a>
-							<a href="#"><div class="link-visualization">Go to the Visualization</div></a>
-						</div>
-
-				    </div>
-
-		    	</div>
-		    	
-		    	<div class="item">
-		  
-				    <div class="step">
-		    		<img src="img/pro_crawl.png"/>
-				    	<h3>Crawling</h3>
-				    	<p>I will give you a complete account of the
-						system, and expound the actual teachings
-						of the great explorer of the truth.</p>
-						<div class="details">
-							<h5>Corpus: 677 websites </h5>
-				    		<a href="#"><div class="link-download">Download Data</div></a>
-							<a href="#"><div class="link-visualization">Go to the Visualization</div></a>
-						</div>
-				    </div>
-		    	</div>
-		    	
-		  </div>
-		  </div>
-		
-		  <!-- Controls -->
-		  
-		</div>
-			
+  	</div>	
 	</div>
 	
 	<script>
