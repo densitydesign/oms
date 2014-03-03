@@ -5,6 +5,7 @@ html{
 body {
 	height: 100%;
 	position:relative;
+	overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -320,7 +321,7 @@ h4.section{
 }
 
 
-/* Navbar */
+/* Navbar Teo*/
 
 @media (min-width: 768px){
 
@@ -411,21 +412,21 @@ h4.section{
 	}
 
 
-.navbar-collapse a{
-	text-align:center;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;
-	text-transform: uppercase;
-	color:#fff !important;
-	-webkit-transition: color 0.2s;
-	transition: color 0.2s;
+	.navbar-collapse a{
+		text-align:center;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+		color:#fff !important;
+		-webkit-transition: color 0.2s;
+		transition: color 0.2s;
 
 	}
 
 
-.navbar-collapse a:hover{
-	color: #e3fcb1 !important;
-	text-decoration:underline
+	.navbar-collapse a:hover{
+		color: #e3fcb1 !important;
+		text-decoration:underline
 	}
 }
 
@@ -549,11 +550,11 @@ h4.section{
 
 #protocol{
 	color:#FFFFFF;
-	z-index:0;
-	width:400px;
+	z-index:500;
+	width:360px;
 	right:-360px;
 	height:100%;
-	position:fixed;
+	position:absolute;
 	top:0;
 	background:#CCCCCC;
 	overflow:auto;
@@ -564,24 +565,59 @@ h4.section{
 	transition: all 0.5s ease-in-out;
 }
 
-.proto-title{
-	font-family:'Montserrat', sans-serif;
-	font-size:1.00em;
-	font-weight:400px;
-	font-variant:small-caps;
-	letter-spacing: 7px;
-	-moz-transform-origin:0 50%;
-	-moz-transform:rotate(-90deg) translate(-50%, 51.5%);
-	-webkit-transform-origin:0 50%;
-	-webkit-transform:rotate(-90deg) translate(-50%, 51.5%);
-	-o-transform-origin:0 50%;
-	-o-transform:rotate(-90deg) translate(-50%, 51.5%);
-	-ms-transform-origin:0 50%;
-	-ms-transform:rotate(-90deg) translate(-50%, 51.5%);
-	transform-origin:0 50%;
-	transform:rotate(-90deg) translate(-50%, 51.5%);
-	cursor:default;
+#proto-title{
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	transform: rotate(-90deg);
+	position: relative;
+	left: 0px;
+	white-space: nowrap;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	top: 55%;
+	color:#FFFFFF;
+	z-index:500;
 }
+
+#proto-title-container{
+	height:100%;
+	position:absolute;
+	top:0;	
+	right:0;
+	background:#CCCCCC;
+	width: 40px;
+	z-index:500;
+	cursor: pointer;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.proto-content{
+	width: 100%;
+	padding-left:25px;
+	padding-right:40px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	float: left;
+}
+
+.proto-content img{
+	width: 100%;
+}
+
+.proto-content hr{
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
 
 .closing{
 	height: 350px;
@@ -595,23 +631,6 @@ h4.section{
 	transition: all 0.5s;
 }
 
-.proto-content{
-	width: 100%;
-	padding-left:0px;
-	padding-right:10px;
-	padding-top: 100px;
-	padding-bottom: 100px;
-
-}
-
-.proto-content img{
-	width: 100%;
-}
-
-.proto-content hr{
-	margin-top: 80px;
-	margin-bottom: 80px;
-}
 
 .reference{
 	background-image: url(../img/pro_ref.png);
@@ -859,95 +878,95 @@ h4.section{
 }
 
 .slider {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
 }
 .slider.slider-horizontal {
-  width: 210px;
-  height: 20px;
+	width: 210px;
+	height: 20px;
 }
 .slider.slider-horizontal .slider-track {
-  height: 2px;
-  width: 100%;
-  margin-top: -5px;
-  top: 50%;
-  left: 0;
+	height: 2px;
+	width: 100%;
+	margin-top: -5px;
+	top: 50%;
+	left: 0;
 }
 .slider.slider-horizontal .slider-selection {
-  height: 100%;
-  top: 0;
-  bottom: 0;
+	height: 100%;
+	top: 0;
+	bottom: 0;
 }
 .slider.slider-horizontal .slider-handle {
-  margin-left: -10px;
-  margin-top: -3px;
+	margin-left: -10px;
+	margin-top: -3px;
 }
 .slider.slider-horizontal .slider-handle.triangle {
-  border-width: 0 10px 10px 10px;
-  width: 0;
-  height: 0;
-  border-bottom-color: #cbccce;
-  margin-top: 0;
+	border-width: 0 10px 10px 10px;
+	width: 0;
+	height: 0;
+	border-bottom-color: #cbccce;
+	margin-top: 0;
 }
 .slider.slider-vertical {
-  height: 210px;
-  width: 20px;
+	height: 210px;
+	width: 20px;
 }
 .slider.slider-vertical .slider-track {
-  width: 10px;
-  height: 100%;
-  margin-left: -5px;
-  left: 50%;
-  top: 0;
+	width: 10px;
+	height: 100%;
+	margin-left: -5px;
+	left: 50%;
+	top: 0;
 }
 .slider.slider-vertical .slider-selection {
-  width: 100%;
-  left: 0;
-  top: 0;
-  bottom: 0;
+	width: 100%;
+	left: 0;
+	top: 0;
+	bottom: 0;
 }
 .slider.slider-vertical .slider-handle {
-  margin-left: -5px;
-  margin-top: -10px;
+	margin-left: -5px;
+	margin-top: -10px;
 }
 .slider.slider-vertical .slider-handle.triangle {
-  border-width: 10px 0 10px 10px;
-  width: 1px;
-  height: 1px;
-  border-left-color: #cbccce;
-  margin-left: 0;
+	border-width: 10px 0 10px 10px;
+	width: 1px;
+	height: 1px;
+	border-left-color: #cbccce;
+	margin-left: 0;
 }
 .slider input {
-  display: none;
+	display: none;
 }
 .slider .tooltip-inner {
-  white-space: nowrap;
+	white-space: nowrap;
 }
 .slider-track {
-  position: absolute;
-  height:2px;
-  cursor: pointer;
-  background-color: #cbccce;
-  
+	position: absolute;
+	height:2px;
+	cursor: pointer;
+	background-color: #cbccce;
+
 }
 .slider-selection {
-  position: absolute;
-  background-color: #ddd;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	position: absolute;
+	background-color: #ddd;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .slider-handle {
-  position: absolute;
-  width: 17px;
-  height: 10px;
-  background-color: #9E9EA0;
-  border: 0px solid transparent;
+	position: absolute;
+	width: 17px;
+	height: 10px;
+	background-color: #9E9EA0;
+	border: 0px solid transparent;
 }
 
 .slider-handle.triangle {
-  background: transparent none;
+	background: transparent none;
 }
 
 /*Single Buttons*/
