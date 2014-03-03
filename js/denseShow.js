@@ -3,9 +3,59 @@ var timer = 0;
 var scrolling = false;
 var direction = 0;
 var scrolltime = 10;
+var triggerBttn, overlay, closeBttn;
 //must be mutiplied by 100, value in millisecond for capturing the next scroll event
 
 $(document).ready(function() {
+
+
+triggerBttn = $('#main-index' );
+overlay = $( 'div.overlay' );
+closeBttn = $( 'div.overlay > button.overlay-close' );
+
+
+//triggerBttn.click(toggleOverlay);
+closeBttn.click(toggleOverlay);
+
+$(window).resize(function(){
+    if( overlay.hasClass( "open" ) && $(window).width() < 768) {
+    overlay.removeClass("open")
+    $('#main-index').collapse('show')
+  }
+})
+
+
+fillMenu()
+
+//Menu
+
+function fillMenu() {
+	
+	$.each(checkPoints, function( index, value ) {
+	  if(value[2]) {
+	  	console.log(value)
+	  	$(".navbar-nav").append("<li id='nav-"+value[0]+"' class='nav-anchor' ><a href='#' data-step="+value[0]+" >"+value[2]+"</a></li>")
+	  	$(".ov-menu").append("<li class='nav-anchor'><a href='#' data-step="+value[0]+" >"+value[2]+"</a></li>")
+	  }
+	});
+	
+	$(document).on('click','.nav-anchor a', function(e){
+		e.preventDefault();
+		if(!overlay.hasClass( "open" )) {
+			toggleOverlay();
+		}
+		else {
+		st=$(this).attr("data-step")
+		goToStep(st,null);
+		toggleOverlay();
+		}
+	})
+}
+
+
+// End menu 
+//========
+
 
 	if (window.location.hash != "") {
 		goToStep(window.location.hash.replace("#sect-", ""), null);
@@ -106,6 +156,27 @@ $(document).ready(function() {
 
 });
 
+
+function toggleOverlay() {
+  if ($(window).width() < 768){ 
+    return;
+  }
+
+  if( overlay.hasClass( "open" )) {
+    overlay.removeClass("open")
+  }
+  else if( !overlay.hasClass( "open" ) ) {
+    overlay.addClass("open")
+  }
+}
+
+function closeOverlay() {
+	console.log("closing overlay")
+	if( overlay.hasClass( "open" )) {
+    overlay.removeClass("open")
+  }
+}
+
 function chk_scroll(e) {
 
 	var elem = $(e.currentTarget);
@@ -202,13 +273,13 @@ function loadSection(sec) {
 
 	$("#sgnaf").css("width", step / (checkPoints.length - 1) * 100 + "%");
 	var id, subsec;
-
-	if ($.isArray(sec)) {
+	
+	if ($.isArray(sec) && sec[1]>=0) {
 		id = sec[0];
 		subsec = sec[1];
 	} else
-		id = sec;
-
+		id = sec[0];
+	$('#main-index').scrollTo($("#nav-"+id), 200);
 	if (!$('#' + id).html()) {
 		$.ajax({
 			url : "sections/" + id + ".html",
@@ -278,9 +349,10 @@ function stepUp() {
 function goToStep(id, s) {
 	console.log(id, s)
 	found = false;
+	//closeOverlay();
 
 	for (var i = 0; i < checkPoints.length; i++) {
-		if (s) {
+		if (s && s>=0) {
 			if ($.isArray(checkPoints[i]) && checkPoints[i][0] == id && checkPoints[i][1] == s) {
 				step = i;
 				found = true;
