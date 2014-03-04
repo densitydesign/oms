@@ -542,9 +542,13 @@ h4.section{
 }
 
 .main-viz{
+	height: 100%;
 }
 
-
+#graph{
+	height:90% ;
+	margin-top: 55px;
+}
 
 /* Protocol */
 

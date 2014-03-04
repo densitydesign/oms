@@ -1,115 +1,144 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>WHO</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>WHO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/app.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
-  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
-  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
-  
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.mousewheel.js"></script>
-  <script src="js/d3.v3.min.js"></script>
-  <script src="js/hammer.min.js"></script>
-  <script src="js/jquery.hammer.min.js"></script>
-  <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
-  <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
-  <script src="js/d3.v3.min.js"></script>
-  <script type="text/javascript" src="js/denseShow.js"></script>
-  <script src="js/processing.js"></script> 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-  <![endif]-->
-</head>
-<body>
-  <!-- Fixed navbar -->
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-collapse collapse">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+    <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+    <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/d3.v3.min.js"></script>
+     <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <script src="js/jquery.hammer.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+    <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
+    <script src="js/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/sigma.min.js"></script>
+    <script type="text/javascript" src="js/sigma.parsers.json.js"></script>
+    <script type="text/javascript" src="js/sigma.layout.forceAtlas2.js"></script>
+    <script type="text/javascript" src="js/sigma.plugins.neighborhoods.js"></script>
+    <script src="js/processing.js"></script>
+    <script src="js/protocol.js"></script>
+    <script src="js/denseShow.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+   <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header" id="main-nav">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+      </div>
+      <div class="navbar-collapse collapse" id="main-index">
         <ul class="nav navbar-nav">
-          <li><a href="./intro.html">intro</a></li>
-          <li class="active"><a href="./network1.html">corpus</a></li>
-          <li><a href="./network2.html">network</a></li>
-          <li><a href="./network3.html">text</a></li>
-          <li><a href="./network4.html">images</a></li>
-          <li><a href="./intro1.html">aufeminin</a></li>
-          <li><a href="./network5.html">forums</a></li>
-          <li><a href="./network6.html">users</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
   </div>
-  <div id="sgnaf"></div>
-  <section id="cs_intro" class="intro bg-full long"></section>
-  <section id="cs_query_intro"></section>
-  <section id="cs_query_network"></section>
-  <section id="cs_query_analytics"></section>
-  <section id="cs_crawl_intro"></section>
-  <section id="cs_crawl_network"></section>
-  <section id="cs_text_intro"></section>
-  <section id="cs_text_slope"></section>
-  <section id="cs_images_intro"></section>
-  <section id="cs_images_elastic"></section>
-  <section id="cs_aufeminin_intro"></section>
-  <section id="cs_aufeminin_forum"></section>
-  <section id="cs_aufeminin_networkFR"></section>
-  <section id="cs_aufeminin_networkIT"></section>
-
+  
+  <!--menu overlay -->
+   <div class="overlay overlay-slidedown">
+  <button type="button" class="overlay-close">Close</button>
+  <nav>
+    <ul class="ov-menu">
+       
+    </ul>
+  </nav>
 </div>
 
-<script type="text/javascript" src="js/sigma.min.js"></script>
-<script type="text/javascript" src="js/sigma.parsers.json.js"></script>
-<script type="text/javascript" src="js/sigma.layout.forceAtlas2.js"></script>
-<script type="text/javascript" src="js/sigma.plugins.neighborhoods.js"></script>
+    <!-- Text -->
+    <section id="cs_intro"></section>
+    <section id="cs_query_intro"></section>
+    <section id="cs_query_network"></section>
+<!--     <section id="cs_query_analytics"></section> -->
+    <section id="cs_crawl_intro"></section>
+    <section id="cs_crawl_network"></section>
+<!--        <section id="cs_text_intro"></section>
+    <section id="cs_text_slope"></section>
+    <section id="cs_images_intro"></section>
+    <section id="cs_images_elastic"></section>
+    <section id="cs_aufeminin_intro"></section>
+    <section id="cs_aufeminin_forum"></section>
+    <section id="cs_aufeminin_networkFR"></section>
+    <section id="cs_aufeminin_networkIT"></section> -->
+
+    <div class="scrolldown">
+      <div class="arrows">
+        <div class="arrow-prev"></div>
+        <div class="arrow-next"></div>
+      </div>
+    </div>
+
 <script>
   var checkPoints = [
-    "cs_intro",
-    "cs_query_intro",
-    ["cs_query_network",1],
+    ["cs_intro",-1,"Introduction to caesarian section"],
+    ["cs_query_intro",-1, "Building the corpus"],
+    ["cs_query_network",1, "Building the corpus queries"],
     ["cs_query_network",2],
     ["cs_query_network",3],
     ["cs_query_network",4],
     ["cs_query_network",5],
     ["cs_query_network",6],
-    "cs_query_analytics",
-    "cs_crawl_intro",
-    ["cs_crawl_network",1],
+    //["cs_query_analytics",-1],
+    ["cs_crawl_intro",-1, "Mapping the web"],
+    ["cs_crawl_network",1, "Web cartography"],
     ["cs_crawl_network",2],
     ["cs_crawl_network",3],
     ["cs_crawl_network",4],
     ["cs_crawl_network",5],
     ["cs_crawl_network",6],
-    "cs_text_intro",
-    ["cs_text_slope",1],
-    ["cs_text_slope",2],
-    ["cs_text_slope",3],
-    ["cs_text_slope",4],
-    "cs_images_intro",
-    "cs_images_elastic",
-    "cs_aufeminin_intro",
-    ["cs_aufeminin_forum",1],
-    ["cs_aufeminin_forum",2],
-    ["cs_aufeminin_forum",3],
-    ["cs_aufeminin_forum",4],
-    ["cs_aufeminin_forum",5],
-    ["cs_aufeminin_forum",6],
-    ["cs_aufeminin_networkFR",1],
-    ["cs_aufeminin_networkFR",2],
-    ["cs_aufeminin_networkFR",3],
-    ["cs_aufeminin_networkFR",4],
-    ["cs_aufeminin_networkIT",1],
-    ["cs_aufeminin_networkIT",2],
-    ["cs_aufeminin_networkIT",3],
-    ["cs_aufeminin_networkIT",4]
+    ["cs_crawl_network",7],
+    ["cs_crawl_network",8],
+    ["cs_crawl_network",9],
+    ["cs_crawl_network",10],
+    ["cs_crawl_network",11],
+    ["cs_crawl_network",12]
     ]
+    // ["cs_text_intro",-1,"Seeing what they're saying"],
+    // ["cs_text_slope",1],
+    // ["cs_text_slope",2],
+    // ["cs_text_slope",3],
+    // ["cs_text_slope",4],
+    // ["cs_images_intro",-1,"Perceived image of the c-section"],
+    // ["cs_images_elastic",-1]
+    // ["cs_aufeminin_intro",-1, "Analyzing the forum discussion"],
+    // ["cs_aufeminin_forum",1],
+    // ["cs_aufeminin_forum",2],
+    // ["cs_aufeminin_forum",3],
+    // ["cs_aufeminin_forum",4],
+    // ["cs_aufeminin_forum",5],
+    // ["cs_aufeminin_forum",6],
+    // ["cs_aufeminin_forum",7],
+    // ["cs_aufeminin_networkFR",1],
+    // ["cs_aufeminin_networkFR",2],
+    // ["cs_aufeminin_networkFR",3],
+    // ["cs_aufeminin_networkFR",4],
+    // ["cs_aufeminin_networkIT",1],
+    // ["cs_aufeminin_networkIT",2],
+    // ["cs_aufeminin_networkIT",3],
+    // ["cs_aufeminin_networkIT",4]
+    // ]
 </script>
 
 </body>

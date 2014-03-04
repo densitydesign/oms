@@ -279,7 +279,7 @@ function loadSection(sec) {
 		subsec = sec[1];
 	} else
 		id = sec[0];
-	$('#main-index').scrollTo($("#nav-"+id), 200);
+	$('#main-index').scrollTo($("#nav-"+id), 750);
 	if (!$('#' + id).html()) {
 		$.ajax({
 			url : "sections/" + id + ".html",
