@@ -366,6 +366,23 @@ h4.section{
 	line-height: 20px;
 }
 
+
+/* Sgnaf */
+
+#sgnaf{
+	position:fixed;
+	left:0;
+	top:56px;
+	height:3px;
+	z-index:3;
+	background-color:#84A594;
+	width:0%;
+	-webkit-transition: width 1s ease-in-out;
+	-moz-transition: width 1s ease-in-out;
+	-o-transition: width 1s ease-in-out;
+	transition: width 1s ease-in-out;
+}
+
 /* Overlay style */
 .overlay {
 	z-index: 10000;
