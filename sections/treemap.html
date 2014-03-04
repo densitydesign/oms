@@ -122,16 +122,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-9 col-sm-12 main-viz"></div>
+		<div class="col-md-9 col-sm-12 treemap-viz"></div>
 	</div>
-</div>
-
-<div id="protocol">
-
-	<div class="proto-title closing">
-		PROTOCOL_01 <img class="close-btn" src="img/cross.png"/>
-	</div>
-
 </div>
 
 <style>
@@ -150,7 +142,7 @@
 		height: 100%;
 	}
 
-	.main-viz {
+	.treemap-viz {
 		padding-top: 80px;
 	}
 
@@ -215,7 +207,7 @@
 		return 1
 	});
 
-	var div = d3.select(".main-viz").append("svg").attr("width", (width + margin.left + margin.right)).attr("height", (height + margin.top + margin.bottom))
+	var div = d3.select(".treemap-viz").append("svg").attr("width", (width + margin.left + margin.right)).attr("height", (height + margin.top + margin.bottom))
 	var tt = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
 
 	function viz() {

@@ -4,6 +4,7 @@ var scrolling = false;
 var direction = 0;
 var scrolltime = 10;
 var triggerBttn, overlay, closeBttn;
+var currProto, currLabel;
 //must be mutiplied by 100, value in millisecond for capturing the next scroll event
 
 $(document).ready(function() {
@@ -32,12 +33,14 @@ fillMenu()
 function fillMenu() {
 	
 	$.each(checkPoints, function( index, value ) {
-	  if(value[2]) {
-	  	console.log(value)
-	  	$(".navbar-nav").append("<li id='nav-"+value[0]+"' class='nav-anchor' ><a href='#' data-step="+value[0]+" >"+value[2]+"</a></li>")
-	  	$(".ov-menu").append("<li class='nav-anchor'><a href='#' data-step="+value[0]+" >"+value[2]+"</a></li>")
+	  if(value['label'] && currLabel!==value['label']) {
+	  	currLabel=value['label']
+	  	$(".navbar-nav").append("<li id='nav-"+value['id']+"' class='nav-anchor' ><a href='#' data-step="+value['id']+" >"+value['label']+"</a></li>")
+	  	$(".ov-menu").append("<li class='nav-anchor'><a href='#' data-step="+value['id']+" >"+value['label']+"</a></li>")
 	  }
+	  
 	});
+	currLabel=null;
 	
 	$(document).on('click','.nav-anchor a', function(e){
 		e.preventDefault();
@@ -181,7 +184,7 @@ function chk_scroll(e) {
 
 	var elem = $(e.currentTarget);
 
-	if (elem.attr("id") != checkPoints[step] && elem.attr("id") != checkPoints[step][0]) {
+	if (elem.attr("id") != checkPoints[step] && elem.attr("id") != checkPoints[step]['id']) {
 
 		e.preventDefault();
 		return false;
@@ -274,12 +277,11 @@ function loadSection(sec) {
 	$("#sgnaf").css("width", step / (checkPoints.length - 1) * 100 + "%");
 	var id, subsec;
 	
-	if ($.isArray(sec) && sec[1]>=0) {
-		id = sec[0];
-		subsec = sec[1];
+	if (sec['step']) {
+		id = sec['id'];
+		subsec = sec['step'];
 	} else
-		id = sec[0];
-	$('#main-index').scrollTo($("#nav-"+id), 750);
+		id = sec['id'];
 	if (!$('#' + id).html()) {
 		$.ajax({
 			url : "sections/" + id + ".html",
@@ -297,8 +299,8 @@ function loadSection(sec) {
 						$(".step" + subsec).fadeIn(500)
 					});
 				}
-
-				scrollToID(checkPoints[step], 1500);
+				//loadProtocol(checkPoints[step]);
+				scrollToID(checkPoints[step]['id'], 1500);
 
 			}
 		})
@@ -312,9 +314,13 @@ function loadSection(sec) {
 				$(".step" + subsec).fadeIn(500)
 			});
 		}
-		scrollToID(checkPoints[step], 1500);
+		
+		scrollToID(checkPoints[step]['id'], 1500);
 	}
-
+	if(checkPoints[step].label && currLabel!=checkPoints[step].label) {
+			$('#main-index').scrollTo($("#nav-"+id), 750);
+		}
+	
 	window.location.hash = "sect-" + id;
 }
 
@@ -353,19 +359,17 @@ function goToStep(id, s) {
 
 	for (var i = 0; i < checkPoints.length; i++) {
 		if (s && s>=0) {
-			if ($.isArray(checkPoints[i]) && checkPoints[i][0] == id && checkPoints[i][1] == s) {
+			if (checkPoints[i]['step'] && checkPoints[i]['id'] == id && checkPoints[i]['step'] == s) {
 				step = i;
 				found = true;
 				break;
 			}
-		} else if (checkPoints[i] == id || checkPoints[i][0] == id) {
+		} else if (checkPoints[i]['id'] == id) {
 			step = i;
 			found = true;
 			break;
 		}
-
 	}
-
 	if (!found) {
 		console.log("no section found");
 		return false;
@@ -374,5 +378,20 @@ function goToStep(id, s) {
 		return true;
 	}
 
+}
+
+function loadProtocol(el) {
+	if(!el.protocol) $(".proto").remove();
+	else if(el.protocol !== currProto) {
+		currProto = el.protocol; 
+		$(".proto").remove();
+		$.ajax({
+			url : "protocols/" + el.protocol + ".html",
+			dataType : "html",
+			success : function(data) {
+				$('.side-all').after(data);
+			}
+		})
+	}
 }
 
