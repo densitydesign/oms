@@ -8,49 +8,41 @@
     <div class="proto-content">
       <!-- Protocol 1 -->
       <img src="img/pro_01.png"/>
-      <h2>harvesting the web corpus</h2>
-      <p>We collected the first 100 Google.com results (in incognito mode) harvesting their URL for each of the following queries:</p>
+      <h2>scraping the text corpus</h2>
+      <p>We scraped the text of each webpage contained in the web corpus built in the previous phase. The resulting documents kept the categorization of the original web pages and was therefore organized into three groups:</p>
       <ul>
-        <li>"C-Section"</li>
-        <li>"CS delivery"</li>
-        <li>"Surgical delivery"</li>
-        <li>"Abdominal delivery"</li>
-        <li>"Cesarean delivery"</li>
-        <li>"Caesarean delivery" </li>
-        <li>"Operative delivery"</li>
-        <li>Caesarean Cesarean</li>
+        <li>a) Medical Information;</li>
+        <li>b) Contentious Information;</li>
+        <li>c) Experiential Information.delivery"</li>
       </ul>
-      <p>The different queries have been designed to address as much as possible "nuances" of the CS concept: from the more technical and medical ones ("Caesarean delivery", "Operative delivery") to the more ordinary ones ("C-Section", "CS delivery".</p>
-      <a href="http://www.govcom.org/publications/full_list/rogers_inculpable_engine_2009.pdf"><span class="reference">Rogers, Richard. "The Googlization Question, and the Inculpable Engine."</span></a>
+      <p>In order to have as much clean content as possible we applied BOILERPIPE, an algorithm used to detect and remove the surplus "clutter" (boilerplate, templates) around the main textual content of a web page.</p>
+      <a href="http://www.decom.ufop.br/menotti/rp122/sem/sem1-brayan-milton-art.pdf">
+        <span class="reference">
+          Kohlschütter, Christian, Peter Fankhauser, and Wolfgang Nejdl. "Boilerplate detection using shallow text features." Proceedings of the third ACM international conference on Web search and data mining. ACM, 2010.
+        </span>
+      </a>
       <hr>
 
       <!-- Protocol 2 -->
       <img src="img/pro_01.png"/>
-      <h2>cleaning and tagging the webpages</h2>
-      <p>We qualified and tagged all the webpages accordingly to their contents and excluding from the corpus pages not concerned with CS (i.e. PDF, Videos but also cesarean section on animals). In this way we obtained three main webpages groups:
-        <ul>
-          <li>a) Medical Information; </li>
-          <li>b) Contentious Information;</li>
-          <li>c) Experiential Information.</li>
-        </ul>
+      <h2>n-gram extraction and tf/tf-idf analysis</h2>
+      <p>We processed the text corpus using some natural language processing techniques as fast part-of-speech tagger (identification of nouns, adjectives, verbs, etc. in a sentence) and n-grams extractor. For each extracted entity we calculated its Term Frequency (TF) and its term frequency–inverse document frequency (TF-IDF), performed along the three categories of documents.
+      We also excluded some overly generic entities and we used stop-word lists.</br>
+      For this phase we used <a href="https://docs.google.com/document/d/1LRhKh4giB7t9DoWtpzRpFDVheuzymDSh_LR2SNb2YAk/edit">SVEN</a>, a software developed at DensityDesign | Politecnico di Milano and médialab | SciencesPo, that implement Pattern a text mining library developed at CLiPS | University of Antwerp.
       </p>
+      <a href="http://www.clips.ua.ac.be/sites/default/files/desmedt12a.pdf">
+        <span class="reference">
+          De Smedt, Tom, and Walter Daelemans. "Pattern for python." The Journal of Machine Learning Research 98888 (2012): 2063-2067.
+        </span>
+      </a>
       <hr>
 
       <!-- Protocol 3 -->
       <img src="img/pro_01.png"/>
-      <h2>Crawling the hyperlinks</h2>
-      <p>We followed the web corpus hyperlinks to discovering other relevant URLs. From this new web corpus have been eliminated all the websites considered too general (i.e facebook, twitter) and the non relevant ones (i.e maps.google, youtube). Furthermore, also the websites with an in-degree index smaller than 3 have been excluded.
-        For this step we used  <a href="https://github.com/medialab/Hypertext-Corpus-Initiative">HYPHE</a> a software developed at médialab | SciencesPo.
-        <a href="http://www.govcom.org/publications/full_list/Rogers_Digital_Cognitive_Technologies_preprint_Wiley_2009.pdf"><span class="reference">Rogers, Richard. "Mapping public web space with the Issuecrawler." Digital cognitive technologies: Epistemology and the knowledge economy (2010): 89-99."</span></a>
+      <h2>visual relation n-grams/categories</h2>
+      <p>The resulting n-grams have been visualized with a slopegraph model that allow to make several visual comparisons along the different categories of documents. All vertical lists in the diagram contain the same n-grams, thus highlighting the hierarchy of n-grams in the different categories and the specific number of occurrences associated to them, as well as the changing configuration when comparing TF and TFIDF n-grams.
       </p>
       <hr>
-
-      <!-- Protocol 4 -->
-      <img src="img/pro_01.png"/>
-      <h2>(visual) network) analysis</h2>
-      <p>We examined through co-link / social networking analysis the network produced with the crawling. Furthermore, we analyzed visually the network using GEPHI, an open-source network analysis and visualization software package. Thanks to its force-based algorithm, ForceAtlas2, we produced the qualitative interpretation of the graph.
-        <a href="http://www.govcom.org/publications/full_list/Rogers_Digital_Cognitive_Technologies_preprint_Wiley_2009.pdf"><span class="reference">Rogers, Richard. "Mapping public web space with the Issuecrawler." Digital cognitive technologies: Epistemology and the knowledge economy (2010): 89-99."</span></a>
-      </p>
 
       <!-- End of protocol -->
     </div>

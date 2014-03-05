@@ -8,49 +8,56 @@
     <div class="proto-content">
       <!-- Protocol 1 -->
       <img src="img/pro_01.png"/>
-      <h2>harvesting the web corpus</h2>
-      <p>We collected the first 100 Google.com results (in incognito mode) harvesting their URL for each of the following queries:</p>
+      <h2>harvesting the image corpus</h2>
+      <p>We queried Google.com, Google.fr, Google.co.uk, Google.it (in incognito mode) for the following queries.</p>
       <ul>
-        <li>"C-Section"</li>
-        <li>"CS delivery"</li>
-        <li>"Surgical delivery"</li>
-        <li>"Abdominal delivery"</li>
+        <li>.COM: Cesarean, "Cesarean delivery"</li>
+        <li>.CO.UK: Caesarean, "Caesarean delivery"</li>
+        <li>.FR: Césarienne, "Accouchement par césarienne"</li>
+        <li>.IT: Cesareo, "Taglio cesareo"</li>
         <li>"Cesarean delivery"</li>
         <li>"Caesarean delivery" </li>
         <li>"Operative delivery"</li>
         <li>Caesarean Cesarean</li>
       </ul>
-      <p>The different queries have been designed to address as much as possible "nuances" of the CS concept: from the more technical and medical ones ("Caesarean delivery", "Operative delivery") to the more ordinary ones ("C-Section", "CS delivery".</p>
-      <a href="http://www.govcom.org/publications/full_list/rogers_inculpable_engine_2009.pdf"><span class="reference">Rogers, Richard. "The Googlization Question, and the Inculpable Engine."</span></a>
+      <p>For each query we collected the first 1000 images.</p>
+      <a href="http://networkcultures.org/wpmu/query/2013/11/11/arora-payal-the-making-of-art-knowledge-via-google-images-in-rural-india/#more-2067"><span class="reference">Add title</span></a>
       <hr>
 
       <!-- Protocol 2 -->
       <img src="img/pro_01.png"/>
-      <h2>cleaning and tagging the webpages</h2>
-      <p>We qualified and tagged all the webpages accordingly to their contents and excluding from the corpus pages not concerned with CS (i.e. PDF, Videos but also cesarean section on animals). In this way we obtained three main webpages groups:
+      <h2>selecting and tagging the images</h2>
+      <p>We qualified and tagged all the images accordingly to their contents and excluding from the corpus images not concerned with CS (i.e. cesarean section on animals, images of Porto Cesareo a well known seaside town in south Italy). Each image can belong to more than one group (e.g. a photo of nurse helping during a childbirth will belong to “HC PROVIDERS;BODY; and CHILDBIRTH” categories).</br>
+      The following categories were used:
         <ul>
-          <li>a) Medical Information; </li>
-          <li>b) Contentious Information;</li>
-          <li>c) Experiential Information.</li>
+          <li>Body </li>
+          <li>Data </li>
+          <li>Delivery </li>
+          <li>Exams </li>
+          <li>Family </li>
+          <li>HC Providers </li>
+          <li>Hospital </li>
+          <li>Illustration </li>
+          <li>Men </li>
+          <li>New Borns </li>
+          <li>Nursery </li>
+          <li>Picture </li>
+          <li>Publication </li>
+          <li>Room </li>
+          <li>Tools </li>
+          <li>VIP </li>
+          <li>Others </li>
         </ul>
+        Finally we computed the dominant color of each image.
       </p>
       <hr>
 
       <!-- Protocol 3 -->
       <img src="img/pro_01.png"/>
-      <h2>Crawling the hyperlinks</h2>
-      <p>We followed the web corpus hyperlinks to discovering other relevant URLs. From this new web corpus have been eliminated all the websites considered too general (i.e facebook, twitter) and the non relevant ones (i.e maps.google, youtube). Furthermore, also the websites with an in-degree index smaller than 3 have been excluded.
-        For this step we used  <a href="https://github.com/medialab/Hypertext-Corpus-Initiative">HYPHE</a> a software developed at médialab | SciencesPo.
-        <a href="http://www.govcom.org/publications/full_list/Rogers_Digital_Cognitive_Technologies_preprint_Wiley_2009.pdf"><span class="reference">Rogers, Richard. "Mapping public web space with the Issuecrawler." Digital cognitive technologies: Epistemology and the knowledge economy (2010): 89-99."</span></a>
+      <h2>olor extraction and rich prospect browsing</h2>
+      <p>images organized by language and by category > elastic list possibility of applying multiple selections rich prospect browsing - switch between pictures and dominant colors to see the composition of each category sorting by page rank
       </p>
       <hr>
-
-      <!-- Protocol 4 -->
-      <img src="img/pro_01.png"/>
-      <h2>(visual) network) analysis</h2>
-      <p>We examined through co-link / social networking analysis the network produced with the crawling. Furthermore, we analyzed visually the network using GEPHI, an open-source network analysis and visualization software package. Thanks to its force-based algorithm, ForceAtlas2, we produced the qualitative interpretation of the graph.
-        <a href="http://www.govcom.org/publications/full_list/Rogers_Digital_Cognitive_Technologies_preprint_Wiley_2009.pdf"><span class="reference">Rogers, Richard. "Mapping public web space with the Issuecrawler." Digital cognitive technologies: Epistemology and the knowledge economy (2010): 89-99."</span></a>
-      </p>
 
       <!-- End of protocol -->
     </div>
