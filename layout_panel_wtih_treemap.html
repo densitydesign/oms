@@ -25,6 +25,10 @@
 		<script src="js/processing.js"></script>
 		<script src="js/protocol.js"></script>
 		<script src="js/denseShow.js"></script>
+		<script type="text/javascript" src="js/sigma.min.js"></script>
+    <script type="text/javascript" src="js/sigma.parsers.json.js"></script>
+    <script type="text/javascript" src="js/sigma.layout.forceAtlas2.js"></script>
+    <script type="text/javascript" src="js/sigma.plugins.neighborhoods.js"></script>
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -53,6 +57,10 @@
     </div>
   </div>
   
+  <!-- SGNAF -->
+  <div id="sgnaf"></div>
+  
+  
   <!--menu overlay -->
    <div class="overlay overlay-slidedown">
   <button type="button" class="overlay-close">Close</button>
@@ -65,7 +73,9 @@
 
 		<!-- Text -->
 		<section id="intro"></section>
+		<section id="cs_query_network"></section>
 		<section id="treemap"></section>
+
 		<div class="scrolldown">
 			<div class="arrows">
 				<div class="arrow-prev"></div>
@@ -75,14 +85,18 @@
 
 		<script>
 			var checkPoints = [
-			 ["intro",-1, "Introduction"],
-			 ["treemap", 1, "Treemap section"], 
-			 ["treemap", 2], 
-			 ["treemap", 3], 
-			 ["treemap", 4], 
-			 ["treemap", 5], 
-			 ["treemap", 6], 
-			 ["treemap", 7]]
+			 {id:"intro", label:"Introduction"},
+			 {id:"cs_query_network",step:1, label:"Query network", protocol:"protocol_1"},
+			 {id:"cs_query_network",step:2, label:"Query network", protocol:"protocol_1"},
+			 {id:"cs_query_network",step:3, label:"Query network", protocol:"protocol_1"},
+			 {id:"treemap", step:1, label:'treemap', protocol:"protocol_2"}, 
+			 {id:"treemap", step:2, label:'treemap', protocol:"protocol_2"}, 
+			 {id:"treemap", step:3, label:'treemap', protocol:"protocol_2"}, 
+			 {id:"treemap", step:4, label:'treemap', protocol:"protocol_2"}, 
+			 {id:"treemap", step:5, label:'treemap', protocol:"protocol_2"}, 
+			 {id:"treemap", step:6, label:'treemap', protocol:"protocol_2"}, 
+			 {id:"treemap", step:7, label:'treemap', protocol:"protocol_2"}
+			 ]
 			
 
 		</script>
