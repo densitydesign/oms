@@ -22,6 +22,10 @@
 		<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
 		<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
 		<script src="js/d3.v3.min.js"></script>
+		<script type="text/javascript" src="js/sigma.min.js"></script>
+		<script type="text/javascript" src="js/sigma.parsers.json.js"></script>
+		<script type="text/javascript" src="js/sigma.layout.forceAtlas2.js"></script>
+		<script type="text/javascript" src="js/sigma.plugins.neighborhoods.js"></script>
 		<script src="js/processing.js"></script>
 		<script src="js/protocol.js"></script>
 		<script src="js/denseShow.js"></script>
@@ -65,7 +69,9 @@
 
 		<!-- Text -->
 		<section id="intro"></section>
+		<section id="cs_query_network"></section>
 		<section id="treemap"></section>
+		
 		<div class="scrolldown">
 			<div class="arrows">
 				<div class="arrow-prev"></div>
@@ -76,13 +82,20 @@
 		<script>
 			var checkPoints = [
 			 ["intro",-1, "Introduction"],
+			  ["cs_query_network",1, "Query network"],
+		    ["cs_query_network",2],
+		    ["cs_query_network",3],
+		    ["cs_query_network",4],
+		    ["cs_query_network",5],
+		    ["cs_query_network",6],
 			 ["treemap", 1, "Treemap section"], 
 			 ["treemap", 2], 
 			 ["treemap", 3], 
 			 ["treemap", 4], 
 			 ["treemap", 5], 
 			 ["treemap", 6], 
-			 ["treemap", 7]]
+			 ["treemap", 7],
+			]
 			
 
 		</script>
