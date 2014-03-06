@@ -2,33 +2,13 @@
 <html>
 <head>
   <title>WHO</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
-  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
-  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
 
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.mousewheel.js"></script>
   <script src="js/d3.v3.min.js"></script>
-  <script src="js/jquery.scrollTo.min.js"></script>
-  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-  <script src="js/hammer.min.js"></script>
-  <script src="js/jquery.hammer.min.js"></script>
-  <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
-  <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
-  <script src="js/d3.v3.min.js"></script>
-  <script type="text/javascript" src="js/sigma.min.js"></script>
-  <script type="text/javascript" src="js/sigma.parsers.json.js"></script>
-  <script type="text/javascript" src="js/sigma.layout.forceAtlas2.js"></script>
-  <script type="text/javascript" src="js/sigma.plugins.neighborhoods.js"></script>
-  <script src="js/processing.js"></script>
-  <script src="js/protocol.js"></script>
-  <script src="js/denseShow.js"></script>
   <script type="text/javascript" src="js/crossfilter.js"></script>  
   <script type="text/javascript" src="js/oms/barchart.js"></script>
   <script type="text/javascript" src="js/oms/bubblechart.js"></script>
@@ -44,23 +24,23 @@
   <div class="container cont-analytics">
     <div class="row section-row">
       <!-- Analytics --> 
-      <div class="col-md-8 col-sm-8 analytics">
+      <div class="col-md-8 col-sm-12 analytics" style="height:650px" >
         <h3 class="section">results per query</h3>
         <hr>
-        <div style="min-height:500px; width:100%" id="query"></div>
+        <div style="height:100%; width:100%" id="query"></div>
       </div>
 
       <!-- Bar Charts --> 
-      <div class="col-md-4 col-sm-12 analytics">
+      <div class="col-md-4 col-sm-12 analytics" style="height:650px" >
         <h3 class="section">results per category</h3>
+        <hr>
         <!-- Category --> 
-        <div style="min-height:200px; width:100%" id="category">
-          <hr>
+        <div style="height:25%; width:100%" id="category">
         </div>
         <!-- Domain --> 
-        <div style="min-height:300px; width:100%" id="domain">
-          <h3 class="section">results per domain</h3>
-          <hr>
+        <h3 class="section">results per domain</h3>
+        <hr>
+        <div style="height:75%; width:100%" id="domain">
         </div>
       </div>
     </div>
