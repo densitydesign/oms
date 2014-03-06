@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WHO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+  <script src="js/d3.v3.min.js"></script>
+  <script src="js/jquery.scrollTo.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+  <script src="js/hammer.min.js"></script>
+  <script src="js/jquery.hammer.min.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+  <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
+  <script src="js/d3.v3.min.js"></script>
+  <script type="text/javascript" src="js/sigma.min.js"></script>
+  <script type="text/javascript" src="js/sigma.parsers.json.js"></script>
+  <script type="text/javascript" src="js/sigma.layout.forceAtlas2.js"></script>
+  <script type="text/javascript" src="js/sigma.plugins.neighborhoods.js"></script>
+  <script src="js/processing.js"></script>
+  <script src="js/protocol.js"></script>
+  <script src="js/denseShow.js"></script>
+  <script type="text/javascript" src="js/crossfilter.js"></script>  
+  <script type="text/javascript" src="js/oms/barchart.js"></script>
+  <script type="text/javascript" src="js/oms/bubblechart.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <div class="container cont-analytics">
+    <div class="row section-row">
+      <!-- Analytics --> 
+      <div class="col-md-8 col-sm-8 analytics">
+        <h3 class="section">results per query</h3>
+        <hr>
+        <div style="min-height:500px; width:100%" id="query"></div>
+      </div>
+
+      <!-- Bar Charts --> 
+      <div class="col-md-4 col-sm-12 analytics">
+        <h3 class="section">results per category</h3>
+        <!-- Category --> 
+        <div style="min-height:200px; width:100%" id="category">
+          <hr>
+        </div>
+        <!-- Domain --> 
+        <div style="min-height:300px; width:100%" id="domain">
+          <h3 class="section">results per domain</h3>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/analytics_app.js"></script>
+</body>
+</html>
