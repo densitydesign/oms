@@ -265,6 +265,7 @@ h4.section{
 }
 
 .navbar-brand{
+	background: url(../img/back_home.png);
 	background-color: #CCCCCC;
 	height: 55px;
 	width: 55px;
@@ -278,7 +279,7 @@ h4.section{
 
 .navbar-brand:hover,
 .navbar-brand:focus {
-	background-color: #000 !important;
+	background-color: #666666 !important;
 }
 
 .scrolldown {
