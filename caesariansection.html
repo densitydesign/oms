@@ -26,6 +26,7 @@
     <script type="text/javascript" src="js/sigma.parsers.json.js"></script>
     <script type="text/javascript" src="js/sigma.layout.forceAtlas2.js"></script>
     <script type="text/javascript" src="js/sigma.plugins.neighborhoods.js"></script>
+    <script type="text/javascript" src="js/oms/slope.js"></script>
     <script src="js/processing.js"></script>
     <script src="js/protocol.js"></script>
     <script src="js/denseShow.js"></script>
@@ -71,12 +72,12 @@
     <section id="cs_intro"></section>
     <section id="cs_query_intro"></section>
     <section id="cs_query_network"></section>
-<!--     <section id="cs_query_analytics"></section> -->
+    <section id="cs_query_analytics"></section>
     <section id="cs_crawl_intro"></section>
     <section id="cs_crawl_network"></section>
-<!--        <section id="cs_text_intro"></section>
+    <section id="cs_text_intro"></section>
     <section id="cs_text_slope"></section>
-    <section id="cs_images_intro"></section>
+    <!-- <section id="cs_images_intro"></section>
     <section id="cs_images_elastic"></section>
     <section id="cs_aufeminin_intro"></section>
     <section id="cs_aufeminin_forum"></section>
@@ -100,7 +101,7 @@
     {id:"cs_query_network",step:4, label:"Building the corpus queries"},
     {id:"cs_query_network",step:5, label:"Building the corpus queries"},
     {id:"cs_query_network",step:6, label:"Building the corpus queries"},
-    //{"cs_query_analytics",-1},
+    {id:"cs_query_analytics",label:"Building the corpus analytics"},
     {id:"cs_crawl_intro", label:"Mapping the web"},
     {id:"cs_crawl_network",step:1, label:"Web cartography"},
     {id:"cs_crawl_network",step:2, label:"Web cartography"},
@@ -113,9 +114,10 @@
     {id:"cs_crawl_network",step:9, label:"Web cartography"},
     {id:"cs_crawl_network",step:10, label:"Web cartography"},
     {id:"cs_crawl_network",step:11, label:"Web cartography"},
-    {id:"cs_crawl_network",step:12, label:"Web cartography"}
+    {id:"cs_crawl_network",step:12, label:"Web cartography"},
+    {id:"cs_text_intro",label:"Seeing what they're saying"},
+    {id:"cs_text_slope", label:"Sloping the web"},
     ]
-    // ["cs_text_intro",-1,"Seeing what they're saying"],
     // ["cs_text_slope",1],
     // ["cs_text_slope",2],
     // ["cs_text_slope",3],

@@ -1,25 +1,28 @@
-<div class="side-panel">
-  <div class="adva-cont">
-    <div class="adv-step step1" style="display:block;">
-      <h4>A short first title</h4>
-      <p>
-        Nevertheless, upon Stubb setting the anchor-watch after his supper was concluded; and when, accordingly, Queequeg and a forecastle seaman came on deck, no small excitement was created among the sharks; for immediately suspending the cutting stages over the side, and lowering three lanterns, so that they cast long gleams of light over the turbid sea, these two mariners, darting their long whaling-spades, kept up an incessant murdering of the sharks,* by striking the keen steel deep into their skulls, seemingly their only vital part. But in the foamy confusion of their mixed and struggling hosts, the marksmen could not always hit their mark; and this brought about new revelations of the incredible ferocity of the foe. 
-      </p>
+  <div class="container cont-analytics">
+    <div class="row section-row">
+      <!-- Analytics --> 
+      <div class="col-md-8 col-sm-12 analytics" style="height:650px" >
+        <h3 class="section">results per query</h3>
+        <hr>
+        <div style="height:100%; width:100%" id="query"></div>
+      </div>
+
+      <!-- Bar Charts --> 
+      <div class="col-md-4 col-sm-12 analytics" style="height:650px" >
+        <h3 class="section">results per category</h3>
+        <hr>
+        <!-- Category --> 
+        <div style="height:25%; width:100%" id="category">
+        </div>
+        <!-- Domain --> 
+        <h3 class="section">results per domain</h3>
+        <hr>
+        <div style="height:75%; width:100%" id="domain">
+        </div>
+      </div>
     </div>
   </div>
-  <div class="legend">
-    <h5>Legend</h5>
-    <p>Blue is good<br/>Red is bad</p>
-  </div>
-</div>
-<div class="main-panel">
-  <p>Results per category</p>
-  <div id="category"></div>
-  <p>Results per query</p>
-  <div id="query"></div>
-  <p>Results per domain</p>
-  <div id="domain"></div>
-</div>
+
 <script type="text/javascript" src="js/crossfilter.js"></script>  
 <script type="text/javascript" src="js/oms/barchart.js"></script>
 <script type="text/javascript" src="js/oms/bubblechart.js"></script>
