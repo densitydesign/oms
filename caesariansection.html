@@ -13,6 +13,7 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-slider.js"></script>      
     <script src="js/jquery.mousewheel.js"></script>
     <script src="js/d3.v3.min.js"></script>
      <script src="js/jquery.scrollTo.min.js"></script>
@@ -77,12 +78,12 @@
     <section id="cs_crawl_network"></section>
     <section id="cs_text_intro"></section>
     <section id="cs_text_slope"></section>
-    <!-- <section id="cs_images_intro"></section>
+    <section id="cs_images_intro"></section>
     <section id="cs_images_elastic"></section>
     <section id="cs_aufeminin_intro"></section>
     <section id="cs_aufeminin_forum"></section>
     <section id="cs_aufeminin_networkFR"></section>
-    <section id="cs_aufeminin_networkIT"></section> -->
+    <section id="cs_aufeminin_networkIT"></section>
 
     <div class="scrolldown">
       <div class="arrows">
@@ -95,52 +96,57 @@
   var checkPoints = [
     {id:"cs_intro",label:"Introduction to caesarian section"},
     {id:"cs_query_intro",label: "Building the corpus"},
-    {id:"cs_query_network",step:1, label:"Building the corpus queries"},
-    {id:"cs_query_network",step:2, label:"Building the corpus queries"},
-    {id:"cs_query_network",step:3, label:"Building the corpus queries"},
-    {id:"cs_query_network",step:4, label:"Building the corpus queries"},
-    {id:"cs_query_network",step:5, label:"Building the corpus queries"},
-    {id:"cs_query_network",step:6, label:"Building the corpus queries"},
-    {id:"cs_query_analytics",label:"Building the corpus analytics"},
+    {id:"cs_query_network",step:1},
+    {id:"cs_query_network",step:2},
+    {id:"cs_query_network",step:3},
+    {id:"cs_query_network",step:4},
+    {id:"cs_query_network",step:5},
+    {id:"cs_query_network",step:6},
+    {id:"cs_query_analytics"},
     {id:"cs_crawl_intro", label:"Mapping the web"},
-    {id:"cs_crawl_network",step:1, label:"Web cartography"},
-    {id:"cs_crawl_network",step:2, label:"Web cartography"},
-    {id:"cs_crawl_network",step:3, label:"Web cartography"},
-    {id:"cs_crawl_network",step:4, label:"Web cartography"},
-    {id:"cs_crawl_network",step:5, label:"Web cartography"},
-    {id:"cs_crawl_network",step:6, label:"Web cartography"},
-    {id:"cs_crawl_network",step:7, label:"Web cartography"},
-    {id:"cs_crawl_network",step:8, label:"Web cartography"},
-    {id:"cs_crawl_network",step:9, label:"Web cartography"},
-    {id:"cs_crawl_network",step:10, label:"Web cartography"},
-    {id:"cs_crawl_network",step:11, label:"Web cartography"},
-    {id:"cs_crawl_network",step:12, label:"Web cartography"},
+    {id:"cs_crawl_network",step:1},
+    {id:"cs_crawl_network",step:2},
+    {id:"cs_crawl_network",step:3},
+    {id:"cs_crawl_network",step:4},
+    {id:"cs_crawl_network",step:5},
+    {id:"cs_crawl_network",step:6},
+    {id:"cs_crawl_network",step:7},
+    {id:"cs_crawl_network",step:8},
+    {id:"cs_crawl_network",step:9},
+    {id:"cs_crawl_network",step:10},
+    {id:"cs_crawl_network",step:11},
+    {id:"cs_crawl_network",step:12},
     {id:"cs_text_intro",label:"Seeing what they're saying"},
-    {id:"cs_text_slope", label:"Sloping the web"},
+    {id:"cs_text_slope",step:1},
+    {id:"cs_text_slope",step:2},
+    {id:"cs_text_slope",step:3},
+    {id:"cs_text_slope",step:4},
+    {id:"cs_text_slope",step:5},
+    {id:"cs_text_slope",step:6},
+    {id:"cs_images_intro",label:"Perceived image of the c-section"}, {id:"cs_images_elastic"},
+    {id:"cs_aufeminin_intro",label:"Analyzing the forum discussion"},
+    {id:"cs_aufeminin_forum",step:1},
+    {id:"cs_aufeminin_forum",step:2},
+    {id:"cs_aufeminin_forum",step:3},
+    {id:"cs_aufeminin_forum",step:4},
+    {id:"cs_aufeminin_forum",step:5},
+    {id:"cs_aufeminin_forum",step:6},
+    {id:"cs_aufeminin_forum",step:7},
+    {id:"cs_aufeminin_networkFR",step:1},
+    {id:"cs_aufeminin_networkFR",step:2},
+    {id:"cs_aufeminin_networkFR",step:3},
+    {id:"cs_aufeminin_networkFR",step:4},
+    {id:"cs_aufeminin_networkFR",step:5},
+    {id:"cs_aufeminin_networkFR",step:6},
+    {id:"cs_aufeminin_networkFR",step:7},
+    {id:"cs_aufeminin_networkIT",step:1},
+    {id:"cs_aufeminin_networkIT",step:2},
+    {id:"cs_aufeminin_networkIT",step:3},
+    {id:"cs_aufeminin_networkIT",step:4},
+    {id:"cs_aufeminin_networkIT",step:5},
+    {id:"cs_aufeminin_networkIT",step:6},
+    {id:"cs_aufeminin_networkIT",step:7}
     ]
-    // ["cs_text_slope",1],
-    // ["cs_text_slope",2],
-    // ["cs_text_slope",3],
-    // ["cs_text_slope",4],
-    // ["cs_images_intro",-1,"Perceived image of the c-section"],
-    // ["cs_images_elastic",-1]
-    // ["cs_aufeminin_intro",-1, "Analyzing the forum discussion"],
-    // ["cs_aufeminin_forum",1],
-    // ["cs_aufeminin_forum",2],
-    // ["cs_aufeminin_forum",3],
-    // ["cs_aufeminin_forum",4],
-    // ["cs_aufeminin_forum",5],
-    // ["cs_aufeminin_forum",6],
-    // ["cs_aufeminin_forum",7],
-    // ["cs_aufeminin_networkFR",1],
-    // ["cs_aufeminin_networkFR",2],
-    // ["cs_aufeminin_networkFR",3],
-    // ["cs_aufeminin_networkFR",4],
-    // ["cs_aufeminin_networkIT",1],
-    // ["cs_aufeminin_networkIT",2],
-    // ["cs_aufeminin_networkIT",3],
-    // ["cs_aufeminin_networkIT",4]
-    // ]
 </script>
 
 </body>

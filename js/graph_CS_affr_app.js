@@ -376,6 +376,8 @@
           defaultEdgeColor: 'rgba(17, 17, 17, 0.1)',
           rescaleIgnoreSize: true,
           enableHovering: false,
+          mouseEnabled : false,
+          touchEnabled : false,
           sideMargin: 50,
           clone: false,
           immutable: false,
@@ -489,15 +491,15 @@
 
         })
 
-        // Bind buttons:
-        document.getElementById('previous-step').addEventListener('click', function() {
-          if (_currentView > 0)
-            applyView(_currentView - 1);
-        });
-        document.getElementById('next-step').addEventListener('click', function() {
-          if (_currentView < _views.length - 1)
-            applyView(_currentView + 1);
-        });
+        // // Bind buttons:
+        // document.getElementById('previous-step').addEventListener('click', function() {
+        //   if (_currentView > 0)
+        //     applyView(_currentView - 1);
+        // });
+        // document.getElementById('next-step').addEventListener('click', function() {
+        //   if (_currentView < _views.length - 1)
+        //     applyView(_currentView + 1);
+        // });
 
         // Read graph:
         _s.graph.read(_graph);
@@ -558,7 +560,9 @@
           settings: {
             drawEdges: false,
             labelThreshold: 0,
-            enableCamera: false
+            enableCamera: false,
+           mouseEnabled : false,
+          touchEnabled : false
           },
           animation: {
             color: 'target_color',
@@ -618,7 +622,9 @@
           settings: {
             drawEdges: false,
             labelThreshold: 0,
-            enableCamera: false
+            enableCamera: false,
+           mouseEnabled : false,
+          touchEnabled : false
           },
           animation: {
             color: 'target_color',
@@ -677,7 +683,9 @@
           settings: {
             drawEdges: false,
             labelThreshold: 0,
-            enableCamera: false
+            enableCamera: false,
+           mouseEnabled : false,
+          touchEnabled : false
           },
           animation: {
             color: 'target_color',
@@ -738,7 +746,9 @@
           settings: {
             drawEdges: false,
             labelThreshold: 0,
-            enableCamera: false
+            enableCamera: false,
+           mouseEnabled : false,
+          touchEnabled : false
           },
           animation: {
             color: 'target_color',
@@ -807,7 +817,9 @@
           settings: {
             drawEdges: true,
             labelThreshold: 0,
-            enableCamera: false
+            enableCamera: false,
+           mouseEnabled : false,
+          touchEnabled : false
           },
           animation: {
             color: 'target_color',
@@ -873,7 +885,9 @@
           settings: {
             drawEdges: true,
             labelThreshold: 0,
-            enableCamera: false
+            enableCamera: false,
+           mouseEnabled : false,
+          touchEnabled : false
           },
           animation: {
             color: 'target_color',
@@ -1019,7 +1033,9 @@
           settings: {
             drawEdges: true,
             labelThreshold: 8,
-            enableCamera: true
+            enableCamera: true,
+           mouseEnabled : true,
+          touchEnabled : true
           }
           ,
           animation: {
@@ -1036,6 +1052,41 @@
           }
         }
       ];
+
+
+  step1 = function(){
+    applyView(0)
+    
+  }
+
+  step2 = function(){
+    applyView(1)
+    
+  }
+
+  step3 = function(){
+    applyView(2)
+    
+  }
+
+  step4 = function(){
+    applyView(3)
+    
+  }
+
+  step5 = function(){
+    applyView(4)
+    
+  }
+
+  step6 = function(){
+    applyView(5)
+  }
+
+  step7 = function(){
+    applyView(6)
+    
+  }
 
   function applyView(view) {
     var oldView = _views[_currentView] || {},

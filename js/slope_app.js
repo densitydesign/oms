@@ -7,57 +7,107 @@ var transitionDuration = 750;
 var fontSize = 10;
 
 
+
 $.getJSON('data/CS_tfidf.json', function(dataIDF) {
 
 $.getJSON('data/CS_tf.json', function(dataTF) {
 
-	d3.select('#buttons').append("button").text('show cat')
-		.on("click", function(){
-			slope.showCat(["M", "C", "E", "V"])
-			chart.call(slope)
-	})
+		step2 = function(){
+		slope.showCat(["M", "C", "E"])
+		chart.call(slope)
+	}
 
-	d3.select('#buttons').append("button").text('show cat 2')
-		.on("click", function(){
-			slope.showCat(["C", "E"])
-			chart.call(slope)
-	})
+	step3 = function(){
+		slope.showLines(true).wordStep(["risk", "incision"])
+		chart.call(slope)
+	}
 
-	d3.select('#buttons').append("button").text('filter word link')
-		.on("click", function(){
-			slope.showLines(true).wordStep(["risk", "incision"])
-			chart.call(slope)
-	})
+	step4 = function(){
+		slope.showLines(true).wordStep([])
+		chart.call(slope)
+	}
 
-	d3.select('#buttons').append("button").text('display all links')
-		.on("click", function(){
-			slope.showLines(true).wordStep([])
-			chart.call(slope)
-	})
+	step5 = function(){
+		slope.showCat(["E", "V"])
+		chart.call(slope)
+	}
 
-	d3.select('#buttons').append("button").text('not normalized')
+	step6 = function(){
+		slope.showCat(["M", "C", "E"])
+		chart.call(slope)
+
+			d3.select('#norm .btn-group').append("button").attr("type", "button").attr("class", "btn btn-default").text('not normalized')
 		.on("click", function(){
 			slope.normalized(false)
 			chart.call(slope)
-	})
+		})
 
-	d3.select('#buttons').append("button").text('normalized')
-		.on("click", function(){
-			slope.normalized(true)
-			chart.call(slope)
-	})
+		d3.select('#norm .btn-group').append("button").attr("type", "button").attr("class", "btn btn-default").text('normalized')
+			.on("click", function(){
+				slope.normalized(true)
+				chart.call(slope)
+		})
 
-	d3.select('#buttons').append("button").text('TF')
-		.on("click", function(){
-			slope.listStop(false)
-			chart.datum(dataTF).call(slope)
-	})
+		d3.select('#type .btn-group').append("button").attr("type", "button").attr("class", "btn btn-default").text('TF')
+			.on("click", function(){
+				slope.listStop(false)
+				chart.datum(dataTF).call(slope)
+		})
 
-	d3.select('#buttons').append("button").text('TFIDF')
-		.on("click", function(){
-			slope.listStop(false)
-			chart.datum(dataIDF).call(slope)
-	})
+		d3.select('#type .btn-group').append("button").attr("type", "button").attr("class", "btn btn-default").text('TFIDF')
+			.on("click", function(){
+				slope.listStop(false)
+				chart.datum(dataIDF).call(slope)
+		})
+	}
+
+	// d3.select('#buttons').append("button").text('show cat')
+	// 	.on("click", function(){
+	// 		slope.showCat(["M", "C", "E", "V"])
+	// 		chart.call(slope)
+	// })
+
+	// d3.select('#buttons').append("button").text('show cat 2')
+	// 	.on("click", function(){
+	// 		slope.showCat(["C", "E"])
+	// 		chart.call(slope)
+	// })
+
+	// d3.select('#buttons').append("button").text('filter word link')
+	// 	.on("click", function(){
+	// 		slope.showLines(true).wordStep(["risk", "incision"])
+	// 		chart.call(slope)
+	// })
+
+	// d3.select('#buttons').append("button").text('display all links')
+	// 	.on("click", function(){
+	// 		slope.showLines(true).wordStep([])
+	// 		chart.call(slope)
+	// })
+
+	// d3.select('#buttons').append("button").text('not normalized')
+	// 	.on("click", function(){
+	// 		slope.normalized(false)
+	// 		chart.call(slope)
+	// })
+
+	// d3.select('#buttons').append("button").text('normalized')
+	// 	.on("click", function(){
+	// 		slope.normalized(true)
+	// 		chart.call(slope)
+	// })
+
+	// d3.select('#buttons').append("button").text('TF')
+	// 	.on("click", function(){
+	// 		slope.listStop(false)
+	// 		chart.datum(dataTF).call(slope)
+	// })
+
+	// d3.select('#buttons').append("button").text('TFIDF')
+	// 	.on("click", function(){
+	// 		slope.listStop(false)
+	// 		chart.datum(dataIDF).call(slope)
+	// })
 
 	//sets up the basic container for the visualization
 	var chart = d3.select("#slopegraph").append("svg")
@@ -167,3 +217,4 @@ $.getJSON('data/CS_tf.json', function(dataTF) {
 
 	});
 });
+
