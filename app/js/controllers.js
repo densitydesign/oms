@@ -9,7 +9,7 @@ angular.module('who.controllers', []).
   .controller('MyCtrl2', [function() {
 
   }])
-  .controller('menu', function($scope) {
+  .controller('caesariansection', function($scope) {
 
     $scope.menuElements =  [
           'intro bella lunga che ci stà',
