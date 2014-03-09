@@ -10,8 +10,10 @@ angular.module('who', [
   'who.directives',
   'who.controllers'
 ]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'caesariansection'});
-  $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+config(function ($routeProvider, $locationProvider) {
+  //$routeProvider.when('/familyplanning', {templateUrl: 'partials/familyplanning.html', controller: 'familyplanning'});
+  $routeProvider.when('/caesariansection', {templateUrl: 'partials/caesariansection.html', controller: 'caesariansection'});
+  $routeProvider.otherwise({redirectTo: '/caesariansection'});
+
+  //$locationProvider.html5Mode(true);
+});

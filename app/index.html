@@ -4,33 +4,11 @@
   <meta charset="utf-8">
   <title>W.H.O. App</title>
   <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="lib/fullpage.js/jquery.fullPage.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-  <!-- Fixed navbar -->
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="caesariansection">
-    <div class="container-fluid">
-      <div class="navbar-header" id="main-nav">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"></a>
-      </div>
-      <div class="navbar-collapse collapse" id="main-index">
-        <ul class="nav navbar-nav">
-          <li ng-repeat="menuElement in menuElements"><a href="#">{{menuElement}}</a></li>
-<!--           <li id="one"><a href="#">intro bella lunga che ci st&agrave;</a></li>
-          <li id="two"><a href="#">un bel capitolo</a></li>
-          <li id="three"><a href="#">che storia sto cs</a></li>
-          <li id="four"><a href="#">immagini inguardabili</a></li>
-          <li id="five"><a href="#">finalmente l'ultimo</a></li> -->
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
 
   <div ng-view></div>
 
@@ -40,7 +18,7 @@
       <div class="arrow-next"></div>
     </div>
   </div>
-  <div class="overlay overlay-slidedown">
+<!--   <div class="overlay overlay-slidedown">
   <button type="button" class="overlay-close">Close</button>
   <nav>
     <ul>
@@ -51,12 +29,15 @@
         <li id="five"><a href="#">finalmente l'ultimo</a></li>
     </ul>
   </nav>
-</div> 
+</div>  -->
 
   <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular/angular-route.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
   <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
   <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script src="lib/jquery-ui/ui/jquery-ui.js"></script>
+  <script src="lib/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="lib/fullpage.js/jquery.fullPage.js"></script>
   <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
