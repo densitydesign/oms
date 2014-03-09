@@ -545,12 +545,12 @@ h4.section{
 }
 
 .adv-step{
-	display:none;
+	min-height: 100%;
 }
 
 .adva-cont{
 	height:80%;
-	overflow:auto;
+	overflow:hidden;
 }
 
 .legend{
@@ -564,7 +564,7 @@ h4.section{
 }
 
 #graph{
-	height:85% ;
+	height:100% ;
 }
 
 /* Protocol */

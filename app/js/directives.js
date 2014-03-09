@@ -48,12 +48,35 @@ angular.module('who.directives', [])
       restrict: 'A',
       replace: true,
       templateUrl: '../partials/vizstep.html',
-      link: function(scope, element, attrs) {
-          if (scope.$parent.$last === true) {
-                    $timeout(function () {
-                        scope.$emit('docReady');
-                    });
-                }
+      link: function postLink(scope, element, attrs) {
+
+        var network = who.graph()
+                      .on("steplimit", function(){
+                        scope.$emit('steplimit');
+                      })
+
+        var container = element.find("#graph")[0]
+
+        if (scope.$parent.$last === true) {
+                  $timeout(function () {
+                      scope.$emit('docReady');
+                  });
+              }
+        else {
+           $timeout(function (){
+              d3.select(container)
+                .call(network)
+          })
+        };
+
+        scope.$watch('utils.internalCounter',function(newValue, oldValue){
+          if(newValue !== oldValue){
+              network.internalView(newValue)
+              d3.select(container)
+                .call(network)
+            }
+        })
+
       }
     };
   })
