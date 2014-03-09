@@ -539,7 +539,6 @@ h4.section{
 }
 
 .side-panel{
-	padding-top:80px;
 	border-right:1px solid #CCCCCC;
 	height:100%;
 
@@ -566,7 +565,6 @@ h4.section{
 
 #graph{
 	height:85% ;
-	margin: 55px 0px;
 }
 
 /* Protocol */

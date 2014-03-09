@@ -20,45 +20,40 @@ angular.module('who.directives', [])
       restrict: 'A',
       replace: false,
       templateUrl: '../partials/chapterintro.html',
-      // scope: {
-      //   's-data': '='
-      // },
       link: function(scope, element, attrs) {
       	  if (scope.$parent.$last === true) {
                     $timeout(function () {
                         scope.$emit('docReady');
                     });
                 }
-
-        function update(){
-          // if(scope.request.cells.length){
-          //   apiService.getInOut(scope.request)
-          //     .done(function(data){
-
-          //       var callsList = data['contactsChart']
-          //       callsList.forEach(function(f){
-          //         f.count = Math.round(f.count)
-          //         if(f.location == 'international'){
-          //         f.countryCode = scope.toCountryName(f.countryCode)
-          //         }
-          //       })
-
-          //       scope.inout = callsList;
-          //       scope.$apply();
-          //     })
-          //     .fail(function(error){
-          //       scope.error = error;
-          //     })
-          // }
-          // else{
-          //   scope.inout = []
-          // }
-        }
-
-        // scope.$watch('request', function(){
-        //       update()
-        // },true)
-
+      }
+    };
+  })
+  .directive('subChapter', function ($timeout) {
+    return {
+      restrict: 'A',
+      replace: true,
+      templateUrl: '../partials/subchapter.html',
+      link: function(scope, element, attrs) {
+          if (scope.$parent.$last === true) {
+                    $timeout(function () {
+                        scope.$emit('docReady');
+                    });
+                }
+      }
+    };
+  })
+  .directive('vizStep', function ($timeout) {
+    return {
+      restrict: 'A',
+      replace: true,
+      templateUrl: '../partials/vizstep.html',
+      link: function(scope, element, attrs) {
+          if (scope.$parent.$last === true) {
+                    $timeout(function () {
+                        scope.$emit('docReady');
+                    });
+                }
       }
     };
   })

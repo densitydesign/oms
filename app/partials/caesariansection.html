@@ -1,24 +1,22 @@
 <!-- Fixed navbar -->
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-<div class="container-fluid">
-  <div class="navbar-header" id="main-nav">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#"></a>
+  <div class="container-fluid">
+    <div class="navbar-header" id="main-nav">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+    <div class="navbar-collapse collapse" id="main-index">
+      <ul class="nav navbar-nav">
+        <li ng-repeat="section in sections" ng-if="section.label"><a ng-href="#{{section.id}}">{{section.label}}</a></li>
+      </ul>
+    </div>
+    <!--/.nav-collapse -->
   </div>
-  <div class="navbar-collapse collapse" id="main-index">
-    <ul class="nav navbar-nav">
-      <li ng-repeat="section in sections" ng-if="section.label"><a ng-href="#{{section.id}}">{{section.label}}</a></li>
-    </ul>
-  </div><!--/.nav-collapse -->
 </div>
-</div>
-<!-- <div class="section" ng-repeat="section in sections" ng-if="$index >= 0" my-post-repeat-directive>
-	<div chapter-intro s-data="{{section.id}}"></div>
-</div> -->
-<div class="section" ng-repeat="section in sections" ng-if="$index >= 0" s-data="{{section.id}}" app-sections>
+<div class="section" ng-repeat="section in sections" ng-if="$index >= 0" app-sections>
 </div>
