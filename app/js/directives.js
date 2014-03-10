@@ -15,12 +15,26 @@ angular.module('who.directives', [])
           }
       };
   })
-  .directive('chapterIntro', function ($timeout) {
+  .directive('chapterIntro',[ 'fileService', '$timeout', function (fileService, $timeout){
     return {
       restrict: 'A',
       replace: false,
       templateUrl: '../partials/chapterintro.html',
       link: function(scope, element, attrs) {
+
+          var txt;
+
+          fileService.getFile('../data/' + scope.section.id + '/txt.html').then(
+            function(data){
+              txt = data;
+              element.html(txt)
+            },
+            function(error){
+              txt = error
+              element.html(txt)
+            }
+          );
+
       	  if (scope.$parent.$last === true) {
                     $timeout(function () {
                         scope.$emit('docReady');
@@ -28,13 +42,27 @@ angular.module('who.directives', [])
                 }
       }
     };
-  })
-  .directive('subChapter', function ($timeout) {
+  }])
+  .directive('subChapter',[ 'fileService', '$timeout', function (fileService, $timeout) {
     return {
       restrict: 'A',
       replace: true,
       templateUrl: '../partials/subchapter.html',
       link: function(scope, element, attrs) {
+
+          var txt;
+
+          fileService.getFile('../data/' + scope.section.id + '/txt.html').then(
+            function(data){
+              txt = data;
+              element.find('.section-text').html(txt)
+            },
+            function(error){
+              txt = error
+              element.find('.section-text').html(txt)
+            }
+          );
+
           if (scope.$parent.$last === true) {
                     $timeout(function () {
                         scope.$emit('docReady');
@@ -42,7 +70,7 @@ angular.module('who.directives', [])
                 }
       }
     };
-  })
+  }])
   .directive('vizStep',['fileService', '$timeout', function (fileService, $timeout) {
     return {
       restrict: 'A',
@@ -77,6 +105,7 @@ angular.module('who.directives', [])
         }
         else {
            $timeout(function (){
+            console.log("eccomi")
               update();
           })
         };
@@ -91,14 +120,28 @@ angular.module('who.directives', [])
       }
     };
   }])
-  .directive('legendStep', function ($timeout) {
+  .directive('legendStep', ['fileService', '$timeout', function (fileService, $timeout) {
     return {
       restrict: 'A',
       replace: false,
-      templateUrl: '../partials/legendstep.html',
+      //templateUrl: '../partials/legendstep.html',
       link: function(scope, element, attrs) {
 
-        var limit = element.children().length;
+        var limit,
+              txt;
+
+        fileService.getFile('../data/' + scope.section.id + '/legend.html').then(
+          function(data){
+            txt = data;
+            element.html(txt)
+            limit = element.children().length;
+          },
+          function(error){
+            txt = error
+            element.html(txt)
+            limit = element.children().length;
+          }
+        );
 
         scope.$watch('utils.internalCounter',function(newValue, oldValue){
           if(newValue !== oldValue && newValue >= 0 && newValue < limit){
@@ -108,4 +151,4 @@ angular.module('who.directives', [])
 
       }
     };
-  })
+  }])
