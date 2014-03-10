@@ -78,14 +78,9 @@ angular.module('who.directives', [])
       templateUrl: '../partials/vizstep.html',
       link: function postLink(scope, element, attrs) {
 
-        // fileService.getFile('../data/cs_query.json').then(
-        //   function(data){
-        //     console.log(data['nodes'][0]);
-        //   },
-        //   function(error){ }
-        //   );
 
         var network = who.graph()
+                      .sectionid(scope.section.id)
                       .on("steplimit", function(){
                         scope.$emit('steplimit');
                       });
@@ -105,7 +100,6 @@ angular.module('who.directives', [])
         }
         else {
            $timeout(function (){
-            console.log("eccomi")
               update();
           })
         };

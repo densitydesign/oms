@@ -19,8 +19,8 @@ angular.module('who.controllers', [])
       {id:"cs_query_intro",label: "Building the corpus", template:"sub-chapter"},
       {id:"cs_query_network",step:1, template:"viz-step"},
       //{id:"cs_query_analytics", template:"chapter-intro"}
-       {id:"cs_crawl_intro", label:"Mapping the web", template:"sub-chapter"}
-      // {id:"cs_crawl_network",step:1, template:"viz-step"},
+      {id:"cs_crawl_intro", label:"Mapping the web", template:"sub-chapter"},
+      {id:"cs_crawl_network",step:1, template:"viz-step"}
       // {id:"cs_text_intro",label:"Seeing what they're saying", template:"sub-chapter"},
       // {id:"cs_text_slope",step:1, template:"viz-step"},
       // {id:"cs_images_intro",label:"Perceived image of the c-section",template:"sub-chapter"}, 
@@ -49,9 +49,15 @@ angular.module('who.controllers', [])
 
                $('#main-index').animate({scrollTop: $('#main-index').scrollTop() + $('#nav_' + $scope.sections[nextIndex(index, direction)].id).position().top}, 700);
              }
+             if($scope.sections[nextIndex(index, direction)-1].step){
+                $scope.utils.internalCounter = 0
+                $scope.$apply()
+             }
+
             },
             afterLoad: function(anchorLink, index){
                 if($scope.sections[index-1].step){
+                
                 $.fn.fullpage.setAllowScrolling(false);
                 addMouseWheelHandler()
               }
@@ -60,7 +66,6 @@ angular.module('who.controllers', [])
       });
 
     $scope.$on('steplimit',function(steplimitEvent){
-      //$scope.utils.internalCounter = 0;
       removeMouseWheelHandler()
       $.fn.fullpage.setAllowScrolling(true);
     })
