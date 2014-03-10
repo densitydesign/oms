@@ -78,7 +78,6 @@ angular.module('who.directives', [])
       templateUrl: '../partials/vizstep.html',
       link: function postLink(scope, element, attrs) {
 
-
         var network = who.graph()
                       .sectionid(scope.section.id)
                       .on("steplimit", function(){
@@ -102,7 +101,15 @@ angular.module('who.directives', [])
            $timeout(function (){
               update();
           })
-        };
+        // scope.$on('docReady', function (docReadyEvent) {
+        //     console.log("ok il doc è pronto")
+        //       $timeout(function (){
+        //       update();
+        //       })
+        // })
+
+
+         }
 
         scope.$watch('utils.internalCounter',function(newValue, oldValue){
           if(newValue !== oldValue){
