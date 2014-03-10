@@ -43,37 +43,66 @@ angular.module('who.directives', [])
       }
     };
   })
-  .directive('vizStep', function ($timeout) {
+  .directive('vizStep',['fileService', '$timeout', function (fileService, $timeout) {
     return {
       restrict: 'A',
       replace: true,
       templateUrl: '../partials/vizstep.html',
       link: function postLink(scope, element, attrs) {
 
+        // fileService.getFile('../data/cs_query.json').then(
+        //   function(data){
+        //     console.log(data['nodes'][0]);
+        //   },
+        //   function(error){ }
+        //   );
+
         var network = who.graph()
                       .on("steplimit", function(){
                         scope.$emit('steplimit');
-                      })
+                      });
 
-        var container = element.find("#graph")[0]
+        var container = element.find("#graph")[0];
+
+        var update = function(){
+          d3.select(container)
+                .call(network)
+        };
 
         if (scope.$parent.$last === true) {
                   $timeout(function () {
                       scope.$emit('docReady');
+                      update()
                   });
-              }
+        }
         else {
            $timeout(function (){
-              d3.select(container)
-                .call(network)
+              update();
           })
         };
 
         scope.$watch('utils.internalCounter',function(newValue, oldValue){
           if(newValue !== oldValue){
               network.internalView(newValue)
-              d3.select(container)
-                .call(network)
+              update()
+            }
+        })
+
+      }
+    };
+  }])
+  .directive('legendStep', function ($timeout) {
+    return {
+      restrict: 'A',
+      replace: false,
+      templateUrl: '../partials/legendstep.html',
+      link: function(scope, element, attrs) {
+
+        var limit = element.children().length;
+
+        scope.$watch('utils.internalCounter',function(newValue, oldValue){
+          if(newValue !== oldValue && newValue >= 0 && newValue < limit){
+               element.animate({scrollTop: element.scrollTop() + element.children(".step" + (newValue+1)).position().top}, 500);
             }
         })
 

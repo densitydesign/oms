@@ -17,8 +17,8 @@ angular.module('who.controllers', [])
     $scope.sections = [
       {id:"cs_intro",label:"Introduction to caesarian section", template:"chapter-intro"},
       {id:"cs_query_intro",label: "Building the corpus", template:"sub-chapter"},
-      {id:"cs_query_network",step:1, template:"viz-step"},
-      {id:"cs_query_analytics", template:"chapter-intro"}
+      {id:"cs_query_network",step:1, template:"viz-step"}
+      //{id:"cs_query_analytics", template:"chapter-intro"},
       // {id:"cs_crawl_intro", label:"Mapping the web", template:"sub-chapter"},
       // {id:"cs_crawl_network",step:1, template:"viz-step"},
       // {id:"cs_text_intro",label:"Seeing what they're saying", template:"sub-chapter"},
@@ -32,7 +32,6 @@ angular.module('who.controllers', [])
     ]
 
     $scope.utils = {
-      slideIndex: 0,
       internalCounter: 0
     }
 
@@ -46,12 +45,6 @@ angular.module('who.controllers', [])
             paddingBottom: '55px',
             verticalCentered: false,
             onLeave: function(index, direction){
-              $scope.utils.slideIndex = nextIndex(index, direction);
-              $scope.$apply()
-              // if($scope.sections[nextIndex(index, direction)].step){
-              //   $.fn.fullpage.setAllowScrolling(false);
-              //   addMouseWheelHandler()
-              // }
             },
             afterLoad: function(anchorLink, index){
                 if($scope.sections[index-1].step){

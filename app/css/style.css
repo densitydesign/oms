@@ -161,6 +161,7 @@ h4.section{
 	letter-spacing: 2px;
 	padding:0px 20px;
 	color:#cccccc;
+	margin-top: 0px;
 }
 
 .adv-step h2{
@@ -546,6 +547,7 @@ h4.section{
 
 .adv-step{
 	min-height: 100%;
+	padding-top: 20px;
 }
 
 .adva-cont{

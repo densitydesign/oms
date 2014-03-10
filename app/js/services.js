@@ -2,8 +2,21 @@
 
 /* Services */
 
+angular.module('who.services', [])
+		.factory('fileService', function($http, $q) {
+	  
+	  return {
+	    
+	    getFile : function(url){
+	        var deferred = $q.defer();
+	        $http.get(url).success(function(data){
+	            deferred.resolve(data);
+	        }).error(function(){
+	            deferred.reject("An error occured while fetching grid");
+	        });
+        
+        	return deferred.promise;
+    	}
+	  }
+	})
 
-// Demonstrate how to register services
-// In this case it is a simple value service.
-angular.module('who.services', []).
-  value('version', '0.1');
