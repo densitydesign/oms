@@ -5,7 +5,6 @@ html{
 body {
 	height: 100%;
 	position:relative;
-	overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -677,6 +676,7 @@ h4.section{
 	height:100%;
 	color: #f8f8f8;
 	background-color: #D6C33B;
+	background: url(../img/test_background.jpg) no-repeat center center;
 	background-size: cover;
 	text-align: center;
 }
