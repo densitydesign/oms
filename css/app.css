@@ -205,13 +205,13 @@ section h1{
 	left:100%;
 	top:0;
 	background:#425863;
-	
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 }
+
 .proto-title{
 	font-family:'Montserrat', sans-serif;
 	font-size:1.00em;
@@ -234,8 +234,7 @@ section h1{
 	cursor:default;
 }
 
-.close-btn{
-	
+.close-btn{	
 	width:10px;
 	-webkit-transform: rotate(45deg);
 	-webkit-transition: all 0.5s;
