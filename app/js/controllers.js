@@ -45,6 +45,10 @@ angular.module('who.controllers', [])
             paddingBottom: '55px',
             verticalCentered: false,
             onLeave: function(index, direction){
+              if($scope.sections[nextIndex(index, direction)].label){
+
+               $('#main-index').animate({scrollTop: $('#main-index').scrollTop() + $('#nav_' + $scope.sections[nextIndex(index, direction)].id).position().top}, 700);
+             }
             },
             afterLoad: function(anchorLink, index){
                 if($scope.sections[index-1].step){
@@ -60,7 +64,7 @@ angular.module('who.controllers', [])
       removeMouseWheelHandler()
       $.fn.fullpage.setAllowScrolling(true);
     })
-
+    //TO DO: extend library
     var isMoving = false;
     function MouseWheelHandler(e) {
         // cross-browser wheel delta

@@ -12,7 +12,7 @@
     </div>
     <div class="navbar-collapse collapse" id="main-index">
       <ul class="nav navbar-nav">
-        <li ng-repeat="section in sections" ng-if="section.label"><a ng-href="#{{section.id}}">{{section.label}}</a></li>
+        <li id="nav_{{section.id}}" ng-repeat="section in sections" ng-if="section.label"><a>{{section.label}}</a></li>
       </ul>
     </div>
     <!--/.nav-collapse -->
@@ -20,3 +20,9 @@
 </div>
 <div class="section" ng-repeat="section in sections" ng-if="$index >= 0" app-sections>
 </div>
+   <div class="scrolldown">
+    <div class="arrows">
+      <div class="arrow-prev" onClick="$.fn.fullpage.moveSectionUp()"></div>
+      <div class="arrow-next" onClick="$.fn.fullpage.moveSectionDown()"></div>
+    </div>
+  </div>
