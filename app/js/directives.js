@@ -80,13 +80,13 @@ angular.module('who.directives', [])
       templateUrl: '../partials/vizstep.html',
       link: function postLink(scope, element, attrs) {
 
-        console.log(scope)
         var counter = 0;
 
         var network = who.graph()
                       .sectionid(scope.section.id)
                       .on("steplimit", function(){
                         scope.$emit('steplimit');
+                        counter  = counter < 0 ? 0 : (counter-1);
                       });
 
         var container = element.find("#graph")[0];
@@ -109,8 +109,13 @@ angular.module('who.directives', [])
          }
 
         scope.$watch('utils.internalCounter',function(newValue, oldValue){
-          if(newValue !== oldValue){
-              network.internalView(newValue)
+          if(newValue !== oldValue && scope.utils.section === scope.section.id){
+              if(newValue > oldValue){
+                counter++
+              }else{
+                counter--
+              }
+              network.internalView(counter)
               update()
             }
         })
@@ -123,10 +128,11 @@ angular.module('who.directives', [])
       restrict: 'A',
       replace: false,
       //templateUrl: '../partials/legendstep.html',
-      link: function(scope, element, attrs) {
+      link: function postLink(scope, element, attrs) {
 
         var limit,
-              txt;
+              txt,
+              counter = 0;
 
         fileService.getFile('../data/' + scope.section.id + '/legend.html').then(
           function(data){
@@ -142,9 +148,22 @@ angular.module('who.directives', [])
         );
 
         scope.$watch('utils.internalCounter',function(newValue, oldValue){
-          if(newValue !== oldValue && newValue >= 0 && newValue < limit){
-               element.animate({scrollTop: element.scrollTop() + element.children(".step" + (newValue+1)).position().top}, 500);
+          if(newValue !== oldValue){
+
+            if(newValue > oldValue){
+
+              if(counter < 0){counter = 0}
+                counter++
+              }else{
+                if(counter >= limit){counter = counter -1}
+                counter--
+              }
+
+              if(element.children(".step" + (counter)).length){
+                element.animate({scrollTop: element.scrollTop() + element.children(".step" + (counter)).position().top}, 500);
+              }
             }
+
         })
 
       }

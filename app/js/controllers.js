@@ -17,9 +17,9 @@ angular.module('who.controllers', [])
     $scope.sections = [
       {id:"cs_intro",label:"Introduction to caesarian section", template:"chapter-intro"},
       {id:"cs_query_intro",label: "Building the corpus", template:"sub-chapter"},
-      {id:"cs_query_network",step:1, template:"viz-step"}
+      {id:"cs_query_network",step:1, template:"viz-step"},
       //{id:"cs_query_analytics", template:"chapter-intro"},
-      //{id:"cs_crawl_intro", label:"Mapping the web", template:"sub-chapter"},
+      {id:"cs_crawl_intro", label:"Mapping the web", template:"sub-chapter"}
       //{id:"cs_crawl_network",step:1, template:"viz-step"},
       // {id:"cs_text_intro",label:"Seeing what they're saying", template:"sub-chapter"},
       // {id:"cs_text_slope",step:1, template:"viz-step"},
@@ -32,9 +32,9 @@ angular.module('who.controllers', [])
     ]
 
     $scope.utils = {
-      internalCounter: 0
+      internalCounter: 0,
+      section: $scope.sections[0].id
     }
-
     $scope.$on('docReady', function (docReadyEvent) {
             $.fn.fullpage({
             resize: false,
@@ -56,10 +56,11 @@ angular.module('who.controllers', [])
 
             },
             afterLoad: function(anchorLink, index){
+                $scope.utils.section = anchorLink;
+
                 if($scope.sections[index-1].step){
-                
-                $.fn.fullpage.setAllowScrolling(false);
-                addMouseWheelHandler()
+                  $.fn.fullpage.setAllowScrolling(false);
+                  addMouseWheelHandler()
               }
             }
           });
