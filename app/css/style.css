@@ -47,39 +47,78 @@ body {
 .section-text {
 	position:relative;
 	z-index:2;
-	color:#000;
-	margin-bottom: 50px;
-}
-
-.section-text2 {
-	position:relative;
-	z-index:2;
-	color:#000;
-	margin-bottom: 0px;
+	color:#222;
+	margin-bottom: 450px;
 }
 
 .section-text p{
-	font-size:1.5em;
+	font-size:1.4em;
 	line-height: 170%;
 	font-family:Georgia;
+	margin: 50px 0;
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
 
+.italic{
+	 font-style: italic; 
+}
+
+.bold{
+	 font-weight: 600;
+}
+
+sup {
+	color: red;
 }
 
 .section-text .quote {
 	font-family: 'Montserrat', sans-serif;
-	font-size:1.7em;
-	line-height: 140%;
+	font-size:1.4em;
+	line-height: 170%;
 	font-weight: 400;
 	margin-top:20px;
-	margin-bottom:20px;
+	margin-bottom:30px;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	margin-left: 30px;
-	color:#000;
+	margin-left: 40px;
+	color:#222;
 	float:right;
-	border-top: 2px solid #000;
-	border-bottom: 2px solid #000;
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
 }
+
+
+.section-text .quote-large {
+	font-family: 'Montserrat', sans-serif;
+	font-size:1.4em;
+	line-height: 170%;
+	font-weight: 400;
+	margin-top:30px;
+	margin-bottom:50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: 20px;
+	color:#222;
+	float:right;
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
+}
+
+.ref-bib{
+	margin-top: 100px;
+	font-family: Georgia, serif;
+	float: left;
+	color: #222;
+	font-size:0.9em;
+	border-top: 1px solid #ccc;
+	width: 100%;
+	padding-top: 15px;
+}
+
 
 .section-text h1 {
 	text-align:center;
@@ -100,28 +139,11 @@ body {
 	letter-spacing: 4px;
 }
 
-.section-text2 h3 {
-	text-align:center;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;
-	text-transform: uppercase;
-	font-size:0.9em;
-	margin: 100px auto 20px;
-	letter-spacing: 4px;
-}
-
-.section-text2 hr{
-	width:30px;	
-	height:2px;
-	background-color: #000;
-	margin-bottom: 30px;
-}
-
 .section-text hr{
-	width:30px;	
+	width:60px;	
 	height:2px;
-	background-color: #000;
-	margin-bottom: 30px;
+	background-color: #222;
+	margin-bottom: 10px;
 }
 
 h3.section{
@@ -145,11 +167,6 @@ h4.section{
 	line-height: 10%;
 }
 
-.section-row hr{
-	margin-bottom:10px;
-	margin-top:0px;
-	color: #CCC;
-}
 
 
 .adv-step h3{
@@ -177,7 +194,7 @@ h4.section{
 .adv-step hr{
 	width:30px;	
 	height:2px;
-	background-color: #000;
+	background-color: #222;
 	margin-left:20px;
 	margin-bottom: 30px;
 }
@@ -416,7 +433,7 @@ h4.section{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
-	color:#000 !important;
+	color:#222 !important;
 }
 
 .navbar-collapse a:hover{
@@ -478,7 +495,7 @@ h4.section{
 }
 
 .overlay ul li a {
-	color: #000;
+	color: #222;
 	font-size:2em;
 	text-align:center;
 	font-family: 'Montserrat', sans-serif;
@@ -1046,7 +1063,7 @@ h4.section{
 .btn-container h4{
 	text-transform: uppercase;
 	font-size:0.8em;
-	color:#000;
+	color:#222;
 	text-align:left;
 	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 2px;
