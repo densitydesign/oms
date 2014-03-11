@@ -36,8 +36,9 @@ angular.module('who.directives', [])
           );
 
       	  if (scope.$parent.$last === true) {
+                    scope.$emit('docReady');
                     $timeout(function () {
-                        scope.$emit('docReady');
+                       // scope.$emit('docReady');
                     });
                 }
       }
@@ -64,8 +65,9 @@ angular.module('who.directives', [])
           );
 
           if (scope.$parent.$last === true) {
+                    scope.$emit('docReady');
                     $timeout(function () {
-                        scope.$emit('docReady');
+                        //scope.$emit('docReady');
                     });
                 }
       }
@@ -77,6 +79,9 @@ angular.module('who.directives', [])
       replace: true,
       templateUrl: '../partials/vizstep.html',
       link: function postLink(scope, element, attrs) {
+
+        console.log(scope)
+        var counter = 0;
 
         var network = who.graph()
                       .sectionid(scope.section.id)
@@ -90,24 +95,16 @@ angular.module('who.directives', [])
           d3.select(container)
                 .call(network)
         };
-
         if (scope.$parent.$last === true) {
+                  scope.$emit('docReady');
                   $timeout(function () {
-                      scope.$emit('docReady');
-                      update()
+                       update()
                   });
         }
         else {
            $timeout(function (){
               update();
           })
-        // scope.$on('docReady', function (docReadyEvent) {
-        //     console.log("ok il doc è pronto")
-        //       $timeout(function (){
-        //       update();
-        //       })
-        // })
-
 
          }
 
