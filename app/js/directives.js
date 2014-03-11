@@ -148,7 +148,7 @@ angular.module('who.directives', [])
         );
 
         scope.$watch('utils.internalCounter',function(newValue, oldValue){
-          if(newValue !== oldValue){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id){
 
             if(newValue > oldValue){
 
