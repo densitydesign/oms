@@ -49,10 +49,10 @@ angular.module('who.controllers', [])
 
                $('#main-index').animate({scrollTop: $('#main-index').scrollTop() + $('#nav_' + $scope.sections[nextIndex(index, direction)].id).position().top}, 700);
              }
-             if($scope.sections[nextIndex(index, direction)-1].step){
-                $scope.utils.internalCounter = 0
-                $scope.$apply()
-             }
+             // if($scope.sections[nextIndex(index, direction)-1].step){
+             //    $scope.utils.internalCounter = 0
+             //    $scope.$apply()
+             // }
 
             },
             afterLoad: function(anchorLink, index){
