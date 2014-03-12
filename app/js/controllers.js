@@ -116,4 +116,18 @@ angular.module('who.controllers', [])
       }
     }
 
-  });
+  })
+ .controller('home', function($scope) {
+
+   $scope.$on('$viewContentLoaded', function() {
+   // $.fn.fullpage({
+   //          resize: false,
+   //          css3: true,
+   //          fixedElements: 'div.navbar',
+   //          scrollOverflow: true,
+   //          paddingTop: '55px',
+   //          verticalCentered: false
+   //        })
+    })
+
+ })

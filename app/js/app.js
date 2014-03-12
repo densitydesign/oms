@@ -11,6 +11,7 @@ angular.module('who', [
   'who.controllers'
 ]).
 config(function ($routeProvider, $locationProvider) {
+  //$routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'home'});
   //$routeProvider.when('/familyplanning', {templateUrl: 'partials/familyplanning.html', controller: 'familyplanning'});
   $routeProvider.when('/caesariansection', {templateUrl: 'partials/caesariansection.html', controller: 'caesariansection'});
   $routeProvider.otherwise({redirectTo: '/caesariansection'});
