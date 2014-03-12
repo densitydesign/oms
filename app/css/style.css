@@ -6,9 +6,6 @@ body {
 	height: 100%;
 	position:relative;
 	/*overflow: hidden; */
-}
-
-::-webkit-scrollbar {
 	display:none;
 }
 
@@ -51,7 +48,11 @@ body {
 	margin-bottom: 450px;
 }
 
-.section-text p{
+.section-text-home{
+	color:#222;
+}
+
+.section-text p, .section-text-home p{
 	font-size:1.4em;
 	line-height: 170%;
 	font-family:Georgia;
