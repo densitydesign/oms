@@ -57,10 +57,13 @@ body {
 	font-family:Georgia;
 	margin: 50px 0;
 	display: block;
-	-webkit-margin-before: 1em;
-	-webkit-margin-after: 1em;
+	-webkit-margin-before: 2em;
+	-webkit-margin-after: 2em;
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
+	-webkit-hyphens: auto;  
+    -moz-hyphens: auto;  
+    hyphens: auto; 
 }
 
 .italic{
@@ -143,7 +146,7 @@ sup {
 	width:60px;	
 	height:2px;
 	background-color: #222;
-	margin-bottom: 10px;
+	margin-bottom: 35px;
 }
 
 h3.section{
@@ -433,7 +436,7 @@ h4.section{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
-	color:#222 !important;
+	color:#222222 !important;
 }
 
 .navbar-collapse a:hover{
