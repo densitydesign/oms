@@ -6,7 +6,6 @@ body {
 	height: 100%;
 	position:relative;
 	/*overflow: hidden; */
-	display:none;
 }
 
 /* Typography */
@@ -79,7 +78,7 @@ sup {
 	color: red;
 }
 
-.section-text .quote {
+.quote{
 	font-family: 'Montserrat', sans-serif;
 	font-size:1.4em;
 	line-height: 170%;
@@ -95,8 +94,7 @@ sup {
 	border-bottom: 1px solid #222;
 }
 
-
-.section-text .quote-large {
+.quote-large {
 	font-family: 'Montserrat', sans-serif;
 	font-size:1.4em;
 	line-height: 170%;
@@ -124,7 +122,7 @@ sup {
 }
 
 
-.section-text h1 {
+.section-text h1 , .section-text-home h1{
 	text-align:center;
 	font-family: Georgia, sans-serif;
 	font-weight: 400;
@@ -133,7 +131,7 @@ sup {
 	margin-top: 100px;
 }
 
-.section-text h3 {
+.section-text h3, .section-text-home h3 {
 	text-align:center;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
@@ -143,7 +141,7 @@ sup {
 	letter-spacing: 4px;
 }
 
-.section-text hr{
+.section-text hr, .section-text-home hr{
 	width:60px;	
 	height:2px;
 	background-color: #222;
@@ -700,13 +698,15 @@ h4.section{
 	color: #f8f8f8;
 	background-color: #D6C33B;
 	background-size: cover;
-	text-align: center;
+	z-index: 0;
 }
 
 .intro-message {
-	position: relative;
-	padding-top: 25%;
+	padding-top: 20%;
 	padding-bottom: 20%;
+	text-align: center;
+	width: 100%;
+
 }
 
 .intro-message > h1 {
@@ -829,6 +829,8 @@ h4.section{
 
 .member {
 	background-color: #fff;
+	border-bottom:1px solid #222;
+	padding-bottom: 20px;
 }
 
 .member-pic {
@@ -839,24 +841,45 @@ h4.section{
 	width:100%;
 }
 
-.member-details h4{
-	text-align: center;
+.member-details{
+	height: 40px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.member-text{
+	float:left;
 	font-size: 1em;
 	font-family:'Montserrat';
 	text-transform: uppercase;
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 10px;
+
 }
 
-.member-details h5{
-	text-align: center;
+.member-links{
+	float:right;
 	font-size: 1em;
-	font-family:Georgia;
-	padding-bottom: 10px;
-	font-style: italic;
+	font-family:'Montserrat';
+	text-transform: uppercase;
 }
 
+.member-role{
+	font-family: Georgia;
+	padding-left: 20px;
+}
 
+.member-bio p{
+	font-size: 1em;
+	padding-top: 0px;
+	margin: 10px 0;
+	text-align:justify;
+}
+
+.member-bio h4{
+	font-family: Georgia;
+	font-style: italic;
+	font-size: 1em;
+	padding-top: 20px;
+}
 
 
 /* Footer*/
