@@ -123,6 +123,96 @@ angular.module('who.directives', [])
       }
     };
   }])
+  .directive('vizStepSlope',['fileService', '$timeout', function (fileService, $timeout) {
+    return {
+      restrict: 'A',
+      replace: true,
+      templateUrl: 'partials/vizstep.html',
+      link: function postLink(scope, element, attrs) {
+
+        var counter = 0,
+          dataTF,
+          slope,
+          chart
+
+        var network = who.graph()
+                      .sectionid(scope.section.id)
+                      .on("steplimit", function(){
+                        scope.$emit('steplimit');
+                        counter  = counter < 0 ? 0 : (counter-1);
+                      });
+
+        var container = element.find("#graph")[0];
+
+        var init = function(){
+          fileService.getFile('data/' + scope.section.id + '/CS_tf.json').then(
+            function(data){
+              dataTF = data;
+
+              dataTF.forEach(function(d){
+
+                // d.values = d.values.filter(function(f){
+                //   var check = filterTF.indexOf(f['key']);
+                //   return check >= 0
+                // })
+
+                d.values.sort(function(a, b) {
+                    return b['value'] -a['value'] ;
+                });
+
+                  d.values.forEach(function(f){
+                    f['value'] = d3.round(f['value'],2)
+                })
+              })
+
+              slope = who.slopeChart()
+                .graphHeight(2000)
+                .on("clicked", function(d){
+                  slope.wordStep([d])
+                  chart.call(slope)
+                })
+
+              chart = d3.select(container).append("svg")
+                    .attr("width", 900)
+                    .attr("height", 2000);
+              
+              chart.datum(dataTF).call(slope)
+
+            },
+            function(error){
+              element.find('#graph').html(error)
+            }
+          );
+        };
+
+        if (scope.$parent.$last === true) {
+                  scope.$emit('docReady');
+                  $timeout(function () {
+                       init()
+                  });
+        }
+        else {
+           $timeout(function (){
+              init();
+          })
+
+         }
+
+        scope.$watch('utils.internalCounter',function(newValue, oldValue){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id){
+              if(newValue > oldValue){
+                counter++
+              }else{
+                counter--
+              }
+              network.internalView(counter)
+              update()
+            }
+        })
+
+      }
+    };
+  }])
   .directive('legendStep', ['fileService', '$timeout', function (fileService, $timeout) {
     return {
       restrict: 'A',
@@ -183,6 +273,13 @@ angular.module('who.directives', [])
               tagChart,
               domainChart,
               queryChart;
+
+              var tagHeight = element.find(".catcont").height() - element.find(".cattit").height();
+              element.find("#category").height(tagHeight-2)
+              var domainHeight = element.find(".domcont").height() - element.find(".domtit").height();
+              element.find("#domain").height(domainHeight-2)
+              var queryHeight = element.find(".quecont").height() - element.find(".quetit").height();
+              element.find("#query").height(queryHeight-2)
 
           function init(){
             fileService.getFile('data/' + scope.section.id + '/cs_analytics.csv').then(
@@ -249,20 +346,6 @@ angular.module('who.directives', [])
             );
           }
 
-        // var counter = 0;
-
-        // var network = who.graph()
-        //               .sectionid(scope.section.id)
-        //               .on("steplimit", function(){
-        //                 scope.$emit('steplimit');
-        //                 counter  = counter < 0 ? 0 : (counter-1);
-        //               });
-
-
-        var update = function(){
-          // d3.select(container)
-          //       .call(network)
-        };
         if (scope.$parent.$last === true) {
                   scope.$emit('docReady');
                   $timeout(function () {

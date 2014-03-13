@@ -1,23 +1,32 @@
 <div class="container cont-analytics">
   <div class="row section-row" style="height:100%">
     <!-- Analytics --> 
-    <div class="col-md-8 col-sm-12 analytics" style="height:100%" >
+    <div class="col-md-8 col-sm-12 analytics quecont" style="height:100%" >
+      <div class="quetit" style="padding:1px">
       <h3 class="section-title">results per query</h3>
       <hr>
-      <div style="height:100%; width:100%" id="query"></div>
+      </div>
+
+      <div id="query"></div>
     </div>
 
     <!-- Bar Charts --> 
     <div class="col-md-4 col-sm-12 analytics" style="height:100%">
-      <h3 class="section-title">results per category</h3>
-      <hr>
-      <!-- Category --> 
-      <div style="height:25%; width:100%" id="category">
+      <div style="height:25%" class="catcont">
+        <div class="cattit" style="padding:1px">
+          <h3 class="section-title">results per category</h3>
+          <hr>
+        </div>
+        <div id="category">
+        </div>
       </div>
-      <!-- Domain --> 
-      <h3 class="section-title">results per domain</h3>
-      <hr>
-      <div style="height:75%; width:100%" id="domain">
+      <div style="height:75%" class="domcont">
+          <div class="domtit" style="padding:1px">
+          <h3 class="section-title">results per domain</h3>
+          <hr>
+        </div>
+        <div id="domain" style="height:90%">
+        </div>
       </div>
     </div>
   </div>
