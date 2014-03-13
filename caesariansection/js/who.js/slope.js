@@ -43,7 +43,6 @@
         	var xDomain = _data.map(function(d){return d.step})
         	x.domain(xDomain);
 
-
         	var range = []
         	_data.forEach(function(d){
         		var max = d3.max(d.values.map(function(e){return e.value}));

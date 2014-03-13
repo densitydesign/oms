@@ -133,28 +133,50 @@ angular.module('who.directives', [])
         var counter = 0,
           dataTF,
           slope,
-          chart
+          chart;
 
-        var network = who.graph()
-                      .sectionid(scope.section.id)
-                      .on("steplimit", function(){
-                        scope.$emit('steplimit');
-                        counter  = counter < 0 ? 0 : (counter-1);
-                      });
+        // var network = who.graph()
+        //               .sectionid(scope.section.id)
+        //               .on("steplimit", function(){
+        //                 scope.$emit('steplimit');
+        //                 counter  = counter < 0 ? 0 : (counter-1);
+        //               });
 
         var container = element.find("#graph")[0];
+
+          var filterTF = [
+            'baby',
+            'caesarean',
+            'woman',
+            'caesarean section',
+            'risk',
+            'mother',
+            'cesarean delivery',
+            'birth',
+            'delivery',
+            'doctor',
+            'hospital',
+            'sections',
+            'labour',
+            'incision',
+            'labor',
+            'surgery',
+            'birth vaginal',
+            'pregnancy',
+            'delivery vaginal',
+            'uterus'
+          ]
 
         var init = function(){
           fileService.getFile('data/' + scope.section.id + '/CS_tf.json').then(
             function(data){
               dataTF = data;
-
               dataTF.forEach(function(d){
 
-                // d.values = d.values.filter(function(f){
-                //   var check = filterTF.indexOf(f['key']);
-                //   return check >= 0
-                // })
+                d.values = d.values.filter(function(f){
+                  var check = filterTF.indexOf(f['key']);
+                  return check >= 0
+                })
 
                 d.values.sort(function(a, b) {
                     return b['value'] -a['value'] ;
@@ -166,15 +188,14 @@ angular.module('who.directives', [])
               })
 
               slope = who.slopeChart()
-                .graphHeight(2000)
+                .graphHeight(element.find("#graph").height())
+                .graphWidth(element.find("#graph").width())
                 .on("clicked", function(d){
                   slope.wordStep([d])
                   chart.call(slope)
                 })
 
               chart = d3.select(container).append("svg")
-                    .attr("width", 900)
-                    .attr("height", 2000);
               
               chart.datum(dataTF).call(slope)
 
@@ -198,6 +219,19 @@ angular.module('who.directives', [])
 
          }
 
+        var step = [
+          {init: function(){
+            slope.showCat(false)
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope.showCat(["M", "C", "E"])
+            chart.call(slope)
+            }
+          }
+        ]
+
         scope.$watch('utils.internalCounter',function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id){
               if(newValue > oldValue){
@@ -205,8 +239,8 @@ angular.module('who.directives', [])
               }else{
                 counter--
               }
-              network.internalView(counter)
-              update()
+
+              step[counter].init()
             }
         })
 
@@ -359,6 +393,86 @@ angular.module('who.directives', [])
 
          }
 
+      }
+    };
+  }])
+  .directive('navBar',[ 'fileService', '$timeout', function (fileService, $timeout){
+    return {
+      restrict: 'A',
+      replace: false,
+      templateUrl: 'partials/navbar.html',
+      link: function(scope, element, attrs) {
+
+        var triggerBttn = element.find("#main-index"),
+        overlay;
+
+        function toggleOverlay() {
+          
+          if ($(window).width() < 768){ 
+            return;
+          }
+          if( overlay.hasClass( "open" )) {
+            overlay.removeClass("open")
+          }
+          else if( !overlay.hasClass( "open" ) ) {
+            overlay.addClass("open")
+          }
+        }
+
+        triggerBttn.click(toggleOverlay);
+        //closeBttn.click(toggleOverlay);
+
+        if (scope.$parent.$last === true) {
+                    scope.$emit('docReady');
+                    $timeout(function () {
+                       // scope.$emit('docReady');
+                    });
+                }
+        else {
+          $timeout(function () {
+            overlay = $( 'div.overlay' );
+          });
+        }
+      }
+    };
+  }])
+  .directive('navMenu',[ 'fileService', '$timeout', function (fileService, $timeout){
+    return {
+      restrict: 'A',
+      replace: false,
+      templateUrl: 'partials/navmenu.html',
+      link: function(scope, element, attrs) {
+
+        var closeBttn = element.find( 'div.overlay > button.overlay-close' ),
+            overlay = element.find( 'div.overlay' );
+
+
+
+        function toggleOverlay() {
+          // if ($(window).width() < 768){ 
+          //   return;
+          // }
+
+          if( overlay.hasClass( "open" )) {
+            overlay.removeClass("open")
+          }
+          else if( !overlay.hasClass( "open" ) ) {
+            overlay.addClass("open")
+          }
+        }
+        
+        closeBttn.click(toggleOverlay);
+
+          if (scope.$parent.$last === true) {
+                    scope.$emit('docReady');
+                    $timeout(function () {
+                       // scope.$emit('docReady');
+                    });
+                }
+          else{
+              $timeout(function () {
+             });
+          }
       }
     };
   }])

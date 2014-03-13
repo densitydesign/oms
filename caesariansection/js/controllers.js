@@ -47,7 +47,7 @@ angular.module('who.controllers', [])
             $.fn.fullpage({
             resize: false,
             css3: true,
-            fixedElements: 'div.navbar , div.scrolldown',
+            fixedElements: 'div.navbar , div.scrolldown, div.overlay',
             scrollOverflow: true,
             paddingTop: '55px',
             paddingBottom: '55px',
@@ -60,6 +60,7 @@ angular.module('who.controllers', [])
 
             },
             afterLoad: function(anchorLink, index){
+              $('div.overlay').removeClass("open");
                 $scope.utils.section = anchorLink;
                 if($scope.sections[index-1].step){
                   $.fn.fullpage.setAllowScrolling(false);
@@ -68,6 +69,12 @@ angular.module('who.controllers', [])
               }
             }
           });
+        
+        $scope.utils.scrollToSection = function(section){
+          $.fn.fullpage.moveTo(section);
+          $('#main-index').animate({scrollTop: $('#main-index').scrollTop() + $('#nav_' + section).position().top}, 700);
+          
+        }
       });
 
     $scope.$on('steplimit',function(steplimitEvent){
