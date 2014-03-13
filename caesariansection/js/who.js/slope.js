@@ -35,7 +35,7 @@
 		        		})
 	        		})
         	}else{
-        		_data = data.filter(function(d){console.log(d);if(showCat.indexOf(d.step) > -1) return true});
+        		_data = data.filter(function(d){if(showCat.indexOf(d.step) > -1) return true});
         	}
 
 

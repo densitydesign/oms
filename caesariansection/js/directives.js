@@ -229,18 +229,43 @@ angular.module('who.directives', [])
             slope.showCat(["M", "C", "E"])
             chart.call(slope)
             }
+          },
+          {init: function(){
+            slope.showLines(true).wordStep(["risk", "incision"])
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope.showLines(true).wordStep([])
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope.showCat(["E", "V"])
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope.showCat(["M", "C", "E"])
+            chart.call(slope)
+            }
           }
         ]
 
         scope.$watch('utils.internalCounter',function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id){
               if(newValue > oldValue){
+
                 counter++
               }else{
                 counter--
               }
-
-              step[counter].init()
+              if(step[counter]){
+                step[counter].init()
+              }else{
+                scope.$emit('steplimit')
+                counter = counter < 0 ? 0 : counter - 1;
+              }
             }
         })
 
@@ -408,7 +433,7 @@ angular.module('who.directives', [])
 
         function toggleOverlay() {
           
-          if ($(window).width() < 768){ 
+          if (scope.utils.windowWidth < 768){ 
             return;
           }
           if( overlay.hasClass( "open" )) {
@@ -420,7 +445,6 @@ angular.module('who.directives', [])
         }
 
         triggerBttn.click(toggleOverlay);
-        //closeBttn.click(toggleOverlay);
 
         if (scope.$parent.$last === true) {
                     scope.$emit('docReady');
@@ -449,9 +473,9 @@ angular.module('who.directives', [])
 
 
         function toggleOverlay() {
-          // if ($(window).width() < 768){ 
-          //   return;
-          // }
+          if (scope.utils.windowWidth < 768){ 
+            return;
+          }
 
           if( overlay.hasClass( "open" )) {
             overlay.removeClass("open")
