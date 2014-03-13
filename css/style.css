@@ -433,7 +433,7 @@ h4.section{
 .navbar-collapse a{
 	text-align:center;
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	color:#222222 !important;
 }
@@ -696,7 +696,7 @@ h4.section{
 	padding-bottom: 50px;
 	height:100%;
 	color: #f8f8f8;
-	background-color: #D6C33B;
+	background: url(../img/background.jpg);
 	background-size: cover;
 	z-index: 0;
 }
@@ -706,7 +706,6 @@ h4.section{
 	padding-bottom: 20%;
 	text-align: center;
 	width: 100%;
-
 }
 
 .intro-message > h1 {
@@ -717,6 +716,7 @@ h4.section{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
+
 }
 
 
@@ -727,10 +727,11 @@ h4.section{
 	font-weight: 400;
 	letter-spacing: 2px;
 	font-style: italic;
+	line-height: 150%;
 }
 
 #fp{
-	background-color: #84A594;
+	background: url(../img/bg_home_FP.jpg);
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
@@ -743,7 +744,7 @@ h4.section{
 }
 
 #cs {
-	background-color: #D6C33B;
+	background: url(../img/bg_home_CS.jpg);
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
@@ -759,7 +760,19 @@ h4.section{
 .case-studies {
 	height:600px;
 	margin-bottom: 0;
+	z-index: 100;
+}
 
+.case-studies a{
+	color:#CCC;
+	-webkit-transition: 0.5s ease;
+	transition: 0.5s ease;
+}
+
+.case-studies a:hover{
+	-webkit-transition: 0.5s ease;
+	transition: 0.5s ease;
+	color:#CCC;
 }
 
 .case-studies h1{
@@ -768,8 +781,16 @@ h4.section{
 	text-align: center;
 	vertical-align: middle;
 	margin-top:240px;
-	text-decoration:underline;
 	text-transform: uppercase;
+	color: #fff;
+	-webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+.case-studies h1:hover{
+	color: #CCC;
+	-webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
 }
 
 #partners{
@@ -824,6 +845,33 @@ h4.section{
 	-moz-background-size:cover; 
 	-webkit-background-size:cover; 
 	background-size:cover;
+}
+
+.link-website{
+	display: inline;
+	font-size: 1em;
+	font-family:'Montserrat';
+	text-transform: uppercase;
+}
+
+a{
+	color:#636363!important;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	cursor: pointer;
+}
+
+a:hover{
+	color:#444444!important;
+	text-decoration: none;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
 
@@ -887,8 +935,18 @@ h4.section{
 .footer{
 	margin-top: 50px;
 	background-color: #222222;
-	height: 300px;
+	height: 100px;
+	padding-top: 10px;
 }
+
+.footer a{
+	color: #fff !important;
+	font-family: font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
 
 
 /* barchart analytics */
