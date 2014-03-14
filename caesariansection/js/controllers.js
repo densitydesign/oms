@@ -38,6 +38,8 @@ angular.module('who.controllers', [])
       section: $scope.sections[0].id
     }
 
+    $scope.slopetfidf = 'TF';
+
     angular.element($window).bind('resize',function(){
       $scope.utils.windowWidth = $window.outerWidth;
       $scope.utils.windowHeight = $window.outerHeight;
@@ -72,6 +74,7 @@ angular.module('who.controllers', [])
         
         $scope.utils.scrollToSection = function(section){
           $.fn.fullpage.moveTo(section);
+          $scope.$emit('steplimit');
           $('#main-index').animate({scrollTop: $('#main-index').scrollTop() + $('#nav_' + section).position().top}, 700);
           
         }

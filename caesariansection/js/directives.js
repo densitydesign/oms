@@ -188,7 +188,7 @@ angular.module('who.directives', [])
               })
 
               slope = who.slopeChart()
-                .graphHeight(element.find("#graph").height())
+                .graphHeight(element.find("#graph").height()-3)
                 .graphWidth(element.find("#graph").width())
                 .on("clicked", function(d){
                   slope.wordStep([d])
@@ -196,6 +196,9 @@ angular.module('who.directives', [])
                 })
 
               chart = d3.select(container).append("svg")
+                      .attr("width", element.find("#graph").width())
+                      .attr("height", element.find("#graph").height()-3)
+
               
               chart.datum(dataTF).call(slope)
 
@@ -210,6 +213,7 @@ angular.module('who.directives', [])
                   scope.$emit('docReady');
                   $timeout(function () {
                        init()
+                       console.log(element.find("#graph").height(), element.find("#graph").width())
                   });
         }
         else {
@@ -251,6 +255,11 @@ angular.module('who.directives', [])
             }
           }
         ]
+
+        scope.$watch('slopetfidf', function(newValue, oldValue){
+            console.log(newValue, oldValue)
+        });
+
 
         scope.$watch('utils.internalCounter',function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id){
