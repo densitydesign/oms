@@ -55,11 +55,15 @@
 
 <div class="adv-step step5">
 
-  <h3>explore network graph</h3>
-  <h2>{{scope.slopetfidf}}</h2>
+  <h3>explore slope graph</h3>
   <div class="btn-group">
-     <button type="button" class="btn btn-default" ng-model="slopetfidf" btn-radio="'TF'">TF</button>
-     <button type="button" class="btn btn-default" ng-model="slopetfidf" btn-radio="'TFIDF'">TF/IDF</button>
+     <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopetfidf" btn-radio="'dataTF'">TF</button>
+     <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopetfidf" btn-radio="'dataTFIDF'">TF/IDF</button>
+  </div>
+
+  <div class="btn-group">
+     <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopescale" btn-radio="true">normalized</button>
+     <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopescale" btn-radio="false">not normalized</button>
   </div>
 
 </div>

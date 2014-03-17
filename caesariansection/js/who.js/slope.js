@@ -216,7 +216,7 @@
 				.attr('opacity', 0)
 				.remove()
 
-			if (!showLines) return;
+			//if (!showLines) return;
 
 			var allValues = d3.merge(_data.map(function(d){return d.values}))
 
@@ -231,6 +231,10 @@
 
 			var linesGroup = chart.selectAll('.lineGroup').data(nestValues, function(d){return d.key})
 
+			if (!showLines) {
+				linesGroup.remove()
+			}
+			else{
 			linesGroup
 				.transition()
 				.duration(transitionDuration)
@@ -271,7 +275,15 @@
 				.attr("stroke-opacity", 0)
 				.remove()
 
+			}
+
 			var pointsGroup = chart.selectAll('.pointGroup').data(nestValues, function(d){return d.key})
+
+			if (!showLines) {
+
+				pointsGroup.remove()
+			}else{
+
 
 			pointsGroup
 				.attr("class",function(d){return "g_" + d.key.replace(/\s+/g, '') + " pointGroup"})
@@ -289,6 +301,7 @@
 				.remove()
 
 			var pointGroup = pointsGroup.selectAll("path").data(function(d){return d.values})
+
 
 			pointGroup
 				.transition()
@@ -331,6 +344,8 @@
 				.duration(transitionDuration)
 				.attr("fill-opacity", 0)
 				.remove()
+
+			}
 
 			/* end new code */
 

@@ -22,10 +22,10 @@ angular.module('who.controllers', [])
       {id:"cs_crawl_intro", label:"Mapping the web", nav: true, step:false, template:"sub-chapter"},
       {id:"cs_crawl_network", label:"Mapping the web", nav: false, step:true, template:"viz-step"},
       {id:"cs_text_intro",label:"Seeing what they're saying",nav: true, step:false,template:"sub-chapter"},
-      {id:"cs_text_slope",label:"Seeing what they're saying", nav: false, step:true, template:"viz-step-slope"}
-      // {id:"cs_images_intro",label:"Perceived image of the c-section",nav: true, template:"sub-chapter"}, 
-      // {id:"cs_images_elastic",label:"Perceived image of the c-section", template:"chapter-intro"},
-      // {id:"cs_aufeminin_intro",label:"Analyzing the forum discussion", nav: true, template:"sub-chapter"},
+      {id:"cs_text_slope",label:"Seeing what they're saying", nav: false, step:true, template:"viz-step-slope"},
+      {id:"cs_images_intro",label:"Perceived image of the c-section",nav: true, step:false,template:"sub-chapter"},
+      {id:"cs_images_elastic",label:"Perceived image of the c-section", nav: false, step:false, template:"images-elastic"},
+      {id:"cs_aufeminin_intro",label:"Analyzing the forum discussion", nav: true, step:false, template:"sub-chapter"},
       // {id:"cs_aufeminin_forum",label:"Analyzing the forum discussion",step:true, template:"viz-step"},
       // {id:"cs_aufeminin_networkFR",label:"Analyzing the forum discussion",step:true, template:"viz-step"},
       // {id:"cs_aufeminin_networkIT",label:"Analyzing the forum discussion",step:true, template:"viz-step"}
@@ -38,7 +38,10 @@ angular.module('who.controllers', [])
       section: $scope.sections[0].id
     }
 
-    $scope.slopetfidf = 'TF';
+    $scope.ctrlmodels = {
+      slopetfidf : 'dataTF',
+      slopescale : true
+      }
 
     angular.element($window).bind('resize',function(){
       $scope.utils.windowWidth = $window.outerWidth;
