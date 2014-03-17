@@ -26,9 +26,10 @@ angular.module('who.controllers', [])
       {id:"cs_images_intro",label:"Perceived image of the c-section",nav: true, step:false,template:"sub-chapter"},
       {id:"cs_images_elastic",label:"Perceived image of the c-section", nav: false, step:false, template:"images-elastic"},
       {id:"cs_aufeminin_intro",label:"Analyzing the forum discussion", nav: true, step:false, template:"sub-chapter"},
-      // {id:"cs_aufeminin_forum",label:"Analyzing the forum discussion",step:true, template:"viz-step"},
-      // {id:"cs_aufeminin_networkFR",label:"Analyzing the forum discussion",step:true, template:"viz-step"},
-      // {id:"cs_aufeminin_networkIT",label:"Analyzing the forum discussion",step:true, template:"viz-step"}
+      //{id:"cs_aufeminin_forum",label:"Analyzing the forum discussion",step:true, template:"viz-step"}
+      {id:"cs_aufeminin_networkFR",label:"Analyzing the forum discussion",nav: false, step:true, template:"viz-step"},
+      // {id:"cs_aufeminin_networkIT",label:"Analyzing the forum discussion",step:true, template:"viz-step"},
+      {id:"cs_outro",label:"Conclusion to caesarian section",nav: true, step:false,template:"sub-chapter"}
     ]
 
     $scope.labels = d3.nest().key(function(d){return d.label}).entries($scope.sections).map(function(d){return d.key});
@@ -57,11 +58,15 @@ angular.module('who.controllers', [])
             paddingTop: '55px',
             paddingBottom: '55px',
             verticalCentered: false,
+            normalScrollElements: '#viz_googleimages .imgs',
             onLeave: function(index, direction){
-              var nextId = $scope.sections.filter(function(d){return d.label == $scope.sections[nextIndex(index, direction)].label && d.nav == true })[0].id;
-              if($scope.utils.section != $scope.sections[nextIndex(index, direction)].id){
-               $('#main-index').animate({scrollTop: $('#main-index').scrollTop() + $('#nav_' + nextId).position().top}, 700);
-              }
+             
+              //if(nextIndex(index, direction)+1 != $scope.sections.length){
+                var nextId = $scope.sections.filter(function(d){return d.label == $scope.sections[nextIndex(index, direction)].label && d.nav == true })[0].id;
+                if($scope.utils.section != $scope.sections[nextIndex(index, direction)].id){
+                 $('#main-index').animate({scrollTop: $('#main-index').scrollTop() + $('#nav_' + nextId).position().top}, 700);
+                }
+              //}
 
             },
             afterLoad: function(anchorLink, index){

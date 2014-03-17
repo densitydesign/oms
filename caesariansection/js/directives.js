@@ -503,9 +503,9 @@ angular.module('who.directives', [])
           langScale,
           tagScale,
           vizContainer = element.find('#viz_googleimages')[0],
-          sliderContainer = element.find(".slider")[0],
-          radContainer = element.find(".rad")[0],
-          imgsContainer = element.find(".imgs")[0],
+          sliderContainer,
+          radContainer,
+          imgsContainer,
           dsv_egg = d3.dsv(";", "text/plain");
 
       var init = function(){
@@ -527,7 +527,7 @@ angular.module('who.directives', [])
                 .key(function(d) {return d.keyword; })
                 .entries(rows);
                 
-            maxH=0
+            var maxH=0
                 
             data.forEach(function (d,i) {
               d.count=0;
@@ -539,12 +539,9 @@ angular.module('who.directives', [])
               });
             });
 
-            viz_googleimages();
-
             var margin = {top: 40, right: 10, bottom: 10, left: 10},
             width = $(vizContainer).width()*.45 - margin.left - margin.right,
             height =  $(vizContainer).height() - margin.top - margin.bottom;
-             
              
              var listW = width*0.45;
              
@@ -556,6 +553,8 @@ angular.module('who.directives', [])
             
             d3.select(vizContainer).append("div")
             .attr("class","slider")
+
+            sliderContainer = element.find(".slider")[0]
             
             $(sliderContainer).slider({'min':10,'max':100, 'value':50})
             .on('slide', function(ev){
@@ -565,14 +564,18 @@ angular.module('who.directives', [])
             d3.select(vizContainer).append("div")
             .attr("class","rad")
             .attr("style","float:left; clear:right")
+
+            radContainer = element.find(".rad")[0]
             
             $(radContainer).append('<div class="btn-group show-lvl"><button id="language" type="button" class="btn btn-default elstc">Images</button><button id="forum" type="button" class="btn btn-default elstc">Colors</button></div>')
             
             
             d3.select(vizContainer).append("div")
             .attr("class","imgs")
-         
-            offset = $(imgsContainer).position().top
+            
+            imgsContainer = element.find(".imgs")[0]
+
+            var offset = $(imgsContainer).position().top
             $(imgsContainer).height(height);
             
             //var t = d3.select("svg").append("g").attr("class","tag-group")
@@ -605,8 +608,8 @@ angular.module('who.directives', [])
               elastify(d)
               if($(".tag.sel").length) {
                 console.log(d)
-                k=d3.select(".tag.sel")[0][0].__data__.key
-                el=d.values.filter(function(e){return e.key==k})
+                var k=d3.select(".tag.sel")[0][0].__data__.key
+                var el=d.values.filter(function(e){return e.key==k})
                 loadImages(el[0])
               }
               });
@@ -624,7 +627,7 @@ angular.module('who.directives', [])
           .attr("dx", "0.4em")
           .attr("dy", "1.3em")
           .style("fill","#222222")
-          .text(function(d){console.log(d);return d.key})
+          .text(function(d){return d.key})
               
             }
 
@@ -632,7 +635,7 @@ angular.module('who.directives', [])
              function elastify(d) {
               
               //compute height
-              tagH=0
+              var tagH=0
             
             //t.attr("transform","rotate(30)")
             
@@ -650,7 +653,7 @@ angular.module('who.directives', [])
               
               tagScale = d3.scale.linear().range([height/37, height/1.75]); 
               tagScale.domain([0, tagH]).clamp(true)
-              vals=0
+              var vals=0
               d['values'].forEach(function(e,i){
                 
                 e.y=vals;
@@ -687,7 +690,7 @@ angular.module('who.directives', [])
             .attr("height", function(e) {return e.h })
             .each("end",function() {
               
-              rawH=t[0][0].getBBox().height;
+              var rawH=t[0][0].getBBox().height;
               
               t.transition().duration(100).attr("transform","scale(1,"+height/rawH+")")
             })
@@ -696,10 +699,10 @@ angular.module('who.directives', [])
               tags.exit().remove();
               
               //Text
-              txt = t.selectAll(".tag-txt")
+              var txt = t.selectAll(".tag-txt")
               .data(d.values,function(e){return e.key})
               
-              txtEnt=txt.enter()
+              var txtEnt=txt.enter()
               .append("text")
               
               txtEnt
@@ -750,6 +753,8 @@ angular.module('who.directives', [])
             // d3.selectAll(".tag") .attr("x",  width*.1+listW)
             // d3.selectAll(".tag-txt").attr("x",  width*.1+listW)
           });
+
+            viz_googleimages();
 
             //end elastic mess
           },
