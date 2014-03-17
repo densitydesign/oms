@@ -716,7 +716,7 @@ h4.section{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
-
+	letter-spacing: 4px;
 }
 
 
@@ -730,8 +730,10 @@ h4.section{
 	line-height: 150%;
 }
 
+
 #fp{
 	background: url(../img/bg_home_FP.jpg);
+	background-size: cover;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
@@ -745,6 +747,7 @@ h4.section{
 
 #cs {
 	background: url(../img/bg_home_CS.jpg);
+	background-size: cover;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
@@ -759,38 +762,72 @@ h4.section{
 
 .case-studies {
 	height:600px;
-	margin-bottom: 0;
-	z-index: 100;
+}
+
+.case-studies-text {
+	width:600px;
+	margin:180px auto;
+	text-align: center;
+	color: #fff;
 }
 
 .case-studies a{
-	color:#CCC;
+	color:#fff !important;
 	-webkit-transition: 0.5s ease;
 	transition: 0.5s ease;
 }
 
 .case-studies a:hover{
+	color:#CCC !important;
 	-webkit-transition: 0.5s ease;
 	transition: 0.5s ease;
-	color:#CCC;
 }
 
-.case-studies h1{
-	font-size: 3em;
-	font-family:'Montserrat', sans-serif;
-	text-align: center;
-	vertical-align: middle;
-	margin-top:240px;
+.case-studies-text  h1{
+	margin: 0;
+	color:#fff;
+	font-size:2.5em;
+	text-align:center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
 	text-transform: uppercase;
-	color: #fff;
-	-webkit-transition: 0.5s ease;
-    transition: 0.5s ease;
+	letter-spacing: 4px;
 }
 
-.case-studies h1:hover{
-	color: #CCC;
-	-webkit-transition: 0.5s ease;
-    transition: 0.5s ease;
+.case-studies-text  h2{
+	color:#fff;
+	font-size:1.5em;
+	font-family: Georgia, sans-serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-style: italic;
+	line-height: 150%;
+	margin-top:35px;
+}
+
+.case-studies-text .explore{
+	text-align:center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size:0.9em;
+	letter-spacing: 4px;
+	width:150px;
+	padding: 10px 0 10px;
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	margin: 40px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+ .case-studies-text .explore:hover{
+	color:#fff;
+	border-top: 3px solid #CCC;
+	border-bottom: 3px solid #CCC;
 }
 
 #partners{
@@ -805,13 +842,50 @@ h4.section{
 	margin:0px auto;
 }
 
-#partners .section-text2 {
-	position:relative;
-	z-index:2;
-	font-family:Georgia;
-	font-size:1em;
-	color:#222222;
-	line-height: 170%;
+#theory{
+	margin-top:0;
+	background-color: #fff;
+	margin-bottom: 50px;
+}
+
+ #theory .explore{
+	text-align:center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size:0.9em;
+	letter-spacing: 4px;
+	width:200px;
+	padding: 14px 0 14px;
+	border-top: 3px solid #222;
+	border-bottom: 3px solid #222;
+	margin: 40px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+#theory  .explore:hover{
+	color:#ccc;
+	width:200px;
+	border-top: 3px solid #CCC;
+	border-bottom: 3px solid #CCC;
+	letter-spacing: 5px;
+}
+
+
+#theory  h1{
+	font-size: 1.5em;
+	margin-top: 20px;
+	line-height: 120%;
+	text-decoration: underline;
+}
+
+#theory  p{
+	font-size: 1em;
+	margin-top: 50px;
 }
 
 #who-logo{
@@ -852,6 +926,7 @@ h4.section{
 	font-size: 1em;
 	font-family:'Montserrat';
 	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 a{
@@ -900,7 +975,6 @@ a:hover{
 	font-size: 1em;
 	font-family:'Montserrat';
 	text-transform: uppercase;
-
 }
 
 .member-links{
@@ -1277,9 +1351,10 @@ a:hover{
 		padding-top: 150px;
 	}
 
-	.case-studies {
-		height:300px;
-
+	.case-studies h1{
+		font-size: 2em;
+		margin-top:0px;
+		padding-top: 150px;
 	}
 
 	.intro-message {
