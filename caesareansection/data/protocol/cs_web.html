@@ -1,0 +1,68 @@
+   <!-- Protocol 1 -->
+    <img src="img/pro_01.png"/>
+    <h2>harvesting the web corpus</h2>
+    <p>We collected the first 100 Google.com results (in incognito mode) harvesting their URL for each of the following queries:</p>
+    <ul>
+      <li>"C-Section"</li>
+      <li>"CS delivery"</li>
+      <li>"Surgical delivery"</li>
+      <li>"Abdominal delivery"</li>
+      <li>"Cesarean delivery"</li>
+      <li>"Caesarean delivery" </li>
+      <li>"Operative delivery"</li>
+      <li>Caesarean Cesarean</li>
+    </ul>
+    <p>The different queries have been designed to address as much as possible "nuances" of the CS concept: from the more technical and medical ones ("Caesarean delivery", "Operative delivery") to the more ordinary ones ("C-Section", "CS delivery".</p>
+    <a href="http://www.govcom.org/publications/full_list/rogers_inculpable_engine_2009.pdf">
+      <span class="reference">
+        Rogers, Richard. "The Googlization Question, and the Inculpable Engine."
+      </span>
+    </a>
+    <hr>
+
+    <!-- Protocol 2 -->
+    <img src="img/pro_01.png"/>
+    <h2>cleaning and tagging the webpages</h2>
+    <p>We qualified and tagged all the webpages accordingly to their contents and excluding from the corpus pages not concerned with CS (i.e. PDF, Videos but also cesarean section on animals). In this way we obtained three main webpages groups:
+      <ul>
+        <li>a) Medical Information; </li>
+        <li>b) Contentious Information;</li>
+        <li>c) Experiential Information.</li>
+      </ul>
+    </p>
+    <hr>
+
+    <!-- Protocol 3 -->
+    <img src="img/pro_01.png"/>
+    <h2>crawling the hyperlinks</h2>
+    <p>We followed the web corpus hyperlinks to discovering other relevant URLs. From this new web corpus have been eliminated all the websites considered too general (i.e facebook, twitter) and the non relevant ones (i.e maps.google, youtube). Furthermore, also the websites with an in-degree index smaller than 3 have been excluded.
+      For this step we used  <a href="https://github.com/medialab/Hypertext-Corpus-Initiative">HYPHE</a> a software developed at médialab | SciencesPo.
+      <a href="http://www.govcom.org/publications/full_list/Rogers_Digital_Cognitive_Technologies_preprint_Wiley_2009.pdf"> <span class="reference">
+        Rogers, Richard. "Mapping public web space with the Issuecrawler." Digital cognitive technologies: Epistemology and the knowledge economy (2010): 89-99."
+      </span> 
+      </a>
+    </p>
+    <hr>
+
+    <!-- Protocol 4 -->
+    <img src="img/pro_01.png"/>
+    <h2>(visual) network) analysis</h2>
+    <p>We examined through co-link / social networking analysis the network produced with the crawling. Furthermore, we analyzed visually the network using GEPHI, an open-source network analysis and visualization software package. Thanks to its force-based algorithm, ForceAtlas2, we produced the qualitative interpretation of the graph. 
+      <a href="http://sebastien.pro/draft_Exploratory_Network_Analysis_Visualization_and_Interaction.pdf">
+        <span class="reference">
+          Sébastien Heymann and Bénédicte Le Grand. “Exploratory Network Analysis: Visualization and Interaction” to appear in Hocine Cherifi (editor), Complex Networks and their Applications, Cambridge University Press.
+        </span>
+      </a>
+      <a href="http://www.medialab.sciences-po.fr/publications/Gephi%20paper.pdf">
+        <span class="reference">
+          Bastian, Mathieu, Sebastien Heymann, and Mathieu Jacomy. "Gephi: an open source software for  exploring and manipulating networks." ICWSM. 2009.
+        </span>
+      </a>
+      <a href="http://www.medialab.sciences-po.fr/publications/Gephi%20paper.pdf">
+        <span class="reference">
+          Bastian, Mathieu, Sebastien Heymann, and Mathieu Jacomy. "Gephi: an open source software for  exploring and manipulating networks." ICWSM. 2009.
+        </span>
+      </a>
+    </p>
+
+    <!-- End of protocol -->
