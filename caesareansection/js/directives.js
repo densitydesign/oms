@@ -157,16 +157,27 @@ angular.module('who.directives', [])
         };
         if (scope.$parent.$last === true) {
                   scope.$emit('docReady');
-                  $timeout(function () {
-                       update()
-                  });
+                  
+                  if(scope.utils.section === scope.section.id){
+                    $timeout(function () {
+                         update()
+                    });
+                  }
         }
         else {
+           
+           if(scope.utils.section === scope.section.id){
            $timeout(function (){
               update();
-          })
-
+            })
+          }
          }
+
+        scope.$watch('utils.section', function(newValue, oldValue){
+          if(newValue == scope.section.id){
+            update()
+          }
+        })
 
         scope.$watch('utils.internalCounter',function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id){
