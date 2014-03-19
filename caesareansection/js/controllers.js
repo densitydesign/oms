@@ -61,7 +61,7 @@ angular.module('who.controllers', [])
             paddingTop: '55px',
             paddingBottom: '55px',
             verticalCentered: false,
-            normalScrollElements: '#viz_googleimages .imgs, div.proto',
+            normalScrollElements: '#viz_googleimages .imgs',
             onLeave: function(index, direction){
              
               //if(nextIndex(index, direction)+1 != $scope.sections.length){
@@ -83,21 +83,28 @@ angular.module('who.controllers', [])
                   addMouseWheelHandler()
                   addTouchHandler()
 
-                 // $('#proto-title-container').click(function () {
-                    //$.fn.fullpage.setAllowScrolling(false);
-                   // removeMouseWheelHandler()
-                   // removeTouchHandler()
-                 // });
+                  $(document).on('mouseout', 'div.proto',function () {
+                  $.fn.fullpage.setAllowScrolling(false);
+                  addMouseWheelHandler()
+                  addTouchHandler()
+                  });
                   
-                  // $(document).on('mouseout', 'div.proto',function () {
-                  //   $.fn.fullpage.setAllowScrolling(false);
-                  //   addMouseWheelHandler()
-                  //   addTouchHandler()
-                  // });
+                  $(document).on('mouseover', 'div.proto',function () {
+                    $.fn.fullpage.setAllowScrolling(false);
+                   removeMouseWheelHandler()
+                   removeTouchHandler()
+                  });
               }else{
-                //console.log('ciao')
-                //$(document).unbind('on')
-                //$.fn.fullpage.setAllowScrolling(true);
+
+                $.fn.fullpage.setAllowScrolling(true);
+
+                $(document).on('mouseover', 'div.proto',function () {
+                  $.fn.fullpage.setAllowScrolling(false);
+                });
+
+                $(document).on('mouseout', 'div.proto',function () {
+                  $.fn.fullpage.setAllowScrolling(true);
+                });
               }
             }
           });
@@ -105,9 +112,17 @@ angular.module('who.controllers', [])
         $scope.utils.scrollToSection = function(section){
           $.fn.fullpage.moveTo(section);
           $scope.$emit('steplimit');
-          $('#main-index').animate({scrollTop: $('#main-index').scrollTop() + $('#nav_' + section).position().top}, 700);
-          
+          $('#main-index').animate({scrollTop: $('#main-index').scrollTop() + $('#nav_' + section).position().top}, 700);    
         }
+
+        $(document).on('mouseover', 'div.proto',function () {
+          $.fn.fullpage.setAllowScrolling(false);
+        });
+
+        $(document).on('mouseout', 'div.proto',function () {
+          $.fn.fullpage.setAllowScrolling(true);
+        });
+
 
       });
 

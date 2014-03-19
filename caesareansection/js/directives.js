@@ -116,8 +116,9 @@ angular.module('who.directives', [])
       scope.$watch('utils.protocol',function(newValue, oldValue){
         if(newValue !== oldValue){
           if(newValue){
-            protoContainer.css("right","0px")
-            update(newValue)
+            if(protoContainer.css("right") == "-40px")
+              {protoContainer.css("right","0px")}
+              update(newValue)
           }
           else{
             protoContainer.css("right","-40px")

@@ -12,7 +12,7 @@ angular.module('who.services', [])
 	        $http.get(url).success(function(data){
 	            deferred.resolve(data);
 	        }).error(function(){
-	            deferred.reject("An error occured while fetching grid");
+	            deferred.reject("An error occured while fetching file");
 	        });
         
         	return deferred.promise;
