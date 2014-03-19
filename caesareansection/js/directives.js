@@ -44,7 +44,7 @@ angular.module('who.directives', [])
       }
     };
   }])
-  .directive('subChapter',[ 'fileService', '$timeout', function (fileService, $timeout) {
+  .directive('subChapter',[ 'fileService', '$timeout', '$compile', function (fileService, $timeout, $compile) {
     return {
       restrict: 'A',
       replace: true,
@@ -55,12 +55,14 @@ angular.module('who.directives', [])
 
           fileService.getFile('data/' + scope.section.id + '/txt.html').then(
             function(data){
-              txt = data;
-              element.find('.section-text').html(txt)
+              //txt = data;
+              //element.find('.section-text').html(txt)
+              var e = angular.element(data);
+              element.find('.section-text').append(e);
+              $compile(e)(scope);
             },
             function(error){
-              txt = error
-              element.find('.section-text').html(txt)
+              element.find('.section-text').html(error)
             }
           );
 
