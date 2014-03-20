@@ -75,7 +75,7 @@ body {
 }
 
 sup {
-	color: red;
+	color: #72D6DA;
 	font-size: 0.6em;
 }
 
@@ -213,7 +213,7 @@ padding-top: 10px;
 	font-size:0.8em;
 	letter-spacing: 2px;
 	padding:0px 20px;
-	color:#cccccc;
+	color:#F1F1F1;
 	margin-top: 0px;
 }
 
@@ -253,7 +253,7 @@ padding-top: 10px;
 	text-transform: uppercase;
 	font-size:0.8em;
 	letter-spacing: 2px;
-	color:#cccccc;
+	color:#F1F1F1;
 }
 
 .legend p{
@@ -315,7 +315,7 @@ padding-top: 10px;
 /* NavBars*/
 .navbar{
 	background-color: #fff;
-	border-bottom: 1px solid #CCCCCC;
+	border-bottom: 1px solid #F1F1F1;
 }
 
 .navbar ul{
@@ -324,7 +324,7 @@ padding-top: 10px;
 
 .navbar-brand{
 	background: url(../img/back_home.png);
-	background-color: #CCCCCC;
+	background-color: #F1F1F1;
 	height: 55px;
 	width: 55px;
 	-webkit-transition: all 0.5s ease-in-out;
@@ -336,7 +336,7 @@ padding-top: 10px;
 
 .navbar-brand:hover,
 .navbar-brand:focus {
-	background-color: #666666 !important;
+	background-color: #CCCCCC !important;
 }
 
 .scrolldown {
@@ -597,7 +597,7 @@ padding-top: 10px;
 }
 
 .side-panel{
-	border-right:1px solid #CCCCCC;
+	border-right:1px solid #F1F1F1;
 	height:100%;
 
 }
@@ -636,7 +636,7 @@ padding-top: 10px;
 	height:100%;
 	position:absolute;
 	top:0;
-	background:#CCCCCC;
+	background:#F1F1F1;
 	overflow:auto;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -669,7 +669,7 @@ padding-top: 10px;
 	position:absolute;
 	top:0;	
 	right:0;
-	background:#CCCCCC;
+	background:#F1F1F1;
 	width: 40px;
 	z-index:500;
 	cursor: pointer;
@@ -870,7 +870,7 @@ padding-top: 10px;
 
 #partners{
 	border-top: 1px solid #fff;
-	background-color: #F2F2F2;
+	background-color: #F1F1F1;
 	padding-bottom: 100px;
 }
 
@@ -968,7 +968,7 @@ padding-top: 10px;
 }
 
 a{
-	color:#636363!important;
+	color:#005761!important;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
@@ -978,7 +978,7 @@ a{
 }
 
 a:hover{
-	color:#444444!important;
+	color:#72D6DA!important;
 	text-decoration: none;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -1339,7 +1339,7 @@ a:hover{
 	.side-panel{
 		height:30%;
 		overflow:auto;
-		border-bottom: 1px solid #CCCCCC;
+		border-bottom: 1px solid #F1F1F1;
 	}
 }
 
@@ -1375,7 +1375,7 @@ a:hover{
 	.side-panel{
 		height:30%;
 		overflow:auto;
-		border-bottom: 1px solid #CCCCCC;
+		border-bottom: 1px solid #F1F1F1;
 	}
 
 	.legend{
