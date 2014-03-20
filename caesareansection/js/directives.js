@@ -619,13 +619,13 @@ angular.module('who.directives', [])
 
               step = [
                 {init: function(){
-                    node.transition().duration(500).style("opacity", 1)
+                    node/*.transition().duration(500)*/.style("opacity", 1)
                     createText(1);
                     setLvl(1)
                   }
                 },
                 {init: function(){
-                    node.transition().duration(500).style("opacity", function(d) {
+                    node/*.transition().duration(500)*/.style("opacity", function(d) {
                       if (d.depth > 1)
                         return 1;
                       else
@@ -638,7 +638,7 @@ angular.module('who.directives', [])
                 {init: function(){
                   node.data(treemap.value(function(d) {
                     return 1;
-                  }).nodes).transition().duration(500).call(position).style("opacity", function(d) {
+                  }).nodes)/*.transition().duration(500)*/.call(position).style("opacity", function(d) {
                     if (d.depth < 3)
                       return 0;
                     else
@@ -654,7 +654,7 @@ angular.module('who.directives', [])
                       return d.nb_replies;
                     }
 
-                    node.data(treemap.value(val).nodes).transition().duration(500).call(position).style("opacity", function(d) {
+                    node.data(treemap.value(val).nodes)/*.transition().duration(500)*/.call(position).style("opacity", function(d) {
                       if (d.depth < 3)
                         return 0;
                       else
@@ -668,7 +668,7 @@ angular.module('who.directives', [])
                 {init: function(){
                     node.data(treemap.value(function(d) {
                       return d.time;
-                    }).nodes).transition().duration(500).call(position).style("opacity", function(d) {
+                    }).nodes)/*.transition().duration(500)*/.call(position).style("opacity", function(d) {
                       if (d.depth < 3)
                         return 0;
                       else
@@ -681,7 +681,7 @@ angular.module('who.directives', [])
                 {init: function(){
                     node.data(treemap.value(function(d) {
                       return d.nb_authors;
-                    }).nodes).transition().duration(500).call(position).style("opacity", function(d) {
+                    }).nodes)/*.transition().duration(500)*/.call(position).style("opacity", function(d) {
                       if (d.depth < 3)
                         return 0;
                       else
@@ -694,7 +694,7 @@ angular.module('who.directives', [])
                 {init: function(){
                     node.data(treemap.value(function(d) {
                       return d.nb_authors;
-                    }).nodes).transition().duration(500).call(position).style("opacity", function(d) {
+                    }).nodes)/*.transition().duration(500)*/.call(position).style("opacity", function(d) {
                       if (d.depth < 3)
                         return 0;
                       else
@@ -711,7 +711,7 @@ angular.module('who.directives', [])
                 console.log("ciao")
                     node.filter(function(d) {
                         return d.depth == 1
-                      }).transition().duration(500).style("opacity", 1)
+                      })/*.transition().duration(500)*/.style("opacity", 1)
                       
                       setLvl(1);
 
@@ -720,10 +720,10 @@ angular.module('who.directives', [])
               forum : function(){
                 node.filter(function(d) {
                   return d.depth > 1
-                }).transition().duration(500).style("opacity", 1)
+                })/*.transition().duration(500)*/.style("opacity", 1)
                 node.filter(function(d) {
                   return d.depth <= 1
-                }).transition().duration(500).style("opacity", 0)
+                })/*.transition().duration(500)*/.style("opacity", 0)
                 setLvl(2)
 
                 createText(2);                
@@ -734,13 +734,13 @@ angular.module('who.directives', [])
 
                 node.filter(function(d) {
                   return d.depth <= 2
-                }).transition().duration(500).style("opacity", 0)   
+                })/*.transition().duration(500)*/.style("opacity", 0)   
               },
               reply: function() {
                 var val = function(d) {
                   return d.nb_replies;
                 }
-                node.data(treemap.value(val).nodes).transition().duration(500).call(position)
+                node.data(treemap.value(val).nodes)/*.transition().duration(500)*/.call(position)
                 if (l > 0)
                   createText(l);
                 tt.style("opacity", 0);               
@@ -749,7 +749,7 @@ angular.module('who.directives', [])
                 var val = function(d) {
                   return d.time;
                 }
-                node.data(treemap.value(val).nodes).transition().duration(500).call(position)
+                node.data(treemap.value(val).nodes)/*.transition().duration(500)*/.call(position)
                 if (l > 0)
                   createText(l);
                 tt.style("opacity", 0);
@@ -759,7 +759,7 @@ angular.module('who.directives', [])
                 var val = function(d) {
                   return d.nb_authors;
                 }
-                node.data(treemap.value(val).nodes).transition().duration(500).call(position)
+                node.data(treemap.value(val).nodes)/*.transition().duration(500)*/.call(position)
                 if (l > 0)
                   createText(l);
                 tt.style("opacity", 0);
