@@ -44,7 +44,7 @@
     				.rangeRoundBands([0, height], .4);
 
 			var x = d3.scale.linear()
-    				.range([0, width-80]);
+    				.range([0, width-100]);
 
 
     		x.domain([0, xMax]);
@@ -57,7 +57,7 @@
     		chartContainer
     			.enter()
     			.append("g")
-    			.attr("transform", "translate(" + 80 + ",0)");
+    			.attr("transform", "translate(" + 100 + ",0)");
 
     		chartContainer.exit().remove()
 

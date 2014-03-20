@@ -3,7 +3,16 @@
 /* Controllers */
 
 angular.module('who.controllers', [])
-  .controller('caesareansection', function($scope, $window) {
+  .controller('caesareansection', function($scope, $window, cfpLoadingBar) {
+
+
+    $scope.loadingstart = function() {
+      cfpLoadingBar.start();
+    };
+
+    $scope.loadingcomplete = function () {
+      cfpLoadingBar.complete();
+    }
 
     var nextIndex = function(index, direction){
       if(direction === "down"){
@@ -17,18 +26,18 @@ angular.module('who.controllers', [])
     $scope.sections = [
       {id:"cs_intro",label:"Introduction to caesarean section", nav: true, step:false, template:"chapter-intro", protocol: false},
       {id:"cs_query_intro",label: "Building the corpus", nav: true, step:false, template:"sub-chapter", protocol: 'cs_web'},
-      {id:"cs_query_network",label: "Building the corpus",nav: false,step:true, template:"viz-step", protocol: 'cs_web'},
+      {id:"cs_query_network",label: "Building the corpus",nav: false,step:true, template:"viz-step", protocol: 'cs_web', legend:true},
       {id:"cs_query_analytics",label: "Building the corpus",nav: false, step:false, template:"analytics", protocol: 'cs_web'},
       {id:"cs_crawl_intro", label:"Mapping the web", nav: true, step:false, template:"sub-chapter", protocol: 'cs_web'},
-      {id:"cs_crawl_network", label:"Mapping the web", nav: false, step:true, template:"viz-step", protocol: 'cs_web'},
+      {id:"cs_crawl_network", label:"Mapping the web", nav: false, step:true, template:"viz-step", protocol: 'cs_web', legend:true},
       {id:"cs_text_intro",label:"Seeing what they're saying",nav: true, step:false,template:"sub-chapter", protocol: 'cs_text'},
       {id:"cs_text_slope",label:"Seeing what they're saying", nav: false, step:true, template:"viz-step-slope", protocol: 'cs_text'},
       {id:"cs_images_intro",label:"Perceived image of the c-section",nav: true, step:false,template:"sub-chapter", protocol: 'cs_imgs'},
       {id:"cs_images_elastic",label:"Perceived image of the c-section", nav: false, step:false, template:"images-elastic", protocol: 'cs_imgs'},
       {id:"cs_aufeminin_intro",label:"Analyzing the forum discussion", nav: true, step:false, template:"sub-chapter", protocol: 'cs_forum'},
-      {id:"cs_aufeminin_forum",label:"Analyzing the forum discussion",nav: false,step:true, template:"viz-step-treemap", protocol: 'cs_forum'},
-      {id:"cs_aufeminin_networkFR",label:"Analyzing the forum discussion",nav: false, step:true, template:"viz-step", protocol: 'cs_forum'},
-      {id:"cs_aufeminin_networkIT",label:"Analyzing the forum discussion",nav: false, step:true, template:"viz-step", protocol: 'cs_forum'},
+      {id:"cs_aufeminin_forum",label:"Analyzing the forum discussion",nav: false,step:true, template:"viz-step-treemap", protocol: 'cs_forum', legend:true},
+      {id:"cs_aufeminin_networkFR",label:"Analyzing the forum discussion",nav: false, step:true, template:"viz-step", protocol: 'cs_forum', legend:true},
+      {id:"cs_aufeminin_networkIT",label:"Analyzing the forum discussion",nav: false, step:true, template:"viz-step", protocol: 'cs_forum', legend:true},
       {id:"cs_outro",label:"Conclusion to caesarean section",nav: true, step:false, template:"sub-chapter", protocol: false}
     ]
 
@@ -56,7 +65,7 @@ angular.module('who.controllers', [])
             $.fn.fullpage({
             resize: false,
             css3: true,
-            fixedElements: 'div.navbar , div.scrolldown, div.overlay, div.proto',
+            fixedElements: 'div.navbar , div.scrolldown, div.overlay, div.proto, #loading-bar, #loading-bar-spinner',
             scrollOverflow: true,
             paddingTop: '55px',
             paddingBottom: '55px',

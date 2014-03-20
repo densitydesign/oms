@@ -8,7 +8,9 @@ angular.module('who', [
   'who.filters',
   'who.services',
   'who.directives',
-  'who.controllers'
+  'who.controllers',
+  'chieffancypants.loadingBar',
+  'ngAnimate'
 ])
 .config(function ($routeProvider, $locationProvider) {
   $routeProvider.when('/', {templateUrl: 'partials/caesareansection.html', controller: 'caesareansection'});

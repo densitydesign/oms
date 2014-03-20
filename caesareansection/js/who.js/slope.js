@@ -38,7 +38,6 @@
         		_data = data.filter(function(d){if(showCat.indexOf(d.step) > -1) return true});
         	}
 
-
         	var x = d3.scale.ordinal().rangeRoundBands([0, graphWidth], 0.5, 0);
         	var xDomain = _data.map(function(d){return d.step})
         	x.domain(xDomain);

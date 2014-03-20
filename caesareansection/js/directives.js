@@ -140,7 +140,10 @@ angular.module('who.directives', [])
       templateUrl: 'partials/vizstep.html',
       link: function postLink(scope, element, attrs) {
 
-        var counter = 0;
+        var counter = 0,
+            loaded = false;
+
+        
 
         var network = who.graph()
                       .sectionid(scope.section.id)
@@ -155,27 +158,26 @@ angular.module('who.directives', [])
           d3.select(container)
                 .call(network)
         };
+
         if (scope.$parent.$last === true) {
                   scope.$emit('docReady');
-                  
-                  if(scope.utils.section === scope.section.id){
                     $timeout(function () {
                          update()
                     });
-                  }
         }
         else {
-           
-           if(scope.utils.section === scope.section.id){
            $timeout(function (){
               update();
             })
-          }
          }
 
+        //lazy loading
         scope.$watch('utils.section', function(newValue, oldValue){
-          if(newValue == scope.section.id){
-            update()
+         if(newValue == scope.section.id && loaded === false){
+           $timeout(function (){
+            //scope.loadingstart()
+            //update()
+            });
           }
         })
 
@@ -204,7 +206,8 @@ angular.module('who.directives', [])
         var counter = 0,
           dataslope = {},
           slope,
-          chart;
+          chart,
+          loaded = false;
 
         var container = element.find("#graph")[0];
 
@@ -282,6 +285,9 @@ angular.module('who.directives', [])
 
           fileService.getFile('data/' + scope.section.id + '/CS_tf.json').then(
             function(data){
+              
+              //scope.loadingcomplete()
+
               dataslope.dataTF = data;
               dataslope.dataTF.forEach(function(d){
 
@@ -320,6 +326,8 @@ angular.module('who.directives', [])
               
               chart.datum(dataslope.dataTF).call(slope)
 
+              loaded = true;
+
             },
             function(error){
               element.find('#graph').html(error)
@@ -330,12 +338,12 @@ angular.module('who.directives', [])
         if (scope.$parent.$last === true) {
                   scope.$emit('docReady');
                   $timeout(function () {
-                       init()
+                       //init()
                   });
         }
         else {
            $timeout(function (){
-              init();
+              //init();
           })
 
          }
@@ -347,7 +355,7 @@ angular.module('who.directives', [])
             }
           },
           {init: function(){
-            slope.showCat(["M", "C", "E"])
+            slope.showCat(["medical", "controversies", "experiences"])
             chart.call(slope)
             }
           },
@@ -362,16 +370,27 @@ angular.module('who.directives', [])
             }
           },
           {init: function(){
-            slope.showCat(["E", "V"])
+            slope.showCat(["experiences", "vip"])
             chart.call(slope)
             }
           },
           {init: function(){
-            slope.showCat(["M", "C", "E"])
+            slope.showCat(["medical", "controversies", "experiences"])
             chart.call(slope)
             }
           }
         ]
+
+
+        //lazy loading
+        scope.$watch('utils.section', function(newValue, oldValue){
+         if(newValue == scope.section.id && loaded === false){
+           $timeout(function (){
+            //scope.loadingstart()
+            init()
+            });
+          }
+        })
 
         scope.$watch('ctrlmodels.slopetfidf', function(newValue, oldValue){
             if (newValue !== oldValue){
@@ -388,7 +407,7 @@ angular.module('who.directives', [])
 
 
         scope.$watch('utils.internalCounter',function(newValue, oldValue){
-          if(newValue !== oldValue && scope.utils.section === scope.section.id){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
               if(newValue > oldValue){
 
                 counter++
@@ -427,7 +446,8 @@ angular.module('who.directives', [])
             n,
             rows,
             step,
-            btnaction;
+            btnaction,
+            loaded = false;
 
         var container = element.find("#graph")[0];
 
@@ -745,7 +765,7 @@ angular.module('who.directives', [])
                 tt.style("opacity", 0);
               }
             }
- 
+              loaded = true;
             },
             function(error){
               element.find('#graph').html(error)
@@ -756,15 +776,25 @@ angular.module('who.directives', [])
         if (scope.$parent.$last === true) {
                   scope.$emit('docReady');
                   $timeout(function () {
-                       init()
+                       //init()
                   });
         }
         else {
            $timeout(function (){
-              init();
+              //init();
           })
 
          }
+
+        //lazy loading
+        scope.$watch('utils.section', function(newValue, oldValue){
+         if(newValue == scope.section.id && loaded === false){
+           $timeout(function (){
+            //scope.loadingstart()
+            init()
+            });
+          }
+        })
 
         scope.$watch('ctrlmodels.treemaphierarchy',function(newValue, oldValue){
           if(newValue !== oldValue){
@@ -779,7 +809,7 @@ angular.module('who.directives', [])
         });
 
         scope.$watch('utils.internalCounter',function(newValue, oldValue){
-          if(newValue !== oldValue && scope.utils.section === scope.section.id){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
               if(newValue > oldValue){
 
                 counter++
@@ -847,6 +877,35 @@ angular.module('who.directives', [])
       }
     };
   }])
+  .directive('legendStatic', ['fileService', '$timeout', '$compile', function (fileService, $timeout, $compile) {
+    return {
+      restrict: 'A',
+      replace: false,
+      //templateUrl: '../partials/legendstep.html',
+      link: function postLink(scope, element, attrs) {
+
+        var limit,
+              txt,
+              counter = 0;
+
+        fileService.getFile('data/' + scope.section.id + '/legendstatic.html').then(
+          function(data){
+            txt = data;
+            var e = angular.element(txt);
+            element.append(e);
+            limit = element.children().length;
+            $compile(e)(scope);
+
+          },
+          function(error){
+            txt = error
+            element.html(txt)
+            
+          }
+        );
+      }
+    };
+  }])
   .directive('analytics',['fileService', '$timeout', function (fileService, $timeout) {
     return {
       restrict: 'A',
@@ -860,7 +919,8 @@ angular.module('who.directives', [])
               queryContainer = element.find("#query")[0],
               tagChart,
               domainChart,
-              queryChart;
+              queryChart,
+              loaded = false;
 
               var tagHeight = element.find(".catcont").height() - element.find(".cattit").height();
               element.find("#category").height(tagHeight-2)
@@ -925,7 +985,9 @@ angular.module('who.directives', [])
                                   tagContainer.call(tagChart)
                                   domainContainer.call(domainChart)
                                 })
-                                .call(queryChart)                           
+                                .call(queryChart)    
+
+                loaded = true;                       
               },
               function(error){
                 txt = error
@@ -937,15 +999,25 @@ angular.module('who.directives', [])
         if (scope.$parent.$last === true) {
                   scope.$emit('docReady');
                   $timeout(function () {
-                       init()
+                       //init()
                   });
         }
         else {
            $timeout(function (){
-              init();
+              //init();
           })
 
          }
+
+        //lazy loading
+        scope.$watch('utils.section', function(newValue, oldValue){
+         if(newValue == scope.section.id && loaded === false){
+           $timeout(function (){
+            //scope.loadingstart()
+            init()
+            });
+          }
+        })
 
       }
     };
@@ -968,7 +1040,8 @@ angular.module('who.directives', [])
           sliderContainer,
           radContainer,
           imgsContainer,
-          dsv_egg = d3.dsv(";", "text/plain");
+          dsv_egg = d3.dsv(";", "text/plain"),
+          loaded = false;
 
       var init = function(){
 
@@ -1219,6 +1292,7 @@ angular.module('who.directives', [])
             viz_googleimages();
 
             //end elastic mess
+            loaded = true
           },
           function(error){
 
@@ -1229,15 +1303,25 @@ angular.module('who.directives', [])
       if (scope.$parent.$last === true) {
         scope.$emit('docReady');
         $timeout(function () {
-            init()
+            //init()
         });
       }
       else {
          $timeout(function (){
-          init()
+          //init()
         })
 
        }
+
+      //lazy loading
+      scope.$watch('utils.section', function(newValue, oldValue){
+       if(newValue == scope.section.id && loaded === false){
+         $timeout(function (){
+          //scope.loadingstart()
+          init()
+          });
+        }
+      })
 
       }
     }
