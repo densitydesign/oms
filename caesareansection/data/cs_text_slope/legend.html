@@ -55,15 +55,17 @@
 
 <div class="adv-step step5">
 
-  <h3>explore slope graph</h3>
-  <div class="btn-group">
-     <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopetfidf" btn-radio="'dataTF'">TF</button>
-     <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopetfidf" btn-radio="'dataTFIDF'">TF/IDF</button>
+  <h3>explore the slope graph</h3>
+  <div class="legend-controls">
+    <h3>type of analysis</h3>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopetfidf" btn-radio="'dataTF'">TF</button>
+      <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopetfidf" btn-radio="'dataTFIDF'">TF/IDF</button>
+    </div>
+    <h3>type of analysis</h3>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopescale" btn-radio="true">normalized</button>
+      <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopescale" btn-radio="false">not normalized</button>
+    </div>
   </div>
-
-  <div class="btn-group">
-     <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopescale" btn-radio="true">normalized</button>
-     <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopescale" btn-radio="false">not normalized</button>
-  </div>
-
 </div>

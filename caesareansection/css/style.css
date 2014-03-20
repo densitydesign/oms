@@ -149,8 +149,8 @@ sup {
 }
 
 h3.section-title{
-	font-variant:small-caps;
-	font-size:1.7em;
+	text-transform: uppercase;
+	font-size:0.9em;
 	color:#222;
 	text-align:left;
 	font-family: 'Montserrat', sans-serif;
@@ -171,8 +171,6 @@ h4.section{
 	line-height: 10%;
 }
 
-
-
 .adv-step h3{
 	text-align:left;
 	font-family: 'Montserrat', sans-serif;
@@ -180,13 +178,11 @@ h4.section{
 	text-transform: uppercase;
 	font-size:0.8em;
 	letter-spacing: 2px;
-	padding:0px 20px;
 	color:#cccccc;
 	margin-top: 0px;
 }
 
 .adv-step h2{
-	padding:0 20px;
 	position:relative;
 	z-index:2;
 	font-family:Georgia;
@@ -199,12 +195,11 @@ h4.section{
 	width:30px;	
 	height:2px;
 	background-color: #222;
-	margin-left:20px;
 	margin-bottom: 30px;
+	margin-left: 0px;
 }
 
 .adv-step p{
-	padding:0 20px;
 	position:relative;
 	z-index:2;
 	font-family:Georgia;
@@ -311,6 +306,7 @@ h4.section{
 	background-color: #fff;
 	z-index: 1000;
 	opacity:0.95;
+	border-top: 1px solid #CCC;
 }
 
 .arrows{
@@ -509,6 +505,7 @@ h4.section{
 	letter-spacing: 5px;
 	display: block;
 	color: #fff;
+	cursor: pointer;
 	-webkit-transition: color 0.2s;
 	transition: color 0.2s;
 }
@@ -570,6 +567,8 @@ h4.section{
 .adv-step{
 	min-height: 100%;
 	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .adva-cont{
@@ -581,6 +580,10 @@ h4.section{
 	border-top:1px solid #CBCCCE;
 	padding-left: 40px;
 	padding-right: 20px;
+}
+
+.legend-controls{
+	padding-top: 50px;
 }
 
 .main-viz{
@@ -1013,7 +1016,7 @@ transition: height 2s;
 }
 
 .googleimages .labels h3{
-	font-variant:small-caps;
+  font-variant:small-caps;
   font-size:1.3em;
   color:#222;
   text-align:left;
@@ -1199,7 +1202,7 @@ transition: height 2s;
 
 /*Toggles*/
 
-#custom .btn-group {
+.legend-controls .btn-group {
 	color:#cbccce;
 	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 1px;
@@ -1210,6 +1213,7 @@ transition: height 2s;
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 	outline: none;
+	margin-bottom: 20px;
 }
 
 /*Checkboxes*/

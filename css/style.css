@@ -75,7 +75,8 @@ body {
 }
 
 sup {
-	color: red;
+	color: #72D6DA;
+	font-size: 0.6em;
 }
 
 .quote{
@@ -119,6 +120,7 @@ sup {
 	border-top: 1px solid #ccc;
 	width: 100%;
 	padding-top: 15px;
+	margin-bottom: 100px;
 }
 
 
@@ -169,7 +171,39 @@ h4.section{
 	line-height: 10%;
 }
 
+ul
+{
+padding: 0px;
+margin: 0px;
+font-size:1.4em;
+	line-height: 170%;
+	font-family:Georgia;
+}
+ul li
+{
+background-image: url(sqpurple.gif);
+background-repeat: no-repeat;
+background-position: 0px 0px; 
+padding-left:2px; 
+padding-top: 10px;
+}
 
+ol
+{
+padding: 0px;
+margin: 0px;
+font-size:1.4em;
+	line-height: 170%;
+	font-family:Georgia;
+}
+ol li
+{
+background-image: url(sqpurple.gif);
+background-repeat: no-repeat;
+background-position: 0px 0px; 
+padding-left:2px; 
+padding-top: 10px;
+}
 
 .adv-step h3{
 	text-align:left;
@@ -179,7 +213,7 @@ h4.section{
 	font-size:0.8em;
 	letter-spacing: 2px;
 	padding:0px 20px;
-	color:#cccccc;
+	color:#F1F1F1;
 	margin-top: 0px;
 }
 
@@ -219,7 +253,7 @@ h4.section{
 	text-transform: uppercase;
 	font-size:0.8em;
 	letter-spacing: 2px;
-	color:#cccccc;
+	color:#F1F1F1;
 }
 
 .legend p{
@@ -281,12 +315,16 @@ h4.section{
 /* NavBars*/
 .navbar{
 	background-color: #fff;
-	border-bottom: 1px solid #CCCCCC;
+	border-bottom: 1px solid #F1F1F1;
 }
+
+.navbar ul{
+	font-size: 1em;
+} 
 
 .navbar-brand{
 	background: url(../img/back_home.png);
-	background-color: #CCCCCC;
+	background-color: #F1F1F1;
 	height: 55px;
 	width: 55px;
 	-webkit-transition: all 0.5s ease-in-out;
@@ -298,7 +336,7 @@ h4.section{
 
 .navbar-brand:hover,
 .navbar-brand:focus {
-	background-color: #666666 !important;
+	background-color: #CCCCCC !important;
 }
 
 .scrolldown {
@@ -559,7 +597,7 @@ h4.section{
 }
 
 .side-panel{
-	border-right:1px solid #CCCCCC;
+	border-right:1px solid #F1F1F1;
 	height:100%;
 
 }
@@ -598,7 +636,7 @@ h4.section{
 	height:100%;
 	position:absolute;
 	top:0;
-	background:#CCCCCC;
+	background:#F1F1F1;
 	overflow:auto;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -631,7 +669,7 @@ h4.section{
 	position:absolute;
 	top:0;	
 	right:0;
-	background:#CCCCCC;
+	background:#F1F1F1;
 	width: 40px;
 	z-index:500;
 	cursor: pointer;
@@ -832,7 +870,7 @@ h4.section{
 
 #partners{
 	border-top: 1px solid #fff;
-	background-color: #F2F2F2;
+	background-color: #F1F1F1;
 	padding-bottom: 100px;
 }
 
@@ -930,7 +968,7 @@ h4.section{
 }
 
 a{
-	color:#636363!important;
+	color:#005761!important;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
@@ -940,7 +978,7 @@ a{
 }
 
 a:hover{
-	color:#444444!important;
+	color:#72D6DA!important;
 	text-decoration: none;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -1301,7 +1339,7 @@ a:hover{
 	.side-panel{
 		height:30%;
 		overflow:auto;
-		border-bottom: 1px solid #CCCCCC;
+		border-bottom: 1px solid #F1F1F1;
 	}
 }
 
@@ -1337,7 +1375,7 @@ a:hover{
 	.side-panel{
 		height:30%;
 		overflow:auto;
-		border-bottom: 1px solid #CCCCCC;
+		border-bottom: 1px solid #F1F1F1;
 	}
 
 	.legend{
