@@ -102,6 +102,12 @@ angular.module('who.directives', [])
           protoContainer.css("right","0")
         }
       })
+      
+      protoContent.slimScroll({
+            height: 'auto',
+            size: '5px',
+            alwaysVisible: false
+          });
 
       var update = function(protocol){
           protoContent.empty()
@@ -141,33 +147,44 @@ angular.module('who.directives', [])
       link: function postLink(scope, element, attrs) {
 
         var counter = 0,
-            loaded = false;
+            loaded = false,
+            chart,
+            network,
+            container = element.find("#graph")[0];
 
-        
+        var init = function(){
+          fileService.getFile('data/' + scope.section.id + '/' + scope.section.id + '_graph.json').then(
+              function(data){
+                network = who.graph()
+                  .sectionid(scope.section.id)
+                  .on("steplimit", function(){
+                    scope.$emit('steplimit');
+                    counter  = counter < 0 ? 0 : (counter-1);
+                  });
 
-        var network = who.graph()
-                      .sectionid(scope.section.id)
-                      .on("steplimit", function(){
-                        scope.$emit('steplimit');
-                        counter  = counter < 0 ? 0 : (counter-1);
-                      });
+                chart = d3.select(container);
 
-        var container = element.find("#graph")[0];
+                chart.datum(data).call(network)
 
-        var update = function(){
-          d3.select(container)
-                .call(network)
-        };
+                loaded = true;
+              },
+              function(error){
+                container.html(error)
+              }
+            );
+        }    
+
+
 
         if (scope.$parent.$last === true) {
                   scope.$emit('docReady');
                     $timeout(function () {
-                         update()
+                         //init()
                     });
         }
         else {
            $timeout(function (){
-              update();
+              //init();
             })
          }
 
@@ -176,20 +193,20 @@ angular.module('who.directives', [])
          if(newValue == scope.section.id && loaded === false){
            $timeout(function (){
             //scope.loadingstart()
-            //update()
+            init()
             });
           }
         })
 
         scope.$watch('utils.internalCounter',function(newValue, oldValue){
-          if(newValue !== oldValue && scope.utils.section === scope.section.id){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
               if(newValue > oldValue){
                 counter++
               }else{
                 counter--
               }
               network.internalView(counter)
-              update()
+              chart.call(network)
             }
         })
 
@@ -890,16 +907,14 @@ angular.module('who.directives', [])
 
         fileService.getFile('data/' + scope.section.id + '/legendstatic.html').then(
           function(data){
-            txt = data;
-            var e = angular.element(txt);
+            var e = angular.element(data);
             element.append(e);
             limit = element.children().length;
             $compile(e)(scope);
 
           },
           function(error){
-            txt = error
-            element.html(txt)
+            element.html(error)
             
           }
         );

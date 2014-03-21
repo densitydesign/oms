@@ -141,6 +141,8 @@
    queryPosition = networkconfig[sectionid].queryPosScale;
 
 
+  _views = networkconfig[sectionid]._views
+
   if($(selection.node()).is(':empty')){
     _options = networkconfig[sectionid]._options;
 
@@ -154,13 +156,7 @@
         settings: networkconfig[sectionid].settings
       })
 
-
-    sigma.parsers.json(
-      networkconfig[sectionid].parserURL,
-      networkconfig[sectionid].parserFnc
-      
-    );
-
+      networkconfig[sectionid].parserFnc(data)
   }else{
      if(internalView >= 0 && internalView < (_views.length)){
       applyView(internalView);
@@ -169,7 +165,6 @@
     }
   }
 
-  _views = networkconfig[sectionid]._views
 
  
 

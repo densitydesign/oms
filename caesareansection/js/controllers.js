@@ -53,7 +53,9 @@ angular.module('who.controllers', [])
       slopetfidf : 'dataTF',
       slopescale : true,
       treemaphierarchy : 'post',
-      treemapsort : 'author'
+      treemapsort : 'author',
+      sgnafmax : $scope.sections.length-1,
+      sgnafindex: 0
       }
 
     angular.element($window).bind('resize',function(){
@@ -65,14 +67,17 @@ angular.module('who.controllers', [])
             $.fn.fullpage({
             resize: false,
             css3: true,
-            fixedElements: 'div.navbar , div.scrolldown, div.overlay, div.proto, #loading-bar, #loading-bar-spinner',
+            fixedElements: 'div.navbar , div.scrolldown, div.overlay, div.proto, #loading-bar, #loading-bar-spinner, .sgnaf-container',
             scrollOverflow: true,
             paddingTop: '55px',
             paddingBottom: '55px',
             verticalCentered: false,
             normalScrollElements: '#viz_googleimages .imgs',
             onLeave: function(index, direction){
-             
+              
+                $scope.ctrlmodels.sgnafindex = nextIndex(index, direction);
+                $scope.$apply()
+
               //if(nextIndex(index, direction)+1 != $scope.sections.length){
                 var nextId = $scope.sections.filter(function(d){return d.label == $scope.sections[nextIndex(index, direction)].label && d.nav == true })[0].id;
                 if($scope.utils.section != $scope.sections[nextIndex(index, direction)].id){
@@ -86,7 +91,10 @@ angular.module('who.controllers', [])
              
                 $scope.utils.section = anchorLink;
                 $scope.utils.protocol = $scope.sections[index-1].protocol;
+                $scope.ctrlmodels.sgnafindex = index-1;
                 $scope.$apply()
+
+
                 if($scope.sections[index-1].step){
                   $.fn.fullpage.setAllowScrolling(false);
                   addMouseWheelHandler()
@@ -116,6 +124,7 @@ angular.module('who.controllers', [])
                 });
               }
             }
+
           });
         
         $scope.utils.scrollToSection = function(section){
