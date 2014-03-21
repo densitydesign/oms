@@ -1055,6 +1055,10 @@ angular.module('who.directives', [])
           rows,
           siz=50,
           data,
+          load=0,
+          count=0,
+          currArray,
+          scrollEnd=false,
           langLvl=0,
           langScale,
           tagScale,
@@ -1113,7 +1117,7 @@ angular.module('who.directives', [])
 
             sliderContainer = element.find(".slider")[0]
             
-            $(sliderContainer).slider({'min':10,'max':100, 'value':50})
+            $(sliderContainer).slider({'min':20,'max':100, 'value':50})
             .on('slide', function(ev){
               changeSize(ev.value)
             });
@@ -1164,11 +1168,19 @@ angular.module('who.directives', [])
               //ealstify list
               elastify(d)
               if($(".tag.sel").length) {
-                console.log(d)
+                
                 var k=d3.select(".tag.sel")[0][0].__data__.key
                 var el=d.values.filter(function(e){return e.key==k})
                 loadImages(el[0])
               }
+              
+              else {
+              	console.log(d)
+              	var a={}
+                a['values']=rows.filter(function(e){return e.lang==d.key})
+              	loadImages(a)
+              }
+              
               });
             
             //labels for languages 
@@ -1280,12 +1292,47 @@ angular.module('who.directives', [])
              }
              
              function loadImages(d) {
-              $(imgsContainer).empty();
-              d.values.forEach(function(e,i) {
+           		$(imgsContainer).empty();
+           		$(imgsContainer).scrollTop(0);
+           		scrollEnd=false;
+           		load=0;
+           		count=d.values.length;
+           		if(count<=1000) load=count
+           		else load=1000
+              	currArray=d.values
+              currArray.slice(0,load-1).forEach(function(e,i) {
                 $(imgsContainer).append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
                 if (!col) {
                   $(".imgs img").hide();
                 }     
+              })
+              
+              $(".imgs").on("scroll",function(e){
+              	console.log($(this).scrollTop(), this.scrollHeight-800)
+              	
+              	if($(this).scrollTop()>=this.scrollHeight-800 && !scrollEnd) {
+              		console.log("here");
+              	if(count<=load+1000) {
+              		scrollEnd=true;
+              		console.log("load until end",count)
+              		currArray.splice(load,count-1).forEach(function(e,i) {
+                $(imgsContainer).append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
+              		})
+              		
+              	}
+              	
+              	else{
+              		console.log("load next 500", count)
+              		currArray.slice(load,load+1000-1).forEach(function(e,i) {
+                $(imgsContainer).append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
+              		})
+              		load+=1000;
+              		
+              	}
+              	}
+              	
+              	
+              	
               })
              }
              
