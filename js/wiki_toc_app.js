@@ -1,7 +1,7 @@
-var graphWidth = 1500, 
-	graphHeight = 200;
+var graphWidth = 2000, 
+	graphHeight = 500;
 
-d3.json('data/out.json', function(data) {
+d3.json('data/FP_final.json', function(data) {
 
 
 	var chart = d3.select("#wikitoc").append("svg")
