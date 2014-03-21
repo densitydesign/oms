@@ -449,7 +449,11 @@ angular.module('who.directives', [])
       replace: true,
       templateUrl: 'partials/vizstep.html',
       link: function postLink(scope, element, attrs) {
-
+		
+		$(document).on("click",".tt .glyphicon",function(e){
+			$(this).parent().remove();
+		})
+		
         var counter = 0,
             dsv_egg = d3.dsv(";", "text/plain"),
             data,
@@ -575,16 +579,19 @@ angular.module('who.directives', [])
               };
               
               function drawTt(d) {
+                var myx=0;
+                if(d3.event.pageX>width-250) myx = d3.event.pageX-260
+                else myx = d3.event.pageX;
                 
                 tt.style("opacity", 1);
                 if(d.depth==1) {
-                  tt.html('<div class="tt"><div><b>Site language</b> <p>'+d.key+'</p> </div><div><b>Forum count</b> '+d.values.length+'</div></div>').style("left", (d3.event.pageX) + "px").style("top", (d3.event.pageY - 28) + "px");
+                  tt.html('<div class="tt"><span class="glyphicon glyphicon-remove"></span><div><b>Site language</b> <p>'+d.key+'</p> </div><div><b>Forum count</b> '+d.values.length+'</div></div>').style("left", (myx) + "px").style("top", (d3.event.pageY - 28) + "px");
                 }
                 else if(d.depth==2) {
-                  tt.html('<div class="tt"><div><b>Forum title</b> <p>'+d.key+'</p></div><div><b>Post count</b> '+d.values.length+'</div></div>').style("left", (d3.event.pageX) + "px").style("top", (d3.event.pageY - 28) + "px");
+                  tt.html('<div class="tt"><span class="glyphicon glyphicon-remove"></span><div><b>Forum title</b> <p>'+d.key+'</p></div><div><b>Post count</b> '+d.values.length+'</div></div>').style("left", (myx) + "px").style("top", (d3.event.pageY - 28) + "px");
                 }
                 else if(d.depth==3) {
-                  tt.html('<div class="tt"><div><b>Post title</b><p> '+d.title+'</p></div><div><b>Author</b><p>'+d.orig_author+'</p></div><div><b>Forum</b> <p>'+d.forum+'</p></div></div>').style("left", (d3.event.pageX) + "px").style("top", (d3.event.pageY - 28) + "px");
+                  tt.html('<div class="tt"><span class="glyphicon glyphicon-remove"></span><div><b>Post title</b><p> '+d.title+'</p></div><div><b>Author</b><p>'+d.orig_author+'</p></div><div><b>Forum</b> <p>'+d.forum+'</p></div></div>').style("left", (myx) + "px").style("top", (d3.event.pageY - 28) + "px");
                 }
               }
               

@@ -1765,7 +1765,7 @@ var networkconfig = {
     "queryPosScale": null,
     "parserFnc": function(graph) {
         // Save the original data:
-
+		
         scale = 28; //philotaxis
 
         graph.nodes.forEach(function(n) {
@@ -1878,6 +1878,8 @@ var networkconfig = {
         _s.graph.read(_graph);
 
         // Apply first action:
+        console.log("here")
+        $(".tt").remove();
         applyView(0);
       },
     "_views" : [
@@ -1888,6 +1890,7 @@ var networkconfig = {
            * ALL GREYS
            */
           init: function() {
+          	
             _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,

@@ -74,10 +74,11 @@ angular.module('who.controllers', [])
             verticalCentered: false,
             normalScrollElements: '#viz_googleimages .imgs',
             onLeave: function(index, direction){
-              
+
+                $(".tt").remove();
+
                 $scope.ctrlmodels.sgnafindex = nextIndex(index, direction);
                 $scope.$apply()
-
               //if(nextIndex(index, direction)+1 != $scope.sections.length){
                 var nextId = $scope.sections.filter(function(d){return d.label == $scope.sections[nextIndex(index, direction)].label && d.nav == true })[0].id;
                 if($scope.utils.section != $scope.sections[nextIndex(index, direction)].id){
@@ -88,7 +89,7 @@ angular.module('who.controllers', [])
             },
             afterLoad: function(anchorLink, index){
               $('div.overlay').removeClass("open");
-             
+             	
                 $scope.utils.section = anchorLink;
                 $scope.utils.protocol = $scope.sections[index-1].protocol;
                 $scope.ctrlmodels.sgnafindex = index-1;
