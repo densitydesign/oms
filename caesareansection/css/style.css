@@ -1261,11 +1261,19 @@ transition: height 2s;
 	padding:15px;
 	line-height: 1.5em;
 	font-size: 1em;
+	position:relative;
 	display: block;
 	text-transform: capitalize;
 	text-align: left;
 	font-family: Georgia;
-	min-width: 250px;
+	width: 250px;
+}
+
+.tt .glyphicon{
+	display:block;
+	position:absolute;
+	right:10px;
+	top:10px;
 }
 
 .tt:before{
