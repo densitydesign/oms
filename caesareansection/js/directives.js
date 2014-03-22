@@ -1058,6 +1058,9 @@ angular.module('who.directives', [])
           load=0,
           count=0,
           currArray,
+          langsArr=[],
+          tagsArr=[],
+          paginate,
           scrollEnd=false,
           langLvl=0,
           langScale,
@@ -1117,7 +1120,7 @@ angular.module('who.directives', [])
 
             sliderContainer = element.find(".slider")[0]
             
-            $(sliderContainer).slider({'min':20,'max':100, 'value':50})
+            $(sliderContainer).slider({'min':40,'max':100, 'value':50})
             .on('slide', function(ev){
               changeSize(ev.value)
             });
@@ -1138,6 +1141,10 @@ angular.module('who.directives', [])
 
             var offset = $(imgsContainer).position().top
             $(imgsContainer).height(height);
+            
+            paginate=$(imgsContainer).width()*$(imgsContainer).height()/(siz*siz);
+            console.log("paginate",paginate)
+            
             
             //var t = d3.select("svg").append("g").attr("class","tag-group")
             var t = svg.append("g").attr("class","tag-group")
@@ -1160,26 +1167,35 @@ angular.module('who.directives', [])
             .style("fill", function(d) {return "#dddddd";})
             .style("stroke","#999999")
             .on("click", function(d){
+              console.log(d)
+              if(!d3.select(this).classed("sel")) {
+              		d.sel=true;
+              		
+	                d3.select(this).classed("sel",true)
+	                var index = langsArr.indexOf(d.key);
+              		if (index == -1) {
+					    langsArr.push(d.key);
+					}
+	                //ealstify list
+              		elastify();
+              		loadImages();
+              	}
+              	else {
+              		d.sel=false;
+              		d3.select(this).classed("sel",false)
+              		var index = langsArr.indexOf(d.key);
+              		if (index > -1) {
+					    langsArr.splice(index, 1);
+					}
+					if(!langsArr.length) {
+						tagsArr=[];
+						$(".tag.sel").removeClass("sel")
+						}
+					elastify();
+					loadImages();
+              	}
               
-              //color current selection
-              d3.select(".lang.sel").classed("sel",false)
-              d3.select(this).classed("sel",true)
-              
-              //ealstify list
-              elastify(d)
-              if($(".tag.sel").length) {
-                
-                var k=d3.select(".tag.sel")[0][0].__data__.key
-                var el=d.values.filter(function(e){return e.key==k})
-                loadImages(el[0])
-              }
-              
-              else {
-              	console.log(d)
-              	var a={}
-                a['values']=rows.filter(function(e){return e.lang==d.key})
-              	loadImages(a)
-              }
+              	console.log(langsArr)
               
               });
             
@@ -1198,22 +1214,45 @@ angular.module('who.directives', [])
           .style("fill","#222222")
           .text(function(d){return d.key})
               
+              loadWhole();
+              
             }
 
-
-             function elastify(d) {
-              
+			
+			function loadWhole() {
+				
+				var dt={}
+				dt.values = d3.nest()
+                .key(function(d) {return d.keyword; })
+                .entries(rows);
+                elastify(dt);
+                
+                var x={}
+                x.values=rows
+                loadImages(x);
+			}
+			
+             function elastify() {
+            
+            	var dt = rows.filter(function(e){return langsArr.indexOf(e.lang)>=0})
+            	console.log("dt",dt)
+            	var d = d3.nest()
+                .key(function(f) {return f.keyword; })
+                .entries(dt);
+                
+                console.log("d",d)
+            
               //compute height
               var tagH=0
             
             //t.attr("transform","rotate(30)")
             
-              d['values'].sort(function(a,b) {
+              d.sort(function(a,b) {
                 return b['values'].length-a['values'].length
                 })
               
-              d['values'].forEach(function(e,i){
-                
+              d.forEach(function(e,i){
+           
                 //e.y=tagH;
                 tagH+=e['values'].length  
               })
@@ -1223,7 +1262,7 @@ angular.module('who.directives', [])
               tagScale = d3.scale.linear().range([height/37, height/1.75]); 
               tagScale.domain([0, tagH]).clamp(true)
               var vals=0
-              d['values'].forEach(function(e,i){
+              d.forEach(function(e,i){
                 
                 e.y=vals;
                 e.h=tagScale(e['values'].length)
@@ -1232,7 +1271,7 @@ angular.module('who.directives', [])
 
               //draw section
               
-              tags= t.selectAll(".tag").data(d.values,function(e){return e.key})
+              tags= t.selectAll(".tag").data(d,function(e){return e.key})
               
               var enter = tags.enter()
               .append("rect")
@@ -1246,11 +1285,27 @@ angular.module('who.directives', [])
               .style("fill", function(e) {return "#dddddd";})
               .style("stroke","#999999")
               .on("click", function(d){
-              
-                //color current selection
-                d3.select(".tag.sel").classed("sel",false)
-                d3.select(this).classed("sel",true)
-                loadImages(d);
+              	console.log(d)
+              	if(!d.sel) {
+              		d.sel=true;
+              		var index = tagsArr.indexOf(d.key);
+              		if (index == -1) {
+					    tagsArr.push(d.key);
+					}
+	                d3.select(this).classed("sel",true)
+	                loadImages();
+              	}
+              	else {
+              		d.sel=false;
+              		d3.select(this).classed("sel",false)
+              		var index = tagsArr.indexOf(d.key);
+              		console.log(index)
+              		if (index > -1) {
+					    tagsArr.splice(index, 1);
+					}
+					loadImages();
+              	}
+              	
               });
               
               //transition on existing
@@ -1269,7 +1324,7 @@ angular.module('who.directives', [])
               
               //Text
               var txt = t.selectAll(".tag-txt")
-              .data(d.values,function(e){return e.key})
+              .data(d,function(e){return e.key})
               
               var txtEnt=txt.enter()
               .append("text")
@@ -1277,56 +1332,71 @@ angular.module('who.directives', [])
               txtEnt
               .attr("class", "tag-txt")
               .attr("font-family", "serif")
-            .attr("font-size", "1em")
-            .attr("x",  width*.12+listW)
-            .attr("y", function(e){return e.y})
-            .attr("dx", "0.4em")
-            .attr("dy", "1.3em")
-            .style("fill","#222222")
-            .text(function(d){return d.key})
-            
-            txt.transition().duration(500)
-            .attr("y", function(e){return e.y})
-
-            txt.exit().remove()
+	            .attr("font-size", "1em")
+	            .attr("x",  width*.12+listW)
+	            .attr("y", function(e){return e.y})
+	            .attr("dx", "0.4em")
+	            .attr("dy", "1.3em")
+	            .style("fill","#222222")
+	            .text(function(d){return d.key})
+	            
+	            txt.transition().duration(500)
+	            .attr("y", function(e){return e.y})
+	
+	            txt.exit().remove()
              }
              
-             function loadImages(d) {
+             
+             
+             
+             function loadImages() {
+				console.log("arrays",langsArr,tagsArr)
            		$(imgsContainer).empty();
            		$(imgsContainer).scrollTop(0);
            		scrollEnd=false;
            		load=0;
-           		count=d.values.length;
-           		if(count<=1000) load=count
-           		else load=1000
-              	currArray=d.values
+           		currArray=rows.filter(function(e){
+           			if(tagsArr.length)
+              		return langsArr.indexOf(e.lang)>=0 && tagsArr.indexOf(e.keyword)>=0
+              		else return langsArr.indexOf(e.lang)>=0
+              	})
+           		count=currArray.length;
+           		if(count<=paginate) load=count
+           		else load=paginate
+              	
               currArray.slice(0,load-1).forEach(function(e,i) {
                 $(imgsContainer).append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
-                if (!col) {
-                  $(".imgs img").hide();
-                }     
+                
               })
+              if (!col) {
+                  $(".imgs img").hide();
+                }
               
               $(".imgs").on("scroll",function(e){
-              	console.log($(this).scrollTop(), this.scrollHeight-800)
               	
               	if($(this).scrollTop()>=this.scrollHeight-800 && !scrollEnd) {
-              		console.log("here");
-              	if(count<=load+1000) {
+              		
+              	if(count<=load+paginate) {
               		scrollEnd=true;
-              		console.log("load until end",count)
+              		
               		currArray.splice(load,count-1).forEach(function(e,i) {
                 $(imgsContainer).append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
               		})
+              		if (!col) {
+                  $(".imgs img").hide();
+                }     
               		
               	}
               	
               	else{
-              		console.log("load next 500", count)
-              		currArray.slice(load,load+1000-1).forEach(function(e,i) {
+              		
+              		currArray.slice(load,load+paginate-1).forEach(function(e,i) {
                 $(imgsContainer).append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
               		})
-              		load+=1000;
+              		if (!col) {
+	                  $(".imgs img").hide();
+	                }     
+              		load+=paginate;
               		
               	}
               	}
@@ -1338,6 +1408,16 @@ angular.module('who.directives', [])
              
              function changeSize(n) {
                siz=n;
+               paginate=$(imgsContainer).width()*$(imgsContainer).height()/(siz*siz);
+               if($(".imgs").children.length<=paginate && currArray.length>=$(".imgs").children.length) {
+               		currArray.slice(load,load+paginate-1).forEach(function(e,i) {
+               		 $(imgsContainer).append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
+              		})
+              		if (!col) {
+	                  $(".imgs img").hide();
+	                }     
+              		load+=paginate;
+               }
                $(".img-cont").css("width",n+"px")
                $(".img-cont").css("height",n+"px")
              }

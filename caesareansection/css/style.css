@@ -1012,6 +1012,7 @@ h4.section{
 transition: height 2s;
 -webkit-transition: height 0.2s; /* Safari */
 }
+
 .googleimages .smallImg{
 	width:100%;
 	height:auto;
