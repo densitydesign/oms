@@ -57,6 +57,7 @@ angular.module('who.controllers', [])
       sgnafmax : $scope.sections.length-1,
       sgnafindex: 0
       }
+      
 
     angular.element($window).bind('resize',function(){
       $scope.utils.windowWidth = $window.outerWidth;

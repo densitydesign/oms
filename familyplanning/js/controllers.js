@@ -5,7 +5,6 @@
 angular.module('who.controllers', [])
   .controller('familyplanning', function($scope, $window, cfpLoadingBar) {
 
-
     $scope.loadingstart = function() {
       cfpLoadingBar.start();
     };
@@ -51,12 +50,13 @@ angular.module('who.controllers', [])
     }
 
     $scope.ctrlmodels = {
-      slopetfidf : 'dataTF',
-      slopescale : true,
-      treemaphierarchy : 'post',
-      treemapsort : 'author',
-      sgnafmax : $scope.sections.length-1,
-      sgnafindex: 0
+      "sgnafmax" : $scope.sections.length-1,
+      "sgnafindex": 0,
+      "fp_wiki_toc_fp":{
+          totalItems: 4,
+          currentStep: 1,
+          itemsPerPage: 1
+        },
       }
 
     angular.element($window).bind('resize',function(){
@@ -73,7 +73,7 @@ angular.module('who.controllers', [])
             paddingTop: '55px',
             paddingBottom: '55px',
             verticalCentered: false,
-            normalScrollElements: '#viz_googleimages .imgs',
+            normalScrollElements: '#viz_googleimages .imgs, #tocGraph',
             onLeave: function(index, direction){
 
                 $(".tt").remove();
@@ -98,21 +98,21 @@ angular.module('who.controllers', [])
 
 
                 if($scope.sections[index-1].step){
-                  $.fn.fullpage.setAllowScrolling(false);
-                  addMouseWheelHandler()
-                  addTouchHandler()
+                  //$.fn.fullpage.setAllowScrolling(false);
+                  //addMouseWheelHandler()
+                  //addTouchHandler()
 
-                  $(document).on('mouseout', 'div.proto',function () {
-                  $.fn.fullpage.setAllowScrolling(false);
-                  addMouseWheelHandler()
-                  addTouchHandler()
-                  });
+                  //$(document).on('mouseout', 'div.proto',function () {
+                  //$.fn.fullpage.setAllowScrolling(false);
+                  //addMouseWheelHandler()
+                  //addTouchHandler()
+                  //});
                   
-                  $(document).on('mouseover', 'div.proto',function () {
-                    $.fn.fullpage.setAllowScrolling(false);
-                   removeMouseWheelHandler()
-                   removeTouchHandler()
-                  });
+                  //$(document).on('mouseover', 'div.proto',function () {
+                    //$.fn.fullpage.setAllowScrolling(false);
+                   //removeMouseWheelHandler()
+                   //removeTouchHandler()
+                  //});
               }else{
 
                 $.fn.fullpage.setAllowScrolling(true);
@@ -131,7 +131,7 @@ angular.module('who.controllers', [])
         
         $scope.utils.scrollToSection = function(section){
           $.fn.fullpage.moveTo(section);
-          $scope.$emit('steplimit');
+          //$scope.$emit('steplimit');
           $('#main-index').animate({scrollTop: $('#main-index').scrollTop() + $('#nav_' + section).position().top}, 700);    
         }
 

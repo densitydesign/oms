@@ -39,15 +39,15 @@
 
         legend.enter().append('text')
               .attr("class", function(d){return d.name})
-              .attr("x", width)
+              .attr("x", 0)
               .attr("y", function(d){return d.y})
               .attr("dy", "0.8em")
               .attr("font-family", "Georgia, serif")
               .attr("font-size", "11pt")
               .attr("text-decoration",null)
               .text(function(d){return d.label.replace(/(<([^>]+)>)/ig,"")})
-              .transition()
-              .attr("x", 0)
+              //.transition()
+              //.attr("x", 0)
               .filter(function(d){
                 return d.type == "dead"
               })

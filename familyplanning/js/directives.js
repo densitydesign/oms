@@ -213,7 +213,7 @@ angular.module('who.directives', [])
       }
     };
   }])
-  .directive('vizStepToc',['fileService', '$timeout', function (fileService, $timeout) {
+  .directive('vizStepToc',['fileService', '$timeout','$compile', function (fileService, $timeout, $compile) {
     return {
       restrict: 'A',
       replace: true,
@@ -230,7 +230,8 @@ angular.module('who.directives', [])
           loaded = false;
 
         var containerViz = element.find("#tocGraph")[0],
-            containerLegend = element.find("#tocLegend")[0];
+            containerLegend = element.find("#tocLegend")[0],
+            containerPagination = element.find("#paginationStep")[0]
 
         var init = function(){
 
@@ -254,7 +255,7 @@ angular.module('who.directives', [])
               var dataLegend = d3.select("[transform='translate(0,0)']").data()[0].value.clusters
 
               chartLegend.datum(dataLegend).call(wikitoclegend)
-
+              
               loaded = true;
 
             },
@@ -279,35 +280,67 @@ angular.module('who.directives', [])
 
         var step = [
           {init: function(){
+            click = true
             var p = wikitoc.getPixel("2006-04-22T04:02:54Z")
             $(containerViz).animate( { scrollLeft: p }, 500, "swing")
             var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
             chartLegend.datum(dl).call(wikitoclegend)
+            click =false
             }
           },
           {init: function(){
+            click = true
             var p = wikitoc.getPixel("2007-01-12T04:11:59Z")
             $(containerViz).animate( { scrollLeft: p }, 500, "swing")
             var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
             chartLegend.datum(dl).call(wikitoclegend)
+            click =false
             }
           },
           {init: function(){
+            click = true
             var p = wikitoc.getPixel("2011-03-04T19:52:55Z")
             $(containerViz).animate( { scrollLeft: p }, 500, "swing")
             var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
             chartLegend.datum(dl).call(wikitoclegend)
+            click =false
             }
           },
           {init: function(){
+            click = true
             var p = wikitoc.getPixel("2006-04-22T04:02:54Z")
             $(containerViz).animate( { scrollLeft: p }, 500)
             var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
             chartLegend.datum(dl).call(wikitoclegend)
+            click =false
             }
           }
         ]
 
+        var loading = false,
+            click = false;
+        $(containerViz).scroll(function(){
+          if(!loading && !click){
+            var threshold = 10
+            for(var i = threshold; i >= 0; i--){
+              var p = $( containerViz ).scrollLeft() + i
+              var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0]
+              if(dl && !loading){
+                dl = dl.value.clusters;
+                loading = true
+                chartLegend.datum(dl).call(wikitoclegend)
+                loading = false
+                break;
+              }
+            }
+          }
+        })
+
+        scope.ctrlmodels[scope.section.id].totalItems = step.length
+        var pag = "<pagination previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
+        var e = angular.element(pag)
+        $(containerPagination).append(e)
+        $compile(e)(scope)
 
         //lazy loading
         scope.$watch('utils.section', function(newValue, oldValue){
@@ -319,36 +352,28 @@ angular.module('who.directives', [])
           }
         })
 
-        scope.$watch('ctrlmodels.slopetfidf', function(newValue, oldValue){
-            if (newValue !== oldValue){
-              chart.datum(dataslope[newValue]).call(slope.wordStep([]))
-            }
-        });
-
-        scope.$watch('ctrlmodels.slopescale', function(newValue, oldValue){
-            if (newValue !== oldValue){
-              slope.normalized(newValue)
-              chart.call(slope)
-            }
-        });
-
-
-        scope.$watch('utils.internalCounter',function(newValue, oldValue){
+        scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
-              if(newValue > oldValue){
-
-                counter++
-              }else{
-                counter--
-              }
-              if(step[counter]){
-                step[counter].init()
-              }else{
-                scope.$emit('steplimit')
-                counter = counter < 0 ? 0 : counter - 1;
-              }
+                step[newValue-1].init()
             }
         })
+
+        // scope.$watch('utils.internalCounter',function(newValue, oldValue){
+        //   if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+        //       if(newValue > oldValue){
+
+        //         counter++
+        //       }else{
+        //         counter--
+        //       }
+        //       if(step[counter]){
+        //         step[counter].init()
+        //       }else{
+        //         scope.$emit('steplimit')
+        //         counter = counter < 0 ? 0 : counter - 1;
+        //       }
+        //     }
+        // })
 
       }
     };
@@ -1019,23 +1044,30 @@ angular.module('who.directives', [])
           }
         );
 
-        scope.$watch('utils.internalCounter',function(newValue, oldValue){
+        // scope.$watch('utils.internalCounter',function(newValue, oldValue){
+        //   if(newValue !== oldValue && scope.utils.section === scope.section.id){
+
+        //     if(newValue > oldValue){
+
+        //       if(counter < 0){counter = 0}
+        //         counter++
+        //       }else{
+        //         if(counter >= limit){counter = counter -1}
+        //         counter--
+        //       }
+
+        //       if(element.children(".step" + (counter)).length){
+        //         element.animate({scrollTop: element.scrollTop() + element.children(".step" + (counter)).position().top}, 500);
+        //       }
+        //     }
+
+        // })
+        
+        scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id){
-
-            if(newValue > oldValue){
-
-              if(counter < 0){counter = 0}
-                counter++
-              }else{
-                if(counter >= limit){counter = counter -1}
-                counter--
-              }
-
-              if(element.children(".step" + (counter)).length){
-                element.animate({scrollTop: element.scrollTop() + element.children(".step" + (counter)).position().top}, 500);
-              }
+                //step[newValue-1].init()
+                element.animate({scrollTop: element.scrollTop() + element.children(".step" + (newValue-1)).position().top}, 500);
             }
-
         })
 
       }
