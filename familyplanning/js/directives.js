@@ -139,7 +139,7 @@ angular.module('who.directives', [])
       }
     };
   }])
-  .directive('vizStep',['fileService', '$timeout', function (fileService, $timeout) {
+  .directive('vizStep',['fileService', '$timeout', '$compile', function (fileService, $timeout, $compile) {
     return {
       restrict: 'A',
       replace: true,
@@ -150,7 +150,8 @@ angular.module('who.directives', [])
             loaded = false,
             chart,
             network,
-            container = element.find("#graph")[0];
+            container = element.find("#graph")[0],
+            containerPagination = element.find("#paginationStep")[0];
 
         var init = function(){
           fileService.getFile('data/' + scope.section.id + '/' + scope.section.id + '_graph.json').then(
@@ -158,13 +159,15 @@ angular.module('who.directives', [])
                 network = who.graph()
                   .sectionid(scope.section.id)
                   .on("steplimit", function(){
-                    scope.$emit('steplimit');
-                    counter  = counter < 0 ? 0 : (counter-1);
+                    //scope.$emit('steplimit');
+                    //counter  = counter < 0 ? 0 : (counter-1);
                   });
 
                 chart = d3.select(container);
 
                 chart.datum(data).call(network)
+
+                scope.ctrlmodels[scope.section.id].totalItems = network.step()
 
                 loaded = true;
               },
@@ -188,6 +191,13 @@ angular.module('who.directives', [])
             })
          }
 
+        
+        var pag = "<pagination max-size='ctrlmodels." + scope.section.id + ".maxItems' previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
+        var e = angular.element(pag)
+        $(containerPagination).append(e)
+        $compile(e)(scope)
+
+
         //lazy loading
         scope.$watch('utils.section', function(newValue, oldValue){
          if(newValue == scope.section.id && loaded === false){
@@ -198,17 +208,25 @@ angular.module('who.directives', [])
           }
         })
 
-        scope.$watch('utils.internalCounter',function(newValue, oldValue){
+        scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
-              if(newValue > oldValue){
-                counter++
-              }else{
-                counter--
-              }
-              network.internalView(counter)
-              chart.call(network)
+                //step[newValue-1].init()
+                network.internalView(newValue-1)
+                chart.call(network)
             }
         })
+
+        // scope.$watch('utils.internalCounter',function(newValue, oldValue){
+        //   if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+        //       if(newValue > oldValue){
+        //         counter++
+        //       }else{
+        //         counter--
+        //       }
+        //       network.internalView(counter)
+        //       chart.call(network)
+        //     }
+        // })
 
       }
     };
@@ -357,24 +375,6 @@ angular.module('who.directives', [])
                 step[newValue-1].init()
             }
         })
-
-        // scope.$watch('utils.internalCounter',function(newValue, oldValue){
-        //   if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
-        //       if(newValue > oldValue){
-
-        //         counter++
-        //       }else{
-        //         counter--
-        //       }
-        //       if(step[counter]){
-        //         step[counter].init()
-        //       }else{
-        //         scope.$emit('steplimit')
-        //         counter = counter < 0 ? 0 : counter - 1;
-        //       }
-        //     }
-        // })
-
       }
     };
   }])

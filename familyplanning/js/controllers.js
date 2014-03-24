@@ -24,11 +24,11 @@ angular.module('who.controllers', [])
 
     $scope.sections = [
       {id:"fp_intro",label:"Introduction to family planning", nav: true, step:false, template:"chapter-intro", protocol: false},
-      // {id:"fp_query_intro",label: "Building the corpus", nav: true, step:false, template:"sub-chapter", protocol: 'fp_web'},
-      // {id:"fp_query_network",label: "Building the corpus",nav: false,step:true, template:"viz-step", protocol: 'fp_web', legend:true},
+      {id:"fp_query_intro",label: "Building the corpus", nav: true, step:false, template:"sub-chapter", protocol: 'fp_web'},
+      //{id:"fp_query_network",label: "Building the corpus",nav: false,step:true, template:"viz-step", protocol: 'fp_web', legend:true},
       // {id:"fp_query_analytics",label: "Building the corpus",nav: false, step:false, template:"analytics", protocol: 'fp_web'},
-      // {id:"fp_crawl_intro", label:"Mapping the web", nav: true, step:false, template:"sub-chapter", protocol: 'fp_web'},
-      // {id:"fp_crawl_network", label:"Mapping the web", nav: false, step:true, template:"viz-step", protocol: 'fp_web', legend:true},
+      {id:"fp_crawl_intro", label:"Mapping the web", nav: true, step:false, template:"sub-chapter", protocol: 'fp_web'},
+      {id:"fp_crawl_network", label:"Mapping the web", nav: false, step:true, template:"viz-step", protocol: 'fp_web', legend:true},
       // {id:"fp_text_intro",label:"Seeing what they're saying",nav: true, step:false,template:"sub-chapter", protocol: 'fp_text'},
       // {id:"fp_text_slope",label:"Seeing what they're saying", nav: false, step:true, template:"viz-step-slope", protocol: 'fp_text'},  
       // {id:"fp_wiki_intro",label:"Reaching the consensus",nav: true, step:false,template:"sub-chapter", protocol: 'fp_wiki'},
@@ -56,6 +56,12 @@ angular.module('who.controllers', [])
           totalItems: 4,
           currentStep: 1,
           itemsPerPage: 1
+        },
+      "fp_crawl_network":{
+          totalItems: 4,
+          currentStep: 1,
+          itemsPerPage: 1,
+          maxItems: 5
         },
       }
 
