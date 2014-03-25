@@ -451,8 +451,16 @@ angular.module('who.directives', [])
       link: function postLink(scope, element, attrs) {
 		
 		$(document).on("click",".tt .glyphicon",function(e){
+			resetColor();
 			$(this).parent().remove();
 		})
+		
+		 function resetColor() {
+          	d3.selectAll(".treemap-sel").classed("treemap-sel","false")
+            .style("fill",function(d){
+            	return d.lang == 'it' || d.key == 'it' || d.parent.key == 'it' ? "#83A493" : '#D6C33B';
+            });
+          }
 		
         var counter = 0,
             dsv_egg = d3.dsv(";", "text/plain"),
@@ -546,7 +554,6 @@ angular.module('who.directives', [])
                   else
                     return "none"
                 }).style("opacity", 1).on("click", function(d) {
-                  console.log(d)
                 }).attr("class", function(d) {
                   return "lvl-" + d.depth
                 }).on('click', function(d) {
@@ -561,37 +568,42 @@ angular.module('who.directives', [])
 
                 createText(1);
 
-                // d3.selectAll("input").on("change", function change() {
-                //   var value = this.value === "count" ? function(d) {
-                //     return d.nb_authors;
-                //   } : function(d) {
-                //     return 1.00;
-                //   };
-
-                //   node.data(treemap.value(value).nodes).transition().duration(500).call(position);
-
-                //   d3.selectAll(".label-tree").transition().duration(500).attr("x", function(d) {
-                //     return d.x
-                //   }).attr("y", function(d) {
-                //     return d.y
-                //   })
-                // });
+           
               };
               
               function drawTt(d) {
                 var myx=0;
-                if(d3.event.pageX>width-250) myx = d3.event.pageX-260
-                else myx = d3.event.pageX;
+                var myy=0;
+             	console.log(d);
+                resetColor();
+                
+                d3.selectAll("rect").filter(function(e){ if (d.key) return e.key==d.key; else return e.title == d.title && d.nb_replies == e.nb_replies})
+               	.classed("treemap-sel","true")
+               	.style("fill",function(d){
+                	return d.lang == 'it' || d.key == 'it' || d.parent.key == 'it' ? "#718c7e" : '#bcab30';
+                });
+               	
+                if(d3.event.pageX>width-250) myx = d3.event.pageX-270
+                else myx = d3.event.pageX+10;
+                
+                /*if(d3.event.pageY>height-300) myy = d3.event.pageY-328
+                else myy = d3.event.pageY-28;*/
                 
                 tt.style("opacity", 1);
                 if(d.depth==1) {
-                  tt.html('<div class="tt"><span class="glyphicon glyphicon-remove"></span><div><b>Site language</b> <p>'+d.key+'</p> </div><div><b>Forum count</b> '+d.values.length+'</div></div>').style("left", (myx) + "px").style("top", (d3.event.pageY - 28) + "px");
+                	if(d3.event.pageY>height-50) myy = d3.event.pageY-70
+                	else myy = d3.event.pageY-28
+                  tt.html('<div class="tt"><span class="glyphicon glyphicon-remove"></span><div><b>Site language</b> <p>'+d.key+'</p> </div><div><b>Forum count</b> '+d.values.length+'</div></div>').style("left", (myx) + "px").style("top", myy + "px");
                 }
                 else if(d.depth==2) {
-                  tt.html('<div class="tt"><span class="glyphicon glyphicon-remove"></span><div><b>Forum title</b> <p>'+d.key+'</p></div><div><b>Post count</b> '+d.values.length+'</div></div>').style("left", (myx) + "px").style("top", (d3.event.pageY - 28) + "px");
+                	if(d3.event.pageY>height-50) myy = d3.event.pageY-70
+                	else myy = d3.event.pageY-28
+                  tt.html('<div class="tt"><span class="glyphicon glyphicon-remove"></span><div><b>Forum title</b> <p>'+d.key+'</p></div><div><b>Post count</b> '+d.values.length+'</div></div>').style("left", (myx) + "px").style("top", myy + "px");
                 }
                 else if(d.depth==3) {
-                  tt.html('<div class="tt"><span class="glyphicon glyphicon-remove"></span><div><b>Post title</b><p> '+d.title+'</p></div><div><b>Author</b><p>'+d.orig_author+'</p></div><div><b>Forum</b> <p>'+d.forum+'</p></div></div>').style("left", (myx) + "px").style("top", (d3.event.pageY - 28) + "px");
+                	if(d3.event.pageY>height-300) myy = d3.event.pageY-328
+                	else myy = d3.event.pageY-28
+                  tt.html('<div class="tt"><span class="glyphicon glyphicon-remove"></span><div><b>Post title</b><p> '+d.title+'</p></div><div><b>Author</b><p>'+d.orig_author+'</p></div><div><b>Forum</b> <p>'+d.forum+'</p></div><div><b>Replies</b> <p>'+d.nb_replies+'</p></div><div><b>Authors</b> <p>'+d.nb_authors+'</p></div><div><b>Post length</b> <p>'+d.post_length+' words</p></div></div>').style("left", (myx) + "px").style("top", myy + "px");
                 }
               }
               
@@ -606,9 +618,14 @@ angular.module('who.directives', [])
                   return Math.max(0, d.dy - 1);
                 });
               }
+              
+              
+              
 
               function setLvl(n) {
-
+				
+				resetColor();
+				
                 tt.style("opacity", 0);
                 l = n;
                 for ( var i = 0; i < 4; i++) {
@@ -732,7 +749,6 @@ angular.module('who.directives', [])
 
             btnaction = {
               language : function(){
-                console.log("ciao")
                     node.filter(function(d) {
                         return d.depth == 1
                       })/*.transition().duration(500)*/.style("opacity", 1)
