@@ -1230,7 +1230,7 @@ angular.module('who.directives', [])
           .style("fill","#222222")
           .text(function(d){return d.key})
               
-              loadWhole();
+              //loadWhole();
               
             }
 
@@ -1381,8 +1381,9 @@ angular.module('who.directives', [])
            		else load=paginate
               	
               currArray.slice(0,load-1).forEach(function(e,i) {
+              	setTimeout(function(){
                 $(imgsContainer).append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
-                
+               },200);
               })
               if (!col) {
                   $(".imgs img").hide();
@@ -1394,9 +1395,10 @@ angular.module('who.directives', [])
               		
               	if(count<=load+paginate) {
               		scrollEnd=true;
-              		
               		currArray.splice(load,count-1).forEach(function(e,i) {
+              			setTimeout(function(){
                 $(imgsContainer).append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
+              		},200);
               		})
               		if (!col) {
                   $(".imgs img").hide();
