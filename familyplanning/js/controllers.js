@@ -43,13 +43,13 @@ angular.module('who.controllers', [])
       {id:"fp_wiki_toc_intro",label:"Wikipedia TOC evolution",nav: true, step:false, template:"sub-chapter", protocol: 'fp_toc'},
       //{id:"fp_wiki_toc_bc",label:"Wikipedia TOC evolution",nav: false, step:true, template:"viz-step-toc", protocol: 'fp_toc', legend:true},
       {id:"fp_wiki_toc_fp",label:"Wikipedia TOC evolution",nav: false, step:true, template:"viz-step-toc", protocol: 'fp_toc', legend:true},
-      {id:"fp2_query_intro",label: "Building the corpus 2", nav: true, step:false, template:"sub-chapter", protocol: 'fp_web'},
+      //{id:"fp2_query_intro",label: "Building the corpus 2", nav: true, step:false, template:"sub-chapter", protocol: 'fp_web'},
       //{id:"fp2_query_network",label: "Building the corpus 2",nav: false,step:true, template:"viz-step", protocol: 'fp_web', legend:true},
-      {id:"fp2_crawl_intro", label:"Mapping the web 2", nav: true, step:false, template:"sub-chapter", protocol: 'fp_web'},
+      //{id:"fp2_crawl_intro", label:"Mapping the web 2", nav: true, step:false, template:"sub-chapter", protocol: 'fp_web'},
       //{id:"fp2_crawl_network", label:"Mapping the web 2", nav: false, step:true, template:"viz-step", protocol: 'fp_web', legend:true},
-      {id:"fp2_text_intro",label:"Seeing what they're saying 2",nav: true, step:false,template:"sub-chapter", protocol: 'fp_text'},
+      //{id:"fp2_text_intro",label:"Seeing what they're saying 2",nav: true, step:false,template:"sub-chapter", protocol: 'fp_text'},
       //{id:"fp2_text_slope",label:"Seeing what they're saying 2", nav: false, step:true, template:"viz-step-slope", protocol: 'fp_text'},
-      {id:"fp2_geo_intro",label:"The final map",nav: true, step:false,template:"sub-chapter", protocol: 'fp_text'},
+      //{id:"fp2_geo_intro",label:"The final map",nav: true, step:false,template:"sub-chapter", protocol: 'fp_text'},
       //{id:"fp2_geo_map",label:"The final map",nav: false, step:false,template:"sub-chapter", protocol: 'fp_text'},
       {id:"fp_outro",label:"Conclusion to family planning",nav: true, step:false, template:"sub-chapter", protocol: false}
     ]
