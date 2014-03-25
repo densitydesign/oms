@@ -378,7 +378,7 @@ angular.module('who.directives', [])
       }
     };
   }])
-  .directive('vizStepSlope',['fileService', '$timeout', function (fileService, $timeout) {
+  .directive('vizStepSlope',['fileService', '$timeout', '$compile', function (fileService, $timeout, $compile) {
     return {
       restrict: 'A',
       replace: true,
@@ -391,57 +391,58 @@ angular.module('who.directives', [])
           chart,
           loaded = false;
 
-        var container = element.find("#graph")[0];
+        var container = element.find("#graph")[0],
+            containerPagination = element.find("#paginationStep")[0]
 
         var filterTF = [
-          'baby',
-          'caesarean',
+          'pill',
           'woman',
-          'caesarean section',
-          'risk',
-          'mother',
-          'cesarean delivery',
-          'birth',
-          'delivery',
-          'doctor',
-          'hospital',
-          'sections',
-          'labour',
-          'incision',
-          'labor',
-          'surgery',
-          'birth vaginal',
+          'condom',
+          'method',
+          'contraception',
+          'birth control',
+          'child',
           'pregnancy',
-          'delivery vaginal',
-          'uterus'
+          'service',
+          'partner',
+          'baby',
+          'ovulation',
+          'study',
+          'information',
+          'sex',
+          'family',
+          'birth',
+          'access',
+          'couple',
+          'birth control pill'
         ];
 
         var filterIDF = [
-          'labour',
-          'delivery',
-          'range upper',
-          'amount patient pay',
-          'bill size',
-          'estimate',
-          'dynamic player',
-          'percent',
-          'caesarean section',
-          'birth labor',
-          'different experience',
-          'depth overview',
-          'birth section',
-          'hour labour',
-          'daunting experience',
-          'expectant mom',
-          'every woman',
-          'site',
-          'figure',
-          'scar section'
+          'contraception emergency',
+          'woman',
+          'child',
+          'sex',
+          'healthcare provider',
+          'access',
+          'brand',
+          'person',
+          'federation parenthood planned',
+          'problem',
+          'doctor',
+          'bad idea',
+          'clinic name',
+          'central greater jersey new northern',
+          'location number phone',
+          'australia western',
+          'student',
+          'family planning service',
+          'method two',
+          'demand'
         ]
 
         var init = function(){
 
-          fileService.getFile('data/' + scope.section.id + '/CS_tfidf.json').then(
+          fileService.getFile('data/' + scope.section.id + '/slope_tfidf.json').then(
             function(data){
               dataslope.dataTFIDF = data;
               dataslope.dataTFIDF.forEach(function(d){
@@ -459,13 +460,15 @@ angular.module('who.directives', [])
                     f['value'] = d3.round(f['value'],2)
                 })
               })
+
+              console.log(dataslope.dataTFIDF)
             },
             function(error){
               element.find('#graph').html(error)
             }
           );
 
-          fileService.getFile('data/' + scope.section.id + '/CS_tf.json').then(
+          fileService.getFile('data/' + scope.section.id + '/slope_tf.json').then(
             function(data){
               
               //scope.loadingcomplete()
@@ -505,7 +508,6 @@ angular.module('who.directives', [])
                       .attr("width", element.find("#graph").width())
                       .attr("height", element.find("#graph").height()-3)
 
-              
               chart.datum(dataslope.dataTF).call(slope)
 
               loaded = true;
@@ -537,12 +539,12 @@ angular.module('who.directives', [])
             }
           },
           {init: function(){
-            slope.showCat(["medical", "controversies", "experiences"])
+            slope.showCat(["C", "CRB", "CY", "M", "NFP"])
             chart.call(slope)
             }
           },
           {init: function(){
-            slope.showLines(true).wordStep(["risk", "incision"])
+            slope.showLines(true).wordStep(["sex", "child"])
             chart.call(slope)
             }
           },
@@ -552,17 +554,34 @@ angular.module('who.directives', [])
             }
           },
           {init: function(){
-            slope.showCat(["experiences", "vip"])
+            slope.showCat(["B1", "B2","B3","B4"])
             chart.call(slope)
             }
           },
           {init: function(){
-            slope.showCat(["medical", "controversies", "experiences"])
+            slope.showCat(["A10A","A10B","A10C","A10D","A10E"])
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope.showCat(["C", "CRB", "CY", "M", "NFP"])
             chart.call(slope)
             }
           }
         ]
 
+        var slopeCat = {
+          "C" : ["A13A","A13B","A13C","A13D","A13E","A13F","A13G","A13H"],
+          "CRB": ["A10A","A10B","A10C","A10D","A10E"], 
+          "CY": ["A13A","A13B","A13C","A13D","A13E","A13F","A13G","A13H"],
+          "M": ["B1", "B2","B3","B4"]
+        }
+
+        scope.ctrlmodels[scope.section.id].totalItems = step.length
+        var pag = "<pagination previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
+        var e = angular.element(pag)
+        $(containerPagination).append(e)
+        $compile(e)(scope)
 
         //lazy loading
         scope.$watch('utils.section', function(newValue, oldValue){
@@ -587,23 +606,25 @@ angular.module('who.directives', [])
             }
         });
 
-
-        scope.$watch('utils.internalCounter',function(newValue, oldValue){
-          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
-              if(newValue > oldValue){
-
-                counter++
-              }else{
-                counter--
+        scope.$watch('ctrlmodels.slopeexpand', function(newValue, oldValue){
+            if (newValue !== oldValue){
+              if(newValue != "all"){
+                slope.showCat(slopeCat[newValue])
+                chart.call(slope)
               }
-              if(step[counter]){
-                step[counter].init()
-              }else{
-                scope.$emit('steplimit')
-                counter = counter < 0 ? 0 : counter - 1;
+              else{
+                slope.showCat(["C", "CRB", "CY", "M", "NFP"])
+                chart.call(slope)               
               }
             }
+        });
+
+        scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+                step[newValue-1].init()
+            }
         })
+
 
       }
     };
@@ -1124,22 +1145,22 @@ angular.module('who.directives', [])
               element.find("#query").height(queryHeight-2)
 
            var init = function(){
-            fileService.getFile('data/' + scope.section.id + '/cs_analytics.csv').then(
+            fileService.getFile('data/' + scope.section.id + '/fp_analytics.csv').then(
               function(data){
-                csv = d3.csv.parse(data);
+                csv = d3.tsv.parse(data);
                 // Create the crossfilter for the relevant dimensions and groups.
                 var category = crossfilter(csv),
                 all = category.groupAll(),
-                host = category.dimension(function(d) { return d.HOST; }),
-                hosts = host.group(),
+                // host = category.dimension(function(d) { return d.HOST; }),
+                // hosts = host.group(),
                 query = category.dimension(function(d) { return d.QUERY; }),
                 queries = query.group(),
                 tag = category.dimension(function(d) { return d.TAG; }),
                 tags = tag.group(),
                 tld = category.dimension(function(d) { return d.TLD; }),
-                tlds = tld.group(),
-                url = category.dimension(function(d) { return d.URL; }),
-                urls = tld.group();
+                tlds = tld.group()
+                // url = category.dimension(function(d) { return d.URL; }),
+                // urls = tld.group();
 
                 tagChart = who.barChart()
                         //.xMax(tags.top(1)[0].value)

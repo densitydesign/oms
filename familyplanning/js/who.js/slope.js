@@ -154,6 +154,7 @@
 					.attr('opacity', 1)
 					.attr('x', function(d){return x(d) + (x.rangeBand()/2)})
 
+
 			stepTitles.exit()
 				.transition()
 				.duration(transitionDuration)
