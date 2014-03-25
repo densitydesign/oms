@@ -171,6 +171,21 @@ h4.section{
 	line-height: 10%;
 }
 
+
+ul {
+	padding: 0px;
+	margin: 0px;
+	font-size:1.4em;
+	line-height: 170%;
+	font-family:Georgia;
+}
+
+ul li {
+	background-position: 0px 0px; 
+	padding-left:2px; 
+	padding-top: 3px;
+}
+
 .adv-step h3{
 	text-align:left;
 	font-family: 'Montserrat', sans-serif;
@@ -255,13 +270,20 @@ h4.section{
 	font-size:1em;
 	color:#222222;
 	line-height: 170%;
-	margin-left: 0;
+	margin-left: 12px;
 	padding: 0;
-	list-style: none;
-
+	margin-bottom: 10px;
 }
 
 .proto-content .reference{
+	z-index:2;
+	font-family:Georgia;
+	font-size:1em;
+	color:#222222;
+	line-height: 170%;
+}
+
+.proto-content .bold{
 	z-index:2;
 	font-family:Georgia;
 	font-size:1em;
@@ -440,9 +462,10 @@ h4.section{
 .navbar-collapse a{
 	text-align:center;
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;
+	font-weight: 400;
 	text-transform: uppercase;
 	color:#222222 !important;
+	font-size: 0.8em;
 }
 
 .navbar-collapse a:hover{
@@ -505,7 +528,7 @@ h4.section{
 
 .overlay ul li a {
 	color: #fff;
-	font-size:2em;
+	font-size:1.5em;
 	text-align:center;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
@@ -568,7 +591,6 @@ h4.section{
 .side-panel{
 	border-right:1px solid #CCCCCC;
 	height:100%;
-
 }
 
 .adv-step{
@@ -600,6 +622,9 @@ h4.section{
 #graph{
 	height:100% ;
 }
+
+
+
 
 /* Protocol */
 
@@ -1207,7 +1232,6 @@ transition: height 2s;
 }
 
 
-
 /*Toggles*/
 
 .legend-controls .btn-group {
@@ -1223,6 +1247,26 @@ transition: height 2s;
 	outline: none;
 	margin-bottom: 20px;
 }
+
+#paginationStep .pagination-sm{
+	margin-left: 12px;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 1px;
+	
+}
+
+/*pagination*/
+
+.pagination > li > a{
+	color:#000;
+}
+
+.pagination > .active > a{
+	color:#fff;
+	background-color: #cbccce;
+	border: solid 1px #cbccce;
+}
+
 
 /*Checkboxes*/
 #custom .checkbox label{
