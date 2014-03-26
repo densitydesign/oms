@@ -2135,6 +2135,51 @@ angular.module('who.directives', [])
       }
       }
      }])
+     
+      .directive('wikiEdits',['fileService', '$timeout', '$compile', function (fileService, $timeout, $compile) {
+    return {
+      restrict: 'A',
+      replace: true,
+      templateUrl: 'partials/stacked.html',
+      link: function postLink(scope, element, attrs) {
+      
+      	var bc = d3.select("#birthcontrol");
+		var bcdata;
+			
+		var bcChart = who.chart()
+		.w($("#birthcontrol").width())
+		.h($("#birthcontrol").height());
+		
+		d3.tsv('data/' + scope.section.id + '/birtcontrol.csv',function(error, data) {	
+			bcdata=data;
+			bc.datum(bcdata).call(bcChart)	
+		});
+		
+		
+		var fp = d3.select("#familyplanning");
+		var fpdata;
+		
+		var fpChart = who.chart()
+		.w($("#familyplanning").width())
+		.h($("#familyplanning").height());
+		
+		d3.tsv('data/' + scope.section.id + '/familyplanning.csv',function(error, data) {
+			fpdata=data;
+			fp.datum(fpdata).call(fpChart)
+		});
+		
+		
+		$('input').on("change", function() {
+		
+			v=$( "input:radio:checked" ).val()
+			fpChart.change(v);
+			bcChart.change(v);
+		});
+      
+      }
+      
+     }
+     }])
   
   .directive('navBar',[ 'fileService', '$timeout', function (fileService, $timeout){
     return {

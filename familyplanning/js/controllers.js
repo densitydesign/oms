@@ -35,7 +35,7 @@ angular.module('who.controllers', [])
       //{id:"fp_wiki_network_intro",label:"Family Planning and its sisters",nav: true, step:false,template:"sub-chapter", protocol: 'fp_wiki'},
       //{id:"fp_wiki_network_fp",label: "Family Planning and its sisters",nav: false,step:true, template:"viz-step", protocol: 'fp_web', legend:true},
       //{id:"fp_wiki_edits_intro",label:"The geology of Wikipedia", nav: true, step:false, template:"sub-chapter", protocol: 'fp_wiki'},
-      //{id:"fp_wiki_edits_stacked",label:"The geology of Wikipedia", nav: false, step:false, template:"sub-chapter", protocol: 'fp_wiki'},
+      {id:"fp_wiki_edits_stacked",label:"The geology of Wikipedia", nav: true, step:false, template:"wiki_edits", protocol: 'fp_wiki'},
       //{id:"fp_wiki_users_intro",label:"Many authors, many conflicts",nav: true,step:false, template:"sub-chapter", protocol: 'fp_forum'},
       //{id:"fp_wiki_users_pie",label:"Many authors, many conflicts", nav: false, step:false, template:"sub-chapter", protocol: 'fp_wiki'},
       //{id:"fp_wiki_anon_intro",label:"Hidden behind an IP address",nav: true, step:false, template:"sub-chapter", protocol: 'fp_toc'},
