@@ -239,8 +239,6 @@ angular.module('who.directives', [])
       link: function postLink(scope, element, attrs) {
 
         var counter = 0,
-          dataslope = {},
-          slope,
           chart,
           chartLegend,
           wikitoc,
@@ -618,6 +616,247 @@ angular.module('who.directives', [])
               }
             }
         });
+
+        scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+                step[newValue-1].init()
+            }
+        })
+
+
+      }
+    };
+  }])
+  .directive('vizStepSlopeTwo',['fileService', '$timeout', '$compile', function (fileService, $timeout, $compile) {
+    return {
+      restrict: 'A',
+      replace: true,
+      templateUrl: 'partials/vizstep.html',
+      link: function postLink(scope, element, attrs) {
+
+        var counter = 0,
+          dataslope = {},
+          slope,
+          chart,
+          loaded = false;
+
+        var container = element.find("#graph")[0],
+            containerPagination = element.find("#paginationStep")[0]
+
+        var filterTF = [
+              "abortion",
+              "access",
+              "adoption marriage service",
+              "application",
+              "bomb population",
+              "change climate",
+              "child",
+              "city mexico policy",
+              "colombia",
+              "conference",
+              "contraception",
+              "control population",
+              "cost",
+              "country",
+              "disney",
+              "effort",
+              "ehrlich paul",
+              "equity",
+              "family",
+              "family london planning summit"
+        ];
+
+        var filterIDF = [
+            "access",
+            "misuse possible situation",
+            "archive",
+            "family planning",
+            "government policy relevant",
+            "enable",
+            "adoption marriage service",
+            "crucial importance",
+            "World Youth Alliance Research and Policy Specialist",
+            "pregnancy",
+            "accurate interpretation",
+            "club sierra",
+            "grizzle meghan",
+            "information personal",
+            "abstention",
+            "adaptation agenda",
+            "program",
+            "annual conference",
+            "ehrlich paul",
+            "spectacularly wrong"
+        ]
+
+        var init = function(){
+
+          fileService.getFile('data/' + scope.section.id + '/slope_tfidf.json').then(
+            function(data){
+              dataslope.dataTFIDF = data;
+              dataslope.dataTFIDF.forEach(function(d){
+
+                d.values = d.values.filter(function(f){
+                  var check = filterIDF.indexOf(f['key']);
+                  return check >= 0
+                })
+
+                d.values.sort(function(a, b) {
+                    return b['value'] -a['value'] ;
+                });
+
+                  d.values.forEach(function(f){
+                    f['value'] = d3.round(f['value'],2)
+                })
+              })
+
+              console.log(dataslope.dataTFIDF)
+            },
+            function(error){
+              element.find('#graph').html(error)
+            }
+          );
+
+          fileService.getFile('data/' + scope.section.id + '/slope_tf.json').then(
+            function(data){
+              
+              //scope.loadingcomplete()
+
+              dataslope.dataTF = data;
+              dataslope.dataTF.forEach(function(d){
+
+                d.values = d.values.filter(function(f){
+                  var check = filterTF.indexOf(f['key']);
+                  return check >= 0
+                })
+
+                d.values.sort(function(a, b) {
+                    return b['value'] -a['value'] ;
+                });
+
+                  d.values.forEach(function(f){
+                    f['value'] = d3.round(f['value'],2)
+                })
+              })
+
+              slope = who.slopeChart()
+                .graphHeight(element.find("#graph").height()-3)
+                .graphWidth(element.find("#graph").width())
+                .on("clicked", function(d){
+                  var words = slope.wordStep();
+                  if(words.indexOf(d) < 0){
+                    slope.wordStep([d])
+                    chart.call(slope)
+                  }else {
+                    slope.wordStep([])
+                    chart.call(slope)                    
+                  }
+                })
+
+              chart = d3.select(container).append("svg")
+                      .attr("width", element.find("#graph").width())
+                      .attr("height", element.find("#graph").height()-3)
+
+              chart.datum(dataslope.dataTF).call(slope)
+
+              loaded = true;
+
+            },
+            function(error){
+              element.find('#graph').html(error)
+            }
+          );
+        };
+
+        if (scope.$parent.$last === true) {
+                  scope.$emit('docReady');
+                  $timeout(function () {
+                       //init()
+                  });
+        }
+        else {
+           $timeout(function (){
+              //init();
+          })
+
+         }
+
+        var step = [
+          {init: function(){
+            slope.showCat(false).showLines(false)
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope.showCat(["advocacy", "community issues", "contraception issues"])
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope.showLines(true).wordStep(["country", "contraception issues"])
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope.showLines(true).wordStep([])
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope.showCat(["advocacy", "community issues", "contraception issues"])
+            chart.call(slope)
+            }
+          }
+        ]
+
+        var slopeCat = {
+          "C" : ["A13A","A13B","A13C","A13D","A13E","A13F","A13G","A13H"],
+          "CRB": ["A10A","A10B","A10C","A10D","A10E"], 
+          "CY": ["A13A","A13B","A13C","A13D","A13E","A13F","A13G","A13H"],
+          "M": ["B1", "B2","B3","B4"]
+        }
+
+        scope.ctrlmodels[scope.section.id].totalItems = step.length
+        var pag = "<pagination previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
+        var e = angular.element(pag)
+        $(containerPagination).append(e)
+        $compile(e)(scope)
+
+        //lazy loading
+        scope.$watch('utils.section', function(newValue, oldValue){
+         if(newValue == scope.section.id && loaded === false){
+           $timeout(function (){
+            //scope.loadingstart()
+            init()
+            });
+          }
+        })
+
+        scope.$watch('ctrlmodels.slopetfidf', function(newValue, oldValue){
+            if (newValue !== oldValue){
+              chart.datum(dataslope[newValue]).call(slope.wordStep([]))
+            }
+        });
+
+        scope.$watch('ctrlmodels.slopescale', function(newValue, oldValue){
+            if (newValue !== oldValue){
+              slope.normalized(newValue)
+              chart.call(slope)
+            }
+        });
+
+        // scope.$watch('ctrlmodels.slopeexpand', function(newValue, oldValue){
+        //     if (newValue !== oldValue){
+        //       if(newValue != "all"){
+        //         slope.showCat(slopeCat[newValue])
+        //         chart.call(slope)
+        //       }
+        //       else{
+        //         slope.showCat(["C", "CRB", "CY", "M", "NFP"])
+        //         chart.call(slope)               
+        //       }
+        //     }
+        // });
 
         scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){

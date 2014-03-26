@@ -31,24 +31,24 @@ angular.module('who.controllers', [])
       {id:"fp_crawl_network", label:"Mapping the web", nav: false, step:true, template:"viz-step", protocol: 'fp_web', legend:true},
       {id:"fp_text_intro",label:"Seeing what they're saying",nav: true, step:false,template:"sub-chapter", protocol: 'fp_text'},
       {id:"fp_text_slope",label:"Seeing what they're saying", nav: false, step:true, template:"viz-step-slope", protocol: 'fp_text'},  
-      {id:"fp_wiki_intro",label:"Reaching the consensus on Wikipedia",nav: true, step:false,template:"sub-chapter", protocol: 'fp_wiki'},
-      {id:"fp_wiki_network_intro",label:"Family Planning and its sisters",nav: true, step:false,template:"sub-chapter", protocol: 'fp_wiki'},
+      //{id:"fp_wiki_intro",label:"Reaching the consensus on Wikipedia",nav: true, step:false,template:"sub-chapter", protocol: 'fp_wiki'},
+      //{id:"fp_wiki_network_intro",label:"Family Planning and its sisters",nav: true, step:false,template:"sub-chapter", protocol: 'fp_wiki'},
       //{id:"fp_wiki_network_fp",label: "Family Planning and its sisters",nav: false,step:true, template:"viz-step", protocol: 'fp_web', legend:true},
-      {id:"fp_wiki_edits_intro",label:"The geology of Wikipedia", nav: true, step:false, template:"sub-chapter", protocol: 'fp_wiki'},
+      //{id:"fp_wiki_edits_intro",label:"The geology of Wikipedia", nav: true, step:false, template:"sub-chapter", protocol: 'fp_wiki'},
       //{id:"fp_wiki_edits_stacked",label:"The geology of Wikipedia", nav: false, step:false, template:"sub-chapter", protocol: 'fp_wiki'},
-      {id:"fp_wiki_users_intro",label:"Many authors, many conflicts",nav: true,step:false, template:"sub-chapter", protocol: 'fp_forum'},
+      //{id:"fp_wiki_users_intro",label:"Many authors, many conflicts",nav: true,step:false, template:"sub-chapter", protocol: 'fp_forum'},
       //{id:"fp_wiki_users_pie",label:"Many authors, many conflicts", nav: false, step:false, template:"sub-chapter", protocol: 'fp_wiki'},
-      {id:"fp_wiki_anon_intro",label:"Hidden behind an IP address",nav: true, step:false, template:"sub-chapter", protocol: 'fp_toc'},
+      //{id:"fp_wiki_anon_intro",label:"Hidden behind an IP address",nav: true, step:false, template:"sub-chapter", protocol: 'fp_toc'},
       //{id:"fp_wiki_anon_map",label:"Hidden behind an IP address",nav: true, step:false, template:"sub-chapter", protocol: 'fp_toc'},
       {id:"fp_wiki_toc_intro",label:"Wikipedia TOC evolution",nav: true, step:false, template:"sub-chapter", protocol: 'fp_toc'},
       //{id:"fp_wiki_toc_bc",label:"Wikipedia TOC evolution",nav: false, step:true, template:"viz-step-toc", protocol: 'fp_toc', legend:true},
       {id:"fp_wiki_toc_fp",label:"Wikipedia TOC evolution",nav: false, step:true, template:"viz-step-toc", protocol: 'fp_toc', legend:true},
-      //{id:"fp2_query_intro",label: "Building the corpus 2", nav: true, step:false, template:"sub-chapter", protocol: 'fp_web'},
-      //{id:"fp2_query_network",label: "Building the corpus 2",nav: false,step:true, template:"viz-step", protocol: 'fp_web', legend:true},
-      //{id:"fp2_crawl_intro", label:"Mapping the web 2", nav: true, step:false, template:"sub-chapter", protocol: 'fp_web'},
-      //{id:"fp2_crawl_network", label:"Mapping the web 2", nav: false, step:true, template:"viz-step", protocol: 'fp_web', legend:true},
-      //{id:"fp2_text_intro",label:"Seeing what they're saying 2",nav: true, step:false,template:"sub-chapter", protocol: 'fp_text'},
-      //{id:"fp2_text_slope",label:"Seeing what they're saying 2", nav: false, step:true, template:"viz-step-slope", protocol: 'fp_text'},
+      {id:"fp2_query_intro",label: "Building the corpus 2", nav: true, step:false, template:"sub-chapter", protocol: 'fp_web'},
+      {id:"fp2_query_network",label: "Building the corpus 2",nav: false,step:true, template:"viz-step", protocol: 'fp_web', legend:true},
+      {id:"fp2_crawl_intro", label:"Mapping the web 2", nav: true, step:false, template:"sub-chapter", protocol: 'fp_web'},
+      {id:"fp2_crawl_network", label:"Mapping the web 2", nav: false, step:true, template:"viz-step", protocol: 'fp_web', legend:true},
+      {id:"fp2_text_intro",label:"Seeing what they're saying 2",nav: true, step:false,template:"sub-chapter", protocol: 'fp_text'},
+      {id:"fp2_text_slope",label:"Seeing what they're saying 2", nav: false, step:true, template:"viz-step-slope-two", protocol: 'fp_text'},
       //{id:"fp2_geo_intro",label:"The final map",nav: true, step:false,template:"sub-chapter", protocol: 'fp_text'},
       //{id:"fp2_geo_map",label:"The final map",nav: false, step:false,template:"sub-chapter", protocol: 'fp_text'},
       {id:"fp_outro",label:"Conclusion to family planning",nav: true, step:false, template:"sub-chapter", protocol: false}
@@ -90,7 +90,25 @@ angular.module('who.controllers', [])
           currentStep: 1,
           itemsPerPage: 1,
           maxItems: 5
-        }
+        },
+        "fp2_crawl_network":{
+          totalItems: 5,
+          currentStep: 1,
+          itemsPerPage: 1,
+          maxItems: 5
+        },
+        "fp2_query_network":{
+          totalItems: 5,
+          currentStep: 1,
+          itemsPerPage: 1,
+          maxItems: 5
+        },
+        "fp2_text_slope":{
+          totalItems: 5,
+          currentStep: 1,
+          itemsPerPage: 1,
+          maxItems: 5
+        },
       }
 
     angular.element($window).bind('resize',function(){
