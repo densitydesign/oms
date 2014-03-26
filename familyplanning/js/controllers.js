@@ -32,12 +32,11 @@ angular.module('who.controllers', [])
       {id:"fp_text_intro",label:"Seeing what they're saying",nav: true, step:false,template:"sub-chapter", protocol: 'fp_text'},
       {id:"fp_text_slope",label:"Seeing what they're saying", nav: false, step:true, template:"viz-step-slope", protocol: 'fp_text'},  
       //{id:"fp_wiki_intro",label:"Reaching the consensus on Wikipedia",nav: true, step:false,template:"sub-chapter", protocol: 'fp_wiki'},
-      //{id:"fp_wiki_network_intro",label:"Family Planning and its sisters",nav: true, step:false,template:"sub-chapter", protocol: 'fp_wiki'},
-      //{id:"fp_wiki_network_fp",label: "Family Planning and its sisters",nav: false,step:true, template:"viz-step", protocol: 'fp_web', legend:true},
+      {id:"fp_wiki_network_intro",label:"Family Planning and its sisters",nav: true, step:false,template:"sub-chapter", protocol: 'fp_wiki'},
+      {id:"fp_wiki_network_fp",label: "Family Planning and its sisters",nav: false,step:true, template:"viz-step", protocol: 'fp_web', legend:true},
       //{id:"fp_wiki_edits_intro",label:"The geology of Wikipedia", nav: true, step:false, template:"sub-chapter", protocol: 'fp_wiki'},
       //{id:"fp_wiki_edits_stacked",label:"The geology of Wikipedia", nav: false, step:false, template:"sub-chapter", protocol: 'fp_wiki'},
       //{id:"fp_wiki_users_intro",label:"Many authors, many conflicts",nav: true,step:false, template:"sub-chapter", protocol: 'fp_forum'},
-      //{id:"fp_wiki_users_pie",label:"Many authors, many conflicts", nav: false, step:false, template:"sub-chapter", protocol: 'fp_wiki'},
       //{id:"fp_wiki_anon_intro",label:"Hidden behind an IP address",nav: true, step:false, template:"sub-chapter", protocol: 'fp_toc'},
       //{id:"fp_wiki_anon_map",label:"Hidden behind an IP address",nav: true, step:false, template:"sub-chapter", protocol: 'fp_toc'},
       {id:"fp_wiki_toc_intro",label:"Wikipedia TOC evolution",nav: true, step:false, template:"sub-chapter", protocol: 'fp_toc'},
@@ -91,6 +90,12 @@ angular.module('who.controllers', [])
           itemsPerPage: 1,
           maxItems: 5
         },
+        "fp_wiki_network_fp":{
+          totalItems: 5,
+          currentStep: 1,
+          itemsPerPage: 1,
+          maxItems: 5
+        },
         "fp2_crawl_network":{
           totalItems: 5,
           currentStep: 1,
@@ -108,7 +113,7 @@ angular.module('who.controllers', [])
           currentStep: 1,
           itemsPerPage: 1,
           maxItems: 5
-        },
+        }
       }
 
     angular.element($window).bind('resize',function(){

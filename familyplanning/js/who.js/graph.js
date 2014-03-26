@@ -2964,7 +2964,552 @@ var networkconfig = {
           }
         }
       ]
-  }
+  },
+   "fp_wiki_network_fp":{
+    "_options": {
+        innerCircleCount: 0,
+        innerRadius: 1500,
+        outerRadius: 2000,
+        duration: 500,
+        action: 0,
+        ratio: 4  
+      },
+    "settings": {
+          edgeColor: 'default',
+          defaultEdgeColor: 'rgba(17, 17, 17, 0.1)',
+          rescaleIgnoreSize: true,
+          enableHovering: false,
+          mouseEnabled : false,
+          touchEnabled : false,
+          sideMargin: 50,
+          clone: false,
+          immutable: false,
+          minNodeSize: 0,
+          maxNodeSize: 0,
+          borderColor: "#fff",
+          font: 'Montserrat',
+          zoomMax: 1
+        },
+    "parserURL": null,
+    "queryPosScale": null,
+    "parserFnc": function(graph) {
+
+        var sizeAttributes = [],
+            editorsAttributes = [];
+        // Save the original data:
+        graph.nodes.forEach(function(n) {
+          n.file_label = n.id;
+          n.file_color = n.color;
+          n.file_size = n.size;
+          n.file_x = n.x;
+          n.file_y = n.y;
+          n.type = 'who';
+
+          n.size = 3;
+
+          sizeAttributes.push(+n.attributes["Size"])
+          editorsAttributes.push(+n.attributes["editors"])
+          delete n.label;
+
+        });
+
+
+        sizeAttributes.sort()
+        editorsAttributes.sort()
+        var sizeScale = d3.scale.linear().domain(d3.extent(sizeAttributes)).range([5,100])
+        var editorsScale = d3.scale.linear().domain(d3.extent(editorsAttributes)).range([5,100])
+
+        graph.nodes.forEach(function(n) {
+          n.attributes["Size"] = sizeScale(+n.attributes["Size"])
+          n.attributes["editors"] = editorsScale(+n.attributes["editors"])
+        });
+
+        _graph = graph;
+        _dbGraph = (new sigma.classes.graph(_s.settings)).read(_graph);
+
+
+        // Read graph:
+        _s.graph.read(_graph);
+
+        // Apply first action:
+        applyView(0);
+      },
+  "_views": [
+        {
+          init: function() {
+            _s.unbind("clickNode");
+            _s.graph.nodes().forEach(function(node, i, a) {
+
+
+                node.labelAdjust = false;
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                node.target_color = node.file_color;
+                node.target_size = 3;
+                if(_s.graph.degree(node.id, "out") > 3){
+                    node.label = node.id
+                  }
+                else{
+                  delete node.label
+                }
+
+            });
+
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = "rgba(17, 17, 17, 0.1)"
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          settings: {
+            drawEdges: true,
+            labelThreshold: 1,
+            enableCamera: false,
+            mouseEnabled : false,
+            touchEnabled : false
+          },
+          animation: {
+            color: "target_color",
+            size: "target_size",
+            x: "target_x",
+            y: "target_y",
+            camera: {
+              x: 0,
+              y: 0,
+              ratio: 1,
+              angle: 0
+            }
+          }
+        },
+        {
+          init: function() {
+            _s.unbind("clickNode");
+            _s.graph.nodes().forEach(function(node, i, a) {
+
+              if (node.attributes["political_cluster"] == "true") {
+                node.target_color = goodColors.E;
+                node.label = node.id
+              } else {
+                node.target_color = "#AAA"; 
+                delete node.label
+              }
+
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                node.target_size = 3;
+
+            });
+
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = "rgba(17, 17, 17, 0.1)"
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          settings: {
+            drawEdges: true,
+            labelThreshold: 1,
+            enableCamera: false,
+            mouseEnabled : false,
+            touchEnabled : false
+          },
+          animation: {
+            color: "target_color",
+            size: "target_size",
+            x: "target_x",
+            y: "target_y",
+            camera: function(n) {
+              return n.attributes["political_cluster"] === 'true';
+            }
+          }
+        },
+        {
+          init: function() {
+            _s.unbind("clickNode");
+            _s.graph.nodes().forEach(function(node, i, a) {
+
+              if (node.attributes["ethical_cluster"] == "true") {
+                node.target_color = goodColors.E;
+                node.label = node.id
+              } else {
+                node.target_color = "#AAA"; 
+                delete node.label
+              }
+
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                node.target_size = 3;
+
+            });
+
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = "rgba(17, 17, 17, 0.1)"
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          settings: {
+            drawEdges: true,
+            labelThreshold: 1,
+            enableCamera: false,
+            mouseEnabled : false,
+            touchEnabled : false
+          },
+          animation: {
+            color: "target_color",
+            size: "target_size",
+            x: "target_x",
+            y: "target_y",
+            camera: function(n) {
+              return n.attributes["ethical_cluster"] === 'true';
+            }
+          }
+        },
+        {
+          init: function() {
+            _s.unbind("clickNode");
+            _s.graph.nodes().forEach(function(node, i, a) {
+
+              if (node.attributes["technical_cluster"] == "true") {
+                node.target_color = goodColors.E;
+                node.label = node.id
+              } else {
+                node.target_color = "#AAA"; 
+                delete node.label
+              }
+
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                node.target_size = 3;
+
+            });
+
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = "rgba(17, 17, 17, 0.1)"
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          settings: {
+            drawEdges: true,
+            labelThreshold: 1,
+            enableCamera: false,
+            mouseEnabled : false,
+            touchEnabled : false
+          },
+          animation: {
+            color: "target_color",
+            size: "target_size",
+            x: "target_x",
+            y: "target_y",
+            camera: function(n) {
+              return n.attributes["technical_cluster"] === 'true';
+            }
+          }
+        },
+        {
+          init: function() {
+            _s.unbind("clickNode");
+            _s.graph.nodes().forEach(function(node, i, a) {
+
+                node.labelAdjust = false;
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                node.target_color = node.file_color;
+                node.target_size = node.attributes["Size"] /_options.ratio;
+                
+                if(_s.graph.degree(node.id, "out") > 3){
+                    node.label = node.id
+                  }
+                else{
+                  delete node.label
+                }
+
+            });
+
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = "rgba(17, 17, 17, 0.1)"
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          settings: {
+            drawEdges: true,
+            labelThreshold: 1,
+            enableCamera: false,
+            mouseEnabled : false,
+            touchEnabled : false
+          },
+          animation: {
+            color: "target_color",
+            size: "target_size",
+            x: "target_x",
+            y: "target_y",
+            camera: {
+              x: 0,
+              y: 0,
+              ratio: 1,
+              angle: 0
+            }
+          }
+        },
+       {
+          init: function() {
+            _s.unbind("clickNode");
+            _s.graph.nodes().forEach(function(node, i, a) {
+
+                node.labelAdjust = false;
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                node.target_color = node.file_color;
+                node.target_size = node.attributes["editors"] /_options.ratio;
+                
+                if(_s.graph.degree(node.id, "out") > 3){
+                    node.label = node.id
+                  }
+                else{
+                  delete node.label
+                }
+
+            });
+
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = "rgba(17, 17, 17, 0.1)"
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          settings: {
+            drawEdges: true,
+            labelThreshold: 1,
+            enableCamera: false,
+            mouseEnabled : false,
+            touchEnabled : false
+          },
+          animation: {
+            color: "target_color",
+            size: "target_size",
+            x: "target_x",
+            y: "target_y",
+            camera: {
+              x: 0,
+              y: 0,
+              ratio: 1,
+              angle: 0
+            }
+          }
+        },
+       {
+          init: function() {
+            var colorScale = d3.scale.linear().domain([0,100]).range(["#f1eef6", "#045a8d"])
+            _s.unbind("clickNode");
+            _s.graph.nodes().forEach(function(node, i, a) {
+
+                node.labelAdjust = false;
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                node.target_color = colorScale(+node.attributes["Similarity_FP_classes"]);
+                node.target_size = 5;
+                
+                if(_s.graph.degree(node.id, "out") > 3){
+                    node.label = node.id
+                  }
+                else{
+                  delete node.label
+                }
+
+            });
+
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = "rgba(17, 17, 17, 0.1)"
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          settings: {
+            drawEdges: true,
+            labelThreshold: 1,
+            enableCamera: false,
+            mouseEnabled : false,
+            touchEnabled : false
+          },
+          animation: {
+            color: "target_color",
+            size: "target_size",
+            x: "target_x",
+            y: "target_y",
+            camera: {
+              x: 0,
+              y: 0,
+              ratio: 1,
+              angle: 0
+            }
+          }
+        },
+       {
+          init: function() {
+            var colorScale = d3.scale.linear().domain([0,100]).range(["#f1eef6", "#045a8d"])
+            _s.unbind("clickNode");
+            _s.graph.nodes().forEach(function(node, i, a) {
+
+                node.labelAdjust = false;
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                node.target_color = colorScale(+node.attributes["Similarity_BC_classes"]);
+                node.target_size = 5;
+                
+                if(_s.graph.degree(node.id, "out") > 3){
+                    node.label = node.id
+                  }
+                else{
+                  delete node.label
+                }
+
+            });
+
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = "rgba(17, 17, 17, 0.1)"
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          settings: {
+            drawEdges: true,
+            labelThreshold: 1,
+            enableCamera: false,
+            mouseEnabled : false,
+            touchEnabled : false
+          },
+          animation: {
+            color: "target_color",
+            size: "target_size",
+            x: "target_x",
+            y: "target_y",
+            camera: {
+              x: 0,
+              y: 0,
+              ratio: 1,
+              angle: 0
+            }
+          }
+        },
+        {
+          init: function() {
+            _s.graph.nodes().forEach(function(node, i, a) {
+
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                node.target_color = node.file_color;
+                node.target_size = node.file_size /_options.ratio;
+                
+                // if(_s.graph.degree(node.id, "out") > 3){
+                //     node.label = node.id
+                //   }
+                // else{
+                //   delete node.label
+                // }
+
+                node.label = node.id
+
+            });
+            _s.bind("clickNode", function(e) {
+                var selected = e.data.node.selected
+                var cam = _s.cameras[0]
+                if(selected){
+                  _s.graph.nodes().forEach(function(node, i, a) {
+
+                        node.label = node.id;
+                        node.selected = false;
+                        node.target_color = node.file_color;
+
+                      });
+                   _s.graph.edges().forEach(function(edge, i, a) {
+                            edge.color = "rgba(17, 17, 17, 0.1)"
+
+                   });
+                  var animation = {
+                      color : "target_color",
+                      camera: {
+                            x: cam.x,
+                            y: cam.y,
+                            ratio: cam.ratio,
+                            angle: cam.angle
+                      }
+                     }
+                    animate(animation, function() {
+                            _s.refresh();
+                    });
+                }
+                else{
+                  var nh = _dbGraph.neighborhood(e.data.node.id)
+                     var nodes = nh.nodes;
+                     var edges = nh.edges;
+                     var idsN = nodes.map(function(d){return d.id});
+                     var idsE = edges.map(function(d){return d.id});
+                      _s.graph.nodes().forEach(function(node, i, a) {
+                          if(node.id == e.data.node.id){
+                            node.selected = true
+                            node.target_color = "#E93A32"
+                            node.label = node.id;
+                          }
+                          else if (idsN.indexOf(node.id) > -1){
+                            node.target_color = "#425863"
+                            node.selected = false
+                            node.label = node.id;
+                          }
+                          else{
+                            node.target_color = "#AAA"
+                            node.label = null;
+                            node.selected = false
+                          }
+                      });
+                      _s.graph.edges().forEach(function(edge, i, a) {
+                          if (idsE.indexOf(edge.id) > -1){
+                            edge.color = "rgba(17, 17, 17, 0.1)"
+                          }
+                          else{
+                            edge.color = "rgba(17, 17, 17, 0.0)"
+                          }
+                      });
+                     var animation = {
+                      color : "target_color",
+                      camera: {
+                            x: cam.x,
+                            y: cam.y,
+                            ratio: cam.ratio,
+                            angle: cam.angle
+                      }
+                     }
+                    animate(animation, function() {
+                            _s.refresh();
+                    });
+                  }
+              });
+          },
+          forceAtlas2: false,
+          center: null,
+          filter: null,
+          settings: {
+            drawEdges: true,
+            labelThreshold: 20,
+            enableCamera: true,
+            mouseEnabled : true,
+            touchEnabled : true
+          }
+          ,
+          animation: {
+            color: "target_color",
+            size: "target_size",
+            camera: {
+              x: 0,
+              y: 0,
+              ratio: 1,
+              angle: 0
+            }
+          }
+        }
+      ]
+    }
 }//end networkconfig
 
     d3.rebind(vis, dispatch, 'on');
