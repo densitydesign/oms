@@ -650,7 +650,13 @@ angular.module('who.directives', [])
                 }).attr("y", function(d) {
                   return d.y
                 }).attr("dx", txtScale(lvl) * 0.7 + "em").attr("dy", txtScale(lvl) * 1.4 + "em").text(function(d) {
-                  return d.key
+                  if(d.key.length*8>d.dx) {
+                  	var maxl = d.dx/8;
+                  	return d.key.substr(0,maxl)+"..."
+                  	
+                  
+                  }
+                  else return d.key
                 });
               }
 
