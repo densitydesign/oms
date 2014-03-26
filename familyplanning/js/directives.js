@@ -1928,6 +1928,280 @@ angular.module('who.directives', [])
       }
     }
   }])
+  
+   .directive('fp2GeoMap',['fileService', '$timeout', '$compile', function (fileService, $timeout, $compile) {
+    return {
+      restrict: 'A',
+      replace: true,
+      templateUrl: 'partials/map.html',
+      link: function postLink(scope, element, attrs) {
+      	var vizContainer = element.find('#wikimap')[0]
+      	var mapdata;
+      	var loaded = false;
+      	var containerPagination = element.find("#paginationStep")[0];
+		var s = d3.scale.linear().range([20,80]).domain([2,100]).clamp(true)
+		var step, map, markers_cs, markers_fp, markers_sp_cs, markers_sp_fp;
+		
+		
+		d3.tsv('data/' + scope.section.id + '/wiki_map.tsv',function(error, data) {
+		
+			mapdata=data;
+			drawMap();
+		});
+		
+		function drawMap() {
+			
+			console.log(mapdata)
+		
+		    map = L.mapbox.map('wikimap', 'fenicento.ha4jo7ff',{scrollWheelZoom:false})
+		        .setView([18.95, 18.08333], 2);
+		        
+		        console.log(map)
+			
+		    markers_cs = new L.MarkerClusterGroup({showCoverageOnHover:false,iconCreateFunction: bcCluster,spiderfyOnMaxZoom:true});
+		    markers_fp = new L.MarkerClusterGroup({showCoverageOnHover:false, iconCreateFunction: fpCluster,spiderfyOnMaxZoom:true});
+		    markers_sp_cs = new L.MarkerClusterGroup({showCoverageOnHover:false,iconCreateFunction: bcCluster,spiderfyOnMaxZoom:true});
+		    markers_sp_fp = new L.MarkerClusterGroup({showCoverageOnHover:false, iconCreateFunction: fpCluster,spiderfyOnMaxZoom:true});
+		
+		 	addAllMarkers();	
+		 
+		 	if (map.hasLayer(markers_sp_cs)) map.removeLayer(markers_sp_cs);
+		   	if (map.hasLayer(markers_sp_fp)) map.removeLayer(markers_sp_fp);
+		   	
+		   	map.addLayer(markers_cs);
+		   	map.addLayer(markers_fp);
+			
+			map.setView([18.95, 18.08333], 2,{animate:true});
+			
+			loaded=true;
+
+		}
+		
+		function bcCluster(cluster) {
+			var childCount = cluster.getChildCount();
+	
+			var c = ' marker-cluster-';
+			if (childCount < 10) {
+				c += 'small';
+			} else if (childCount < 100) {
+				c += 'medium';
+			} else {
+				c += 'large';
+			}
+			c+="-2"
+			return new L.DivIcon({ html: '<div><span style="line-height:'+s(childCount)+'px;">' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(s(childCount), s(childCount)) });
+		}
+	
+	
+		 function fpCluster(cluster) {
+			var childCount = cluster.getChildCount();
+	
+			var c = ' marker-cluster-';
+			if (childCount < 10) {
+				c += 'small';
+			} else if (childCount < 100) {
+				c += 'medium';
+			} else {
+				c += 'large';
+			}
+	
+			return new L.DivIcon({ html: '<div><span style="line-height:'+s(childCount)+'px;">' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(s(childCount), s(childCount)) });
+		}
+		
+		
+		function addAllMarkers () {
+		   	for (var i = 0; i < mapdata.length; i++) {
+		        var a = mapdata[i];
+		       
+		        var title = a['revid'];
+		        var type = a['type'];
+		        var date = a['date'];
+		        var comment = a['comment'];
+		        var user = a['user'];
+		       
+		        if(a.lat!="" && a.lon!="" && a.page=="Birth Control") {
+		       
+		        var marker = L.circleMarker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
+		            //icon: L.mapbox.marker.icon({ 'marker-color': 'd45158'}),
+		            radius: 5,
+		        	fillColor: "#d45158",
+		        	stroke: false,
+		        	fillOpacity: 0.69,
+		            title: title,
+		            date: date,
+		            user: user,
+		            comment: comment,
+		            type: type
+		        });
+		        marker.bindPopup("<br/><div><b>Date:</b> "+date+"</div><div><b>User:</b> "+user+"</div><div><b>Revision id:</b> "+title+"</div><div><b>type:</b> "+type+"</div><div><b>Comment:</b> "+comment+"</div>");
+		        markers_cs.addLayer(marker);
+		        
+		       }
+		       
+		       if(a.lat!="" && a.lon!="" && a.page=="Birth Control" && a.type=="spoil") {
+		       
+		        var marker = L.circleMarker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
+		            //icon: L.mapbox.marker.icon({ 'marker-color': 'd45158'}),
+		            radius: 5,
+		        	fillColor: "#d45158",
+		        	stroke: false,
+		        	fillOpacity: 0.69,
+		            title: title,
+		            date: date,
+		            user: user,
+		            comment: comment,
+		            type: type
+		        });
+		        marker.bindPopup("<br/><div><b>Date:</b> "+date+"</div><div><b>User:</b> "+user+"</div><div><b>Revision id:</b> "+title+"</div><div><b>type:</b> "+type+"</div><div><b>Comment:</b> "+comment+"</div>");
+		        markers_sp_cs.addLayer(marker);
+		        
+		        
+		       }
+		       
+		       if(a.lat!="" && a.lon!="" && a.page=="Family Planning") {
+		       	
+		        
+		        var marker = L.circleMarker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
+		            //icon: L.mapbox.marker.icon({ 'marker-color': '34CD87'}),
+		            radius: 5,
+		        	fillColor: "#34CD87",
+		        	stroke: false,
+		        	fillOpacity: 0.69,
+		            title: title,
+		            date: date,
+		            user: user,
+		            comment: comment,
+		            type: type
+		        });
+		        marker.bindPopup("<br/><div><b>Date:</b> "+date+"</div><div><b>User:</b> "+user+"</div><div><b>Revision id:</b> "+title+"</div><div><b>type:</b> "+type+"</div><div><b>Comment:</b> "+comment+"</div>");
+		        markers_fp.addLayer(marker);
+		        
+		       }
+		       
+		       if(a.lat!="" && a.lon!="" && a.page=="Family Planning" && a.type=="spoil") {
+		       
+		        var marker = L.circleMarker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
+		            //icon: L.mapbox.marker.icon({ 'marker-color': 'd45158'}),
+		            radius: 5,
+		        	fillColor: "#d45158",
+		        	stroke: false,
+		        	fillOpacity: 0.69,
+		            title: title,
+		            date: date,
+		            user: user,
+		            comment: comment,
+		            type: type
+		        });
+		        marker.bindPopup("<br/><div><b>Date:</b> "+date+"</div><div><b>User:</b> "+user+"</div><div><b>Revision id:</b> "+title+"</div><div><b>type:</b> "+type+"</div><div><b>Comment:</b> "+comment+"</div>");
+		        markers_sp_fp.addLayer(marker);
+		 
+		       }
+		    }
+		   } 
+		   
+		   
+		   /*steps*/
+		  step = [
+                {init: function(){
+                    if (map.hasLayer(markers_sp_cs)) map.removeLayer(markers_sp_cs);
+				   	if (map.hasLayer(markers_sp_fp)) map.removeLayer(markers_sp_fp);
+				   	
+				   	map.addLayer(markers_cs);
+				   	map.addLayer(markers_fp);
+				
+					map.setView([18.95, 18.08333], 2,{animate:true});
+					
+                  }
+                },
+                {init: function(){
+                    if (map.hasLayer(markers_cs)) map.removeLayer(markers_cs);
+				   	if (map.hasLayer(markers_fp)) map.removeLayer(markers_fp);
+				   	
+				  
+				   	map.addLayer(markers_sp_cs);
+				   	map.addLayer(markers_sp_fp);
+				  
+				   	
+				   	map.setView([18.95, 18.08333], 2,{animate:true});
+				   	
+                  }
+                },
+                {init: function(){
+                  if (map.hasLayer(markers_cs)) map.removeLayer(markers_cs);
+				   	if (map.hasLayer(markers_fp)) map.removeLayer(markers_fp);
+				   	
+				  
+				   	map.addLayer(markers_sp_cs);
+				   	map.addLayer(markers_sp_fp);
+				   	map.setView([11.583333, 122.75],6,{animate:true});
+				   	
+                  }
+                }
+                ]
+                
+                
+                scope.ctrlmodels[scope.section.id].totalItems = step.length
+		        var pag = "<pagination previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
+		        var e = angular.element(pag)
+		        $(containerPagination).append(e)
+		        $compile(e)(scope)
+		        
+		        
+		        scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
+		          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+		                step[newValue-1].init()
+		            }
+		        })
+		
+      }
+      }
+     }])
+     
+      .directive('wikiEdits',['fileService', '$timeout', '$compile', function (fileService, $timeout, $compile) {
+    return {
+      restrict: 'A',
+      replace: true,
+      templateUrl: 'partials/stacked.html',
+      link: function postLink(scope, element, attrs) {
+      
+      	var bc = d3.select("#birthcontrol");
+		var bcdata;
+			
+		var bcChart = who.chart()
+		.w($("#birthcontrol").width())
+		.h($("#birthcontrol").height());
+		
+		d3.tsv('data/' + scope.section.id + '/birtcontrol.csv',function(error, data) {	
+			bcdata=data;
+			bc.datum(bcdata).call(bcChart)	
+		});
+		
+		
+		var fp = d3.select("#familyplanning");
+		var fpdata;
+		
+		var fpChart = who.chart()
+		.w($("#familyplanning").width())
+		.h($("#familyplanning").height());
+		
+		d3.tsv('data/' + scope.section.id + '/familyplanning.csv',function(error, data) {
+			fpdata=data;
+			fp.datum(fpdata).call(fpChart)
+		});
+		
+		
+		$('input').on("change", function() {
+		
+			v=$( "input:radio:checked" ).val()
+			fpChart.change(v);
+			bcChart.change(v);
+		});
+      
+      }
+      
+     }
+     }])
+  
   .directive('navBar',[ 'fileService', '$timeout', function (fileService, $timeout){
     return {
       restrict: 'A',
