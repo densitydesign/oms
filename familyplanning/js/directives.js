@@ -1929,7 +1929,7 @@ angular.module('who.directives', [])
     }
   }])
   
-   .directive('fp2GeoMap',['fileService', '$timeout', '$compile', function (fileService, $timeout, $compile) {
+   .directive('anonMap',['fileService', '$timeout', '$compile', function (fileService, $timeout, $compile) {
     return {
       restrict: 'A',
       replace: true,
@@ -2201,7 +2201,6 @@ angular.module('who.directives', [])
       
      }
      }])
-  
   .directive('navBar',[ 'fileService', '$timeout', function (fileService, $timeout){
     return {
       restrict: 'A',
