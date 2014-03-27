@@ -708,8 +708,8 @@ ul li {
 }
 
 .proto-content hr{
-	margin-top: 80px;
-	margin-bottom: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 
@@ -1073,7 +1073,7 @@ text-align: center;
 
 #viz_googleimages{
 	width:100%;
-	height:90%;
+	height:100%;
 	overflow:hidden;
 }
 
@@ -1104,12 +1104,11 @@ text-align: center;
 	
 }
 .googleimages .img-cont{
-	 
 	float:left;
 	transition: width 2s;
--webkit-transition: width 0.2s; /* Safari */
-transition: height 2s;
--webkit-transition: height 0.2s; /* Safari */
+	-webkit-transition: width 0.2s; /* Safari */
+	transition: height 2s;
+	-webkit-transition: height 0.2s; /* Safari */
 }
 
 .googleimages .smallImg{
@@ -1118,7 +1117,7 @@ transition: height 2s;
 }
 
 .googleimages .labels{
-	margin-top:70px;
+	margin-top:0px;
 	margin-left:1%;
 }
 
