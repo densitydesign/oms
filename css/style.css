@@ -51,7 +51,7 @@ body {
 	color:#222;
 }
 
-.section-text p, .section-text-home p{
+.section-text p, .section-text-home p, .section-text-theory p{
 	font-size:1.4em;
 	line-height: 170%;
 	font-family:Georgia;
@@ -143,7 +143,7 @@ sup {
 	letter-spacing: 4px;
 }
 
-.section-text hr, .section-text-home hr{
+.section-text hr, .section-text-home hr, .section-text-theory hr{
 	width:60px;	
 	height:2px;
 	background-color: #222;
@@ -1420,5 +1420,39 @@ a:hover{
 	.intro-header {
 		height:70%;
 	}
+}
+
+/*Theory*/
+.section-text-theory h1{
+	text-align:center;
+	font-family: Georgia, sans-serif;
+	font-weight: 400;
+	font-size:3.5em;
+	margin-bottom: 30px;
+	margin-top: 90px;
+	padding-top: 30px;
+}
+
+#sidebar{
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-size: 0.6em;
+	 width:228px;
+}
+
+  #sidebar.affix-top {
+    position: static;
+  	margin-top:120px;
+  }
+  
+  #sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+}
+
+#sidebar li.active {
+  	border:1px #eee solid;
+  	border-left-width:4px;
 }
 
