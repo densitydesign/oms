@@ -259,6 +259,7 @@ angular.module('who.directives', [])
 
               wikitoc = who.wikitoc()
                             .height($(containerViz).height()-3)
+                            .morePixel($(containerViz).width())
 
               chart.datum(data).call(wikitoc)
 
@@ -306,7 +307,7 @@ angular.module('who.directives', [])
           },
           {init: function(){
             click = true
-            var p = wikitoc.getPixel("2007-01-12T04:11:59Z")
+            var p = wikitoc.getPixel("2006-08-15T09:38:40Z")
             $(containerViz).animate( { scrollLeft: p }, 500, "swing")
             var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
             chartLegend.datum(dl).call(wikitoclegend)
@@ -315,8 +316,26 @@ angular.module('who.directives', [])
           },
           {init: function(){
             click = true
-            var p = wikitoc.getPixel("2011-03-04T19:52:55Z")
+            var p = wikitoc.getPixel("2008-03-08T08:41:54Z")
             $(containerViz).animate( { scrollLeft: p }, 500, "swing")
+            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            chartLegend.datum(dl).call(wikitoclegend)
+            click =false
+            }
+          },
+          {init: function(){
+            click = true
+            var p = wikitoc.getPixel("2008-05-01T10:01:42Z")
+            $(containerViz).animate( { scrollLeft: p }, 500)
+            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            chartLegend.datum(dl).call(wikitoclegend)
+            click =false
+            }
+          },
+          {init: function(){
+            click = true
+            var p = wikitoc.getPixel("2012-12-13T16:36:51Z")
+            $(containerViz).animate( { scrollLeft: p }, 500)
             var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
             chartLegend.datum(dl).call(wikitoclegend)
             click =false
@@ -325,13 +344,15 @@ angular.module('who.directives', [])
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2006-04-22T04:02:54Z")
-            $(containerViz).animate( { scrollLeft: p }, 500)
+            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
             var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
             chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           }
         ]
+
+
 
         var loading = false,
             click = false;
@@ -1908,7 +1929,7 @@ angular.module('who.directives', [])
     }
   }])
   
-   .directive('fp2GeoMap',['fileService', '$timeout', '$compile', function (fileService, $timeout, $compile) {
+   .directive('anonMap',['fileService', '$timeout', '$compile', function (fileService, $timeout, $compile) {
     return {
       restrict: 'A',
       replace: true,
@@ -2181,7 +2202,6 @@ angular.module('who.directives', [])
       
      }
      }])
-  
   .directive('navBar',[ 'fileService', '$timeout', function (fileService, $timeout){
     return {
       restrict: 'A',

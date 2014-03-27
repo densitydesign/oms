@@ -10,6 +10,7 @@
     	x2,
     	allDates,
     	allDatesString,
+    	morePixel,
 	 	dispatch = d3.dispatch("clicked");
 
 
@@ -33,13 +34,13 @@
 
     		if (selection.select('svg').empty()){
 	            chart = selection.append('svg')
-	              .attr('width', Math.round(width + (allDates.length*maxRectWidth)))
+	              .attr('width', Math.round(morePixel - maxRectWidth + width + (allDates.length*maxRectWidth)))
 	              .attr('height', height)
 	          }
 	        else
 	          {
 	            chart = selection.select('svg')
-	                  .attr('width', Math.round(width + (allDates.length*maxRectWidth)))
+	                  .attr('width', Math.round(morePixel - maxRectWidth + width + (allDates.length*maxRectWidth)))
 	                  .attr('height', height)
 	         }
 
@@ -265,6 +266,12 @@
       var pos =  allDatesString.indexOf(x)
       var pixel = x2(d3.time.day.floor(new Date(x))) + (pos*maxRectWidth);
       return pixel;
+    }
+
+    wikitoc.morePixel = function(x){
+      if (!arguments.length) return morePixel;
+      morePixel = x;
+      return wikitoc;
     }
 
     var colors = {
