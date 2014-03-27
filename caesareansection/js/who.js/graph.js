@@ -195,6 +195,10 @@
       return vis;
     }
 
+    vis.step = function(){
+      return _views.length
+    }
+
 
   function place(n) {
          //var scale = 28,

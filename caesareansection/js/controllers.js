@@ -55,7 +55,43 @@ angular.module('who.controllers', [])
       treemaphierarchy : 'post',
       treemapsort : 'author',
       sgnafmax : $scope.sections.length-1,
-      sgnafindex: 0
+      sgnafindex: 0,
+      "cs_crawl_network":{
+          totalItems: 5,
+          currentStep: 1,
+          itemsPerPage: 1,
+          maxItems: 5
+        },
+      "cs_query_network":{
+          totalItems: 5,
+          currentStep: 1,
+          itemsPerPage: 1,
+          maxItems: 5
+        },
+        "cs_text_slope":{
+          totalItems: 5,
+          currentStep: 1,
+          itemsPerPage: 1,
+          maxItems: 5
+        },
+        "cs_aufeminin_forum":{
+          totalItems: 5,
+          currentStep: 1,
+          itemsPerPage: 1,
+          maxItems: 5
+        },
+      "cs_aufeminin_networkIT":{
+          totalItems: 5,
+          currentStep: 1,
+          itemsPerPage: 1,
+          maxItems: 5
+        },
+      "cs_aufeminin_networkFR":{
+          totalItems: 5,
+          currentStep: 1,
+          itemsPerPage: 1,
+          maxItems: 5
+        },
       }
       
 
@@ -79,7 +115,7 @@ angular.module('who.controllers', [])
                 $(".tt").remove();
 
                 $scope.ctrlmodels.sgnafindex = nextIndex(index, direction);
-                $scope.$apply()
+                //$scope.$apply()
               //if(nextIndex(index, direction)+1 != $scope.sections.length){
                 var nextId = $scope.sections.filter(function(d){return d.label == $scope.sections[nextIndex(index, direction)].label && d.nav == true })[0].id;
                 if($scope.utils.section != $scope.sections[nextIndex(index, direction)].id){
@@ -98,24 +134,24 @@ angular.module('who.controllers', [])
 
 
                 if($scope.sections[index-1].step){
-                  $.fn.fullpage.setAllowScrolling(false);
-                  addMouseWheelHandler()
-                  addTouchHandler()
+                  //$.fn.fullpage.setAllowScrolling(false);
+                  //addMouseWheelHandler()
+                  //addTouchHandler()
 
                   $(document).on('mouseout', 'div.proto',function () {
                   $.fn.fullpage.setAllowScrolling(false);
-                  addMouseWheelHandler()
-                  addTouchHandler()
+                  //addMouseWheelHandler()
+                  //addTouchHandler()
                   });
                   
                   $(document).on('mouseover', 'div.proto',function () {
                     $.fn.fullpage.setAllowScrolling(false);
-                   removeMouseWheelHandler()
-                   removeTouchHandler()
+                   //removeMouseWheelHandler()
+                   //removeTouchHandler()
                   });
               }else{
 
-                $.fn.fullpage.setAllowScrolling(true);
+                //$.fn.fullpage.setAllowScrolling(true);
 
                 $(document).on('mouseover', 'div.proto',function () {
                   $.fn.fullpage.setAllowScrolling(false);
@@ -147,9 +183,9 @@ angular.module('who.controllers', [])
       });
 
     $scope.$on('steplimit',function(steplimitEvent){
-      removeMouseWheelHandler()
-      removeTouchHandler()
-      $.fn.fullpage.setAllowScrolling(true);
+      //removeMouseWheelHandler()
+      //removeTouchHandler()
+      //$.fn.fullpage.setAllowScrolling(true);
     })
 
     //TO DO: extend library
