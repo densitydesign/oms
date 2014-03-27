@@ -1,758 +1,1 @@
-QUERY	TAG	TLD
-"'Fertility regulation'"	C	ca
-"hormonal cotraceptive"	A10D	others
-"hormonal cotraceptive"	A10C	others
-"hormonal cotraceptive"	A10D	ac.uk
-"hormonal cotraceptive"	A10D	ac.uk
-"condoms 'family planning'"	B2	ac.uk
-"'Family size'"	A03	ac.uk
-"condoms 'family planning'"	B4	others
-"pill contraception"	B2	ca
-"hormonal cotraceptive"	B2	ca
-"contraception"	B2	ca
-"condoms 'family planning'"	B2	ca
-"'Preventing pregnancy'"	B1	ca
-"'Preventing pregnancy'"	B2	ca
-"'Pregnancy prevention'"	B2	ca
-"'Planned parenthood'"	B1	ca
-"'Birth control'"	B2	ca
-"'Birth control'"	B2	ca
-"'Birth control'"	B2	ca
-"'Birth control methods'"	A13C	ca
-"'Birth control methods'"	B2	ca
-"'Birth control methods'"	B2	ca
-"'Birth control methods'"	C	ca
-"'Planned parenthood'"	B4	ca
-"'pill'+'family planning'"	A09	others
-"'Not having babies'"	A03	others
-"IUD 'family planning'"	B2	co.nz
-"condoms 'family planning'"	B2	co.nz
-"condoms 'family planning'"	B2	co.nz
-"'pill'+'family planning'"	A13C	co.nz
-"'Not having babies'"	A03	co.nz
-"'Fertility regulation'"	C	co.nz
-"pill contraception"	A10E	co.uk
-"pill contraception"	B2	co.uk
-"pill contraception"	B2	co.uk
-"IUD 'family planning'"	B2	co.uk
-"hormonal cotraceptive"	A10D	co.uk
-"hormonal cotraceptive"	B2	co.uk
-"hormonal cotraceptive"	B2	co.uk
-"hormonal cotraceptive"	B2	co.uk
-"contraception"	B2	co.uk
-"contraception"	B2	co.uk
-"contraception"	B2	co.uk
-"contraception"	B2	co.uk
-"contraception"	B2	co.uk
-"condoms contraception"	A11	co.uk
-"condoms 'family planning'"	A00	co.uk
-"condoms 'family planning'"	B2	co.uk
-"'Pregnancy prevention'"	A13B	co.uk
-"'pill'+'family planning'"	B1	co.uk
-"'pill'+'family planning'"	B1	co.uk
-"'pill'+'family planning'"	B2	co.uk
-"'pill'+'family planning'"	B2	co.uk
-"'pill'+'family planning'"	B2	co.uk
-"'pill'+'family planning'"	B2	co.uk
-"'Family size'"	A03	co.uk
-"'Family size'"	A03	co.uk
-"'Family size'"	A03	co.uk
-"pill contraception"	A10D	co.za
-"family planning"	B2	co.za
-"'Birth spacing'"	A11	co.za
-"'Preventing pregnancy'"	B2	com
-"pill contraception"	A06	com
-"pill contraception"	A06	com
-"pill contraception"	A06	com
-"pill contraception"	A06	com
-"pill contraception"	A06	com
-"pill contraception"	A06	com
-"pill contraception"	A10E	com
-"pill contraception"	A11	com
-"pill contraception"	B2	com
-"pill contraception"	B2	com
-"pill contraception"	B2	com
-"pill contraception"	B2	com
-"pill contraception"	B3	com
-"IUD 'family planning'"	A10D	com
-"IUD 'family planning'"	A10D	com
-"IUD 'family planning'"	A10D	com
-"IUD 'family planning'"	A11	com
-"IUD 'family planning'"	B2	com
-"IUD 'family planning'"	B2	com
-"hormonal cotraceptive"	A04	com
-"hormonal cotraceptive"	A04	com
-"hormonal cotraceptive"	A04	com
-"hormonal cotraceptive"	A10B	com
-"hormonal cotraceptive"	A10B	com
-"hormonal cotraceptive"	A10B	com
-"hormonal cotraceptive"	A10C	com
-"hormonal cotraceptive"	A10C	com
-"hormonal cotraceptive"	A10C	com
-"hormonal cotraceptive"	A10D	com
-"hormonal cotraceptive"	A10D	com
-"hormonal cotraceptive"	A10D	com
-"hormonal cotraceptive"	A10D	com
-"hormonal cotraceptive"	A10D	com
-"hormonal cotraceptive"	A10D	com
-"hormonal cotraceptive"	A10D	com
-"hormonal cotraceptive"	A10D	com
-"hormonal cotraceptive"	A10D	com
-"hormonal cotraceptive"	A10D	com
-"hormonal cotraceptive"	A10D	com
-"hormonal cotraceptive"	A13B	com
-"hormonal cotraceptive"	A13C	com
-"hormonal cotraceptive"	B2	com
-"hormonal cotraceptive"	B2	com
-"hormonal cotraceptive"	B2	com
-"hormonal cotraceptive"	B2	com
-"hormonal cotraceptive"	B2	com
-"hormonal cotraceptive"	B2	com
-"hormonal cotraceptive"	B2	com
-"hormonal cotraceptive"	B2	com
-"hormonal cotraceptive"	B2	com
-"hormonal cotraceptive"	B3	com
-"hormonal cotraceptive"	B3	com
-"hormonal cotraceptive"	C	com
-"hormonal cotraceptive"	C	com
-"hormonal cotraceptive"	C	com
-"family planning"	A00	com
-"family planning"	A00	com
-"family planning"	A01	com
-"family planning"	A04	com
-"family planning"	A07	com
-"family planning"	A07	com
-"family planning"	A07	com
-"family planning"	B4	com
-"family planning"	B4	com
-"family planning"	B4	com
-"contraception"	A00	com
-"contraception"	A00	com
-"contraception"	A00	com
-"contraception"	A00	com
-"contraception"	A00	com
-"contraception"	A06	com
-"contraception"	A06	com
-"contraception"	A06	com
-"contraception"	A06	com
-"contraception"	A06	com
-"contraception"	A06	com
-"contraception"	A06	com
-"contraception"	A06	com
-"contraception"	A06	com
-"contraception"	A06	com
-"contraception"	A06	com
-"contraception"	A07	com
-"contraception"	A07	com
-"contraception"	A07	com
-"contraception"	A10D	com
-"contraception"	A11	com
-"contraception"	A11	com
-"contraception"	A11	com
-"contraception"	A11	com
-"contraception"	A11	com
-"contraception"	A11	com
-"contraception"	A11	com
-"contraception"	A11	com
-"contraception"	A11	com
-"contraception"	A11	com
-"contraception"	B1	com
-"contraception"	B2	com
-"contraception"	B2	com
-"contraception"	B2	com
-"contraception"	B3	com
-"contraception"	B3	com
-"contraception"	B4	com
-"condoms contraception"	A11	com
-"condoms contraception"	A13B	com
-"condoms contraception"	B1	com
-"condoms contraception"	B1	com
-"condoms contraception"	B1	com
-"condoms contraception"	B2	com
-"condoms contraception"	B2	com
-"condoms contraception"	B2	com
-"condoms contraception"	B4	com
-"condoms 'family planning'"	A01	com
-"condoms 'family planning'"	A06	com
-"condoms 'family planning'"	A11	com
-"condoms 'family planning'"	A11	com
-"condoms 'family planning'"	B1	com
-"condoms 'family planning'"	B2	com
-"'Rhythm methods'"	A13B	com
-"'Rhythm methods'"	B2	com
-"'Rhythm methods'"	B2	com
-"'Rhythm methods'"	C	com
-"'Rhythm methods'"	C	com
-"'Rhythm methods'"	C	com
-"'Rhythm methods'"	C	com
-"'Rhythm methods'"	C	com
-"'Preventing pregnancy'"	A13E	com
-"'Preventing pregnancy'"	B1	com
-"'Preventing pregnancy'"	B1	com
-"'Preventing pregnancy'"	B1	com
-"'Preventing pregnancy'"	B2	com
-"'Preventing pregnancy'"	B2	com
-"'Preventing pregnancy'"	B2	com
-"'Preventing pregnancy'"	B2	com
-"'Preventing pregnancy'"	B2	com
-"'Pregnancy prevention'"	A04	com
-"'Pregnancy prevention'"	A13B	com
-"'Pregnancy prevention'"	A13B	com
-"'Pregnancy prevention'"	A13B	com
-"'Pregnancy prevention'"	A13B	com
-"'Pregnancy prevention'"	A13C	com
-"'Pregnancy prevention'"	A13D	com
-"'Planned parenthood'"	A02	com
-"'Planned parenthood'"	A06	com
-"'Planned parenthood'"	A07	com
-"'Planned parenthood'"	A07	com
-"'Planned parenthood'"	A07	com
-"'Planned parenthood'"	A07	com
-"'Planned parenthood'"	A07	com
-"'Planned parenthood'"	A07	com
-"'Planned parenthood'"	A07	com
-"'Planned parenthood'"	A07	com
-"'Planned parenthood'"	A07	com
-"'Planned parenthood'"	A07	com
-"'pill'+'family planning'"	A04	com
-"'pill'+'family planning'"	A04	com
-"'pill'+'family planning'"	A10D	com
-"'pill'+'family planning'"	A10D	com
-"'pill'+'family planning'"	B1	com
-"'pill'+'family planning'"	B1	com
-"'pill'+'family planning'"	B4	com
-"'pill'+'family planning'"	B4	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A03	com
-"'Not having babies'"	A11	com
-"'Not having babies'"	A11	com
-"'Not having babies'"	A13B	com
-"'Not having babies'"	A13B	com
-"'Not having babies'"	A13B	com
-"'Not having babies'"	A13B	com
-"'Not having babies'"	A13E	com
-"'Not having babies'"	A13E	com
-"'Not having babies'"	A13H	com
-"'Fertility regulation'"	C	com
-"'Fertility control'"	A07	com
-"'Fertility control'"	A09	com
-"'Fertility control'"	C	com
-"'Family size'"	A03	com
-"'Family size'"	A03	com
-"'Family size'"	A03	com
-"'Family size'"	A03	com
-"'Family size'"	A03	com
-"'Family size'"	A03	com
-"'Family size'"	A03	com
-"'Family size'"	A03	com
-"'Birth spacing'"	A10A	com
-"'Birth spacing'"	A10A	com
-"'Birth spacing'"	A10A	com
-"'Birth spacing'"	A10A	com
-"'Birth spacing'"	A10A	com
-"'Birth spacing'"	A10A	com
-"'Birth spacing'"	A10A	com
-"'Birth control'"	A01	com
-"'Birth control'"	A06	com
-"'Birth control'"	A06	com
-"'Birth control'"	A10D	com
-"'Birth control'"	A11	com
-"'Birth control'"	B1	com
-"'Birth control'"	B1	com
-"'Birth control'"	B2	com
-"'Birth control'"	B2	com
-"'Birth control'"	B2	com
-"'Birth control'"	B2	com
-"'Birth control'"	B2	com
-"'Birth control'"	B3	com
-"'Birth control methods'"	A13C	com
-"'Birth control methods'"	B2	com
-"'Birth control methods'"	B2	com
-"'Birth control methods'"	B2	com
-"'Birth control methods'"	B2	com
-"'Birth control methods'"	B2	com
-"'Birth control methods'"	B2	com
-"'Birth control methods'"	B2	com
-"'Birth control methods'"	B2	com
-"'Birth control methods'"	B2	com
-"pill contraception"	B2	com
-"IUD 'family planning'"	B1	com
-"IUD 'family planning'"	B2	com
-"hormonal cotraceptive"	B2	com
-"family planning"	B4	com
-"family planning"	B4	com
-"contraception"	B2	com
-"contraception"	B2	com
-"condoms 'family planning'"	B2	com
-"'pill'+'family planning'"	B2	com
-"'pill'+'family planning'"	B2	com
-"'Not having babies'"	A10A	com
-"'Birth control'"	B4	com
-"'Birth spacing'"	A10A	com
-"'Birth spacing'"	A10A	com
-"pill contraception"	B2	edu
-"IUD 'family planning'"	B2	edu
-"IUD 'family planning'"	B2	edu
-"hormonal cotraceptive"	A09	edu
-"hormonal cotraceptive"	A10C	edu
-"hormonal cotraceptive"	A10D	edu
-"hormonal cotraceptive"	B2	edu
-"hormonal cotraceptive"	B2	edu
-"contraception"	A00	edu
-"contraception"	B2	edu
-"contraception"	B2	edu
-"condoms contraception"	A13C	edu
-"condoms contraception"	A13C	edu
-"condoms contraception"	A13C	edu
-"condoms contraception"	B1	edu
-"condoms contraception"	B2	edu
-"condoms 'family planning'"	B2	edu
-"'Preventing pregnancy'"	A06	edu
-"'Preventing pregnancy'"	A13C	edu
-"'Pregnancy prevention'"	A02	edu
-"'Pregnancy prevention'"	A13B	edu
-"'Pregnancy prevention'"	B1	edu
-"'pill'+'family planning'"	B2	edu
-"'Fertility control'"	A01	edu
-"'Birth control methods'"	B2	edu
-"hormonal cotraceptive"	A10E	eu
-"contraception"	A00	eu
-"contraception"	B2	others
-"condoms 'family planning'"	B2	others
-"pill contraception"	A10B	gov
-"IUD 'family planning'"	B2	gov
-"hormonal cotraceptive"	A10B	gov
-"hormonal cotraceptive"	A10C	gov
-"hormonal cotraceptive"	A10C	gov
-"hormonal cotraceptive"	A10C	gov
-"hormonal cotraceptive"	A10D	gov
-"hormonal cotraceptive"	A10E	gov
-"family planning"	A00	gov
-"family planning"	A04	gov
-"family planning"	A06	gov
-"family planning"	A09	gov
-"family planning"	A09	gov
-"family planning"	B4	gov
-"family planning"	B4	gov
-"family planning"	B4	gov
-"family planning"	B4	gov
-"family planning"	B4	gov
-"family planning"	B4	gov
-"family planning"	B4	gov
-"family planning"	B4	gov
-"family planning"	B4	gov
-"family planning"	B4	gov
-"family planning"	B4	gov
-"contraception"	A06	gov
-"contraception"	A06	gov
-"contraception"	A09	gov
-"contraception"	B1	gov
-"contraception"	B2	gov
-"condoms contraception"	A13C	gov
-"condoms 'family planning'"	B2	gov
-"condoms 'family planning'"	B2	gov
-"'Preventing pregnancy'"	A13B	gov
-"'Preventing pregnancy'"	A13C	gov
-"'Preventing pregnancy'"	B2	gov
-"'Pregnancy prevention'"	A02	gov
-"'Pregnancy prevention'"	A02	gov
-"'Pregnancy prevention'"	A02	gov
-"'Pregnancy prevention'"	A02	gov
-"'Pregnancy prevention'"	A13B	gov
-"'Pregnancy prevention'"	A13B	gov
-"'Pregnancy prevention'"	A13B	gov
-"'Pregnancy prevention'"	A13C	gov
-"'Pregnancy prevention'"	A13G	gov
-"'Pregnancy prevention'"	A13G	gov
-"'Pregnancy prevention'"	B1	gov
-"'pill'+'family planning'"	B2	gov
-"'pill'+'family planning'"	B2	gov
-"'Birth spacing'"	A10A	gov
-"'Birth spacing'"	A10A	gov
-"'Birth control'"	A13G	gov
-"'Birth control'"	B1	gov
-"'Birth control'"	B2	gov
-"'Birth control methods'"	B1	gov
-"'Birth control methods'"	B2	gov
-"'Birth control methods'"	B2	gov
-"'Birth control methods'"	B2	gov
-"'Birth control methods'"	B4	gov
-"pill contraception"	B2	gov
-"pill contraception"	B2	gov
-"pill contraception"	B2	gov
-"contraception"	A02	gov
-"contraception"	A13C	gov
-"contraception"	A13C	gov
-"contraception"	B2	gov
-"condoms contraception"	B1	gov
-"condoms contraception"	B2	gov
-"condoms contraception"	B2	gov
-"condoms contraception"	B2	gov
-"'Birth spacing'"	A10A	gov
-"hormonal cotraceptive"	A10D	gov
-"'Preventing pregnancy'"	A13C	gov
-"'Fertility regulation'"	A06	gov
-"IUD 'family planning'"	B2	gov
-"hormonal cotraceptive"	B2	gov
-"contraception"	A06	gov
-"family planning"	B4	us
-"pill contraception"	A10D	ie
-"pill contraception"	B2	ie
-"pill contraception"	B2	ie
-"pill contraception"	B2	ie
-"family planning"	B4	ie
-"contraception"	B2	ie
-"contraception"	B2	ie
-"contraception"	B4	ie
-"contraception"	B4	ie
-"condoms contraception"	B2	ie
-"condoms contraception"	B2	ie
-"condoms contraception"	B2	ie
-"condoms contraception"	B2	ie
-"'pill'+'family planning'"	B2	ie
-"'pill'+'family planning'"	B2	ie
-"'Family size'"	A03	ie
-"'Fertility regulation'"	A09	in
-"'Birth spacing'"	A10A	in
-"'Family size'"	A03	in
-"'Rhythm methods'"	C	others
-"hormonal cotraceptive"	A10C	int
-"hormonal cotraceptive"	A10E	int
-"family planning"	A09	int
-"'Fertility regulation'"	B2	int
-"'Birth spacing'"	A10A	int
-"IUD 'family planning'"	B2	net
-"hormonal cotraceptive"	A10C	net
-"hormonal cotraceptive"	A10C	net
-"hormonal cotraceptive"	A10D	net
-"family planning"	A09	net
-"family planning"	B4	net
-"family planning"	B4	net
-"family planning"	B4	net
-"family planning"	C	net
-"condoms contraception"	A11	net
-"condoms contraception"	B2	net
-"'Rhythm methods'"	A11	net
-"'pill'+'family planning'"	B2	net
-"'Fertility regulation'"	A09	net
-"hormonal cotraceptive"	B2	others
-"pill contraception"	B2	org
-"pill contraception"	B2	org
-"IUD 'family planning'"	A09	org
-"IUD 'family planning'"	A13C	org
-"IUD 'family planning'"	B2	org
-"IUD 'family planning'"	B2	org
-"IUD 'family planning'"	B2	org
-"hormonal cotraceptive"	A06	org
-"hormonal cotraceptive"	A09	org
-"hormonal cotraceptive"	A09	org
-"hormonal cotraceptive"	A09	org
-"hormonal cotraceptive"	A10B	org
-"hormonal cotraceptive"	A10C	org
-"hormonal cotraceptive"	A10C	org
-"hormonal cotraceptive"	A10C	org
-"hormonal cotraceptive"	A10C	org
-"hormonal cotraceptive"	A10C	org
-"hormonal cotraceptive"	A10C	org
-"hormonal cotraceptive"	A10C	org
-"hormonal cotraceptive"	A10D	org
-"hormonal cotraceptive"	A10D	org
-"hormonal cotraceptive"	A10D	org
-"hormonal cotraceptive"	A10D	org
-"hormonal cotraceptive"	A10D	org
-"hormonal cotraceptive"	A10D	org
-"hormonal cotraceptive"	A10D	org
-"hormonal cotraceptive"	A11	org
-"hormonal cotraceptive"	A11	org
-"hormonal cotraceptive"	B1	org
-"hormonal cotraceptive"	B2	org
-"hormonal cotraceptive"	B2	org
-"hormonal cotraceptive"	B2	org
-"hormonal cotraceptive"	B2	org
-"hormonal cotraceptive"	B2	org
-"hormonal cotraceptive"	B2	org
-"hormonal cotraceptive"	B2	org
-"planned parenthood"	A00	org
-"family planning"	B2	org
-"family planning"	A00	org
-"family planning"	A00	org
-"family planning"	A00	org
-"family planning"	A00	org
-"family planning"	A00	org
-"family planning"	A00	org
-"family planning"	A00	org
-"family planning"	A00	org
-"family planning"	A00	org
-"family planning"	A00	org
-"family planning"	A01	org
-"family planning"	A01	org
-"family planning"	A01	org
-"family planning"	A09	org
-"family planning"	A09	org
-"family planning"	A09	org
-"family planning"	A09	org
-"family planning"	A11	org
-"family planning"	B1	org
-"family planning"	B1	org
-"family planning"	B2	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	C	org
-"contraception"	A00	org
-"contraception"	A00	org
-"contraception"	A00	org
-"contraception"	A00	org
-"contraception"	A01	org
-"contraception"	A06	org
-"contraception"	A07	org
-"contraception"	A07	org
-"contraception"	A11	org
-"contraception"	A11	org
-"contraception"	A11	org
-"contraception"	A13C	org
-"contraception"	A13E	org
-"contraception"	B2	org
-"contraception"	B2	org
-"contraception"	B2	org
-"contraception"	B2	org
-"contraception"	B2	org
-"contraception"	B2	org
-"contraception"	B2	org
-"contraception"	B2	org
-"condoms contraception"	A00	org
-"condoms contraception"	A07	org
-"condoms contraception"	A13C	org
-"condoms contraception"	A13C	org
-"condoms contraception"	B2	org
-"condoms contraception"	B2	org
-"condoms contraception"	B2	org
-"condoms 'family planning'"	A05	org
-"condoms 'family planning'"	A09	org
-"condoms 'family planning'"	A13C	org
-"condoms 'family planning'"	B1	org
-"condoms 'family planning'"	B1	org
-"condoms 'family planning'"	B3	org
-"condoms 'family planning'"	B4	org
-"'Rhythm methods'"	B2	org
-"'Rhythm methods'"	C	org
-"'Rhythm methods'"	C	org
-"'Preventing pregnancy'"	A06	org
-"'Preventing pregnancy'"	A09	org
-"'Preventing pregnancy'"	A10D	org
-"'Preventing pregnancy'"	A13B	org
-"'Preventing pregnancy'"	B1	org
-"'Preventing pregnancy'"	B2	org
-"'Preventing pregnancy'"	B2	org
-"'Preventing pregnancy'"	C	org
-"'Preventing pregnancy'"	C	org
-"'Pregnancy prevention'"	A13F	org
-"'Pregnancy prevention'"	A02	org
-"'Pregnancy prevention'"	A02	org
-"'Pregnancy prevention'"	A02	org
-"'Pregnancy prevention'"	A02	org
-"'Pregnancy prevention'"	A02	org
-"'Pregnancy prevention'"	A02	org
-"'Pregnancy prevention'"	A02	org
-"'Pregnancy prevention'"	A02	org
-"'Pregnancy prevention'"	A02	org
-"'Pregnancy prevention'"	A02	org
-"'Pregnancy prevention'"	A02	org
-"'Pregnancy prevention'"	A02	org
-"'Pregnancy prevention'"	A13A	org
-"'Pregnancy prevention'"	A13B	org
-"'Pregnancy prevention'"	A13B	org
-"'Pregnancy prevention'"	A13B	org
-"'Pregnancy prevention'"	A13B	org
-"'Pregnancy prevention'"	A13C	org
-"'Pregnancy prevention'"	A13C	org
-"'Pregnancy prevention'"	A13C	org
-"'Pregnancy prevention'"	A13D	org
-"'Pregnancy prevention'"	A13G	org
-"'Pregnancy prevention'"	A13G	org
-"'Pregnancy prevention'"	B1	org
-"'Pregnancy prevention'"	B4	org
-"'Planned parenthood'"	A00	org
-"'Planned parenthood'"	A06	org
-"'Planned parenthood'"	A06	org
-"'Planned parenthood'"	A06	org
-"'Planned parenthood'"	A06	org
-"'Planned parenthood'"	A06	org
-"'Planned parenthood'"	A06	org
-"'Planned parenthood'"	A07	org
-"'Planned parenthood'"	A07	org
-"'Planned parenthood'"	A07	org
-"'Planned parenthood'"	A13B	org
-"'Planned parenthood'"	A13F	org
-"'Planned parenthood'"	B4	org
-"'Planned parenthood'"	B4	org
-"'Planned parenthood'"	B4	org
-"'Planned parenthood'"	B4	org
-"'Planned parenthood'"	B4	org
-"'Planned parenthood'"	B4	org
-"'Planned parenthood'"	B4	org
-"'pill'+'family planning'"	A02	org
-"'pill'+'family planning'"	A13C	org
-"'pill'+'family planning'"	B1	org
-"'pill'+'family planning'"	B2	org
-"'Not having babies'"	A03	org
-"'Not having babies'"	A11	org
-"'Fertility regulation'"	A00	org
-"'Fertility regulation'"	C	org
-"'Fertility control'"	A08	org
-"'Family size'"	A03	org
-"'Family size'"	A03	org
-"'Family size'"	A09	org
-"'Birth spacing'"	A10A	org
-"'Birth spacing'"	A10A	org
-"'Birth spacing'"	A10A	org
-"'Birth spacing'"	A10A	org
-"'Birth spacing'"	A10A	org
-"'Birth spacing'"	A10A	org
-"'Birth spacing'"	A10A	org
-"'Birth control'"	A06	org
-"'Birth control'"	A06	org
-"'Birth control'"	A11	org
-"'Birth control'"	B2	org
-"'Birth control'"	B2	org
-"'Birth control'"	B2	org
-"'Birth control methods'"	A13C	org
-"'Birth control methods'"	B1	org
-"'Birth control methods'"	B1	org
-"'Birth control methods'"	B2	org
-"'Birth control methods'"	B2	org
-"'Birth control methods'"	B2	org
-"'Birth control methods'"	B2	org
-"'Birth control methods'"	B2	org
-"'Birth control methods'"	B2	org
-"'Birth control methods'"	B2	org
-"'Birth control methods'"	B2	org
-"'Birth control methods'"	B2	org
-"'Birth control methods'"	B4	org
-"'Birth control methods'"	B4	org
-"'Birth control methods'"	B4	org
-"pill contraception"	B2	org
-"pill contraception"	B2	org
-"IUD 'family planning'"	B2	org
-"IUD 'family planning'"	B2	org
-"IUD 'family planning'"	B2	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"contraception"	B2	org
-"contraception"	B2	org
-"contraception"	B2	org
-"contraception"	B2	org
-"contraception"	B4	org
-"condoms contraception"	B2	org
-"condoms 'family planning'"	B1	org
-"condoms 'family planning'"	B2	org
-"condoms 'family planning'"	B2	org
-"condoms 'family planning'"	B2	org
-"condoms 'family planning'"	B2	org
-"'pill'+'family planning'"	B2	org
-"'pill'+'family planning'"	B2	org
-"'Fertility control'"	A07	org
-"family planning"	A09	org
-"IUD 'family planning'"	B2	org
-"family planning"	B4	org
-"family planning"	A00	org
-"'Birth spacing'"	A10A	org
-"IUD 'family planning'"	B2	org
-"IUD 'family planning'"	B2	org
-"IUD 'family planning'"	B2	org
-"family planning"	A05	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"family planning"	B4	org
-"contraception"	B2	org
-"condoms 'family planning'"	B1	org
-"condoms 'family planning'"	B3	org
-"condoms 'family planning'"	B4	org
-"condoms 'family planning'"	B4	org
-"'pill'+'family planning'"	B2	org
-"'pill'+'family planning'"	B2	org
-"'pill'+'family planning'"	B2	org
-"'pill'+'family planning'"	B2	org
-"'pill'+'family planning'"	B2	org
-"'Fertility regulation'"	C	org
-"IUD 'family planning'"	B2	org
-"IUD 'family planning'"	B2	org
-"IUD 'family planning'"	B2	org
-"hormonal cotraceptive"	A10E	org
-"hormonal cotraceptive"	B2	org
-"family planning"	B4	org
-"contraception"	A02	org
-"contraception"	A13C	org
-"contraception"	B1	org
-"contraception"	B1	org
-"contraception"	B1	org
-"contraception"	B2	org
-"contraception"	B2	org
-"contraception"	B2	org
-"contraception"	B2	org
-"condoms 'family planning'"	A09	org
-"condoms 'family planning'"	B2	org
-"'pill'+'family planning'"	B2	org
-"'pill'+'family planning'"	B2	org
-"'pill'+'family planning'"	B2	org
-"'pill'+'family planning'"	B4	org
-"'pill'+'family planning'"	B4	org
-"'pill'+'family planning'"	A10A	others
-"family planning"	A00	ug
-"'pill'+'family planning'"	B2	ug
-"pill contraception"	B2	uk
-"pill contraception"	B2	uk
-"hormonal cotraceptive"	B2	uk
-"hormonal cotraceptive"	B2	uk
-"hormonal cotraceptive"	B2	uk
-"contraception"	B2	uk
-"contraception"	B2	uk
-"contraception"	B2	uk
-"contraception"	B2	uk
-"contraception"	B2	uk
-"condoms contraception"	B2	uk
-"condoms contraception"	B2	uk
-"condoms contraception"	B2	uk
-"condoms 'family planning'"	A13C	uk
-"'Preventing pregnancy'"	B2	uk
-"'Preventing pregnancy'"	B2	uk
-"'pill'+'family planning'"	B2	uk
-"'Birth control'"	B2	uk
-"family planning"	B4	us
-"family planning"	B4	us
-"'Pregnancy prevention'"	A13A	us
-"family planning"	B1	us
-"family planning"	B4	us
-"family planning"	B4	us
-"family planning"	B4	us
-'Pregnancy prevention'	A13B	us
+QUERY	TAG	TLD'Fertility regulation'	Natural Faminily Planning	cahormonal cotraceptive	Contr. | risks & benefits	othershormonal cotraceptive	Contr. | risks & benefits	othershormonal cotraceptive	Contr. | risks & benefits	ac.ukhormonal cotraceptive	Contr. | risks & benefits	ac.ukcondoms 'family planning'	Med. | methods	ac.uk'Family size'	Contr. | family size	ac.ukcondoms 'family planning'	Med. | services	otherspill contraception	Med. | methods	cahormonal cotraceptive	Med. | methods	cacontraception	Med. | methods	cacondoms 'family planning'	Med. | methods	ca'Preventing pregnancy'	Med. | sexual health	ca'Preventing pregnancy'	Med. | methods	ca'Pregnancy prevention'	Med. | methods	ca'Planned parenthood'	Med. | sexual health	ca'Birth control'	Med. | methods	ca'Birth control'	Med. | methods	ca'Birth control'	Med. | methods	ca'Birth control methods'	Contr. | youth	ca'Birth control methods'	Med. | methods	ca'Birth control methods'	Med. | methods	ca'Birth control methods'	Natural Faminily Planning	ca'Planned parenthood'	Med. | services	ca'pill'+'family planning'	Contr. | programme	others'Not having babies'	Contr. | family size	othersIUD 'family planning'	Med. | methods	co.nzcondoms 'family planning'	Med. | methods	co.nzcondoms 'family planning'	Med. | methods	co.nz'pill'+'family planning'	Contr. | youth	co.nz'Not having babies'	Contr. | family size	co.nz'Fertility regulation'	Natural Faminily Planning	co.nzpill contraception	Contr. | risks & benefits	co.ukpill contraception	Med. | methods	co.ukpill contraception	Med. | methods	co.ukIUD 'family planning'	Med. | methods	co.ukhormonal cotraceptive	Contr. | risks & benefits	co.ukhormonal cotraceptive	Med. | methods	co.ukhormonal cotraceptive	Med. | methods	co.ukhormonal cotraceptive	Med. | methods	co.ukcontraception	Med. | methods	co.ukcontraception	Med. | methods	co.ukcontraception	Med. | methods	co.ukcontraception	Med. | methods	co.ukcontraception	Med. | methods	co.ukcondoms contraception	Contr. | religion	co.ukcondoms 'family planning'	Contr. | advocacy	co.ukcondoms 'family planning'	Med. | methods	co.uk'Pregnancy prevention'	Contr. | youth	co.uk'pill'+'family planning'	Med. | sexual health	co.uk'pill'+'family planning'	Med. | sexual health	co.uk'pill'+'family planning'	Med. | methods	co.uk'pill'+'family planning'	Med. | methods	co.uk'pill'+'family planning'	Med. | methods	co.uk'pill'+'family planning'	Med. | methods	co.uk'Family size'	Contr. | family size	co.uk'Family size'	Contr. | family size	co.uk'Family size'	Contr. | family size	co.ukpill contraception	Contr. | risks & benefits	co.zafamily planning	Med. | methods	co.za'Birth spacing'	Contr. | religion	co.za'Preventing pregnancy'	Med. | methods	compill contraception	Contr. | law	compill contraception	Contr. | law	compill contraception	Contr. | law	compill contraception	Contr. | law	compill contraception	Contr. | law	compill contraception	Contr. | law	compill contraception	Contr. | risks & benefits	compill contraception	Contr. | religion	compill contraception	Med. | methods	compill contraception	Med. | methods	compill contraception	Med. | methods	compill contraception	Med. | methods	compill contraception	Med. | sales	comIUD 'family planning'	Contr. | risks & benefits	comIUD 'family planning'	Contr. | risks & benefits	comIUD 'family planning'	Contr. | risks & benefits	comIUD 'family planning'	Contr. | religion	comIUD 'family planning'	Med. | methods	comIUD 'family planning'	Med. | methods	comhormonal cotraceptive	Contr. | finances	comhormonal cotraceptive	Contr. | finances	comhormonal cotraceptive	Contr. | finances	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | risks & benefits	comhormonal cotraceptive	Contr. | youth	comhormonal cotraceptive	Contr. | youth	comhormonal cotraceptive	Med. | methods	comhormonal cotraceptive	Med. | methods	comhormonal cotraceptive	Med. | methods	comhormonal cotraceptive	Med. | methods	comhormonal cotraceptive	Med. | methods	comhormonal cotraceptive	Med. | methods	comhormonal cotraceptive	Med. | methods	comhormonal cotraceptive	Med. | methods	comhormonal cotraceptive	Med. | methods	comhormonal cotraceptive	Med. | sales	comhormonal cotraceptive	Med. | sales	comhormonal cotraceptive	Natural Faminily Planning	comhormonal cotraceptive	Natural Faminily Planning	comhormonal cotraceptive	Natural Faminily Planning	comfamily planning	Contr. | advocacy	comfamily planning	Contr. | advocacy	comfamily planning	Contr. | development	comfamily planning	Contr. | finances	comfamily planning	Contr. | law	comfamily planning	Contr. | law	comfamily planning	Contr. | law	comfamily planning	Med. | services	comfamily planning	Med. | services	comfamily planning	Med. | services	comcontraception	Contr. | advocacy	comcontraception	Contr. | advocacy	comcontraception	Contr. | advocacy	comcontraception	Contr. | advocacy	comcontraception	Contr. | advocacy	comcontraception	Contr. | law	comcontraception	Contr. | law	comcontraception	Contr. | law	comcontraception	Contr. | law	comcontraception	Contr. | law	comcontraception	Contr. | law	comcontraception	Contr. | law	comcontraception	Contr. | law	comcontraception	Contr. | law	comcontraception	Contr. | law	comcontraception	Contr. | law	comcontraception	Contr. | law	comcontraception	Contr. | law	comcontraception	Contr. | law	comcontraception	Contr. | risks & benefits	comcontraception	Contr. | religion	comcontraception	Contr. | religion	comcontraception	Contr. | religion	comcontraception	Contr. | religion	comcontraception	Contr. | religion	comcontraception	Contr. | religion	comcontraception	Contr. | religion	comcontraception	Contr. | religion	comcontraception	Contr. | religion	comcontraception	Contr. | religion	comcontraception	Med. | sexual health	comcontraception	Med. | methods	comcontraception	Med. | methods	comcontraception	Med. | methods	comcontraception	Med. | sales	comcontraception	Med. | sales	comcontraception	Med. | services	comcondoms contraception	Contr. | religion	comcondoms contraception	Contr. | youth	comcondoms contraception	Med. | sexual health	comcondoms contraception	Med. | sexual health	comcondoms contraception	Med. | sexual health	comcondoms contraception	Med. | methods	comcondoms contraception	Med. | methods	comcondoms contraception	Med. | methods	comcondoms contraception	Med. | services	comcondoms 'family planning'	Contr. | development	comcondoms 'family planning'	Contr. | law	comcondoms 'family planning'	Contr. | religion	comcondoms 'family planning'	Contr. | religion	comcondoms 'family planning'	Med. | sexual health	comcondoms 'family planning'	Med. | methods	com'Rhythm methods'	Contr. | youth	com'Rhythm methods'	Med. | methods	com'Rhythm methods'	Med. | methods	com'Rhythm methods'	Natural Faminily Planning	com'Rhythm methods'	Natural Faminily Planning	com'Rhythm methods'	Natural Faminily Planning	com'Rhythm methods'	Natural Faminily Planning	com'Rhythm methods'	Natural Faminily Planning	com'Preventing pregnancy'	Contr. | youth	com'Preventing pregnancy'	Med. | sexual health	com'Preventing pregnancy'	Med. | sexual health	com'Preventing pregnancy'	Med. | sexual health	com'Preventing pregnancy'	Med. | methods	com'Preventing pregnancy'	Med. | methods	com'Preventing pregnancy'	Med. | methods	com'Preventing pregnancy'	Med. | methods	com'Preventing pregnancy'	Med. | methods	com'Pregnancy prevention'	Contr. | finances	com'Pregnancy prevention'	Contr. | youth	com'Pregnancy prevention'	Contr. | youth	com'Pregnancy prevention'	Contr. | youth	com'Pregnancy prevention'	Contr. | youth	com'Pregnancy prevention'	Contr. | youth	com'Pregnancy prevention'	Contr. | youth	com'Planned parenthood'	Contr. | lifestyle	com'Planned parenthood'	Contr. | law	com'Planned parenthood'	Contr. | law	com'Planned parenthood'	Contr. | law	com'Planned parenthood'	Contr. | law	com'Planned parenthood'	Contr. | law	com'Planned parenthood'	Contr. | law	com'Planned parenthood'	Contr. | law	com'Planned parenthood'	Contr. | law	com'Planned parenthood'	Contr. | law	com'Planned parenthood'	Contr. | law	com'Planned parenthood'	Contr. | law	com'pill'+'family planning'	Contr. | finances	com'pill'+'family planning'	Contr. | finances	com'pill'+'family planning'	Contr. | risks & benefits	com'pill'+'family planning'	Contr. | risks & benefits	com'pill'+'family planning'	Med. | sexual health	com'pill'+'family planning'	Med. | sexual health	com'pill'+'family planning'	Med. | services	com'pill'+'family planning'	Med. | services	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | family size	com'Not having babies'	Contr. | religion	com'Not having babies'	Contr. | religion	com'Not having babies'	Contr. | youth	com'Not having babies'	Contr. | youth	com'Not having babies'	Contr. | youth	com'Not having babies'	Contr. | youth	com'Not having babies'	Contr. | youth	com'Not having babies'	Contr. | youth	com'Not having babies'	Contr. | youth	com'Fertility regulation'	Natural Faminily Planning	com'Fertility control'	Contr. | law	com'Fertility control'	Contr. | programme	com'Fertility control'	Natural Faminily Planning	com'Family size'	Contr. | family size	com'Family size'	Contr. | family size	com'Family size'	Contr. | family size	com'Family size'	Contr. | family size	com'Family size'	Contr. | family size	com'Family size'	Contr. | family size	com'Family size'	Contr. | family size	com'Family size'	Contr. | family size	com'Birth spacing'	Contr. | risks & benefits	com'Birth spacing'	Contr. | risks & benefits	com'Birth spacing'	Contr. | risks & benefits	com'Birth spacing'	Contr. | risks & benefits	com'Birth spacing'	Contr. | risks & benefits	com'Birth spacing'	Contr. | risks & benefits	com'Birth spacing'	Contr. | risks & benefits	com'Birth control'	Contr. | development	com'Birth control'	Contr. | law	com'Birth control'	Contr. | law	com'Birth control'	Contr. | risks & benefits	com'Birth control'	Contr. | religion	com'Birth control'	Med. | sexual health	com'Birth control'	Med. | sexual health	com'Birth control'	Med. | methods	com'Birth control'	Med. | methods	com'Birth control'	Med. | methods	com'Birth control'	Med. | methods	com'Birth control'	Med. | methods	com'Birth control'	Med. | sales	com'Birth control methods'	Contr. | youth	com'Birth control methods'	Med. | methods	com'Birth control methods'	Med. | methods	com'Birth control methods'	Med. | methods	com'Birth control methods'	Med. | methods	com'Birth control methods'	Med. | methods	com'Birth control methods'	Med. | methods	com'Birth control methods'	Med. | methods	com'Birth control methods'	Med. | methods	com'Birth control methods'	Med. | methods	compill contraception	Med. | methods	comIUD 'family planning'	Med. | sexual health	comIUD 'family planning'	Med. | methods	comhormonal cotraceptive	Med. | methods	comfamily planning	Med. | services	comfamily planning	Med. | services	comcontraception	Med. | methods	comcontraception	Med. | methods	comcondoms 'family planning'	Med. | methods	com'pill'+'family planning'	Med. | methods	com'pill'+'family planning'	Med. | methods	com'Not having babies'	Contr. | risks & benefits	com'Birth control'	Med. | services	com'Birth spacing'	Contr. | risks & benefits	com'Birth spacing'	Contr. | risks & benefits	compill contraception	Med. | methods	eduIUD 'family planning'	Med. | methods	eduIUD 'family planning'	Med. | methods	eduhormonal cotraceptive	Contr. | programme	eduhormonal cotraceptive	Contr. | risks & benefits	eduhormonal cotraceptive	Contr. | risks & benefits	eduhormonal cotraceptive	Med. | methods	eduhormonal cotraceptive	Med. | methods	educontraception	Contr. | advocacy	educontraception	Med. | methods	educontraception	Med. | methods	educondoms contraception	Contr. | youth	educondoms contraception	Contr. | youth	educondoms contraception	Contr. | youth	educondoms contraception	Med. | sexual health	educondoms contraception	Med. | methods	educondoms 'family planning'	Med. | methods	edu'Preventing pregnancy'	Contr. | law	edu'Preventing pregnancy'	Contr. | youth	edu'Pregnancy prevention'	Contr. | lifestyle	edu'Pregnancy prevention'	Contr. | youth	edu'Pregnancy prevention'	Med. | sexual health	edu'pill'+'family planning'	Med. | methods	edu'Fertility control'	Contr. | development	edu'Birth control methods'	Med. | methods	eduhormonal cotraceptive	Contr. | risks & benefits	eucontraception	Contr. | advocacy	eucontraception	Med. | methods	otherscondoms 'family planning'	Med. | methods	otherspill contraception	Contr. | risks & benefits	govIUD 'family planning'	Med. | methods	govhormonal cotraceptive	Contr. | risks & benefits	govhormonal cotraceptive	Contr. | risks & benefits	govhormonal cotraceptive	Contr. | risks & benefits	govhormonal cotraceptive	Contr. | risks & benefits	govhormonal cotraceptive	Contr. | risks & benefits	govhormonal cotraceptive	Contr. | risks & benefits	govfamily planning	Contr. | advocacy	govfamily planning	Contr. | finances	govfamily planning	Contr. | law	govfamily planning	Contr. | programme	govfamily planning	Contr. | programme	govfamily planning	Med. | services	govfamily planning	Med. | services	govfamily planning	Med. | services	govfamily planning	Med. | services	govfamily planning	Med. | services	govfamily planning	Med. | services	govfamily planning	Med. | services	govfamily planning	Med. | services	govfamily planning	Med. | services	govfamily planning	Med. | services	govfamily planning	Med. | services	govcontraception	Contr. | law	govcontraception	Contr. | law	govcontraception	Contr. | programme	govcontraception	Med. | sexual health	govcontraception	Med. | methods	govcondoms contraception	Contr. | youth	govcondoms 'family planning'	Med. | methods	govcondoms 'family planning'	Med. | methods	gov'Preventing pregnancy'	Contr. | youth	gov'Preventing pregnancy'	Contr. | youth	gov'Preventing pregnancy'	Med. | methods	gov'Pregnancy prevention'	Contr. | lifestyle	gov'Pregnancy prevention'	Contr. | lifestyle	gov'Pregnancy prevention'	Contr. | lifestyle	gov'Pregnancy prevention'	Contr. | lifestyle	gov'Pregnancy prevention'	Contr. | youth	gov'Pregnancy prevention'	Contr. | youth	gov'Pregnancy prevention'	Contr. | youth	gov'Pregnancy prevention'	Contr. | youth	gov'Pregnancy prevention'	Contr. | youth	gov'Pregnancy prevention'	Contr. | youth	gov'Pregnancy prevention'	Med. | sexual health	gov'pill'+'family planning'	Med. | methods	gov'pill'+'family planning'	Med. | methods	gov'Birth spacing'	Contr. | risks & benefits	gov'Birth spacing'	Contr. | risks & benefits	gov'Birth control'	Contr. | youth	gov'Birth control'	Med. | sexual health	gov'Birth control'	Med. | methods	gov'Birth control methods'	Med. | sexual health	gov'Birth control methods'	Med. | methods	gov'Birth control methods'	Med. | methods	gov'Birth control methods'	Med. | methods	gov'Birth control methods'	Med. | services	govpill contraception	Med. | methods	govpill contraception	Med. | methods	govpill contraception	Med. | methods	govcontraception	Contr. | lifestyle	govcontraception	Contr. | youth	govcontraception	Contr. | youth	govcontraception	Med. | methods	govcondoms contraception	Med. | sexual health	govcondoms contraception	Med. | methods	govcondoms contraception	Med. | methods	govcondoms contraception	Med. | methods	gov'Birth spacing'	Contr. | risks & benefits	govhormonal cotraceptive	Contr. | risks & benefits	gov'Preventing pregnancy'	Contr. | youth	gov'Fertility regulation'	Contr. | law	govIUD 'family planning'	Med. | methods	govhormonal cotraceptive	Med. | methods	govcontraception	Contr. | law	govfamily planning	Med. | services	uspill contraception	Contr. | risks & benefits	iepill contraception	Med. | methods	iepill contraception	Med. | methods	iepill contraception	Med. | methods	iefamily planning	Med. | services	iecontraception	Med. | methods	iecontraception	Med. | methods	iecontraception	Med. | services	iecontraception	Med. | services	iecondoms contraception	Med. | methods	iecondoms contraception	Med. | methods	iecondoms contraception	Med. | methods	iecondoms contraception	Med. | methods	ie'pill'+'family planning'	Med. | methods	ie'pill'+'family planning'	Med. | methods	ie'Family size'	Contr. | family size	ie'Fertility regulation'	Contr. | programme	in'Birth spacing'	Contr. | risks & benefits	in'Family size'	Contr. | family size	in'Rhythm methods'	Natural Faminily Planning	othershormonal cotraceptive	Contr. | risks & benefits	inthormonal cotraceptive	Contr. | risks & benefits	intfamily planning	Contr. | programme	int'Fertility regulation'	Med. | methods	int'Birth spacing'	Contr. | risks & benefits	intIUD 'family planning'	Med. | methods	nethormonal cotraceptive	Contr. | risks & benefits	nethormonal cotraceptive	Contr. | risks & benefits	nethormonal cotraceptive	Contr. | risks & benefits	netfamily planning	Contr. | programme	netfamily planning	Med. | services	netfamily planning	Med. | services	netfamily planning	Med. | services	netfamily planning	Natural Faminily Planning	netcondoms contraception	Contr. | religion	netcondoms contraception	Med. | methods	net'Rhythm methods'	Contr. | religion	net'pill'+'family planning'	Med. | methods	net'Fertility regulation'	Contr. | programme	nethormonal cotraceptive	Med. | methods	otherspill contraception	Med. | methods	orgpill contraception	Med. | methods	orgIUD 'family planning'	Contr. | programme	orgIUD 'family planning'	Contr. | youth	orgIUD 'family planning'	Med. | methods	orgIUD 'family planning'	Med. | methods	orgIUD 'family planning'	Med. | methods	orghormonal cotraceptive	Contr. | law	orghormonal cotraceptive	Contr. | programme	orghormonal cotraceptive	Contr. | programme	orghormonal cotraceptive	Contr. | programme	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Contr. | religion	orghormonal cotraceptive	Contr. | religion	orghormonal cotraceptive	Med. | sexual health	orghormonal cotraceptive	Med. | methods	orghormonal cotraceptive	Med. | methods	orghormonal cotraceptive	Med. | methods	orghormonal cotraceptive	Med. | methods	orghormonal cotraceptive	Med. | methods	orghormonal cotraceptive	Med. | methods	orghormonal cotraceptive	Med. | methods	orgplanned parenthood	Contr. | advocacy	orgfamily planning	Med. | methods	orgfamily planning	Contr. | advocacy	orgfamily planning	Contr. | advocacy	orgfamily planning	Contr. | advocacy	orgfamily planning	Contr. | advocacy	orgfamily planning	Contr. | advocacy	orgfamily planning	Contr. | advocacy	orgfamily planning	Contr. | advocacy	orgfamily planning	Contr. | advocacy	orgfamily planning	Contr. | advocacy	orgfamily planning	Contr. | advocacy	orgfamily planning	Contr. | development	orgfamily planning	Contr. | development	orgfamily planning	Contr. | development	orgfamily planning	Contr. | programme	orgfamily planning	Contr. | programme	orgfamily planning	Contr. | programme	orgfamily planning	Contr. | programme	orgfamily planning	Contr. | religion	orgfamily planning	Med. | sexual health	orgfamily planning	Med. | sexual health	orgfamily planning	Med. | methods	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Natural Faminily Planning	orgcontraception	Contr. | advocacy	orgcontraception	Contr. | advocacy	orgcontraception	Contr. | advocacy	orgcontraception	Contr. | advocacy	orgcontraception	Contr. | development	orgcontraception	Contr. | law	orgcontraception	Contr. | law	orgcontraception	Contr. | law	orgcontraception	Contr. | religion	orgcontraception	Contr. | religion	orgcontraception	Contr. | religion	orgcontraception	Contr. | youth	orgcontraception	Contr. | youth	orgcontraception	Med. | methods	orgcontraception	Med. | methods	orgcontraception	Med. | methods	orgcontraception	Med. | methods	orgcontraception	Med. | methods	orgcontraception	Med. | methods	orgcontraception	Med. | methods	orgcontraception	Med. | methods	orgcondoms contraception	Contr. | advocacy	orgcondoms contraception	Contr. | law	orgcondoms contraception	Contr. | youth	orgcondoms contraception	Contr. | youth	orgcondoms contraception	Med. | methods	orgcondoms contraception	Med. | methods	orgcondoms contraception	Med. | methods	orgcondoms 'family planning'	Contr. | human rights	orgcondoms 'family planning'	Contr. | programme	orgcondoms 'family planning'	Contr. | youth	orgcondoms 'family planning'	Med. | sexual health	orgcondoms 'family planning'	Med. | sexual health	orgcondoms 'family planning'	Med. | sales	orgcondoms 'family planning'	Med. | services	org'Rhythm methods'	Med. | methods	org'Rhythm methods'	Natural Faminily Planning	org'Rhythm methods'	Natural Faminily Planning	org'Preventing pregnancy'	Contr. | law	org'Preventing pregnancy'	Contr. | programme	org'Preventing pregnancy'	Contr. | risks & benefits	org'Preventing pregnancy'	Contr. | youth	org'Preventing pregnancy'	Med. | sexual health	org'Preventing pregnancy'	Med. | methods	org'Preventing pregnancy'	Med. | methods	org'Preventing pregnancy'	Natural Faminily Planning	org'Preventing pregnancy'	Natural Faminily Planning	org'Pregnancy prevention'	Contr. | youth	org'Pregnancy prevention'	Contr. | lifestyle	org'Pregnancy prevention'	Contr. | lifestyle	org'Pregnancy prevention'	Contr. | lifestyle	org'Pregnancy prevention'	Contr. | lifestyle	org'Pregnancy prevention'	Contr. | lifestyle	org'Pregnancy prevention'	Contr. | lifestyle	org'Pregnancy prevention'	Contr. | lifestyle	org'Pregnancy prevention'	Contr. | lifestyle	org'Pregnancy prevention'	Contr. | lifestyle	org'Pregnancy prevention'	Contr. | lifestyle	org'Pregnancy prevention'	Contr. | lifestyle	org'Pregnancy prevention'	Contr. | lifestyle	org'Pregnancy prevention'	Contr. | youth	org'Pregnancy prevention'	Contr. | youth	org'Pregnancy prevention'	Contr. | youth	org'Pregnancy prevention'	Contr. | youth	org'Pregnancy prevention'	Contr. | youth	org'Pregnancy prevention'	Contr. | youth	org'Pregnancy prevention'	Contr. | youth	org'Pregnancy prevention'	Contr. | youth	org'Pregnancy prevention'	Contr. | youth	org'Pregnancy prevention'	Contr. | youth	org'Pregnancy prevention'	Contr. | youth	org'Pregnancy prevention'	Med. | sexual health	org'Pregnancy prevention'	Med. | services	org'Planned parenthood'	Contr. | advocacy	org'Planned parenthood'	Contr. | law	org'Planned parenthood'	Contr. | law	org'Planned parenthood'	Contr. | law	org'Planned parenthood'	Contr. | law	org'Planned parenthood'	Contr. | law	org'Planned parenthood'	Contr. | law	org'Planned parenthood'	Contr. | law	org'Planned parenthood'	Contr. | law	org'Planned parenthood'	Contr. | law	org'Planned parenthood'	Contr. | youth	org'Planned parenthood'	Contr. | youth	org'Planned parenthood'	Med. | services	org'Planned parenthood'	Med. | services	org'Planned parenthood'	Med. | services	org'Planned parenthood'	Med. | services	org'Planned parenthood'	Med. | services	org'Planned parenthood'	Med. | services	org'Planned parenthood'	Med. | services	org'pill'+'family planning'	Contr. | lifestyle	org'pill'+'family planning'	Contr. | youth	org'pill'+'family planning'	Med. | sexual health	org'pill'+'family planning'	Med. | methods	org'Not having babies'	Contr. | family size	org'Not having babies'	Contr. | religion	org'Fertility regulation'	Contr. | advocacy	org'Fertility regulation'	Natural Faminily Planning	org'Fertility control'	Contr. | population growth	org'Family size'	Contr. | family size	org'Family size'	Contr. | family size	org'Family size'	Contr. | programme	org'Birth spacing'	Contr. | risks & benefits	org'Birth spacing'	Contr. | risks & benefits	org'Birth spacing'	Contr. | risks & benefits	org'Birth spacing'	Contr. | risks & benefits	org'Birth spacing'	Contr. | risks & benefits	org'Birth spacing'	Contr. | risks & benefits	org'Birth spacing'	Contr. | risks & benefits	org'Birth control'	Contr. | law	org'Birth control'	Contr. | law	org'Birth control'	Contr. | religion	org'Birth control'	Med. | methods	org'Birth control'	Med. | methods	org'Birth control'	Med. | methods	org'Birth control methods'	Contr. | youth	org'Birth control methods'	Med. | sexual health	org'Birth control methods'	Med. | sexual health	org'Birth control methods'	Med. | methods	org'Birth control methods'	Med. | methods	org'Birth control methods'	Med. | methods	org'Birth control methods'	Med. | methods	org'Birth control methods'	Med. | methods	org'Birth control methods'	Med. | methods	org'Birth control methods'	Med. | methods	org'Birth control methods'	Med. | methods	org'Birth control methods'	Med. | methods	org'Birth control methods'	Med. | services	org'Birth control methods'	Med. | services	org'Birth control methods'	Med. | services	orgpill contraception	Med. | methods	orgpill contraception	Med. | methods	orgIUD 'family planning'	Med. | methods	orgIUD 'family planning'	Med. | methods	orgIUD 'family planning'	Med. | methods	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgcontraception	Med. | methods	orgcontraception	Med. | methods	orgcontraception	Med. | methods	orgcontraception	Med. | methods	orgcontraception	Med. | services	orgcondoms contraception	Med. | methods	orgcondoms 'family planning'	Med. | sexual health	orgcondoms 'family planning'	Med. | methods	orgcondoms 'family planning'	Med. | methods	orgcondoms 'family planning'	Med. | methods	orgcondoms 'family planning'	Med. | methods	org'pill'+'family planning'	Med. | methods	org'pill'+'family planning'	Med. | methods	org'Fertility control'	Contr. | law	orgfamily planning	Contr. | programme	orgIUD 'family planning'	Med. | methods	orgfamily planning	Med. | services	orgfamily planning	Contr. | advocacy	org'Birth spacing'	Contr. | risks & benefits	orgIUD 'family planning'	Med. | methods	orgIUD 'family planning'	Med. | methods	orgIUD 'family planning'	Med. | methods	orgfamily planning	Contr. | human rights	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgfamily planning	Med. | services	orgcontraception	Med. | methods	orgcondoms 'family planning'	Med. | sexual health	orgcondoms 'family planning'	Med. | sales	orgcondoms 'family planning'	Med. | services	orgcondoms 'family planning'	Med. | services	org'pill'+'family planning'	Med. | methods	org'pill'+'family planning'	Med. | methods	org'pill'+'family planning'	Med. | methods	org'pill'+'family planning'	Med. | methods	org'pill'+'family planning'	Med. | methods	org'Fertility regulation'	Natural Faminily Planning	orgIUD 'family planning'	Med. | methods	orgIUD 'family planning'	Med. | methods	orgIUD 'family planning'	Med. | methods	orghormonal cotraceptive	Contr. | risks & benefits	orghormonal cotraceptive	Med. | methods	orgfamily planning	Med. | services	orgcontraception	Contr. | lifestyle	orgcontraception	Contr. | youth	orgcontraception	Med. | sexual health	orgcontraception	Med. | sexual health	orgcontraception	Med. | sexual health	orgcontraception	Med. | methods	orgcontraception	Med. | methods	orgcontraception	Med. | methods	orgcontraception	Med. | methods	orgcondoms 'family planning'	Contr. | programme	orgcondoms 'family planning'	Med. | methods	org'pill'+'family planning'	Med. | methods	org'pill'+'family planning'	Med. | methods	org'pill'+'family planning'	Med. | methods	org'pill'+'family planning'	Med. | services	org'pill'+'family planning'	Med. | services	org'pill'+'family planning'	Contr. | risks & benefits	othersfamily planning	Contr. | advocacy	ug'pill'+'family planning'	Med. | methods	ugpill contraception	Med. | methods	ukpill contraception	Med. | methods	ukhormonal cotraceptive	Med. | methods	ukhormonal cotraceptive	Med. | methods	ukhormonal cotraceptive	Med. | methods	ukcontraception	Med. | methods	ukcontraception	Med. | methods	ukcontraception	Med. | methods	ukcontraception	Med. | methods	ukcontraception	Med. | methods	ukcondoms contraception	Med. | methods	ukcondoms contraception	Med. | methods	ukcondoms contraception	Med. | methods	ukcondoms 'family planning'	Contr. | youth	uk'Preventing pregnancy'	Med. | methods	uk'Preventing pregnancy'	Med. | methods	uk'pill'+'family planning'	Med. | methods	uk'Birth control'	Med. | methods	ukfamily planning	Med. | services	usfamily planning	Med. | services	us'Pregnancy prevention'	Contr. | youth	usfamily planning	Med. | sexual health	usfamily planning	Med. | services	usfamily planning	Med. | services	usfamily planning	Med. | services	us'Pregnancy prevention'	Contr. | youth	us

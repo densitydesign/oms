@@ -1,43 +1,35 @@
-<div class="container wiki-stacked" >
-<div class="row section-row">
-	<div class="btn-group toggle-wiki" id="custom">
-		<button type="button" class="btn btn-default">Multiple</button>
-		<button type="button" class="btn btn-default">Stacked</button>
-	</div>
-	<h3 class="section-title">birth control</h3>
-	<hr>
-	<div class="col-md-3 analytics">
-		<h4 class="section-title">creation</h4>
-		<div class="numbers">9.11.2001</div>
-		<h4 class="section-title">number of edits</h4>
-		<div class="numbers">...</div>
-		<h4 class="section-title">registered editors</h4>
-		<div class="numbers">730</div>
-		<h4 class="section-title">unregistered editors</h4>
-		<div class="numbers">845</div>
-	</div>
-
-	<div class="col-md-9 wikiviz">
-		<div  id="birthcontrol"></div>
-	</div>
-</div>
-<div class="row section-row">
-	<h3 class="section-title">family planning</h4>
-	<hr>
-		<div class="col-md-3 analytics">
-			<h4 class="section-title">creation</h4>
-			<div class="numbers">21.05.2003</div>
-			<h4 class="section-title">number of edits</h4>
-			<div class="numbers">517</div>
-			<h4 class="section-title">registered editors</h4>
-			<div class="numbers">336</div>
-			<h4 class="section-title">unregistered editors</h4>
-			<div class="numbers">110</div>
+<div class="container-fluid side-all">
+	<div class="row side-all">
+		<div class="col-md-3 col-sm-12 side-panel">
+			<div class="row side-all">         
+				<div class="col-md-12 col-sm-9 col-xs-9" id="paginationStep">
+				</div>
+				<div class="col-md-12 col-sm-9 col-xs-9 adva-cont" legend-step>
+				</div>
+				<div class="col-md-12 col-sm-3 col-xs-3 legend" ng-show="section.legend" legend-static>
+				</div>
+			</div>
 		</div>
-
-		<div class="col-md-9 wikiviz">
-			<div  id="familyplanning"></div>
+		<div class="col-md-9 col-sm-12 main-viz">
+			<div class="container wiki-stacked" >
+				<div class="row section-row">
+					<div class="col-md-10 wikiviz">
+							<div class="btn-group toggle-wiki" id="custom">
+							<button type="button" class="btn btn-default">Multiple</button>
+							<button type="button" class="btn btn-default">Stacked</button>
+						</div>
+						<h3 class="section-title">birth control</h3>
+						<div  id="birthcontrol"></div>
+					</div>
+				</div>
+				<div class="row section-row">
+					<div class="col-md-10 wikiviz">
+						<h3 class="section-title">family planning</h4>
+						<div  id="familyplanning"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
-</div>

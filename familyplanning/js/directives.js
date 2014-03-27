@@ -2293,7 +2293,7 @@ angular.module('who.directives', [])
 			fp.datum(fpdata).call(fpChart)
 		});
 		
-		
+  
 		$('.wiki-stacked').on("click","button", function() {
 			var v=$(this).html().toLowerCase()
 			console.log(v)

@@ -1,0 +1,43 @@
+<!-- Protocol 1 -->
+<h2>HARVESTING THE EDIT HISTORY PAGE</h2>
+<p>Each Wikipedia lemma’s revision history is stored, so that any user can display the chronology of previous edits and versions. Revision history of “Family planning” consist of 517 text lines and the one of “Birth control” consists in XX lines. The information relative to one edit are displayed as follow: the url of the change, the date and time, the user profile of who made the edit, its name, the byte-size of the page at the moment of the edit, the chapter where the change has been made and a comment of the author that briefly describes it.
+</p>
+<hr>
+
+<!-- Protocol 2 -->
+<h2>HARVESTING GEO COORDINATES</h2>
+<p>We also add the city and country from where the author performed the edit, together with the exact latitude and longitude coordinates that we extracted with the use of DMI tool <a href="https://wiki.digitalmethods.net/Dmi/ToolGeoIP">Geo IP</a>.
+  <hr>
+
+  <!-- Protocol 3 -->
+  <h2>visual relation n-grams/categories</h2>
+  <p>The resulting n-grams have been visualized with a slopegraph model that allow to make several visual comparisons along the different categories of documents. All vertical lists in the diagram contain the same n-grams, thus highlighting the hierarchy of n-grams in the different categories and the specific number of occurrences associated to them, as well as the changing configuration when comparing TF and TFIDF n-grams.
+  </p>
+  <hr>
+
+  <!-- Protocol 4 -->
+  <h2>CLEANING AND TAGGING THE EDITS</h2>
+  <p>We qualified and tagged all the edits.<br>
+    First between:
+    <ul>
+      <li>minor edits</li>
+      <li>relevant edits</li>
+    </ul>
+    <p>Edits (a) are identified with the keywords list #1 with “fix”, “type”, “typo”, “typography” together with “spelling”, “grammar”, “gr” to identify orthographical and grammatical edits; “wlink”, “wikilink” and “wikify” for formatting changes and “bot” and “robot” to retrieve changes performed by automatic robots and not by real users. These have been deleted and excluded from further analyses since not useful to trace the debate on the controversial topic of the page.
+    </p>  
+    <p>According to Wikipedia policies, authors should provide an explanation when reverting so it has been possible to identified three type of edits:
+      <ul>
+        <li>reverted contents</li>
+        <li>vandalised contents</li>
+        <li>growing contents</li>
+      </ul>
+      <p>As done in other studies, in order to identify reverts (a) and the connected vandalisms (b) a list #3 of words can be provided: abbreviations referring to both vandalisms, like “vandalism”, “vandal”, “WP:VAN”, “WP:VAND”, “WP:VANDAL”, and reverts, like “revert”, “reverted”, “reverting”, “rv”, “rvt”, “rvv” that is to say “revert of vandalism”. Other words included in the list were “rm”, “rmv”, “remove”, indicating that the editor had to sort out the vandalism, as opposed to a simple reversion, and “undid, via undo, undo, undid, “WP:UNDO, WP:", “WP:RBK”, “WP:ROLLBACK”, “WP:ROLL”, “WP:RVW”, “WP:RV”; “revisioned”, “revision”, “revisioning”, “restore”, “restored”, “restoring” indicating the action of restoring the page to the version before the bad edit.
+        Than also the keyowords as “blanking”, blanked, blank page, nonsense and illegittimate indicates the negative attitude of some users to destroying the page by blanking all in it and replacinge text with nonsense or illegittimate contents. In the end, there are some dedicated tools for doing a revert as Huggle, Windows application for dealing with vandalism that requires rollback; Twinkle, JavaScript gadget allowing reversion of vandalism from page diffs; Igloo, JavaScript-based browser window for reverting vandalism that also requires rollback; then STiki, a cross-platform and Java-based anti-vandalism application. So the key words and abbreviations associated to these tools were added to the list: Huggle, WP:HG, WP:HUG / Twinkle, WP:TWINKLE, WP:TW / Igloo, WP:IGLOO, WP:IGL, WP:GLOO/ STiki.
+      </p> 
+      <p>It has been possible identifying edit wars by looking when a revert is performed more than once, together with a new list #3 as “war”, WP:EW, WP:WAR, WP:EDITWAR, WP:EDITWARRING, opinionated, advice, NPOV, neutral point of view, POV, point of view. These abbreviations indicate the adding of subjective and not neutral contents.
+      </p>
+      <hr>
+
+      <!-- Protocol 4 -->
+      <h2>(VISUAL) TEMPORAL EVOLUTION: EDITS ANALYSIS</h2>
+      We analysed the edits realized in both pages in chronological sequence and typology.

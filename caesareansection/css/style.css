@@ -520,15 +520,15 @@ ul li {
 .overlay ul li {
 	display: block;
 	height: 15%;
-	height: calc(100% / 7);
-	min-height: 54px;
+	height: calc(100% / 14);
+	min-height: 24px;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
 
 .overlay ul li a {
 	color: #fff;
-	font-size:1.5em;
+	font-size:1em;
 	text-align:center;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
@@ -1458,7 +1458,8 @@ text-align: center;
 	}
 .wiki-stacked	.section-row{
 		width:100%;
-		height:40%;
+		height:45%;
+		margin-bottom: 50px;
 	}
 	.wikiviz, .wiki-stacked{
 		height:100%;
