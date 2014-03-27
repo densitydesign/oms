@@ -25,11 +25,11 @@ angular.module('who.controllers', [])
 
     $scope.sections = [
       {id:"cs_intro",label:"Introduction to caesarean section", nav: true, step:false, template:"chapter-intro", protocol: false},
-      {id:"cs_query_intro",label: "Building the corpus", nav: true, step:false, template:"sub-chapter", protocol: 'cs_web'},
-      {id:"cs_query_network",label: "Building the corpus",nav: false,step:true, template:"viz-step", protocol: 'cs_web', legend:true},
-      {id:"cs_query_analytics",label: "Building the corpus",nav: false, step:false, template:"analytics", protocol: 'cs_web'},
-      {id:"cs_crawl_intro", label:"Mapping the web", nav: true, step:false, template:"sub-chapter", protocol: 'cs_web'},
-      {id:"cs_crawl_network", label:"Mapping the web", nav: false, step:true, template:"viz-step", protocol: 'cs_web', legend:true},
+      {id:"cs_query_intro",label: "The web corpus", nav: true, step:false, template:"sub-chapter", protocol: false},
+      {id:"cs_query_network",label: "The web corpus",nav: false,step:true, template:"viz-step", protocol: 'cs_query', legend:true},
+      {id:"cs_query_analytics",label: "The web corpus",nav: false, step:false, template:"analytics", protocol: 'cs_query'},
+      {id:"cs_crawl_intro", label:"Mapping the web", nav: true, step:false, template:"sub-chapter", protocol: 'cs_crawl'},
+      {id:"cs_crawl_network", label:"Mapping the web", nav: false, step:true, template:"viz-step", protocol: 'cs_crawl', legend:true},
       {id:"cs_text_intro",label:"Seeing what they're saying",nav: true, step:false,template:"sub-chapter", protocol: 'cs_text'},
       {id:"cs_text_slope",label:"Seeing what they're saying", nav: false, step:true, template:"viz-step-slope", protocol: 'cs_text'},
       {id:"cs_images_intro",label:"Perceived image of the c-section",nav: true, step:false,template:"sub-chapter", protocol: 'cs_imgs'},
