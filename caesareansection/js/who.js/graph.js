@@ -1526,88 +1526,99 @@ var networkconfig = {
         },
         {
           /**
-           * EGO NETWORK
-           * FORCE ATLAS 2
+           * EVERY NODES
+           * FILE LAYOUT
            * CATEGORIES COLORS
            * EDGES ARE DISPLAYED
            * SIZES ARE INDEGREE
-           * ZOOM ON ONE CLUSTER: E
+           * ZOOM ON ONE CLUSTER: modularity 56 [56,51,3,5,54,4,1]
            */
           init: function() {
             _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
+              var l = _options.innerCircleCount,
+                labelToShow = getMinAttribute(_dbGraph, 'in', 3, "clusters", "A")
 
-              node.label = node.file_label;
+              node.label = null;
 
-              if (node.id === '825512d2-ebdf-480e-8ae7-bdad81f491b4')
-                node.target_color = '#425863'; // TODO: Apply good color
-              else
+              if (node.attributes["clusters"] === 'A'){
+
+                node.target_color = goodColors.M; 
+                if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+
+              }else{
                 node.target_color = '#AAA'; // TODO: Apply good color
-
-              node.size = _s.graph.degree(node.id, 'in') / _options.ratio;
-              //node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              }
+              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              node.target_x = node.file_x;
+              node.target_y = node.file_y;
             });
             _s.graph.edges().forEach(function(edge, i, a) {
               edge.color = 'rgba(17, 17, 17, 0.1)'
             });
           },
-          forceAtlas2: true,
-          center: '825512d2-ebdf-480e-8ae7-bdad81f491b4',
+          forceAtlas2: false,
+          center: null,
           filter: null,
           settings: {
             drawEdges: true,
-            labelThreshold: 4,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-                    animation: {
-            color: 'target_color',
-            size: 'target_size'
-          }
-        },
-        {
-          /**
-           * EGO NETWORK
-           * FORCE ATLAS 2
-           * CATEGORIES COLORS
-           * EDGES ARE DISPLAYED
-           * SIZES ARE INDEGREE
-           * ZOOM ON ONE CLUSTER: E
-           */
-          init: function() {
-            _s.unbind('clickNode');
-            _s.graph.nodes().forEach(function(node, i, a) {
-
-              node.label = node.file_label;
-
-              if (node.id === '25a25d96-fadc-45ed-b6a6-777c12551fa0')
-                node.target_color = '#425863'; // TODO: Apply good color
-              else
-                node.target_color = '#AAA'; // TODO: Apply good color
-
-              node.size = _s.graph.degree(node.id, 'in') / _options.ratio;
-              //node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
-            });
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = 'rgba(17, 17, 17, 0.1)'
-            });
-          },
-          forceAtlas2: true,
-          center: '25a25d96-fadc-45ed-b6a6-777c12551fa0',
-          filter: null,
-          settings: {
-            drawEdges: true,
-            labelThreshold: 4,
+            labelThreshold: 1,
             enableCamera: false,
             mouseEnabled : false,
             touchEnabled : false
           },
           animation: {
             color: 'target_color',
-            size: 'target_size'
+            size: 'target_size',
+            x: 'target_x',
+            y: 'target_y',
+            camera: function(n) {
+              return n.attributes["clusters"] === 'A';
+            }
           }
         },
+        // {
+        //   /**
+        //    * EGO NETWORK
+        //    * FORCE ATLAS 2
+        //    * CATEGORIES COLORS
+        //    * EDGES ARE DISPLAYED
+        //    * SIZES ARE INDEGREE
+        //    * ZOOM ON ONE CLUSTER: E
+        //    */
+        //   init: function() {
+        //     _s.unbind('clickNode');
+        //     _s.graph.nodes().forEach(function(node, i, a) {
+
+        //       node.label = node.file_label;
+
+        //       if (node.id === '25a25d96-fadc-45ed-b6a6-777c12551fa0')
+        //         node.target_color = '#425863'; // TODO: Apply good color
+        //       else
+        //         node.target_color = '#AAA'; // TODO: Apply good color
+
+        //       node.size = _s.graph.degree(node.id, 'in') / _options.ratio;
+        //       //node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+        //     });
+        //     _s.graph.edges().forEach(function(edge, i, a) {
+        //       edge.color = 'rgba(17, 17, 17, 0.1)'
+        //     });
+        //   },
+        //   forceAtlas2: true,
+        //   center: '25a25d96-fadc-45ed-b6a6-777c12551fa0',
+        //   filter: null,
+        //   settings: {
+        //     drawEdges: true,
+        //     labelThreshold: 4,
+        //     enableCamera: false,
+        //     mouseEnabled : false,
+        //     touchEnabled : false
+        //   },
+        //   animation: {
+        //     color: 'target_color',
+        //     size: 'target_size'
+        //   }
+        // },
         {
           /**
            * FREE VIEW
@@ -1623,13 +1634,13 @@ var networkconfig = {
               node.label = node.file_label;
 
               if (i < l)
-                node.color = '#425863'; // TODO: Apply good color
+                node.target_color = '#425863'; // TODO: Apply good color
               else
-                node.color = '#AAA'; // TODO: Apply good color
+                node.target_color = '#AAA'; // TODO: Apply good color
 
-              node.x = node.file_x;
-              node.y = node.file_y;
-              node.size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              node.target_x = node.file_x;
+              node.target_y = node.file_y;
+              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
             });
             _s.bind('clickNode', function(e) {
                 var selected = e.data.node.selected
@@ -1719,20 +1730,19 @@ var networkconfig = {
             enableCamera: true,
             mouseEnabled : true,
             touchEnabled : true
+          },
+          animation: {
+            color: 'target_color',
+            size: 'target_size',
+            x: 'target_x',
+            y: 'target_y',
+            camera: {
+              x: 0,
+              y: 0,
+              ratio: 1,
+              angle: 0
+            }
           }
-          // ,
-          // animation: {
-          //   color: 'target_color',
-          //   size: 'target_size',
-          //   x: 'target_x',
-          //   y: 'target_y',
-          //   camera: {
-          //     x: 0,
-          //     y: 0,
-          //     ratio: 1,
-          //     angle: 0
-          //   }
-          // }
         }
       ]
   },

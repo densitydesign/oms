@@ -251,7 +251,7 @@ angular.module('who.directives', [])
 
         var init = function(){
 
-          fileService.getFile('data/' + scope.section.id + '/FP_final.json').then(
+          fileService.getFile('data/' + scope.section.id + '/toc_final.json').then(
             function(data){
               
               //scope.loadingcomplete()
