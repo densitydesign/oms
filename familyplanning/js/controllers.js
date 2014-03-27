@@ -40,7 +40,7 @@ angular.module('who.controllers', [])
       {id:"fp_wiki_anon_intro",label:"Hidden behind an IP address",nav: true, step:false, template:"sub-chapter", protocol: 'fp_toc'},
       {id:"fp_wiki_anon_map",label:"Hidden behind an IP address",nav: false, step:true, template:"anon-map", protocol: 'fp_toc',legend:false},
       {id:"fp_wiki_toc_intro",label:"Wikipedia TOC evolution",nav: true, step:false, template:"sub-chapter", protocol: 'fp_toc'},
-      //{id:"fp_wiki_toc_bc",label:"Wikipedia TOC evolution",nav: false, step:true, template:"viz-step-toc", protocol: 'fp_toc', legend:true},
+      {id:"fp_wiki_toc_bc",label:"Wikipedia TOC evolution",nav: false, step:true, template:"viz-step-toc", protocol: 'fp_toc', legend:true},
       {id:"fp_wiki_toc_fp",label:"Wikipedia TOC evolution",nav: false, step:true, template:"viz-step-toc", protocol: 'fp_toc', legend:true},
       {id:"fp2_query_intro",label: "Building the corpus 2", nav: true, step:false, template:"sub-chapter", protocol: 'fp_web'},
       {id:"fp2_query_network",label: "Building the corpus 2",nav: false,step:true, template:"viz-step", protocol: 'fp_web', legend:true},
@@ -70,7 +70,14 @@ angular.module('who.controllers', [])
       "fp_wiki_toc_fp":{
           totalItems: 4,
           currentStep: 1,
-          itemsPerPage: 1
+          itemsPerPage: 1,
+          maxItems: 5
+        },
+      "fp_wiki_toc_bc":{
+          totalItems: 4,
+          currentStep: 1,
+          itemsPerPage: 1,
+          maxItems: 5
         },
       "fp_crawl_network":{
           totalItems: 5,

@@ -295,7 +295,8 @@ angular.module('who.directives', [])
 
          }
 
-        var step = [
+        var step = { 
+          "fp_wiki_toc_fp" : [
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2006-04-22T04:02:54Z")
@@ -350,7 +351,109 @@ angular.module('who.directives', [])
             click =false
             }
           }
+        ],
+        "fp_wiki_toc_bc" : [
+          {init: function(){
+            click = true
+            var p = wikitoc.getPixel("2001-11-09T05:40:54Z")
+            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
+            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            chartLegend.datum(dl).call(wikitoclegend)
+            click =false
+            }
+          },
+          {init: function(){
+            click = true
+            var p = wikitoc.getPixel("2004-03-03T00:40:47Z")
+            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
+            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            chartLegend.datum(dl).call(wikitoclegend)
+            click =false
+            }
+          },
+          {init: function(){
+            click = true
+            var p = wikitoc.getPixel("2006-07-25T00:50:10Z")
+            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
+            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            chartLegend.datum(dl).call(wikitoclegend)
+            click =false
+            }
+          },
+          {init: function(){
+            click = true
+            var p = wikitoc.getPixel("2011-05-21T09:14:42Z")
+            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
+            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            chartLegend.datum(dl).call(wikitoclegend)
+            click =false
+            }
+          },
+          {init: function(){
+            click = true
+            var p = wikitoc.getPixel("2002-02-25T15:51:15Z")
+            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
+            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            chartLegend.datum(dl).call(wikitoclegend)
+            click =false
+            }
+          },
+          {init: function(){
+            click = true
+            var p = wikitoc.getPixel("2004-03-03T00:40:47Z")
+            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
+            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            chartLegend.datum(dl).call(wikitoclegend)
+            click =false
+            }
+          },
+          {init: function(){
+            click = true
+            var p = wikitoc.getPixel("2006-07-26T21:07:17Z")
+            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
+            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            chartLegend.datum(dl).call(wikitoclegend)
+            click =false
+            }
+          },
+          {init: function(){
+            click = true
+            var p = wikitoc.getPixel("2006-10-06T06:45:19Z")
+            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
+            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            chartLegend.datum(dl).call(wikitoclegend)
+            click =false
+            }
+          },
+          {init: function(){
+            click = true
+            var p = wikitoc.getPixel("2011-05-21T09:14:42Z")
+            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
+            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            chartLegend.datum(dl).call(wikitoclegend)
+            click =false
+            }
+          },
+          {init: function(){
+            click = true
+            var p = wikitoc.getPixel("2012-08-09T23:00:26Z")
+            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
+            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            chartLegend.datum(dl).call(wikitoclegend)
+            click =false
+            }
+          },
+          {init: function(){
+            click = true
+            var p = wikitoc.getPixel("2001-11-09T05:40:54Z")
+            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
+            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            chartLegend.datum(dl).call(wikitoclegend)
+            click =false
+            }
+          }
         ]
+      }
 
 
 
@@ -362,19 +465,20 @@ angular.module('who.directives', [])
             for(var i = threshold; i >= 0; i--){
               var p = $( containerViz ).scrollLeft() + i
               var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0]
+              console.log(dl)
               if(dl && !loading){
-                dl = dl.value.clusters;
-                loading = true
-                chartLegend.datum(dl).call(wikitoclegend)
-                loading = false
+                // dl = dl.value.clusters;
+                // loading = true
+                // chartLegend.datum(dl).call(wikitoclegend)
+                // loading = false
                 break;
               }
             }
           }
         })
 
-        scope.ctrlmodels[scope.section.id].totalItems = step.length
-        var pag = "<pagination previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
+        scope.ctrlmodels[scope.section.id].totalItems = step[scope.section.id].length
+        var pag = "<pagination max-size='ctrlmodels." + scope.section.id + ".maxItems' previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
         var e = angular.element(pag)
         $(containerPagination).append(e)
         $compile(e)(scope)
@@ -391,7 +495,7 @@ angular.module('who.directives', [])
 
         scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
-                step[newValue-1].init()
+                step[scope.section.id][newValue-1].init()
             }
         })
       }

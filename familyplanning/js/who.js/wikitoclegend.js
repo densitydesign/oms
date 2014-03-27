@@ -43,7 +43,7 @@
               .attr("y", function(d){return d.y})
               .attr("dy", "0.8em")
               .attr("font-family", "Georgia, serif")
-              .attr("font-size", "11pt")
+              .attr("font-size", "10pt")
               .attr("text-decoration",null)
               .text(function(d){return d.label.replace(/(<([^>]+)>)/ig,"")})
               //.transition()
