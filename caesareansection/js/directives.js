@@ -1087,6 +1087,7 @@ angular.module('who.directives', [])
           langLvl=0,
           langScale,
           tagScale,
+          allLangs=[],
           vizContainer = element.find('#viz_googleimages')[0],
           sliderContainer,
           radContainer,
@@ -1112,7 +1113,11 @@ angular.module('who.directives', [])
               .key(function(d) {return d.lang; })
                 .key(function(d) {return d.keyword; })
                 .entries(rows);
-                
+            
+            data.forEach(function(e,i){
+            	allLangs.push(e.key);
+            }) 
+            
             var maxH=0
                 
             data.forEach(function (d,i) {
@@ -1212,12 +1217,13 @@ angular.module('who.directives', [])
 					if(!langsArr.length) {
 						tagsArr=[];
 						$(".tag.sel").removeClass("sel")
-						}
-					elastify();
-					loadImages();
+						loadWhole();
+					}
+					else{ 
+						elastify();
+						loadImages();
+					}
               	}
-              
-              	console.log(langsArr)
               
               });
             
@@ -1236,33 +1242,26 @@ angular.module('who.directives', [])
           .style("fill","#222222")
           .text(function(d){return d.key})
               
-              //loadWhole();
+              loadWhole();
               
             }
 
 			
 			function loadWhole() {
 				
-				var dt={}
-				dt.values = d3.nest()
-                .key(function(d) {return d.keyword; })
-                .entries(rows);
-                elastify(dt);
+				langsArr=allLangs;
+                elastify();
+                loadImages();
+                langsArr = [];
                 
-                var x={}
-                x.values=rows
-                loadImages(x);
 			}
 			
              function elastify() {
             
             	var dt = rows.filter(function(e){return langsArr.indexOf(e.lang)>=0})
-            	console.log("dt",dt)
             	var d = d3.nest()
                 .key(function(f) {return f.keyword; })
                 .entries(dt);
-                
-                console.log("d",d)
             
               //compute height
               var tagH=0
@@ -1274,8 +1273,7 @@ angular.module('who.directives', [])
                 })
               
               d.forEach(function(e,i){
-           
-                //e.y=tagH;
+
                 tagH+=e['values'].length  
               })
               
@@ -1307,7 +1305,6 @@ angular.module('who.directives', [])
               .style("fill", function(e) {return "#dddddd";})
               .style("stroke","#999999")
               .on("click", function(d){
-              	console.log(d)
               	if(!d.sel) {
               		d.sel=true;
               		var index = tagsArr.indexOf(d.key);
@@ -1372,16 +1369,26 @@ angular.module('who.directives', [])
              
              
              function loadImages() {
-				console.log("arrays",langsArr,tagsArr)
+				
            		$(imgsContainer).empty();
            		$(imgsContainer).scrollTop(0);
            		scrollEnd=false;
            		load=0;
+           		var whole=false
+           		if(!langsArr.length) {
+           			langsArr=allLangs
+           			whole=true;
+           		}
+           		
            		currArray=rows.filter(function(e){
            			if(tagsArr.length)
               		return langsArr.indexOf(e.lang)>=0 && tagsArr.indexOf(e.keyword)>=0
               		else return langsArr.indexOf(e.lang)>=0
               	})
+              	.sort(function(a,b){return a.rank - b.rank})
+              	
+              	if(whole) langsArr=[];
+              	
            		count=currArray.length;
            		if(count<=paginate) load=count
            		else load=paginate
@@ -1420,13 +1427,9 @@ angular.module('who.directives', [])
               		if (!col) {
 	                  $(".imgs img").hide();
 	                }     
-              		load+=paginate;
-              		
+              		load+=paginate;     		
               	}
               	}
-              	
-              	
-              	
               })
              }
              
@@ -1463,6 +1466,28 @@ angular.module('who.directives', [])
           });
 
             viz_googleimages();
+            
+            $(".rem-langs").on("click",function(){
+            	d3.selectAll(".lang.sel").classed("sel",false)
+				if(!tagsArr.length) loadWhole()
+				else {
+					langsArr=allLangs;
+					elastify();
+					loadImages();
+					langsArr=[];
+				}
+            })
+            
+            $(".rem-tags").on("click",function(){
+				d3.selectAll(".tag.sel").classed("sel",false)
+				tagsArr=[]
+				if(!langsArr.length) loadWhole()
+				else {
+					elastify();
+					loadImages();
+				}
+            })
+            
 
             //end elastic mess
             loaded = true

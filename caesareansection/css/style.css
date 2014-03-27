@@ -1086,6 +1086,11 @@ text-align: center;
 	overflow:auto;
 }
 
+.list-labels .glyphicon {
+	font-size:0.7em;
+	cursor:pointer;
+}
+
 .googleimages .slider{
 	width:20% !important;
 	float:left;
