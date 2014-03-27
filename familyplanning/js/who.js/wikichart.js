@@ -226,7 +226,7 @@ chart.transitionMultiples=function() {
 
 chart.change=function (x) {
     
-    if (x === "multiples") chart.transitionMultiples();
+    if (x === "multiple") chart.transitionMultiples();
     else chart.transitionStacked();
     return chart;
   }

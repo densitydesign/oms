@@ -1048,6 +1048,7 @@ text-align: center;
 .toggle-wiki{
 	float:right;
 	margin-top:10px;
+	z-index:500;
 }
 
 /* Google Images */

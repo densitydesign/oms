@@ -2169,9 +2169,10 @@ angular.module('who.directives', [])
 		});
 		
 		
-		$('input').on("change", function() {
-		
-			v=$( "input:radio:checked" ).val()
+		$('.wiki-stacked').on("click","button", function() {
+			var v=$(this).html().toLowerCase()
+			console.log(v)
+			//v=$( "input:radio:checked" ).val()
 			fpChart.change(v);
 			bcChart.change(v);
 		});
