@@ -33,7 +33,7 @@ angular.module('who.controllers', [])
       {id:"cs_text_intro",label:"The Issue analysis",nav: true, step:false,template:"sub-chapter", protocol: false},
       {id:"cs_text_slope",label:"The Issue analysis", nav: false, step:true, template:"viz-step-slope", protocol: 'cs_text'},
       {id:"cs_images_intro",label:"Perceived image of the c-section",nav: true, step:false,template:"sub-chapter", protocol: false},
-      {id:"cs_images_elastic",label:"Perceived image of the c-section", nav: false, step:false, template:"images-elastic", protocol: 'cs_imgs'},
+      {id:"cs_images_elastic",label:"Perceived image of the c-section", nav: false, step:false, template:"images-elastic", protocol: 'cs_imgs', legend:true},
       {id:"cs_aufeminin_intro",label:"Analyzing the forum discussion", nav: true, step:false, template:"sub-chapter", protocol: false},
       {id:"cs_aufeminin_forum",label:"Analyzing the forum discussion",nav: false,step:true, template:"viz-step-treemap", protocol: 'cs_forum', legend:true},
       {id:"cs_aufeminin_networkFR",label:"Analyzing the forum discussion",nav: false, step:true, template:"viz-step", protocol: 'cs_forum', legend:true},
