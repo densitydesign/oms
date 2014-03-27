@@ -2128,7 +2128,7 @@ angular.module('who.directives', [])
 		        var marker = L.circleMarker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
 		            //icon: L.mapbox.marker.icon({ 'marker-color': 'd45158'}),
 		            radius: 5,
-		        	fillColor: "#d45158",
+		        	fillColor: "#78CCD3",
 		        	stroke: false,
 		        	fillOpacity: 0.69,
 		            title: title,
@@ -2147,7 +2147,7 @@ angular.module('who.directives', [])
 		        var marker = L.circleMarker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
 		            //icon: L.mapbox.marker.icon({ 'marker-color': 'd45158'}),
 		            radius: 5,
-		        	fillColor: "#d45158",
+		        	fillColor: "#005862",
 		        	stroke: false,
 		        	fillOpacity: 0.69,
 		            title: title,
@@ -2168,7 +2168,7 @@ angular.module('who.directives', [])
 		        var marker = L.circleMarker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
 		            //icon: L.mapbox.marker.icon({ 'marker-color': '34CD87'}),
 		            radius: 5,
-		        	fillColor: "#34CD87",
+		        	fillColor: "#78CCD3",
 		        	stroke: false,
 		        	fillOpacity: 0.69,
 		            title: title,
@@ -2187,7 +2187,7 @@ angular.module('who.directives', [])
 		        var marker = L.circleMarker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
 		            //icon: L.mapbox.marker.icon({ 'marker-color': 'd45158'}),
 		            radius: 5,
-		        	fillColor: "#d45158",
+		        	fillColor: "#005862",
 		        	stroke: false,
 		        	fillOpacity: 0.69,
 		            title: title,
@@ -2229,8 +2229,8 @@ angular.module('who.directives', [])
 				   	map.setView([18.95, 18.08333], 2,{animate:true});
 				   	
                   }
-                },
-                {init: function(){
+                }
+               /* {init: function(){
                   if (map.hasLayer(markers_cs)) map.removeLayer(markers_cs);
 				   	if (map.hasLayer(markers_fp)) map.removeLayer(markers_fp);
 				   	
@@ -2240,7 +2240,7 @@ angular.module('who.directives', [])
 				   	map.setView([11.583333, 122.75],6,{animate:true});
 				   	
                   }
-                }
+                }*/
                 ]
                 
                 
