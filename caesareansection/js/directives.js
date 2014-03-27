@@ -305,10 +305,10 @@ angular.module('who.directives', [])
               dataslope.dataTFIDF = data;
               dataslope.dataTFIDF.forEach(function(d){
 
-                d.values = d.values.filter(function(f){
-                  var check = filterIDF.indexOf(f['key']);
-                  return check >= 0
-                })
+                // d.values = d.values.filter(function(f){
+                //   var check = filterIDF.indexOf(f['key']);
+                //   return check >= 0
+                // })
 
                 d.values.sort(function(a, b) {
                     return b['value'] -a['value'] ;
@@ -332,10 +332,10 @@ angular.module('who.directives', [])
               dataslope.dataTF = data;
               dataslope.dataTF.forEach(function(d){
 
-                d.values = d.values.filter(function(f){
-                  var check = filterTF.indexOf(f['key']);
-                  return check >= 0
-                })
+                // d.values = d.values.filter(function(f){
+                //   var check = filterTF.indexOf(f['key']);
+                //   return check >= 0
+                // })
 
                 d.values.sort(function(a, b) {
                     return b['value'] -a['value'] ;
@@ -345,9 +345,9 @@ angular.module('who.directives', [])
                     f['value'] = d3.round(f['value'],2)
                 })
               })
-
+              var len = data[0].values.length;
               slope = who.slopeChart()
-                .graphHeight(element.find("#graph").height()-3)
+                .graphHeight(len*15)
                 .graphWidth(element.find("#graph").width())
                 .on("clicked", function(d){
                   var words = slope.wordStep();
@@ -360,9 +360,10 @@ angular.module('who.directives', [])
                   }
                 })
 
-              chart = d3.select(container).append("svg")
+              chart = d3.select(container).style("overflow-y", "scroll").style("overflow-x", "hidden").append('div').attr("class", "slope-cont")
+                      .append("svg")
                       .attr("width", element.find("#graph").width())
-                      .attr("height", element.find("#graph").height()-3)
+                      .attr("height", len*15)
 
               
               chart.datum(dataslope.dataTF).call(slope)
@@ -396,27 +397,7 @@ angular.module('who.directives', [])
             }
           },
           {init: function(){
-            slope.showCat(["medical", "controversies", "experiences"])
-            chart.call(slope)
-            }
-          },
-          {init: function(){
-            slope.showLines(true).wordStep(["risk", "incision"])
-            chart.call(slope)
-            }
-          },
-          {init: function(){
-            slope.showLines(true).wordStep([])
-            chart.call(slope)
-            }
-          },
-          {init: function(){
-            slope.showCat(["experiences", "vip"])
-            chart.call(slope)
-            }
-          },
-          {init: function(){
-            slope.showCat(["medical", "controversies", "experiences"])
+            slope.showLines(true).showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
             chart.call(slope)
             }
           }
@@ -456,24 +437,6 @@ angular.module('who.directives', [])
                 step[newValue-1].init()
             }
         })
-
-
-        // scope.$watch('utils.internalCounter',function(newValue, oldValue){
-        //   if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
-        //       if(newValue > oldValue){
-
-        //         counter++
-        //       }else{
-        //         counter--
-        //       }
-        //       if(step[counter]){
-        //         step[counter].init()
-        //       }else{
-        //         scope.$emit('steplimit')
-        //         counter = counter < 0 ? 0 : counter - 1;
-        //       }
-        //     }
-        // })
 
       }
     };

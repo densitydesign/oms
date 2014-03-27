@@ -781,7 +781,7 @@ var networkconfig = {
 
               }
               else {
-                node.target_size = +node.attributes["SIZE URL"];
+                node.target_size = +node.attributes["SIZE URL"] / 2;
                 node.target_color = "#AAA"; 
                 angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
                 node.target_x = _options.outerRadius * Math.cos(angle);
@@ -792,80 +792,6 @@ var networkconfig = {
 
             _s.graph.edges().forEach(function(edge, i, a) {
               edge.color ="rgba(17, 17, 17, 0.1)"
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: true,
-            labelThreshold: 1,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-          animation: {
-            color: "target_color",
-            size: "target_size",
-            x: "target_x",
-            y: "target_y",
-            camera: {
-              x: 0,
-              y: 0,
-              ratio: 1,
-              angle: 0
-            }
-          }
-        },
-        {
-
-          init: function() {
-            _s.unbind("clickNode");
-            _s.graph.nodes().forEach(function(node, i, a) {
-              var angle,
-                  l = _options.innerCircleCount,
-                  l2 = _options.innerUrlCount,
-                  l3 = _options.innerPageCount;
-
-              node.label = null;
-              node.labelAdjust = false;
-              
-
-              if (node.attributes["TYPE"] == "query")  {
-                node.target_size = node.target_size = _s.graph.degree(node.id, "out")/ _options.ratio;
-                node.target_color = "#425863"; 
-                angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
-                node.target_x = node.file_x;
-                node.target_y = node.file_y;
-                //node.target_x = _options.innerRadius * Math.cos(angle);
-                //node.target_y = _options.innerRadius * Math.sin(angle);
-                //node.label = node.file_label
-              } else if(node.attributes["TYPE"] == "page") {
-                //console.log(i, a.length, l, l2)
-                node.target_size = 0;
-                node.target_color = "#AAA"; 
-                angle = Math.PI * 2 * (i) / (l3) - Math.PI / 2;
-                node.target_x = _options.outerRadius * Math.cos(angle);
-                node.target_y = _options.outerRadius * Math.sin(angle);
-
-              }
-              else {
-                node.target_size = +node.attributes["SIZE URL"];
-                node.target_color = "#AAA"; 
-                angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
-                node.target_x = node.file_x;
-                node.target_y = node.file_y;
-                if(_s.graph.degree(node.id, "in") > 1){
-                  node.label = node.file_label
-                }
-                //node.target_x = _options.outerRadius * Math.cos(angle);
-                //node.target_y = _options.outerRadius * Math.sin(angle);
-
-              }
-
-            });
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = "rgba(17, 17, 17, 0.1)"
             });
           },
           forceAtlas2: false,
@@ -1031,7 +957,7 @@ var networkconfig = {
 
               }
               else {
-                node.target_size = +node.attributes["SIZE URL"];
+                node.target_size = +node.attributes["SIZE URL"] / 2;
                 node.target_color = "#AAA"; 
                 angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
                 node.target_x = node.file_x;
@@ -1136,6 +1062,8 @@ var networkconfig = {
           animation: {
             color: "target_color",
             size: "target_size",
+            x: "target_x",
+            y: "target_y",
             camera: {
               x: 0,
               y: 0,
