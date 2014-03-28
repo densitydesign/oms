@@ -95,7 +95,19 @@ angular.module('who.controllers', [])
           totalItems: 5,
           currentStep: 1,
           itemsPerPage: 1,
-          maxItems: 5
+          maxItems: 5,
+          "slopeCat": {
+          "CONTROVERSIES" : ["CONTROVERSIES", "C|advocacy","C|development","C|educationlifestyle/sexual health","C|family size","C|finances","C|human rights","C|law","C|politics","C|population growth", "C|programme","C|religion"],
+          "CONTROVERSIES. RISKS&BENEFITS": [ "CONTROVERSIES. RISKS&BENEFITS","CRB|birth spacing","CRB|cancer","CRB|HIV","CRB|others","CRB|VTE"], 
+          "CONTROVERSIES. YOUTH": ["CONTROVERSIES. YOUTH", "CY|capacity building","CY|communication","CY|education contraception","CY|law","CY|politics","CY|religion","CY|services","CY|statistics"],
+          "MEDICAL": ["MEDICAL", "M|lifestyle/sexual health", "M|methods","M|sales","M|services"]
+          },
+          "slopeCatSel":{
+          "CONTROVERSIES" : "CONTROVERSIES",
+          "CONTROVERSIES. RISKS&BENEFITS": "CONTROVERSIES. RISKS&BENEFITS", 
+          "CONTROVERSIES. YOUTH": "CONTROVERSIES. YOUTH",
+          "MEDICAL": "MEDICAL"
+          }
         },
         "fp_wiki_network_fp":{
           totalItems: 5,
@@ -119,7 +131,14 @@ angular.module('who.controllers', [])
           totalItems: 5,
           currentStep: 1,
           itemsPerPage: 1,
-          maxItems: 5
+          maxItems: 5,
+          slopeCat:["advocacy", "climate change", "cohercion", "community issues", "contraception issues", "corruption", "development issues", "economic issues", "education", "environment issues", "eugenics", "fertility rate", "fp methods", "funding", "health issues", "islamic view", "law", "malthusian dispute", "misconceptions", "negative", "policy", "population  demographic issues", "positive", "poverty", "racism", "religion", "rights", "socio", "sustainability", "unmet need", "women issues", "youth", "balanced", "imperialism"],
+          slopeCatSel : {
+            one : "advocacy", 
+            two: "climate change",
+            three: "cohercion", 
+            four: "community issues"
+          }
         },
         "fp_wiki_anon_map":{
           totalItems: 3,
@@ -143,7 +162,7 @@ angular.module('who.controllers', [])
             paddingTop: '55px',
             paddingBottom: '55px',
             verticalCentered: false,
-            normalScrollElements: '#viz_googleimages .imgs, #tocGraph',
+            normalScrollElements: '#viz_googleimages .imgs, #tocGraph, .slope-cont',
             onLeave: function(index, direction){
 
                 $(".tt").remove();

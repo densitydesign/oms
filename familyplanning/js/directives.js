@@ -517,52 +517,6 @@ angular.module('who.directives', [])
         var container = element.find("#graph")[0],
             containerPagination = element.find("#paginationStep")[0]
 
-        var filterTF = [
-          'pill',
-          'woman',
-          'condom',
-          'method',
-          'contraception',
-          'birth control',
-          'child',
-          'pregnancy',
-          'service',
-          'partner',
-          'baby',
-          'ovulation',
-          'study',
-          'information',
-          'sex',
-          'family',
-          'birth',
-          'access',
-          'couple',
-          'birth control pill'
-        ];
-
-        var filterIDF = [
-          'contraception emergency',
-          'woman',
-          'child',
-          'sex',
-          'healthcare provider',
-          'access',
-          'brand',
-          'person',
-          'federation parenthood planned',
-          'problem',
-          'doctor',
-          'bad idea',
-          'clinic name',
-          'central greater jersey new northern',
-          'location number phone',
-          'australia western',
-          'student',
-          'family planning service',
-          'method two',
-          'demand'
-        ]
-
         var init = function(){
 
           fileService.getFile('data/' + scope.section.id + '/slope_tfidf.json').then(
@@ -570,10 +524,10 @@ angular.module('who.directives', [])
               dataslope.dataTFIDF = data;
               dataslope.dataTFIDF.forEach(function(d){
 
-                d.values = d.values.filter(function(f){
-                  var check = filterIDF.indexOf(f['key']);
-                  return check >= 0
-                })
+                // d.values = d.values.filter(function(f){
+                //   var check = filterIDF.indexOf(f['key']);
+                //   return check >= 0
+                // })
 
                 d.values.sort(function(a, b) {
                     return b['value'] -a['value'] ;
@@ -599,10 +553,10 @@ angular.module('who.directives', [])
               dataslope.dataTF = data;
               dataslope.dataTF.forEach(function(d){
 
-                d.values = d.values.filter(function(f){
-                  var check = filterTF.indexOf(f['key']);
-                  return check >= 0
-                })
+                // d.values = d.values.filter(function(f){
+                //   var check = filterTF.indexOf(f['key']);
+                //   return check >= 0
+                // })
 
                 d.values.sort(function(a, b) {
                     return b['value'] -a['value'] ;
@@ -612,9 +566,9 @@ angular.module('who.directives', [])
                     f['value'] = d3.round(f['value'],2)
                 })
               })
-
+              var len = data[0].values.length;
               slope = who.slopeChart()
-                .graphHeight(element.find("#graph").height()-3)
+                .graphHeight(len*15)
                 .graphWidth(element.find("#graph").width())
                 .on("clicked", function(d){
                   var words = slope.wordStep();
@@ -627,9 +581,10 @@ angular.module('who.directives', [])
                   }
                 })
 
-              chart = d3.select(container).append("svg")
+              chart = d3.select(container).style("overflow-y", "scroll").style("overflow-x", "hidden").append('div').attr("class", "slope-cont")
+                      .append("svg")
                       .attr("width", element.find("#graph").width())
-                      .attr("height", element.find("#graph").height()-3)
+                      .attr("height", len*15)
 
               chart.datum(dataslope.dataTF).call(slope)
 
@@ -662,43 +617,18 @@ angular.module('who.directives', [])
             }
           },
           {init: function(){
-            slope.showCat(["C", "CRB", "CY", "M", "NFP"])
-            chart.call(slope)
-            }
-          },
-          {init: function(){
-            slope.showLines(true).wordStep(["sex", "child"])
-            chart.call(slope)
-            }
-          },
-          {init: function(){
-            slope.showLines(true).wordStep([])
-            chart.call(slope)
-            }
-          },
-          {init: function(){
-            slope.showCat(["B1", "B2","B3","B4"])
-            chart.call(slope)
-            }
-          },
-          {init: function(){
-            slope.showCat(["A10A","A10B","A10C","A10D","A10E"])
-            chart.call(slope)
-            }
-          },
-          {init: function(){
-            slope.showCat(["C", "CRB", "CY", "M", "NFP"])
+            slope.showLines(true).showCat(["CONTROVERSIES", "CONTROVERSIES. RISKS&BENEFITS", "CONTROVERSIES. YOUTH", "MEDICAL", "NATURAL FAMILY PLANNING"])
             chart.call(slope)
             }
           }
         ]
 
-        var slopeCat = {
-          "C" : ["A13A","A13B","A13C","A13D","A13E","A13F","A13G","A13H"],
-          "CRB": ["A10A","A10B","A10C","A10D","A10E"], 
-          "CY": ["A13A","A13B","A13C","A13D","A13E","A13F","A13G","A13H"],
-          "M": ["B1", "B2","B3","B4"]
-        }
+        // var slopeCat = {
+        //   "CONTROVERSIES" : ["C|advocacy","C|development","C|educationlifestyle/sexual health","C|family size","C|finances","C|human rights","C|law","C|politics","C|population growth", "C|programme","C|religion"],
+        //   "CONTROVERSIES. RISKS&BENEFITS": ["CRB|birth spacing","CRB|cancer","CRB|HIV","CRB|others","CRB|VTE"], 
+        //   "CONTROVERSIES. YOUTH": ["CY|capacity building","CY|communication","CY|education contraception","CY|law","CY|politics","CY|religion","CY|services","CY|statistics"],
+        //   "MEDICAL": ["M|lifestyle/sexual health", "M|methods","M|sales","M|services"]
+        // }
 
         scope.ctrlmodels[scope.section.id].totalItems = step.length
         var pag = "<pagination previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
@@ -729,18 +659,42 @@ angular.module('who.directives', [])
             }
         });
 
-        scope.$watch('ctrlmodels.slopeexpand', function(newValue, oldValue){
+        scope.$watch('ctrlmodels.fp_text_slope.slopeCatSel["CONTROVERSIES"]', function(newValue, oldValue){
             if (newValue !== oldValue){
-              if(newValue != "all"){
-                slope.showCat(slopeCat[newValue])
-                chart.call(slope)
-              }
-              else{
-                slope.showCat(["C", "CRB", "CY", "M", "NFP"])
+                var slopeCat = slope.showCat()
+                slopeCat[0] = newValue;
+                slope.showCat(slopeCat)
                 chart.call(slope)               
-              }
             }
         });
+
+        scope.$watch('ctrlmodels.fp_text_slope.slopeCatSel["CONTROVERSIES. RISKS&BENEFITS"]', function(newValue, oldValue){
+            if (newValue !== oldValue){
+                var slopeCat = slope.showCat()
+                slopeCat[1] = newValue;
+                slope.showCat(slopeCat)
+                chart.call(slope)               
+            }
+        });
+
+        scope.$watch('ctrlmodels.fp_text_slope.slopeCatSel["CONTROVERSIES. YOUTH"]', function(newValue, oldValue){
+            if (newValue !== oldValue){
+                var slopeCat = slope.showCat()
+                slopeCat[2] = newValue;
+                slope.showCat(slopeCat)
+                chart.call(slope)               
+            }
+        });
+
+        scope.$watch('ctrlmodels.fp_text_slope.slopeCatSel["MEDICAL"]', function(newValue, oldValue){
+            if (newValue !== oldValue){
+                var slopeCat = slope.showCat()
+                slopeCat[3] = newValue;
+                slope.showCat(slopeCat)
+                chart.call(slope)               
+            }
+        });
+
 
         scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
@@ -768,52 +722,6 @@ angular.module('who.directives', [])
         var container = element.find("#graph")[0],
             containerPagination = element.find("#paginationStep")[0]
 
-        var filterTF = [
-              "abortion",
-              "access",
-              "adoption marriage service",
-              "application",
-              "bomb population",
-              "change climate",
-              "child",
-              "city mexico policy",
-              "colombia",
-              "conference",
-              "contraception",
-              "control population",
-              "cost",
-              "country",
-              "disney",
-              "effort",
-              "ehrlich paul",
-              "equity",
-              "family",
-              "family london planning summit"
-        ];
-
-        var filterIDF = [
-            "access",
-            "misuse possible situation",
-            "archive",
-            "family planning",
-            "government policy relevant",
-            "enable",
-            "adoption marriage service",
-            "crucial importance",
-            "World Youth Alliance Research and Policy Specialist",
-            "pregnancy",
-            "accurate interpretation",
-            "club sierra",
-            "grizzle meghan",
-            "information personal",
-            "abstention",
-            "adaptation agenda",
-            "program",
-            "annual conference",
-            "ehrlich paul",
-            "spectacularly wrong"
-        ]
-
         var init = function(){
 
           fileService.getFile('data/' + scope.section.id + '/slope_tfidf.json').then(
@@ -821,10 +729,10 @@ angular.module('who.directives', [])
               dataslope.dataTFIDF = data;
               dataslope.dataTFIDF.forEach(function(d){
 
-                d.values = d.values.filter(function(f){
-                  var check = filterIDF.indexOf(f['key']);
-                  return check >= 0
-                })
+                // d.values = d.values.filter(function(f){
+                //   var check = filterIDF.indexOf(f['key']);
+                //   return check >= 0
+                // })
 
                 d.values.sort(function(a, b) {
                     return b['value'] -a['value'] ;
@@ -850,10 +758,10 @@ angular.module('who.directives', [])
               dataslope.dataTF = data;
               dataslope.dataTF.forEach(function(d){
 
-                d.values = d.values.filter(function(f){
-                  var check = filterTF.indexOf(f['key']);
-                  return check >= 0
-                })
+                // d.values = d.values.filter(function(f){
+                //   var check = filterTF.indexOf(f['key']);
+                //   return check >= 0
+                // })
 
                 d.values.sort(function(a, b) {
                     return b['value'] -a['value'] ;
@@ -864,8 +772,9 @@ angular.module('who.directives', [])
                 })
               })
 
+              var len = data[0].values.length;
               slope = who.slopeChart()
-                .graphHeight(element.find("#graph").height()-3)
+                .graphHeight(len*15)
                 .graphWidth(element.find("#graph").width())
                 .on("clicked", function(d){
                   var words = slope.wordStep();
@@ -878,9 +787,10 @@ angular.module('who.directives', [])
                   }
                 })
 
-              chart = d3.select(container).append("svg")
+              chart = d3.select(container).style("overflow-y", "scroll").style("overflow-x", "hidden").append('div').attr("class", "slope-cont")
+                      .append("svg")
                       .attr("width", element.find("#graph").width())
-                      .attr("height", element.find("#graph").height()-3)
+                      .attr("height", len*15)
 
               chart.datum(dataslope.dataTF).call(slope)
 
@@ -913,33 +823,13 @@ angular.module('who.directives', [])
             }
           },
           {init: function(){
-            slope.showCat(["advocacy", "community issues", "contraception issues"])
-            chart.call(slope)
-            }
-          },
-          {init: function(){
-            slope.showLines(true).wordStep(["country", "contraception issues"])
-            chart.call(slope)
-            }
-          },
-          {init: function(){
-            slope.showLines(true).wordStep([])
-            chart.call(slope)
-            }
-          },
-          {init: function(){
-            slope.showCat(["advocacy", "community issues", "contraception issues"])
+            slope.showLines(true).showCat(["advocacy", "climate change", "cohercion", "community issues"])
             chart.call(slope)
             }
           }
         ]
 
-        var slopeCat = {
-          "C" : ["A13A","A13B","A13C","A13D","A13E","A13F","A13G","A13H"],
-          "CRB": ["A10A","A10B","A10C","A10D","A10E"], 
-          "CY": ["A13A","A13B","A13C","A13D","A13E","A13F","A13G","A13H"],
-          "M": ["B1", "B2","B3","B4"]
-        }
+        //var slopeCat = ["advocacy", "climate change", "cohercion", "community issues", "contraception issues", "corruption", "development issues", "economic issues", "education", "environment issues", "eugenics", "fertility rate", "fp methods", "funding", "health issues", "islamic view", "law", "malthusian dispute", "misconceptions", "negative", "policy", "population  demographic issues", "positive", "poverty", "racism", "religion", "rights", "socio", "sustainability", "unmet need", "women issues", "youth", "balanced", "imperialism"]
 
         scope.ctrlmodels[scope.section.id].totalItems = step.length
         var pag = "<pagination previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
@@ -970,24 +860,47 @@ angular.module('who.directives', [])
             }
         });
 
-        // scope.$watch('ctrlmodels.slopeexpand', function(newValue, oldValue){
-        //     if (newValue !== oldValue){
-        //       if(newValue != "all"){
-        //         slope.showCat(slopeCat[newValue])
-        //         chart.call(slope)
-        //       }
-        //       else{
-        //         slope.showCat(["C", "CRB", "CY", "M", "NFP"])
-        //         chart.call(slope)               
-        //       }
-        //     }
-        // });
-
         scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
                 step[newValue-1].init()
             }
         })
+
+        scope.$watch('ctrlmodels.fp2_text_slope.slopeCatSel.one', function(newValue, oldValue){
+            if (newValue !== oldValue){
+                var slopeCat = slope.showCat()
+                slopeCat[0] = newValue;
+                slope.showCat(slopeCat)
+                chart.call(slope)               
+            }
+        });
+
+        scope.$watch('ctrlmodels.fp2_text_slope.slopeCatSel.two', function(newValue, oldValue){
+            if (newValue !== oldValue){
+                var slopeCat = slope.showCat()
+                slopeCat[1] = newValue;
+                slope.showCat(slopeCat)
+                chart.call(slope)               
+            }
+        });
+
+        scope.$watch('ctrlmodels.fp2_text_slope.slopeCatSel.three', function(newValue, oldValue){
+            if (newValue !== oldValue){
+                var slopeCat = slope.showCat()
+                slopeCat[2] = newValue;
+                slope.showCat(slopeCat)
+                chart.call(slope)               
+            }
+        });
+
+        scope.$watch('ctrlmodels.fp2_text_slope.slopeCatSel.four', function(newValue, oldValue){
+            if (newValue !== oldValue){
+                var slopeCat = slope.showCat()
+                slopeCat[3] = newValue;
+                slope.showCat(slopeCat)
+                chart.call(slope)               
+            }
+        });
 
 
       }
