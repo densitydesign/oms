@@ -569,8 +569,6 @@ var networkconfig = {
 
           delete n.label;
 
-
-
           if (n.attributes["TYPE"] == "query")
             {_options.innerCircleCount++;}
           else if (n.attributes["TYPE"] == "url")

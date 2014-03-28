@@ -199,6 +199,69 @@
       return _views.length
     }
 
+    vis.zoomCluster = function(x, x1){
+      if(!x1){applyView(_views.length-1)}
+      else{zoomCluster(x, x1)}
+    }
+
+      function zoomCluster(attribute, value) {
+            var zoomView = {
+
+              init: function() {
+                _s.graph.nodes().forEach(function(node, i, a) {
+              node.label = node.file_label;
+
+              if (node.attributes[attribute] === value){
+
+                node.target_color = colorScale(value); 
+
+              }else{
+                node.target_color = '#AAA'; // TODO: Apply good color
+              }
+              node.target_size = node.file_size / _options.ratio;
+              node.target_x = node.file_x;
+              node.target_y = node.file_y;
+            });
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = 'rgba(17, 17, 17, 0.1)'
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          filter: null,
+          // settings: {
+          //   drawEdges: true,
+          //   labelThreshold: 1,
+          //   enableCamera: false,
+          //   mouseEnabled : false,
+          //   touchEnabled : false
+          // },
+          animation: {
+            color: 'target_color',
+            size: 'target_size',
+            x: 'target_x',
+            y: 'target_y',
+            camera: function(n) {
+              return n.attributes[attribute] === value;
+            }
+          }
+          }
+
+            // Init:
+              zoomView.init();
+
+            // Animation:
+            if (zoomView.animation) {
+              _s.settings('drawEdges', false);
+              animate(zoomView.animation, function() {
+                //_s.settings(zoomView.settings);
+                _s.settings('drawEdges', true);
+                _s.refresh();
+              });
+            } else
+              _s.refresh();
+        }
+
 
   function place(n) {
          //var scale = 28,
@@ -1335,6 +1398,8 @@ var networkconfig = {
   "fp_query_network":{
   "_options": {
 "innerCircleCount": 0,
+"innerUrlCount": 0,
+"innerPageCount": 0,
 "innerRadius": 680,
 "outerRadius": 550,
 "duration": 500,
@@ -1374,17 +1439,24 @@ var networkconfig = {
 
           delete n.label;
 
-
-
           if (n.attributes["Type"] == "query")
-            _options.innerCircleCount++;
-        });
+            {_options.innerCircleCount++;
+            }
+          else if (n.attributes["Type"] == "url")
+            {_options.innerUrlCount++;}
+          else
+            {_options.innerPageCount++;}
+
+        })
 
         graph.edges.forEach(function(e) {
           delete e.color;
         });
 
-        graph.nodes = graph.nodes.sort(function(a, b) {
+       graph.nodes = graph.nodes.sort(function(a, b) {
+            if(a.attributes["Type"] < b.attributes["Type"]) return -1;
+            if(a.attributes["Type"] > b.attributes["Type"]) return 1;
+            return 0;
         });
 
         graph.nodes.forEach(function(node, i, a) {
@@ -1422,26 +1494,37 @@ var networkconfig = {
             _s.unbind("clickNode");
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
-                  l = _options.innerCircleCount;
+                  l = _options.innerCircleCount/2,
+                  l2 = _options.innerUrlCount,
+                  l3 = _options.innerPageCount;
 
                 node.labelAdjust = false;
 
-              if (node.attributes["Type"] == "query") {
+              if (node.attributes["Type"] == "query")  {
                 node.target_size = 3;
-                node.target_color = "#425863";
-              //angle = Math.PI * 2 * i / l - Math.PI / 2;
-              angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
-                //node.target_x = node.file_x;
-                //node.target_y = node.file_y;
+                node.target_color = "#425863"; 
+                angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
+                //  node.target_x = node.file_x;
+                // node.target_y = node.file_y;
                 node.target_x = _options.innerRadius * Math.cos(angle);
                 node.target_y = _options.innerRadius * Math.sin(angle);
-                node.label = node.file_label
-              } else {
+                 node.label = node.file_label
+              } else if(node.attributes["Type"] == "page") {
+                //console.log(i, a.length, l, l2)
                 node.target_size = 0;
-                node.target_color = node.file_color; 
-                angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
+                node.target_color = "#AAA"; 
+                angle = Math.PI * 2 * (i) / (l3) - Math.PI / 2;
                 node.target_x = _options.outerRadius * Math.cos(angle);
                 node.target_y = _options.outerRadius * Math.sin(angle);
+
+              }
+              else {
+                node.target_size = 0;
+                node.target_color = node.file_color; 
+                angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
+                node.target_x = _options.outerRadius * Math.cos(angle);
+                node.target_y = _options.outerRadius * Math.sin(angle);
+
               }
 
             });
@@ -1477,7 +1560,9 @@ var networkconfig = {
             _s.unbind("clickNode");
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
-                  l = _options.innerCircleCount;
+                  l = _options.innerCircleCount/2,
+                  l2 = _options.innerUrlCount,
+                  l3 = _options.innerPageCount;
 
               node.label = null;
               node.labelAdjust = false;
@@ -1485,17 +1570,25 @@ var networkconfig = {
               if (node.attributes["Type"] == "query")  {
                 node.target_size = 3;
                 node.target_color = "#425863"; 
-              //angle = Math.PI * 2 * i / l - Math.PI / 2;
-              angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
-                //node.target_x = node.file_x;
-                //node.target_y = node.file_y;
+                angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
+                //  node.target_x = node.file_x;
+                // node.target_y = node.file_y;
                 node.target_x = _options.innerRadius * Math.cos(angle);
                 node.target_y = _options.innerRadius * Math.sin(angle);
                  node.label = node.file_label
-              } else {
+              } else if(node.attributes["Type"] == "page") {
+
                 node.target_size = 2;
                 node.target_color = "#AAA"; 
-                angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
+                angle = Math.PI * 2 * (i) / (l3) - Math.PI / 2;
+                node.target_x = _options.outerRadius * Math.cos(angle);
+                node.target_y = _options.outerRadius * Math.sin(angle);
+
+              }
+              else {
+                node.target_size = 0;
+                node.target_color = "#AAA"; 
+                angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
                 node.target_x = _options.outerRadius * Math.cos(angle);
                 node.target_y = _options.outerRadius * Math.sin(angle);
 
@@ -1535,79 +1628,39 @@ var networkconfig = {
             _s.unbind("clickNode");
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
-                  l = _options.innerCircleCount
+                  l = _options.innerCircleCount/2,
+                  l2 = _options.innerUrlCount,
+                  l3 = _options.innerPageCount;
+
               node.label = null;
               node.labelAdjust = false;
               
-              if (node.attributes["Type"] == "query") {
-                node.target_size = _s.graph.degree(node.id, "out")/ _options.ratio;
+              if (node.attributes["Type"] == "query")  {
+                node.target_size = 3;
                 node.target_color = "#425863"; 
-              //angle = Math.PI * 2 * i / l - Math.PI / 2;
-              angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
-                //node.target_x = node.file_x;
-                //node.target_y = node.file_y;
+                angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
+                //  node.target_x = node.file_x;
+                // node.target_y = node.file_y;
                 node.target_x = _options.innerRadius * Math.cos(angle);
                 node.target_y = _options.innerRadius * Math.sin(angle);
                  node.label = node.file_label
-
-              } else {
-                node.target_color = "#AAA";
-                angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
+              } else if(node.attributes["Type"] == "page") {
+                //console.log(i, a.length, l, l2)
+                node.target_size = 0;
+                node.target_color = "#AAA"; 
+                angle = Math.PI * 2 * (i) / (l3) - Math.PI / 2;
                 node.target_x = _options.outerRadius * Math.cos(angle);
                 node.target_y = _options.outerRadius * Math.sin(angle);
+
               }
-            });
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = "rgba(17, 17, 17, 0.1)"
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: true,
-            labelThreshold: 1,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-          animation: {
-            color: "target_color",
-            size: "target_size",
-            x: "target_x",
-            y: "target_y",
-            camera: {
-              x: 0,
-              y: 0,
-              ratio: 1,
-              angle: 0
-            }
-          }
-        },
-        {
-
-          init: function() {
-            _s.unbind("clickNode");
-            _s.graph.nodes().forEach(function(node, i, a) {
-
-              var l = _options.innerCircleCount;
-                
-                node.labelAdjust = false;
-                node.label = null;
-
-
-              if (node.attributes["Type"] == "query"){
-                node.target_color = "#425863"; 
-                node.target_size = _s.graph.degree(node.id, "out") / _options.ratio;
-                node.label = node.file_label
-              }
-              else{
+              else {
+                node.target_size = +node.attributes["url size"] / 2;
                 node.target_color = "#AAA"; 
+                angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
+                node.target_x = _options.outerRadius * Math.cos(angle);
+                node.target_y = _options.outerRadius * Math.sin(angle);
+
               }
-
-              node.target_x = node.file_x;
-              node.target_y = node.file_y;
-
             });
             _s.graph.edges().forEach(function(edge, i, a) {
               edge.color = "rgba(17, 17, 17, 0.1)"
@@ -1636,81 +1689,155 @@ var networkconfig = {
             }
           }
         },
+        // {
+
+        //   init: function() {
+        //     _s.unbind("clickNode");
+        //     _s.graph.nodes().forEach(function(node, i, a) {
+
+        //       var l = _options.innerCircleCount;
+                
+        //         node.labelAdjust = false;
+        //         node.label = null;
+
+
+        //       if (node.attributes["Type"] == "query"){
+        //         node.target_color = "#425863"; 
+        //         node.target_size = _s.graph.degree(node.id, "out") / _options.ratio;
+        //         node.label = node.file_label
+        //       }
+        //       else{
+        //         node.target_color = "#AAA"; 
+        //       }
+
+        //       node.target_x = node.file_x;
+        //       node.target_y = node.file_y;
+
+        //     });
+        //     _s.graph.edges().forEach(function(edge, i, a) {
+        //       edge.color = "rgba(17, 17, 17, 0.1)"
+        //     });
+        //   },
+        //   forceAtlas2: false,
+        //   center: null,
+        //   filter: null,
+        //   settings: {
+        //     drawEdges: true,
+        //     labelThreshold: 1,
+        //     enableCamera: false,
+        //     mouseEnabled : false,
+        //     touchEnabled : false
+        //   },
+        //   animation: {
+        //     color: "target_color",
+        //     size: "target_size",
+        //     x: "target_x",
+        //     y: "target_y",
+        //     camera: {
+        //       x: 0,
+        //       y: 0,
+        //       ratio: 1,
+        //       angle: 0
+        //     }
+        //   }
+        // },
+        // {
+        //   init: function() {
+        //     _s.unbind("clickNode");
+        //     _s.graph.nodes().forEach(function(node, i, a) {
+        //       var l = _options.innerCircleCount
+
+        //       node.label = null;
+        //       node.labelAdjust = false;
+
+        //        if (node.attributes["Type"] == "query"){
+
+        //         node.target_color = "#425863"; 
+        //         node.target_size = _s.graph.degree(node.id, "out") / _options.ratio;
+
+        //       }else{
+
+        //         if(_s.graph.degree(node.id, "in") > 1){
+        //         node.target_color = goodColors.E;
+        //         node.labelAdjust = true;
+        //         node.label = node.file_label
+
+        //           }
+        //         else{
+        //           node.target_color = "#AAA"; 
+        //         }
+        //       }
+        //       node.target_x = node.file_x;
+        //       node.target_y = node.file_y;
+        //     });
+        //     _s.graph.edges().forEach(function(edge, i, a) {
+        //       edge.color = "rgba(17, 17, 17, 0.1)"
+        //     });
+        //   },
+        //   forceAtlas2: false,
+        //   center: null,
+        //   filter: null,
+        //   settings: {
+        //     drawEdges: true,
+        //     labelThreshold: 1,
+        //     enableCamera: false,
+        //     mouseEnabled : false,
+        //     touchEnabled : false
+        //   },
+        //   animation: {
+        //     color: "target_color",
+        //     size: "target_size",
+        //     x: "target_x",
+        //     y: "target_y",
+        //     camera: {
+        //       x: 0,
+        //       y: 0,
+        //       ratio: 1,
+        //       angle: 0
+        //     }
+        //   }
+        // },
         {
           init: function() {
-            _s.unbind("clickNode");
             _s.graph.nodes().forEach(function(node, i, a) {
-              var l = _options.innerCircleCount
-
-              node.label = null;
-              node.labelAdjust = false;
-
-               if (node.attributes["Type"] == "query"){
-
-                node.target_color = "#425863"; 
-                node.target_size = _s.graph.degree(node.id, "out") / _options.ratio;
-
-              }else{
-
-                if(_s.graph.degree(node.id, "in") > 1){
-                node.target_color = goodColors.E;
-                node.labelAdjust = true;
-                node.label = node.file_label
-
-                  }
-                else{
-                  node.target_color = "#AAA"; 
-                }
-              }
-              node.target_x = node.file_x;
-              node.target_y = node.file_y;
-            });
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = "rgba(17, 17, 17, 0.1)"
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: true,
-            labelThreshold: 1,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-          animation: {
-            color: "target_color",
-            size: "target_size",
-            x: "target_x",
-            y: "target_y",
-            camera: {
-              x: 0,
-              y: 0,
-              ratio: 1,
-              angle: 0
-            }
-          }
-        },
-        {
-          init: function() {
-            _s.graph.nodes().forEach(function(node, i, a) {
-              var l = _options.innerCircleCount;
+              var l = _options.innerCircleCount/2,
+                  l2 = _options.innerUrlCount,
+                  l3 = _options.innerPageCount;
 
               node.label = node.file_label;
               node.labelAdjust = false;
 
 
-              if (node.attributes["Type"] == "query"){
+              if (node.attributes["Type"] == "query")  {
+                node.target_size = node.target_size = _s.graph.degree(node.id, "out")/ _options.ratio;
                 node.target_color = "#425863"; 
-                node.target_size = _s.graph.degree(node.id, "out") / _options.ratio;
-              }
-              else{
-                node.target_color = "#AAA";
-              }
+                angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                node.label = node.file_label
+                //node.target_x = _options.innerRadius * Math.cos(angle);
+                //node.target_y = _options.innerRadius * Math.sin(angle);
+                //node.label = node.file_label
+              } else if(node.attributes["Type"] == "page") {
+                //console.log(i, a.length, l, l2)
+                node.target_size = 0;
+                node.target_color = "#AAA"; 
+                angle = Math.PI * 2 * (i) / (l3) - Math.PI / 2;
+                node.target_x = _options.outerRadius * Math.cos(angle);
+                node.target_y = _options.outerRadius * Math.sin(angle);
 
-              node.target_x = node.file_x;
-              node.target_y = node.file_y;
+              }
+              else {
+                node.target_size = +node.attributes["url size"] / 2;
+                node.target_color = "#AAA"; 
+                angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                node.label = node.file_label
+                //node.target_x = _options.outerRadius * Math.cos(angle);
+                //node.target_y = _options.outerRadius * Math.sin(angle);
+
+              }
 
             });
             _s.bind("clickNode", function(e) {
@@ -1806,6 +1933,8 @@ var networkconfig = {
           animation: {
             color: "target_color",
             size: "target_size",
+            x: "target_x",
+            y: "target_y",
             camera: {
               x: 0,
               y: 0,
@@ -2600,6 +2729,8 @@ var networkconfig = {
   "fp2_query_network":{
   "_options": {
 "innerCircleCount": 0,
+"innerUrlCount": 0,
+"innerPageCount": 0,
 "innerRadius": 680,
 "outerRadius": 550,
 "duration": 500,
@@ -2639,17 +2770,23 @@ var networkconfig = {
 
           delete n.label;
 
-
-
           if (n.attributes["Type"] == "query")
-            _options.innerCircleCount++;
+            {_options.innerCircleCount++;}
+          else if (n.attributes["Type"] == "url")
+            {_options.innerUrlCount++;}
+          else
+            {_options.innerPageCount++;}
+
         });
 
         graph.edges.forEach(function(e) {
           delete e.color;
         });
 
-        graph.nodes = graph.nodes.sort(function(a, b) {
+       graph.nodes = graph.nodes.sort(function(a, b) {
+            if(a.attributes["Type"] < b.attributes["Type"]) return -1;
+            if(a.attributes["Type"] > b.attributes["Type"]) return 1;
+            return 0;
         });
 
         graph.nodes.forEach(function(node, i, a) {
@@ -2687,26 +2824,38 @@ var networkconfig = {
             _s.unbind("clickNode");
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
-                  l = _options.innerCircleCount;
+                  l = _options.innerCircleCount,
+                  l2 = _options.innerUrlCount,
+                  l3 = _options.innerPageCount;
 
                 node.labelAdjust = false;
 
-              if (node.attributes["Type"] == "query") {
+              if (node.attributes["Type"] == "query")  {
+
                 node.target_size = 3;
-                node.target_color = "#425863";
-              //angle = Math.PI * 2 * i / l - Math.PI / 2;
-              angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
-                //node.target_x = node.file_x;
-                //node.target_y = node.file_y;
+                node.target_color = "#425863"; 
+                angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
+                //  node.target_x = node.file_x;
+                // node.target_y = node.file_y;
                 node.target_x = _options.innerRadius * Math.cos(angle);
                 node.target_y = _options.innerRadius * Math.sin(angle);
-                node.label = node.file_label
-              } else {
+                 node.label = node.file_label
+              } else if(node.attributes["Type"] == "page") {
+                //console.log(i, a.length, l, l2)
                 node.target_size = 0;
-                node.target_color = node.file_color; 
-                angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
+                node.target_color = "#AAA"; 
+                angle = Math.PI * 2 * (i) / (l3) - Math.PI / 2;
                 node.target_x = _options.outerRadius * Math.cos(angle);
                 node.target_y = _options.outerRadius * Math.sin(angle);
+
+              }
+              else {
+                node.target_size = 0;
+                node.target_color = node.file_color; 
+                angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
+                node.target_x = _options.outerRadius * Math.cos(angle);
+                node.target_y = _options.outerRadius * Math.sin(angle);
+
               }
 
             });
@@ -2742,7 +2891,9 @@ var networkconfig = {
             _s.unbind("clickNode");
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
-                  l = _options.innerCircleCount;
+                  l = _options.innerCircleCount,
+                  l2 = _options.innerUrlCount,
+                  l3 = _options.innerPageCount;
 
               node.label = null;
               node.labelAdjust = false;
@@ -2750,17 +2901,25 @@ var networkconfig = {
               if (node.attributes["Type"] == "query")  {
                 node.target_size = 3;
                 node.target_color = "#425863"; 
-              //angle = Math.PI * 2 * i / l - Math.PI / 2;
-              angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
-                //node.target_x = node.file_x;
-                //node.target_y = node.file_y;
+                angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
+                //  node.target_x = node.file_x;
+                // node.target_y = node.file_y;
                 node.target_x = _options.innerRadius * Math.cos(angle);
                 node.target_y = _options.innerRadius * Math.sin(angle);
                  node.label = node.file_label
-              } else {
+              } else if(node.attributes["Type"] == "page") {
+
                 node.target_size = 2;
                 node.target_color = "#AAA"; 
-                angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
+                angle = Math.PI * 2 * (i) / (l3) - Math.PI / 2;
+                node.target_x = _options.outerRadius * Math.cos(angle);
+                node.target_y = _options.outerRadius * Math.sin(angle);
+
+              }
+              else {
+                node.target_size = 0;
+                node.target_color = "#AAA"; 
+                angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
                 node.target_x = _options.outerRadius * Math.cos(angle);
                 node.target_y = _options.outerRadius * Math.sin(angle);
 
@@ -2800,79 +2959,39 @@ var networkconfig = {
             _s.unbind("clickNode");
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
-                  l = _options.innerCircleCount
+                  l = _options.innerCircleCount,
+                  l2 = _options.innerUrlCount,
+                  l3 = _options.innerPageCount;
+
               node.label = null;
               node.labelAdjust = false;
               
-              if (node.attributes["Type"] == "query") {
-                node.target_size = _s.graph.degree(node.id, "out")/ _options.ratio;
+              if (node.attributes["Type"] == "query")  {
+                node.target_size = 3;
                 node.target_color = "#425863"; 
-              //angle = Math.PI * 2 * i / l - Math.PI / 2;
-              angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
-                //node.target_x = node.file_x;
-                //node.target_y = node.file_y;
+                angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
+                //  node.target_x = node.file_x;
+                // node.target_y = node.file_y;
                 node.target_x = _options.innerRadius * Math.cos(angle);
                 node.target_y = _options.innerRadius * Math.sin(angle);
                  node.label = node.file_label
-
-              } else {
-                node.target_color = "#AAA";
-                angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
+              } else if(node.attributes["Type"] == "page") {
+                //console.log(i, a.length, l, l2)
+                node.target_size = 0;
+                node.target_color = "#AAA"; 
+                angle = Math.PI * 2 * (i) / (l3) - Math.PI / 2;
                 node.target_x = _options.outerRadius * Math.cos(angle);
                 node.target_y = _options.outerRadius * Math.sin(angle);
+
               }
-            });
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = "rgba(17, 17, 17, 0.1)"
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: true,
-            labelThreshold: 1,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-          animation: {
-            color: "target_color",
-            size: "target_size",
-            x: "target_x",
-            y: "target_y",
-            camera: {
-              x: 0,
-              y: 0,
-              ratio: 1,
-              angle: 0
-            }
-          }
-        },
-        {
-
-          init: function() {
-            _s.unbind("clickNode");
-            _s.graph.nodes().forEach(function(node, i, a) {
-
-              var l = _options.innerCircleCount;
-                
-                node.labelAdjust = false;
-                node.label = null;
-
-
-              if (node.attributes["Type"] == "query"){
-                node.target_color = "#425863"; 
-                node.target_size = _s.graph.degree(node.id, "out") / _options.ratio;
-                node.label = node.file_label
-              }
-              else{
+              else {
+                node.target_size = 3;
                 node.target_color = "#AAA"; 
+                angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
+                node.target_x = _options.outerRadius * Math.cos(angle);
+                node.target_y = _options.outerRadius * Math.sin(angle);
+
               }
-
-              node.target_x = node.file_x;
-              node.target_y = node.file_y;
-
             });
             _s.graph.edges().forEach(function(edge, i, a) {
               edge.color = "rgba(17, 17, 17, 0.1)"
@@ -2901,81 +3020,155 @@ var networkconfig = {
             }
           }
         },
+        // {
+
+        //   init: function() {
+        //     _s.unbind("clickNode");
+        //     _s.graph.nodes().forEach(function(node, i, a) {
+
+        //       var l = _options.innerCircleCount;
+                
+        //         node.labelAdjust = false;
+        //         node.label = null;
+
+
+        //       if (node.attributes["Type"] == "query"){
+        //         node.target_color = "#425863"; 
+        //         node.target_size = _s.graph.degree(node.id, "out") / _options.ratio;
+        //         node.label = node.file_label
+        //       }
+        //       else{
+        //         node.target_color = "#AAA"; 
+        //       }
+
+        //       node.target_x = node.file_x;
+        //       node.target_y = node.file_y;
+
+        //     });
+        //     _s.graph.edges().forEach(function(edge, i, a) {
+        //       edge.color = "rgba(17, 17, 17, 0.1)"
+        //     });
+        //   },
+        //   forceAtlas2: false,
+        //   center: null,
+        //   filter: null,
+        //   settings: {
+        //     drawEdges: true,
+        //     labelThreshold: 1,
+        //     enableCamera: false,
+        //     mouseEnabled : false,
+        //     touchEnabled : false
+        //   },
+        //   animation: {
+        //     color: "target_color",
+        //     size: "target_size",
+        //     x: "target_x",
+        //     y: "target_y",
+        //     camera: {
+        //       x: 0,
+        //       y: 0,
+        //       ratio: 1,
+        //       angle: 0
+        //     }
+        //   }
+        // },
+        // {
+        //   init: function() {
+        //     _s.unbind("clickNode");
+        //     _s.graph.nodes().forEach(function(node, i, a) {
+        //       var l = _options.innerCircleCount
+
+        //       node.label = null;
+        //       node.labelAdjust = false;
+
+        //        if (node.attributes["Type"] == "query"){
+
+        //         node.target_color = "#425863"; 
+        //         node.target_size = _s.graph.degree(node.id, "out") / _options.ratio;
+
+        //       }else{
+
+        //         if(_s.graph.degree(node.id, "in") > 1){
+        //         node.target_color = goodColors.E;
+        //         node.labelAdjust = true;
+        //         node.label = node.file_label
+
+        //           }
+        //         else{
+        //           node.target_color = "#AAA"; 
+        //         }
+        //       }
+        //       node.target_x = node.file_x;
+        //       node.target_y = node.file_y;
+        //     });
+        //     _s.graph.edges().forEach(function(edge, i, a) {
+        //       edge.color = "rgba(17, 17, 17, 0.1)"
+        //     });
+        //   },
+        //   forceAtlas2: false,
+        //   center: null,
+        //   filter: null,
+        //   settings: {
+        //     drawEdges: true,
+        //     labelThreshold: 1,
+        //     enableCamera: false,
+        //     mouseEnabled : false,
+        //     touchEnabled : false
+        //   },
+        //   animation: {
+        //     color: "target_color",
+        //     size: "target_size",
+        //     x: "target_x",
+        //     y: "target_y",
+        //     camera: {
+        //       x: 0,
+        //       y: 0,
+        //       ratio: 1,
+        //       angle: 0
+        //     }
+        //   }
+        // },
         {
           init: function() {
-            _s.unbind("clickNode");
             _s.graph.nodes().forEach(function(node, i, a) {
-              var l = _options.innerCircleCount
-
-              node.label = null;
-              node.labelAdjust = false;
-
-               if (node.attributes["Type"] == "query"){
-
-                node.target_color = "#425863"; 
-                node.target_size = _s.graph.degree(node.id, "out") / _options.ratio;
-
-              }else{
-
-                if(_s.graph.degree(node.id, "in") > 1){
-                node.target_color = goodColors.E;
-                node.labelAdjust = true;
-                node.label = node.file_label
-
-                  }
-                else{
-                  node.target_color = "#AAA"; 
-                }
-              }
-              node.target_x = node.file_x;
-              node.target_y = node.file_y;
-            });
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = "rgba(17, 17, 17, 0.1)"
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: true,
-            labelThreshold: 1,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-          animation: {
-            color: "target_color",
-            size: "target_size",
-            x: "target_x",
-            y: "target_y",
-            camera: {
-              x: 0,
-              y: 0,
-              ratio: 1,
-              angle: 0
-            }
-          }
-        },
-        {
-          init: function() {
-            _s.graph.nodes().forEach(function(node, i, a) {
-              var l = _options.innerCircleCount;
+              var l = _options.innerCircleCount,
+                  l2 = _options.innerUrlCount,
+                  l3 = _options.innerPageCount;
 
               node.label = node.file_label;
               node.labelAdjust = false;
 
 
-              if (node.attributes["Type"] == "query"){
+              if (node.attributes["Type"] == "query")  {
+                node.target_size = node.target_size = _s.graph.degree(node.id, "out")/ _options.ratio;
                 node.target_color = "#425863"; 
-                node.target_size = _s.graph.degree(node.id, "out") / _options.ratio;
-              }
-              else{
-                node.target_color = "#AAA";
-              }
+                angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                node.label = node.file_label
+                //node.target_x = _options.innerRadius * Math.cos(angle);
+                //node.target_y = _options.innerRadius * Math.sin(angle);
+                //node.label = node.file_label
+              } else if(node.attributes["Type"] == "page") {
+                //console.log(i, a.length, l, l2)
+                node.target_size = 0;
+                node.target_color = "#AAA"; 
+                angle = Math.PI * 2 * (i) / (l3) - Math.PI / 2;
+                node.target_x = _options.outerRadius * Math.cos(angle);
+                node.target_y = _options.outerRadius * Math.sin(angle);
 
-              node.target_x = node.file_x;
-              node.target_y = node.file_y;
+              }
+              else {
+                node.target_size = 3;
+                node.target_color = "#AAA"; 
+                angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                node.label = node.file_label
+                //node.target_x = _options.outerRadius * Math.cos(angle);
+                //node.target_y = _options.outerRadius * Math.sin(angle);
+
+              }
 
             });
             _s.bind("clickNode", function(e) {
@@ -3062,7 +3255,7 @@ var networkconfig = {
           filter: null,
           settings: {
             drawEdges: true,
-            labelThreshold: 3,
+            labelThreshold: 5,
             enableCamera: true,
             mouseEnabled : true,
             touchEnabled : true
@@ -3071,6 +3264,8 @@ var networkconfig = {
           animation: {
             color: "target_color",
             size: "target_size",
+            x: "target_x",
+            y: "target_y",
             camera: {
               x: 0,
               y: 0,
