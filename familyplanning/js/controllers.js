@@ -45,8 +45,8 @@ angular.module('who.controllers', [])
       {id:"fp2_query_network",label: "Building the corpus 2",nav: false,step:true, template:"viz-step", protocol: 'fp_query2', legend:true},
       {id:"fp2_crawl_intro", label:"Mapping the web 2", nav: true, step:false, template:"sub-chapter", protocol: false},
       {id:"fp2_crawl_network", label:"Mapping the web 2", nav: false, step:true, template:"viz-step", protocol: 'fp_crawl2', legend:true},
-      {id:"fp2_text_intro",label:"Seeing what they're saying 2",nav: true, step:false,template:"sub-chapter", protocol: false},
-      {id:"fp2_text_slope",label:"Seeing what they're saying 2", nav: false, step:true, template:"viz-step-slope-two", protocol: 'fp_text2'},
+      {id:"fp2_text_intro",label:"The Issue analysis 2",nav: true, step:false,template:"sub-chapter", protocol: false},
+      {id:"fp2_text_slope",label:"The Issue analysis 2", nav: false, step:true, template:"viz-step-slope-two", protocol: 'fp_text2'},
       //{id:"fp2_geo_intro",label:"The final map",nav: true, step:false,template:"sub-chapter", protocol: 'fp_text'},
       //{id:"fp2_geo_map",label:"The final map",nav: false, step:true,template:"fp2-geo-map", protocol: 'fp_text', legend:false},
       {id:"fp_outro",label:"Conclusion to family planning",nav: true, step:false, template:"sub-chapter", protocol: false}

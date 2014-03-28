@@ -2074,7 +2074,7 @@ angular.module('who.directives', [])
 		        var marker = L.circleMarker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
 		            //icon: L.mapbox.marker.icon({ 'marker-color': 'd45158'}),
 		            radius: 5,
-		        	fillColor: "#005862",
+		        	fillColor: "#78CCD3",
 		        	stroke: false,
 		        	fillOpacity: 0.69,
 		            title: title,
@@ -2095,7 +2095,7 @@ angular.module('who.directives', [])
 		        var marker = L.circleMarker(new L.LatLng(a['lat'].replace(",","."), a['lon'].replace(",",".")), {
 		            //icon: L.mapbox.marker.icon({ 'marker-color': '34CD87'}),
 		            radius: 5,
-		        	fillColor: "#78CCD3",
+		        	fillColor: "#005862",
 		        	stroke: false,
 		        	fillOpacity: 0.69,
 		            title: title,

@@ -613,7 +613,7 @@ var networkconfig = {
           minNodeSize: 0,
           maxNodeSize: 0,
           borderColor: "#fff",
-          font: 'Montserrat',
+          font: 'Roboto',
           zoomMax: 1
         },
     "parserURL": null,
@@ -1484,7 +1484,7 @@ var networkconfig = {
 "minNodeSize": 0,
 "maxNodeSize": 0,
 "borderColor": "#fff",
-"font": "Montserrat",
+"font": "Roboto",
 "zoomMax": 1,
 "zoomMin": 0.3
         } ,
@@ -2032,7 +2032,7 @@ var networkconfig = {
           minNodeSize: 0,
           maxNodeSize: 0,
           borderColor: "#fff",
-          font: 'Montserrat',
+          font: 'Roboto',
           zoomMax: 1
         },
     "parserURL": null,
@@ -2815,7 +2815,7 @@ var networkconfig = {
 "minNodeSize": 0,
 "maxNodeSize": 0,
 "borderColor": "#fff",
-"font": "Montserrat",
+"font": "Roboto",
 "zoomMax": 1,
 "zoomMin": 0.3
         } ,
@@ -3363,7 +3363,7 @@ var networkconfig = {
           minNodeSize: 0,
           maxNodeSize: 0,
           borderColor: "#fff",
-          font: 'Montserrat',
+          font: 'Roboto',
           zoomMax: 1
         },
     "parserURL": null,

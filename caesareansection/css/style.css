@@ -956,12 +956,12 @@ ul li {
 }
 
 .marker-cluster-small, .marker-cluster-medium, .marker-cluster-large   {
-  	background-color:rgba(52, 205, 135, 0.79);
+  	background-color:rgba(0, 88, 98, 0.79);
   	border-radius:100%;
  }
  
    .marker-cluster-small-2, .marker-cluster-medium-2, .marker-cluster-large-2   {
-  	background-color:rgba(212, 81, 88, 0.79);
+  	background-color:rgba(120, 204, 211, 0.79);
   	border-radius:100%;
  }
 

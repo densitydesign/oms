@@ -49,16 +49,17 @@
 <div class="adv-step step6">
   <h3>Size by</h3>
   <div class="btn-group">
-    <button type="button" class="btn btn-primary" ng-model="ctrlmodels.cs_crawl_network.size" btn-radio="'deg'">degree</button>
-    <button type="button" class="btn btn-primary" ng-model="ctrlmodels.cs_crawl_network.size" btn-radio="'in'">in-degree</button>
+    <button type="button" class="btn btn-default" ng-model="ctrlmodels.cs_crawl_network.size" btn-radio="'deg'">degree</button>
+    <button type="button" class="btn btn-default" ng-model="ctrlmodels.cs_crawl_network.size" btn-radio="'in'">in-degree</button>
   </div>
-
+<p>
   <h3>Clusters</h3>
   <p><span class="cluster1" ng-click="ctrlmodels.cs_crawl_network.zoom = 'A'">Cluster A</span><br>
     <span class="cluster2" ng-click="ctrlmodels.cs_crawl_network.zoom = 'B'">Cluster B</span><br>
     <span class="cluster3" ng-click="ctrlmodels.cs_crawl_network.zoom = 'C'">Cluster C</span><br>
     <span class="cluster4" ng-click="ctrlmodels.cs_crawl_network.zoom = 'D'">Cluster D</span><br>
     <span class="cluster5" ng-click="ctrlmodels.cs_crawl_network.zoom = 'E'">Cluster E</span><br>
+  </p>
   </p>
   <p>
     <span ng-click="ctrlmodels.cs_crawl_network.zoom = false">Resetview</span>
