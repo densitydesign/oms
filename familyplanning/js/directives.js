@@ -479,12 +479,12 @@ angular.module('who.directives', [])
             for(var i = threshold; i >= 0; i--){
               var p = $( containerViz ).scrollLeft() + i
               var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0]
-              console.log(dl)
-              if(dl && !loading){
-                // dl = dl.value.clusters;
-                // loading = true
-                // chartLegend.datum(dl).call(wikitoclegend)
-                // loading = false
+              if(typeof dl == "object" && !loading){
+                 if(!dl.value) break;
+                 dl = dl.value.clusters;
+                loading = true
+                chartLegend.datum(dl).call(wikitoclegend)
+                loading = false
                 break;
               }
             }
