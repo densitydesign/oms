@@ -610,8 +610,13 @@ ul li {
 	padding-right: 20px;
 }
 
+
+#paginationStep{
+	height:10%;
+}
+
 .adva-cont{
-	height:80%;
+	height:70%;
 	overflow:hidden;
 }
 
@@ -627,6 +632,7 @@ ul li {
 
 .main-viz{
 	height: 100%;
+	padding-right:40px;
 }
 
 #graph{
