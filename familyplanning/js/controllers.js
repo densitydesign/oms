@@ -82,7 +82,9 @@ angular.module('who.controllers', [])
           totalItems: 5,
           currentStep: 1,
           itemsPerPage: 1,
-          maxItems: 5
+          maxItems: 5,
+          zoom : false,
+          size:"deg"
         },
       "fp_query_network":{
           totalItems: 5,
@@ -118,7 +120,9 @@ angular.module('who.controllers', [])
           totalItems: 5,
           currentStep: 1,
           itemsPerPage: 1,
-          maxItems: 5
+          maxItems: 5,
+          zoom : false,
+          size:"deg"
         },
         "fp2_query_network":{
           totalItems: 5,

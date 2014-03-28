@@ -204,19 +204,82 @@
       if(!x1){applyView(_views.length-1)}
       else{zoomCluster(x, x1)}
     }
+    vis.toggleSize = function(x){
+      if (!arguments.length) return;
+      toggleSize(x)
 
+    }
+
+    function toggleSize(attribute) {
+          var cam = _s.cameras[0];
+            var zoomView = {
+
+              init: function() {
+                _s.graph.nodes().forEach(function(node, i, a) {
+               
+              if(attribute == "in"){
+                node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              }else if(attribute == "out"){
+                node.target_size = _s.graph.degree(node.id, 'out') / _options.ratio;
+              }
+              else{
+              node.target_size = node.file_size / _options.ratio;
+              }
+
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          filter: null,
+          // settings: {
+          //   drawEdges: true,
+          //   labelThreshold: 8,
+          //   enableCamera: false,
+          //   mouseEnabled : true,
+          //   touchEnabled : true
+          // },
+          animation: {
+            //color: 'target_color',
+            size: 'target_size',
+            //x: 'target_x',
+            //y: 'target_y',
+            camera: {
+                  x: cam.x,
+                  y: cam.y,
+                  ratio: cam.ratio,
+                  angle: cam.angle
+            }
+          }
+          }
+
+            // Init:
+              zoomView.init();
+
+            // Animation:
+            if (zoomView.animation) {
+              _s.settings('drawEdges', false);
+              animate(zoomView.animation, function() {
+                //_s.settings(zoomView.settings);
+                _s.settings('drawEdges', true);
+                _s.refresh();
+              });
+            } else
+              _s.refresh();
+        }
+        
       function zoomCluster(attribute, value) {
             var zoomView = {
 
               init: function() {
                 _s.graph.nodes().forEach(function(node, i, a) {
-              node.label = node.file_label;
+ 
 
               if (node.attributes[attribute] === value){
-
+                 node.label = node.file_label;
                 node.target_color = colorScale(value); 
 
               }else{
+                 node.label = null;
                 node.target_color = '#AAA'; // TODO: Apply good color
               }
               node.target_size = node.file_size / _options.ratio;
@@ -1051,7 +1114,7 @@ var networkconfig = {
           filter: null,
           settings: {
             drawEdges: true,
-            labelThreshold: 8,
+            labelThreshold: 3,
             enableCamera: true,
             mouseEnabled : true,
             touchEnabled : true

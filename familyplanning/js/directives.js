@@ -216,6 +216,20 @@ angular.module('who.directives', [])
             }
         })
 
+        scope.$watch('ctrlmodels.'+ scope.section.id + '.zoom', function(newValue, oldValue){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+                network.zoomCluster('clusters',newValue)
+                //chart.call(network)
+            }
+        })
+
+        scope.$watch('ctrlmodels.'+ scope.section.id + '.size', function(newValue, oldValue){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+                network.toggleSize(newValue)
+                //chart.call(network)
+            }
+        })
+
         // scope.$watch('utils.internalCounter',function(newValue, oldValue){
         //   if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
         //       if(newValue > oldValue){

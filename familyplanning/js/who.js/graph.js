@@ -22,6 +22,7 @@
       _options,
       _views,
       views,
+      colorScale = d3.scale.category10().domain(["A","B","C","D","E","F"]),
       queryPosition,
       bis1 = {nodes : [], edges: []},
       bis2 = {nodes : [], edges: []},
@@ -204,18 +205,83 @@
       else{zoomCluster(x, x1)}
     }
 
+    vis.toggleSize = function(x){
+      if (!arguments.length) return;
+      toggleSize(x)
+
+    }
+
+    function toggleSize(attribute) {
+          var cam = _s.cameras[0];
+            var zoomView = {
+
+              init: function() {
+                _s.graph.nodes().forEach(function(node, i, a) {
+               
+              if(attribute == "in"){
+                node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              }else if(attribute == "out"){
+                node.target_size = _s.graph.degree(node.id, 'out') / _options.ratio;
+              }
+              else{
+              node.target_size = node.file_size / _options.ratio;
+              }
+
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          filter: null,
+          // settings: {
+          //   drawEdges: true,
+          //   labelThreshold: 8,
+          //   enableCamera: false,
+          //   mouseEnabled : true,
+          //   touchEnabled : true
+          // },
+          animation: {
+            //color: 'target_color',
+            size: 'target_size',
+            //x: 'target_x',
+            //y: 'target_y',
+            camera: {
+                  x: cam.x,
+                  y: cam.y,
+                  ratio: cam.ratio,
+                  angle: cam.angle
+            }
+          }
+          }
+
+            // Init:
+              zoomView.init();
+
+            // Animation:
+            if (zoomView.animation) {
+              _s.settings('drawEdges', false);
+              animate(zoomView.animation, function() {
+                //_s.settings(zoomView.settings);
+                _s.settings('drawEdges', true);
+                _s.refresh();
+              });
+            } else
+              _s.refresh();
+        }
+
       function zoomCluster(attribute, value) {
             var zoomView = {
 
               init: function() {
                 _s.graph.nodes().forEach(function(node, i, a) {
-              node.label = node.file_label;
+              
 
               if (node.attributes[attribute] === value){
 
+                node.label = node.file_label;
                 node.target_color = colorScale(value); 
 
               }else{
+                node.label = null
                 node.target_color = '#AAA'; // TODO: Apply good color
               }
               node.target_size = node.file_size / _options.ratio;
@@ -229,13 +295,13 @@
           forceAtlas2: false,
           center: null,
           filter: null,
-          // settings: {
-          //   drawEdges: true,
-          //   labelThreshold: 1,
-          //   enableCamera: false,
-          //   mouseEnabled : false,
-          //   touchEnabled : false
-          // },
+          settings: {
+            drawEdges: true,
+            labelThreshold: 8,
+            enableCamera: false,
+            mouseEnabled : true,
+            touchEnabled : true
+          },
           animation: {
             color: 'target_color',
             size: 'target_size',
@@ -532,7 +598,7 @@ var networkconfig = {
         outerRadius: 2000,
         duration: 500,
         action: 0,
-        ratio: 4  
+        ratio: 5  
       },
     "settings": {
           edgeColor: 'default',
@@ -677,7 +743,7 @@ var networkconfig = {
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
-                  labelToShow = getMinAttribute(_dbGraph, 'in', 3, 'Tag1', 'C');
+                  labelToShow = getMinAttribute(_dbGraph, null, 3, 'Tag1', 'C');
 
               delete node.label;
               if (i < l) {
@@ -685,7 +751,7 @@ var networkconfig = {
                 if (node.attributes["Tag1"] === 'C'){
                   node.target_color = goodColors.E; // TODO: Apply good color
                   node.target_size = 4;
-                  if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+                  if(_s.graph.degree(node.id) >= labelToShow ) node.label = node.file_label;
                 }
                 else {node.target_color = '#ccc'}
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
@@ -736,7 +802,7 @@ var networkconfig = {
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
-                  labelToShow = getMinAttribute(_dbGraph, 'in', 3, 'Tag1', 'B2');;
+                  labelToShow = getMinAttribute(_dbGraph, null, 3, 'Tag1', 'B2');;
 
               node.label = null
 
@@ -745,7 +811,7 @@ var networkconfig = {
                 if (node.attributes["Tag1"] === 'B2'){
                   node.target_color = goodColors.M; // TODO: Apply good color
                   node.target_size = 4;
-                  if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+                  if(_s.graph.degree(node.id) >= labelToShow ) node.label = node.file_label;
                 }
                 else {node.target_color = '#ccc'}
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
@@ -796,7 +862,7 @@ var networkconfig = {
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
-                  labelToShow = getMinAttribute(_dbGraph, 'in', 3, 'Tag1', 'A11');
+                  labelToShow = getMinAttribute(_dbGraph, null, 3, 'Tag1', 'A11');
 
                   node.label = null;
 
@@ -805,7 +871,7 @@ var networkconfig = {
                 if (node.attributes["Tag1"] === 'A11'){
                   node.target_color = goodColors.C; // TODO: Apply good color
                   node.target_size = 4;
-                  if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+                  if(_s.graph.degree(node.id) >= labelToShow ) node.label = node.file_label;
                 }
                 else {node.target_color = '#ccc'}
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
@@ -845,64 +911,64 @@ var networkconfig = {
             }
           }
         },
-        {
-          /**
-           * EVERY NODES
-           * CIRCULAR LAYOUT
-           * CATEGORIES COLORS
-           * EDGES ARE STILL NOT DISPLAYED
-           * SIZES ARE STILL HARDCODED
-           */
-          init: function() {
-            _s.unbind('clickNode');
-            _s.graph.nodes().forEach(function(node, i, a) {
-              var angle,
-                  l = _options.innerCircleCount;
+        // {
+        //   /**
+        //    * EVERY NODES
+        //    * CIRCULAR LAYOUT
+        //    * CATEGORIES COLORS
+        //    * EDGES ARE STILL NOT DISPLAYED
+        //    * SIZES ARE STILL HARDCODED
+        //    */
+        //   init: function() {
+        //     _s.unbind('clickNode');
+        //     _s.graph.nodes().forEach(function(node, i, a) {
+        //       var angle,
+        //           l = _options.innerCircleCount;
 
-              node.label = null;
+        //       node.label = null;
 
-              if (i < l) {
-                node.target_size = 3;
-                node.target_color = '#425863'; // TODO: Apply good color
-                angle = Math.PI * 2 * i / l - Math.PI / 2;
-                node.target_x = _options.innerRadius * Math.cos(angle);
-                node.target_y = _options.innerRadius * Math.sin(angle);
-              } else {
-                node.target_size = 1;
-                node.target_color = '#AAA'; // TODO: Apply good color
-                angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
-                node.target_x = _options.outerRadius * Math.cos(angle);
-                node.target_y = _options.outerRadius * Math.sin(angle);
-              }
-            });
+        //       if (i < l) {
+        //         node.target_size = 3;
+        //         node.target_color = '#425863'; // TODO: Apply good color
+        //         angle = Math.PI * 2 * i / l - Math.PI / 2;
+        //         node.target_x = _options.innerRadius * Math.cos(angle);
+        //         node.target_y = _options.innerRadius * Math.sin(angle);
+        //       } else {
+        //         node.target_size = 1;
+        //         node.target_color = '#AAA'; // TODO: Apply good color
+        //         angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
+        //         node.target_x = _options.outerRadius * Math.cos(angle);
+        //         node.target_y = _options.outerRadius * Math.sin(angle);
+        //       }
+        //     });
 
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color ='rgba(17, 17, 17, 0.1)'
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: false,
-            labelThreshold: 8,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-          animation: {
-            color: 'target_color',
-            size: 'target_size',
-            x: 'target_x',
-            y: 'target_y',
-            camera: {
-              x: 0,
-              y: 0,
-              ratio: 1,
-              angle: 0
-            }
-          }
-        },
+        //     _s.graph.edges().forEach(function(edge, i, a) {
+        //       edge.color ='rgba(17, 17, 17, 0.1)'
+        //     });
+        //   },
+        //   forceAtlas2: false,
+        //   center: null,
+        //   filter: null,
+        //   settings: {
+        //     drawEdges: false,
+        //     labelThreshold: 8,
+        //     enableCamera: false,
+        //     mouseEnabled : false,
+        //     touchEnabled : false
+        //   },
+        //   animation: {
+        //     color: 'target_color',
+        //     size: 'target_size',
+        //     x: 'target_x',
+        //     y: 'target_y',
+        //     camera: {
+        //       x: 0,
+        //       y: 0,
+        //       ratio: 1,
+        //       angle: 0
+        //     }
+        //   }
+        // },
         {
           /**
            * EVERY NODES
@@ -919,7 +985,8 @@ var networkconfig = {
                   labelToShow = ["who.int", "plannedparenthood.org", "guttmacher.org", "cdc.gov"]
 
               node.label = null;
-              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              //node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              node.target_size = node.file_size / _options.ratio;
               if (i < l) {
 
                 if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
@@ -974,8 +1041,12 @@ var networkconfig = {
             _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
 
-              var l = _options.innerCircleCount;
+              var l = _options.innerCircleCount,
+                  labelToShow = ["who.int", "plannedparenthood.org", "guttmacher.org", "cdc.gov"];
 
+              node.label = null;
+
+              if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
 
 
               if (i < l)
@@ -983,7 +1054,8 @@ var networkconfig = {
               else
                 node.target_color = '#AAA'; // TODO: Apply good color
 
-              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              //node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              node.target_size = node.file_size / _options.ratio;
               node.target_x = node.file_x;
               node.target_y = node.file_y;
             });
@@ -1014,218 +1086,218 @@ var networkconfig = {
             }
           }
         },
-        {
-          /**
-           * EVERY NODES
-           * FILE LAYOUT
-           * CATEGORIES COLORS
-           * EDGES ARE DISPLAYED
-           * SIZES ARE INDEGREE
-           * ZOOM ON ONE CLUSTER: B4
-           */
-          init: function() {
-            _s.unbind('clickNode');
-            _s.graph.nodes().forEach(function(node, i, a) {
-              var l = _options.innerCircleCount,
-                labelToShow = getMinAttribute(_dbGraph, 'in', 3, 'Tag1', 'B4')
+        // {
+        //   /**
+        //    * EVERY NODES
+        //    * FILE LAYOUT
+        //    * CATEGORIES COLORS
+        //    * EDGES ARE DISPLAYED
+        //    * SIZES ARE INDEGREE
+        //    * ZOOM ON ONE CLUSTER: B4
+        //    */
+        //   init: function() {
+        //     _s.unbind('clickNode');
+        //     _s.graph.nodes().forEach(function(node, i, a) {
+        //       var l = _options.innerCircleCount,
+        //         labelToShow = getMinAttribute(_dbGraph, 'in', 3, 'Tag1', 'B4')
 
-              node.label = null;
+        //       node.label = null;
 
-              if (node.attributes["Tag1"] === 'B4'){
+        //       if (node.attributes["Tag1"] === 'B4'){
 
-                node.target_color = goodColors.E; 
-                if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+        //         node.target_color = goodColors.E; 
+        //         if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
 
-              }else{
-                node.target_color = '#AAA'; // TODO: Apply good color
-              }
-              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
-              node.target_x = node.file_x;
-              node.target_y = node.file_y;
-            });
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = 'rgba(17, 17, 17, 0.1)'
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: true,
-            labelThreshold: 1,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-          animation: {
-            color: 'target_color',
-            size: 'target_size',
-            x: 'target_x',
-            y: 'target_y',
-            camera: function(n) {
-              return n.attributes["Tag1"] === 'B4';
-            }
-          }
-        },
-        {
-          /**
-           * EVERY NODES
-           * FILE LAYOUT
-           * CATEGORIES COLORS
-           * EDGES ARE DISPLAYED
-           * SIZES ARE INDEGREE
-           * ZOOM ON ONE CLUSTER: modularity 130 [130,129,133,128,132,134]
-           */
-          init: function() {
-            _s.unbind('clickNode');
-            _s.graph.nodes().forEach(function(node, i, a) {
-              var l = _options.innerCircleCount,
-                labelToShow = getMinAttribute(_dbGraph, 'in', 3, "Modularity Class", "130")
+        //       }else{
+        //         node.target_color = '#AAA'; // TODO: Apply good color
+        //       }
+        //       node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+        //       node.target_x = node.file_x;
+        //       node.target_y = node.file_y;
+        //     });
+        //     _s.graph.edges().forEach(function(edge, i, a) {
+        //       edge.color = 'rgba(17, 17, 17, 0.1)'
+        //     });
+        //   },
+        //   forceAtlas2: false,
+        //   center: null,
+        //   filter: null,
+        //   settings: {
+        //     drawEdges: true,
+        //     labelThreshold: 1,
+        //     enableCamera: false,
+        //     mouseEnabled : false,
+        //     touchEnabled : false
+        //   },
+        //   animation: {
+        //     color: 'target_color',
+        //     size: 'target_size',
+        //     x: 'target_x',
+        //     y: 'target_y',
+        //     camera: function(n) {
+        //       return n.attributes["Tag1"] === 'B4';
+        //     }
+        //   }
+        // },
+        // {
+        //   /**
+        //    * EVERY NODES
+        //    * FILE LAYOUT
+        //    * CATEGORIES COLORS
+        //    * EDGES ARE DISPLAYED
+        //    * SIZES ARE INDEGREE
+        //    * ZOOM ON ONE CLUSTER: modularity 130 [130,129,133,128,132,134]
+        //    */
+        //   init: function() {
+        //     _s.unbind('clickNode');
+        //     _s.graph.nodes().forEach(function(node, i, a) {
+        //       var l = _options.innerCircleCount,
+        //         labelToShow = getMinAttribute(_dbGraph, 'in', 3, "Modularity Class", "130")
 
-              node.label = null;
+        //       node.label = null;
 
-              if (node.attributes["Modularity Class"] === '130'){
+        //       if (node.attributes["Modularity Class"] === '130'){
 
-                node.target_color = goodColors.M; 
-                if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+        //         node.target_color = goodColors.M; 
+        //         if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
 
-              }else{
-                node.target_color = '#AAA'; // TODO: Apply good color
-              }
-              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
-              node.target_x = node.file_x;
-              node.target_y = node.file_y;
-            });
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = 'rgba(17, 17, 17, 0.1)'
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: true,
-            labelThreshold: 1,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-          animation: {
-            color: 'target_color',
-            size: 'target_size',
-            x: 'target_x',
-            y: 'target_y',
-            camera: function(n) {
-              return n.attributes["Modularity Class"] === '130';
-            }
-          }
-        },
-        {
-          /**
-           * EVERY NODES
-           * FILE LAYOUT
-           * CATEGORIES COLORS
-           * EDGES ARE DISPLAYED
-           * SIZES ARE INDEGREE
-           * ZOOM ON ONE CLUSTER: modularity 130 [130,129,133,128,132,134]
-           */
-          init: function() {
-            _s.unbind('clickNode');
-            _s.graph.nodes().forEach(function(node, i, a) {
-              var l = _options.innerCircleCount,
-                labelToShow = getMinAttribute(_dbGraph, 'in', 3, "Clusters", "A")
+        //       }else{
+        //         node.target_color = '#AAA'; // TODO: Apply good color
+        //       }
+        //       node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+        //       node.target_x = node.file_x;
+        //       node.target_y = node.file_y;
+        //     });
+        //     _s.graph.edges().forEach(function(edge, i, a) {
+        //       edge.color = 'rgba(17, 17, 17, 0.1)'
+        //     });
+        //   },
+        //   forceAtlas2: false,
+        //   center: null,
+        //   filter: null,
+        //   settings: {
+        //     drawEdges: true,
+        //     labelThreshold: 1,
+        //     enableCamera: false,
+        //     mouseEnabled : false,
+        //     touchEnabled : false
+        //   },
+        //   animation: {
+        //     color: 'target_color',
+        //     size: 'target_size',
+        //     x: 'target_x',
+        //     y: 'target_y',
+        //     camera: function(n) {
+        //       return n.attributes["Modularity Class"] === '130';
+        //     }
+        //   }
+        // },
+        // {
+        //   /**
+        //    * EVERY NODES
+        //    * FILE LAYOUT
+        //    * CATEGORIES COLORS
+        //    * EDGES ARE DISPLAYED
+        //    * SIZES ARE INDEGREE
+        //    * ZOOM ON ONE CLUSTER: modularity 130 [130,129,133,128,132,134]
+        //    */
+        //   init: function() {
+        //     _s.unbind('clickNode');
+        //     _s.graph.nodes().forEach(function(node, i, a) {
+        //       var l = _options.innerCircleCount,
+        //         labelToShow = getMinAttribute(_dbGraph, 'in', 3, "Clusters", "A")
 
-              node.label = null;
+        //       node.label = null;
 
-              if (node.attributes["Clusters"] === 'A'){
+        //       if (node.attributes["Clusters"] === 'A'){
 
-                node.target_color = goodColors.M; 
-                if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+        //         node.target_color = goodColors.M; 
+        //         if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
 
-              }else{
-                node.target_color = '#AAA'; // TODO: Apply good color
-              }
-              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
-              node.target_x = node.file_x;
-              node.target_y = node.file_y;
-            });
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = 'rgba(17, 17, 17, 0.1)'
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: true,
-            labelThreshold: 1,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-          animation: {
-            color: 'target_color',
-            size: 'target_size',
-            x: 'target_x',
-            y: 'target_y',
-            camera: function(n) {
-              return n.attributes["Clusters"] === 'A';
-            }
-          }
-        },
-        {
-          /**
-           * EVERY NODES
-           * FILE LAYOUT
-           * CATEGORIES COLORS
-           * EDGES ARE DISPLAYED
-           * SIZES ARE INDEGREE
-           * ZOOM ON ONE CLUSTER: modularity 130 [130,129,133,128,132,134]
-           */
-          init: function() {
-            _s.unbind('clickNode');
-            _s.graph.nodes().forEach(function(node, i, a) {
-              var l = _options.innerCircleCount,
-                labelToShow = getMinAttribute(_dbGraph, 'in', 3, "Clusters", "B")
+        //       }else{
+        //         node.target_color = '#AAA'; // TODO: Apply good color
+        //       }
+        //       node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+        //       node.target_x = node.file_x;
+        //       node.target_y = node.file_y;
+        //     });
+        //     _s.graph.edges().forEach(function(edge, i, a) {
+        //       edge.color = 'rgba(17, 17, 17, 0.1)'
+        //     });
+        //   },
+        //   forceAtlas2: false,
+        //   center: null,
+        //   filter: null,
+        //   settings: {
+        //     drawEdges: true,
+        //     labelThreshold: 1,
+        //     enableCamera: false,
+        //     mouseEnabled : false,
+        //     touchEnabled : false
+        //   },
+        //   animation: {
+        //     color: 'target_color',
+        //     size: 'target_size',
+        //     x: 'target_x',
+        //     y: 'target_y',
+        //     camera: function(n) {
+        //       return n.attributes["Clusters"] === 'A';
+        //     }
+        //   }
+        // },
+        // {
+        //   /**
+        //    * EVERY NODES
+        //    * FILE LAYOUT
+        //    * CATEGORIES COLORS
+        //    * EDGES ARE DISPLAYED
+        //    * SIZES ARE INDEGREE
+        //    * ZOOM ON ONE CLUSTER: modularity 130 [130,129,133,128,132,134]
+        //    */
+        //   init: function() {
+        //     _s.unbind('clickNode');
+        //     _s.graph.nodes().forEach(function(node, i, a) {
+        //       var l = _options.innerCircleCount,
+        //         labelToShow = getMinAttribute(_dbGraph, 'in', 3, "Clusters", "B")
 
-              node.label = null;
+        //       node.label = null;
 
-              if (node.attributes["Clusters"] === 'B'){
+        //       if (node.attributes["Clusters"] === 'B'){
 
-                node.target_color = goodColors.M; 
-                if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+        //         node.target_color = goodColors.M; 
+        //         if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
 
-              }else{
-                node.target_color = '#AAA'; // TODO: Apply good color
-              }
-              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
-              node.target_x = node.file_x;
-              node.target_y = node.file_y;
-            });
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = 'rgba(17, 17, 17, 0.1)'
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: true,
-            labelThreshold: 1,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-          animation: {
-            color: 'target_color',
-            size: 'target_size',
-            x: 'target_x',
-            y: 'target_y',
-            camera: function(n) {
-              return n.attributes["Clusters"] === 'B';
-            }
-          }
-        },
+        //       }else{
+        //         node.target_color = '#AAA'; // TODO: Apply good color
+        //       }
+        //       node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+        //       node.target_x = node.file_x;
+        //       node.target_y = node.file_y;
+        //     });
+        //     _s.graph.edges().forEach(function(edge, i, a) {
+        //       edge.color = 'rgba(17, 17, 17, 0.1)'
+        //     });
+        //   },
+        //   forceAtlas2: false,
+        //   center: null,
+        //   filter: null,
+        //   settings: {
+        //     drawEdges: true,
+        //     labelThreshold: 1,
+        //     enableCamera: false,
+        //     mouseEnabled : false,
+        //     touchEnabled : false
+        //   },
+        //   animation: {
+        //     color: 'target_color',
+        //     size: 'target_size',
+        //     x: 'target_x',
+        //     y: 'target_y',
+        //     camera: function(n) {
+        //       return n.attributes["Clusters"] === 'B';
+        //     }
+        //   }
+        // },
         // {
         //   /**
         //    * EGO NETWORK
@@ -1282,14 +1354,11 @@ var networkconfig = {
 
               node.label = node.file_label;
 
-              if (i < l)
-                node.target_color = '#425863'; // TODO: Apply good color
-              else
-                node.target_color = '#AAA'; // TODO: Apply good color
+              node.target_color = colorScale(node.attributes.clusters)
 
               node.target_x = node.file_x;
               node.target_y = node.file_y;
-              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              node.target_size = node.file_size / _options.ratio;
             });
             _s.bind('clickNode', function(e) {
                 var selected = e.data.node.selected
@@ -1299,11 +1368,7 @@ var networkconfig = {
                         var l = _options.innerCircleCount;
                         node.label = node.file_label;
                         node.selected = false;
-
-                        if (i < l)
-                          node.target_color = '#425863'; // TODO: Apply good color
-                        else
-                          node.target_color = '#AAA'; // TODO: Apply good color
+                        node.target_color = colorScale(node.attributes.clusters)
                       });
                    _s.graph.edges().forEach(function(edge, i, a) {
                             edge.color = 'rgba(17, 17, 17, 0.1)'
@@ -1375,7 +1440,7 @@ var networkconfig = {
           filter: null,
           settings: {
             drawEdges: true,
-            labelThreshold: 8,
+            labelThreshold: 12,
             enableCamera: true,
             mouseEnabled : true,
             touchEnabled : true
@@ -1952,7 +2017,7 @@ var networkconfig = {
         outerRadius: 2000,
         duration: 500,
         action: 0,
-        ratio: 1  
+        ratio: 4  
       },
     "settings": {
           edgeColor: 'default',
@@ -2103,7 +2168,7 @@ var networkconfig = {
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
-                  labelToShow = getMinAttribute(_dbGraph, 'in', 5, 'ADVOCACY', 'true');
+                  labelToShow = getMinAttribute(_dbGraph, null, 5, 'ADVOCACY', 'true');
 
               delete node.label;
               if (i < l) {
@@ -2111,7 +2176,7 @@ var networkconfig = {
                 if (node.attributes["ADVOCACY"] === 'true'){
                   node.target_color = goodColors.E; // TODO: Apply good color
                   node.target_size = 4;
-                  if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+                  if(_s.graph.degree(node.id) >= labelToShow ) node.label = node.file_label;
                 }
                 else {node.target_color = '#ccc'}
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
@@ -2162,7 +2227,7 @@ var networkconfig = {
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
-                  labelToShow = getMinAttribute(_dbGraph, 'in', 5, 'CONTRACEPTION', 'true');;
+                  labelToShow = getMinAttribute(_dbGraph,null, 5, 'CONTRACEPTION', 'true');;
 
               node.label = null
 
@@ -2171,7 +2236,7 @@ var networkconfig = {
                 if (node.attributes["CONTRACEPTION"] === 'true'){
                   node.target_color = goodColors.M; // TODO: Apply good color
                   node.target_size = 4;
-                  if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+                  if(_s.graph.degree(node.id) >= labelToShow ) node.label = node.file_label;
                 }
                 else {node.target_color = '#ccc'}
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
@@ -2222,7 +2287,7 @@ var networkconfig = {
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
-                  labelToShow = getMinAttribute(_dbGraph, 'in', 5, 'POLICY', 'true');
+                  labelToShow = getMinAttribute(_dbGraph, null, 5, 'POLICY', 'true');
 
                   node.label = null;
 
@@ -2231,7 +2296,7 @@ var networkconfig = {
                 if (node.attributes["POLICY"] === 'true'){
                   node.target_color = goodColors.C; // TODO: Apply good color
                   node.target_size = 4;
-                  if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+                  if(_s.graph.degree(node.id) >= labelToShow ) node.label = node.file_label;
                 }
                 else {node.target_color = '#ccc'}
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
@@ -2271,64 +2336,64 @@ var networkconfig = {
             }
           }
         },
-        {
-          /**
-           * EVERY NODES
-           * CIRCULAR LAYOUT
-           * CATEGORIES COLORS
-           * EDGES ARE STILL NOT DISPLAYED
-           * SIZES ARE STILL HARDCODED
-           */
-          init: function() {
-            _s.unbind('clickNode');
-            _s.graph.nodes().forEach(function(node, i, a) {
-              var angle,
-                  l = _options.innerCircleCount;
+        // {
+        //   /**
+        //    * EVERY NODES
+        //    * CIRCULAR LAYOUT
+        //    * CATEGORIES COLORS
+        //    * EDGES ARE STILL NOT DISPLAYED
+        //    * SIZES ARE STILL HARDCODED
+        //    */
+        //   init: function() {
+        //     _s.unbind('clickNode');
+        //     _s.graph.nodes().forEach(function(node, i, a) {
+        //       var angle,
+        //           l = _options.innerCircleCount;
 
-              node.label = null;
+        //       node.label = null;
 
-              if (i < l) {
-                node.target_size = 3;
-                node.target_color = '#425863'; // TODO: Apply good color
-                angle = Math.PI * 2 * i / l - Math.PI / 2;
-                node.target_x = _options.innerRadius * Math.cos(angle);
-                node.target_y = _options.innerRadius * Math.sin(angle);
-              } else {
-                node.target_size = 1;
-                node.target_color = '#AAA'; // TODO: Apply good color
-                angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
-                node.target_x = _options.outerRadius * Math.cos(angle);
-                node.target_y = _options.outerRadius * Math.sin(angle);
-              }
-            });
+        //       if (i < l) {
+        //         node.target_size = 3;
+        //         node.target_color = '#425863'; // TODO: Apply good color
+        //         angle = Math.PI * 2 * i / l - Math.PI / 2;
+        //         node.target_x = _options.innerRadius * Math.cos(angle);
+        //         node.target_y = _options.innerRadius * Math.sin(angle);
+        //       } else {
+        //         node.target_size = 1;
+        //         node.target_color = '#AAA'; // TODO: Apply good color
+        //         angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
+        //         node.target_x = _options.outerRadius * Math.cos(angle);
+        //         node.target_y = _options.outerRadius * Math.sin(angle);
+        //       }
+        //     });
 
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color ='rgba(17, 17, 17, 0.1)'
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: false,
-            labelThreshold: 8,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-          animation: {
-            color: 'target_color',
-            size: 'target_size',
-            x: 'target_x',
-            y: 'target_y',
-            camera: {
-              x: 0,
-              y: 0,
-              ratio: 1,
-              angle: 0
-            }
-          }
-        },
+        //     _s.graph.edges().forEach(function(edge, i, a) {
+        //       edge.color ='rgba(17, 17, 17, 0.1)'
+        //     });
+        //   },
+        //   forceAtlas2: false,
+        //   center: null,
+        //   filter: null,
+        //   settings: {
+        //     drawEdges: false,
+        //     labelThreshold: 8,
+        //     enableCamera: false,
+        //     mouseEnabled : false,
+        //     touchEnabled : false
+        //   },
+        //   animation: {
+        //     color: 'target_color',
+        //     size: 'target_size',
+        //     x: 'target_x',
+        //     y: 'target_y',
+        //     camera: {
+        //       x: 0,
+        //       y: 0,
+        //       ratio: 1,
+        //       angle: 0
+        //     }
+        //   }
+        // },
         {
           /**
            * EVERY NODES
@@ -2345,7 +2410,9 @@ var networkconfig = {
                   labelToShow = ["who.int", "plannedparenthood.org", "guttmacher.org", "cdc.gov"]
 
               node.label = null;
-              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              //node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              node.target_size = node.file_size / _options.ratio;
+              
               if (i < l) {
 
                 if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
@@ -2400,16 +2467,19 @@ var networkconfig = {
             _s.unbind('clickNode');
             _s.graph.nodes().forEach(function(node, i, a) {
 
-              var l = _options.innerCircleCount;
+              var l = _options.innerCircleCount,
+                  labelToShow = ["who.int", "plannedparenthood.org", "guttmacher.org", "cdc.gov"]
 
-
+              node.label = null;
+               if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
 
               if (i < l)
                 node.target_color = '#425863'; // TODO: Apply good color
               else
                 node.target_color = '#AAA'; // TODO: Apply good color
 
-              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              //node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              node.target_size = node.file_size / _options.ratio;
               node.target_x = node.file_x;
               node.target_y = node.file_y;
             });
@@ -2440,165 +2510,165 @@ var networkconfig = {
             }
           }
         },
-        {
-          /**
-           * EVERY NODES
-           * FILE LAYOUT
-           * CATEGORIES COLORS
-           * EDGES ARE DISPLAYED
-           * SIZES ARE INDEGREE
-           * ZOOM ON ONE CLUSTER: B4
-           */
-          init: function() {
-            _s.unbind('clickNode');
-            _s.graph.nodes().forEach(function(node, i, a) {
-              var l = _options.innerCircleCount,
-                labelToShow = getMinAttribute(_dbGraph, 'in', 3, 'ECONOMIC', 'true')
+        // {
+        //   /**
+        //    * EVERY NODES
+        //    * FILE LAYOUT
+        //    * CATEGORIES COLORS
+        //    * EDGES ARE DISPLAYED
+        //    * SIZES ARE INDEGREE
+        //    * ZOOM ON ONE CLUSTER: B4
+        //    */
+        //   init: function() {
+        //     _s.unbind('clickNode');
+        //     _s.graph.nodes().forEach(function(node, i, a) {
+        //       var l = _options.innerCircleCount,
+        //         labelToShow = getMinAttribute(_dbGraph, 'in', 3, 'ECONOMIC', 'true')
 
-              node.label = null;
+        //       node.label = null;
 
-              if (node.attributes["ECONOMIC"] === 'true'){
+        //       if (node.attributes["ECONOMIC"] === 'true'){
 
-                node.target_color = goodColors.E; 
-                if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+        //         node.target_color = goodColors.E; 
+        //         if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
 
-              }else{
-                node.target_color = '#AAA'; // TODO: Apply good color
-              }
-              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
-              node.target_x = node.file_x;
-              node.target_y = node.file_y;
-            });
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = 'rgba(17, 17, 17, 0.1)'
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: true,
-            labelThreshold: 1,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-          animation: {
-            color: 'target_color',
-            size: 'target_size',
-            x: 'target_x',
-            y: 'target_y',
-            camera: function(n) {
-              return n.attributes["ECONOMIC"] === 'true';
-            }
-          }
-        },
-        {
-          /**
-           * EVERY NODES
-           * FILE LAYOUT
-           * CATEGORIES COLORS
-           * EDGES ARE DISPLAYED
-           * SIZES ARE INDEGREE
-           * ZOOM ON ONE CLUSTER: modularity 130 [130,129,133,128,132,134]
-           */
-          init: function() {
-            _s.unbind('clickNode');
-            _s.graph.nodes().forEach(function(node, i, a) {
-              var l = _options.innerCircleCount,
-                labelToShow = getMinAttribute(_dbGraph, 'in', 3, "modularity_class", "9")
+        //       }else{
+        //         node.target_color = '#AAA'; // TODO: Apply good color
+        //       }
+        //       node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+        //       node.target_x = node.file_x;
+        //       node.target_y = node.file_y;
+        //     });
+        //     _s.graph.edges().forEach(function(edge, i, a) {
+        //       edge.color = 'rgba(17, 17, 17, 0.1)'
+        //     });
+        //   },
+        //   forceAtlas2: false,
+        //   center: null,
+        //   filter: null,
+        //   settings: {
+        //     drawEdges: true,
+        //     labelThreshold: 1,
+        //     enableCamera: false,
+        //     mouseEnabled : false,
+        //     touchEnabled : false
+        //   },
+        //   animation: {
+        //     color: 'target_color',
+        //     size: 'target_size',
+        //     x: 'target_x',
+        //     y: 'target_y',
+        //     camera: function(n) {
+        //       return n.attributes["ECONOMIC"] === 'true';
+        //     }
+        //   }
+        // },
+        // {
+        //   /**
+        //    * EVERY NODES
+        //    * FILE LAYOUT
+        //    * CATEGORIES COLORS
+        //    * EDGES ARE DISPLAYED
+        //    * SIZES ARE INDEGREE
+        //    * ZOOM ON ONE CLUSTER: modularity 130 [130,129,133,128,132,134]
+        //    */
+        //   init: function() {
+        //     _s.unbind('clickNode');
+        //     _s.graph.nodes().forEach(function(node, i, a) {
+        //       var l = _options.innerCircleCount,
+        //         labelToShow = getMinAttribute(_dbGraph, 'in', 3, "modularity_class", "9")
 
-              node.label = null;
+        //       node.label = null;
 
-              if (node.attributes["modularity_class"] === '9'){
+        //       if (node.attributes["modularity_class"] === '9'){
 
-                node.target_color = goodColors.M; 
-                if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+        //         node.target_color = goodColors.M; 
+        //         if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
 
-              }else{
-                node.target_color = '#AAA'; // TODO: Apply good color
-              }
-              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
-              node.target_x = node.file_x;
-              node.target_y = node.file_y;
-            });
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = 'rgba(17, 17, 17, 0.1)'
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: true,
-            labelThreshold: 1,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-          animation: {
-            color: 'target_color',
-            size: 'target_size',
-            x: 'target_x',
-            y: 'target_y',
-            camera: function(n) {
-              return n.attributes["modularity_class"] === '9';
-            }
-          }
-        },
-        {
-          /**
-           * EVERY NODES
-           * FILE LAYOUT
-           * CATEGORIES COLORS
-           * EDGES ARE DISPLAYED
-           * SIZES ARE INDEGREE
-           * ZOOM ON ONE CLUSTER: modularity 130 [130,129,133,128,132,134]
-           */
-          init: function() {
-            _s.unbind('clickNode');
-            _s.graph.nodes().forEach(function(node, i, a) {
-              var l = _options.innerCircleCount,
-                labelToShow = getMinAttribute(_dbGraph, 'in', 3, "clusters", "A")
+        //       }else{
+        //         node.target_color = '#AAA'; // TODO: Apply good color
+        //       }
+        //       node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+        //       node.target_x = node.file_x;
+        //       node.target_y = node.file_y;
+        //     });
+        //     _s.graph.edges().forEach(function(edge, i, a) {
+        //       edge.color = 'rgba(17, 17, 17, 0.1)'
+        //     });
+        //   },
+        //   forceAtlas2: false,
+        //   center: null,
+        //   filter: null,
+        //   settings: {
+        //     drawEdges: true,
+        //     labelThreshold: 1,
+        //     enableCamera: false,
+        //     mouseEnabled : false,
+        //     touchEnabled : false
+        //   },
+        //   animation: {
+        //     color: 'target_color',
+        //     size: 'target_size',
+        //     x: 'target_x',
+        //     y: 'target_y',
+        //     camera: function(n) {
+        //       return n.attributes["modularity_class"] === '9';
+        //     }
+        //   }
+        // },
+        // {
+        //   /**
+        //    * EVERY NODES
+        //    * FILE LAYOUT
+        //    * CATEGORIES COLORS
+        //    * EDGES ARE DISPLAYED
+        //    * SIZES ARE INDEGREE
+        //    * ZOOM ON ONE CLUSTER: modularity 130 [130,129,133,128,132,134]
+        //    */
+        //   init: function() {
+        //     _s.unbind('clickNode');
+        //     _s.graph.nodes().forEach(function(node, i, a) {
+        //       var l = _options.innerCircleCount,
+        //         labelToShow = getMinAttribute(_dbGraph, 'in', 3, "clusters", "A")
 
-              node.label = null;
+        //       node.label = null;
 
-              if (node.attributes["clusters"] === 'A'){
+        //       if (node.attributes["clusters"] === 'A'){
 
-                node.target_color = goodColors.M; 
-                if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
+        //         node.target_color = goodColors.M; 
+        //         if(_s.graph.degree(node.id, 'in') >= labelToShow ) node.label = node.file_label;
 
-              }else{
-                node.target_color = '#AAA'; // TODO: Apply good color
-              }
-              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
-              node.target_x = node.file_x;
-              node.target_y = node.file_y;
-            });
-            _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color = 'rgba(17, 17, 17, 0.1)'
-            });
-          },
-          forceAtlas2: false,
-          center: null,
-          filter: null,
-          settings: {
-            drawEdges: true,
-            labelThreshold: 1,
-            enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
-          },
-          animation: {
-            color: 'target_color',
-            size: 'target_size',
-            x: 'target_x',
-            y: 'target_y',
-            camera: function(n) {
-              return n.attributes["clusters"] === 'A';
-            }
-          }
-        },
+        //       }else{
+        //         node.target_color = '#AAA'; // TODO: Apply good color
+        //       }
+        //       node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+        //       node.target_x = node.file_x;
+        //       node.target_y = node.file_y;
+        //     });
+        //     _s.graph.edges().forEach(function(edge, i, a) {
+        //       edge.color = 'rgba(17, 17, 17, 0.1)'
+        //     });
+        //   },
+        //   forceAtlas2: false,
+        //   center: null,
+        //   filter: null,
+        //   settings: {
+        //     drawEdges: true,
+        //     labelThreshold: 1,
+        //     enableCamera: false,
+        //     mouseEnabled : false,
+        //     touchEnabled : false
+        //   },
+        //   animation: {
+        //     color: 'target_color',
+        //     size: 'target_size',
+        //     x: 'target_x',
+        //     y: 'target_y',
+        //     camera: function(n) {
+        //       return n.attributes["clusters"] === 'A';
+        //     }
+        //   }
+        // },
         {
           /**
            * FREE VIEW
@@ -2613,14 +2683,11 @@ var networkconfig = {
 
               node.label = node.file_label;
 
-              if (i < l)
-                node.target_color = '#425863'; // TODO: Apply good color
-              else
-                node.target_color = '#AAA'; // TODO: Apply good color
+              node.target_color = colorScale(node.attributes.clusters)
 
               node.target_x = node.file_x;
               node.target_y = node.file_y;
-              node.target_size = _s.graph.degree(node.id, 'in') / _options.ratio;
+              node.target_size = node.file_size / _options.ratio;
             });
             _s.bind('clickNode', function(e) {
                 var selected = e.data.node.selected
@@ -2631,10 +2698,8 @@ var networkconfig = {
                         node.label = node.file_label;
                         node.selected = false;
 
-                        if (i < l)
-                          node.target_color = '#425863'; // TODO: Apply good color
-                        else
-                          node.target_color = '#AAA'; // TODO: Apply good color
+                        node.target_color = colorScale(node.attributes.clusters)
+
                       });
                    _s.graph.edges().forEach(function(edge, i, a) {
                             edge.color = 'rgba(17, 17, 17, 0.1)'
