@@ -126,9 +126,10 @@ sup {
 	text-align:center;
 	font-family: Georgia, sans-serif;
 	font-weight: 400;
-	font-size:3.5em;
+	font-size:2.6em;
 	margin-bottom: 30px;
 	margin-top: 100px;
+	line-height: 140%;
 }
 
 .section-text h3, .section-text-home h3 {
@@ -1027,7 +1028,7 @@ text-align: center;
 .yvalue, .ylegend, .bubbleLegend{
 	font-family: 'Montserrat';
 	color: "#222";
-	font-weight: "700";
+	font-weight: "400";
 	font-size: 12px;
 }
 
@@ -1040,15 +1041,15 @@ text-align: center;
 }
 
 .bar, .bubble{
-	fill: #84A594;
+	fill: #78CCD3;
 	-webkit-transition:fill 0.3s ease-in-out;  
 	transition:fill 0.3s ease-in-out;
 }
 .bar:hover, .bubble:hover{
-	fill: #5c7367;
+	fill: #00858C;
 }
 .bar.selected, .bubble.selected{
-	fill: #5c7367;
+	fill: #005862;
 }
 
 .toggle-wiki{
@@ -1564,5 +1565,28 @@ text-align: center;
 	.intro-header {
 		height:70%;
 	}
+}
+
+
+/*Cluster Legend*/
+.cluster1{
+cursor:pointer;
+color:#29A6CC;
+}
+.cluster2{
+cursor:pointer;
+color:#EDB015;
+}
+.cluster3{
+cursor:pointer;	
+color:#2FB22F;
+}
+.cluster4{
+cursor:pointer;	
+color:#9B2626;
+}
+.cluster5{
+cursor:pointer;	
+color:#7C43D6;
 }
 

@@ -549,7 +549,7 @@ var networkconfig = {
 "minNodeSize": 0,
 "maxNodeSize": 0,
 "borderColor": "#fff",
-"font": "Montserrat",
+"font": "Roboto",
 "zoomMax": 1,
 "zoomMin": 0.3
         } ,
@@ -1096,7 +1096,7 @@ var networkconfig = {
           minNodeSize: 0,
           maxNodeSize: 0,
           borderColor: "#fff",
-          font: 'Montserrat'
+          font: 'Roboto'
         },
     "parserURL": "data/cs_crawl_network/cs_crawl.json",
     "queryPosScale": null,
@@ -1961,7 +1961,7 @@ var networkconfig = {
           minNodeSize: 0,
           maxNodeSize: 0,
           borderColor: "#fff",
-          font: 'Montserrat',
+          font: 'Roboto',
           zoomMax: 1
         },
     "parserURL": "data/cs_aufeminin_networkFR/cs_af_fr.json",
@@ -2643,7 +2643,7 @@ var networkconfig = {
           minNodeSize: 0,
           maxNodeSize: 0,
           borderColor: "#fff",
-          font: 'Montserrat',
+          font: 'Roboto',
           zoomMax: 1
         },
     "parserURL": "data/cs_aufeminin_networkIT/cs_af_it.json",
