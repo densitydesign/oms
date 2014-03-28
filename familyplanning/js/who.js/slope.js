@@ -141,7 +141,7 @@
 		    stepTitles
 			    .enter()
 			    .append("text")
-			    .attr('x', graphWidth)
+			    .attr('x', function(d){return x(d) + (x.rangeBand()/2)})
 			    .attr('y', 20)
 			    .attr('opacity', 0)
 			    .attr('font-family','Montserrat')
@@ -152,7 +152,7 @@
 			    	.transition()
 					.duration(transitionDuration)
 					.attr('opacity', 1)
-					.attr('x', function(d){return x(d) + (x.rangeBand()/2)})
+					//.attr('x', function(d){return x(d) + (x.rangeBand()/2)})
 
 
 			stepTitles.exit()
@@ -197,7 +197,7 @@
 				})
 				.style('cursor','pointer')
 				.attr('opacity', 0)
-				.attr("x",graphWidth)
+				.attr("x",function(d){return x(d.step)+(x.rangeBand()/2)})
 				.attr('font-family',fontFamily)
 				.attr('font-size',fontSize)
 				.attr('y', function(d){return d.yCoord;})
@@ -207,7 +207,7 @@
 					.duration(transitionDuration)
 					.attr('opacity', 1)
 					.attr('y', function(d){return d.yCoord;})
-					.attr("x",function(d){return x(d.step)+(x.rangeBand()/2)})
+					//.attr("x",function(d){return x(d.step)+(x.rangeBand()/2)})
 
 
 			textGroup.exit()
