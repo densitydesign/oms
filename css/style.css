@@ -55,7 +55,7 @@ body {
 	font-size:1.4em;
 	line-height: 170%;
 	font-family:Georgia;
-	margin: 50px 0;
+	margin: 60px 0;
 	display: block;
 	-webkit-margin-before: 2em;
 	-webkit-margin-after: 2em;
@@ -63,7 +63,8 @@ body {
 	-webkit-margin-end: 0px;
 	-webkit-hyphens: auto;  
     -moz-hyphens: auto;  
-    hyphens: auto; 
+    hyphens: auto;
+    padding-left: 0; 
 }
 
 .italic{
@@ -72,6 +73,10 @@ body {
 
 .bold{
 	 font-weight: 600;
+}
+
+.italic {
+	font-family: Georgia italic;
 }
 
 sup {
@@ -84,7 +89,7 @@ sup {
 	font-size:1.4em;
 	line-height: 170%;
 	font-weight: 400;
-	margin-top:20px;
+	margin-top:12px;
 	margin-bottom:30px;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -100,11 +105,11 @@ sup {
 	font-size:1.4em;
 	line-height: 170%;
 	font-weight: 400;
-	margin-top:30px;
-	margin-bottom:50px;
+	margin-top:0px;
+	margin-bottom:30px;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	margin-left: 20px;
+	margin-left: 0px;
 	color:#222;
 	float:right;
 	border-top: 1px solid #222;
@@ -988,6 +993,8 @@ a:hover{
 }
 
 
+
+
 .member {
 	background-color: #fff;
 	border-bottom:1px solid #222;
@@ -1429,7 +1436,7 @@ a:hover{
 	font-weight: 400;
 	font-size:3.5em;
 	margin-bottom: 30px;
-	margin-top: 60px;
+	margin-top: 80px;
 	padding-top: 30px;
 }
 
@@ -1456,3 +1463,65 @@ a:hover{
   	border-left-width:4px;
 }
 
+
+/* glossary */
+.glossary-definition {
+	font-variant: small-caps;
+	letter-spacing: 1px;
+	font-weight: 400;
+}
+
+.glossary{
+	margin-top: 20%;
+}
+
+.glossary h3{
+	text-align: left;
+	margin-bottom: 0px;
+	font-size:1.1em;
+
+}
+
+.glossary h1{
+	text-align:left;
+	font-family:Georgia;
+	font-size:3em;
+	margin-bottom: 30px;
+}
+
+.glossary .section-text{
+	text-indent: -30px;
+	font-size: 1.2em;
+	margin-left:30px;
+}
+
+.glossary-name{
+	font-weight: bold;
+	font-variant:small-caps;
+	font-size: 1.4em;
+	letter-spacing: 2px;
+}
+
+.glossary-close{
+	width: 80px;
+	height: 80px;
+	border: none;
+	background:url(../img/cross2.png) no-repeat center center;
+	text-indent: 200%;
+	color: transparent;
+	outline: none;
+}
+
+
+/*Modals*/
+
+.modal-backdrop, .modal-backdrop.fade.in {
+    opacity: 1;
+    background-color: #fff;
+}
+
+.modal-content {
+-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
+border: none;
+}
