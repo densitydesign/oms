@@ -27,17 +27,17 @@ angular.module('who.controllers', [])
       {id:"cs_intro",label:"Introduction to cesarean section", nav: true, step:false, template:"chapter-intro", protocol: false},
       {id:"cs_query_intro",label: "The web corpus", nav: true, step:false, template:"sub-chapter", protocol: false},
       {id:"cs_query_network",label: "The web corpus",nav: false,step:true, template:"viz-step", protocol: 'cs_query', legend:true},
-      {id:"cs_query_analytics",label: "The web corpus",nav: false, step:false, template:"analytics", protocol: 'cs_query'},
+      //{id:"cs_query_analytics",label: "The web corpus",nav: false, step:false, template:"analytics", protocol: 'cs_query'},
       {id:"cs_crawl_intro", label:"The web cartography", nav: true, step:false, template:"sub-chapter", protocol: false},
       {id:"cs_crawl_network", label:"The web cartography", nav: false, step:true, template:"viz-step", protocol: 'cs_crawl', legend:true},
       {id:"cs_text_intro",label:"The Issue analysis",nav: true, step:false,template:"sub-chapter", protocol: false},
       {id:"cs_text_slope",label:"The Issue analysis", nav: false, step:true, template:"viz-step-slope", protocol: 'cs_text'},
       {id:"cs_images_intro",label:"The image-scape analysis",nav: true, step:false,template:"sub-chapter", protocol: false},
       {id:"cs_images_elastic",label:"The image-scape analysis", nav: false, step:false, template:"images-elastic", protocol: 'cs_imgs', legend:true},
-      {id:"cs_aufeminin_intro",label:"Analyzing the forum discussion", nav: true, step:false, template:"sub-chapter", protocol: false},
-      {id:"cs_aufeminin_forum",label:"Analyzing the forum discussion",nav: false,step:true, template:"viz-step-treemap", protocol: 'cs_forum', legend:true},
-      {id:"cs_aufeminin_networkFR",label:"Analyzing the forum discussion",nav: false, step:true, template:"viz-step", protocol: 'cs_forum', legend:true},
-      {id:"cs_aufeminin_networkIT",label:"Analyzing the forum discussion",nav: false, step:true, template:"viz-step", protocol: 'cs_forum', legend:true},
+      //{id:"cs_aufeminin_intro",label:"Analyzing the forum discussion", nav: true, step:false, template:"sub-chapter", protocol: false},
+      //{id:"cs_aufeminin_forum",label:"Analyzing the forum discussion",nav: false,step:true, template:"viz-step-treemap", protocol: 'cs_forum', legend:true},
+      //{id:"cs_aufeminin_networkFR",label:"Analyzing the forum discussion",nav: false, step:true, template:"viz-step", protocol: 'cs_forum', legend:true},
+      //{id:"cs_aufeminin_networkIT",label:"Analyzing the forum discussion",nav: false, step:true, template:"viz-step", protocol: 'cs_forum', legend:true},
       {id:"cs_outro",label:"Conclusion to caesarean section",nav: true, step:false, template:"sub-chapter", protocol: false}
     ]
 

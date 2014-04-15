@@ -61,7 +61,7 @@
       context.fillText(
         node.label,
         Math.round(node[prefix + 'x'] - ((node.label.length * fontSize)/4) ),
-        Math.round(node[prefix + 'y'] + fontSize +5 )
+        Math.round(node[prefix + 'y'] + fontSize + node.size)
       );
     }
 
@@ -89,11 +89,19 @@
         Math.round(node[prefix + 'x'] + 5 ),
         Math.round(node[prefix + 'y'] + fontSize/4 )
       );
-    }else{
+    }
+    else if(node.labelCenter){
+            context.fillText(
+        node.label,
+        Math.round(node[prefix + 'x'] - ((node.label.length * fontSize)/4) ),
+        Math.round(node[prefix + 'y'] + fontSize/3 )
+      );
+    }
+    else{
       context.fillText(
         node.label,
         Math.round(node[prefix + 'x'] - ((node.label.length * fontSize)/4) ),
-        Math.round(node[prefix + 'y'] + fontSize +5 )
+        Math.round(node[prefix + 'y'] + fontSize + node.size )
       );
     }
     }
@@ -594,7 +602,8 @@ var networkconfig = {
 "innerUrlCount": 0,
 "innerPageCount": 0,
 "innerRadius": 500,
-"outerRadius": 674,
+"middleRadius": 700,
+"outerRadius": 800,
 "duration": 500,
 "action": 0,
 "ratio": 3
@@ -614,7 +623,7 @@ var networkconfig = {
 "borderColor": "#fff",
 "font": "Roboto",
 "zoomMax": 1,
-"zoomMin": 0.3
+"zoomMin": 0.1
         } ,
   "parserURL": "data/cs_query_network/cs_query.json",
   "queryPosScale": d3.scale.ordinal()
@@ -632,9 +641,9 @@ var networkconfig = {
 
           delete n.label;
 
-          if (n.attributes["TYPE"] == "query")
+          if (n.attributes["Type"] == "query")
             {_options.innerCircleCount++;}
-          else if (n.attributes["TYPE"] == "url")
+          else if (n.attributes["Type"] == "host")
             {_options.innerUrlCount++;}
           else
             {_options.innerPageCount++;}
@@ -646,27 +655,47 @@ var networkconfig = {
         });
 
         graph.nodes = graph.nodes.sort(function(a, b) {
-            if(a.attributes["TYPE"] < b.attributes["TYPE"]) return -1;
-            if(a.attributes["TYPE"] > b.attributes["TYPE"]) return 1;
+            if(a.attributes["Type"] < b.attributes["Type"]) return -1;
+            if(a.attributes["Type"] > b.attributes["Type"]) return 1;
             return 0;
         });
 
         graph.nodes.forEach(function(node, i, a) {
-          var angle,
-              l = _options.innerCircleCount;
+              var angle,
+                  l = _options.innerCircleCount,
+                  l2 = _options.innerUrlCount,
+                  l3 = _options.innerPageCount;
 
+                node.labelAdjust = false;
 
+              if (node.attributes["Type"] == "query")  {
+                node.size = 3;
+                node.color = "#425863"; 
+                angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
+                node.x = node.file_x;
+                node.y = node.file_y;
+                //node.target_x = _options.innerRadius * Math.cos(angle);
+                //node.target_y = _options.innerRadius * Math.sin(angle);
+                 node.label = node.file_label
+              } else if(node.attributes["Type"] == "url") {
+                //console.log(i, a.length, l, l2)
+                node.labelCenter=true
+                node.size = 0;
+                node.color = "#AAA"; 
+                angle = Math.PI * 2 * (i) / (l3) - Math.PI / 2;
+                node.x = _options.outerRadius * Math.cos(angle);
+                node.y = _options.outerRadius * Math.sin(angle);
 
-          node.size = 0;
-          if (node.attributes["TYPE"] == "query") {
-            angle = Math.PI * 2 * i / l - Math.PI / 2;
-            node.x = node.file_x;
-            node.y = node.file_y;
-          } else {
-            angle = Math.PI * 2 * (i - l) / (a.length - l) - Math.PI / 2;
-            node.x = _options.outerRadius * Math.cos(angle);
-            node.y = _options.outerRadius * Math.sin(angle);
-          }
+              }
+              else {
+                node.labelCenter=true
+                node.size = 0;
+                node.color = "#AAA"; 
+                angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
+                node.x = _options.middleRadius * Math.cos(angle);
+                node.y = _options.middleRadius * Math.sin(angle);
+
+              }
         });
 
         _graph = graph;
@@ -689,16 +718,16 @@ var networkconfig = {
 
                 node.labelAdjust = false;
 
-              if (node.attributes["TYPE"] == "query")  {
+              if (node.attributes["Type"] == "query")  {
                 node.target_size = 3;
                 node.target_color = "#425863"; 
                 angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
-                //  node.target_x = node.file_x;
-                // node.target_y = node.file_y;
-                node.target_x = _options.innerRadius * Math.cos(angle);
-                node.target_y = _options.innerRadius * Math.sin(angle);
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                //node.target_x = _options.innerRadius * Math.cos(angle);
+                //node.target_y = _options.innerRadius * Math.sin(angle);
                  node.label = node.file_label
-              } else if(node.attributes["TYPE"] == "page") {
+              } else if(node.attributes["Type"] == "url") {
                 //console.log(i, a.length, l, l2)
                 node.target_size = 0;
                 node.target_color = "#AAA"; 
@@ -711,8 +740,8 @@ var networkconfig = {
                 node.target_size = 0;
                 node.target_color = node.file_color; 
                 angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
-                node.target_x = _options.outerRadius * Math.cos(angle);
-                node.target_y = _options.outerRadius * Math.sin(angle);
+                node.target_x = _options.middleRadius * Math.cos(angle);
+                node.target_y = _options.middleRadius * Math.sin(angle);
 
               }
 
@@ -756,16 +785,16 @@ var networkconfig = {
               node.label = null;
               node.labelAdjust = false;
 
-              if (node.attributes["TYPE"] == "query")  {
+              if (node.attributes["Type"] == "query")  {
                 node.target_size = 3;
                 node.target_color = "#425863"; 
                 angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
-                //  node.target_x = node.file_x;
-                // node.target_y = node.file_y;
-                node.target_x = _options.innerRadius * Math.cos(angle);
-                node.target_y = _options.innerRadius * Math.sin(angle);
+                  node.target_x = node.file_x;
+                 node.target_y = node.file_y;
+                //node.target_x = _options.innerRadius * Math.cos(angle);
+                //node.target_y = _options.innerRadius * Math.sin(angle);
                  node.label = node.file_label
-              } else if(node.attributes["TYPE"] == "page") {
+              } else if(node.attributes["Type"] == "url") {
 
                 node.target_size = 2;
                 node.target_color = "#AAA"; 
@@ -775,17 +804,23 @@ var networkconfig = {
 
               }
               else {
-                node.target_size = 0;
+                node.target_size = 2;
                 node.target_color = "#AAA"; 
                 angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
-                node.target_x = _options.outerRadius * Math.cos(angle);
-                node.target_y = _options.outerRadius * Math.sin(angle);
+                node.target_x = _options.middleRadius * Math.cos(angle);
+                node.target_y = _options.middleRadius * Math.sin(angle);
 
               }
             });
 
             _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color ="rgba(17, 17, 17, 0.1)"
+              
+              var query = queryPosition.domain()
+              if(query.indexOf(edge.source) > -1){
+                edge.color ="rgba(17, 17, 17, 0)"
+              }else{
+                edge.color ="rgba(17, 17, 17, 0.1)"
+              }
             });
           },
           forceAtlas2: false,
@@ -823,16 +858,16 @@ var networkconfig = {
               node.label = null;
               node.labelAdjust = false;
 
-              if (node.attributes["TYPE"] == "query")  {
-                node.target_size = 3;
+              if (node.attributes["Type"] == "query")  {
+                node.target_size = +node.attributes["Size"] / _options.ratio;
                 node.target_color = "#425863"; 
                 angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
-                //  node.target_x = node.file_x;
-                // node.target_y = node.file_y;
-                node.target_x = _options.innerRadius * Math.cos(angle);
-                node.target_y = _options.innerRadius * Math.sin(angle);
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                //node.target_x = _options.innerRadius * Math.cos(angle);
+                //node.target_y = _options.innerRadius * Math.sin(angle);
                  node.label = node.file_label
-              } else if(node.attributes["TYPE"] == "page") {
+              } else if(node.attributes["Type"] == "url") {
                 //console.log(i, a.length, l, l2)
                 node.target_size = 0;
                 node.target_color = "#AAA"; 
@@ -842,17 +877,23 @@ var networkconfig = {
 
               }
               else {
-                node.target_size = +node.attributes["SIZE URL"] / 2;
+                node.target_size = +node.attributes["Size"];
                 node.target_color = "#AAA"; 
                 angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
-                node.target_x = _options.outerRadius * Math.cos(angle);
-                node.target_y = _options.outerRadius * Math.sin(angle);
+                node.target_x = _options.middleRadius * Math.cos(angle);
+                node.target_y = _options.middleRadius * Math.sin(angle);
 
               }
             });
 
             _s.graph.edges().forEach(function(edge, i, a) {
-              edge.color ="rgba(17, 17, 17, 0.1)"
+              var query = queryPosition.domain()
+              
+              if(query.indexOf(edge.source) > -1){
+                edge.color ="rgba(17, 17, 17, 0.1)"
+              }else{
+                edge.color ="rgba(17, 17, 17, 0)"
+              }
             });
           },
           forceAtlas2: false,
@@ -998,8 +1039,9 @@ var networkconfig = {
               node.labelAdjust = false;
               
 
-              if (node.attributes["TYPE"] == "query")  {
-                node.target_size = node.target_size = _s.graph.degree(node.id, "out")/ _options.ratio;
+              if (node.attributes["Type"] == "query")  {
+                //node.target_size = _s.graph.degree(node.id, "out")/ _options.ratio;
+                node.target_size = +node.attributes["Size"] / _options.ratio;
                 node.target_color = "#425863"; 
                 angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
                 node.target_x = node.file_x;
@@ -1008,7 +1050,7 @@ var networkconfig = {
                 //node.target_x = _options.innerRadius * Math.cos(angle);
                 //node.target_y = _options.innerRadius * Math.sin(angle);
                 //node.label = node.file_label
-              } else if(node.attributes["TYPE"] == "page") {
+              } else if(node.attributes["Type"] == "url") {
                 //console.log(i, a.length, l, l2)
                 node.target_size = 0;
                 node.target_color = "#AAA"; 
@@ -1018,7 +1060,7 @@ var networkconfig = {
 
               }
               else {
-                node.target_size = +node.attributes["SIZE URL"] / 2;
+                node.target_size = +node.attributes["Size"];
                 node.target_color = "#AAA"; 
                 angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
                 node.target_x = node.file_x;
@@ -1030,6 +1072,17 @@ var networkconfig = {
               }
 
             });
+
+            _s.graph.edges().forEach(function(edge, i, a) {
+              var query = queryPosition.domain()
+              
+              if(query.indexOf(edge.source) > -1){
+                edge.color ="rgba(17, 17, 17, 0.1)"
+              }else{
+                edge.color ="rgba(17, 17, 17, 0)"
+              }
+            });
+
             _s.bind("clickNode", function(e) {
                 var selected = e.data.node.selected
                 var cam = _s.cameras[0]
@@ -1040,14 +1093,20 @@ var networkconfig = {
                         node.label = node.file_label;
                         node.selected = false;
 
-                         if (node.attributes["TYPE"] == "query"){
+                         if (node.attributes["Type"] == "query"){
                           node.target_color = "#425863"; 
                         }else{
                           node.target_color = "#AAA";
                         }
                       });
                    _s.graph.edges().forEach(function(edge, i, a) {
-                            edge.color = "rgba(17, 17, 17, 0.1)"
+                      var query = queryPosition.domain()
+              
+                      if(query.indexOf(edge.source) > -1){
+                        edge.color ="rgba(17, 17, 17, 0.1)"
+                      }else{
+                        edge.color ="rgba(17, 17, 17, 0)"
+                      }
 
                    });
                   var animation = {
@@ -1114,7 +1173,7 @@ var networkconfig = {
           filter: null,
           settings: {
             drawEdges: true,
-            labelThreshold: 3,
+            labelThreshold: 5,
             enableCamera: true,
             mouseEnabled : true,
             touchEnabled : true
