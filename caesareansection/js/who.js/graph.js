@@ -218,6 +218,12 @@
 
     }
 
+    vis.toggleProperty = function(x){
+      if (!arguments.length) return;
+      toggleProperty(x)
+
+    }
+
     function toggleSize(attribute) {
           var cam = _s.cameras[0];
             var zoomView = {
@@ -249,6 +255,75 @@
           animation: {
             //color: 'target_color',
             size: 'target_size',
+            //x: 'target_x',
+            //y: 'target_y',
+            camera: {
+                  x: cam.x,
+                  y: cam.y,
+                  ratio: cam.ratio,
+                  angle: cam.angle
+            }
+          }
+          }
+
+            // Init:
+              zoomView.init();
+
+            // Animation:
+            if (zoomView.animation) {
+              _s.settings('drawEdges', false);
+              animate(zoomView.animation, function() {
+                //_s.settings(zoomView.settings);
+                _s.settings('drawEdges', true);
+                _s.refresh();
+              });
+            } else
+              _s.refresh();
+        }
+
+    function toggleProperty(property) {
+          var cam = _s.cameras[0];
+            var zoomView = {
+
+              init: function() {
+                _s.graph.nodes().forEach(function(node, i, a) {
+               
+                   var propertyDict = {
+                    "medical" : "M",
+                    "experiences" : "E",
+                    "controversies" :"C"
+                   }
+                   if(!property.length){
+                     if (node.attributes["Type"] == "query"){
+                            node.target_color = "#425863"; 
+                          }else{
+                            node.target_color = "#AAA";
+                      }
+                    }else{
+                      property.forEach(function(d){
+                        console.log(d, node.attributes[propertyDict[d]],node.attributes["Type"])
+                        if(node.attributes["Type"] == "host" && node.attributes[propertyDict[d]] == "true"){
+                          console.log("ci sono")
+                          node.target_color = "#f00"
+                        }
+                      })
+                    }
+
+            });
+          },
+          forceAtlas2: false,
+          center: null,
+          filter: null,
+          // settings: {
+          //   drawEdges: true,
+          //   labelThreshold: 8,
+          //   enableCamera: false,
+          //   mouseEnabled : true,
+          //   touchEnabled : true
+          // },
+          animation: {
+            color: 'target_color',
+            //size: 'target_size',
             //x: 'target_x',
             //y: 'target_y',
             camera: {

@@ -13,7 +13,10 @@
     	xMax,
 	 	dimension,
 	 	group,
-	 	filter;
+    cut = Infinity,
+    order,
+	 	filter,
+    dispatch = d3.dispatch("clicked");
 
 
     function barChart(selection){
@@ -49,10 +52,17 @@
 
     		x.domain([0, xMax]);
 
-    		y.domain(group.top(Infinity).map(function(d){return d.key}))
+        var groupData = group.top(cut);
+
+        if(order){
+          var orderScale = d3.scale.ordinal().range(d3.range(order.length)).domain(order)
+          groupData.sort(function (a,b) {return d3.ascending(orderScale(a.key), orderScale(b.key))})
+        }
+
+    		y.domain(groupData.map(function(d){return d.key}))
 
     		var chartContainer = chart.selectAll("g")
-    			.data([group.top(Infinity)])
+    			.data([groupData])
 
     		chartContainer
     			.enter()
@@ -64,7 +74,7 @@
     		
         if(chartContainer.selectAll(".bgBar").empty()){
           
-          var bgData = $.extend(true, [], group.top(Infinity));
+          var bgData = $.extend(true, [], groupData);
 
         bgBars = chartContainer.selectAll(".bgBar")
             .data(bgData)
@@ -100,6 +110,7 @@
 		      .attr("width", function(d){ return x(d.value)})
 		      .style("cursor", "pointer")
 		      .on("click", function(d){
+            dispatch.clicked(d.key)
 		      	var bar = d3.select(this)
 		      	var cl = checkSelected(bar.attr("class"))
 		      	bar.attr("class", cl)
@@ -143,7 +154,7 @@
       			
 
 			var ylegend = chart.selectAll(".ylegend")
-      			.data(group.top(Infinity))
+      			.data(groupData)
 			    
 			ylegend.enter().append("text")
 			      .attr("class", "ylegend")
@@ -159,8 +170,6 @@
             .attr("x", 3)
 
 			ylegend.exit().remove()
-
-			d3.rebind(chart, bars, "on")
 
       resize = false
 
@@ -215,6 +224,18 @@
       return barChart;
     }
 
+    barChart.cut = function(x){
+      if (!arguments.length) return cut;
+      cut = x;
+      return barChart;
+    }
+
+    barChart.order = function(x){
+      if (!arguments.length) return order;
+      order = x;
+      return barChart;
+    }
+
     function checkSelected(x){
     	return x == 'bar' ? 'bar selected' : 'bar'
     }
@@ -224,6 +245,8 @@
     	if (index > -1){query.splice(index, 1)}
     	else {query.push(x)}
     }
+
+    d3.rebind(barChart, dispatch, "on")
 
     return barChart;
   }

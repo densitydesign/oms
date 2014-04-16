@@ -68,7 +68,8 @@ angular.module('who.controllers', [])
           totalItems: 5,
           currentStep: 1,
           itemsPerPage: 1,
-          maxItems: 5
+          maxItems: 5,
+          sel:[]
         },
         "cs_text_slope":{
           totalItems: 5,

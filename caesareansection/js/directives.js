@@ -228,6 +228,13 @@ angular.module('who.directives', [])
             }
         })
 
+        scope.$watchCollection('ctrlmodels.'+ scope.section.id + '.sel', function(newValue, oldValue){
+          if(newValue != oldValue && scope.utils.section === scope.section.id && loaded){
+                console.log(newValue)
+                network.toggleProperty(newValue)
+            }
+        })
+
         // scope.$watch('utils.internalCounter',function(newValue, oldValue){
         //   if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
         //       if(newValue > oldValue){
@@ -1087,6 +1094,135 @@ angular.module('who.directives', [])
          if(newValue == scope.section.id && loaded === false){
            $timeout(function (){
             //scope.loadingstart()
+            init()
+            });
+          }
+        })
+
+      }
+    };
+  }])
+  .directive('barChartQuery',['fileService', '$timeout', function (fileService, $timeout) {
+    return {
+      restrict: 'A',
+      replace: false,
+      templateUrl: 'partials/barchartquery.html',
+      link: function postLink(scope, element, attrs) {
+
+          var csv,
+              tagContainer = element.find("#category")[0],
+              domainContainer = element.find("#domain")[0],
+              tagChart,
+              domainChart,
+              loaded = false;
+
+              // var tagHeight = element.find(".catcont").height() - element.find(".cattit").height();
+              // element.find("#category").height(tagHeight-2)
+              // var domainHeight = element.find(".domcont").height() - element.find(".domtit").height();
+              // element.find("#domain").height(domainHeight-2)
+              // var queryHeight = element.find(".quecont").height() - element.find(".quetit").height();
+              // element.find("#query").height(queryHeight-2)
+
+           var init = function(){
+            fileService.getFile('data/' + scope.section.id + '/cs_analytics.tsv').then(
+              function(data){
+                //csv = data.hosts;
+                csv = d3.tsv.parse(data)
+
+                // Create the crossfilter for the relevant dimensions and groups.
+                var category = crossfilter(csv),
+                all = category.groupAll(),
+                tag = category.dimension(function(d) { return d.tag; }),
+                tags = tag.group(),
+                host = category.dimension(function(d) { return d.host; }),
+                hosts = host.group(),
+                tld = category.dimension(function(d) { return d.tld; })
+                //tlds = tld.group()
+
+                var pass = [];
+
+                function reduceAdd(p, v) {
+                  if(pass.indexOf(v.host) < 0){
+                    pass.push(v.host)
+                    ++p
+                  }
+                  return p;
+                }
+
+                function reduceRemove(p, v) {
+                  if(pass.indexOf(v.host) > -1){
+                    pass.splice(pass.indexOf(v.host),1)
+                    --p
+                  }
+                  return p;
+                }
+
+                function reduceInitial() {
+                  pass = []
+                  return 0;
+                }
+                
+                
+                var tlds = tld.group().reduce(reduceAdd, reduceRemove, reduceInitial)
+                
+                var selected = []
+                tagChart = who.barChart()
+                        .xMax(tags.top(1)[0].value)
+                        .dimension(tag)
+                        .group(tags)
+                        .responsive(true)
+                        .order(["medical", "controversies", "experiences","none"])
+                        .on("clicked",function(d){
+                            if(selected.indexOf(d) < 0){
+                              selected.push(d)
+                            }
+                            else{
+                              selected.splice(selected.indexOf(d),1)
+                            }
+                            
+                            $timeout(function(){
+                              scope.ctrlmodels.cs_query_network.sel = selected
+                            })
+
+                        })
+
+                domainChart = who.barChart()
+                    .xMax(tags.top(1)[0].value)
+                    .dimension(tld)
+                    .group(tlds)
+                    .responsive(true)
+                    .cut(4)
+
+
+                tagContainer = d3.select(tagContainer)
+                                .on("click", function(d){
+                                  domainContainer.call(domainChart)
+                                })
+                                .call(tagChart)
+
+                domainContainer = d3.select(domainContainer)
+                                  .on("click", function(){
+                                    tagContainer.call(tagChart)
+                                  })
+                                .call(domainChart)
+
+                loaded = true;                       
+              },
+              function(error){
+                txt = error
+              }
+            );
+          }
+
+
+           $timeout(function (){
+              //init();
+          })
+
+
+        scope.$watch('utils.section', function(newValue, oldValue){
+         if(newValue == scope.section.id && loaded === false){
+           $timeout(function (){
             init()
             });
           }
