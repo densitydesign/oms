@@ -300,6 +300,7 @@
                     "controversies" :"C"
                    }
                    if(!property.length){
+                    node.label = node.file_label
                      if (node.attributes["Type"] == "query"){
                             node.target_color = "#425863"; 
                           }else{
@@ -309,8 +310,13 @@
                       property.forEach(function(d){
                         
                         if(node.attributes["Type"] == "host" && node.attributes[propertyDict[d]] == "true"){
-                          console.log("ci sono")
-                          node.target_color = "#f00"
+                          //node.target_color = "#f00"
+                           node.target_color = "#AAA";
+                          node.label = node.file_label
+                        }
+                        else{
+                          node.target_color = '#F5F5F5'
+                          node.label = null
                         }
                       })
                     }
