@@ -212,6 +212,12 @@
       if(!x1){applyView(_views.length-1)}
       else{zoomCluster(x, x1)}
     }
+
+    vis.zoomNodes = function(x, x1){
+      if(!x1){applyView(_views.length-1)}
+      else{zoomNodes(x, x1)}
+    }
+
     vis.toggleSize = function(x){
       if (!arguments.length) return;
       toggleSize(x)
@@ -301,7 +307,7 @@
                       }
                     }else{
                       property.forEach(function(d){
-                        console.log(d, node.attributes[propertyDict[d]],node.attributes["Type"])
+                        
                         if(node.attributes["Type"] == "host" && node.attributes[propertyDict[d]] == "true"){
                           console.log("ci sono")
                           node.target_color = "#f00"
@@ -350,6 +356,67 @@
               _s.refresh();
         }
         
+      function zoomNodes(attribute, value) {
+            var zoomView = {
+
+              init: function() {
+                _s.unbind("clickNode");
+                 _s.graph.nodes().forEach(function(node, i, a) {
+ 
+
+               if (node.attributes[attribute] === value){
+
+                  node.label = node.file_label;
+                 node.target_color = "#f00"; 
+
+               }else{
+                  node.label = null;
+                 node.target_color = '#AAA'; // TODO: Apply good color
+               }
+            //   node.target_size = node.file_size / _options.ratio;
+            //   node.target_x = node.file_x;
+            //   node.target_y = node.file_y;
+             });
+            // _s.graph.edges().forEach(function(edge, i, a) {
+            //   edge.color = 'rgba(17, 17, 17, 0.1)'
+            // });
+          },
+          forceAtlas2: false,
+          center: null,
+          filter: null,
+           settings: {
+             drawEdges: true,
+             labelThreshold: 1,
+             enableCamera: false,
+             mouseEnabled : false,
+             touchEnabled : false
+          },
+          animation: {
+            color: 'target_color',
+            //size: 'target_size',
+            //x: 'target_x',
+            //y: 'target_y',
+            camera: function(n) {
+              return n.attributes[attribute] === value;
+            }
+          }
+          }
+
+            // Init:
+              zoomView.init();
+
+            // Animation:
+            if (zoomView.animation) {
+              _s.settings('drawEdges', false);
+              animate(zoomView.animation, function() {
+                _s.settings(zoomView.settings);
+                _s.settings('drawEdges', true);
+                _s.refresh();
+              });
+            } else
+              _s.refresh();
+        }
+
       function zoomCluster(attribute, value) {
             var zoomView = {
 

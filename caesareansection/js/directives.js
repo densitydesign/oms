@@ -221,6 +221,12 @@ angular.module('who.directives', [])
             }
         })
 
+        scope.$watch('ctrlmodels.'+ scope.section.id + '.zoomNodes', function(newValue, oldValue){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+                network.zoomNodes('clusters',newValue)
+            }
+        })
+
         scope.$watch('ctrlmodels.'+ scope.section.id + '.size', function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
                 network.toggleSize(newValue)
@@ -230,7 +236,7 @@ angular.module('who.directives', [])
 
         scope.$watchCollection('ctrlmodels.'+ scope.section.id + '.sel', function(newValue, oldValue){
           if(newValue != oldValue && scope.utils.section === scope.section.id && loaded){
-                console.log(newValue)
+               
                 network.toggleProperty(newValue)
             }
         })
