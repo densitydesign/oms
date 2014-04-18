@@ -158,9 +158,8 @@ angular.module('who.directives', [])
               function(data){
                 network = who.graph()
                   .sectionid(scope.section.id)
-                  .on("steplimit", function(){
-                    //scope.$emit('steplimit');
-                    //counter  = counter < 0 ? 0 : (counter-1);
+                  .on("resetfilter", function(){
+                    scope.$emit('resetFilter');
                   });
 
                 chart = d3.select(container);
@@ -913,7 +912,6 @@ angular.module('who.directives', [])
     return {
       restrict: 'A',
       replace: false,
-      //templateUrl: '../partials/legendstep.html',
       link: function postLink(scope, element, attrs) {
 
         var limit,
@@ -935,31 +933,29 @@ angular.module('who.directives', [])
             
           }
         );
-
-        // scope.$watch('utils.internalCounter',function(newValue, oldValue){
-        //   if(newValue !== oldValue && scope.utils.section === scope.section.id){
-
-        //     if(newValue > oldValue){
-
-        //       if(counter < 0){counter = 0}
-        //         counter++
-        //       }else{
-        //         if(counter >= limit){counter = counter -1}
-        //         counter--
-        //       }
-
-        //       if(element.children(".step" + (counter)).length){
-        //         element.animate({scrollTop: element.scrollTop() + element.children(".step" + (counter)).position().top}, 500);
-        //       }
-        //     }
-
-        // })
         
         scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id){
-                //step[newValue-1].init()
+              if(newValue > oldValue){
+                if(element.find(".adv-step.step"+(newValue-1)).length == 0){
+                  d3.select(".adv-inc.step"+(newValue-1)).transition().duration(500).style("opacity",1)
+                }
+                else{
                 element.animate({scrollTop: element.scrollTop() + element.children(".step" + (newValue-1)).position().top}, 500);
-            }
+              }
+              }else{
+                if(element.find(".adv-step.step"+(newValue-1)).length != 0){
+
+                  element.animate({scrollTop: element.scrollTop() + element.find(".adv-step.step"+(newValue-1)).position().top}, 500);
+                  d3.select(".adv-inc.step"+(newValue)).transition().duration(500).style("opacity",0)
+                }else{
+                  
+                  var nextElm =  element.find(".adv-inc.step"+(newValue-1)).parent()
+                  element.animate({scrollTop: element.scrollTop() + nextElm.position().top}, 500);
+                  d3.select(".adv-inc.step"+(newValue)).transition().duration(500).style("opacity",0)
+                }
+              }
+          }
         })
 
       }
@@ -1120,14 +1116,17 @@ angular.module('who.directives', [])
               domainContainer = element.find("#domain")[0],
               tagChart,
               domainChart,
+              tag,
+              tags,
+              host,
+              hosts,
+              tld,
+              tlds,
+              category,
+              all,
+              selected,
               loaded = false;
 
-              // var tagHeight = element.find(".catcont").height() - element.find(".cattit").height();
-              // element.find("#category").height(tagHeight-2)
-              // var domainHeight = element.find(".domcont").height() - element.find(".domtit").height();
-              // element.find("#domain").height(domainHeight-2)
-              // var queryHeight = element.find(".quecont").height() - element.find(".quetit").height();
-              // element.find("#query").height(queryHeight-2)
 
            var init = function(){
             fileService.getFile('data/' + scope.section.id + '/cs_analytics.tsv').then(
@@ -1136,42 +1135,42 @@ angular.module('who.directives', [])
                 csv = d3.tsv.parse(data)
 
                 // Create the crossfilter for the relevant dimensions and groups.
-                var category = crossfilter(csv),
-                all = category.groupAll(),
-                tag = category.dimension(function(d) { return d.tag; }),
-                tags = tag.group(),
-                host = category.dimension(function(d) { return d.host; }),
-                hosts = host.group(),
+                category = crossfilter(csv);
+                all = category.groupAll()
+                tag = category.dimension(function(d) { return d.tag; })
+                tags = tag.group()
+                host = category.dimension(function(d) { return d.host; })
+                hosts = host.group()
                 tld = category.dimension(function(d) { return d.tld; })
                 //tlds = tld.group()
 
-                var pass = [];
+                // var pass = [];
 
-                function reduceAdd(p, v) {
-                  if(pass.indexOf(v.host) < 0){
-                    pass.push(v.host)
-                    ++p
-                  }
-                  return p;
-                }
+                // function reduceAdd(p, v) {
+                //   if(pass.indexOf(v.host) < 0){
+                //     pass.push(v.host)
+                //     ++p
+                //   }
+                //   return p;
+                // }
 
-                function reduceRemove(p, v) {
-                  if(pass.indexOf(v.host) > -1){
-                    pass.splice(pass.indexOf(v.host),1)
-                    --p
-                  }
-                  return p;
-                }
+                // function reduceRemove(p, v) {
+                //   if(pass.indexOf(v.host) > -1){
+                //     pass.splice(pass.indexOf(v.host),1)
+                //     --p
+                //   }
+                //   return p;
+                // }
 
-                function reduceInitial() {
-                  pass = []
-                  return 0;
-                }
+                // function reduceInitial() {
+                //   pass = []
+                //   return 0;
+                // }
                 
                 
-                var tlds = tld.group().reduce(reduceAdd, reduceRemove, reduceInitial)
+                // var tlds = tld.group().reduce(reduceAdd, reduceRemove, reduceInitial)
                 
-                var selected = []
+                selected = []
                 tagChart = who.barChart()
                         .xMax(tags.top(1)[0].value)
                         .dimension(tag)
@@ -1192,25 +1191,25 @@ angular.module('who.directives', [])
 
                         })
 
-                domainChart = who.barChart()
-                    .xMax(tags.top(1)[0].value)
-                    .dimension(tld)
-                    .group(tlds)
-                    .responsive(true)
-                    .cut(4)
+                // domainChart = who.barChart()
+                //     .xMax(tags.top(1)[0].value)
+                //     .dimension(tld)
+                //     .group(tlds)
+                //     .responsive(true)
+                //     .cut(4)
 
 
                 tagContainer = d3.select(tagContainer)
                                 .on("click", function(d){
-                                  domainContainer.call(domainChart)
+                                  //domainContainer.call(domainChart)
                                 })
                                 .call(tagChart)
 
-                domainContainer = d3.select(domainContainer)
-                                  .on("click", function(){
-                                    tagContainer.call(tagChart)
-                                  })
-                                .call(domainChart)
+                // domainContainer = d3.select(domainContainer)
+                //                   .on("click", function(){
+                //                     tagContainer.call(tagChart)
+                //                   })
+                //                 .call(domainChart)
 
                 loaded = true;                       
               },
@@ -1232,6 +1231,12 @@ angular.module('who.directives', [])
             init()
             });
           }
+        })
+
+        scope.$on('resetFilter', function(){
+              selected = []
+              scope.ctrlmodels.cs_query_network.sel = selected
+              tagContainer.call(tagChart.query([]))
         })
 
       }

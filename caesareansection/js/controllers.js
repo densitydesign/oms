@@ -60,7 +60,7 @@ angular.module('who.controllers', [])
           totalItems: 5,
           currentStep: 1,
           itemsPerPage: 1,
-          maxItems: 5,
+          maxItems: 4,
           zoom : false,
           size : "deg"
         },
@@ -68,7 +68,7 @@ angular.module('who.controllers', [])
           totalItems: 5,
           currentStep: 1,
           itemsPerPage: 1,
-          maxItems: 5,
+          maxItems: 4,
           zoomNodes : false,
           sel:[]
         },
@@ -76,25 +76,25 @@ angular.module('who.controllers', [])
           totalItems: 5,
           currentStep: 1,
           itemsPerPage: 1,
-          maxItems: 5
+          maxItems: 4
         },
         "cs_aufeminin_forum":{
           totalItems: 5,
           currentStep: 1,
           itemsPerPage: 1,
-          maxItems: 5
+          maxItems: 4
         },
       "cs_aufeminin_networkIT":{
           totalItems: 5,
           currentStep: 1,
           itemsPerPage: 1,
-          maxItems: 5
+          maxItems: 4
         },
       "cs_aufeminin_networkFR":{
           totalItems: 5,
           currentStep: 1,
           itemsPerPage: 1,
-          maxItems: 5
+          maxItems: 4
         },
       }
       

@@ -225,6 +225,10 @@ ul li {
 	text-align:justify;
 }
 
+.adv-inc {
+	opacity: 0;
+}
+
 .legend h3{
 	text-align:left;
 	font-family: 'Montserrat', sans-serif;
@@ -1025,14 +1029,23 @@ text-align: center;
 	padding-bottom:15px;
 }
 
-.yvalue, .ylegend, .bubbleLegend{
-	font-family: 'Montserrat';
-	color: "#222";
-	font-weight: "400";
-	font-size: 12px;
+.yvalue, .bubbleLegend{
+	font-family: 'Montserrat', sans-serif;
+	color: #222;
+	font-weight: 700;
+	font-size: 10px;
 }
 
-.bgBubble, .bgBar{
+.ylegend, .bubbleLegend{
+	font-family: 'Montserrat', sans-serif;
+	color: #222;
+	font-weight: 400;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.bgBubble, .bgBar, .bgLine{
 	fill: none;
 	stroke: #CBCCCE;
 	stroke-width: 1px;
@@ -1041,15 +1054,16 @@ text-align: center;
 }
 
 .bar, .bubble{
-	fill: #78CCD3;
+	
+	fill: #83D5D2;
 	-webkit-transition:fill 0.3s ease-in-out;  
 	transition:fill 0.3s ease-in-out;
 }
 .bar:hover, .bubble:hover{
-	fill: #00858C;
+	fill: #42A8A8;
 }
 .bar.selected, .bubble.selected{
-	fill: #005862;
+	fill: #42A8A8;
 }
 
 .toggle-wiki{
