@@ -169,6 +169,7 @@ angular.module('who.directives', [])
                 scope.ctrlmodels[scope.section.id].totalItems = network.step()
 
                 loaded = true;
+
               },
               function(error){
                 container.html(error)

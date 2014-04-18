@@ -323,6 +323,7 @@
                           node.label = null
                         }
                         else{
+                          node.label = node.file_label
                             if(node.attributes["Type"] == "query"){
                               node.target_color = "#273B4F";   
                             }else{
@@ -860,6 +861,7 @@ var networkconfig = {
         _dbGraph = (new sigma.classes.graph(_s.settings)).read(_graph);
 
         _s.graph.read(_graph);
+
 
         applyView(0);
         
