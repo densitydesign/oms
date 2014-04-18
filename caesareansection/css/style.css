@@ -499,7 +499,7 @@ ul li {
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(0,88,98,0.98);
+	background: rgba(39,59,79,0.98);
 }
 
 /* Overlay closing cross */
@@ -1654,7 +1654,7 @@ text-align: center;
 /*Underline*/
 .underline{
 	background: #E2E2E2;
-	padding: 2px 4px;
+	padding: 4px 6px;
 	border-radius: 2px;
 	white-space: nowrap;
 	font-weight: normal;
