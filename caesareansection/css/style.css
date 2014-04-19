@@ -1651,6 +1651,8 @@ text-align: center;
 	}
 }
 
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
 /*Underline*/
 .underline{
 	background: #E2E2E2;
@@ -1664,30 +1666,23 @@ text-align: center;
 }
 
 .underline:hover{
-	background: #E2E2E2;
-	color:#222222;
-	cursor: pointer;
 	text-decoration: underline;
 }
 
 /*Cluster Legend*/
+
 .cluster1{
-cursor:pointer;
-color:#29A6CC;
+background:#1f77b4;
 }
 .cluster2{
-cursor:pointer;
-color:#EDB015;
+background:#ff7f0e;
 }
-.cluster3{
-cursor:pointer;	
-color:#2FB22F;
+.cluster3{	
+background:#2ca02c;
 }
-.cluster4{
-cursor:pointer;	
-color:#9B2626;
+.cluster4{	
+background:#d62728;
 }
-.cluster5{
-cursor:pointer;	
-color:#7C43D6;
+.cluster5{	
+background:#9467bd;
 }

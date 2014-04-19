@@ -113,7 +113,7 @@ angular.module('who.controllers', [])
             paddingTop: '55px',
             paddingBottom: '55px',
             verticalCentered: false,
-            normalScrollElements: '#viz_googleimages .imgs, .slope-cont',
+            normalScrollElements: '#viz_googleimages .imgs, .slope-cont, div.proto',
             onLeave: function(index, direction){
 
                 $(".tt").remove();
@@ -129,6 +129,10 @@ angular.module('who.controllers', [])
 
             },
             afterLoad: function(anchorLink, index){
+              
+              $('.scrollable').slimScroll({ scrollTo: '0px' }) //get back to top scrolled section
+
+
               $('div.overlay').removeClass("open");
              	
                 $scope.utils.section = anchorLink;
@@ -142,28 +146,28 @@ angular.module('who.controllers', [])
                   //addMouseWheelHandler()
                   //addTouchHandler()
 
-                  $(document).on('mouseout', 'div.proto',function () {
-                  $.fn.fullpage.setAllowScrolling(false);
+                  //$(document).on('mouseout', 'div.proto',function () {
+                  //$.fn.fullpage.setAllowScrolling(false);
                   //addMouseWheelHandler()
                   //addTouchHandler()
-                  });
+                  //});
                   
-                  $(document).on('mouseover', 'div.proto',function () {
-                    $.fn.fullpage.setAllowScrolling(false);
+                  //$(document).on('mouseover', 'div.proto',function () {
+                    //$.fn.fullpage.setAllowScrolling(false);
                    //removeMouseWheelHandler()
                    //removeTouchHandler()
-                  });
+                  //});
               }else{
 
                 //$.fn.fullpage.setAllowScrolling(true);
 
-                $(document).on('mouseover', 'div.proto',function () {
-                  $.fn.fullpage.setAllowScrolling(false);
-                });
+                // $(document).on('mouseover', 'div.proto',function () {
+                //   $.fn.fullpage.setAllowScrolling(false);
+                // });
 
-                $(document).on('mouseout', 'div.proto',function () {
-                  $.fn.fullpage.setAllowScrolling(true);
-                });
+                // $(document).on('mouseout', 'div.proto',function () {
+                //   $.fn.fullpage.setAllowScrolling(true);
+                // });
               }
             }
 
@@ -175,13 +179,13 @@ angular.module('who.controllers', [])
           $('#main-index').animate({scrollTop: $('#main-index').scrollTop() + $('#nav_' + section).position().top}, 700);    
         }
 
-        $(document).on('mouseover', 'div.proto',function () {
-          $.fn.fullpage.setAllowScrolling(false);
-        });
+        // $(document).on('mouseover', 'div.proto',function () {
+        //   $.fn.fullpage.setAllowScrolling(false);
+        // });
 
-        $(document).on('mouseout', 'div.proto',function () {
-          $.fn.fullpage.setAllowScrolling(true);
-        });
+        // $(document).on('mouseout', 'div.proto',function () {
+        //   $.fn.fullpage.setAllowScrolling(true);
+        // });
 
 
       });

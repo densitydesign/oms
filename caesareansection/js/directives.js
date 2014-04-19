@@ -216,7 +216,7 @@ angular.module('who.directives', [])
 
         scope.$watch('ctrlmodels.'+ scope.section.id + '.zoom', function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
-                network.zoomCluster('clusters',newValue)
+                network.zoomCluster('Modularity Class',newValue)
                 //chart.call(network)
             }
         })
@@ -939,7 +939,7 @@ angular.module('who.directives', [])
           if(newValue !== oldValue && scope.utils.section === scope.section.id){
               if(newValue > oldValue){
                 if(element.find(".adv-step.step"+(newValue-1)).length == 0){
-                  d3.select(".adv-inc.step"+(newValue-1)).transition().duration(500).style("opacity",1)
+                  d3.select(element[0]).select(".adv-inc.step"+(newValue-1)).transition().duration(500).style("opacity",1)
                 }
                 else{
                 element.animate({scrollTop: element.scrollTop() + element.children(".step" + (newValue-1)).position().top}, 500);
@@ -948,12 +948,12 @@ angular.module('who.directives', [])
                 if(element.find(".adv-step.step"+(newValue-1)).length != 0){
 
                   element.animate({scrollTop: element.scrollTop() + element.find(".adv-step.step"+(newValue-1)).position().top}, 500);
-                  d3.select(".adv-inc.step"+(newValue)).transition().duration(500).style("opacity",0)
+                   d3.select(element[0]).select(".adv-inc.step"+(newValue)).transition().duration(500).style("opacity",0)
                 }else{
                   
                   var nextElm =  element.find(".adv-inc.step"+(newValue-1)).parent()
                   element.animate({scrollTop: element.scrollTop() + nextElm.position().top}, 500);
-                  d3.select(".adv-inc.step"+(newValue)).transition().duration(500).style("opacity",0)
+                   d3.select(element[0]).select(".adv-inc.step"+(newValue)).transition().duration(500).style("opacity",0)
                 }
               }
           }
