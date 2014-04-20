@@ -1126,6 +1126,12 @@ text-align: center;
 	z-index:500;
 }
 
+/* Spallozzo */
+
+.spallozzoLegend {
+	border-bottom: 1px solid #E2E2E2;
+}
+
 /* Google Images */
 #viz_googleimages text {
   font: 10px sans-serif;

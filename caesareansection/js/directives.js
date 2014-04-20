@@ -267,10 +267,12 @@ angular.module('who.directives', [])
           dataslope = {},
           slope,
           chart,
+          legendCont,
           loaded = false;
 
         var container = element.find("#graph")[0],
-            containerPagination = element.find("#paginationStep")[0];
+            containerPagination = element.find("#paginationStep")[0],
+            graphHeight = element.find("#graph").height()
 
         var filterTF = [
           'baby',
@@ -366,9 +368,10 @@ angular.module('who.directives', [])
                 })
               })
               var len = data[0].values.length;
-              slope = who.slopeChart()
+              slope = who.spallozzoChart()
                 .graphHeight(len*15)
                 .graphWidth(element.find("#graph").width())
+                .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
                 .on("clicked", function(d){
                   var words = slope.wordStep();
                   if(words.indexOf(d) < 0){
@@ -380,13 +383,26 @@ angular.module('who.directives', [])
                   }
                 })
 
-              chart = d3.select(container).style("overflow-y", "scroll").style("overflow-x", "hidden").append('div').attr("class", "slope-cont")
-                      .append("svg")
-                      .attr("width", element.find("#graph").width())
-                      .attr("height", len*15)
+              legendCont = d3.select(container)
+                            .append("div")
+                            .attr("class", "spallozzoLegend")
+                            .append("svg")
+                            .attr("width", element.find("#graph").width())
+                            .attr("height", 45)
+
+              chart = d3.select(container)
+                      .append("div")
+                      .style("overflow-y", "scroll")
+                      .style("overflow-x", "hidden")
+                      .style("height", graphHeight - 51 + "px")
+                      //.style("height", "500px")
+                      .attr("class", "slope-cont")
+                        .append("svg")
+                        .attr("width", element.find("#graph").width())
+                        .attr("height", len*15)
 
               
-              chart.datum(dataslope.dataTF).call(slope)
+              chart.datum(dataslope.dataTF).call(slope.legendCont(legendCont))
 
               loaded = true;
 
@@ -412,7 +428,7 @@ angular.module('who.directives', [])
 
         var step = [
           {init: function(){
-            slope.showCat(false).showLines(false)
+            slope.showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
             chart.call(slope)
             }
           },
