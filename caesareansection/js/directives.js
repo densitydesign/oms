@@ -382,6 +382,10 @@ angular.module('who.directives', [])
                     chart.call(slope)                    
                   }
                 })
+                .on("sorted", function(d){
+                    slope.sorted(d)
+                    chart.call(slope)
+                })
 
               legendCont = d3.select(container)
                             .append("div")
@@ -392,15 +396,16 @@ angular.module('who.directives', [])
 
               chart = d3.select(container)
                       .append("div")
-                      .style("overflow-y", "scroll")
-                      .style("overflow-x", "hidden")
-                      .style("height", graphHeight - 51 + "px")
-                      //.style("height", "500px")
                       .attr("class", "slope-cont")
                         .append("svg")
                         .attr("width", element.find("#graph").width())
                         .attr("height", len*15)
 
+              $(".slope-cont").slimScroll({
+                  height: graphHeight - 51 + "px",
+                  size: '5px',
+                  alwaysVisible: false
+                });
               
               chart.datum(dataslope.dataTF).call(slope.legendCont(legendCont))
 
@@ -428,19 +433,62 @@ angular.module('who.directives', [])
 
         var step = [
           {init: function(){
-            slope.showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
+            slope.showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"]).wordStep([])
             chart.call(slope)
             }
           },
           {init: function(){
-            slope.showLines(true).showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
+            slope
+              .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
+              .wordStep(["scar", "wound", "post"])
+
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope
+              .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
+              .wordStep(["acog","care health provider","expert","lawyer","memorial hermann","midwife","minute","nurse","obstetrician","physician","researchers"])
+            
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope
+              .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
+              .wordStep(["percent","rate","rate section"])
+
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope
+              .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
+              .wordStep(["another baby","another child","vbac"])
+
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope
+              .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
+              .wordStep(["allergy","complication","emergency","increased risk","infection","pain","problem","risk","rupture uterine"])
+
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope
+              .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
+              .wordStep([])
             chart.call(slope)
             }
           }
         ]
 
         scope.ctrlmodels[scope.section.id].totalItems = step.length
-        var pag = "<pagination previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
+        //var pag = "<pagination previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
+        var pag = "<pagination max-size='ctrlmodels." + scope.section.id + ".maxItems' previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
         var e = angular.element(pag)
         $(containerPagination).append(e)
         $compile(e)(scope)
@@ -457,16 +505,16 @@ angular.module('who.directives', [])
 
         scope.$watch('ctrlmodels.slopetfidf', function(newValue, oldValue){
             if (newValue !== oldValue){
-              chart.datum(dataslope[newValue]).call(slope.wordStep([]))
+              chart.datum(dataslope[newValue]).call(slope)
             }
         });
 
-        scope.$watch('ctrlmodels.slopescale', function(newValue, oldValue){
-            if (newValue !== oldValue){
-              slope.normalized(newValue)
-              chart.call(slope)
-            }
-        });
+        // scope.$watch('ctrlmodels.slopescale', function(newValue, oldValue){
+        //     if (newValue !== oldValue){
+        //       slope.normalized(newValue)
+        //       chart.call(slope)
+        //     }
+        // });
 
         scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){

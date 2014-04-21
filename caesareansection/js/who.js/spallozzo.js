@@ -16,7 +16,8 @@
 	 	fontSize = 12,
 	 	fontFamily = 'Georgia',
 	 	legendCont,
-	 	dispatch = d3.dispatch("clicked");
+	 	sorted = 0,
+	 	dispatch = d3.dispatch("clicked", "sorted");
 
 
     function spallozzoChart(selection){
@@ -25,7 +26,6 @@
         	var chart = selection,
         		_data;
 
-        	console.log(showCat)
         	if(!showCat.length){
 	        	var wordsList = data[0].values.map(function(d){return d.key})
 	        	_data = [{"step": "words list", values : []}]
@@ -43,11 +43,21 @@
         	var x = d3.scale.ordinal().rangeRoundBands([0, graphWidth], 0.5, 0);
         	var xDomain = ["ENTITIES"]
         	xDomain = xDomain.concat(_data.map(function(d){return d.step}))
-        	console.log(xDomain)
         	x.domain(xDomain);
 
         	var y = d3.scale.ordinal().rangePoints([25, graphHeight],0.5);
-        	var yDomain = _data[0].values.map(function(d){return d.key})
+        	
+        	var yDomain;
+        	if(sorted == 0){
+        		yDomain = _data[0].values.map(function(d){return d.key})
+        	}else if(sorted > 0){
+        		yDomain = _data[sorted].values.map(function(d){return d.key})
+        	}else if(sorted < 0){
+        		yDomain = _data[0].values.map(function(d){return d.key})
+        		yDomain.sort()
+        		console.log(yDomain)
+        	}
+        	
         	y.domain(yDomain);
 
 
@@ -95,6 +105,10 @@
 			    .attr('font-weight',700)
 			    .attr('text-anchor','middle')
 			    .text(function(d){return d})
+			    .attr("cursor", "pointer")
+			    .on("click",function(d, i){
+			    	dispatch.sorted(i-1)
+			    	})
 				.filter(function(d){return d == "ENTITIES"})
 					.attr('text-anchor','end')
 					.attr('x', function(d){return x(d) + (x.rangeBand())})
@@ -105,6 +119,35 @@
 				.attr('opacity', 0)
 				.remove()
 
+			var arrowSorted = legendCont.selectAll("path").data(xDomain)
+
+				arrowSorted
+					.transition()
+					.duration(transitionDuration)
+					.attr("fill-opacity", 0)
+					.filter(function(d,i){
+						if(sorted+1 == i){return true}
+					})
+					.attr("fill-opacity", 1)
+
+
+				arrowSorted
+					.enter()
+					.append("path")
+					.attr("transform", function(d,i){
+						if(i == 0){
+							return "translate(" + (x(d)+(x.rangeBand()-3)) + ",36)"
+						}else{
+							return "translate(" + (x(d)+(x.rangeBand()/2)) + ",36)"
+						}
+					})
+					.attr("d", d3.svg.symbol().type("triangle-down").size(20))
+					.attr("fill", "#222")
+					.attr("fill-opacity", 0)
+					.filter(function(d,i){
+						if(sorted+1 == i){return true}
+					})
+					.attr("fill-opacity", 1)
 
 
 			var circlesGroup = chart.selectAll('.circleGroup').data(_data, function(d){return d.step})
@@ -132,19 +175,28 @@
 					.attr('cy', function(d){return y(d.key);})
 					.attr("cx",function(d){return x(d.step)+(x.rangeBand()/2)})
 					.attr("r", function(d){return Math.sqrt((radiusScale(d.value)/Math.PI))})
+					.attr("fill", "#42A8A8")
+					.filter(function(d){
+						if(wordStep.length > 0){
+								var check = wordStep.indexOf(d['key']);
+								return check < 0 ? true : false
+							}else{return false}
+					})
+					.attr("fill", "#C6C6C6")
+
 			
 			circleGroup	
 				.enter()
 				.append("circle")
-				.on("click", function(d){
-					dispatch.clicked(d.key);
-				})
-				.style('cursor','pointer')
 				.attr('opacity', 0.5)
 				.attr("cx",function(d){return x(d.step)+(x.rangeBand()/2)})
 				.attr('cy', function(d){return y(d.key);})
 				.attr("r", function(d){return Math.sqrt((radiusScale(d.value)/Math.PI))})
 				.attr("fill", "#42A8A8")
+				.on("click", function(d){
+					//dispatch.clicked(d.key);
+					//console.log(d.key)
+				})
 
 
 			circleGroup.exit()
@@ -178,13 +230,18 @@
 					.attr('y', function(d){return y(d);})
 					.attr("x",function(d){return x("ENTITIES")+(x.rangeBand())})
 					.text(function(d){return d})
+					.attr("font-weight", "normal")
+					.filter(function(d){
+						if(wordStep.length > 0){
+								var check = wordStep.indexOf(d);
+								return check < 0 ? false : true
+							}else{return false}
+					})
+					.attr("font-weight", "bold")
 			
 			legendGroup	
 				.enter()
 				.append("text")
-				.on("click", function(d){
-					dispatch.clicked(d);
-				})
 				.style('cursor','pointer')
 				.attr('opacity', 1)
 				.attr("x",function(d){return x("ENTITIES")+(x.rangeBand())})
@@ -194,6 +251,9 @@
 				.attr('font-size',fontSize)
 				.attr("text-anchor", "end")
 				.text(function(d){ return d})
+				.on("click", function(d){
+					dispatch.clicked(d);
+				})
 
 
 
@@ -385,6 +445,12 @@
 	spallozzoChart.legendCont = function(x){
       if (!arguments.length) return legendCont;
       legendCont = x;
+      return spallozzoChart;
+    }
+
+	spallozzoChart.sorted = function(x){
+      if (!arguments.length) return sorted;
+      sorted = x;
       return spallozzoChart;
     }
 
