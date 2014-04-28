@@ -698,8 +698,30 @@ ul li {
 	height:100% ;
 }
 
+#nodeInfo{
+	position: absolute;
+	top: 0;
+	left: -1px;
+	width: 200px;
+	padding: 10px;
+	border: 1px solid #CBCCCE;
+	z-index: 1000;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
 
+.nodeInfo-close {
+	opacity: 0;
+	visibility: hidden;
+}
 
+.nodeInfo-open {
+	visibility: visible;
+	opacity: 1;
+}
 
 /* Protocol */
 

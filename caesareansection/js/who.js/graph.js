@@ -27,7 +27,7 @@
       bis1 = {nodes : [], edges: []},
       bis2 = {nodes : [], edges: []},
       scale,
-      dispatch = d3.dispatch("resetfilter");
+      dispatch = d3.dispatch("resetfilter", "clicked");
 
 
     function vis(selection){
@@ -918,6 +918,20 @@ var networkconfig = {
             _s.graph.edges().forEach(function(edge, i, a) {
               edge.color = "rgba(17, 17, 17, 0.1)"
             });
+
+             _s.bind("clickNode", function(e) {
+
+                var selected = e.data.node.selected
+                if(selected){
+                  dispatch.resetfilter()
+                  e.data.node.selected = false;
+                 }else{
+                    var nh = _dbGraph.neighborhood(e.data.node.id)
+                    var nodes = nh.nodes;
+                    dispatch.clicked(e.data.node, nodes)
+                    e.data.node.selected = true;
+                   }
+             })
           },
           forceAtlas2: false,
           center: null,
@@ -925,8 +939,88 @@ var networkconfig = {
             drawEdges: false,
             labelThreshold: 1,
             enableCamera: false,
-            mouseEnabled : false,
-            touchEnabled : false
+            mouseEnabled : true,
+            touchEnabled : true
+          },
+          animation: {
+            color: "target_color",
+            size: "target_size",
+            x: "target_x",
+            y: "target_y",
+            camera: {
+              x: 0,
+              y: 0,
+              ratio: 1,
+              angle: 0
+            }
+          }
+        },
+        {
+          init: function() {
+            _s.unbind("clickNode");
+            _s.graph.nodes().forEach(function(node, i, a) {
+              var angle,
+                  l = _options.innerCircleCount,
+                  l2 = _options.innerUrlCount,
+                  l3 = _options.innerPageCount;
+
+                node.labelAdjust = false;
+
+              if (node.attributes["Type"] == "query")  {
+                node.target_size = 3;
+                node.target_color = "#273B4F"; 
+                angle = Math.PI * 2 * queryPosition(node.file_label) / l - Math.PI / 2;
+                node.target_x = node.file_x;
+                node.target_y = node.file_y;
+                //node.target_x = _options.innerRadius * Math.cos(angle);
+                //node.target_y = _options.innerRadius * Math.sin(angle);
+                 node.label = node.file_label
+              } else if(node.attributes["Type"] == "url") {
+                //console.log(i, a.length, l, l2)
+                node.target_size = 2;
+                node.target_color = "#C6C6C6"; 
+                angle = Math.PI * 2 * (i) / (l3) - Math.PI / 2;
+                node.target_x = _options.outerRadius * Math.cos(angle);
+                node.target_y = _options.outerRadius * Math.sin(angle);
+
+              }
+              else {
+                node.target_size = 0;
+                node.target_color = node.file_color; 
+                angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
+                node.target_x = _options.middleRadius * Math.cos(angle);
+                node.target_y = _options.middleRadius * Math.sin(angle);
+
+              }
+
+            });
+
+            _s.graph.edges().forEach(function(edge, i, a) {
+              edge.color = "rgba(17, 17, 17, 0.1)"
+            });
+
+            _s.bind("clickNode", function(e) {
+
+                var selected = e.data.node.selected
+                if(selected){
+                  dispatch.resetfilter()
+                  e.data.node.selected = false;
+                 }else{
+                    var nh = _dbGraph.neighborhood(e.data.node.id)
+                    var nodes = nh.nodes;
+                    dispatch.clicked(e.data.node, nodes)
+                    e.data.node.selected = true;
+                   }
+             })
+          },
+          forceAtlas2: false,
+          center: null,
+          settings: {
+            drawEdges: false,
+            labelThreshold: 1,
+            enableCamera: false,
+            mouseEnabled : true,
+            touchEnabled : true
           },
           animation: {
             color: "target_color",
@@ -964,7 +1058,7 @@ var networkconfig = {
                  node.label = node.file_label
               } else if(node.attributes["Type"] == "url") {
 
-                node.target_size = 2;
+                node.target_size = 0;
                 node.target_color = "#C6C6C6"; 
                 angle = Math.PI * 2 * (i) / (l3) - Math.PI / 2;
                 node.target_x = _options.outerRadius * Math.cos(angle);
@@ -990,6 +1084,20 @@ var networkconfig = {
                 edge.color ="rgba(17, 17, 17, 0.1)"
               }
             });
+
+             _s.bind("clickNode", function(e) {
+
+                var selected = e.data.node.selected
+                if(selected){
+                  dispatch.resetfilter()
+                  e.data.node.selected = false;
+                 }else{
+                    var nh = _dbGraph.neighborhood(e.data.node.id)
+                    var nodes = nh.nodes;
+                    dispatch.clicked(e.data.node, nodes)
+                    e.data.node.selected = true;
+                   }
+             })
           },
           forceAtlas2: false,
           center: null,
@@ -997,8 +1105,8 @@ var networkconfig = {
           settings: {
             drawEdges: false,
             labelThreshold: 1,
-            enableCamera: false,
-            mouseEnabled : false,
+            enableCamera: true,
+            mouseEnabled : true,
             touchEnabled : false
           },
           animation: {
@@ -1063,6 +1171,20 @@ var networkconfig = {
                 edge.color ="rgba(17, 17, 17, 0)"
               }
             });
+
+             _s.bind("clickNode", function(e) {
+
+                var selected = e.data.node.selected
+                if(selected){
+                  dispatch.resetfilter()
+                  e.data.node.selected = false;
+                 }else{
+                    var nh = _dbGraph.neighborhood(e.data.node.id)
+                    var nodes = nh.nodes;
+                    dispatch.clicked(e.data.node, nodes)
+                    e.data.node.selected = true;
+                   }
+             })
           },
           forceAtlas2: false,
           center: null,
@@ -1070,8 +1192,8 @@ var networkconfig = {
           settings: {
             drawEdges: true,
             labelThreshold: 1,
-            enableCamera: false,
-            mouseEnabled : false,
+            enableCamera: true,
+            mouseEnabled : true,
             touchEnabled : false
           },
           animation: {
@@ -1190,12 +1312,15 @@ var networkconfig = {
                     });
                 }
                 else{
+                  
                   var nh = _dbGraph.neighborhood(e.data.node.id)
                      var nodes = nh.nodes;
                      var edges = nh.edges;
                      var idsN = nodes.map(function(d){return d.id});
                      var idsE = edges.map(function(d){return d.id});
                      var query = queryPosition.domain();
+
+                     dispatch.clicked(e.data.node, nodes)
 
                       _s.graph.nodes().forEach(function(node, i, a) {
                           if(node.id == e.data.node.id){

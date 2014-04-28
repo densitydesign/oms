@@ -1,1551 +1,2419 @@
 [
     {
+        "step": "MEDICAL",
+        "values": [
+            {
+                "key": "abdomen",
+                "step": "MEDICAL",
+                "value": 0.846254845,
+                "norm": 0.0377,
+                "cat": null
+            },
+            {
+                "key": "abdomen lower",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "acog",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": "e"
+            },
+            {
+                "key": "actor",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "advice",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "age",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "allergy",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": "y"
+            },
+            {
+                "key": "american college",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "anesthesia",
+                "step": "MEDICAL",
+                "value": 0.539759214,
+                "norm": 0.024,
+                "cat": null
+            },
+            {
+                "key": "anesthesia general",
+                "step": "MEDICAL",
+                "value": 0.393131979,
+                "norm": 0.0175,
+                "cat": null
+            },
+            {
+                "key": "another baby",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": "v"
+            },
+            {
+                "key": "another child",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": "v"
+            },
+            {
+                "key": "area",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "association",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "authors",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "baby",
+                "step": "MEDICAL",
+                "value": 22.45878542,
+                "norm": 1,
+                "cat": null
+            },
+            {
+                "key": "baby boy",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "benefit",
+                "step": "MEDICAL",
+                "value": 0.541730959,
+                "norm": 0.0241,
+                "cat": null
+            },
+            {
+                "key": "birth",
+                "step": "MEDICAL",
+                "value": 3.430571083,
+                "norm": 0.152749626,
+                "cat": null
+            },
+            {
+                "key": "birth canal",
+                "step": "MEDICAL",
+                "value": 0.383204006,
+                "norm": 0.0171,
+                "cat": null
+            },
+            {
+                "key": "birth cesarean",
+                "step": "MEDICAL",
+                "value": 0.874577451,
+                "norm": 0.0389,
+                "cat": null
+            },
+            {
+                "key": "birth story",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "birth vaginal",
+                "step": "MEDICAL",
+                "value": 2.522681673,
+                "norm": 0.112324938,
+                "cat": null
+            },
+            {
+                "key": "births caesarean",
+                "step": "MEDICAL",
+                "value": 0.779702419,
+                "norm": 0.0347,
+                "cat": null
+            },
+            {
+                "key": "bladder",
+                "step": "MEDICAL",
+                "value": 0.420201085,
+                "norm": 0.0187,
+                "cat": null
+            },
+            {
+                "key": "body",
+                "step": "MEDICAL",
+                "value": 0.569807193,
+                "norm": 0.0254,
+                "cat": null
+            },
+            {
+                "key": "body every",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "caesarean",
+                "step": "MEDICAL",
+                "value": 6.76975984,
+                "norm": 0.301430363,
+                "cat": null
+            },
+            {
+                "key": "caesarean elective",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "caesarean section",
+                "step": "MEDICAL",
+                "value": 5.859586278,
+                "norm": 0.26090397,
+                "cat": null
+            },
+            {
+                "key": "care",
+                "step": "MEDICAL",
+                "value": 0.612454082,
+                "norm": 0.0273,
+                "cat": null
+            },
+            {
+                "key": "care health provider",
+                "step": "MEDICAL",
+                "value": 0.46590944,
+                "norm": 0.0207,
+                "cat": "e"
+            },
+            {
+                "key": "case",
+                "step": "MEDICAL",
+                "value": 1.541067966,
+                "norm": 0.0686,
+                "cat": null
+            },
+            {
+                "key": "cesarean delivery",
+                "step": "MEDICAL",
+                "value": 4.652078924,
+                "norm": 0.207138491,
+                "cat": null
+            },
+            {
+                "key": "cesarean emergency",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "cesarean rate",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "challenge",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "chance",
+                "step": "MEDICAL",
+                "value": 1.010136155,
+                "norm": 0.045,
+                "cat": null
+            },
+            {
+                "key": "child",
+                "step": "MEDICAL",
+                "value": 1.009320548,
+                "norm": 0.0449,
+                "cat": null
+            },
+            {
+                "key": "child first",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "choice",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "complication",
+                "step": "MEDICAL",
+                "value": 1.194432945,
+                "norm": 0.0532,
+                "cat": "y"
+            },
+            {
+                "key": "concern",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "condition",
+                "step": "MEDICAL",
+                "value": 0.828085182,
+                "norm": 0.0369,
+                "cat": null
+            },
+            {
+                "key": "condom",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "contraction",
+                "step": "MEDICAL",
+                "value": 0.441757663,
+                "norm": 0.0197,
+                "cat": null
+            },
+            {
+                "key": "cord umbilical",
+                "step": "MEDICAL",
+                "value": 0.689902338,
+                "norm": 0.0307,
+                "cat": null
+            },
+            {
+                "key": "court",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "cut",
+                "step": "MEDICAL",
+                "value": 0.766552468,
+                "norm": 0.0341,
+                "cat": null
+            },
+            {
+                "key": "dad",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "date due",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "daughter",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "day",
+                "step": "MEDICAL",
+                "value": 1.153363208,
+                "norm": 0.0514,
+                "cat": null
+            },
+            {
+                "key": "decision",
+                "step": "MEDICAL",
+                "value": 0.801084653,
+                "norm": 0.0357,
+                "cat": null
+            },
+            {
+                "key": "delivery",
+                "step": "MEDICAL",
+                "value": 2.993942372,
+                "norm": 0.133308294,
+                "cat": null
+            },
+            {
+                "key": "delivery vaginal",
+                "step": "MEDICAL",
+                "value": 2.007794634,
+                "norm": 0.0894,
+                "cat": null
+            },
+            {
+                "key": "development",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "difference",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "doctor",
+                "step": "MEDICAL",
+                "value": 3.92106959,
+                "norm": 0.174589566,
+                "cat": null
+            },
+            {
+                "key": "drug",
+                "step": "MEDICAL",
+                "value": 0.374519373,
+                "norm": 0.0167,
+                "cat": null
+            },
+            {
+                "key": "effect",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "elective",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "emergency",
+                "step": "MEDICAL",
+                "value": 1.197751173,
+                "norm": 0.0533,
+                "cat": "y"
+            },
+            {
+                "key": "epidurals",
+                "step": "MEDICAL",
+                "value": 0.39064129,
+                "norm": 0.0174,
+                "cat": null
+            },
+            {
+                "key": "epsteen lisa",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "event",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "evidence",
+                "step": "MEDICAL",
+                "value": 0.483496281,
+                "norm": 0.0215,
+                "cat": null
+            },
+            {
+                "key": "example",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "experience",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "expert",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": "e"
+            },
+            {
+                "key": "extra procedure",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "fact",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "factor",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "fetus",
+                "step": "MEDICAL",
+                "value": 0.436019313,
+                "norm": 0.0194,
+                "cat": null
+            },
+            {
+                "key": "finding",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "five second",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "foot",
+                "step": "MEDICAL",
+                "value": 0.401260218,
+                "norm": 0.0179,
+                "cat": null
+            },
+            {
+                "key": "future pregnancy",
+                "step": "MEDICAL",
+                "value": 0.368764763,
+                "norm": 0.0164,
+                "cat": null
+            },
+            {
+                "key": "guideline",
+                "step": "MEDICAL",
+                "value": 0.443862851,
+                "norm": 0.0198,
+                "cat": null
+            },
+            {
+                "key": "head",
+                "step": "MEDICAL",
+                "value": 0.54523998,
+                "norm": 0.0243,
+                "cat": null
+            },
+            {
+                "key": "healing",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "health",
+                "step": "MEDICAL",
+                "value": 0.982867794,
+                "norm": 0.0438,
+                "cat": null
+            },
+            {
+                "key": "home",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "hospital",
+                "step": "MEDICAL",
+                "value": 4.023420729,
+                "norm": 0.179146853,
+                "cat": null
+            },
+            {
+                "key": "husband",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "ideal",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "immune system",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "incision",
+                "step": "MEDICAL",
+                "value": 3.047961009,
+                "norm": 0.135713528,
+                "cat": null
+            },
+            {
+                "key": "increase",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "increased risk",
+                "step": "MEDICAL",
+                "value": 0.373773096,
+                "norm": 0.0166,
+                "cat": "y"
+            },
+            {
+                "key": "infant",
+                "step": "MEDICAL",
+                "value": 0.887276039,
+                "norm": 0.0395,
+                "cat": null
+            },
+            {
+                "key": "infection",
+                "step": "MEDICAL",
+                "value": 1.142127845,
+                "norm": 0.0509,
+                "cat": "y"
+            },
+            {
+                "key": "information",
+                "step": "MEDICAL",
+                "value": 1.206153283,
+                "norm": 0.0537,
+                "cat": null
+            },
+            {
+                "key": "kind",
+                "step": "MEDICAL",
+                "value": 0.38230899,
+                "norm": 0.017,
+                "cat": null
+            },
+            {
+                "key": "labor",
+                "step": "MEDICAL",
+                "value": 1.161261998,
+                "norm": 0.0517,
+                "cat": null
+            },
+            {
+                "key": "labour",
+                "step": "MEDICAL",
+                "value": 1.498649869,
+                "norm": 0.0667,
+                "cat": null
+            },
+            {
+                "key": "lawyer",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": "e"
+            },
+            {
+                "key": "life",
+                "step": "MEDICAL",
+                "value": 0.739949366,
+                "norm": 0.0329,
+                "cat": null
+            },
+            {
+                "key": "lot",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "many year",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "medical reason",
+                "step": "MEDICAL",
+                "value": 0.5020159,
+                "norm": 0.0224,
+                "cat": null
+            },
+            {
+                "key": "medication",
+                "step": "MEDICAL",
+                "value": 1.158354805,
+                "norm": 0.0516,
+                "cat": null
+            },
+            {
+                "key": "memorial hermann",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": "e"
+            },
+            {
+                "key": "method",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "midwife",
+                "step": "MEDICAL",
+                "value": 1.051142876,
+                "norm": 0.0468,
+                "cat": "e"
+            },
+            {
+                "key": "minute",
+                "step": "MEDICAL",
+                "value": 0.377794544,
+                "norm": 0.0168,
+                "cat": "e"
+            },
+            {
+                "key": "month",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "mother",
+                "step": "MEDICAL",
+                "value": 5.945673542,
+                "norm": 0.264737092,
+                "cat": null
+            },
+            {
+                "key": "number",
+                "step": "MEDICAL",
+                "value": 0.843778313,
+                "norm": 0.0376,
+                "cat": null
+            },
+            {
+                "key": "nurse",
+                "step": "MEDICAL",
+                "value": 0.671404283,
+                "norm": 0.0299,
+                "cat": "e"
+            },
+            {
+                "key": "obstetrician",
+                "step": "MEDICAL",
+                "value": 0.699019826,
+                "norm": 0.0311,
+                "cat": "e"
+            },
+            {
+                "key": "operation",
+                "step": "MEDICAL",
+                "value": 1.697811804,
+                "norm": 0.0756,
+                "cat": null
+            },
+            {
+                "key": "option",
+                "step": "MEDICAL",
+                "value": 0.460748856,
+                "norm": 0.0205,
+                "cat": null
+            },
+            {
+                "key": "order",
+                "step": "MEDICAL",
+                "value": 0.365690971,
+                "norm": 0.0163,
+                "cat": null
+            },
+            {
+                "key": "pain",
+                "step": "MEDICAL",
+                "value": 0.969938464,
+                "norm": 0.0432,
+                "cat": "y"
+            },
+            {
+                "key": "parent",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "part",
+                "step": "MEDICAL",
+                "value": 0.434904088,
+                "norm": 0.0194,
+                "cat": null
+            },
+            {
+                "key": "partner",
+                "step": "MEDICAL",
+                "value": 0.495609254,
+                "norm": 0.0221,
+                "cat": null
+            },
+            {
+                "key": "patient",
+                "step": "MEDICAL",
+                "value": 1.201696236,
+                "norm": 0.0535,
+                "cat": null
+            },
+            {
+                "key": "percent",
+                "step": "MEDICAL",
+                "value": 1.892731912,
+                "norm": 0.0843,
+                "cat": "f"
+            },
+            {
+                "key": "period",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "person",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "physician",
+                "step": "MEDICAL",
+                "value": 0.422060382,
+                "norm": 0.0188,
+                "cat": "e"
+            },
+            {
+                "key": "picture",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "pitocin",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "placenta",
+                "step": "MEDICAL",
+                "value": 1.039764986,
+                "norm": 0.0463,
+                "cat": null
+            },
+            {
+                "key": "position",
+                "step": "MEDICAL",
+                "value": 0.417355685,
+                "norm": 0.0186,
+                "cat": null
+            },
+            {
+                "key": "possibility",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "post",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": "c"
+            },
+            {
+                "key": "pregnancy",
+                "step": "MEDICAL",
+                "value": 2.120322293,
+                "norm": 0.0944,
+                "cat": null
+            },
+            {
+                "key": "pregnant woman",
+                "step": "MEDICAL",
+                "value": 0.667002882,
+                "norm": 0.0297,
+                "cat": null
+            },
+            {
+                "key": "pressure",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "problem",
+                "step": "MEDICAL",
+                "value": 1.408411975,
+                "norm": 0.0627,
+                "cat": "y"
+            },
+            {
+                "key": "procedure",
+                "step": "MEDICAL",
+                "value": 1.197163108,
+                "norm": 0.0533,
+                "cat": null
+            },
+            {
+                "key": "question",
+                "step": "MEDICAL",
+                "value": 0.685621464,
+                "norm": 0.0305,
+                "cat": null
+            },
+            {
+                "key": "rate",
+                "step": "MEDICAL",
+                "value": 1.180532068,
+                "norm": 0.0526,
+                "cat": "f"
+            },
+            {
+                "key": "rate section",
+                "step": "MEDICAL",
+                "value": 0.434711741,
+                "norm": 0.0194,
+                "cat": "f"
+            },
+            {
+                "key": "reason",
+                "step": "MEDICAL",
+                "value": 1.543421408,
+                "norm": 0.0687,
+                "cat": null
+            },
+            {
+                "key": "recommendation",
+                "step": "MEDICAL",
+                "value": 0.478599053,
+                "norm": 0.0213,
+                "cat": null
+            },
+            {
+                "key": "recovery",
+                "step": "MEDICAL",
+                "value": 0.574864831,
+                "norm": 0.0256,
+                "cat": null
+            },
+            {
+                "key": "request",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "researchers",
+                "step": "MEDICAL",
+                "value": 0.978099792,
+                "norm": 0.0436,
+                "cat": "e"
+            },
+            {
+                "key": "result",
+                "step": "MEDICAL",
+                "value": 0.382496985,
+                "norm": 0.017,
+                "cat": null
+            },
+            {
+                "key": "right",
+                "step": "MEDICAL",
+                "value": 0.387695566,
+                "norm": 0.0173,
+                "cat": null
+            },
+            {
+                "key": "risk",
+                "step": "MEDICAL",
+                "value": 6.743231337,
+                "norm": 0.300249155,
+                "cat": "y"
+            },
+            {
+                "key": "room",
+                "step": "MEDICAL",
+                "value": 0.517831324,
+                "norm": 0.0231,
+                "cat": null
+            },
+            {
+                "key": "rupture uterine",
+                "step": "MEDICAL",
+                "value": 0.779104058,
+                "norm": 0.0347,
+                "cat": "y"
+            },
+            {
+                "key": "scar",
+                "step": "MEDICAL",
+                "value": 0.600785537,
+                "norm": 0.0268,
+                "cat": "c"
+            },
+            {
+                "key": "section",
+                "step": "MEDICAL",
+                "value": 3.596762924,
+                "norm": 0.160149485,
+                "cat": null
+            },
+            {
+                "key": "sign",
+                "step": "MEDICAL",
+                "value": 0.442845837,
+                "norm": 0.0197,
+                "cat": null
+            },
+            {
+                "key": "something",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "son",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "spacing",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "spinal",
+                "step": "MEDICAL",
+                "value": 0.372072254,
+                "norm": 0.0166,
+                "cat": null
+            },
+            {
+                "key": "states united",
+                "step": "MEDICAL",
+                "value": 0.47460886,
+                "norm": 0.0211,
+                "cat": null
+            },
+            {
+                "key": "story",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "study",
+                "step": "MEDICAL",
+                "value": 1.690700649,
+                "norm": 0.0753,
+                "cat": null
+            },
+            {
+                "key": "surgery",
+                "step": "MEDICAL",
+                "value": 2.949206278,
+                "norm": 0.131316375,
+                "cat": null
+            },
+            {
+                "key": "term",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "time",
+                "step": "MEDICAL",
+                "value": 1.991954018,
+                "norm": 0.0887,
+                "cat": null
+            },
+            {
+                "key": "treatment",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "trial",
+                "step": "MEDICAL",
+                "value": 0.442379577,
+                "norm": 0.0197,
+                "cat": null
+            },
+            {
+                "key": "university",
+                "step": "MEDICAL",
+                "value": 0.456354583,
+                "norm": 0.0203,
+                "cat": null
+            },
+            {
+                "key": "use",
+                "step": "MEDICAL",
+                "value": 0.902795841,
+                "norm": 0.0402,
+                "cat": null
+            },
+            {
+                "key": "uterus",
+                "step": "MEDICAL",
+                "value": 2.018426411,
+                "norm": 0.0899,
+                "cat": null
+            },
+            {
+                "key": "variation",
+                "step": "MEDICAL",
+                "value": 0.917899097,
+                "norm": 0.0409,
+                "cat": null
+            },
+            {
+                "key": "vbac",
+                "step": "MEDICAL",
+                "value": 1.203019583,
+                "norm": 0.0536,
+                "cat": "v"
+            },
+            {
+                "key": "voice",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "warrant",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "woman",
+                "step": "MEDICAL",
+                "value": 11.64263276,
+                "norm": 0.518399929,
+                "cat": null
+            },
+            {
+                "key": "wound",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": "c"
+            },
+            {
+                "key": "you",
+                "step": "MEDICAL",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            }
+        ]
+    },
+    {
         "step": "CONTROVERSIES",
         "values": [
             {
                 "key": "abdomen",
                 "step": "CONTROVERSIES",
-                "value": 0
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "abdomen lower",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
             },
             {
                 "key": "acog",
                 "step": "CONTROVERSIES",
-                "value": 0
+                "value": 0,
+                "norm": 0,
+                "cat": "e"
+            },
+            {
+                "key": "actor",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
             },
             {
                 "key": "advice",
                 "step": "CONTROVERSIES",
-                "value": 0
+                "value": 0,
+                "norm": 0,
+                "cat": null
             },
             {
-                "key": "alves camila mcconaughey",
+                "key": "age",
                 "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "anesthesia",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "another baby",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "baby boy",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "birth story",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "bladder",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "caesarean elective",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "care health provider",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "challenge",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "concern",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "condition",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "contraction",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "cord umbilical",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "dad",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "date due",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "daughter",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "event",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "fact",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "fetus",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "head",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "hearing",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "home",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "hour",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "husband",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "jerry yankowitz",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "kardashian kim",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "kid",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "kind",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "live",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "los angeles",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "lower abdomen",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "medication",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "morning",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "nurse",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "opinion",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "order",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "pitocin",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "planning",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "possibility",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "post",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "question",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "reach",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "recommendation",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "recover",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "request",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "select",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "setting",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "site",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "son",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "source",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "spacing",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "term",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "tracy anderson method",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "trial",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "tummy",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "use",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "vagina",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "warrant",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "water",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "wound",
-                "step": "CONTROVERSIES",
-                "value": 0
-            },
-            {
-                "key": "american college",
-                "step": "CONTROVERSIES",
-                "value": 0.227024082
-            },
-            {
-                "key": "factor",
-                "step": "CONTROVERSIES",
-                "value": 0.231113684
-            },
-            {
-                "key": "caesarean emergency",
-                "step": "CONTROVERSIES",
-                "value": 0.232871678
-            },
-            {
-                "key": "example",
-                "step": "CONTROVERSIES",
-                "value": 0.23314972
-            },
-            {
-                "key": "women",
-                "step": "CONTROVERSIES",
-                "value": 0.233405574
-            },
-            {
-                "key": "states united",
-                "step": "CONTROVERSIES",
-                "value": 0.236487833
-            },
-            {
-                "key": "issue",
-                "step": "CONTROVERSIES",
-                "value": 0.237377402
-            },
-            {
-                "key": "court",
-                "step": "CONTROVERSIES",
-                "value": 0.237576483
-            },
-            {
-                "key": "person",
-                "step": "CONTROVERSIES",
-                "value": 0.240884738
-            },
-            {
-                "key": "method",
-                "step": "CONTROVERSIES",
-                "value": 0.24323099
-            },
-            {
-                "key": "parent",
-                "step": "CONTROVERSIES",
-                "value": 0.244739906
-            },
-            {
-                "key": "pregnant woman",
-                "step": "CONTROVERSIES",
-                "value": 0.246782297
-            },
-            {
-                "key": "voice",
-                "step": "CONTROVERSIES",
-                "value": 0.249820575
-            },
-            {
-                "key": "grade",
-                "step": "CONTROVERSIES",
-                "value": 0.25
-            },
-            {
-                "key": "expert",
-                "step": "CONTROVERSIES",
-                "value": 0.257753148
-            },
-            {
-                "key": "option",
-                "step": "CONTROVERSIES",
-                "value": 0.265669534
-            },
-            {
-                "key": "result",
-                "step": "CONTROVERSIES",
-                "value": 0.267424363
-            },
-            {
-                "key": "midwife",
-                "step": "CONTROVERSIES",
-                "value": 0.271850393
-            },
-            {
-                "key": "discomfort",
-                "step": "CONTROVERSIES",
-                "value": 0.273071689
-            },
-            {
-                "key": "help",
-                "step": "CONTROVERSIES",
-                "value": 0.276120494
-            },
-            {
-                "key": "type",
-                "step": "CONTROVERSIES",
-                "value": 0.278017275
-            },
-            {
-                "key": "guideline",
-                "step": "CONTROVERSIES",
-                "value": 0.279510816
-            },
-            {
-                "key": "rupture uterine",
-                "step": "CONTROVERSIES",
-                "value": 0.27998377
-            },
-            {
-                "key": "physician",
-                "step": "CONTROVERSIES",
-                "value": 0.291909998
-            },
-            {
-                "key": "evidence",
-                "step": "CONTROVERSIES",
-                "value": 0.294902286
-            },
-            {
-                "key": "partner",
-                "step": "CONTROVERSIES",
-                "value": 0.297664523
-            },
-            {
-                "key": "care",
-                "step": "CONTROVERSIES",
-                "value": 0.30796425
-            },
-            {
-                "key": "skin",
-                "step": "CONTROVERSIES",
-                "value": 0.317936677
-            },
-            {
-                "key": "body",
-                "step": "CONTROVERSIES",
-                "value": 0.337535831
-            },
-            {
-                "key": "research",
-                "step": "CONTROVERSIES",
-                "value": 0.344711312
-            },
-            {
-                "key": "complication",
-                "step": "CONTROVERSIES",
-                "value": 0.347444814
-            },
-            {
-                "key": "experienced",
-                "step": "CONTROVERSIES",
-                "value": 0.348026283
-            },
-            {
-                "key": "obstetrician",
-                "step": "CONTROVERSIES",
-                "value": 0.352351432
-            },
-            {
-                "key": "health",
-                "step": "CONTROVERSIES",
-                "value": 0.35675669
-            },
-            {
-                "key": "picture",
-                "step": "CONTROVERSIES",
-                "value": 0.362814715
-            },
-            {
-                "key": "need",
-                "step": "CONTROVERSIES",
-                "value": 0.364338434
-            },
-            {
-                "key": "medical reason",
-                "step": "CONTROVERSIES",
-                "value": 0.387236682
-            },
-            {
-                "key": "benefit",
-                "step": "CONTROVERSIES",
-                "value": 0.389157313
-            },
-            {
-                "key": "pain",
-                "step": "CONTROVERSIES",
-                "value": 0.392659971
-            },
-            {
-                "key": "life",
-                "step": "CONTROVERSIES",
-                "value": 0.396812878
-            },
-            {
-                "key": "increase",
-                "step": "CONTROVERSIES",
-                "value": 0.400014931
-            },
-            {
-                "key": "variation",
-                "step": "CONTROVERSIES",
-                "value": 0.409284722
-            },
-            {
-                "key": "university",
-                "step": "CONTROVERSIES",
-                "value": 0.42245027
-            },
-            {
-                "key": "rate section",
-                "step": "CONTROVERSIES",
-                "value": 0.424831669
-            },
-            {
-                "key": "injection",
-                "step": "CONTROVERSIES",
-                "value": 0.430308004
-            },
-            {
-                "key": "datum",
-                "step": "CONTROVERSIES",
-                "value": 0.440999379
-            },
-            {
-                "key": "operation",
-                "step": "CONTROVERSIES",
-                "value": 0.45514952
-            },
-            {
-                "key": "emergency",
-                "step": "CONTROVERSIES",
-                "value": 0.467452573
-            },
-            {
-                "key": "scar",
-                "step": "CONTROVERSIES",
-                "value": 0.488648078
-            },
-            {
-                "key": "number",
-                "step": "CONTROVERSIES",
-                "value": 0.499334178
-            },
-            {
-                "key": "caesarean rate",
-                "step": "CONTROVERSIES",
-                "value": 0.505031162
-            },
-            {
-                "key": "story",
-                "step": "CONTROVERSIES",
-                "value": 0.534115981
-            },
-            {
-                "key": "infant",
-                "step": "CONTROVERSIES",
-                "value": 0.540898745
-            },
-            {
-                "key": "chance",
-                "step": "CONTROVERSIES",
-                "value": 0.586112183
-            },
-            {
-                "key": "incision",
-                "step": "CONTROVERSIES",
-                "value": 0.586144708
-            },
-            {
-                "key": "placenta",
-                "step": "CONTROVERSIES",
-                "value": 0.607143138
-            },
-            {
-                "key": "reason",
-                "step": "CONTROVERSIES",
-                "value": 0.612997138
-            },
-            {
-                "key": "epidural",
-                "step": "CONTROVERSIES",
-                "value": 0.624106001
-            },
-            {
-                "key": "birth cesarean",
-                "step": "CONTROVERSIES",
-                "value": 0.655198835
-            },
-            {
-                "key": "case",
-                "step": "CONTROVERSIES",
-                "value": 0.707149443
-            },
-            {
-                "key": "uterus",
-                "step": "CONTROVERSIES",
-                "value": 0.710634552
-            },
-            {
-                "key": "problem",
-                "step": "CONTROVERSIES",
-                "value": 0.7327708
-            },
-            {
-                "key": "procedure",
-                "step": "CONTROVERSIES",
-                "value": 0.765798705
-            },
-            {
-                "key": "vbac",
-                "step": "CONTROVERSIES",
-                "value": 0.778167615
-            },
-            {
-                "key": "decision",
-                "step": "CONTROVERSIES",
-                "value": 0.806333663
+                "value": 0.293364182,
+                "norm": 0.0254,
+                "cat": null
             },
             {
                 "key": "allergy",
                 "step": "CONTROVERSIES",
-                "value": 0.808537147
-            },
-            {
-                "key": "child",
-                "step": "CONTROVERSIES",
-                "value": 0.832569823
-            },
-            {
-                "key": "patient",
-                "step": "CONTROVERSIES",
-                "value": 0.872744016
-            },
-            {
-                "key": "delivery vaginal",
-                "step": "CONTROVERSIES",
-                "value": 0.877831779
-            },
-            {
-                "key": "percentage",
-                "step": "CONTROVERSIES",
-                "value": 0.903039458
-            },
-            {
-                "key": "researcher",
-                "step": "CONTROVERSIES",
-                "value": 0.947818526
-            },
-            {
-                "key": "time",
-                "step": "CONTROVERSIES",
-                "value": 0.964653899
-            },
-            {
-                "key": "information",
-                "step": "CONTROVERSIES",
-                "value": 1.031592004
-            },
-            {
-                "key": "rate",
-                "step": "CONTROVERSIES",
-                "value": 1.087204424
-            },
-            {
-                "key": "pregnancy",
-                "step": "CONTROVERSIES",
-                "value": 1.127481985
-            },
-            {
-                "key": "study",
-                "step": "CONTROVERSIES",
-                "value": 1.248215024
-            },
-            {
-                "key": "surgery",
-                "step": "CONTROVERSIES",
-                "value": 1.427461869
-            },
-            {
-                "key": "vaginal birth",
-                "step": "CONTROVERSIES",
-                "value": 1.521582542
-            },
-            {
-                "key": "delivery",
-                "step": "CONTROVERSIES",
-                "value": 1.836194742
-            },
-            {
-                "key": "doctor",
-                "step": "CONTROVERSIES",
-                "value": 2.079579625
-            },
-            {
-                "key": "sections",
-                "step": "CONTROVERSIES",
-                "value": 2.45398943
-            },
-            {
-                "key": "hospital",
-                "step": "CONTROVERSIES",
-                "value": 2.546905138
-            },
-            {
-                "key": "labor",
-                "step": "CONTROVERSIES",
-                "value": 2.712894948
-            },
-            {
-                "key": "caesarean section",
-                "step": "CONTROVERSIES",
-                "value": 2.963623907
-            },
-            {
-                "key": "birth",
-                "step": "CONTROVERSIES",
-                "value": 3.547376103
-            },
-            {
-                "key": "mother",
-                "step": "CONTROVERSIES",
-                "value": 3.766086782
-            },
-            {
-                "key": "cesarean delivery",
-                "step": "CONTROVERSIES",
-                "value": 3.899436874
-            },
-            {
-                "key": "risk",
-                "step": "CONTROVERSIES",
-                "value": 4.11602187
-            },
-            {
-                "key": "woman",
-                "step": "CONTROVERSIES",
-                "value": 6.355118818
-            },
-            {
-                "key": "caesarean",
-                "step": "CONTROVERSIES",
-                "value": 6.856495811
-            },
-            {
-                "key": "baby",
-                "step": "CONTROVERSIES",
-                "value": 14.18271023
-            }
-        ]
-    },
-    {
-        "step": "MEDICAL",
-        "values": [
-            {
-                "key": "acog",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "advice",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "alves camila mcconaughey",
-                "step": "MEDICAL",
-                "value": 0
+                "value": 0.355955343,
+                "norm": 0.0308,
+                "cat": "y"
             },
             {
                 "key": "american college",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "another baby",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "baby boy",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "birth story",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "caesarean elective",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "caesarean emergency",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "challenge",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "concern",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "court",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "dad",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "date due",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "daughter",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "discomfort",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "event",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "example",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "experienced",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "expert",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "fact",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "factor",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "grade",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "head",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "hearing",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "husband",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "issue",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "jerry yankowitz",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "kardashian kim",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "kind",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "live",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "los angeles",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "lower abdomen",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "method",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "morning",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "opinion",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "parent",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "person",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "picture",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "pitocin",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "planning",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "possibility",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "post",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "reach",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "request",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "research",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "result",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "select",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "setting",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "skin",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "son",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "source",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "spacing",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "story",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "term",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "tracy anderson method",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "tummy",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "voice",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "warrant",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "water",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "wound",
-                "step": "MEDICAL",
-                "value": 0
-            },
-            {
-                "key": "order",
-                "step": "MEDICAL",
-                "value": 0.394541489
-            },
-            {
-                "key": "physician",
-                "step": "MEDICAL",
-                "value": 0.39927762
-            },
-            {
-                "key": "option",
-                "step": "MEDICAL",
-                "value": 0.413516427
-            },
-            {
-                "key": "university",
-                "step": "MEDICAL",
-                "value": 0.422062544
-            },
-            {
-                "key": "contraction",
-                "step": "MEDICAL",
-                "value": 0.427878263
-            },
-            {
-                "key": "vagina",
-                "step": "MEDICAL",
-                "value": 0.429551746
-            },
-            {
-                "key": "guideline",
-                "step": "MEDICAL",
-                "value": 0.430960091
-            },
-            {
-                "key": "bladder",
-                "step": "MEDICAL",
-                "value": 0.431059409
-            },
-            {
-                "key": "care health provider",
-                "step": "MEDICAL",
-                "value": 0.434422951
-            },
-            {
-                "key": "fetus",
-                "step": "MEDICAL",
-                "value": 0.436689633
-            },
-            {
-                "key": "need",
-                "step": "MEDICAL",
-                "value": 0.445935742
-            },
-            {
-                "key": "increase",
-                "step": "MEDICAL",
-                "value": 0.451893123
-            },
-            {
-                "key": "evidence",
-                "step": "MEDICAL",
-                "value": 0.458780208
-            },
-            {
-                "key": "recommendation",
-                "step": "MEDICAL",
-                "value": 0.461802748
-            },
-            {
-                "key": "trial",
-                "step": "MEDICAL",
-                "value": 0.470213932
-            },
-            {
-                "key": "states united",
-                "step": "MEDICAL",
-                "value": 0.47089085
-            },
-            {
-                "key": "hour",
-                "step": "MEDICAL",
-                "value": 0.484768584
-            },
-            {
-                "key": "help",
-                "step": "MEDICAL",
-                "value": 0.487992448
-            },
-            {
-                "key": "life",
-                "step": "MEDICAL",
-                "value": 0.489820986
-            },
-            {
-                "key": "rate section",
-                "step": "MEDICAL",
-                "value": 0.489892941
-            },
-            {
-                "key": "partner",
-                "step": "MEDICAL",
-                "value": 0.490484953
-            },
-            {
-                "key": "datum",
-                "step": "MEDICAL",
-                "value": 0.496620355
-            },
-            {
-                "key": "home",
-                "step": "MEDICAL",
-                "value": 0.502147281
-            },
-            {
-                "key": "women",
-                "step": "MEDICAL",
-                "value": 0.50470279
-            },
-            {
-                "key": "variation",
-                "step": "MEDICAL",
-                "value": 0.507993408
-            },
-            {
-                "key": "caesarean rate",
-                "step": "MEDICAL",
-                "value": 0.524304089
-            },
-            {
-                "key": "body",
-                "step": "MEDICAL",
-                "value": 0.529348196
-            },
-            {
-                "key": "medical reason",
-                "step": "MEDICAL",
-                "value": 0.530240959
-            },
-            {
-                "key": "site",
-                "step": "MEDICAL",
-                "value": 0.565440501
-            },
-            {
-                "key": "benefit",
-                "step": "MEDICAL",
-                "value": 0.56784088
-            },
-            {
-                "key": "recover",
-                "step": "MEDICAL",
-                "value": 0.570141516
-            },
-            {
-                "key": "pregnant woman",
-                "step": "MEDICAL",
-                "value": 0.571491615
-            },
-            {
-                "key": "scar",
-                "step": "MEDICAL",
-                "value": 0.576531718
-            },
-            {
-                "key": "abdomen",
-                "step": "MEDICAL",
-                "value": 0.600522323
-            },
-            {
-                "key": "midwife",
-                "step": "MEDICAL",
-                "value": 0.603500718
+                "step": "CONTROVERSIES",
+                "value": 0.225433403,
+                "norm": 0.0195,
+                "cat": null
             },
             {
                 "key": "anesthesia",
-                "step": "MEDICAL",
-                "value": 0.609430987
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
             },
             {
-                "key": "cord umbilical",
-                "step": "MEDICAL",
-                "value": 0.61125741
+                "key": "anesthesia general",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
             },
             {
-                "key": "obstetrician",
-                "step": "MEDICAL",
-                "value": 0.647595874
+                "key": "another baby",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": "v"
             },
             {
-                "key": "nurse",
-                "step": "MEDICAL",
-                "value": 0.655059114
+                "key": "another child",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": "v"
             },
             {
-                "key": "kid",
-                "step": "MEDICAL",
-                "value": 0.666666667
+                "key": "area",
+                "step": "CONTROVERSIES",
+                "value": 0.269781515,
+                "norm": 0.0233,
+                "cat": null
             },
             {
-                "key": "number",
-                "step": "MEDICAL",
-                "value": 0.685339577
+                "key": "association",
+                "step": "CONTROVERSIES",
+                "value": 0.230922472,
+                "norm": 0.02,
+                "cat": null
             },
             {
-                "key": "care",
-                "step": "MEDICAL",
-                "value": 0.733714649
-            },
-            {
-                "key": "epidural",
-                "step": "MEDICAL",
-                "value": 0.757855927
-            },
-            {
-                "key": "use",
-                "step": "MEDICAL",
-                "value": 0.811250559
-            },
-            {
-                "key": "allergy",
-                "step": "MEDICAL",
-                "value": 0.812866151
-            },
-            {
-                "key": "condition",
-                "step": "MEDICAL",
-                "value": 0.834842967
-            },
-            {
-                "key": "question",
-                "step": "MEDICAL",
-                "value": 0.850921047
-            },
-            {
-                "key": "type",
-                "step": "MEDICAL",
-                "value": 0.877979834
-            },
-            {
-                "key": "chance",
-                "step": "MEDICAL",
-                "value": 0.88193169
-            },
-            {
-                "key": "decision",
-                "step": "MEDICAL",
-                "value": 0.88747305
-            },
-            {
-                "key": "rupture uterine",
-                "step": "MEDICAL",
-                "value": 0.88855283
-            },
-            {
-                "key": "health",
-                "step": "MEDICAL",
-                "value": 0.92176273
-            },
-            {
-                "key": "researcher",
-                "step": "MEDICAL",
-                "value": 0.947254919
-            },
-            {
-                "key": "medication",
-                "step": "MEDICAL",
-                "value": 0.991929308
-            },
-            {
-                "key": "infant",
-                "step": "MEDICAL",
-                "value": 1.062351097
-            },
-            {
-                "key": "complication",
-                "step": "MEDICAL",
-                "value": 1.116076187
-            },
-            {
-                "key": "patient",
-                "step": "MEDICAL",
-                "value": 1.163068122
-            },
-            {
-                "key": "child",
-                "step": "MEDICAL",
-                "value": 1.174868578
-            },
-            {
-                "key": "emergency",
-                "step": "MEDICAL",
-                "value": 1.233957584
-            },
-            {
-                "key": "vbac",
-                "step": "MEDICAL",
-                "value": 1.243589437
-            },
-            {
-                "key": "case",
-                "step": "MEDICAL",
-                "value": 1.245841747
-            },
-            {
-                "key": "problem",
-                "step": "MEDICAL",
-                "value": 1.255378457
-            },
-            {
-                "key": "information",
-                "step": "MEDICAL",
-                "value": 1.257529687
-            },
-            {
-                "key": "injection",
-                "step": "MEDICAL",
-                "value": 1.284591551
-            },
-            {
-                "key": "placenta",
-                "step": "MEDICAL",
-                "value": 1.36599734
-            },
-            {
-                "key": "pain",
-                "step": "MEDICAL",
-                "value": 1.369886217
-            },
-            {
-                "key": "rate",
-                "step": "MEDICAL",
-                "value": 1.382248643
-            },
-            {
-                "key": "procedure",
-                "step": "MEDICAL",
-                "value": 1.519338333
-            },
-            {
-                "key": "reason",
-                "step": "MEDICAL",
-                "value": 1.55997988
-            },
-            {
-                "key": "birth cesarean",
-                "step": "MEDICAL",
-                "value": 1.594044205
-            },
-            {
-                "key": "study",
-                "step": "MEDICAL",
-                "value": 1.647153965
-            },
-            {
-                "key": "percentage",
-                "step": "MEDICAL",
-                "value": 1.693272029
-            },
-            {
-                "key": "operation",
-                "step": "MEDICAL",
-                "value": 1.788439384
-            },
-            {
-                "key": "time",
-                "step": "MEDICAL",
-                "value": 1.856307278
-            },
-            {
-                "key": "uterus",
-                "step": "MEDICAL",
-                "value": 2.259791476
-            },
-            {
-                "key": "delivery vaginal",
-                "step": "MEDICAL",
-                "value": 2.34852654
-            },
-            {
-                "key": "pregnancy",
-                "step": "MEDICAL",
-                "value": 2.619989599
-            },
-            {
-                "key": "vaginal birth",
-                "step": "MEDICAL",
-                "value": 2.934597559
-            },
-            {
-                "key": "surgery",
-                "step": "MEDICAL",
-                "value": 2.948522895
-            },
-            {
-                "key": "incision",
-                "step": "MEDICAL",
-                "value": 3.221653112
-            },
-            {
-                "key": "sections",
-                "step": "MEDICAL",
-                "value": 3.863946218
-            },
-            {
-                "key": "hospital",
-                "step": "MEDICAL",
-                "value": 3.872344446
-            },
-            {
-                "key": "doctor",
-                "step": "MEDICAL",
-                "value": 3.997514706
-            },
-            {
-                "key": "delivery",
-                "step": "MEDICAL",
-                "value": 4.34768417
-            },
-            {
-                "key": "birth",
-                "step": "MEDICAL",
-                "value": 4.679762141
-            },
-            {
-                "key": "labor",
-                "step": "MEDICAL",
-                "value": 6.551284977
-            },
-            {
-                "key": "cesarean delivery",
-                "step": "MEDICAL",
-                "value": 6.756564612
-            },
-            {
-                "key": "mother",
-                "step": "MEDICAL",
-                "value": 7.276215114
-            },
-            {
-                "key": "risk",
-                "step": "MEDICAL",
-                "value": 7.289118865
-            },
-            {
-                "key": "caesarean section",
-                "step": "MEDICAL",
-                "value": 7.333253369
-            },
-            {
-                "key": "woman",
-                "step": "MEDICAL",
-                "value": 10.07901073
-            },
-            {
-                "key": "caesarean",
-                "step": "MEDICAL",
-                "value": 10.2056419
+                "key": "authors",
+                "step": "CONTROVERSIES",
+                "value": 0.32467692,
+                "norm": 0.0281,
+                "cat": null
             },
             {
                 "key": "baby",
-                "step": "MEDICAL",
-                "value": 28.79013839
+                "step": "CONTROVERSIES",
+                "value": 11.55398945,
+                "norm": 1,
+                "cat": null
+            },
+            {
+                "key": "baby boy",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "benefit",
+                "step": "CONTROVERSIES",
+                "value": 0.362493922,
+                "norm": 0.0314,
+                "cat": null
+            },
+            {
+                "key": "birth",
+                "step": "CONTROVERSIES",
+                "value": 2.772803374,
+                "norm": 0.239986663,
+                "cat": null
+            },
+            {
+                "key": "birth canal",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "birth cesarean",
+                "step": "CONTROVERSIES",
+                "value": 0.247943676,
+                "norm": 0.0215,
+                "cat": null
+            },
+            {
+                "key": "birth story",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "birth vaginal",
+                "step": "CONTROVERSIES",
+                "value": 1.29968692,
+                "norm": 0.112488152,
+                "cat": null
+            },
+            {
+                "key": "births caesarean",
+                "step": "CONTROVERSIES",
+                "value": 0.420656775,
+                "norm": 0.0364,
+                "cat": null
+            },
+            {
+                "key": "bladder",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "body",
+                "step": "CONTROVERSIES",
+                "value": 0.507597219,
+                "norm": 0.0439,
+                "cat": null
+            },
+            {
+                "key": "body every",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "caesarean",
+                "step": "CONTROVERSIES",
+                "value": 4.666069092,
+                "norm": 0.403849174,
+                "cat": null
+            },
+            {
+                "key": "caesarean elective",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "caesarean section",
+                "step": "CONTROVERSIES",
+                "value": 2.595238668,
+                "norm": 0.224618404,
+                "cat": null
+            },
+            {
+                "key": "care",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "care health provider",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": "e"
+            },
+            {
+                "key": "case",
+                "step": "CONTROVERSIES",
+                "value": 1.038644942,
+                "norm": 0.0899,
+                "cat": null
+            },
+            {
+                "key": "cesarean delivery",
+                "step": "CONTROVERSIES",
+                "value": 2.740774428,
+                "norm": 0.237214552,
+                "cat": null
+            },
+            {
+                "key": "cesarean emergency",
+                "step": "CONTROVERSIES",
+                "value": 0.242828469,
+                "norm": 0.021,
+                "cat": null
+            },
+            {
+                "key": "cesarean rate",
+                "step": "CONTROVERSIES",
+                "value": 0.300663424,
+                "norm": 0.026,
+                "cat": null
+            },
+            {
+                "key": "challenge",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "chance",
+                "step": "CONTROVERSIES",
+                "value": 0.720132857,
+                "norm": 0.0623,
+                "cat": null
+            },
+            {
+                "key": "child",
+                "step": "CONTROVERSIES",
+                "value": 0.63529723,
+                "norm": 0.055,
+                "cat": null
+            },
+            {
+                "key": "child first",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "choice",
+                "step": "CONTROVERSIES",
+                "value": 0.270856387,
+                "norm": 0.0234,
+                "cat": null
+            },
+            {
+                "key": "complication",
+                "step": "CONTROVERSIES",
+                "value": 0.4140218,
+                "norm": 0.0358,
+                "cat": "y"
+            },
+            {
+                "key": "concern",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "condition",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "condom",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "contraction",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "cord umbilical",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "court",
+                "step": "CONTROVERSIES",
+                "value": 0.285366483,
+                "norm": 0.0247,
+                "cat": null
+            },
+            {
+                "key": "cut",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "dad",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "date due",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "daughter",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "day",
+                "step": "CONTROVERSIES",
+                "value": 0.368966952,
+                "norm": 0.0319,
+                "cat": null
+            },
+            {
+                "key": "decision",
+                "step": "CONTROVERSIES",
+                "value": 0.768849923,
+                "norm": 0.0665,
+                "cat": null
+            },
+            {
+                "key": "delivery",
+                "step": "CONTROVERSIES",
+                "value": 1.103778792,
+                "norm": 0.0955,
+                "cat": null
+            },
+            {
+                "key": "delivery vaginal",
+                "step": "CONTROVERSIES",
+                "value": 0.80153314,
+                "norm": 0.0694,
+                "cat": null
+            },
+            {
+                "key": "development",
+                "step": "CONTROVERSIES",
+                "value": 0.253359782,
+                "norm": 0.0219,
+                "cat": null
+            },
+            {
+                "key": "difference",
+                "step": "CONTROVERSIES",
+                "value": 0.258724348,
+                "norm": 0.0224,
+                "cat": null
+            },
+            {
+                "key": "doctor",
+                "step": "CONTROVERSIES",
+                "value": 1.869784047,
+                "norm": 0.161830167,
+                "cat": null
+            },
+            {
+                "key": "drug",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "effect",
+                "step": "CONTROVERSIES",
+                "value": 0.274988934,
+                "norm": 0.0238,
+                "cat": null
+            },
+            {
+                "key": "elective",
+                "step": "CONTROVERSIES",
+                "value": 0.243274935,
+                "norm": 0.0211,
+                "cat": null
+            },
+            {
+                "key": "emergency",
+                "step": "CONTROVERSIES",
+                "value": 0.448381084,
+                "norm": 0.0388,
+                "cat": "y"
+            },
+            {
+                "key": "epidurals",
+                "step": "CONTROVERSIES",
+                "value": 0.302443216,
+                "norm": 0.0262,
+                "cat": null
+            },
+            {
+                "key": "epsteen lisa",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "event",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "evidence",
+                "step": "CONTROVERSIES",
+                "value": 0.303912786,
+                "norm": 0.0263,
+                "cat": null
+            },
+            {
+                "key": "example",
+                "step": "CONTROVERSIES",
+                "value": 0.241063249,
+                "norm": 0.0209,
+                "cat": null
+            },
+            {
+                "key": "experience",
+                "step": "CONTROVERSIES",
+                "value": 0.355504573,
+                "norm": 0.0308,
+                "cat": null
+            },
+            {
+                "key": "expert",
+                "step": "CONTROVERSIES",
+                "value": 0.231316269,
+                "norm": 0.02,
+                "cat": "e"
+            },
+            {
+                "key": "extra procedure",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "fact",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "factor",
+                "step": "CONTROVERSIES",
+                "value": 0.234413373,
+                "norm": 0.0203,
+                "cat": null
+            },
+            {
+                "key": "fetus",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "finding",
+                "step": "CONTROVERSIES",
+                "value": 0.273186331,
+                "norm": 0.0236,
+                "cat": null
+            },
+            {
+                "key": "five second",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "foot",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "future pregnancy",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "guideline",
+                "step": "CONTROVERSIES",
+                "value": 0.304379489,
+                "norm": 0.0263,
+                "cat": null
+            },
+            {
+                "key": "head",
+                "step": "CONTROVERSIES",
+                "value": 0.235133304,
+                "norm": 0.0204,
+                "cat": null
+            },
+            {
+                "key": "healing",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "health",
+                "step": "CONTROVERSIES",
+                "value": 0.471003632,
+                "norm": 0.0408,
+                "cat": null
+            },
+            {
+                "key": "home",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "hospital",
+                "step": "CONTROVERSIES",
+                "value": 3.085094323,
+                "norm": 0.267015504,
+                "cat": null
+            },
+            {
+                "key": "husband",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "ideal",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "immune system",
+                "step": "CONTROVERSIES",
+                "value": 0.27171881,
+                "norm": 0.0235,
+                "cat": null
+            },
+            {
+                "key": "incision",
+                "step": "CONTROVERSIES",
+                "value": 0.601625853,
+                "norm": 0.0521,
+                "cat": null
+            },
+            {
+                "key": "increase",
+                "step": "CONTROVERSIES",
+                "value": 0.29365796,
+                "norm": 0.0254,
+                "cat": null
+            },
+            {
+                "key": "increased risk",
+                "step": "CONTROVERSIES",
+                "value": 0.29331817,
+                "norm": 0.0254,
+                "cat": "y"
+            },
+            {
+                "key": "infant",
+                "step": "CONTROVERSIES",
+                "value": 0.437660809,
+                "norm": 0.0379,
+                "cat": null
+            },
+            {
+                "key": "infection",
+                "step": "CONTROVERSIES",
+                "value": 0.385490685,
+                "norm": 0.0334,
+                "cat": "y"
+            },
+            {
+                "key": "information",
+                "step": "CONTROVERSIES",
+                "value": 0.99171939,
+                "norm": 0.0858,
+                "cat": null
+            },
+            {
+                "key": "kind",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "labor",
+                "step": "CONTROVERSIES",
+                "value": 0.853905759,
+                "norm": 0.0739,
+                "cat": null
+            },
+            {
+                "key": "labour",
+                "step": "CONTROVERSIES",
+                "value": 0.52483073,
+                "norm": 0.0454,
+                "cat": null
+            },
+            {
+                "key": "lawyer",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": "e"
+            },
+            {
+                "key": "life",
+                "step": "CONTROVERSIES",
+                "value": 0.499960635,
+                "norm": 0.0433,
+                "cat": null
+            },
+            {
+                "key": "lot",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "many year",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "medical reason",
+                "step": "CONTROVERSIES",
+                "value": 0.297921025,
+                "norm": 0.0258,
+                "cat": null
+            },
+            {
+                "key": "medication",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "memorial hermann",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": "e"
+            },
+            {
+                "key": "method",
+                "step": "CONTROVERSIES",
+                "value": 0.311860683,
+                "norm": 0.027,
+                "cat": null
+            },
+            {
+                "key": "midwife",
+                "step": "CONTROVERSIES",
+                "value": 0.52926138,
+                "norm": 0.0458,
+                "cat": "e"
+            },
+            {
+                "key": "minute",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "month",
+                "step": "CONTROVERSIES",
+                "value": 0.352750476,
+                "norm": 0.0305,
+                "cat": null
+            },
+            {
+                "key": "mother",
+                "step": "CONTROVERSIES",
+                "value": 3.172557635,
+                "norm": 0.274585471,
+                "cat": null
+            },
+            {
+                "key": "number",
+                "step": "CONTROVERSIES",
+                "value": 0.641235655,
+                "norm": 0.0555,
+                "cat": null
+            },
+            {
+                "key": "nurse",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": "e"
+            },
+            {
+                "key": "obstetrician",
+                "step": "CONTROVERSIES",
+                "value": 0.387730548,
+                "norm": 0.0336,
+                "cat": "e"
+            },
+            {
+                "key": "operation",
+                "step": "CONTROVERSIES",
+                "value": 0.374515413,
+                "norm": 0.0324,
+                "cat": null
+            },
+            {
+                "key": "option",
+                "step": "CONTROVERSIES",
+                "value": 0.264513674,
+                "norm": 0.0229,
+                "cat": null
+            },
+            {
+                "key": "order",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "pain",
+                "step": "CONTROVERSIES",
+                "value": 0.353966352,
+                "norm": 0.0306,
+                "cat": "y"
+            },
+            {
+                "key": "parent",
+                "step": "CONTROVERSIES",
+                "value": 0.245140672,
+                "norm": 0.0212,
+                "cat": null
+            },
+            {
+                "key": "part",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "partner",
+                "step": "CONTROVERSIES",
+                "value": 0.298599049,
+                "norm": 0.0258,
+                "cat": null
+            },
+            {
+                "key": "patient",
+                "step": "CONTROVERSIES",
+                "value": 0.758581236,
+                "norm": 0.0657,
+                "cat": null
+            },
+            {
+                "key": "percent",
+                "step": "CONTROVERSIES",
+                "value": 0.925587118,
+                "norm": 0.0801,
+                "cat": "f"
+            },
+            {
+                "key": "period",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "person",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "physician",
+                "step": "CONTROVERSIES",
+                "value": 0.32743599,
+                "norm": 0.0283,
+                "cat": "e"
+            },
+            {
+                "key": "picture",
+                "step": "CONTROVERSIES",
+                "value": 0.544461941,
+                "norm": 0.0471,
+                "cat": null
+            },
+            {
+                "key": "pitocin",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "placenta",
+                "step": "CONTROVERSIES",
+                "value": 0.414346355,
+                "norm": 0.0359,
+                "cat": null
+            },
+            {
+                "key": "position",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "possibility",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "post",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": "c"
+            },
+            {
+                "key": "pregnancy",
+                "step": "CONTROVERSIES",
+                "value": 0.928287921,
+                "norm": 0.0803,
+                "cat": null
+            },
+            {
+                "key": "pregnant woman",
+                "step": "CONTROVERSIES",
+                "value": 0.34055656,
+                "norm": 0.0295,
+                "cat": null
+            },
+            {
+                "key": "pressure",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "problem",
+                "step": "CONTROVERSIES",
+                "value": 0.851880896,
+                "norm": 0.0737,
+                "cat": "y"
+            },
+            {
+                "key": "procedure",
+                "step": "CONTROVERSIES",
+                "value": 0.575619474,
+                "norm": 0.0498,
+                "cat": null
+            },
+            {
+                "key": "question",
+                "step": "CONTROVERSIES",
+                "value": 0.292334837,
+                "norm": 0.0253,
+                "cat": null
+            },
+            {
+                "key": "rate",
+                "step": "CONTROVERSIES",
+                "value": 0.923715252,
+                "norm": 0.0799,
+                "cat": "f"
+            },
+            {
+                "key": "rate section",
+                "step": "CONTROVERSIES",
+                "value": 0.370488146,
+                "norm": 0.0321,
+                "cat": "f"
+            },
+            {
+                "key": "reason",
+                "step": "CONTROVERSIES",
+                "value": 0.635524269,
+                "norm": 0.055,
+                "cat": null
+            },
+            {
+                "key": "recommendation",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "recovery",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "request",
+                "step": "CONTROVERSIES",
+                "value": 0.225799789,
+                "norm": 0.0195,
+                "cat": null
+            },
+            {
+                "key": "researchers",
+                "step": "CONTROVERSIES",
+                "value": 1.040462121,
+                "norm": 0.0901,
+                "cat": "e"
+            },
+            {
+                "key": "result",
+                "step": "CONTROVERSIES",
+                "value": 0.305998039,
+                "norm": 0.0265,
+                "cat": null
+            },
+            {
+                "key": "right",
+                "step": "CONTROVERSIES",
+                "value": 0.279751375,
+                "norm": 0.0242,
+                "cat": null
+            },
+            {
+                "key": "risk",
+                "step": "CONTROVERSIES",
+                "value": 3.630376269,
+                "norm": 0.314209761,
+                "cat": "y"
+            },
+            {
+                "key": "room",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "rupture uterine",
+                "step": "CONTROVERSIES",
+                "value": 0.34410205,
+                "norm": 0.0298,
+                "cat": "y"
+            },
+            {
+                "key": "scar",
+                "step": "CONTROVERSIES",
+                "value": 0.551841507,
+                "norm": 0.0478,
+                "cat": "c"
+            },
+            {
+                "key": "section",
+                "step": "CONTROVERSIES",
+                "value": 2.127060909,
+                "norm": 0.184097529,
+                "cat": null
+            },
+            {
+                "key": "sign",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "something",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "son",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "spacing",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "spinal",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "states united",
+                "step": "CONTROVERSIES",
+                "value": 0.238911241,
+                "norm": 0.0207,
+                "cat": null
+            },
+            {
+                "key": "story",
+                "step": "CONTROVERSIES",
+                "value": 0.501228643,
+                "norm": 0.0434,
+                "cat": null
+            },
+            {
+                "key": "study",
+                "step": "CONTROVERSIES",
+                "value": 1.371314182,
+                "norm": 0.118687505,
+                "cat": null
+            },
+            {
+                "key": "surgery",
+                "step": "CONTROVERSIES",
+                "value": 1.252162844,
+                "norm": 0.108374934,
+                "cat": null
+            },
+            {
+                "key": "term",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "time",
+                "step": "CONTROVERSIES",
+                "value": 1.142979813,
+                "norm": 0.0989,
+                "cat": null
+            },
+            {
+                "key": "treatment",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "trial",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "university",
+                "step": "CONTROVERSIES",
+                "value": 0.4576145,
+                "norm": 0.0396,
+                "cat": null
+            },
+            {
+                "key": "use",
+                "step": "CONTROVERSIES",
+                "value": 0.354288497,
+                "norm": 0.0307,
+                "cat": null
+            },
+            {
+                "key": "uterus",
+                "step": "CONTROVERSIES",
+                "value": 0.51415593,
+                "norm": 0.0445,
+                "cat": null
+            },
+            {
+                "key": "variation",
+                "step": "CONTROVERSIES",
+                "value": 0.758955778,
+                "norm": 0.0657,
+                "cat": null
+            },
+            {
+                "key": "vbac",
+                "step": "CONTROVERSIES",
+                "value": 0.743714389,
+                "norm": 0.0644,
+                "cat": "v"
+            },
+            {
+                "key": "voice",
+                "step": "CONTROVERSIES",
+                "value": 0.238252698,
+                "norm": 0.0206,
+                "cat": null
+            },
+            {
+                "key": "warrant",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "woman",
+                "step": "CONTROVERSIES",
+                "value": 7.451705469,
+                "norm": 0.644946535,
+                "cat": null
+            },
+            {
+                "key": "wound",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": "c"
+            },
+            {
+                "key": "you",
+                "step": "CONTROVERSIES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
             }
         ]
     },
@@ -1555,772 +2423,1206 @@
             {
                 "key": "abdomen",
                 "step": "EXPERIENCES",
-                "value": 0
+                "value": 0,
+                "norm": 0,
+                "cat": null
             },
             {
-                "key": "allergy",
+                "key": "abdomen lower",
                 "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "american college",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "anesthesia",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "benefit",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "birth cesarean",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "bladder",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "caesarean emergency",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "caesarean rate",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "care",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "care health provider",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "condition",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "contraction",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "cord umbilical",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "datum",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "delivery vaginal",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "discomfort",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "epidural",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "evidence",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "example",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "factor",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "fetus",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "grade",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "guideline",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "hour",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "infant",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "injection",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "issue",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "kid",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "medical reason",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "medication",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "method",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "midwife",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "need",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "obstetrician",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "operation",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "option",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "partner",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "person",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "picture",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "pregnant woman",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "procedure",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "rate",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "rate section",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "recommendation",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "research",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "researcher",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "result",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "rupture uterine",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "skin",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "states united",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "trial",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "university",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "vagina",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "variation",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "vbac",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "voice",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "women",
-                "step": "EXPERIENCES",
-                "value": 0
-            },
-            {
-                "key": "fact",
-                "step": "EXPERIENCES",
-                "value": 0.028698752
-            },
-            {
-                "key": "increase",
-                "step": "EXPERIENCES",
-                "value": 0.036363636
-            },
-            {
-                "key": "request",
-                "step": "EXPERIENCES",
-                "value": 0.036363636
-            },
-            {
-                "key": "los angeles",
-                "step": "EXPERIENCES",
-                "value": 0.036556996
-            },
-            {
-                "key": "order",
-                "step": "EXPERIENCES",
-                "value": 0.036556996
-            },
-            {
-                "key": "tracy anderson method",
-                "step": "EXPERIENCES",
-                "value": 0.039215686
-            },
-            {
-                "key": "alves camila mcconaughey",
-                "step": "EXPERIENCES",
-                "value": 0.050847458
-            },
-            {
-                "key": "kardashian kim",
-                "step": "EXPERIENCES",
-                "value": 0.058823529
-            },
-            {
-                "key": "advice",
-                "step": "EXPERIENCES",
-                "value": 0.071954803
-            },
-            {
-                "key": "event",
-                "step": "EXPERIENCES",
-                "value": 0.072368786
-            },
-            {
-                "key": "expert",
-                "step": "EXPERIENCES",
-                "value": 0.073932273
-            },
-            {
-                "key": "possibility",
-                "step": "EXPERIENCES",
-                "value": 0.074753421
-            },
-            {
-                "key": "head",
-                "step": "EXPERIENCES",
-                "value": 0.075353501
-            },
-            {
-                "key": "emergency",
-                "step": "EXPERIENCES",
-                "value": 0.076588657
-            },
-            {
-                "key": "daughter",
-                "step": "EXPERIENCES",
-                "value": 0.076711531
-            },
-            {
-                "key": "baby boy",
-                "step": "EXPERIENCES",
-                "value": 0.077380952
-            },
-            {
-                "key": "source",
-                "step": "EXPERIENCES",
-                "value": 0.078431373
-            },
-            {
-                "key": "water",
-                "step": "EXPERIENCES",
-                "value": 0.078980805
-            },
-            {
-                "key": "lower abdomen",
-                "step": "EXPERIENCES",
-                "value": 0.079120879
-            },
-            {
-                "key": "opinion",
-                "step": "EXPERIENCES",
-                "value": 0.079761905
-            },
-            {
-                "key": "hearing",
-                "step": "EXPERIENCES",
-                "value": 0.081329114
-            },
-            {
-                "key": "study",
-                "step": "EXPERIENCES",
-                "value": 0.081868197
-            },
-            {
-                "key": "term",
-                "step": "EXPERIENCES",
-                "value": 0.082582583
-            },
-            {
-                "key": "concern",
-                "step": "EXPERIENCES",
-                "value": 0.082756217
-            },
-            {
-                "key": "parent",
-                "step": "EXPERIENCES",
-                "value": 0.084790652
-            },
-            {
-                "key": "help",
-                "step": "EXPERIENCES",
-                "value": 0.085247305
-            },
-            {
-                "key": "jerry yankowitz",
-                "step": "EXPERIENCES",
-                "value": 0.086956522
-            },
-            {
-                "key": "pitocin",
-                "step": "EXPERIENCES",
-                "value": 0.086956522
-            },
-            {
-                "key": "select",
-                "step": "EXPERIENCES",
-                "value": 0.088345865
-            },
-            {
-                "key": "setting",
-                "step": "EXPERIENCES",
-                "value": 0.088345865
-            },
-            {
-                "key": "another baby",
-                "step": "EXPERIENCES",
-                "value": 0.090909091
-            },
-            {
-                "key": "reach",
-                "step": "EXPERIENCES",
-                "value": 0.090909091
-            },
-            {
-                "key": "spacing",
-                "step": "EXPERIENCES",
-                "value": 0.090909091
-            },
-            {
-                "key": "chance",
-                "step": "EXPERIENCES",
-                "value": 0.091341904
-            },
-            {
-                "key": "vaginal birth",
-                "step": "EXPERIENCES",
-                "value": 0.09217186
-            },
-            {
-                "key": "life",
-                "step": "EXPERIENCES",
-                "value": 0.096703916
-            },
-            {
-                "key": "physician",
-                "step": "EXPERIENCES",
-                "value": 0.097015513
-            },
-            {
-                "key": "scar",
-                "step": "EXPERIENCES",
-                "value": 0.099582254
-            },
-            {
-                "key": "tummy",
-                "step": "EXPERIENCES",
-                "value": 0.100466972
-            },
-            {
-                "key": "planning",
-                "step": "EXPERIENCES",
-                "value": 0.101547389
-            },
-            {
-                "key": "problem",
-                "step": "EXPERIENCES",
-                "value": 0.104793152
-            },
-            {
-                "key": "cesarean delivery",
-                "step": "EXPERIENCES",
-                "value": 0.105212083
+                "value": 0.086,
+                "norm": 0.06,
+                "cat": null
             },
             {
                 "key": "acog",
                 "step": "EXPERIENCES",
-                "value": 0.107792874
+                "value": 0.108822386,
+                "norm": 0.0759,
+                "cat": "e"
             },
             {
-                "key": "patient",
+                "key": "actor",
                 "step": "EXPERIENCES",
-                "value": 0.107954035
+                "value": 0.0727,
+                "norm": 0.0507,
+                "cat": null
             },
             {
-                "key": "birth story",
+                "key": "advice",
                 "step": "EXPERIENCES",
-                "value": 0.108108108
+                "value": 0.0714,
+                "norm": 0.0498,
+                "cat": null
             },
             {
-                "key": "home",
+                "key": "age",
                 "step": "EXPERIENCES",
-                "value": 0.112078511
+                "value": 0,
+                "norm": 0,
+                "cat": null
             },
             {
-                "key": "recover",
+                "key": "allergy",
                 "step": "EXPERIENCES",
-                "value": 0.113696867
+                "value": 0,
+                "norm": 0,
+                "cat": "y"
             },
             {
-                "key": "post",
+                "key": "american college",
                 "step": "EXPERIENCES",
-                "value": 0.114359142
+                "value": 0,
+                "norm": 0,
+                "cat": null
             },
             {
-                "key": "challenge",
+                "key": "anesthesia",
                 "step": "EXPERIENCES",
-                "value": 0.114437222
+                "value": 0,
+                "norm": 0,
+                "cat": null
             },
             {
-                "key": "caesarean elective",
+                "key": "anesthesia general",
                 "step": "EXPERIENCES",
-                "value": 0.11601129
+                "value": 0,
+                "norm": 0,
+                "cat": null
             },
             {
-                "key": "uterus",
+                "key": "another baby",
                 "step": "EXPERIENCES",
-                "value": 0.118625096
+                "value": 0.0909,
+                "norm": 0.0634,
+                "cat": "v"
             },
             {
-                "key": "husband",
+                "key": "another child",
                 "step": "EXPERIENCES",
-                "value": 0.118664243
+                "value": 0.0821,
+                "norm": 0.0573,
+                "cat": "v"
             },
             {
-                "key": "percentage",
+                "key": "area",
                 "step": "EXPERIENCES",
-                "value": 0.119510567
+                "value": 0,
+                "norm": 0,
+                "cat": null
             },
             {
-                "key": "complication",
+                "key": "association",
                 "step": "EXPERIENCES",
-                "value": 0.120862337
+                "value": 0,
+                "norm": 0,
+                "cat": null
             },
             {
-                "key": "live",
+                "key": "authors",
                 "step": "EXPERIENCES",
-                "value": 0.12173913
-            },
-            {
-                "key": "type",
-                "step": "EXPERIENCES",
-                "value": 0.122634931
-            },
-            {
-                "key": "son",
-                "step": "EXPERIENCES",
-                "value": 0.122729575
-            },
-            {
-                "key": "wound",
-                "step": "EXPERIENCES",
-                "value": 0.133425164
-            },
-            {
-                "key": "nurse",
-                "step": "EXPERIENCES",
-                "value": 0.135618422
-            },
-            {
-                "key": "reason",
-                "step": "EXPERIENCES",
-                "value": 0.136935967
-            },
-            {
-                "key": "case",
-                "step": "EXPERIENCES",
-                "value": 0.139569464
-            },
-            {
-                "key": "date due",
-                "step": "EXPERIENCES",
-                "value": 0.139931207
-            },
-            {
-                "key": "placenta",
-                "step": "EXPERIENCES",
-                "value": 0.144621611
-            },
-            {
-                "key": "warrant",
-                "step": "EXPERIENCES",
-                "value": 0.147058824
-            },
-            {
-                "key": "dad",
-                "step": "EXPERIENCES",
-                "value": 0.155172414
-            },
-            {
-                "key": "number",
-                "step": "EXPERIENCES",
-                "value": 0.161335076
-            },
-            {
-                "key": "surgery",
-                "step": "EXPERIENCES",
-                "value": 0.17017244
-            },
-            {
-                "key": "incision",
-                "step": "EXPERIENCES",
-                "value": 0.172386449
-            },
-            {
-                "key": "experienced",
-                "step": "EXPERIENCES",
-                "value": 0.179970368
-            },
-            {
-                "key": "decision",
-                "step": "EXPERIENCES",
-                "value": 0.188841863
-            },
-            {
-                "key": "caesarean section",
-                "step": "EXPERIENCES",
-                "value": 0.193777026
-            },
-            {
-                "key": "kind",
-                "step": "EXPERIENCES",
-                "value": 0.199149046
-            },
-            {
-                "key": "morning",
-                "step": "EXPERIENCES",
-                "value": 0.205942063
-            },
-            {
-                "key": "question",
-                "step": "EXPERIENCES",
-                "value": 0.208862132
-            },
-            {
-                "key": "time",
-                "step": "EXPERIENCES",
-                "value": 0.218047917
-            },
-            {
-                "key": "use",
-                "step": "EXPERIENCES",
-                "value": 0.225129199
-            },
-            {
-                "key": "court",
-                "step": "EXPERIENCES",
-                "value": 0.235714286
-            },
-            {
-                "key": "pain",
-                "step": "EXPERIENCES",
-                "value": 0.247649987
-            },
-            {
-                "key": "story",
-                "step": "EXPERIENCES",
-                "value": 0.254232254
-            },
-            {
-                "key": "body",
-                "step": "EXPERIENCES",
-                "value": 0.26812381
-            },
-            {
-                "key": "pregnancy",
-                "step": "EXPERIENCES",
-                "value": 0.280002183
-            },
-            {
-                "key": "hospital",
-                "step": "EXPERIENCES",
-                "value": 0.296863095
-            },
-            {
-                "key": "health",
-                "step": "EXPERIENCES",
-                "value": 0.311276522
-            },
-            {
-                "key": "child",
-                "step": "EXPERIENCES",
-                "value": 0.325195638
-            },
-            {
-                "key": "delivery",
-                "step": "EXPERIENCES",
-                "value": 0.381119361
-            },
-            {
-                "key": "risk",
-                "step": "EXPERIENCES",
-                "value": 0.415770226
-            },
-            {
-                "key": "labor",
-                "step": "EXPERIENCES",
-                "value": 0.452223025
-            },
-            {
-                "key": "site",
-                "step": "EXPERIENCES",
-                "value": 0.502012072
-            },
-            {
-                "key": "information",
-                "step": "EXPERIENCES",
-                "value": 0.563331131
-            },
-            {
-                "key": "mother",
-                "step": "EXPERIENCES",
-                "value": 0.569285367
-            },
-            {
-                "key": "caesarean",
-                "step": "EXPERIENCES",
-                "value": 0.598020984
-            },
-            {
-                "key": "doctor",
-                "step": "EXPERIENCES",
-                "value": 0.749152885
-            },
-            {
-                "key": "sections",
-                "step": "EXPERIENCES",
-                "value": 0.929771162
-            },
-            {
-                "key": "woman",
-                "step": "EXPERIENCES",
-                "value": 1.032542025
-            },
-            {
-                "key": "birth",
-                "step": "EXPERIENCES",
-                "value": 1.060725248
+                "value": 0,
+                "norm": 0,
+                "cat": null
             },
             {
                 "key": "baby",
                 "step": "EXPERIENCES",
-                "value": 1.842493064
+                "value": 1.433791545,
+                "norm": 1,
+                "cat": null
+            },
+            {
+                "key": "baby boy",
+                "step": "EXPERIENCES",
+                "value": 0.0779,
+                "norm": 0.0544,
+                "cat": null
+            },
+            {
+                "key": "benefit",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "birth",
+                "step": "EXPERIENCES",
+                "value": 0.935092006,
+                "norm": 0.652181281,
+                "cat": null
+            },
+            {
+                "key": "birth canal",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "birth cesarean",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "birth story",
+                "step": "EXPERIENCES",
+                "value": 0.108108108,
+                "norm": 0.0754,
+                "cat": null
+            },
+            {
+                "key": "birth vaginal",
+                "step": "EXPERIENCES",
+                "value": 0.0946,
+                "norm": 0.066,
+                "cat": null
+            },
+            {
+                "key": "births caesarean",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "bladder",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "body",
+                "step": "EXPERIENCES",
+                "value": 0.336628148,
+                "norm": 0.234781792,
+                "cat": null
+            },
+            {
+                "key": "body every",
+                "step": "EXPERIENCES",
+                "value": 0.0909,
+                "norm": 0.0634,
+                "cat": null
+            },
+            {
+                "key": "caesarean",
+                "step": "EXPERIENCES",
+                "value": 0.604529226,
+                "norm": 0.421629789,
+                "cat": null
+            },
+            {
+                "key": "caesarean elective",
+                "step": "EXPERIENCES",
+                "value": 0.126335325,
+                "norm": 0.0881,
+                "cat": null
+            },
+            {
+                "key": "caesarean section",
+                "step": "EXPERIENCES",
+                "value": 0.262095148,
+                "norm": 0.182798643,
+                "cat": null
+            },
+            {
+                "key": "care",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "care health provider",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": "e"
+            },
+            {
+                "key": "case",
+                "step": "EXPERIENCES",
+                "value": 0.170174953,
+                "norm": 0.118688768,
+                "cat": null
+            },
+            {
+                "key": "cesarean delivery",
+                "step": "EXPERIENCES",
+                "value": 0.100313381,
+                "norm": 0.07,
+                "cat": null
+            },
+            {
+                "key": "cesarean emergency",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "cesarean rate",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "challenge",
+                "step": "EXPERIENCES",
+                "value": 0.114319288,
+                "norm": 0.0797,
+                "cat": null
+            },
+            {
+                "key": "chance",
+                "step": "EXPERIENCES",
+                "value": 0.0858,
+                "norm": 0.0598,
+                "cat": null
+            },
+            {
+                "key": "child",
+                "step": "EXPERIENCES",
+                "value": 0.269081006,
+                "norm": 0.187670939,
+                "cat": null
+            },
+            {
+                "key": "child first",
+                "step": "EXPERIENCES",
+                "value": 0.0718,
+                "norm": 0.0501,
+                "cat": null
+            },
+            {
+                "key": "choice",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "complication",
+                "step": "EXPERIENCES",
+                "value": 0.130316721,
+                "norm": 0.0909,
+                "cat": "y"
+            },
+            {
+                "key": "concern",
+                "step": "EXPERIENCES",
+                "value": 0.0714,
+                "norm": 0.0498,
+                "cat": null
+            },
+            {
+                "key": "condition",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "condom",
+                "step": "EXPERIENCES",
+                "value": 0.0784,
+                "norm": 0.0547,
+                "cat": null
+            },
+            {
+                "key": "contraction",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "cord umbilical",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "court",
+                "step": "EXPERIENCES",
+                "value": 0.278,
+                "norm": 0.193891505,
+                "cat": null
+            },
+            {
+                "key": "cut",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "dad",
+                "step": "EXPERIENCES",
+                "value": 0.163636364,
+                "norm": 0.11412842,
+                "cat": null
+            },
+            {
+                "key": "date due",
+                "step": "EXPERIENCES",
+                "value": 0.0787,
+                "norm": 0.0549,
+                "cat": null
+            },
+            {
+                "key": "daughter",
+                "step": "EXPERIENCES",
+                "value": 0.0744,
+                "norm": 0.0519,
+                "cat": null
+            },
+            {
+                "key": "day",
+                "step": "EXPERIENCES",
+                "value": 0.232564553,
+                "norm": 0.162202486,
+                "cat": null
+            },
+            {
+                "key": "decision",
+                "step": "EXPERIENCES",
+                "value": 0.18213091,
+                "norm": 0.127027468,
+                "cat": null
+            },
+            {
+                "key": "delivery",
+                "step": "EXPERIENCES",
+                "value": 0.300811616,
+                "norm": 0.2098015,
+                "cat": null
+            },
+            {
+                "key": "delivery vaginal",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "development",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "difference",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "doctor",
+                "step": "EXPERIENCES",
+                "value": 0.533480324,
+                "norm": 0.372076629,
+                "cat": null
+            },
+            {
+                "key": "drug",
+                "step": "EXPERIENCES",
+                "value": 0.105376344,
+                "norm": 0.0735,
+                "cat": null
+            },
+            {
+                "key": "effect",
+                "step": "EXPERIENCES",
+                "value": 0.104096957,
+                "norm": 0.0726,
+                "cat": null
+            },
+            {
+                "key": "elective",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "emergency",
+                "step": "EXPERIENCES",
+                "value": 0.109997477,
+                "norm": 0.0767,
+                "cat": "y"
+            },
+            {
+                "key": "epidurals",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "epsteen lisa",
+                "step": "EXPERIENCES",
+                "value": 0.0833,
+                "norm": 0.0581,
+                "cat": null
+            },
+            {
+                "key": "event",
+                "step": "EXPERIENCES",
+                "value": 0.0706,
+                "norm": 0.0493,
+                "cat": null
+            },
+            {
+                "key": "evidence",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "example",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "experience",
+                "step": "EXPERIENCES",
+                "value": 0.159968544,
+                "norm": 0.111570294,
+                "cat": null
+            },
+            {
+                "key": "expert",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": "e"
+            },
+            {
+                "key": "extra procedure",
+                "step": "EXPERIENCES",
+                "value": 0.114285714,
+                "norm": 0.0797,
+                "cat": null
+            },
+            {
+                "key": "fact",
+                "step": "EXPERIENCES",
+                "value": 0.0714,
+                "norm": 0.0498,
+                "cat": null
+            },
+            {
+                "key": "factor",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "fetus",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "finding",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "five second",
+                "step": "EXPERIENCES",
+                "value": 0.0845,
+                "norm": 0.0589,
+                "cat": null
+            },
+            {
+                "key": "foot",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "future pregnancy",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "guideline",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "head",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "healing",
+                "step": "EXPERIENCES",
+                "value": 0.0776,
+                "norm": 0.0541,
+                "cat": null
+            },
+            {
+                "key": "health",
+                "step": "EXPERIENCES",
+                "value": 0.279449564,
+                "norm": 0.194902505,
+                "cat": null
+            },
+            {
+                "key": "home",
+                "step": "EXPERIENCES",
+                "value": 0.0919,
+                "norm": 0.0641,
+                "cat": null
+            },
+            {
+                "key": "hospital",
+                "step": "EXPERIENCES",
+                "value": 0.28300968,
+                "norm": 0.197385513,
+                "cat": null
+            },
+            {
+                "key": "husband",
+                "step": "EXPERIENCES",
+                "value": 0.102431395,
+                "norm": 0.0714,
+                "cat": null
+            },
+            {
+                "key": "ideal",
+                "step": "EXPERIENCES",
+                "value": 0.0909,
+                "norm": 0.0634,
+                "cat": null
+            },
+            {
+                "key": "immune system",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "incision",
+                "step": "EXPERIENCES",
+                "value": 0.202624667,
+                "norm": 0.141320869,
+                "cat": null
+            },
+            {
+                "key": "increase",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "increased risk",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": "y"
+            },
+            {
+                "key": "infant",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "infection",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": "y"
+            },
+            {
+                "key": "information",
+                "step": "EXPERIENCES",
+                "value": 0.5713864,
+                "norm": 0.398514276,
+                "cat": null
+            },
+            {
+                "key": "kind",
+                "step": "EXPERIENCES",
+                "value": 0.202039093,
+                "norm": 0.140912459,
+                "cat": null
+            },
+            {
+                "key": "labor",
+                "step": "EXPERIENCES",
+                "value": 0.368671297,
+                "norm": 0.257130333,
+                "cat": null
+            },
+            {
+                "key": "labour",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "lawyer",
+                "step": "EXPERIENCES",
+                "value": 0.0987,
+                "norm": 0.0688,
+                "cat": "e"
+            },
+            {
+                "key": "life",
+                "step": "EXPERIENCES",
+                "value": 0.165743169,
+                "norm": 0.115597815,
+                "cat": null
+            },
+            {
+                "key": "lot",
+                "step": "EXPERIENCES",
+                "value": 0.087,
+                "norm": 0.0607,
+                "cat": null
+            },
+            {
+                "key": "many year",
+                "step": "EXPERIENCES",
+                "value": 0.0909,
+                "norm": 0.0634,
+                "cat": null
+            },
+            {
+                "key": "medical reason",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "medication",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "memorial hermann",
+                "step": "EXPERIENCES",
+                "value": 0.125258799,
+                "norm": 0.0874,
+                "cat": "e"
+            },
+            {
+                "key": "method",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "midwife",
+                "step": "EXPERIENCES",
+                "value": 0.10687651,
+                "norm": 0.0745,
+                "cat": "e"
+            },
+            {
+                "key": "minute",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "month",
+                "step": "EXPERIENCES",
+                "value": 0.295785354,
+                "norm": 0.206295926,
+                "cat": null
+            },
+            {
+                "key": "mother",
+                "step": "EXPERIENCES",
+                "value": 0.700011966,
+                "norm": 0.488224365,
+                "cat": null
+            },
+            {
+                "key": "number",
+                "step": "EXPERIENCES",
+                "value": 0.250859481,
+                "norm": 0.17496231,
+                "cat": null
+            },
+            {
+                "key": "nurse",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": "e"
+            },
+            {
+                "key": "obstetrician",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": "e"
+            },
+            {
+                "key": "operation",
+                "step": "EXPERIENCES",
+                "value": 0.0804,
+                "norm": 0.056,
+                "cat": null
+            },
+            {
+                "key": "option",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "order",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "pain",
+                "step": "EXPERIENCES",
+                "value": 0.178679313,
+                "norm": 0.124620147,
+                "cat": "y"
+            },
+            {
+                "key": "parent",
+                "step": "EXPERIENCES",
+                "value": 0.0809,
+                "norm": 0.0564,
+                "cat": null
+            },
+            {
+                "key": "part",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "partner",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "patient",
+                "step": "EXPERIENCES",
+                "value": 0.0841,
+                "norm": 0.0587,
+                "cat": null
+            },
+            {
+                "key": "percent",
+                "step": "EXPERIENCES",
+                "value": 0.121469203,
+                "norm": 0.0847,
+                "cat": "f"
+            },
+            {
+                "key": "period",
+                "step": "EXPERIENCES",
+                "value": 0.0784,
+                "norm": 0.0547,
+                "cat": null
+            },
+            {
+                "key": "person",
+                "step": "EXPERIENCES",
+                "value": 0.0804,
+                "norm": 0.0561,
+                "cat": null
+            },
+            {
+                "key": "physician",
+                "step": "EXPERIENCES",
+                "value": 0.148357903,
+                "norm": 0.103472435,
+                "cat": "e"
+            },
+            {
+                "key": "picture",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "pitocin",
+                "step": "EXPERIENCES",
+                "value": 0.0816,
+                "norm": 0.0569,
+                "cat": null
+            },
+            {
+                "key": "placenta",
+                "step": "EXPERIENCES",
+                "value": 0.108479652,
+                "norm": 0.0757,
+                "cat": null
+            },
+            {
+                "key": "position",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "possibility",
+                "step": "EXPERIENCES",
+                "value": 0.0785,
+                "norm": 0.0548,
+                "cat": null
+            },
+            {
+                "key": "post",
+                "step": "EXPERIENCES",
+                "value": 0.0974,
+                "norm": 0.0679,
+                "cat": "c"
+            },
+            {
+                "key": "pregnancy",
+                "step": "EXPERIENCES",
+                "value": 0.153899325,
+                "norm": 0.107337309,
+                "cat": null
+            },
+            {
+                "key": "pregnant woman",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "pressure",
+                "step": "EXPERIENCES",
+                "value": 0.0763,
+                "norm": 0.0532,
+                "cat": null
+            },
+            {
+                "key": "problem",
+                "step": "EXPERIENCES",
+                "value": 0.124175322,
+                "norm": 0.0866,
+                "cat": "y"
+            },
+            {
+                "key": "procedure",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "question",
+                "step": "EXPERIENCES",
+                "value": 0.206138632,
+                "norm": 0.143771689,
+                "cat": null
+            },
+            {
+                "key": "rate",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": "f"
+            },
+            {
+                "key": "rate section",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": "f"
+            },
+            {
+                "key": "reason",
+                "step": "EXPERIENCES",
+                "value": 0.139589723,
+                "norm": 0.0974,
+                "cat": null
+            },
+            {
+                "key": "recommendation",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "recovery",
+                "step": "EXPERIENCES",
+                "value": 0.129063006,
+                "norm": 0.09,
+                "cat": null
+            },
+            {
+                "key": "request",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "researchers",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": "e"
+            },
+            {
+                "key": "result",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "right",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "risk",
+                "step": "EXPERIENCES",
+                "value": 0.499481163,
+                "norm": 0.348363864,
+                "cat": "y"
+            },
+            {
+                "key": "room",
+                "step": "EXPERIENCES",
+                "value": 0.0988,
+                "norm": 0.0689,
+                "cat": null
+            },
+            {
+                "key": "rupture uterine",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": "y"
+            },
+            {
+                "key": "scar",
+                "step": "EXPERIENCES",
+                "value": 0.0974,
+                "norm": 0.0679,
+                "cat": "c"
+            },
+            {
+                "key": "section",
+                "step": "EXPERIENCES",
+                "value": 0.90289336,
+                "norm": 0.629724288,
+                "cat": null
+            },
+            {
+                "key": "sign",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "something",
+                "step": "EXPERIENCES",
+                "value": 0.097,
+                "norm": 0.0677,
+                "cat": null
+            },
+            {
+                "key": "son",
+                "step": "EXPERIENCES",
+                "value": 0.111381978,
+                "norm": 0.0777,
+                "cat": null
+            },
+            {
+                "key": "spacing",
+                "step": "EXPERIENCES",
+                "value": 0.0909,
+                "norm": 0.0634,
+                "cat": null
+            },
+            {
+                "key": "spinal",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "states united",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "story",
+                "step": "EXPERIENCES",
+                "value": 0.25487115,
+                "norm": 0.177760255,
+                "cat": null
+            },
+            {
+                "key": "study",
+                "step": "EXPERIENCES",
+                "value": 0.0845,
+                "norm": 0.0589,
+                "cat": null
+            },
+            {
+                "key": "surgery",
+                "step": "EXPERIENCES",
+                "value": 0.127852233,
+                "norm": 0.0892,
+                "cat": null
+            },
+            {
+                "key": "term",
+                "step": "EXPERIENCES",
+                "value": 0.0959,
+                "norm": 0.0669,
+                "cat": null
+            },
+            {
+                "key": "time",
+                "step": "EXPERIENCES",
+                "value": 0.304595495,
+                "norm": 0.212440571,
+                "cat": null
+            },
+            {
+                "key": "treatment",
+                "step": "EXPERIENCES",
+                "value": 0.137163561,
+                "norm": 0.0957,
+                "cat": null
+            },
+            {
+                "key": "trial",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "university",
+                "step": "EXPERIENCES",
+                "value": 0.071,
+                "norm": 0.0495,
+                "cat": null
+            },
+            {
+                "key": "use",
+                "step": "EXPERIENCES",
+                "value": 0.222059667,
+                "norm": 0.154875838,
+                "cat": null
+            },
+            {
+                "key": "uterus",
+                "step": "EXPERIENCES",
+                "value": 0.0947,
+                "norm": 0.066,
+                "cat": null
+            },
+            {
+                "key": "variation",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "vbac",
+                "step": "EXPERIENCES",
+                "value": 0.0715,
+                "norm": 0.0499,
+                "cat": "v"
+            },
+            {
+                "key": "voice",
+                "step": "EXPERIENCES",
+                "value": 0,
+                "norm": 0,
+                "cat": null
+            },
+            {
+                "key": "warrant",
+                "step": "EXPERIENCES",
+                "value": 0.114285714,
+                "norm": 0.0797,
+                "cat": null
+            },
+            {
+                "key": "woman",
+                "step": "EXPERIENCES",
+                "value": 0.849384567,
+                "norm": 0.592404502,
+                "cat": null
+            },
+            {
+                "key": "wound",
+                "step": "EXPERIENCES",
+                "value": 0.134669335,
+                "norm": 0.0939,
+                "cat": "c"
+            },
+            {
+                "key": "you",
+                "step": "EXPERIENCES",
+                "value": 0.0807,
+                "norm": 0.0563,
+                "cat": null
             }
         ]
     }

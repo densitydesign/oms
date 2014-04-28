@@ -150,6 +150,7 @@ angular.module('who.directives', [])
             loaded = false,
             chart,
             network,
+            containerNodeInfo = element.find("#nodeInfo")[0],
             container = element.find("#graph")[0],
             containerPagination = element.find("#paginationStep")[0];
 
@@ -160,7 +161,12 @@ angular.module('who.directives', [])
                   .sectionid(scope.section.id)
                   .on("resetfilter", function(){
                     scope.$emit('resetFilter');
-                  });
+                    var selection = d3.select(containerNodeInfo)
+                    selection.attr("class", "nodeInfo-close")
+                  })
+                  .on("clicked", function(d,n){
+                    nodeInfo(d,n)
+                  })
 
                 chart = d3.select(container);
 
@@ -177,7 +183,88 @@ angular.module('who.directives', [])
             );
         }    
 
+        var nodeInfo = function(data, nodes){
 
+            var selection = d3.select(containerNodeInfo)
+            selection.attr("class", "nodeInfo-close nodeInfo-open")
+            $(containerNodeInfo).empty()
+
+            if(data.attributes.Type == "host"){
+
+              selection.append("p").text("node")
+              selection.append("p").text(data.label)
+
+              selection.append("p").text("type")
+              selection.append("p").text("host")
+
+              selection.append("p").text("category")
+
+              var cat = []
+              if(data.attributes.E == "true"){cat.push("Experiences")}
+              if(data.attributes.M == "true"){cat.push("Medical")}
+              if(data.attributes.C == "true"){cat.push("Controversies")}
+
+              selection.append("p").text(cat.join(", "))
+
+              selection.append("p").text("links")
+              
+              var n = nodes.filter(function(d){return d.attributes.Type == "url"})
+
+               var links = selection.append("div")
+                
+                links
+                  .selectAll('.links')
+                  .data(n)
+                  .enter()
+                  .append('p')
+                  .attr("class", "links")
+                  .style("text-overflow","ellipsis")
+                  .style("white-space","nowrap")
+                  .style("overflow","hidden")
+                  .html(function(d){return '<a target="_blank" href="'+d.file_label+'">'+ d.file_label+ '</a>'})
+
+
+
+            }else if(data.attributes.Type == "url"){
+
+              selection.append("p").text("node")
+              selection.append("p").text(data.label)
+
+              selection.append("p").text("type")
+              selection.append("p").text("url")
+
+              selection.append("p").text("category")
+
+              var cat = []
+              if(data.attributes.E == "true"){cat.push("Experiences")}
+              if(data.attributes.M == "true"){cat.push("Medical")}
+              if(data.attributes.C == "true"){cat.push("Controversies")}
+
+              selection.append("p").text(cat.join(", "))
+
+              selection.append("p").text("links")
+              selection.append("p")
+                  .style("text-overflow","ellipsis")
+                  .style("white-space","nowrap")
+                  .style("overflow","hidden")
+                .html('<a target="_blank" href="'+data.file_label+'">'+ data.file_label+ '</a>')
+              
+
+            }else{
+               selection.append("p").text("node")
+              selection.append("p").text(data.label)
+
+              selection.append("p").text("type")
+              selection.append("p").text("query")
+
+              selection.append("p").text("links")
+              
+
+              selection.append("p").text(parseInt(data.attributes.Size))
+
+            }
+            
+        }
 
         if (scope.$parent.$last === true) {
                   scope.$emit('docReady');
@@ -268,57 +355,13 @@ angular.module('who.directives', [])
           slope,
           chart,
           legendCont,
+          len,
           loaded = false;
 
         var container = element.find("#graph")[0],
             containerPagination = element.find("#paginationStep")[0],
             graphHeight = element.find("#graph").height()
 
-        var filterTF = [
-          'baby',
-          'caesarean',
-          'woman',
-          'caesarean section',
-          'risk',
-          'mother',
-          'cesarean delivery',
-          'birth',
-          'delivery',
-          'doctor',
-          'hospital',
-          'sections',
-          'labour',
-          'incision',
-          'labor',
-          'surgery',
-          'birth vaginal',
-          'pregnancy',
-          'delivery vaginal',
-          'uterus'
-        ];
-
-        var filterIDF = [
-          'labour',
-          'delivery',
-          'range upper',
-          'amount patient pay',
-          'bill size',
-          'estimate',
-          'dynamic player',
-          'percent',
-          'caesarean section',
-          'birth labor',
-          'different experience',
-          'depth overview',
-          'birth section',
-          'hour labour',
-          'daunting experience',
-          'expectant mom',
-          'every woman',
-          'site',
-          'figure',
-          'scar section'
-        ]
 
         var init = function(){
 
@@ -367,7 +410,7 @@ angular.module('who.directives', [])
                     f['value'] = d3.round(f['value'],2)
                 })
               })
-              var len = data[0].values.length;
+              len = data[0].values.length;
               slope = who.spallozzoChart()
                 .graphHeight(len*15)
                 .graphWidth(element.find("#graph").width())
@@ -433,7 +476,7 @@ angular.module('who.directives', [])
 
         var step = [
           {init: function(){
-            slope.showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"]).wordStep([])
+            slope.showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"]).wordStep([]).hidefilter(false).graphHeight(len*15)
             chart.call(slope)
             }
           },
@@ -441,6 +484,7 @@ angular.module('who.directives', [])
             slope
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
               .wordStep(["scar", "wound", "post"])
+              .hidefilter(true)
 
             chart.call(slope)
             }
@@ -449,6 +493,7 @@ angular.module('who.directives', [])
             slope
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
               .wordStep(["acog","care health provider","expert","lawyer","memorial hermann","midwife","minute","nurse","obstetrician","physician","researchers"])
+              .hidefilter(true)
             
             chart.call(slope)
             }
@@ -457,6 +502,7 @@ angular.module('who.directives', [])
             slope
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
               .wordStep(["percent","rate","rate section"])
+              .hidefilter(true)
 
             chart.call(slope)
             }
@@ -465,6 +511,7 @@ angular.module('who.directives', [])
             slope
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
               .wordStep(["another baby","another child","vbac"])
+              .hidefilter(true)
 
             chart.call(slope)
             }
@@ -473,6 +520,7 @@ angular.module('who.directives', [])
             slope
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
               .wordStep(["allergy","complication","emergency","increased risk","infection","pain","problem","risk","rupture uterine"])
+              .hidefilter(true)
 
             chart.call(slope)
             }
@@ -480,7 +528,7 @@ angular.module('who.directives', [])
           {init: function(){
             slope
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
-              .wordStep([])
+              .wordStep([]).hidefilter(false).graphHeight(len*15)
             chart.call(slope)
             }
           }
