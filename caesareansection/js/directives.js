@@ -221,7 +221,7 @@ angular.module('who.directives', [])
                   .style("text-overflow","ellipsis")
                   .style("white-space","nowrap")
                   .style("overflow","hidden")
-                  .html(function(d){return '<a target="_blank" href="'+d.file_label+'">'+ d.file_label+ '</a>'})
+                  .html(function(d){return '<a target="_blank" href="'+d.file_label+'">'+ d.file_label.substr(7)+ '</a>'})
 
 
 
@@ -247,18 +247,18 @@ angular.module('who.directives', [])
                   .style("text-overflow","ellipsis")
                   .style("white-space","nowrap")
                   .style("overflow","hidden")
-                .html('<a target="_blank" href="'+data.file_label+'">'+ data.file_label+ '</a>')
+                .html('<a target="_blank" href="'+data.file_label+'">'+ data.file_label.substr(7)+ '</a>')
               
 
             }else{
-               selection.append("h3").text("node")
+              selection.append("h3").text("node")
+
               selection.append("p").text(data.label)
 
               selection.append("h3").text("type")
               selection.append("p").text("query")
 
-              selection.append("h3").text("links")
-              
+              selection.append("h3").text("urls")
 
               selection.append("p").text(parseInt(data.attributes.Size))
 
