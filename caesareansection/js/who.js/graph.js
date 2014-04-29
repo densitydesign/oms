@@ -1212,6 +1212,7 @@ var networkconfig = {
         },
         {
           init: function() {
+            _s.unbind("clickNode");
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
