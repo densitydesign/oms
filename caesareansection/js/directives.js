@@ -476,14 +476,14 @@ angular.module('who.directives', [])
 
         var step = [
           {init: function(){
-            slope.showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"]).wordStep([]).hidefilter(false).graphHeight(len*15)
+            slope.showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"]).catStep([]).hidefilter(false).graphHeight(len*15)
             chart.call(slope)
             }
           },
           {init: function(){
             slope
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
-              .wordStep(["scar", "wound", "post"])
+              .catStep(["scar", "wound", "post"])
               .hidefilter(true)
 
             chart.call(slope)
@@ -492,7 +492,7 @@ angular.module('who.directives', [])
           {init: function(){
             slope
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
-              .wordStep(["acog","care health provider","expert","lawyer","memorial hermann","midwife","minute","nurse","obstetrician","physician","researchers"])
+              .catStep(["acog","care health provider","expert","lawyer","memorial hermann","midwife","minute","nurse","obstetrician","physician","researchers"])
               .hidefilter(true)
             
             chart.call(slope)
@@ -501,7 +501,7 @@ angular.module('who.directives', [])
           {init: function(){
             slope
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
-              .wordStep(["percent","rate","rate section"])
+              .catStep(["percent","rate","rate section"])
               .hidefilter(true)
 
             chart.call(slope)
@@ -510,7 +510,7 @@ angular.module('who.directives', [])
           {init: function(){
             slope
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
-              .wordStep(["another baby","another child","vbac"])
+              .catStep(["another baby","another child","vbac"])
               .hidefilter(true)
 
             chart.call(slope)
@@ -519,7 +519,7 @@ angular.module('who.directives', [])
           {init: function(){
             slope
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
-              .wordStep(["allergy","complication","emergency","increased risk","infection","pain","problem","risk","rupture uterine"])
+              .catStep(["allergy","complication","emergency","increased risk","infection","pain","problem","risk","rupture uterine"])
               .hidefilter(true)
 
             chart.call(slope)
@@ -528,7 +528,7 @@ angular.module('who.directives', [])
           {init: function(){
             slope
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
-              .wordStep([]).hidefilter(false).graphHeight(len*15)
+              .catStep([]).hidefilter(false).graphHeight(len*15)
             chart.call(slope)
             }
           }

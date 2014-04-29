@@ -8,6 +8,7 @@
     	showLines = false,
     	showCat = [],
     	wordStep = [],
+    	catStep = [],
     	normalized = true,
         graphWidth = 900,
  		graphHeight = 600,
@@ -44,9 +45,9 @@
         	if(hidefilter){
 
         		_data = []//var indata = data.filter(function(d){if(showCat.indexOf(d.step) > -1) return true});
-        		console.log(wordStep)
+        		console.log(catStep)
         		data.forEach(function(d){
-        			_data.push({"step": d.step, "values": d.values.filter(function(e){if(wordStep.indexOf(e.key) > -1) return true})})
+        			_data.push({"step": d.step, "values": d.values.filter(function(e){if(catStep.indexOf(e.key) > -1) return true})})
         		})
         		graphHeight =  _data[0].values.map(function(d){return d.key}).length*20
         	}
@@ -300,6 +301,12 @@
     spallozzoChart.wordStep = function(x){
       if (!arguments.length) return wordStep;
       wordStep = x;
+      return spallozzoChart;
+    }
+
+    spallozzoChart.catStep = function(x){
+      if (!arguments.length) return catStep;
+      catStep = x;
       return spallozzoChart;
     }
 
