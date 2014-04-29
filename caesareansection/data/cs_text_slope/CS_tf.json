@@ -1,4 +1,869 @@
 [
+{
+  "step" : "CORPUS",
+  "values" : [
+    {
+      "key" : "baby",
+      "value" : 22.45878542,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "woman",
+      "value" : 11.64263276,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "risk",
+      "value" : 6.743231337,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "mother",
+      "value" : 5.945673542,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "cesarean delivery",
+      "value" : 4.652078924,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "hospital",
+      "value" : 4.023420729,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "doctor",
+      "value" : 3.92106959,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "section",
+      "value" : 3.596762924,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "birth",
+      "value" : 3.430571083,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "incision",
+      "value" : 3.047961009,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "delivery",
+      "value" : 2.993942372,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "surgery",
+      "value" : 2.949206278,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "labor",
+      "value" : 2.659911867,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "birth vaginal",
+      "value" : 2.522681673,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "pregnancy",
+      "value" : 2.120322293,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "uterus",
+      "value" : 2.018426411,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "delivery vaginal",
+      "value" : 2.007794634,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "time",
+      "value" : 1.991954018,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "percent",
+      "value" : 1.892731912,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "operation",
+      "value" : 1.697811804,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "study",
+      "value" : 1.690700649,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "reason",
+      "value" : 1.543421408,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "case",
+      "value" : 1.541067966,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "problem",
+      "value" : 1.408411975,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "information",
+      "value" : 1.206153283,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "vbac",
+      "value" : 1.203019583,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "patient",
+      "value" : 1.201696236,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "emergency",
+      "value" : 1.197751173,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "procedure",
+      "value" : 1.197163108,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "complication",
+      "value" : 1.194432945,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "rate",
+      "value" : 1.180532068,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "medication",
+      "value" : 1.158354805,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "day",
+      "value" : 1.153363208,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "infection",
+      "value" : 1.142127845,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "researchers",
+      "value" : 1.040462121,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "placenta",
+      "value" : 1.039764986,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "chance",
+      "value" : 1.010136155,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "child",
+      "value" : 1.009320548,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "health",
+      "value" : 0.982867794,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "pain",
+      "value" : 0.969938464,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "variation",
+      "value" : 0.917899097,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "use",
+      "value" : 0.902795841,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "infant",
+      "value" : 0.887276039,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "birth cesarean",
+      "value" : 0.874577451,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "abdomen",
+      "value" : 0.846254845,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "number",
+      "value" : 0.843778313,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "condition",
+      "value" : 0.828085182,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "decision",
+      "value" : 0.801084653,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "rupture uterine",
+      "value" : 0.779104058,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "cut",
+      "value" : 0.766552468,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "life",
+      "value" : 0.739949366,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "obstetrician",
+      "value" : 0.699019826,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "cord umbilical",
+      "value" : 0.689902338,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "question",
+      "value" : 0.685621464,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "nurse",
+      "value" : 0.671404283,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "pregnant woman",
+      "value" : 0.667002882,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "care",
+      "value" : 0.612454082,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "scar",
+      "value" : 0.600785537,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "recovery",
+      "value" : 0.574864831,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "body",
+      "value" : 0.569807193,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "head",
+      "value" : 0.54523998,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "picture",
+      "value" : 0.544461941,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "benefit",
+      "value" : 0.541730959,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "midwife",
+      "value" : 0.54084123,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "anesthesia",
+      "value" : 0.539759214,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "room",
+      "value" : 0.517831324,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "medical reason",
+      "value" : 0.5020159,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "story",
+      "value" : 0.501228643,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "partner",
+      "value" : 0.495609254,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "evidence",
+      "value" : 0.483496281,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "recommendation",
+      "value" : 0.478599053,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "states united",
+      "value" : 0.47460886,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "care health provider",
+      "value" : 0.46590944,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "option",
+      "value" : 0.460748856,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "university",
+      "value" : 0.4576145,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "guideline",
+      "value" : 0.443862851,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "sign",
+      "value" : 0.442845837,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "trial",
+      "value" : 0.442379577,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "contraction",
+      "value" : 0.441757663,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "fetus",
+      "value" : 0.440134539,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "part",
+      "value" : 0.434904088,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "rate section",
+      "value" : 0.434711741,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "physician",
+      "value" : 0.422060382,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "bladder",
+      "value" : 0.420201085,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "position",
+      "value" : 0.417355685,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "foot",
+      "value" : 0.401260218,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "anesthesia general",
+      "value" : 0.393131979,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "epidurals",
+      "value" : 0.39064129,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "right",
+      "value" : 0.387695566,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "birth canal",
+      "value" : 0.383204006,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "result",
+      "value" : 0.382496985,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "kind",
+      "value" : 0.38230899,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "drug",
+      "value" : 0.374519373,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "increased risk",
+      "value" : 0.373773096,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "spinal",
+      "value" : 0.372072254,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "future pregnancy",
+      "value" : 0.368764763,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "order",
+      "value" : 0.365690971,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "increase",
+      "value" : 0.361851357,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "allergy",
+      "value" : 0.355955343,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "experience",
+      "value" : 0.355504573,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "month",
+      "value" : 0.352750476,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "authors",
+      "value" : 0.32467692,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "method",
+      "value" : 0.311860683,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "cesarean rate",
+      "value" : 0.300663424,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "age",
+      "value" : 0.293364182,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "court",
+      "value" : 0.285366483,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "effect",
+      "value" : 0.274988934,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "finding",
+      "value" : 0.273186331,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "immune system",
+      "value" : 0.27171881,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "choice",
+      "value" : 0.270856387,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "area",
+      "value" : 0.269781515,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "difference",
+      "value" : 0.258724348,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "development",
+      "value" : 0.253359782,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "parent",
+      "value" : 0.245140672,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "elective",
+      "value" : 0.243274935,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "cesarean emergency",
+      "value" : 0.242828469,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "example",
+      "value" : 0.241063249,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "voice",
+      "value" : 0.238252698,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "factor",
+      "value" : 0.234413373,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "expert",
+      "value" : 0.231316269,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "association",
+      "value" : 0.230922472,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "request",
+      "value" : 0.225799789,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "american college",
+      "value" : 0.225433403,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "wound",
+      "value" : 0.187213837,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "birth story",
+      "value" : 0.185031185,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "date due",
+      "value" : 0.164006541,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "dad",
+      "value" : 0.163636364,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "treatment",
+      "value" : 0.137163561,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "memorial hermann",
+      "value" : 0.125258799,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "challenge",
+      "value" : 0.114319288,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "extra procedure",
+      "value" : 0.114285714,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "warrant",
+      "value" : 0.114285714,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "son",
+      "value" : 0.111381978,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "acog",
+      "value" : 0.108822386,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "pressure",
+      "value" : 0.10548942,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "husband",
+      "value" : 0.102431395,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "lawyer",
+      "value" : 0.098666667,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "post",
+      "value" : 0.097374928,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "something",
+      "value" : 0.097033047,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "term",
+      "value" : 0.09592267,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "pitocin",
+      "value" : 0.095216734,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "home",
+      "value" : 0.0918776,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "another baby",
+      "value" : 0.090909091,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "body every",
+      "value" : 0.090909091,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "ideal",
+      "value" : 0.090909091,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "many year",
+      "value" : 0.090909091,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "spacing",
+      "value" : 0.090909091,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "abdomen lower",
+      "value" : 0.08600713,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "five second",
+      "value" : 0.084482759,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "epsteen lisa",
+      "value" : 0.083333333,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "another child",
+      "value" : 0.082107843,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "person",
+      "value" : 0.080441811,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "possibility",
+      "value" : 0.078514991,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "condom",
+      "value" : 0.078431373,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "period",
+      "value" : 0.078431373,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "baby boy",
+      "value" : 0.077941176,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "healing",
+      "value" : 0.077594555,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "daughter",
+      "value" : 0.074426248,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "child first",
+      "value" : 0.073094295,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "actor",
+      "value" : 0.072727273,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "concern",
+      "value" : 0.071408774,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "advice",
+      "value" : 0.071362953,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "fact",
+      "value" : 0.071352075,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "event",
+      "value" : 0.070640325,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "births caesarean",
+      "value" : 0,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "caesarean",
+      "value" : 0,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "caesarean elective",
+      "value" : 0,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "caesarean section",
+      "value" : 0,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "labour",
+      "value" : 0,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "lot",
+      "value" : 0,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "minute",
+      "value" : 0,
+      "step": "CORPUS"
+    },
+    {
+      "key" : "you",
+      "value" : 0,
+      "step": "CORPUS"
+    }
+  ]
+},
     {
         "step": "MEDICAL",
         "values": [

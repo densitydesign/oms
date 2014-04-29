@@ -1,4 +1,1234 @@
 [
+{
+  "step" : "CORPUS",
+  "values" : [
+    {
+      "key" : "delivery",
+      "value" : 2.230072207,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "percent",
+      "value" : 1.303880161,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "labor",
+      "value" : 1.299208617,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "bill size",
+      "value" : 0.795477786,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "dynamic player",
+      "value" : 0.795477786,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "range upper",
+      "value" : 0.795477786,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "estimated",
+      "value" : 0.704306863,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "pay",
+      "value" : 0.704306863,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "different experience",
+      "value" : 0.69645676,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "birth labor",
+      "value" : 0.638533174,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "scar section",
+      "value" : 0.638533174,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "birth section",
+      "value" : 0.618704945,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "daunting experience",
+      "value" : 0.618704945,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "depth overview",
+      "value" : 0.618704945,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "expectant mom",
+      "value" : 0.618704945,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "contributor",
+      "value" : 0.60455263,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "body every",
+      "value" : 0.594507814,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "every woman",
+      "value" : 0.579239901,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "stage",
+      "value" : 0.572587955,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "figure",
+      "value" : 0.567805228,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "voice",
+      "value" : 0.558567822,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "answer entire",
+      "value" : 0.541688591,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "full term",
+      "value" : 0.541688591,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "ideal",
+      "value" : 0.531494434,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "text",
+      "value" : 0.527536276,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "honor",
+      "value" : 0.503045074,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "inspiration",
+      "value" : 0.503045074,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "clothing",
+      "value" : 0.467113283,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "amount",
+      "value" : 0.463392727,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "carer",
+      "value" : 0.453414472,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "picture",
+      "value" : 0.43726906,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "another baby",
+      "value" : 0.43162059,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "attempted hbac",
+      "value" : 0.428334193,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "bucher jordan",
+      "value" : 0.428334193,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "cesarean rate section surgery",
+      "value" : 0.428334193,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "essay picture",
+      "value" : 0.428334193,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "photo",
+      "value" : 0.418536436,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "baby next",
+      "value" : 0.408724122,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "child next",
+      "value" : 0.408724122,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "body health nhs professional",
+      "value" : 0.406266444,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "information leaflet local patient",
+      "value" : 0.406266444,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "key recommendation",
+      "value" : 0.406266444,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "knowledge little medical",
+      "value" : 0.406266444,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "asked often question",
+      "value" : 0.397738893,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "certified health",
+      "value" : 0.397738893,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "issue pain practical",
+      "value" : 0.397738893,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "question scar section",
+      "value" : 0.397738893,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "mind",
+      "value" : 0.388340391,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "book groundbreaking",
+      "value" : 0.384681527,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "care",
+      "value" : 0.384205479,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "patient",
+      "value" : 0.381197849,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "awareness cesarean month",
+      "value" : 0.375015179,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "birth story",
+      "value" : 0.375015179,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "incision initial",
+      "value" : 0.375015179,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "answer",
+      "value" : 0.373503569,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "following information",
+      "value" : 0.365402423,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "many year",
+      "value" : 0.3613306,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "adjustment common physical",
+      "value" : 0.348021531,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "anymore but everytime",
+      "value" : 0.348021531,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "body good massage",
+      "value" : 0.348021531,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "cesarean operation",
+      "value" : 0.348021531,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "expected physical recovery",
+      "value" : 0.348021531,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "feel soreness",
+      "value" : 0.348021531,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "issue specific",
+      "value" : 0.348021531,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "longer time",
+      "value" : 0.348021531,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "scar treatment",
+      "value" : 0.348021531,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "epidurals",
+      "value" : 0.34462202,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "another way",
+      "value" : 0.343908163,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "baby woman",
+      "value" : 0.343908163,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "cbac",
+      "value" : 0.343825555,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "candidate",
+      "value" : 0.343552773,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "guidance",
+      "value" : 0.337889942,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "spacing",
+      "value" : 0.336942965,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "order",
+      "value" : 0.33143975,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "clinical guideline nice",
+      "value" : 0.329908883,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "association causality",
+      "value" : 0.327549677,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "buy",
+      "value" : 0.327549677,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "card credit example insurance national number",
+      "value" : 0.327549677,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "cesarean either section",
+      "value" : 0.327549677,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "contact more",
+      "value" : 0.327549677,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "delivery instrumental surgical",
+      "value" : 0.327549677,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "discussion energetic",
+      "value" : 0.327549677,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "epidural labor",
+      "value" : 0.327549677,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "even saving",
+      "value" : 0.327549677,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "financial information personal",
+      "value" : 0.327549677,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "insurance motor",
+      "value" : 0.327549677,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "mode relationship",
+      "value" : 0.327549677,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "primigravida",
+      "value" : 0.327549677,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "quantity save",
+      "value" : 0.327549677,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "another child",
+      "value" : 0.322080725,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "board",
+      "value" : 0.318581744,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "extra procedure",
+      "value" : 0.318191115,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "brisbane",
+      "value" : 0.311408855,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "general nature",
+      "value" : 0.311408855,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "pain relief",
+      "value" : 0.310639531,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "ban vbac",
+      "value" : 0.309352472,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "tutorial",
+      "value" : 0.309352472,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "difficult labor long",
+      "value" : 0.304699833,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "question",
+      "value" : 0.304695244,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "drape sterile",
+      "value" : 0.304531276,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "dad",
+      "value" : 0.296780382,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "history page",
+      "value" : 0.293070763,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "unanswered",
+      "value" : 0.293070763,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "story",
+      "value" : 0.287339488,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "pressure",
+      "value" : 0.287104738,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "dvla",
+      "value" : 0.286776313,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "many wait",
+      "value" : 0.286776313,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "child first",
+      "value" : 0.278759026,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "long",
+      "value" : 0.278759026,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "babycenter",
+      "value" : 0.278401846,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "described",
+      "value" : 0.278401846,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "baby",
+      "value" : 0.277780872,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "america",
+      "value" : 0.276549767,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "baby boy",
+      "value" : 0.272482748,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "polouse",
+      "value" : 0.272482748,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "understanding",
+      "value" : 0.270216224,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "advanced skill surgical",
+      "value" : 0.265159262,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "busy centre tertiary",
+      "value" : 0.265159262,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "caeasarean real section",
+      "value" : 0.265159262,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "ken law",
+      "value" : 0.265159262,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "ken law section",
+      "value" : 0.265159262,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "check week",
+      "value" : 0.262925424,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "accident",
+      "value" : 0.255433022,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "area belly lower",
+      "value" : 0.251772336,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "opening surgical",
+      "value" : 0.251772336,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "room second",
+      "value" : 0.245662258,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "five second",
+      "value" : 0.243759866,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "culture",
+      "value" : 0.243628864,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "grade",
+      "value" : 0.242101935,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "elective",
+      "value" : 0.23944994,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "haven",
+      "value" : 0.235437327,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "opinion",
+      "value" : 0.235437327,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "reason valid",
+      "value" : 0.233556641,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "delivery forceps",
+      "value" : 0.232876858,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "delivery instrumental",
+      "value" : 0.232876858,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "complicated situation",
+      "value" : 0.232152253,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "memorial hermann",
+      "value" : 0.232152253,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "alarmed doctor",
+      "value" : 0.232014354,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "bay tampa times",
+      "value" : 0.232014354,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "department florida south",
+      "value" : 0.232014354,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "epsteen lisa",
+      "value" : 0.232014354,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "expert threatening",
+      "value" : 0.232014354,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "general hospital tampa",
+      "value" : 0.232014354,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "hill home spring",
+      "value" : 0.232014354,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "jerry yankowitz",
+      "value" : 0.232014354,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "heart",
+      "value" : 0.22944286,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "restriction",
+      "value" : 0.22944286,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "chairman",
+      "value" : 0.226707236,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "rain",
+      "value" : 0.225502964,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "likelihood",
+      "value" : 0.225384456,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "educational purpose",
+      "value" : 0.218746467,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "healing",
+      "value" : 0.218056435,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "challenge",
+      "value" : 0.214845222,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "ultrasound",
+      "value" : 0.214720483,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "court",
+      "value" : 0.211850043,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "agreement",
+      "value" : 0.206779113,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "gynecology obstetric",
+      "value" : 0.205422835,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "actor",
+      "value" : 0.202485255,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "healthcare",
+      "value" : 0.193079967,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "delivery normal",
+      "value" : 0.192714866,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "melbourne",
+      "value" : 0.187619782,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "advocate",
+      "value" : 0.185839351,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "weather",
+      "value" : 0.17769971,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "emedicine",
+      "value" : 0.176625868,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "son",
+      "value" : 0.172938811,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "tummy",
+      "value" : 0.170945697,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "bed imposed rest",
+      "value" : 0.168737712,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "dilemma",
+      "value" : 0.168737712,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "doc fertility",
+      "value" : 0.168737712,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "else",
+      "value" : 0.168737712,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "first time vacation year",
+      "value" : 0.168737712,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "ftm",
+      "value" : 0.168737712,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "horrible image",
+      "value" : 0.168737712,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "job new",
+      "value" : 0.168737712,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "lurker",
+      "value" : 0.168737712,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "thurs plus",
+      "value" : 0.168737712,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "month",
+      "value" : 0.160809212,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "alves camila",
+      "value" : 0.159095557,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "baby first levi",
+      "value" : 0.159095557,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "detail much",
+      "value" : 0.159095557,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "half month two",
+      "value" : 0.159095557,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "kid levi",
+      "value" : 0.159095557,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "livingston vida",
+      "value" : 0.159095557,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "model mom",
+      "value" : 0.159095557,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "pain really strong",
+      "value" : 0.159095557,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "pregnancy whole",
+      "value" : 0.159095557,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "anaesthesia spinal",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "analgesia less",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "attempted birth vaginal",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "awareness celebrate cesarean help ican month seattle",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "baby way",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "births caesarean",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "blog ican reader",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "blog ican seattle",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "caesarean delivery safe",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "caesarean low rate section",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "caesarean section",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "caesarean surgery",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "call instead",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "camila",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "cesarean story",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "choice",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "clinical guideline update",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "community ican",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "condom",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "courageous honor strong woman",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "delivery section",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "depression score",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "development group guideline",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "error spelling",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "etc",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "explorer internet",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "fibroid",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "full less safer successful ventouse",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "guidance related",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "hbac",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "ican seattle year",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "icanseattle watch",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "improvement innovation",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "institute nhs",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "jaundice neonatal",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "kid",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "labour",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "laceration scalp",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "malposition",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "manual rotation",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "moment proud",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "nccs",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "nice pathways",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "our labour",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "physical recovery",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "pregnancy",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "problem unexpected",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "really recovery tough",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "right",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "rotation",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "scalp",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "service",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "spontaneous",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "sydney",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "toolkit",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "tuesday",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "use",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "woman",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "you",
+      "value" : 0,
+      "step" : "CORPUS"
+    }
+  ]
+},
     {
         "step": "MEDICAL",
         "values": [

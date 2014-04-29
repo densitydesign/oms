@@ -414,7 +414,7 @@ angular.module('who.directives', [])
               slope = who.spallozzoChart()
                 .graphHeight(len*15)
                 .graphWidth(element.find("#graph").width())
-                .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
+                .showCat(["CORPUS"])
                 .on("clicked", function(d){
                   var words = slope.wordStep();
                   if(words.indexOf(d) < 0){
@@ -475,6 +475,11 @@ angular.module('who.directives', [])
          }
 
         var step = [
+          {init: function(){
+            slope.showCat(["CORPUS"]).catStep([]).hidefilter(false).graphHeight(len*15)
+            chart.call(slope)
+            }
+          },
           {init: function(){
             slope.showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"]).catStep([]).hidefilter(false).graphHeight(len*15)
             chart.call(slope)

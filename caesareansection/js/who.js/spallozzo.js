@@ -47,14 +47,19 @@
         		_data = []//var indata = data.filter(function(d){if(showCat.indexOf(d.step) > -1) return true});
         		console.log(catStep)
         		data.forEach(function(d){
-        			_data.push({"step": d.step, "values": d.values.filter(function(e){if(catStep.indexOf(e.key) > -1) return true})})
+        			if(showCat.indexOf(d.step) > -1)
+        				_data.push({"step": d.step, "values": d.values.filter(function(e){if(catStep.indexOf(e.key) > -1) return true})})
         		})
         		graphHeight =  _data[0].values.map(function(d){return d.key}).length*20
         	}
 
         	var x = d3.scale.ordinal().rangeRoundBands([0, graphWidth], 0.5, 0);
         	var xDomain = ["ENTITIES"]
-        	xDomain = xDomain.concat(_data.map(function(d){return d.step}))
+        	if(showCat.length == 1 && showCat[0] == "CORPUS"){
+        		xDomain = xDomain.concat(["CORPUS",""," "])
+        	}else{
+        		xDomain = xDomain.concat(_data.map(function(d){return d.step}))
+        	}
         	x.domain(xDomain);
 
 
