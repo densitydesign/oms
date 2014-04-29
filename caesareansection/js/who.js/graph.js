@@ -60,7 +60,7 @@
 
       context.fillText(
         node.label,
-        Math.round(node[prefix + 'x'] - ((node.label.length * fontSize)/4) ),
+        Math.round(node[prefix + 'x'] - (((node.label.length || node.file_label.length )* fontSize)/4) ),
         Math.round(node[prefix + 'y'] + fontSize + node.size)
       );
     }
@@ -923,15 +923,24 @@ var networkconfig = {
              _s.bind("clickNode", function(e) {
 
                 var selected = e.data.node.selected
-                if(selected){
-                  dispatch.resetfilter()
-                  e.data.node.selected = false;
-                 }else{
+                // if(selected){
+                //   dispatch.resetfilter()
+                //   e.data.node.selected = false;
+                if(!selected){dispatch.resetfilter()}
+
                     var nh = _dbGraph.neighborhood(e.data.node.id)
                     var nodes = nh.nodes;
                     dispatch.clicked(e.data.node, nodes)
-                    e.data.node.selected = true;
-                   }
+
+                    _s.graph.nodes().forEach(function(node, i, a) {
+                      if(e.data.node.id == node.id){
+                        node.selected = true;
+                        
+                      }else{
+                         node.selected = false;
+                      }
+                    })
+
              })
           },
           forceAtlas2: false,

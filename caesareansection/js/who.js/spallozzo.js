@@ -45,7 +45,6 @@
         	if(hidefilter){
 
         		_data = []//var indata = data.filter(function(d){if(showCat.indexOf(d.step) > -1) return true});
-        		console.log(catStep)
         		data.forEach(function(d){
         			if(showCat.indexOf(d.step) > -1)
         				_data.push({"step": d.step, "values": d.values.filter(function(e){if(catStep.indexOf(e.key) > -1) return true})})

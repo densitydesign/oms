@@ -192,7 +192,7 @@ angular.module('who.directives', [])
             if(data.attributes.Type == "host"){
 
               selection.append("h3").text("node")
-              selection.append("p").text(data.label)
+              selection.append("p").text(data.file_label)
 
               selection.append("h3").text("type")
               selection.append("p").text("host")
@@ -228,7 +228,11 @@ angular.module('who.directives', [])
             }else if(data.attributes.Type == "url"){
 
               selection.append("h3").text("node")
-              selection.append("p").text(data.label)
+              selection.append("p")
+                  .style("text-overflow","ellipsis")
+                  .style("white-space","nowrap")
+                  .style("overflow","hidden")
+                .html('<a target="_blank" href="'+data.file_label+'">'+ data.file_label.substr(7)+ '</a>')
 
               selection.append("h3").text("type")
               selection.append("p").text("url")
@@ -240,20 +244,13 @@ angular.module('who.directives', [])
               if(data.attributes.M == "true"){cat.push("Medical")}
               if(data.attributes.C == "true"){cat.push("Controversies")}
 
-              selection.append("p").text(cat.join(", "))
-
-              selection.append("h3").text("links")
-              selection.append("p")
-                  .style("text-overflow","ellipsis")
-                  .style("white-space","nowrap")
-                  .style("overflow","hidden")
-                .html('<a target="_blank" href="'+data.file_label+'">'+ data.file_label.substr(7)+ '</a>')
+              selection.append("p").text((cat.join(", ") || "none"))
               
 
             }else{
               selection.append("h3").text("node")
 
-              selection.append("p").text(data.label)
+              selection.append("p").text(data.file_label)
 
               selection.append("h3").text("type")
               selection.append("p").text("query")
@@ -278,7 +275,7 @@ angular.module('who.directives', [])
             })
          }
 
-        var pag = "<pager total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pager>"
+        var pag = "<pager previous-text='&lsaquo; previous' next-text='next &rsaquo;' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pager>"
         //var pag = "<pagination max-size='ctrlmodels." + scope.section.id + ".maxItems' previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
         var e = angular.element(pag)
         $(containerPagination).append(e)
@@ -541,7 +538,7 @@ angular.module('who.directives', [])
         ]
 
         scope.ctrlmodels[scope.section.id].totalItems = step.length
-        var pag = "<pager total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pager>"
+        var pag = "<pager previous-text='&lsaquo; previous' next-text='next &rsaquo;' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pager>"
         //var pag = "<pagination max-size='ctrlmodels." + scope.section.id + ".maxItems' previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
         var e = angular.element(pag)
         $(containerPagination).append(e)

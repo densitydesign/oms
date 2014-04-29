@@ -113,7 +113,7 @@ angular.module('who.controllers', [])
             paddingTop: '55px',
             paddingBottom: '55px',
             verticalCentered: false,
-            normalScrollElements: '#viz_googleimages .imgs, .slope-cont, div.proto',
+            normalScrollElements: '#viz_googleimages .imgs, .slope-cont, div.proto, .links-node',
             onLeave: function(index, direction){
 
                 $(".tt").remove();
