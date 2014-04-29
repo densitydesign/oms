@@ -886,6 +886,7 @@ var networkconfig = {
                   l3 = _options.innerPageCount;
 
                 node.labelAdjust = false;
+                node.selected = false;
 
               if (node.attributes["Type"] == "query")  {
                 node.target_size = 3;
@@ -922,24 +923,32 @@ var networkconfig = {
 
              _s.bind("clickNode", function(e) {
 
+                
+                var nh = _dbGraph.neighborhood(e.data.node.id)
+                var nodes = nh.nodes;
+
+                
                 var selected = e.data.node.selected
-                // if(selected){
-                //   dispatch.resetfilter()
-                //   e.data.node.selected = false;
-                if(!selected){dispatch.resetfilter()}
 
-                    var nh = _dbGraph.neighborhood(e.data.node.id)
-                    var nodes = nh.nodes;
-                    dispatch.clicked(e.data.node, nodes)
+                console.log(selected)
 
-                    _s.graph.nodes().forEach(function(node, i, a) {
-                      if(e.data.node.id == node.id){
-                        node.selected = true;
-                        
-                      }else{
-                         node.selected = false;
-                      }
-                    })
+                if(selected){
+                   e.data.node.selected = false
+                  dispatch.resetfilter()
+                }else{
+                  e.data.node.selected = true
+                   dispatch.resetfilter()
+                  dispatch.clicked(e.data.node, nodes)
+                }
+                    
+                _s.graph.nodes().forEach(function(node, i, a) {
+                  if(e.data.node.id == node.id){
+                    
+                    
+                  }else{
+                     node.selected = false;
+                  }
+                })
 
              })
           },
@@ -974,6 +983,7 @@ var networkconfig = {
                   l2 = _options.innerUrlCount,
                   l3 = _options.innerPageCount;
 
+                node.selected = false;
                 node.labelAdjust = false;
 
               if (node.attributes["Type"] == "query")  {
@@ -1009,18 +1019,35 @@ var networkconfig = {
               edge.color = "rgba(17, 17, 17, 0.1)"
             });
 
-            _s.bind("clickNode", function(e) {
+             _s.bind("clickNode", function(e) {
 
+                
+                var nh = _dbGraph.neighborhood(e.data.node.id)
+                var nodes = nh.nodes;
+
+                
                 var selected = e.data.node.selected
+
+                console.log(selected)
+
                 if(selected){
+                   e.data.node.selected = false
                   dispatch.resetfilter()
-                  e.data.node.selected = false;
-                 }else{
-                    var nh = _dbGraph.neighborhood(e.data.node.id)
-                    var nodes = nh.nodes;
-                    dispatch.clicked(e.data.node, nodes)
-                    e.data.node.selected = true;
-                   }
+                }else{
+                  e.data.node.selected = true
+                   dispatch.resetfilter()
+                  dispatch.clicked(e.data.node, nodes)
+                }
+                    
+                _s.graph.nodes().forEach(function(node, i, a) {
+                  if(e.data.node.id == node.id){
+                    
+                    
+                  }else{
+                     node.selected = false;
+                  }
+                })
+
              })
           },
           forceAtlas2: false,
@@ -1056,6 +1083,7 @@ var networkconfig = {
                   
               node.label = null;
               node.labelAdjust = false;
+              node.selected = false;
 
               if (node.attributes["Type"] == "query")  {
                 node.target_size = 3;
@@ -1097,16 +1125,31 @@ var networkconfig = {
 
              _s.bind("clickNode", function(e) {
 
+                
+                var nh = _dbGraph.neighborhood(e.data.node.id)
+                var nodes = nh.nodes;
+
+                
                 var selected = e.data.node.selected
+
                 if(selected){
+                   e.data.node.selected = false
                   dispatch.resetfilter()
-                  e.data.node.selected = false;
-                 }else{
-                    var nh = _dbGraph.neighborhood(e.data.node.id)
-                    var nodes = nh.nodes;
-                    dispatch.clicked(e.data.node, nodes)
-                    e.data.node.selected = true;
-                   }
+                }else{
+                  e.data.node.selected = true
+                   dispatch.resetfilter()
+                  dispatch.clicked(e.data.node, nodes)
+                }
+                    
+                _s.graph.nodes().forEach(function(node, i, a) {
+                  if(e.data.node.id == node.id){
+                    
+                    
+                  }else{
+                     node.selected = false;
+                  }
+                })
+
              })
           },
           forceAtlas2: false,
@@ -1143,6 +1186,7 @@ var networkconfig = {
                   
               node.label = null;
               node.labelAdjust = false;
+              node.selected = false;
 
               if (node.attributes["Type"] == "query")  {
                 node.target_size = +node.attributes["Size"] / _options.ratio;
@@ -1184,16 +1228,33 @@ var networkconfig = {
 
              _s.bind("clickNode", function(e) {
 
+                
+                var nh = _dbGraph.neighborhood(e.data.node.id)
+                var nodes = nh.nodes;
+
+                
                 var selected = e.data.node.selected
+
+                console.log(selected)
+
                 if(selected){
+                   e.data.node.selected = false
                   dispatch.resetfilter()
-                  e.data.node.selected = false;
-                 }else{
-                    var nh = _dbGraph.neighborhood(e.data.node.id)
-                    var nodes = nh.nodes;
-                    dispatch.clicked(e.data.node, nodes)
-                    e.data.node.selected = true;
-                   }
+                }else{
+                  e.data.node.selected = true
+                   dispatch.resetfilter()
+                  dispatch.clicked(e.data.node, nodes)
+                }
+                    
+                _s.graph.nodes().forEach(function(node, i, a) {
+                  if(e.data.node.id == node.id){
+                    
+                    
+                  }else{
+                     node.selected = false;
+                  }
+                })
+
              })
           },
           forceAtlas2: false,
@@ -1230,6 +1291,7 @@ var networkconfig = {
 
               node.label = null;
               node.labelAdjust = false;
+              node.selected = false;
               
 
               if (node.attributes["Type"] == "query")  {

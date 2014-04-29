@@ -753,8 +753,6 @@ ul li {
 
 .links-node{
 	max-height:100px;
-	overflow: auto;
-	right:-10;
 }
 
 

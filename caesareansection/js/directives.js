@@ -211,6 +211,7 @@ angular.module('who.directives', [])
               var n = nodes.filter(function(d){return d.attributes.Type == "url"})
 
                var links = selection.append("div").attr("class","links-node")
+
                 
                 links
                   .selectAll('.links')
@@ -223,6 +224,12 @@ angular.module('who.directives', [])
                   .style("overflow","hidden")
                   .html(function(d){return '<a target="_blank" href="'+d.file_label+'">'+ d.file_label.substr(7)+ '</a>'})
 
+                
+                $(".links-node").slimScroll({
+                  height: "100px",
+                  size: '5px',
+                  alwaysVisible: false
+                });
 
 
             }else if(data.attributes.Type == "url"){
@@ -293,7 +300,9 @@ angular.module('who.directives', [])
 
         scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
-                //step[newValue-1].init()
+                var selection = d3.select(containerNodeInfo)
+                selection.attr("class", "nodeInfo-close")
+
                 network.internalView(newValue-1)
                 chart.call(network)
             }
