@@ -439,6 +439,7 @@
             var zoomView = {
 
               init: function() {
+                _s.unbind("clickNode");
                 _s.graph.nodes().forEach(function(node, i, a) {
 
                 var labelToShow = getMinAttribute(_dbGraph, 'in', 3, attribute, value)
@@ -1975,6 +1976,7 @@ var networkconfig = {
            * SIZES ARE INDEGREE
            */
           init: function() {
+            _s.unbind("clickNode");
             _s.graph.nodes().forEach(function(node, i, a) {
               var l = _options.innerCircleCount;
 
