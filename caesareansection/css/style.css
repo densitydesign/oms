@@ -261,6 +261,7 @@ ul li {
 	font-size:0.8em;
 	letter-spacing: 1px;
 	color:#E2E2E2;
+	line-height: 20%;
 }
 
 .legend p{
@@ -703,14 +704,16 @@ ul li {
 	top: 0;
 	left: -1px;
 	width: 200px;
-	padding: 10px;
-	border: 1px solid #CBCCCE;
+	padding: 5px 2px 5px 20px;
+	border: 1px solid #E2E2E2;
 	z-index: 1000;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	-ms-transition: all 0.5s ease;
 	transition: all 0.5s ease;
+	width:200px;
+	background-color: rgba(255, 255, 255, 0.9);
 }
 
 .nodeInfo-close {
@@ -722,6 +725,38 @@ ul li {
 	visibility: visible;
 	opacity: 1;
 }
+
+#nodeInfo h3{
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+	color: #E2E2E2;
+	line-height: 20%;
+}
+
+#nodeInfo p{
+	position: relative;
+	z-index: 2;
+	font-family: Georgia;
+	font-size: 1em;
+	color: #222222;
+	line-height: 100%;
+	text-transform: capitalize;
+}
+
+#nodeInfo a{
+	text-transform: none!important;
+}
+
+.links-node{
+	max-height:100px;
+	overflow: auto;
+	right:-10;
+}
+
 
 /* Protocol */
 
@@ -1714,3 +1749,5 @@ background:#d62728;
 .cluster5{	
 background:#9467bd;
 }
+
+
