@@ -191,13 +191,13 @@ angular.module('who.directives', [])
 
             if(data.attributes.Type == "host"){
 
-              selection.append("p").text("node")
+              selection.append("h3").text("node")
               selection.append("p").text(data.label)
 
-              selection.append("p").text("type")
+              selection.append("h3").text("type")
               selection.append("p").text("host")
 
-              selection.append("p").text("category")
+              selection.append("h3").text("category")
 
               var cat = []
               if(data.attributes.E == "true"){cat.push("Experiences")}
@@ -206,11 +206,11 @@ angular.module('who.directives', [])
 
               selection.append("p").text(cat.join(", "))
 
-              selection.append("p").text("links")
+              selection.append("h3").text("links")
               
               var n = nodes.filter(function(d){return d.attributes.Type == "url"})
 
-               var links = selection.append("div")
+               var links = selection.append("div").attr("class","links-node")
                 
                 links
                   .selectAll('.links')
@@ -227,13 +227,13 @@ angular.module('who.directives', [])
 
             }else if(data.attributes.Type == "url"){
 
-              selection.append("p").text("node")
+              selection.append("h3").text("node")
               selection.append("p").text(data.label)
 
-              selection.append("p").text("type")
+              selection.append("h3").text("type")
               selection.append("p").text("url")
 
-              selection.append("p").text("category")
+              selection.append("h3").text("category")
 
               var cat = []
               if(data.attributes.E == "true"){cat.push("Experiences")}
@@ -242,7 +242,7 @@ angular.module('who.directives', [])
 
               selection.append("p").text(cat.join(", "))
 
-              selection.append("p").text("links")
+              selection.append("h3").text("links")
               selection.append("p")
                   .style("text-overflow","ellipsis")
                   .style("white-space","nowrap")
@@ -251,13 +251,13 @@ angular.module('who.directives', [])
               
 
             }else{
-               selection.append("p").text("node")
+               selection.append("h3").text("node")
               selection.append("p").text(data.label)
 
-              selection.append("p").text("type")
+              selection.append("h3").text("type")
               selection.append("p").text("query")
 
-              selection.append("p").text("links")
+              selection.append("h3").text("links")
               
 
               selection.append("p").text(parseInt(data.attributes.Size))
