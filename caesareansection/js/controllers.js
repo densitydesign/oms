@@ -49,12 +49,15 @@ angular.module('who.controllers', [])
       protocol: $scope.sections[0].protocol
     }
 
+
     $scope.ctrlmodels = {
       slopetfidf : 'dataTF',
       slopescale : true,
       treemaphierarchy : 'post',
       treemapsort : 'author',
       sgnafmax : $scope.sections.length-1,
+      imgslangs : [],
+      imgstags : [],
       sgnafindex: 0,
       "cs_crawl_network":{
           totalItems: 5,

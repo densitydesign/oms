@@ -1496,7 +1496,7 @@ angular.module('who.directives', [])
                 loaded = true;                       
               },
               function(error){
-                txt = error
+                var txt = error
                   queryContainer.html(txt)
               }
             );

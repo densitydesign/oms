@@ -1372,7 +1372,20 @@ angular.module('who.directives', [])
       restrict: 'A',
       replace: true,
       templateUrl: 'partials/imageselastic.html',
-      link: function postLink(scope, element, attrs) {
+      controller: function($scope) {
+
+            $scope.langsArr=[];
+            $scope.tagsArr=[];
+            $scope.loadImages;
+            $scope.setSelection=function(langs,tags) {
+              $scope.langsArr=langs;
+              $scope.tagsArr=tags;
+              $scope.loadImages();
+          }
+
+
+        },
+      link: function postLink(scope, element, attrs,imagesElasticCtrl) {
 
       var col=true,
           rows,
@@ -1381,8 +1394,6 @@ angular.module('who.directives', [])
           load=0,
           count=0,
           currArray,
-          langsArr=[],
-          tagsArr=[],
           paginate,
           scrollEnd=false,
           langLvl=0,
@@ -1395,6 +1406,7 @@ angular.module('who.directives', [])
           imgsContainer,
           dsv_egg = d3.dsv(";", "text/plain"),
           loaded = false;
+
 
       var init = function(){
 
@@ -1459,7 +1471,7 @@ angular.module('who.directives', [])
 
             radContainer = element.find(".rad")[0]
             
-            $(radContainer).append('<div class="btn-group show-lvl"><button id="language" type="button" class="btn btn-default elstc">Images</button><button id="forum" type="button" class="btn btn-default elstc">Colors</button></div>')
+            $(radContainer).append('<div class="btn-group show-lvl"><button id="language" type="button" class="btn btn-sm elstc">Images</button><button id="forum" type="button" class="btn btn-sm elstc">Colors</button></div>')
             
             
             d3.select(vizContainer).append("div")
@@ -1487,7 +1499,7 @@ angular.module('who.directives', [])
             langs = svg.selectAll(".lang").data(data)
             .enter()
             .append("rect")
-            .attr("class", "lang")
+                .attr("class",function(d){return "lang "+ d.key.replace(/\s/g, '_');})
           .attr("x",  20)
           .attr("y", function(d){return langScale(d.y)+2})
             .attr("width", listW)
@@ -1500,22 +1512,22 @@ angular.module('who.directives', [])
               		d.sel=true;
 	                d3.select(this).classed("sel",true);
 
-	                var index = langsArr.indexOf(d.key);
+	                var index = scope.langsArr.indexOf(d.key);
               		if (index == -1) {
-					    langsArr.push(d.key);
+					    scope.langsArr.push(d.key);
 					}
 	                //ealstify list
               		elastify();
-              		loadImages();
+              		scope.loadImages();
               	}
               	else {
               		d.sel=false;
               		d3.select(this).classed("sel",false)
-              		var index = langsArr.indexOf(d.key);
+              		var index = scope.langsArr.indexOf(d.key);
               		if (index > -1) {
-					    langsArr.splice(index, 1);
+					    scope.langsArr.splice(index, 1);
 					}
-					if(!langsArr.length) {
+					if(!scope.langsArr.length) {
 					/*	tagsArr=[];
 						$(".tag.sel").removeClass("sel")
 						loadWhole(); */
@@ -1523,7 +1535,7 @@ angular.module('who.directives', [])
 					}
 				//	else{
 						elastify();
-						loadImages();
+						scope.loadImages();
 				//	}
               	}
               
@@ -1551,17 +1563,17 @@ angular.module('who.directives', [])
 			
 			function loadWhole() {
 				
-				langsArr=allLangs;
+				scope.langsArr=allLangs;
                 elastify();
-                loadImages();
-                langsArr = [];
+                scope.loadImages();
+                scope.langsArr = [];
                 
 			}
 			
              function elastify() {
                  var dt;
-                if(!langsArr.length)  dt = rows.filter(function(e){return allLangs.indexOf(e.lang)>=0})
-            	else  dt = rows.filter(function(e){return langsArr.indexOf(e.lang)>=0})
+                if(!scope.langsArr.length)  dt = rows.filter(function(e){return allLangs.indexOf(e.lang)>=0})
+            	else  dt = rows.filter(function(e){return scope.langsArr.indexOf(e.lang)>=0})
             	var d = d3.nest()
                 .key(function(f) {return f.keyword; })
                 .entries(dt);
@@ -1600,7 +1612,7 @@ angular.module('who.directives', [])
               .append("rect")
               
               //enter new elements
-              enter.attr("class","tag")
+              enter.attr("class",function(d){return "tag "+d.key.replace(/\s/g, '_');})
               .attr("x",  width*.1+listW)
             .attr("y", function(e){return e.y})
               .attr("width", listW)
@@ -1610,22 +1622,22 @@ angular.module('who.directives', [])
               .on("click", function(d){
               	if(!d.sel) {
               		d.sel=true;
-              		var index = tagsArr.indexOf(d.key);
+              		var index = scope.tagsArr.indexOf(d.key);
               		if (index == -1) {
-					    tagsArr.push(d.key);
+					    scope.tagsArr.push(d.key);
 					}
 	                d3.select(this).classed("sel",true)
-	                loadImages();
+	                scope.loadImages();
               	}
               	else {
               		d.sel=false;
               		d3.select(this).classed("sel",false)
-              		var index = tagsArr.indexOf(d.key);
+              		var index = scope.tagsArr.indexOf(d.key);
               		console.log(index)
               		if (index > -1) {
-					    tagsArr.splice(index, 1);
+					    scope.tagsArr.splice(index, 1);
 					}
-					loadImages();
+					scope.loadImages();
               	}
               	
               });
@@ -1671,26 +1683,26 @@ angular.module('who.directives', [])
              
              
              
-             function loadImages() {
+            scope.loadImages = function() {
 				
            		$(imgsContainer).empty();
            		$(imgsContainer).scrollTop(0);
            		scrollEnd=false;
            		load=0;
            		var whole=false
-           		if(!langsArr.length) {
-           			langsArr=allLangs
+           		if(!scope.langsArr.length) {
+           			scope.langsArr=allLangs
            			whole=true;
            		}
            		
            		currArray=rows.filter(function(e){
-           			if(tagsArr.length)
-              		return langsArr.indexOf(e.lang)>=0 && tagsArr.indexOf(e.keyword)>=0
-              		else return langsArr.indexOf(e.lang)>=0
+           			if(scope.tagsArr.length)
+              		return scope.langsArr.indexOf(e.lang)>=0 && scope.tagsArr.indexOf(e.keyword)>=0
+              		else return scope.langsArr.indexOf(e.lang)>=0
               	})
               	.sort(function(a,b){return a.rank - b.rank})
               	
-              	if(whole) langsArr=[];
+              	if(whole) scope.langsArr=[];
               	
            		count=currArray.length;
            		if(count<=paginate) load=count
@@ -1772,21 +1784,21 @@ angular.module('who.directives', [])
             
             $(".rem-langs").on("click",function(){
             	d3.selectAll(".lang.sel").classed("sel",false)
-				if(!tagsArr.length) loadWhole()
+				if(!scope.tagsArr.length) loadWhole()
 				else {
-					langsArr=[];
+					scope.langsArr=[];
 					elastify();
-					loadImages();
+					scope.loadImages();
 				}
             })
             
             $(".rem-tags").on("click",function(){
 				d3.selectAll(".tag.sel").classed("sel",false)
-				tagsArr=[]
-				if(!langsArr.length) loadWhole()
+				scope.tagsArr=[]
+				if(!scope.langsArr.length) loadWhole()
 				else {
 					elastify();
-					loadImages();
+					scope.loadImages();
 				}
             })
             
@@ -1812,6 +1824,26 @@ angular.module('who.directives', [])
         })
 
        }
+
+      scope.$watchCollection('[ctrlmodels.imgslangs,ctrlmodels.imgstags]', function(newValues, oldValues){
+
+              console.log(newValues);
+              scope.langsArr=newValues[0];
+              scope.tagsArr=newValues[1];
+
+               d3.selectAll(".sel").classed("sel",false);
+
+              scope.langsArr.forEach(function(e,i){
+                  d3.selectAll("."+e).classed("sel",true);
+              })
+
+              scope.tagsArr.forEach(function(e,i){
+                  d3.selectAll("."+e.replace(/\s/g, '_')).classed("sel",true);
+              })
+
+              scope.loadImages();
+
+      })
 
       //lazy loading
       scope.$watch('utils.section', function(newValue, oldValue){
