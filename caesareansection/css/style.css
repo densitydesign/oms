@@ -386,6 +386,7 @@ ul li {
 	background-position:50% 50%; 
 	background-repeat:no-repeat; 
 	float:right;
+	cursor: pointer;
 }
 
 .arrow-prev{
@@ -397,25 +398,16 @@ ul li {
 	background-position:50% 50%; 
 	background-repeat:no-repeat; 
 	float:left;
+	cursor: pointer;
 
 }
 
 .arrow-prev:hover{
-	-webkit-transition: all 0.2s linear;
-	-moz-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
-	-ms-transition: all 0.2s linear;
-	transition: all 0.2s linear;	
-	background-position:50% -20%; 
+
 }
 
 .arrow-next:hover{
-	-webkit-transition: all 0.2s linear;
-	-moz-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
-	-ms-transition: all 0.2s linear;
-	transition: all 0.2s linear;	
-	background-position:50% 120%; 
+
 }
 
 
@@ -1746,6 +1738,23 @@ background:#d62728;
 }
 .cluster5{	
 background:#9467bd;
+}
+
+/*pager*/
+.pager li > a, .pager li > span{
+	border:none;
+	font-size: 0.8em;
+	text-transform: capitalize;
+	cursor: pointer;
+	color: #222222;
+	webkit-transition:; color 0.5s ease;
+	transition: color 0.5s ease;
+}
+
+.pager li > a:hover, .pager li > a:focus {
+	text-decoration: none;
+	background-color: #fff;
+	color: #78CCD3;
 }
 
 
