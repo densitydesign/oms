@@ -1181,17 +1181,17 @@ text-align: center;
 
 /* Google Images */
 #viz_googleimages text {
-  font: 10px sans-serif;
-  font-family: Montserrat;
+  font: 1em sans-serif;
+  font-family: 'Montserrat';
   text-transform: capitalize;
 }
 
 .sel {
-	fill:#83A493 !important;
+	fill:#42A8A8 !important;
 	-webkit-transition: fill .3s ease;
-        -moz-transition: fill .3s ease;
-        -o-transition: fill .3s ease;
-        transition: fill .3s ease;
+    -moz-transition: fill .3s ease;
+    -o-transition: fill .3s ease;
+    transition: fill .3s ease;
 }
 
 #viz_googleimages svg {
@@ -1300,8 +1300,8 @@ text-align: center;
 }
 
 #viz_googleimages text {
-  font: 10px sans-serif;
-  font-family: Montserrat;
+  font: 11px sans-serif;
+  font-family: 'Montserrat';
   text-transform: capitalize;
 }
 

@@ -1505,7 +1505,7 @@ angular.module('who.directives', [])
             .attr("width", listW)
           .attr("height", function(d) {return langScale(d.count) })
             .style("fill", function(d) {return "#dddddd";})
-            .style("stroke","#999999")
+            .style("stroke","#fff")
             .on("click", function(d){
               console.log(d)
               if(!d3.select(this).classed("sel")) {
@@ -1618,7 +1618,7 @@ angular.module('who.directives', [])
               .attr("width", listW)
             .attr("height", function(e) {return e.h })
               .style("fill", function(e) {return "#dddddd";})
-              .style("stroke","#999999")
+              .style("stroke","#fff")
               .on("click", function(d){
               	if(!d.sel) {
               		d.sel=true;
@@ -1666,10 +1666,10 @@ angular.module('who.directives', [])
               txtEnt
               .attr("class", "tag-txt")
               .attr("font-family", "serif")
-	            .attr("font-size", "1em")
+	            .attr("font-size", "1.1em")
 	            .attr("x",  width*.12+listW)
 	            .attr("y", function(e){return e.y})
-	            .attr("dx", "0.4em")
+	            .attr("dx", "0")
 	            .attr("dy", "1.3em")
 	            .style("fill","#222222")
 	            .text(function(d){return d.key})
