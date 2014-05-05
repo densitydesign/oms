@@ -1408,409 +1408,460 @@ angular.module('who.directives', [])
           loaded = false;
 
 
-      var init = function(){
+          var init;
+          init = function () {
 
-        fileService.getFile('data/' + scope.section.id + '/CS_img.csv').then(
-          function(_data){
-            rows = dsv_egg.parse(_data,function(d) {
-                      return {
-                        keyword: d.keyword,
-                        image: d.image,
-                        lang: d.lang,
-                        rank: +d.rank,
-                        color: d.color
-                      };
-                    });
-            
-            data = d3.nest()
-              .key(function(d) {return d.lang; })
-                .key(function(d) {return d.keyword; })
-                .entries(rows);
-            
-            data.forEach(function(e,i){
-            	allLangs.push(e.key);
-            }) 
-            
-            var maxH=0
-                
-            data.forEach(function (d,i) {
-              d.count=0;
-              d.y=maxH
-              d['values'].forEach(function(e,j) {
-                maxH+=e['values'].length
-                d.count+=e['values'].length
-                
-              });
-            });
+              fileService.getFile('data/' + scope.section.id + '/CS_img.csv').then(
+                  function (_data) {
+                      rows = dsv_egg.parse(_data, function (d) {
+                          return {
+                              keyword: d.keyword,
+                              image: d.image,
+                              lang: d.lang,
+                              rank: +d.rank,
+                              color: d.color
+                          };
+                      });
 
-            var margin = {top: 40, right: 10, bottom: 10, left: 10},
-            width = $(vizContainer).width()*.45 - margin.left - margin.right,
-            height =  $(vizContainer).height() - margin.top - margin.bottom;
-             
-             var listW = width*0.45;
-             
-             var svg, langs, tags;
-             svg = d3.select(vizContainer).append("svg")
-            .attr("width", (width + margin.left + margin.right))
-            .attr("height", (height + margin.top + margin.bottom))
-            .attr("style", "float:left")
-            
-            d3.select(vizContainer).append("div")
-            .attr("class","slider")
+                      data = d3.nest()
+                          .key(function (d) {
+                              return d.lang;
+                          })
+                          .key(function (d) {
+                              return d.keyword;
+                          })
+                          .entries(rows);
 
-            sliderContainer = element.find(".slider")[0]
-            
-            $(sliderContainer).slider({'min':40,'max':100, 'value':50})
-            .on('slide', function(ev){
-              changeSize(ev.value)
-            });
-            
-            d3.select(vizContainer).append("div")
-            .attr("class","rad")
-            .attr("style","float:left; clear:right")
+                      data.forEach(function (e, i) {
+                          allLangs.push(e.key);
+                      })
 
-            radContainer = element.find(".rad")[0]
-            
-            $(radContainer).append('<div class="btn-group show-lvl"><button id="language" type="button" class="btn btn-default btn-sm elstc">Images</button><button id="forum" type="button" class="btn btn-default btn-sm elstc">Colors</button></div>')
-            
-            
-            d3.select(vizContainer).append("div")
-            .attr("class","imgs")
-            
-            imgsContainer = element.find(".imgs")[0]
+                      var maxH = 0
 
-            var offset = $(imgsContainer).position().top
-            $(imgsContainer).height(height);
-            
-            paginate=$(imgsContainer).width()*$(imgsContainer).height()/(siz*siz);
-            console.log("paginate",paginate)
-            
-            
-            //var t = d3.select("svg").append("g").attr("class","tag-group")
-            var t = svg.append("g").attr("class","tag-group")
-            
-             function viz_googleimages() {
-            
-            //scale function  
-          langScale = d3.scale.linear().domain([0, maxH]);
-          langScale.range([0, height]) 
+                      data.forEach(function (d, i) {
+                          d.count = 0;
+                          d.y = maxH
+                          d['values'].forEach(function (e, j) {
+                              maxH += e['values'].length
+                              d.count += e['values'].length
 
-          //draw lang rects
-            langs = svg.selectAll(".lang").data(data)
-            .enter()
-            .append("rect")
-                .attr("class",function(d){return "lang "+ d.key.replace(/\s/g, '_');})
-          .attr("x",  20)
-          .attr("y", function(d){return langScale(d.y)+2})
-            .attr("width", listW)
-          .attr("height", function(d) {return langScale(d.count) })
-            .style("fill", function(d) {return "#dddddd";})
-            .style("stroke","#fff")
-            .on("click", function(d){
-              console.log(d)
-              if(!d3.select(this).classed("sel")) {
-              		d.sel=true;
-	                d3.select(this).classed("sel",true);
+                          });
+                      });
 
-	                var index = scope.langsArr.indexOf(d.key);
-              		if (index == -1) {
-					    scope.langsArr.push(d.key);
-					}
-	                //ealstify list
-              		elastify();
-              		scope.loadImages();
-              	}
-              	else {
-              		d.sel=false;
-              		d3.select(this).classed("sel",false)
-              		var index = scope.langsArr.indexOf(d.key);
-              		if (index > -1) {
-					    scope.langsArr.splice(index, 1);
-					}
-					if(!scope.langsArr.length) {
-					/*	tagsArr=[];
-						$(".tag.sel").removeClass("sel")
-						loadWhole(); */
+                      var margin = {top: 40, right: 10, bottom: 10, left: 10},
+                          width = $(vizContainer).width() * .45 - margin.left - margin.right,
+                          height = $(vizContainer).height() - margin.top - margin.bottom;
 
-					}
-				//	else{
-						elastify();
-						scope.loadImages();
-				//	}
-              	}
-              
-              });
-            
-            //labels for languages 
-            svg.selectAll(".lang-txt")
-            .data(data)
-            .enter()
-            .append("text")
-            .attr("class", "lang-txt")
-            .attr("font-family", "serif")
-          .attr("font-size", "1em")
-          .attr("x",  20)
-          .attr("y", function(d){return langScale(d.y)+2})
-          .attr("dx", "0.4em")
-          .attr("dy", "1.3em")
-          .style("fill","#222222")
-          .text(function(d){return d.key})
-              
-              loadWhole();
-              
-            }
+                      var listW = width * 0.45;
 
-			
-			function loadWhole() {
-				
-				scope.langsArr=allLangs;
-                elastify();
-                scope.loadImages();
-                scope.langsArr = [];
-                
-			}
-			
-             function elastify() {
-                 var dt;
-                if(!scope.langsArr.length)  dt = rows.filter(function(e){return allLangs.indexOf(e.lang)>=0})
-            	else  dt = rows.filter(function(e){return scope.langsArr.indexOf(e.lang)>=0})
-            	var d = d3.nest()
-                .key(function(f) {return f.keyword; })
-                .entries(dt);
-            
-              //compute height
-              var tagH=0
-            
-            //t.attr("transform","rotate(30)")
-            
-              d.sort(function(a,b) {
-                return b['values'].length-a['values'].length
-                })
-              
-              d.forEach(function(e,i){
+                      var svg, langs, tags;
+                      svg = d3.select(vizContainer).append("svg")
+                          .attr("width", (width + margin.left + margin.right))
+                          .attr("height", (height + margin.top + margin.bottom))
+                          .attr("style", "float:left")
 
-                tagH+=e['values'].length  
-              })
-              
-              //rescale the scale 
-              
-              tagScale = d3.scale.linear().range([height/37, height/1.75]); 
-              tagScale.domain([0, tagH]).clamp(true)
-              var vals=0
-              d.forEach(function(e,i){
-                
-                e.y=vals;
-                e.h=tagScale(e['values'].length)
-                vals+=e.h 
-              })
+                      d3.select(vizContainer).append("div")
+                          .attr("class", "slider")
 
-              //draw section
-              
-              tags= t.selectAll(".tag").data(d,function(e){return e.key})
-              
-              var enter = tags.enter()
-              .append("rect")
-              
-              //enter new elements
-              enter.attr("class",function(d){return "tag "+d.key.replace(/\s/g, '_');})
-              .attr("x",  width*.1+listW)
-            .attr("y", function(e){return e.y})
-              .attr("width", listW)
-            .attr("height", function(e) {return e.h })
-              .style("fill", function(e) {return "#dddddd";})
-              .style("stroke","#fff")
-              .on("click", function(d){
-              	if(!d.sel) {
-              		d.sel=true;
-              		var index = scope.tagsArr.indexOf(d.key);
-              		if (index == -1) {
-					    scope.tagsArr.push(d.key);
-					}
-	                d3.select(this).classed("sel",true)
-	                scope.loadImages();
-              	}
-              	else {
-              		d.sel=false;
-              		d3.select(this).classed("sel",false)
-              		var index = scope.tagsArr.indexOf(d.key);
-              		console.log(index)
-              		if (index > -1) {
-					    scope.tagsArr.splice(index, 1);
-					}
-					scope.loadImages();
-              	}
-              	
-              });
-              
-              //transition on existing
-              tags.transition().duration(500)
-              .attr("y", function(e){return e.y})
-            .attr("height", function(e) {return e.h })
-            .each("end",function() {
-              
-              var rawH=t[0][0].getBBox().height;
-              
-              t.transition().duration(100).attr("transform","scale(1,"+height/rawH+")")
-            })
-              
-              //remove old elements
-              tags.exit().remove();
-              
-              //Text
-              var txt = t.selectAll(".tag-txt")
-              .data(d,function(e){return e.key})
-              
-              var txtEnt=txt.enter()
-              .append("text")
-              
-              txtEnt
-              .attr("class", "tag-txt")
-              .attr("font-family", "serif")
-	            .attr("font-size", "1.1em")
-	            .attr("x",  width*.12+listW)
-	            .attr("y", function(e){return e.y})
-	            .attr("dx", "0")
-	            .attr("dy", "1.3em")
-	            .style("fill","#222222")
-	            .text(function(d){return d.key})
-	            
-	            txt.transition().duration(500)
-	            .attr("y", function(e){return e.y})
-	
-	            txt.exit().remove()
-             }
-             
-             
-             
-             
-            scope.loadImages = function() {
-				
-           		$(imgsContainer).empty();
-           		$(imgsContainer).scrollTop(0);
-           		scrollEnd=false;
-           		load=0;
-           		var whole=false
-           		if(!scope.langsArr.length) {
-           			scope.langsArr=allLangs
-           			whole=true;
-           		}
-           		
-           		currArray=rows.filter(function(e){
-           			if(scope.tagsArr.length)
-              		return scope.langsArr.indexOf(e.lang)>=0 && scope.tagsArr.indexOf(e.keyword)>=0
-              		else return scope.langsArr.indexOf(e.lang)>=0
-              	})
-              	.sort(function(a,b){return a.rank - b.rank})
-              	
-              	if(whole) scope.langsArr=[];
-              	
-           		count=currArray.length;
-           		if(count<=paginate) load=count
-           		else load=paginate
-              	
-              currArray.slice(0,load-1).forEach(function(e,i) {
-              	setTimeout(function(){
-                $(imgsContainer).append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
-               },200);
-              })
-              if (!col) {
-                  $(".imgs img").hide();
-                }
-              
-              $(".imgs").on("scroll",function(e){
-              	
-              	if($(this).scrollTop()>=this.scrollHeight-800 && !scrollEnd) {
-              		
-              	if(count<=load+paginate) {
-              		scrollEnd=true;
-              		currArray.splice(load,count-1).forEach(function(e,i) {
-              			setTimeout(function(){
-                $(imgsContainer).append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
-              		},200);
-              		})
-              		if (!col) {
-                  $(".imgs img").hide();
-                }     
-              		
-              	}
-              	
-              	else{
-              		
-              		currArray.slice(load,load+paginate-1).forEach(function(e,i) {
-                $(imgsContainer).append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
-              		})
-              		if (!col) {
-	                  $(".imgs img").hide();
-	                }     
-              		load+=paginate;     		
-              	}
-              	}
-              })
-             }
-             
-             function changeSize(n) {
-               siz=n;
-               paginate=$(imgsContainer).width()*$(imgsContainer).height()/(siz*siz);
-               if($(".imgs").children.length<=paginate && currArray.length>=$(".imgs").children.length) {
-               		currArray.slice(load,load+paginate-1).forEach(function(e,i) {
-               		 $(imgsContainer).append("<div class='img-cont' style='width:"+siz+"px;height:"+siz+"px;background:"+e.color+"'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/"+e.lang+"/t_"+e.image+"'/></div>")
-              		})
-              		if (!col) {
-	                  $(".imgs img").hide();
-	                }     
-              		load+=paginate;
-               }
-               $(".img-cont").css("width",n+"px")
-               $(".img-cont").css("height",n+"px")
-             }
+                      sliderContainer = element.find(".slider")[0]
 
-             $(".elstc").on("click",function(e){
-              col=!col;
-              if(col) $(".imgs img").fadeIn(300)
-              else $(".imgs img").fadeOut(300)
-             })
-             
-             d3.select(window).on("resize", function() {
-            //   width=$("#viz_googleimages").width()*0.45
-            //   listW = width*0.45;
-            // d3.select("svg").attr("width", width);
-            // d3.select("svg").attr("height", $("#viz_googleimages").height());
-            // d3.selectAll("rect").attr("width", listW)
-            // d3.selectAll(".tag") .attr("x",  width*.1+listW)
-            // d3.selectAll(".tag-txt").attr("x",  width*.1+listW)
-          });
+                      $(sliderContainer).slider({'min': 40, 'max': 100, 'value': 50})
+                          .on('slide', function (ev) {
+                              changeSize(ev.value)
+                          });
 
-            viz_googleimages();
-            
-            $(".rem-langs").on("click",function(){
-            	d3.selectAll(".lang.sel").classed("sel",false)
-				if(!scope.tagsArr.length) loadWhole()
-				else {
-					scope.langsArr=[];
-					elastify();
-					scope.loadImages();
-				}
-            })
-            
-            $(".rem-tags").on("click",function(){
-				d3.selectAll(".tag.sel").classed("sel",false)
-				scope.tagsArr=[]
-				if(!scope.langsArr.length) loadWhole()
-				else {
-					elastify();
-					scope.loadImages();
-				}
-            })
-            
+                      d3.select(vizContainer).append("div")
+                          .attr("class", "rad")
+                          .attr("style", "float:left; clear:right")
 
-            //end elastic mess
-            loaded = true
-          },
-          function(error){
+                      radContainer = element.find(".rad")[0]
 
-          }
-          );
-      }
+                      $(radContainer).append('<div class="btn-group show-lvl"><button id="language" type="button" class="btn btn-default btn-sm elstc-img active">Images</button><button id="forum" type="button" class="btn btn-default btn-sm elstc-clr">Colors</button></div>')
+
+
+                      d3.select(vizContainer).append("div")
+                          .attr("class", "imgs")
+
+                      imgsContainer = element.find(".imgs")[0]
+
+                      var offset = $(imgsContainer).position().top
+                      $(imgsContainer).height(height);
+
+                      paginate = $(imgsContainer).width() * $(imgsContainer).height() / (siz * siz);
+                      console.log("paginate", paginate)
+
+
+                      //var t = d3.select("svg").append("g").attr("class","tag-group")
+                      var t = svg.append("g").attr("class", "tag-group")
+
+                      function viz_googleimages() {
+
+                          //scale function
+                          langScale = d3.scale.linear().domain([0, maxH]);
+                          langScale.range([0, height])
+
+                          //draw lang rects
+                          langs = svg.selectAll(".lang").data(data)
+                              .enter()
+                              .append("rect")
+                              .attr("class", function (d) {
+                                  return "lang " + d.key.replace(/\s/g, '_');
+                              })
+                              .attr("x", 20)
+                              .attr("y", function (d) {
+                                  return langScale(d.y) + 2
+                              })
+                              .attr("width", listW)
+                              .attr("height", function (d) {
+                                  return langScale(d.count)
+                              })
+                              .style("fill", function (d) {
+                                  return "#dddddd";
+                              })
+                              .style("stroke", "#fff")
+                              .on("click", function (d) {
+                                  console.log(d)
+                                  if (!d3.select(this).classed("sel")) {
+                                      d.sel = true;
+                                      d3.select(this).classed("sel", true);
+
+                                      var index = scope.langsArr.indexOf(d.key);
+                                      if (index == -1) {
+                                          scope.langsArr.push(d.key);
+                                      }
+                                      //ealstify list
+                                      elastify();
+                                      scope.loadImages();
+                                  }
+                                  else {
+                                      d.sel = false;
+                                      d3.select(this).classed("sel", false)
+                                      var index = scope.langsArr.indexOf(d.key);
+                                      if (index > -1) {
+                                          scope.langsArr.splice(index, 1);
+                                      }
+                                      if (!scope.langsArr.length) {
+                                          /*	tagsArr=[];
+                                           $(".tag.sel").removeClass("sel")
+                                           loadWhole(); */
+
+                                      }
+                                      //	else{
+                                      elastify();
+                                      scope.loadImages();
+                                      //	}
+                                  }
+
+                              });
+
+                          //labels for languages
+                          svg.selectAll(".lang-txt")
+                              .data(data)
+                              .enter()
+                              .append("text")
+                              .attr("class", "lang-txt")
+                              .attr("font-family", "serif")
+                              .attr("font-size", "1em")
+                              .attr("x", 20)
+                              .attr("y", function (d) {
+                                  return langScale(d.y) + 2
+                              })
+                              .attr("dx", "0.4em")
+                              .attr("dy", "1.3em")
+                              .style("fill", "#222222")
+                              .text(function (d) {
+                                  return d.key
+                              })
+
+                          loadWhole();
+
+                      }
+
+
+                      function loadWhole() {
+
+                          scope.langsArr = allLangs;
+                          elastify();
+                          scope.loadImages();
+                          scope.langsArr = [];
+
+                      }
+
+                      function elastify() {
+                          var dt;
+                          if (!scope.langsArr.length)  dt = rows.filter(function (e) {
+                              return allLangs.indexOf(e.lang) >= 0
+                          })
+                          else  dt = rows.filter(function (e) {
+                              return scope.langsArr.indexOf(e.lang) >= 0
+                          })
+                          var d = d3.nest()
+                              .key(function (f) {
+                                  return f.keyword;
+                              })
+                              .entries(dt);
+
+                          //compute height
+                          var tagH = 0
+
+                          //t.attr("transform","rotate(30)")
+
+                          d.sort(function (a, b) {
+                              return b['values'].length - a['values'].length
+                          })
+
+                          d.forEach(function (e, i) {
+
+                              tagH += e['values'].length
+                          })
+
+                          //rescale the scale
+
+                          tagScale = d3.scale.linear().range([height / 37, height / 1.75]);
+                          tagScale.domain([0, tagH]).clamp(true)
+                          var vals = 0
+                          d.forEach(function (e, i) {
+
+                              e.y = vals;
+                              e.h = tagScale(e['values'].length)
+                              vals += e.h
+                          })
+
+                          //draw section
+
+                          tags = t.selectAll(".tag").data(d, function (e) {
+                              return e.key
+                          })
+
+                          var enter = tags.enter()
+                              .append("rect")
+
+                          //enter new elements
+                          enter.attr("class", function (d) {
+                              return "tag " + d.key.replace(/\s/g, '_');
+                          })
+                              .attr("x", width * .1 + listW)
+                              .attr("y", function (e) {
+                                  return e.y
+                              })
+                              .attr("width", listW)
+                              .attr("height", function (e) {
+                                  return e.h
+                              })
+                              .style("fill", function (e) {
+                                  return "#dddddd";
+                              })
+                              .style("stroke", "#fff")
+                              .on("click", function (d) {
+                                  if (!d.sel) {
+                                      d.sel = true;
+                                      var index = scope.tagsArr.indexOf(d.key);
+                                      if (index == -1) {
+                                          scope.tagsArr.push(d.key);
+                                      }
+                                      d3.select(this).classed("sel", true)
+                                      scope.loadImages();
+                                  }
+                                  else {
+                                      d.sel = false;
+                                      d3.select(this).classed("sel", false)
+                                      var index = scope.tagsArr.indexOf(d.key);
+                                      console.log(index)
+                                      if (index > -1) {
+                                          scope.tagsArr.splice(index, 1);
+                                      }
+                                      scope.loadImages();
+                                  }
+
+                              });
+
+                          //transition on existing
+                          tags.transition().duration(500)
+                              .attr("y", function (e) {
+                                  return e.y
+                              })
+                              .attr("height", function (e) {
+                                  return e.h
+                              })
+                              .each("end", function () {
+
+                                  var rawH = t[0][0].getBBox().height;
+
+                                  t.transition().duration(100).attr("transform", "scale(1," + height / rawH + ")")
+                              })
+
+                          //remove old elements
+                          tags.exit().remove();
+
+                          //Text
+                          var txt = t.selectAll(".tag-txt")
+                              .data(d, function (e) {
+                                  return e.key
+                              })
+
+                          var txtEnt = txt.enter()
+                              .append("text")
+
+                          txtEnt
+                              .attr("class", "tag-txt")
+                              .attr("font-family", "serif")
+                              .attr("font-size", "1.1em")
+                              .attr("x", width * .12 + listW)
+                              .attr("y", function (e) {
+                                  return e.y
+                              })
+                              .attr("dx", "0")
+                              .attr("dy", "1.3em")
+                              .style("fill", "#222222")
+                              .text(function (d) {
+                                  return d.key
+                              })
+
+                          txt.transition().duration(500)
+                              .attr("y", function (e) {
+                                  return e.y
+                              })
+
+                          txt.exit().remove()
+                      }
+
+
+                      scope.loadImages = function () {
+
+                          $(imgsContainer).empty();
+                          $(imgsContainer).scrollTop(0);
+                          scrollEnd = false;
+                          load = 0;
+                          var whole = false
+                          if (!scope.langsArr.length) {
+                              scope.langsArr = allLangs
+                              whole = true;
+                          }
+
+                          currArray = rows.filter(function (e) {
+                              if (scope.tagsArr.length)
+                                  return scope.langsArr.indexOf(e.lang) >= 0 && scope.tagsArr.indexOf(e.keyword) >= 0
+                              else return scope.langsArr.indexOf(e.lang) >= 0
+                          })
+                              .sort(function (a, b) {
+                                  return a.rank - b.rank
+                              })
+
+                          if (whole) scope.langsArr = [];
+
+                          count = currArray.length;
+                          if (count <= paginate) load = count
+                          else load = paginate
+
+                          currArray.slice(0, load - 1).forEach(function (e, i) {
+                              setTimeout(function () {
+                                  $(imgsContainer).append("<div class='img-cont' style='width:" + siz + "px;height:" + siz + "px;background:" + e.color + "'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/" + e.lang + "/t_" + e.image + "'/></div>")
+                              }, 200);
+                          })
+                          if (!col) {
+                              $(".imgs img").hide();
+                          }
+
+                          $(".imgs").on("scroll", function (e) {
+
+                              if ($(this).scrollTop() >= this.scrollHeight - 800 && !scrollEnd) {
+
+                                  if (count <= load + paginate) {
+                                      scrollEnd = true;
+                                      currArray.splice(load, count - 1).forEach(function (e, i) {
+                                          setTimeout(function () {
+                                              $(imgsContainer).append("<div class='img-cont' style='width:" + siz + "px;height:" + siz + "px;background:" + e.color + "'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/" + e.lang + "/t_" + e.image + "'/></div>")
+                                          }, 200);
+                                      })
+                                      if (!col) {
+                                          $(".imgs img").hide();
+                                      }
+
+                                  }
+
+                                  else {
+
+                                      currArray.slice(load, load + paginate - 1).forEach(function (e, i) {
+                                          $(imgsContainer).append("<div class='img-cont' style='width:" + siz + "px;height:" + siz + "px;background:" + e.color + "'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/" + e.lang + "/t_" + e.image + "'/></div>")
+                                      })
+                                      if (!col) {
+                                          $(".imgs img").hide();
+                                      }
+                                      load += paginate;
+                                  }
+                              }
+                          })
+                      }
+
+                      function changeSize(n) {
+                          siz = n;
+                          paginate = $(imgsContainer).width() * $(imgsContainer).height() / (siz * siz);
+                          if ($(".imgs").children.length <= paginate && currArray.length >= $(".imgs").children.length) {
+                              currArray.slice(load, load + paginate - 1).forEach(function (e, i) {
+                                  $(imgsContainer).append("<div class='img-cont' style='width:" + siz + "px;height:" + siz + "px;background:" + e.color + "'><img class='smallImg' src='data/cs_images_elastic/img/cs_thumb/" + e.lang + "/t_" + e.image + "'/></div>")
+                              })
+                              if (!col) {
+                                  $(".imgs img").hide();
+                              }
+                              load += paginate;
+                          }
+                          $(".img-cont").css("width", n + "px")
+                          $(".img-cont").css("height", n + "px")
+                      }
+
+                      $(".elstc-img").on("click", function (e) {
+                          $(".imgs img").fadeIn(300);
+                          d3.select(".elstc-clr.active").classed("active", false);
+                          d3.select(this).classed("active", true)
+                      });
+
+                      $(".elstc-clr").on("click", function (e) {
+                          $(".imgs img").fadeOut(300)
+                          d3.select(".elstc-img.active").classed("active", false);
+                          d3.select(this).classed("active", true)
+                      });
+
+                      d3.select(window).on("resize", function () {
+                          //   width=$("#viz_googleimages").width()*0.45
+                          //   listW = width*0.45;
+                          // d3.select("svg").attr("width", width);
+                          // d3.select("svg").attr("height", $("#viz_googleimages").height());
+                          // d3.selectAll("rect").attr("width", listW)
+                          // d3.selectAll(".tag") .attr("x",  width*.1+listW)
+                          // d3.selectAll(".tag-txt").attr("x",  width*.1+listW)
+                      });
+
+                      viz_googleimages();
+
+                      $(".rem-langs").on("click", function () {
+                          d3.selectAll(".lang.sel").classed("sel", false)
+                          if (!scope.tagsArr.length) loadWhole()
+                          else {
+                              scope.langsArr = [];
+                              elastify();
+                              scope.loadImages();
+                          }
+                      })
+
+                      $(".rem-tags").on("click", function () {
+                          d3.selectAll(".tag.sel").classed("sel", false)
+                          scope.tagsArr = []
+                          if (!scope.langsArr.length) loadWhole()
+                          else {
+                              elastify();
+                              scope.loadImages();
+                          }
+                      })
+
+
+                      //end elastic mess
+                      loaded = true
+                  },
+                  function (error) {
+
+                  }
+              );
+          };
 
       if (scope.$parent.$last === true) {
         scope.$emit('docReady');
