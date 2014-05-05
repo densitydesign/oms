@@ -1197,7 +1197,7 @@ angular.module('who.directives', [])
                 loaded = true;                       
               },
               function(error){
-                txt = error
+               var  txt = error
                   queryContainer.html(txt)
               }
             );
@@ -1339,7 +1339,7 @@ angular.module('who.directives', [])
                 loaded = true;                       
               },
               function(error){
-                txt = error
+                var txt = error
               }
             );
           }
@@ -1498,8 +1498,8 @@ angular.module('who.directives', [])
               console.log(d)
               if(!d3.select(this).classed("sel")) {
               		d.sel=true;
-              		
-	                d3.select(this).classed("sel",true)
+	                d3.select(this).classed("sel",true);
+
 	                var index = langsArr.indexOf(d.key);
               		if (index == -1) {
 					    langsArr.push(d.key);
@@ -1516,14 +1516,15 @@ angular.module('who.directives', [])
 					    langsArr.splice(index, 1);
 					}
 					if(!langsArr.length) {
-						tagsArr=[];
+					/*	tagsArr=[];
 						$(".tag.sel").removeClass("sel")
-						loadWhole();
+						loadWhole(); */
+
 					}
-					else{ 
+				//	else{
 						elastify();
 						loadImages();
-					}
+				//	}
               	}
               
               });
@@ -1558,8 +1559,9 @@ angular.module('who.directives', [])
 			}
 			
              function elastify() {
-            
-            	var dt = rows.filter(function(e){return langsArr.indexOf(e.lang)>=0})
+                 var dt;
+                if(!langsArr.length)  dt = rows.filter(function(e){return allLangs.indexOf(e.lang)>=0})
+            	else  dt = rows.filter(function(e){return langsArr.indexOf(e.lang)>=0})
             	var d = d3.nest()
                 .key(function(f) {return f.keyword; })
                 .entries(dt);
@@ -1772,10 +1774,9 @@ angular.module('who.directives', [])
             	d3.selectAll(".lang.sel").classed("sel",false)
 				if(!tagsArr.length) loadWhole()
 				else {
-					langsArr=allLangs;
+					langsArr=[];
 					elastify();
 					loadImages();
-					langsArr=[];
 				}
             })
             
