@@ -1471,7 +1471,7 @@ angular.module('who.directives', [])
 
             radContainer = element.find(".rad")[0]
             
-            $(radContainer).append('<div class="btn-group show-lvl"><button id="language" type="button" class="btn btn-sm elstc">Images</button><button id="forum" type="button" class="btn btn-sm elstc">Colors</button></div>')
+            $(radContainer).append('<div class="btn-group show-lvl"><button id="language" type="button" class="btn btn-default btn-sm elstc">Images</button><button id="forum" type="button" class="btn btn-default btn-sm elstc">Colors</button></div>')
             
             
             d3.select(vizContainer).append("div")
