@@ -306,7 +306,9 @@
                             node.target_color = "#273B4F";
  
                           }else{
-                            node.target_color = "#C6C6C6";
+                            
+                            //node.target_color = "#C6C6C6"; 
+                            node.target_color = "#42A8A8";
 
                              
                       }
@@ -328,7 +330,8 @@
                             if(node.attributes["Type"] == "query"){
                               node.target_color = "#273B4F";   
                             }else{
-                              node.target_color = "#C6C6C6";
+                              //node.target_color = "#C6C6C6"; 
+                              node.target_color = "#42A8A8";
                             }
                         }
                       }
@@ -858,7 +861,8 @@ var networkconfig = {
               else {
                 node.labelCenter=true
                 node.size = 0;
-                node.color = "#C6C6C6"; 
+                //node.color = "#C6C6C6"; 
+                node.color = "#42A8A8";
                 angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
                 node.x = _options.middleRadius * Math.cos(angle);
                 node.y = _options.middleRadius * Math.sin(angle);
@@ -1105,7 +1109,8 @@ var networkconfig = {
               }
               else {
                 node.target_size = 2;
-                node.target_color = "#C6C6C6"; 
+                //node.target_color = "#C6C6C6"; 
+                node.target_color = "#42A8A8";
                 angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
                 node.target_x = _options.middleRadius * Math.cos(angle);
                 node.target_y = _options.middleRadius * Math.sin(angle);
@@ -1208,7 +1213,8 @@ var networkconfig = {
               }
               else {
                 node.target_size = +node.attributes["Size"];
-                node.target_color = "#C6C6C6"; 
+                //node.target_color = "#C6C6C6"; 
+                node.target_color = "#42A8A8";
                 angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
                 node.target_x = _options.middleRadius * Math.cos(angle);
                 node.target_y = _options.middleRadius * Math.sin(angle);
@@ -1316,7 +1322,8 @@ var networkconfig = {
               }
               else {
                 node.target_size = +node.attributes["Size"];
-                node.target_color = "#C6C6C6"; 
+                //node.target_color = "#C6C6C6"; 
+                node.target_color = "#42A8A8";
                 angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
                 node.target_x = node.file_x;
                 node.target_y = node.file_y;
@@ -1358,7 +1365,9 @@ var networkconfig = {
                          if (node.attributes["Type"] == "query"){
                           node.target_color = "#273B4F"; 
                         }else{
-                          node.target_color = "#C6C6C6";
+                          
+                          //node.target_color = "#C6C6C6"; 
+                          node.target_color = "#42A8A8";
                         }
                       });
                    _s.graph.edges().forEach(function(edge, i, a) {
@@ -1401,7 +1410,9 @@ var networkconfig = {
                            if (node.attributes["Type"] == "query"){
                               node.target_color = "#273B4F"; 
                             }else{
-                              node.target_color = "#C6C6C6";
+                              
+                              //node.target_color = "#C6C6C6"; 
+                node.target_color = "#42A8A8";
                             }
                             node.label = node.file_label;
                           }
@@ -1571,7 +1582,7 @@ var networkconfig = {
               if (i < l) {
                 node.target_size = 3;
                 //node.target_color = node.file_color; // TODO: Apply good color
-                node.target_color = "#273B4F";
+                node.target_color = "#42A8A8";
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
                 node.target_x = _options.innerRadius * Math.cos(angle);
                 node.target_y = _options.innerRadius * Math.sin(angle);
@@ -1693,7 +1704,7 @@ var networkconfig = {
               if (i < l) {
 
                 //if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
-                node.target_color = "#273B4F"; // TODO: Apply good color
+                node.target_color = "#42A8A8"; // TODO: Apply good color
                 angle = Math.PI * 2 * i / l - Math.PI / 2;
                 node.target_x = _options.innerRadius * Math.cos(angle);
                 node.target_y = _options.innerRadius * Math.sin(angle);
@@ -1752,7 +1763,7 @@ var networkconfig = {
               if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
 
               if (i < l)
-                node.target_color = "#273B4F"; // TODO: Apply good color
+                node.target_color = "#42A8A8"; // TODO: Apply good color
               else
                 node.target_color = "#C6C6C6"; // TODO: Apply good color
 
@@ -2103,7 +2114,8 @@ var networkconfig = {
                             node.label = node.file_label;
                           }
                           else if (idsN.indexOf(node.id) > -1){
-                            node.target_color = "#C6C6C6"
+                            node.target_color = "#C6C6C6"; // TODO: Apply good color
+                            //node.target_color = "#42A8A8"; // TODO: Apply good color
                             node.selected = false
                             node.label = node.file_label;
                           }

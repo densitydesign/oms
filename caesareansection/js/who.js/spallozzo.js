@@ -106,9 +106,11 @@
 		    var stepTitles = titleGroup.selectAll('text').data(xDomain, function(d){return d})
 
 		    stepTitles
+				//.attr('opacity', 0)
 				.text(function(d){return d})
 				.transition()
 				.duration(transitionDuration)
+				//.attr('opacity', 1)
 				//.attr('x', function(d){return x(d) + (x.rangeBand()/2)})
 
 		    stepTitles
@@ -116,7 +118,7 @@
 			    .append("text")
 			    .attr('x', function(d){return x(d) + (x.rangeBand()/2)})
 			    .attr('y', 30)
-			    .attr('opacity', 1)
+			    .attr('opacity', 0)
 			    .attr('font-family','Montserrat')
 			    .attr('font-size',13)
 			    .attr('font-weight',700)
@@ -126,6 +128,9 @@
 			    .on("click",function(d, i){
 			    	dispatch.sorted(i-1)
 			    	})
+			    .transition()
+				.duration(transitionDuration)
+			    .attr('opacity', 1)
 				.filter(function(d){return d == "ENTITIES"})
 					.attr('text-anchor','end')
 					.attr('x', function(d){return x(d) + (x.rangeBand())})
