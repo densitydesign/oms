@@ -1481,6 +1481,10 @@ angular.module('who.directives', [])
 
                       d3.select(vizContainer).append("div")
                           .attr("class", "imgs")
+                          .attr("id","google-imgs-grid");
+
+
+
 
                       imgsContainer = element.find(".imgs")[0]
 
@@ -1832,6 +1836,13 @@ angular.module('who.directives', [])
                       });
 
                       viz_googleimages();
+
+                      $("#google-imgs-grid").slimScroll({
+                          height: "96%",
+                          width:"40%",
+                          size: '5px',
+                          alwaysVisible: false
+                      });
 
                       $(".rem-langs").on("click", function () {
                           d3.selectAll(".lang.sel").classed("sel", false)
