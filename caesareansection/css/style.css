@@ -441,12 +441,12 @@ ul li {
 		margin-left: -55px;
 	}
 
-};
+}
 
 #main-nav>.navbar-toggle {
 	border-color: white;
 	border-radius: 0px;
-};
+}
 
 #main-index>.who-title{
 	height: 55px;
@@ -1210,8 +1210,11 @@ text-align: center;
 }
 .googleimages .imgs{
 	float:left;
-	width:40%;
+	width:100%;
 	overflow:auto;
+}
+#google-imgs-grid {
+    width: 100% !important;
 }
 
 .list-labels .glyphicon {
@@ -1271,7 +1274,7 @@ text-align: center;
 
 .googleimages .cmd-labels h3{
 	display:inline-block;
-	margin-right:1	%;
+	margin-right:1%;
 	width:45%;
 	
 }
@@ -1747,7 +1750,7 @@ background:#9467bd;
 	text-transform: capitalize;
 	cursor: pointer;
 	color: #222222;
-	webkit-transition:; color 0.5s ease;
+	webkit-transition: color 0.5s ease;
 	transition: color 0.5s ease;
 }
 
