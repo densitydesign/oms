@@ -717,7 +717,7 @@ angular.module('who.directives', [])
               function drawTt(d) {
                 var myx=0;
                 var myy=0;
-             	console.log(d);
+             	//console.log(d);
                 resetColor();
                 
                 d3.selectAll("rect").filter(function(e){ if (d.key) return e.key==d.key; else return e.title == d.title && d.nb_replies == e.nb_replies})
@@ -1520,7 +1520,7 @@ angular.module('who.directives', [])
                               })
                               .style("stroke", "#fff")
                               .on("click", function (d) {
-                                  console.log(d)
+                                 // console.log(d)
                                   if (!d3.select(this).classed("sel")) {
                                       d.sel = true;
                                       d3.select(this).classed("sel", true);
@@ -1666,7 +1666,7 @@ angular.module('who.directives', [])
                                       d.sel = false;
                                       d3.select(this).classed("sel", false)
                                       var index = scope.tagsArr.indexOf(d.key);
-                                      console.log(index)
+                                     // console.log(index)
                                       if (index > -1) {
                                           scope.tagsArr.splice(index, 1);
                                       }
@@ -1878,21 +1878,22 @@ angular.module('who.directives', [])
 
       scope.$watchCollection('[ctrlmodels.imgslangs,ctrlmodels.imgstags]', function(newValues, oldValues){
 
-              console.log(newValues);
-              scope.langsArr=newValues[0];
-              scope.tagsArr=newValues[1];
+              if(newValues!==oldValues) {
+                  scope.langsArr = newValues[0];
+                  scope.tagsArr = newValues[1];
 
-               d3.selectAll(".sel").classed("sel",false);
+                  d3.selectAll(".sel").classed("sel", false);
 
-              scope.langsArr.forEach(function(e,i){
-                  d3.selectAll("."+e).classed("sel",true);
-              })
+                  scope.langsArr.forEach(function (e, i) {
+                      d3.selectAll("." + e).classed("sel", true);
+                  })
 
-              scope.tagsArr.forEach(function(e,i){
-                  d3.selectAll("."+e.replace(/\s/g, '_')).classed("sel",true);
-              })
+                  scope.tagsArr.forEach(function (e, i) {
+                      d3.selectAll("." + e.replace(/\s/g, '_')).classed("sel", true);
+                  })
 
-              scope.loadImages();
+                  scope.loadImages();
+              }
 
       })
 
