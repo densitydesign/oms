@@ -1377,11 +1377,7 @@ angular.module('who.directives', [])
             $scope.langsArr=[];
             $scope.tagsArr=[];
             $scope.loadImages;
-            $scope.setSelection=function(langs,tags) {
-              $scope.langsArr=langs;
-              $scope.tagsArr=tags;
-              $scope.loadImages();
-          }
+            $scope.first = true;
 
 
         },
@@ -1889,7 +1885,7 @@ angular.module('who.directives', [])
 
       scope.$watchCollection('[ctrlmodels.imgslangs,ctrlmodels.imgstags]', function(newValues, oldValues){
 
-              if(newValues!==oldValues) {
+              if(newValues!==oldValues && !scope.first) {
                   scope.langsArr = newValues[0];
                   scope.tagsArr = newValues[1];
 
@@ -1905,6 +1901,7 @@ angular.module('who.directives', [])
 
                   scope.loadImages();
               }
+          else if(scope.first) scope.first=false;
 
       })
 
