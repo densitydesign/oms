@@ -493,45 +493,54 @@ angular.module('who.directives', [])
             }
           },
           {init: function(){
-            slope
+            slope 
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
-              .catStep(["scar", "wound", "post"])
+              .catStep(["risk","incision","surgery","labor","operation","problem","emergency","procedure","complication","medication","infection","health","pain","rupture uterine","cut","scar","recovery","anesthesia","anesthesia general","epidurals","increased risk","allergy","cesarean emergency","pitocin","healing","labour","pain relief","scar section","difficult labor long","incision initial","physical recovery","issue pain practical","expected physical recovery","adjustment common physical","epidural labor","problem unexpected","feel soreness","fibroid","ftm","full less safer successful ventouse","healthcare","horrible image","laceration scalp","malposition","manual rotation","complicated situation","pain really strong","bed imposed rest","really recovery tough","rotation","scalp","depression score","scar treatment"])
               .hidefilter(true)
 
             chart.call(slope)
             }
           },
           {init: function(){
-            slope
+            slope 
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
-              .catStep(["acog","care health provider","expert","lawyer","memorial hermann","midwife","minute","nurse","obstetrician","physician","researchers"])
+              .catStep(["hospital","doctor","researchers","obstetrician","nurse","midwife","partner","care health provider","university","physician","authors","court","parent","expert","association","american college","dad","memorial hermann","son","acog","husband","lawyer","epsteen lisa","daughter","actor","contributor","tutorial","body health nhs professional","knowledge little medical","bucher jordan","nccs","certified health","nice pathways","expert threatening","dvla","general hospital tampa","gynecology obstetric","ican seattle year","icanseattle watch","institute nhs","chairman","jerry yankowitz","livingston vida","babycenter","advocate","department florida south","alarmed doctor","blog ican seattle"])
               .hidefilter(true)
             
             chart.call(slope)
             }
           },
           {init: function(){
-            slope
+            slope 
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
-              .catStep(["percent","rate","rate section"])
+              .catStep(["time","percent","study","reason","case","information","rate","chance","use","number","decision","question","picture","benefit","medical reason","story","evidence","recommendation","option","guideline","sign","trial","rate section","result","experience","cesarean rate","effect","finding","choice","example","voice","factor","request","challenge","warrant","term","ideal","five second","possibility","period","concern","advice","fact","event","answer","guidance","service","clinical guideline nice","text","figure","estimated","information leaflet local patient","key recommendation","answer entire","development group guideline","inspiration","cesarean rate section surgery","awareness cesarean month","essay picture","asked often question","question scar section","following information","issue specific","discussion energetic","association causality","guidance related","clinical guideline update","dilemma","educational purpose","book groundbreaking","improvement innovation","insurance motor","opinion","reason valid","restriction"])
               .hidefilter(true)
 
             chart.call(slope)
             }
           },
           {init: function(){
-            slope
+            slope 
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
-              .catStep(["another baby","another child","vbac"])
+              .catStep(["baby","cesarean delivery","section","birth","delivery","birth vaginal","pregnancy","delivery vaginal","vbac","child","infant","birth cesarean","life","contraction","fetus","position","future pregnancy","method","elective","date due","treatment","extra procedure","spacing","another baby","another child","baby boy","child first","births caesarean","caesarean","caesarean elective","caesarean section","birth labor","birth section","full term","opening surgical","ban vbac","attempted hbac","cbac","delivery instrumental surgical","cesarean either section","attempted birth vaginal","advanced skill surgical","anaesthesia spinal","caeasarean real section","caesarean delivery safe","caesarean low rate section","caesarean surgery","analgesia less","hbac","baby next","cesarean operation","cesarean story","child next","pregnancy whole","delivery forceps","delivery instrumental","delivery normal","delivery section","spontaneous"])
               .hidefilter(true)
 
             chart.call(slope)
             }
           },
           {init: function(){
-            slope
+            slope 
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
-              .catStep(["allergy","complication","emergency","increased risk","infection","pain","problem","risk","rupture uterine"])
+              .catStep(["uterus","placenta","abdomen","cord umbilical","body","head","bladder","foot","birth canal","wound","abdomen lower","area belly lower","heart","tummy"])
+              .hidefilter(true)
+
+            chart.call(slope)
+            }
+          },
+          {init: function(){
+            slope 
+              .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
+              .catStep(["woman","mother","pregnant woman","primigravida","baby woman"])
               .hidefilter(true)
 
             chart.call(slope)
