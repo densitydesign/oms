@@ -204,7 +204,18 @@ angular.module('who.directives', [])
               if(data.attributes.M == "true"){cat.push("Medical")}
               if(data.attributes.C == "true"){cat.push("Controversies")}
 
-              selection.append("p").text(cat.join(", "))
+              selection.append("p").text(function(){
+                if(cat.length){
+                  return cat.join(", ")
+                }else{
+                  return "none"
+                }
+              })
+
+              if(data.attributes.OBS){
+                selection.append("h3").text("desc")
+                selection.append("p").text(data.attributes.OBS)
+              }
 
               selection.append("h3").text("links")
               
@@ -259,12 +270,14 @@ angular.module('who.directives', [])
 
               selection.append("p").text(data.file_label)
 
+              if(data.attributes.Size){
               selection.append("h3").text("type")
               selection.append("p").text("query")
 
               selection.append("h3").text("urls")
 
               selection.append("p").text(parseInt(data.attributes.Size))
+            }
 
             }
             
@@ -319,6 +332,7 @@ angular.module('who.directives', [])
           if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
                 network.zoomNodes('clusters',newValue)
             }
+
         })
 
         scope.$watch('ctrlmodels.'+ scope.section.id + '.size', function(newValue, oldValue){

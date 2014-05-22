@@ -1731,19 +1731,34 @@ text-align: center;
 /*Cluster Legend*/
 
 .cluster1{
-background:#F3893C;
+background:#C39258;
 }
 .cluster2{
-background:#42A8A8;
+background:#AF5BC8;
 }
 .cluster3{	
-background:#F0E066;
+background:#6DCC5F;
 }
 .cluster4{	
-background:#F06666;
+background:#513545;
 }
 .cluster5{	
-background:#3B5675;
+background:#95C6B7;
+}
+.cluster6{	
+background:#8488BD;
+}
+.cluster7{	
+background:#C55885;
+}
+.cluster8{	
+background:#4F6339;
+}
+.cluster9{	
+background:#BE4936;
+}
+.cluster10{	
+background:#C7CC4D;
 }
 
 /*pager*/
