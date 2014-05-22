@@ -806,28 +806,21 @@ padding-top: 10px;
 	background-color: #C6B239;
 }
 
+.case-conteiner{
+	padding-right: 0!important;
+}
 
 .case-studies {
 	height:600px;
+	display:table;
 }
 
 .case-studies-text {
 	width:600px;
-	margin:180px auto;
 	text-align: center;
+	margin:auto;
 	color: #fff;
-}
-
-.case-studies a{
-	color:#fff !important;
-	-webkit-transition: 0.5s ease;
-	transition: 0.5s ease;
-}
-
-.case-studies a:hover{
-	color:#CCC !important;
-	-webkit-transition: 0.5s ease;
-	transition: 0.5s ease;
+	display:table-row;
 }
 
 .case-studies-text  h1{
@@ -839,42 +832,60 @@ padding-top: 10px;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 4px;
+	display:table-cell;
+	vertical-align: middle;
 }
 
-.case-studies-text  h2{
+
+.case-studies-small{
+	height:300px;
+	display:table;
+}
+
+.case-studies-text-small{
+	width:400px;
+	margin:auto;
+	text-align: center;
+	color: #fff;
+	display:table-row;
+}
+
+.case-studies-text-small  h1{
 	color:#fff;
-	font-size:1.5em;
-	font-family: Georgia, sans-serif;
-	font-weight: 400;
-	letter-spacing: 1px;
-	font-style: italic;
-	line-height: 150%;
-	margin-top:35px;
-}
-
-.case-studies-text .explore{
+	font-size:2.5em;
+	margin:auto;
 	text-align:center;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
-	font-size:0.9em;
 	letter-spacing: 4px;
-	width:150px;
-	padding: 10px 0 10px;
-	border-top: 3px solid #fff;
-	border-bottom: 3px solid #fff;
-	margin: 40px auto;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
+	display:table-cell;
+	vertical-align: middle;
 }
 
- .case-studies-text .explore:hover{
+.case-studies-smaller{
+	height:300px;
+	display:table;
+}
+
+.case-studies-text-smaller {
+	width:90%;
+	text-align: center;
+	color: #fff;
+	display:table-row;
+}
+
+.case-studies-text-smaller  h1{
+	margin: 0;
 	color:#fff;
-	border-top: 3px solid #CCC;
-	border-bottom: 3px solid #CCC;
+	font-size:1.5em;
+	text-align:center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	display:table-cell;
+	vertical-align: middle;
 }
 
 #partners{
