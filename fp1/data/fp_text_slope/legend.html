@@ -1,0 +1,41 @@
+<div class="adv-step step0">
+
+  <h3>crawiling network graph</h3>
+  <h2>Visualizing the Clusters - 1</h2>
+  <hr>
+  <p>
+    Nevertheless, upon Stubb setting the anchor-watch after his supper was concluded; and when, accordingly, Queequeg and a forecastle seaman came on deck, no small excitement was created among the sharks; for immediately suspending the cutting stages over the side, and lowering three lanterns, so that they cast long gleams of light over the turbid sea, these two mariners, darting their long whaling-spades, kept up an incessant murdering.
+  </p>
+
+</div>
+
+<div class="adv-step step1">
+  <div class="legend-controls">
+    <h3>type of analysis</h3>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopetfidf" btn-radio="'dataTF'">TF</button>
+      <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopetfidf" btn-radio="'dataTFIDF'">TF/IDF</button>
+    </div>
+    <h3>type of analysis</h3>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopescale" btn-radio="true">normalized</button>
+      <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopescale" btn-radio="false">not normalized</button>
+    </div>
+    <h3>compare sub-category</h3>
+    <select class="form-control" ng-model="ctrlmodels.fp_text_slope.slopeCatSel['CONTROVERSIES']" ng-options="opt for opt in ctrlmodels.fp_text_slope.slopeCat['CONTROVERSIES']"></select>
+    <br>
+    <select class="form-control" ng-model="ctrlmodels.fp_text_slope.slopeCatSel['CONTROVERSIES. RISKS&BENEFITS']" ng-options="opt for opt in ctrlmodels.fp_text_slope.slopeCat['CONTROVERSIES. RISKS&BENEFITS']"></select>
+    <br>
+    <select class="form-control" ng-model="ctrlmodels.fp_text_slope.slopeCatSel['CONTROVERSIES. YOUTH']" ng-options="opt for opt in ctrlmodels.fp_text_slope.slopeCat['CONTROVERSIES. YOUTH']"></select>
+    <br>
+    <select class="form-control" ng-model="ctrlmodels.fp_text_slope.slopeCatSel['MEDICAL']" ng-options="opt for opt in ctrlmodels.fp_text_slope.slopeCat['MEDICAL']"></select>
+
+<!--     <div class="btn-group">
+      <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopeexpand" btn-radio="'all'">All</button>
+      <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopeexpand" btn-radio="'C'">C</button>
+      <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopeexpand" btn-radio="'CRB'">CRB</button>
+      <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopeexpand" btn-radio="'CY'">CY</button>
+      <button type="button" class="btn btn-default" ng-model="ctrlmodels.slopeexpand" btn-radio="'M'">M</button>
+    </div> -->
+  </div>
+</div>
