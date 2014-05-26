@@ -1732,35 +1732,45 @@ text-align: center;
 /*Cluster Legend*/
 
 .cluster1{
-background:#C39258;
+background:#CA587B;
 }
 .cluster2{
-background:#AF5BC8;
+background:#75D252;
 }
 .cluster3{	
-background:#6DCC5F;
+background:#7873CB;
 }
 .cluster4{	
-background:#513545;
+background:#46595E;
 }
 .cluster5{	
-background:#95C6B7;
+background:#85D2AD;
 }
 .cluster6{	
-background:#8488BD;
+background:#C7A378;
 }
 .cluster7{	
-background:#C55885;
+background:#CD5633;
 }
 .cluster8{	
-background:#4F6339;
+background:#CDBF45;
 }
 .cluster9{	
-background:#BE4936;
+background:#A7AFC9;
 }
 .cluster10{	
-background:#C7CC4D;
+background:#547135;
 }
+.cluster11{	
+background:#CB54C6;
+}
+.cluster12{	
+background:#623726;
+}
+.cluster13{	
+background:#5D3663;
+}
+
 
 /*pager*/
 .pager li > a, .pager li > span{
