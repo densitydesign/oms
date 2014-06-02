@@ -1,0 +1,38 @@
+{
+  "name": "fullpage.js",
+  "version": "1.7.6",
+  "homepage": "http://alvarotrigo.com/fullPage/",
+  "authors": [
+    "Alvaro Trigo https://github.com/alvarotrigo"
+  ],
+  "description": "Create full screen pages fast and simple",
+  "main": "jquery.fullPage.js",
+  "keywords": [
+    "jquery",
+    "scrolling",
+    "single_page"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.slimscroll": "latest",
+    "jQuery": "latest",
+    "jquery.ui": "latest"
+  },
+  "_release": "1.7.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.7.6",
+    "commit": "65138a49fe4daf825f2779d461a34b323d3eabeb"
+  },
+  "_source": "git://github.com/alvarotrigo/fullPage.js.git",
+  "_target": "~1.7.6",
+  "_originalSource": "fullpage.js",
+  "_direct": true
+}
