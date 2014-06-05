@@ -285,6 +285,10 @@ angular.module('who.directives', [])
 
               var dataLegend = d3.select("[transform='translate(0,0)']").data()[0].value.clusters
 
+              // var prova = d3.select(containerViz).select("[transform='translate(0,0)']").data()[0]
+
+              // console.log(d3.values(prova)[0].clusters, dataLegend)
+
               chartLegend.datum(dataLegend).call(wikitoclegend)
               
               loaded = true;
@@ -315,7 +319,7 @@ angular.module('who.directives', [])
             click = true
             var p = wikitoc.getPixel("2006-04-22T04:02:54Z")
             $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            
+
             var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
             chartLegend.datum(dl).call(wikitoclegend)
             click =false
@@ -373,6 +377,7 @@ angular.module('who.directives', [])
             var p = wikitoc.getPixel("2001-11-09T05:40:54Z")
             $(containerViz).animate( { scrollLeft: p }, 500, "swing")
             var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            
             chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
