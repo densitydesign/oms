@@ -1,0 +1,5287 @@
+{
+  "2006-04-22T04:02:54Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. See Also",
+        "name": "See_Also",
+        "rank": 1,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      }
+    ],
+    "life": 1691821,
+    "position": 1145678574,
+    "revid": 49546589
+  },
+  "2006-05-25T17:31:03Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. See Also",
+        "name": "See_Also",
+        "rank": 1,
+        "type": "dead"
+      },
+      {
+        "group": 1,
+        "label": "1. See also",
+        "name": "See_also",
+        "rank": 1,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      }
+    ],
+    "life": 7056457,
+    "position": 1148578263,
+    "revid": 55100071
+  },
+  "2006-08-15T09:38:40Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. See also",
+        "name": "See_also",
+        "rank": 1,
+        "type": "normal",
+        "age": 7056457,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Components of Family Planning",
+        "name": "Components_of_Family_Planning",
+        "rank": 2,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 3,
+        "label": "1.1.1. <b>Counseling</b>",
+        "name": "Counseling",
+        "rank": 3,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 3,
+        "label": "1.1.2. <b>Provision of Contraceptives</b>",
+        "name": "Provision_of_Contraceptives",
+        "rank": 4,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 3,
+        "label": "1.1.3. <b>Follow-up and Referral System</b>",
+        "name": "Follow-up_and_Referral_System",
+        "rank": 5,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 3,
+        "label": "1.1.4. <b>Record Keeping</b>",
+        "name": "Record_Keeping",
+        "rank": 6,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 3,
+        "label": "1.1.5. <b>Supervision</b>",
+        "name": "Supervision",
+        "rank": 7,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 3,
+        "label": "1.1.6. <b>Logistics</b>",
+        "name": "Logistics",
+        "rank": 8,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      }
+    ],
+    "life": 1336061,
+    "position": 1155634720,
+    "revid": 69768961
+  },
+  "2006-08-30T20:46:21Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. See also",
+        "name": "See_also",
+        "rank": 1,
+        "type": "dead"
+      },
+      {
+        "group": 1,
+        "label": "1. Components of Family Planning",
+        "name": "Components_of_Family_Planning",
+        "rank": 1,
+        "type": "normal",
+        "age": 1336061,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. <b>Counseling</b>",
+        "name": "Counseling",
+        "rank": 2,
+        "type": "normal",
+        "age": 1336061,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.2. <b>Provision of Contraceptives</b>",
+        "name": "Provision_of_Contraceptives",
+        "rank": 3,
+        "type": "normal",
+        "age": 1336061,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.3. <b>Follow-up and Referral System</b>",
+        "name": "Follow-up_and_Referral_System",
+        "rank": 4,
+        "type": "normal",
+        "age": 1336061,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.4. <b>Record Keeping</b>",
+        "name": "Record_Keeping",
+        "rank": 5,
+        "type": "normal",
+        "age": 1336061,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.5. <b>Supervision</b>",
+        "name": "Supervision",
+        "rank": 6,
+        "type": "normal",
+        "age": 1336061,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.6. <b>Logistics</b>",
+        "name": "Logistics",
+        "rank": 7,
+        "type": "normal",
+        "age": 1336061,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. See Also",
+        "name": "See_Also",
+        "rank": 8,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      }
+    ],
+    "life": 1555889,
+    "position": 1156970781,
+    "revid": 72890333
+  },
+  "2006-09-17T20:57:50Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Components of Family Planning",
+        "name": "Components_of_Family_Planning",
+        "rank": 1,
+        "type": "normal",
+        "age": 2891950,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. <b>Counseling</b>",
+        "name": "Counseling",
+        "rank": 2,
+        "type": "normal",
+        "age": 2891950,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.2. <b>Provision of Contraceptives</b>",
+        "name": "Provision_of_Contraceptives",
+        "rank": 3,
+        "type": "normal",
+        "age": 2891950,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.3. <b>Follow-up and Referral System</b>",
+        "name": "Follow-up_and_Referral_System",
+        "rank": 4,
+        "type": "normal",
+        "age": 2891950,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.4. <b>Record Keeping</b>",
+        "name": "Record_Keeping",
+        "rank": 5,
+        "type": "normal",
+        "age": 2891950,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.5. <b>Supervision</b>",
+        "name": "Supervision",
+        "rank": 6,
+        "type": "normal",
+        "age": 2891950,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.6. <b>Logistics</b>",
+        "name": "Logistics",
+        "rank": 7,
+        "type": "normal",
+        "age": 2891950,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. See Also",
+        "name": "See_Also",
+        "rank": 8,
+        "type": "dead"
+      },
+      {
+        "group": 1,
+        "label": "2. See also",
+        "name": "See_also",
+        "rank": 8,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      }
+    ],
+    "life": 9467782,
+    "position": 1158526670,
+    "revid": 76288569
+  },
+  "2007-01-12T04:11:59Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Components of Family Planning",
+        "name": "Components_of_Family_Planning",
+        "rank": 1,
+        "type": "dead"
+      },
+      {
+        "group": 1,
+        "label": "1. See also",
+        "name": "See_also",
+        "rank": 1,
+        "type": "normal",
+        "age": 10048449,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. <b>Counseling</b>",
+        "name": "Counseling",
+        "rank": 2,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "1.2. <b>Provision of Contraceptives</b>",
+        "name": "Provision_of_Contraceptives",
+        "rank": 3,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "1.3. <b>Follow-up and Referral System</b>",
+        "name": "Follow-up_and_Referral_System",
+        "rank": 4,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "1.4. <b>Record Keeping</b>",
+        "name": "Record_Keeping",
+        "rank": 5,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "1.5. <b>Supervision</b>",
+        "name": "Supervision",
+        "rank": 6,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "1.6. <b>Logistics</b>",
+        "name": "Logistics",
+        "rank": 7,
+        "type": "dead"
+      }
+    ],
+    "life": 5146202,
+    "position": 1168575119,
+    "revid": 100156030
+  },
+  "2007-05-18T19:45:57Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Natural family planning",
+        "name": "Natural_family_planning",
+        "rank": 1,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. References",
+        "name": "References",
+        "rank": 2,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. See also",
+        "name": "See_also",
+        "rank": 3,
+        "type": "normal",
+        "age": 20990887,
+        "edits": 0
+      }
+    ],
+    "life": 6201991,
+    "position": 1179517557,
+    "revid": 131847297
+  },
+  "2007-07-29T14:32:28Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Natural family planning",
+        "name": "Natural_family_planning",
+        "rank": 1,
+        "type": "dead"
+      },
+      {
+        "group": 1,
+        "label": "1. References",
+        "name": "References",
+        "rank": 1,
+        "type": "normal",
+        "age": 6201991,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. See also",
+        "name": "See_also",
+        "rank": 2,
+        "type": "normal",
+        "age": 27192878,
+        "edits": 0
+      }
+    ],
+    "life": 10765501,
+    "position": 1185719548,
+    "revid": 147858060
+  },
+  "2007-12-01T04:57:29Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Family Planning Policy in the United States",
+        "name": "Family_Planning_Policy_in_the_United_States",
+        "rank": 1,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. References",
+        "name": "References",
+        "rank": 2,
+        "type": "normal",
+        "age": 16967492,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. See also",
+        "name": "See_also",
+        "rank": 3,
+        "type": "normal",
+        "age": 37958379,
+        "edits": 0
+      }
+    ],
+    "life": 3377064,
+    "position": 1196485049,
+    "revid": 174991415
+  },
+  "2008-03-08T08:41:54Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Family Planning Policy in the United States",
+        "name": "Family_Planning_Policy_in_the_United_States",
+        "rank": 1,
+        "type": "dead"
+      },
+      {
+        "group": 1,
+        "label": "1. Definitions",
+        "name": "Definitions",
+        "rank": 1,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Policy",
+        "name": "Policy",
+        "rank": 2,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. United States",
+        "name": "United_States",
+        "rank": 3,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. References",
+        "name": "References",
+        "rank": 4,
+        "type": "normal",
+        "age": 25448157,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. See also",
+        "name": "See_also",
+        "rank": 5,
+        "type": "normal",
+        "age": 46439044,
+        "edits": 0
+      }
+    ],
+    "life": 2921105,
+    "position": 1204965714,
+    "revid": 196725285
+  },
+  "2008-04-30T06:02:46Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Definitions",
+        "name": "Definitions",
+        "rank": 1,
+        "type": "normal",
+        "age": 4569652,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Policy",
+        "name": "Policy",
+        "rank": 2,
+        "type": "normal",
+        "age": 4569652,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. China",
+        "name": "China",
+        "rank": 3,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. United States",
+        "name": "United_States",
+        "rank": 4,
+        "type": "normal",
+        "age": 4569652,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. Other",
+        "name": "Other",
+        "rank": 5,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. References",
+        "name": "References",
+        "rank": 6,
+        "type": "normal",
+        "age": 30017809,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. See also",
+        "name": "See_also",
+        "rank": 7,
+        "type": "normal",
+        "age": 51008696,
+        "edits": 0
+      }
+    ],
+    "life": 94811,
+    "position": 1209535366,
+    "revid": 209176224
+  },
+  "2008-05-01T10:01:42Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Definitions",
+        "name": "Definitions",
+        "rank": 1,
+        "type": "normal",
+        "age": 4670388,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Policy",
+        "name": "Policy",
+        "rank": 2,
+        "type": "normal",
+        "age": 4670388,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. International",
+        "name": "International",
+        "rank": 3,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. China",
+        "name": "China",
+        "rank": 4,
+        "type": "normal",
+        "age": 100736,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. United States",
+        "name": "United_States",
+        "rank": 5,
+        "type": "normal",
+        "age": 4670388,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.4. Other",
+        "name": "Other",
+        "rank": 6,
+        "type": "normal",
+        "age": 100736,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. References",
+        "name": "References",
+        "rank": 7,
+        "type": "normal",
+        "age": 30118545,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. See also",
+        "name": "See_also",
+        "rank": 8,
+        "type": "normal",
+        "age": 51109432,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. External links",
+        "name": "External_links",
+        "rank": 9,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      }
+    ],
+    "life": 1114108,
+    "position": 1209636102,
+    "revid": 209425328
+  },
+  "2008-05-14T07:54:33Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Definitions",
+        "name": "Definitions",
+        "rank": 1,
+        "type": "normal",
+        "age": 5785959,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Planning Children",
+        "name": "Planning_Children",
+        "rank": 2,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Planning for Health",
+        "name": "Planning_for_Health",
+        "rank": 3,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Policy",
+        "name": "Policy",
+        "rank": 5,
+        "type": "normal",
+        "age": 5785959,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. International",
+        "name": "International",
+        "rank": 6,
+        "type": "normal",
+        "age": 1115571,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.2. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 1216307,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.3. United States",
+        "name": "United_States",
+        "rank": 8,
+        "type": "normal",
+        "age": 5785959,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.4. Other",
+        "name": "Other",
+        "rank": 9,
+        "type": "normal",
+        "age": 1216307,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. References",
+        "name": "References",
+        "rank": 10,
+        "type": "normal",
+        "age": 31234116,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. See also",
+        "name": "See_also",
+        "rank": 11,
+        "type": "normal",
+        "age": 52225003,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. External links",
+        "name": "External_links",
+        "rank": 12,
+        "type": "normal",
+        "age": 1115571,
+        "edits": 0
+      }
+    ],
+    "life": 508235,
+    "position": 1210751673,
+    "revid": 212304421
+  },
+  "2008-05-20T05:05:08Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Definitions",
+        "name": "Definitions",
+        "rank": 1,
+        "type": "normal",
+        "age": 6294194,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Planning Children",
+        "name": "Planning_Children",
+        "rank": 2,
+        "type": "normal",
+        "age": 508235,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Planning for Health",
+        "name": "Planning_for_Health",
+        "rank": 3,
+        "type": "normal",
+        "age": 508235,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 508235,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Policy",
+        "name": "Policy",
+        "rank": 5,
+        "type": "normal",
+        "age": 6294194,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. International",
+        "name": "International",
+        "rank": 6,
+        "type": "normal",
+        "age": 1623806,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.2. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 1724542,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.3. United States",
+        "name": "United_States",
+        "rank": 8,
+        "type": "normal",
+        "age": 6294194,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.4. Other",
+        "name": "Other",
+        "rank": 9,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "3.4. Iran",
+        "name": "Iran",
+        "rank": 9,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. References",
+        "name": "References",
+        "rank": 10,
+        "type": "normal",
+        "age": 31742351,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. See also",
+        "name": "See_also",
+        "rank": 11,
+        "type": "normal",
+        "age": 52733238,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. External links",
+        "name": "External_links",
+        "rank": 12,
+        "type": "normal",
+        "age": 1623806,
+        "edits": 0
+      }
+    ],
+    "life": 5379936,
+    "position": 1211259908,
+    "revid": 213639110
+  },
+  "2008-12-15T08:27:17Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Definitions",
+        "name": "Definitions",
+        "rank": 1,
+        "type": "normal",
+        "age": 24363923,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Planning Children",
+        "name": "Planning_Children",
+        "rank": 2,
+        "type": "normal",
+        "age": 18577964,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Planning for Health",
+        "name": "Planning_for_Health",
+        "rank": 3,
+        "type": "normal",
+        "age": 18577964,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 18577964,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Policy",
+        "name": "Policy",
+        "rank": 5,
+        "type": "normal",
+        "age": 24363923,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. International",
+        "name": "International",
+        "rank": 6,
+        "type": "normal",
+        "age": 19693535,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.2. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 19794271,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.3. United States",
+        "name": "United_States",
+        "rank": 8,
+        "type": "normal",
+        "age": 24363923,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.4. Iran",
+        "name": "Iran",
+        "rank": 9,
+        "type": "normal",
+        "age": 18069729,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. References",
+        "name": "References",
+        "rank": 10,
+        "type": "normal",
+        "age": 49812080,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. See also",
+        "name": "See_also",
+        "rank": 11,
+        "type": "normal",
+        "age": 70802967,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. External links",
+        "name": "External_links",
+        "rank": 12,
+        "type": "dead"
+      }
+    ],
+    "life": 5547951,
+    "position": 1229329637,
+    "revid": 258082192
+  },
+  "2009-03-03T05:16:11Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Definitions",
+        "name": "Definitions",
+        "rank": 1,
+        "type": "normal",
+        "age": 31091657,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Planning Children",
+        "name": "Planning_Children",
+        "rank": 2,
+        "type": "normal",
+        "age": 25305698,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Planning for Health",
+        "name": "Planning_for_Health",
+        "rank": 3,
+        "type": "normal",
+        "age": 25305698,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 25305698,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Policy",
+        "name": "Policy",
+        "rank": 5,
+        "type": "normal",
+        "age": 31091657,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. International",
+        "name": "International",
+        "rank": 6,
+        "type": "normal",
+        "age": 26421269,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.2. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 26522005,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.3. United States",
+        "name": "United_States",
+        "rank": 8,
+        "type": "normal",
+        "age": 31091657,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.4. Iran",
+        "name": "Iran",
+        "rank": 9,
+        "type": "normal",
+        "age": 24797463,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. See also",
+        "name": "See_also",
+        "rank": 10,
+        "type": "normal",
+        "age": 77530701,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. References",
+        "name": "References",
+        "rank": 11,
+        "type": "normal",
+        "age": 56539814,
+        "edits": 0
+      }
+    ],
+    "life": 1212984,
+    "position": 1236057371,
+    "revid": 274622704
+  },
+  "2009-03-17T06:12:35Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Definitions",
+        "name": "Definitions",
+        "rank": 1,
+        "type": "normal",
+        "age": 32304641,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Planning Children",
+        "name": "Planning_Children",
+        "rank": 2,
+        "type": "normal",
+        "age": 26518682,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Planning for Health",
+        "name": "Planning_for_Health",
+        "rank": 3,
+        "type": "normal",
+        "age": 26518682,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 26518682,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Policy",
+        "name": "Policy",
+        "rank": 5,
+        "type": "normal",
+        "age": 32304641,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. International",
+        "name": "International",
+        "rank": 6,
+        "type": "normal",
+        "age": 27634253,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.2. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 27734989,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.3. United States",
+        "name": "United_States",
+        "rank": 8,
+        "type": "normal",
+        "age": 32304641,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.4. Iran",
+        "name": "Iran",
+        "rank": 9,
+        "type": "normal",
+        "age": 26010447,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.5. India",
+        "name": "India",
+        "rank": 10,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. See also",
+        "name": "See_also",
+        "rank": 11,
+        "type": "normal",
+        "age": 78743685,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. References",
+        "name": "References",
+        "rank": 12,
+        "type": "normal",
+        "age": 57752798,
+        "edits": 0
+      }
+    ],
+    "life": 779179,
+    "position": 1237270355,
+    "revid": 277811862
+  },
+  "2009-03-26T06:59:26Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Definitions",
+        "name": "Definitions",
+        "rank": 1,
+        "type": "dead"
+      },
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Planning Children",
+        "name": "Planning_Children",
+        "rank": 2,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Planning for Health",
+        "name": "Planning_for_Health",
+        "rank": 3,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "1.2. Finances",
+        "name": "Finances",
+        "rank": 3,
+        "type": "normal",
+        "age": 27299093,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Policy",
+        "name": "Policy",
+        "rank": 4,
+        "type": "normal",
+        "age": 33085052,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. International",
+        "name": "International",
+        "rank": 5,
+        "type": "normal",
+        "age": 28414664,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. China",
+        "name": "China",
+        "rank": 6,
+        "type": "normal",
+        "age": 28515400,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. Iran",
+        "name": "Iran",
+        "rank": 7,
+        "type": "normal",
+        "age": 26790858,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.4. United States",
+        "name": "United_States",
+        "rank": 8,
+        "type": "normal",
+        "age": 33085052,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.5. India",
+        "name": "India",
+        "rank": 9,
+        "type": "normal",
+        "age": 780411,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. See also",
+        "name": "See_also",
+        "rank": 10,
+        "type": "normal",
+        "age": 79524096,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. References",
+        "name": "References",
+        "rank": 11,
+        "type": "normal",
+        "age": 58533209,
+        "edits": 0
+      }
+    ],
+    "life": 746382,
+    "position": 1238050766,
+    "revid": 279754276
+  },
+  "2009-08-29T18:26:30Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 13519624,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 13519624,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.2. Finances",
+        "name": "Finances",
+        "rank": 3,
+        "type": "normal",
+        "age": 40818717,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Policy",
+        "name": "Policy",
+        "rank": 4,
+        "type": "normal",
+        "age": 46604676,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. International",
+        "name": "International",
+        "rank": 5,
+        "type": "normal",
+        "age": 41934288,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. China",
+        "name": "China",
+        "rank": 6,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "2.2. China, People's Republic of",
+        "name": "China.2C_People.27s_Republic_of",
+        "rank": 6,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. Iran",
+        "name": "Iran",
+        "rank": 7,
+        "type": "normal",
+        "age": 40310482,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.4. United States",
+        "name": "United_States",
+        "rank": 8,
+        "type": "normal",
+        "age": 46604676,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.5. India",
+        "name": "India",
+        "rank": 9,
+        "type": "normal",
+        "age": 14300035,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. See also",
+        "name": "See_also",
+        "rank": 10,
+        "type": "normal",
+        "age": 93043720,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. References",
+        "name": "References",
+        "rank": 11,
+        "type": "normal",
+        "age": 72052833,
+        "edits": 0
+      }
+    ],
+    "life": 137259,
+    "position": 1251570390,
+    "revid": 310750920
+  },
+  "2009-08-31T19:30:46Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 13696280,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 13696280,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.2. Finances",
+        "name": "Finances",
+        "rank": 3,
+        "type": "normal",
+        "age": 40995373,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Policy",
+        "name": "Policy",
+        "rank": 4,
+        "type": "normal",
+        "age": 46781332,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. International",
+        "name": "International",
+        "rank": 5,
+        "type": "normal",
+        "age": 42110944,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. China, People's Republic of",
+        "name": "China.2C_People.27s_Republic_of",
+        "rank": 6,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "2.2. China",
+        "name": "China",
+        "rank": 6,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 7,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.4. Iran",
+        "name": "Iran",
+        "rank": 8,
+        "type": "normal",
+        "age": 40487138,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.5. United States",
+        "name": "United_States",
+        "rank": 9,
+        "type": "normal",
+        "age": 46781332,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.6. India",
+        "name": "India",
+        "rank": 10,
+        "type": "normal",
+        "age": 14476691,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. See also",
+        "name": "See_also",
+        "rank": 11,
+        "type": "normal",
+        "age": 93220376,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. Organizations",
+        "name": "Organizations",
+        "rank": 12,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. References",
+        "name": "References",
+        "rank": 13,
+        "type": "normal",
+        "age": 72229489,
+        "edits": 0
+      }
+    ],
+    "life": 6358792,
+    "position": 1251747046,
+    "revid": 311134470
+  },
+  "2010-04-04T08:06:37Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 32317631,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 32317631,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.2. Finances",
+        "name": "Finances",
+        "rank": 3,
+        "type": "normal",
+        "age": 59616724,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Policy",
+        "name": "Policy",
+        "rank": 4,
+        "type": "normal",
+        "age": 65402683,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. International",
+        "name": "International",
+        "rank": 5,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "2.1. China",
+        "name": "China",
+        "rank": 5,
+        "type": "normal",
+        "age": 18621351,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 6,
+        "type": "normal",
+        "age": 18621351,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. Iran",
+        "name": "Iran",
+        "rank": 7,
+        "type": "normal",
+        "age": 59108489,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.4. United States",
+        "name": "United_States",
+        "rank": 8,
+        "type": "normal",
+        "age": 65402683,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.5. India",
+        "name": "India",
+        "rank": 9,
+        "type": "normal",
+        "age": 33098042,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. See also",
+        "name": "See_also",
+        "rank": 10,
+        "type": "normal",
+        "age": 111841727,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. Organizations",
+        "name": "Organizations",
+        "rank": 11,
+        "type": "normal",
+        "age": 18621351,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. References",
+        "name": "References",
+        "rank": 12,
+        "type": "normal",
+        "age": 90850840,
+        "edits": 0
+      }
+    ],
+    "life": 4630528,
+    "position": 1270368397,
+    "revid": 353872866
+  },
+  "2010-05-27T22:22:05Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 36948159,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 36948159,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.2. Finances",
+        "name": "Finances",
+        "rank": 3,
+        "type": "normal",
+        "age": 64247252,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Policy",
+        "name": "Policy",
+        "rank": 4,
+        "type": "normal",
+        "age": 70033211,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Georgia",
+        "name": "Georgia",
+        "rank": 5,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. China",
+        "name": "China",
+        "rank": 6,
+        "type": "normal",
+        "age": 23251879,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 7,
+        "type": "normal",
+        "age": 23251879,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.4. Iran",
+        "name": "Iran",
+        "rank": 8,
+        "type": "normal",
+        "age": 63739017,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.5. United States",
+        "name": "United_States",
+        "rank": 9,
+        "type": "normal",
+        "age": 70033211,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.6. India",
+        "name": "India",
+        "rank": 10,
+        "type": "normal",
+        "age": 37728570,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. See also",
+        "name": "See_also",
+        "rank": 11,
+        "type": "normal",
+        "age": 116472255,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. Organizations",
+        "name": "Organizations",
+        "rank": 12,
+        "type": "normal",
+        "age": 23251879,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. References",
+        "name": "References",
+        "rank": 13,
+        "type": "normal",
+        "age": 95481368,
+        "edits": 0
+      }
+    ],
+    "life": 1017661,
+    "position": 1274998925,
+    "revid": 364559137
+  },
+  "2010-08-10T00:16:39Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 43348633,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 43348633,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.2. Finances",
+        "name": "Finances",
+        "rank": 3,
+        "type": "normal",
+        "age": 70647726,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Policy",
+        "name": "Policy",
+        "rank": 4,
+        "type": "normal",
+        "age": 76433685,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Georgia",
+        "name": "Georgia",
+        "rank": 5,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "2.1. China",
+        "name": "China",
+        "rank": 5,
+        "type": "normal",
+        "age": 29652353,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 6,
+        "type": "normal",
+        "age": 29652353,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. Iran",
+        "name": "Iran",
+        "rank": 7,
+        "type": "normal",
+        "age": 70139491,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.4. United States",
+        "name": "United_States",
+        "rank": 8,
+        "type": "normal",
+        "age": 76433685,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.5. India",
+        "name": "India",
+        "rank": 9,
+        "type": "normal",
+        "age": 44129044,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. See also",
+        "name": "See_also",
+        "rank": 10,
+        "type": "normal",
+        "age": 122872729,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. Organizations",
+        "name": "Organizations",
+        "rank": 11,
+        "type": "normal",
+        "age": 29652353,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. References",
+        "name": "References",
+        "rank": 12,
+        "type": "normal",
+        "age": 101881842,
+        "edits": 0
+      }
+    ],
+    "life": 5601257,
+    "position": 1281399399,
+    "revid": 378090901
+  },
+  "2010-10-13T20:10:56Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 48949890,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 48949890,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.2. Finances",
+        "name": "Finances",
+        "rank": 3,
+        "type": "normal",
+        "age": 76248983,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Policy",
+        "name": "Policy",
+        "rank": 4,
+        "type": "normal",
+        "age": 82034942,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. China",
+        "name": "China",
+        "rank": 5,
+        "type": "normal",
+        "age": 35253610,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 6,
+        "type": "normal",
+        "age": 35253610,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. Iran",
+        "name": "Iran",
+        "rank": 7,
+        "type": "normal",
+        "age": 75740748,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.4. United States",
+        "name": "United_States",
+        "rank": 8,
+        "type": "normal",
+        "age": 82034942,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.5. India",
+        "name": "India",
+        "rank": 9,
+        "type": "normal",
+        "age": 49730301,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. See also",
+        "name": "See_also",
+        "rank": 10,
+        "type": "normal",
+        "age": 128473986,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. Organizations",
+        "name": "Organizations",
+        "rank": 11,
+        "type": "normal",
+        "age": 35253610,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. References",
+        "name": "References",
+        "rank": 12,
+        "type": "normal",
+        "age": 107483099,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. External links",
+        "name": "External_links",
+        "rank": 13,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      }
+    ],
+    "life": 3309621,
+    "position": 1287000656,
+    "revid": 390564150
+  },
+  "2010-11-21T03:31:17Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 52259511,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 52259511,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.2. Finances",
+        "name": "Finances",
+        "rank": 3,
+        "type": "normal",
+        "age": 79558604,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Policy",
+        "name": "Policy",
+        "rank": 4,
+        "type": "normal",
+        "age": 85344563,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. China",
+        "name": "China",
+        "rank": 5,
+        "type": "normal",
+        "age": 38563231,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 6,
+        "type": "normal",
+        "age": 38563231,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. Iran",
+        "name": "Iran",
+        "rank": 7,
+        "type": "normal",
+        "age": 79050369,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.4. United States",
+        "name": "United_States",
+        "rank": 8,
+        "type": "normal",
+        "age": 85344563,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.5. India",
+        "name": "India",
+        "rank": 9,
+        "type": "dead"
+      },
+      {
+        "group": 1,
+        "label": "3. See also",
+        "name": "See_also",
+        "rank": 9,
+        "type": "normal",
+        "age": 131783607,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. Organizations",
+        "name": "Organizations",
+        "rank": 10,
+        "type": "normal",
+        "age": 38563231,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. References",
+        "name": "References",
+        "rank": 11,
+        "type": "normal",
+        "age": 110792720,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. External links",
+        "name": "External_links",
+        "rank": 12,
+        "type": "normal",
+        "age": 3309621,
+        "edits": 0
+      }
+    ],
+    "life": 3524690,
+    "position": 1290310277,
+    "revid": 397990310
+  },
+  "2011-01-01T02:40:41Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 55798875,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 55798875,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 83097968,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Birth control",
+        "name": "Birth_control",
+        "rank": 5,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Policy",
+        "name": "Policy",
+        "rank": 6,
+        "type": "normal",
+        "age": 88883927,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 42102595,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 8,
+        "type": "normal",
+        "age": 42102595,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.3. Iran",
+        "name": "Iran",
+        "rank": 9,
+        "type": "normal",
+        "age": 82589733,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.4. United States",
+        "name": "United_States",
+        "rank": 10,
+        "type": "normal",
+        "age": 88883927,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. See also",
+        "name": "See_also",
+        "rank": 11,
+        "type": "normal",
+        "age": 135322971,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. Organizations",
+        "name": "Organizations",
+        "rank": 12,
+        "type": "normal",
+        "age": 42102595,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. References",
+        "name": "References",
+        "rank": 13,
+        "type": "normal",
+        "age": 114332084,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. External links",
+        "name": "External_links",
+        "rank": 14,
+        "type": "normal",
+        "age": 6848985,
+        "edits": 0
+      }
+    ],
+    "life": 3812118,
+    "position": 1293849641,
+    "revid": 405261609
+  },
+  "2011-02-14T05:35:59Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 59610993,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 59610993,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 3812118,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 86910086,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Birth control",
+        "name": "Birth_control",
+        "rank": 5,
+        "type": "normal",
+        "age": 3812118,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. Birth control",
+        "name": "Birth_control_2",
+        "rank": 6,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Policy",
+        "name": "Policy",
+        "rank": 7,
+        "type": "normal",
+        "age": 92696045,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. China",
+        "name": "China",
+        "rank": 8,
+        "type": "normal",
+        "age": 45914713,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 9,
+        "type": "normal",
+        "age": 45914713,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.3. Iran",
+        "name": "Iran",
+        "rank": 10,
+        "type": "normal",
+        "age": 86401851,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.4. United States",
+        "name": "United_States",
+        "rank": 11,
+        "type": "normal",
+        "age": 92696045,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. See also",
+        "name": "See_also",
+        "rank": 12,
+        "type": "normal",
+        "age": 139135089,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. Organizations",
+        "name": "Organizations",
+        "rank": 13,
+        "type": "normal",
+        "age": 45914713,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. References",
+        "name": "References",
+        "rank": 14,
+        "type": "normal",
+        "age": 118144202,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. External links",
+        "name": "External_links",
+        "rank": 15,
+        "type": "normal",
+        "age": 10661103,
+        "edits": 0
+      }
+    ],
+    "life": 1606616,
+    "position": 1297661759,
+    "revid": 413828890
+  },
+  "2011-03-04T19:52:55Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 61217609,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 61217609,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 5418734,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 88516702,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Birth control",
+        "name": "Birth_control",
+        "rank": 5,
+        "type": "normal",
+        "age": 5418734,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. Birth control",
+        "name": "Birth_control_2",
+        "rank": 6,
+        "type": "dead"
+      },
+      {
+        "group": 1,
+        "label": "3. Policy",
+        "name": "Policy",
+        "rank": 6,
+        "type": "normal",
+        "age": 94302661,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 47521329,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 8,
+        "type": "normal",
+        "age": 47521329,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.3. Iran",
+        "name": "Iran",
+        "rank": 9,
+        "type": "normal",
+        "age": 88008467,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.4. United States",
+        "name": "United_States",
+        "rank": 10,
+        "type": "normal",
+        "age": 94302661,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. See also",
+        "name": "See_also",
+        "rank": 11,
+        "type": "normal",
+        "age": 140741705,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. Organizations",
+        "name": "Organizations",
+        "rank": 12,
+        "type": "normal",
+        "age": 47521329,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. References",
+        "name": "References",
+        "rank": 13,
+        "type": "normal",
+        "age": 119750818,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. External links",
+        "name": "External_links",
+        "rank": 14,
+        "type": "normal",
+        "age": 12267719,
+        "edits": 0
+      }
+    ],
+    "life": 4704980,
+    "position": 1299268375,
+    "revid": 417134819
+  },
+  "2011-04-28T06:49:15Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 65922589,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 65922589,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 10123714,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 93221682,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Birth control",
+        "name": "Birth_control",
+        "rank": 5,
+        "type": "normal",
+        "age": 10123714,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Policy",
+        "name": "Policy",
+        "rank": 6,
+        "type": "normal",
+        "age": 99007641,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 52226309,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 8,
+        "type": "normal",
+        "age": 52226309,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.3. Iran",
+        "name": "Iran",
+        "rank": 9,
+        "type": "normal",
+        "age": 92713447,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.4. Pakistan",
+        "name": "Pakistan",
+        "rank": 10,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.5. United States",
+        "name": "United_States",
+        "rank": 11,
+        "type": "normal",
+        "age": 99007641,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. See also",
+        "name": "See_also",
+        "rank": 12,
+        "type": "normal",
+        "age": 145446685,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. Organizations",
+        "name": "Organizations",
+        "rank": 13,
+        "type": "normal",
+        "age": 52226309,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. References",
+        "name": "References",
+        "rank": 14,
+        "type": "normal",
+        "age": 124455798,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. External links",
+        "name": "External_links",
+        "rank": 15,
+        "type": "normal",
+        "age": 16972699,
+        "edits": 0
+      }
+    ],
+    "life": 9418742,
+    "position": 1303973355,
+    "revid": 426340307
+  },
+  "2011-08-15T07:08:17Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 75341331,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 75341331,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 19542456,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 102640424,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Birth control",
+        "name": "Birth_control",
+        "rank": 5,
+        "type": "normal",
+        "age": 19542456,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Policy",
+        "name": "Policy",
+        "rank": 6,
+        "type": "normal",
+        "age": 108426383,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 61645051,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 8,
+        "type": "normal",
+        "age": 61645051,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.3. Iran",
+        "name": "Iran",
+        "rank": 9,
+        "type": "normal",
+        "age": 102132189,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.4. Pakistan",
+        "name": "Pakistan",
+        "rank": 10,
+        "type": "normal",
+        "age": 9418742,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.5. Philippine",
+        "name": "Philippine",
+        "rank": 11,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.6. United States",
+        "name": "United_States",
+        "rank": 12,
+        "type": "normal",
+        "age": 108426383,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. See also",
+        "name": "See_also",
+        "rank": 13,
+        "type": "normal",
+        "age": 154865427,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. Organizations",
+        "name": "Organizations",
+        "rank": 14,
+        "type": "normal",
+        "age": 61645051,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. References",
+        "name": "References",
+        "rank": 15,
+        "type": "normal",
+        "age": 133874540,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. External links",
+        "name": "External_links",
+        "rank": 16,
+        "type": "normal",
+        "age": 26391441,
+        "edits": 0
+      }
+    ],
+    "life": 429963,
+    "position": 1313392097,
+    "revid": 444932482
+  },
+  "2011-08-21T02:28:10Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 75842924,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 75842924,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 20044049,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 103142017,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Birth control",
+        "name": "Birth_control",
+        "rank": 5,
+        "type": "normal",
+        "age": 20044049,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Policy",
+        "name": "Policy",
+        "rank": 6,
+        "type": "normal",
+        "age": 108927976,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 62146644,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 8,
+        "type": "normal",
+        "age": 62146644,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.3. India",
+        "name": "India",
+        "rank": 9,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.4. Iran",
+        "name": "Iran",
+        "rank": 10,
+        "type": "normal",
+        "age": 102633782,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.5. Philippine",
+        "name": "Philippine",
+        "rank": 11,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "3.5. Pakistan",
+        "name": "Pakistan",
+        "rank": 11,
+        "type": "normal",
+        "age": 9920335,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.6. The Philippines",
+        "name": "The_Philippines",
+        "rank": 12,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.7. Ireland",
+        "name": "Ireland",
+        "rank": 13,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.8. United States",
+        "name": "United_States",
+        "rank": 14,
+        "type": "normal",
+        "age": 108927976,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. See also",
+        "name": "See_also",
+        "rank": 15,
+        "type": "normal",
+        "age": 155367020,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. Organizations",
+        "name": "Organizations",
+        "rank": 16,
+        "type": "normal",
+        "age": 62146644,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. References",
+        "name": "References",
+        "rank": 17,
+        "type": "normal",
+        "age": 134376133,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. External links",
+        "name": "External_links",
+        "rank": 18,
+        "type": "normal",
+        "age": 26893034,
+        "edits": 0
+      }
+    ],
+    "life": 540700,
+    "position": 1313893690,
+    "revid": 445920642
+  },
+  "2011-08-27T08:39:50Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 76383624,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 76383624,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 20584749,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 103682717,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Birth control",
+        "name": "Birth_control",
+        "rank": 5,
+        "type": "normal",
+        "age": 20584749,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Policy",
+        "name": "Policy",
+        "rank": 6,
+        "type": "normal",
+        "age": 109468676,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 62687344,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 8,
+        "type": "normal",
+        "age": 62687344,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.3. India",
+        "name": "India",
+        "rank": 9,
+        "type": "normal",
+        "age": 540700,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.4. Iran",
+        "name": "Iran",
+        "rank": 10,
+        "type": "normal",
+        "age": 103174482,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.5. Ireland",
+        "name": "Ireland",
+        "rank": 11,
+        "type": "normal",
+        "age": 540700,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.6. Pakistan",
+        "name": "Pakistan",
+        "rank": 12,
+        "type": "normal",
+        "age": 10461035,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.7. The Philippines",
+        "name": "The_Philippines",
+        "rank": 13,
+        "type": "normal",
+        "age": 540700,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.8. Singapore",
+        "name": "Singapore",
+        "rank": 14,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.9. United States",
+        "name": "United_States",
+        "rank": 15,
+        "type": "normal",
+        "age": 109468676,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. See also",
+        "name": "See_also",
+        "rank": 16,
+        "type": "normal",
+        "age": 155907720,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. Organizations",
+        "name": "Organizations",
+        "rank": 17,
+        "type": "normal",
+        "age": 62687344,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. References",
+        "name": "References",
+        "rank": 18,
+        "type": "normal",
+        "age": 134916833,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. External links",
+        "name": "External_links",
+        "rank": 19,
+        "type": "normal",
+        "age": 27433734,
+        "edits": 0
+      }
+    ],
+    "life": 17756241,
+    "position": 1314434390,
+    "revid": 446944801
+  },
+  "2012-03-20T08:05:25Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 94179959,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 94179959,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 38381084,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 121479052,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Birth control",
+        "name": "Birth_control",
+        "rank": 5,
+        "type": "normal",
+        "age": 38381084,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. Policy",
+        "name": "Policy",
+        "rank": 6,
+        "type": "normal",
+        "age": 127265011,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 80483679,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 8,
+        "type": "normal",
+        "age": 80483679,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.3. India",
+        "name": "India",
+        "rank": 9,
+        "type": "normal",
+        "age": 18337035,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.4. Iran",
+        "name": "Iran",
+        "rank": 10,
+        "type": "normal",
+        "age": 120970817,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.5. Ireland",
+        "name": "Ireland",
+        "rank": 11,
+        "type": "normal",
+        "age": 18337035,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.6. Pakistan",
+        "name": "Pakistan",
+        "rank": 12,
+        "type": "normal",
+        "age": 28257370,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.7. The Philippines",
+        "name": "The_Philippines",
+        "rank": 13,
+        "type": "normal",
+        "age": 18337035,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.8. Singapore",
+        "name": "Singapore",
+        "rank": 14,
+        "type": "normal",
+        "age": 17796335,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.9. United States",
+        "name": "United_States",
+        "rank": 15,
+        "type": "normal",
+        "age": 127265011,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. See also",
+        "name": "See_also",
+        "rank": 16,
+        "type": "normal",
+        "age": 173704055,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "5.1. Organizations",
+        "name": "Organizations",
+        "rank": 17,
+        "type": "normal",
+        "age": 80483679,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. References",
+        "name": "References",
+        "rank": 18,
+        "type": "normal",
+        "age": 152713168,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "7. External links",
+        "name": "External_links",
+        "rank": 19,
+        "type": "normal",
+        "age": 45230069,
+        "edits": 0
+      }
+    ],
+    "life": 326911,
+    "position": 1332230725,
+    "revid": 482861136
+  },
+  "2012-03-24T02:53:56Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 94506870,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 94506870,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 38707995,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 121805963,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Birth control",
+        "name": "Birth_control",
+        "rank": 5,
+        "type": "normal",
+        "age": 38707995,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. Policy",
+        "name": "Policy",
+        "rank": 6,
+        "type": "normal",
+        "age": 127591922,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 80810590,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 8,
+        "type": "normal",
+        "age": 80810590,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.3. India",
+        "name": "India",
+        "rank": 9,
+        "type": "normal",
+        "age": 18663946,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.4. Iran",
+        "name": "Iran",
+        "rank": 10,
+        "type": "normal",
+        "age": 121297728,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.5. Ireland",
+        "name": "Ireland",
+        "rank": 11,
+        "type": "normal",
+        "age": 18663946,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.6. Pakistan",
+        "name": "Pakistan",
+        "rank": 12,
+        "type": "normal",
+        "age": 28584281,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.7. The Philippines",
+        "name": "The_Philippines",
+        "rank": 13,
+        "type": "normal",
+        "age": 18663946,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.8. Singapore",
+        "name": "Singapore",
+        "rank": 14,
+        "type": "normal",
+        "age": 18123246,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.9. United Kingdom",
+        "name": "United_Kingdom",
+        "rank": 15,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.10. United States",
+        "name": "United_States",
+        "rank": 16,
+        "type": "normal",
+        "age": 127591922,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. See also",
+        "name": "See_also",
+        "rank": 17,
+        "type": "normal",
+        "age": 174030966,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "5.1. Organizations",
+        "name": "Organizations",
+        "rank": 18,
+        "type": "normal",
+        "age": 80810590,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. References",
+        "name": "References",
+        "rank": 19,
+        "type": "normal",
+        "age": 153040079,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "7. External links",
+        "name": "External_links",
+        "rank": 20,
+        "type": "normal",
+        "age": 45556980,
+        "edits": 0
+      }
+    ],
+    "life": 715994,
+    "position": 1332557636,
+    "revid": 483632885
+  },
+  "2012-04-01T09:47:10Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 95222864,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 95222864,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 39423989,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 122521957,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Birth control",
+        "name": "Birth_control",
+        "rank": 5,
+        "type": "normal",
+        "age": 39423989,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. Policy",
+        "name": "Policy",
+        "rank": 6,
+        "type": "normal",
+        "age": 128307916,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 81526584,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 8,
+        "type": "normal",
+        "age": 81526584,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.3. India",
+        "name": "India",
+        "rank": 9,
+        "type": "normal",
+        "age": 19379940,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.4. Iran",
+        "name": "Iran",
+        "rank": 10,
+        "type": "normal",
+        "age": 122013722,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.5. Ireland",
+        "name": "Ireland",
+        "rank": 11,
+        "type": "normal",
+        "age": 19379940,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.6. Pakistan",
+        "name": "Pakistan",
+        "rank": 12,
+        "type": "normal",
+        "age": 29300275,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.7. Russia",
+        "name": "Russia",
+        "rank": 13,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.8. The Philippines",
+        "name": "The_Philippines",
+        "rank": 14,
+        "type": "normal",
+        "age": 19379940,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.9. Singapore",
+        "name": "Singapore",
+        "rank": 15,
+        "type": "normal",
+        "age": 18839240,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.10. United Kingdom",
+        "name": "United_Kingdom",
+        "rank": 16,
+        "type": "normal",
+        "age": 715994,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.11. United States",
+        "name": "United_States",
+        "rank": 17,
+        "type": "normal",
+        "age": 128307916,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. See also",
+        "name": "See_also",
+        "rank": 18,
+        "type": "normal",
+        "age": 174746960,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "5.1. Organizations",
+        "name": "Organizations",
+        "rank": 19,
+        "type": "normal",
+        "age": 81526584,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. References",
+        "name": "References",
+        "rank": 20,
+        "type": "normal",
+        "age": 153756073,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "7. External links",
+        "name": "External_links",
+        "rank": 21,
+        "type": "normal",
+        "age": 46272974,
+        "edits": 0
+      }
+    ],
+    "life": 151719,
+    "position": 1333273630,
+    "revid": 484972066
+  },
+  "2012-04-03T03:55:49Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 95374583,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 95374583,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 39575708,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 122673676,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Birth control",
+        "name": "Birth_control",
+        "rank": 5,
+        "type": "normal",
+        "age": 39575708,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. Policy",
+        "name": "Policy",
+        "rank": 6,
+        "type": "normal",
+        "age": 128459635,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 81678303,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 8,
+        "type": "normal",
+        "age": 81678303,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.3. India",
+        "name": "India",
+        "rank": 9,
+        "type": "normal",
+        "age": 19531659,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.4. Iran",
+        "name": "Iran",
+        "rank": 10,
+        "type": "normal",
+        "age": 122165441,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.5. Ireland",
+        "name": "Ireland",
+        "rank": 11,
+        "type": "normal",
+        "age": 19531659,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.6. Pakistan",
+        "name": "Pakistan",
+        "rank": 12,
+        "type": "normal",
+        "age": 29451994,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.7. Russia",
+        "name": "Russia",
+        "rank": 13,
+        "type": "normal",
+        "age": 151719,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.8. The Philippines",
+        "name": "The_Philippines",
+        "rank": 14,
+        "type": "normal",
+        "age": 19531659,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.9. Singapore",
+        "name": "Singapore",
+        "rank": 15,
+        "type": "normal",
+        "age": 18990959,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.10. United Kingdom",
+        "name": "United_Kingdom",
+        "rank": 16,
+        "type": "normal",
+        "age": 867713,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.11. United States",
+        "name": "United_States",
+        "rank": 17,
+        "type": "normal",
+        "age": 128459635,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. World Contraception Day",
+        "name": "World_Contraception_Day",
+        "rank": 18,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. See also",
+        "name": "See_also",
+        "rank": 19,
+        "type": "normal",
+        "age": 174898679,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "6.1. Organizations",
+        "name": "Organizations",
+        "rank": 20,
+        "type": "normal",
+        "age": 81678303,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "7. References",
+        "name": "References",
+        "rank": 21,
+        "type": "normal",
+        "age": 153907792,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "8. External links",
+        "name": "External_links",
+        "rank": 22,
+        "type": "normal",
+        "age": 46424693,
+        "edits": 0
+      }
+    ],
+    "life": 2862050,
+    "position": 1333425349,
+    "revid": 485278782
+  },
+  "2012-05-06T09:39:21Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 98246395,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 98246395,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 42447520,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 125545488,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Birth control",
+        "name": "Birth_control",
+        "rank": 5,
+        "type": "normal",
+        "age": 42447520,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. Policy",
+        "name": "Policy",
+        "rank": 6,
+        "type": "normal",
+        "age": 131331447,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. China",
+        "name": "China",
+        "rank": 7,
+        "type": "dead"
+      },
+      {
+        "group": 1,
+        "label": "5. World Contraception Day",
+        "name": "World_Contraception_Day",
+        "rank": 7,
+        "type": "normal",
+        "age": 2871812,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 8,
+        "type": "dead"
+      },
+      {
+        "group": 1,
+        "label": "6. See also",
+        "name": "See_also",
+        "rank": 8,
+        "type": "normal",
+        "age": 177770491,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.3. India",
+        "name": "India",
+        "rank": 9,
+        "type": "dead"
+      },
+      {
+        "group": 1,
+        "label": "7. References",
+        "name": "References",
+        "rank": 9,
+        "type": "normal",
+        "age": 156779604,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.4. Iran",
+        "name": "Iran",
+        "rank": 10,
+        "type": "dead"
+      },
+      {
+        "group": 1,
+        "label": "8. External links",
+        "name": "External_links",
+        "rank": 10,
+        "type": "normal",
+        "age": 49296505,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.5. Ireland",
+        "name": "Ireland",
+        "rank": 11,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "4.6. Pakistan",
+        "name": "Pakistan",
+        "rank": 12,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "4.7. Russia",
+        "name": "Russia",
+        "rank": 13,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "4.8. The Philippines",
+        "name": "The_Philippines",
+        "rank": 14,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "4.9. Singapore",
+        "name": "Singapore",
+        "rank": 15,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "4.10. United Kingdom",
+        "name": "United_Kingdom",
+        "rank": 16,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "4.11. United States",
+        "name": "United_States",
+        "rank": 17,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "6.1. Organizations",
+        "name": "Organizations",
+        "rank": 20,
+        "type": "dead"
+      }
+    ],
+    "life": 159872,
+    "position": 1336297161,
+    "revid": 490956413
+  },
+  "2012-05-08T06:03:53Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 98406267,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 98406267,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 42607392,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 125705360,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Birth control",
+        "name": "Birth_control",
+        "rank": 5,
+        "type": "normal",
+        "age": 42607392,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. Policy",
+        "name": "Policy",
+        "rank": 6,
+        "type": "normal",
+        "age": 131491319,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. China",
+        "name": "China",
+        "rank": 7,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 8,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.3. India",
+        "name": "India",
+        "rank": 9,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.4. Iran",
+        "name": "Iran",
+        "rank": 10,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.5. Ireland",
+        "name": "Ireland",
+        "rank": 11,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.6. Pakistan",
+        "name": "Pakistan",
+        "rank": 12,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.7. Russia",
+        "name": "Russia",
+        "rank": 13,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.8. The Philippines",
+        "name": "The_Philippines",
+        "rank": 14,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.9. Singapore",
+        "name": "Singapore",
+        "rank": 15,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.10. United Kingdom",
+        "name": "United_Kingdom",
+        "rank": 16,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.11. United States",
+        "name": "United_States",
+        "rank": 17,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. World Contraception Day",
+        "name": "World_Contraception_Day",
+        "rank": 18,
+        "type": "normal",
+        "age": 3031684,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. See also",
+        "name": "See_also",
+        "rank": 19,
+        "type": "normal",
+        "age": 177930363,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "7. References",
+        "name": "References",
+        "rank": 20,
+        "type": "normal",
+        "age": 156939476,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "8. External links",
+        "name": "External_links",
+        "rank": 21,
+        "type": "normal",
+        "age": 49456377,
+        "edits": 0
+      }
+    ],
+    "life": 5884920,
+    "position": 1336457033,
+    "revid": 491325658
+  },
+  "2012-07-15T08:45:53Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 104291187,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 104291187,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 48492312,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Finances",
+        "name": "Finances",
+        "rank": 4,
+        "type": "normal",
+        "age": 131590280,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Birth control",
+        "name": "Birth_control",
+        "rank": 5,
+        "type": "normal",
+        "age": 48492312,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. Policy",
+        "name": "Policy",
+        "rank": 6,
+        "type": "normal",
+        "age": 137376239,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. China",
+        "name": "China",
+        "rank": 7,
+        "type": "normal",
+        "age": 5884920,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 8,
+        "type": "normal",
+        "age": 5884920,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.3. India",
+        "name": "India",
+        "rank": 9,
+        "type": "normal",
+        "age": 5884920,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.4. Iran",
+        "name": "Iran",
+        "rank": 10,
+        "type": "normal",
+        "age": 5884920,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.5. Ireland",
+        "name": "Ireland",
+        "rank": 11,
+        "type": "normal",
+        "age": 5884920,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.6. Pakistan",
+        "name": "Pakistan",
+        "rank": 12,
+        "type": "normal",
+        "age": 5884920,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.7. Russia",
+        "name": "Russia",
+        "rank": 13,
+        "type": "normal",
+        "age": 5884920,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.8. The Philippines",
+        "name": "The_Philippines",
+        "rank": 14,
+        "type": "dead"
+      },
+      {
+        "group": 2,
+        "label": "4.8. Philippines",
+        "name": "Philippines",
+        "rank": 14,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.9. Singapore",
+        "name": "Singapore",
+        "rank": 15,
+        "type": "normal",
+        "age": 5884920,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.10. United Kingdom",
+        "name": "United_Kingdom",
+        "rank": 16,
+        "type": "normal",
+        "age": 5884920,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.11. United States",
+        "name": "United_States",
+        "rank": 17,
+        "type": "normal",
+        "age": 5884920,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. World Contraception Day",
+        "name": "World_Contraception_Day",
+        "rank": 18,
+        "type": "normal",
+        "age": 8916604,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. See also",
+        "name": "See_also",
+        "rank": 19,
+        "type": "normal",
+        "age": 183815283,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "7. References",
+        "name": "References",
+        "rank": 20,
+        "type": "normal",
+        "age": 162824396,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "8. External links",
+        "name": "External_links",
+        "rank": 21,
+        "type": "normal",
+        "age": 55341297,
+        "edits": 0
+      }
+    ],
+    "life": 772390,
+    "position": 1342341953,
+    "revid": 502383167
+  },
+  "2012-12-13T16:36:51Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 117365845,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 117365845,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 61566970,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Birth control",
+        "name": "Birth_control",
+        "rank": 4,
+        "type": "normal",
+        "age": 61566970,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Assisted reproductive technology",
+        "name": "Assisted_reproductive_technology",
+        "rank": 5,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. Finances",
+        "name": "Finances",
+        "rank": 6,
+        "type": "normal",
+        "age": 144664938,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Policy",
+        "name": "Policy",
+        "rank": 7,
+        "type": "normal",
+        "age": 150450897,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.1. China",
+        "name": "China",
+        "rank": 8,
+        "type": "normal",
+        "age": 18959578,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 9,
+        "type": "normal",
+        "age": 18959578,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.3. India",
+        "name": "India",
+        "rank": 10,
+        "type": "normal",
+        "age": 18959578,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.4. Iran",
+        "name": "Iran",
+        "rank": 11,
+        "type": "normal",
+        "age": 18959578,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.5. Ireland",
+        "name": "Ireland",
+        "rank": 12,
+        "type": "normal",
+        "age": 18959578,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.6. Pakistan",
+        "name": "Pakistan",
+        "rank": 13,
+        "type": "normal",
+        "age": 18959578,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.7. Russia",
+        "name": "Russia",
+        "rank": 14,
+        "type": "normal",
+        "age": 18959578,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.8. Philippines",
+        "name": "Philippines",
+        "rank": 15,
+        "type": "normal",
+        "age": 13074658,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.9. Singapore",
+        "name": "Singapore",
+        "rank": 16,
+        "type": "normal",
+        "age": 18959578,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.10. United Kingdom",
+        "name": "United_Kingdom",
+        "rank": 17,
+        "type": "normal",
+        "age": 18959578,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "3.11. United States",
+        "name": "United_States",
+        "rank": 18,
+        "type": "normal",
+        "age": 18959578,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. World Contraception Day",
+        "name": "World_Contraception_Day",
+        "rank": 19,
+        "type": "normal",
+        "age": 21991262,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. See also",
+        "name": "See_also",
+        "rank": 20,
+        "type": "normal",
+        "age": 196889941,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. References",
+        "name": "References",
+        "rank": 21,
+        "type": "normal",
+        "age": 175899054,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "7. External links",
+        "name": "External_links",
+        "rank": 22,
+        "type": "normal",
+        "age": 68415955,
+        "edits": 0
+      }
+    ],
+    "life": 5329509,
+    "position": 1355416611,
+    "revid": 527878128
+  },
+  "2013-10-07T15:37:36Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 143109490,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 143109490,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 87310615,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Birth control",
+        "name": "Birth_control",
+        "rank": 4,
+        "type": "normal",
+        "age": 87310615,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Assisted reproductive technology",
+        "name": "Assisted_reproductive_technology",
+        "rank": 5,
+        "type": "normal",
+        "age": 25743645,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. Finances",
+        "name": "Finances",
+        "rank": 6,
+        "type": "normal",
+        "age": 170408583,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. Policy",
+        "name": "Policy",
+        "rank": 7,
+        "type": "dead"
+      },
+      {
+        "group": 1,
+        "label": "3. International oversight",
+        "name": "International_oversight",
+        "rank": 7,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. Regional variations",
+        "name": "Regional_variations",
+        "rank": 8,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. China",
+        "name": "China",
+        "rank": 9,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.2. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 10,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.3. India",
+        "name": "India",
+        "rank": 11,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.4. Iran",
+        "name": "Iran",
+        "rank": 12,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.5. Ireland",
+        "name": "Ireland",
+        "rank": 13,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.6. Pakistan",
+        "name": "Pakistan",
+        "rank": 14,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.7. Russia",
+        "name": "Russia",
+        "rank": 15,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.8. Philippines",
+        "name": "Philippines",
+        "rank": 16,
+        "type": "normal",
+        "age": 38818303,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.9. Singapore",
+        "name": "Singapore",
+        "rank": 17,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.10. United Kingdom",
+        "name": "United_Kingdom",
+        "rank": 18,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.11. United States",
+        "name": "United_States",
+        "rank": 19,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. World Contraception Day",
+        "name": "World_Contraception_Day",
+        "rank": 20,
+        "type": "normal",
+        "age": 47734907,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. See also",
+        "name": "See_also",
+        "rank": 21,
+        "type": "normal",
+        "age": 222633586,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "7. References",
+        "name": "References",
+        "rank": 22,
+        "type": "normal",
+        "age": 201642699,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "8. External links",
+        "name": "External_links",
+        "rank": 23,
+        "type": "normal",
+        "age": 94159600,
+        "edits": 0
+      }
+    ],
+    "life": 1072482,
+    "position": 1381160256,
+    "revid": 576151605
+  },
+  "2013-10-20T01:32:18Z": {
+    "clusters": [
+      {
+        "group": 1,
+        "label": "1. Purposes",
+        "name": "Purposes",
+        "rank": 1,
+        "type": "normal",
+        "age": 143109490,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "1.1. Health",
+        "name": "Health",
+        "rank": 2,
+        "type": "normal",
+        "age": 143109490,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "2. Modern methods",
+        "name": "Modern_methods",
+        "rank": 3,
+        "type": "normal",
+        "age": 87310615,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.1. Birth control",
+        "name": "Birth_control",
+        "rank": 4,
+        "type": "normal",
+        "age": 87310615,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.2. Assisted reproductive technology",
+        "name": "Assisted_reproductive_technology",
+        "rank": 5,
+        "type": "normal",
+        "age": 25743645,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "2.3. Finances",
+        "name": "Finances",
+        "rank": 6,
+        "type": "normal",
+        "age": 170408583,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "3. International oversight",
+        "name": "International_oversight",
+        "rank": 7,
+        "type": "normal",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "4. Regional variations",
+        "name": "Regional_variations",
+        "rank": 8,
+        "type": "normal",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.1. Africa",
+        "name": "Africa",
+        "rank": 9,
+        "type": "new",
+        "age": 0,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.2. China",
+        "name": "China",
+        "rank": 10,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.3. Hong Kong",
+        "name": "Hong_Kong",
+        "rank": 11,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.4. India",
+        "name": "India",
+        "rank": 12,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.5. Iran",
+        "name": "Iran",
+        "rank": 13,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.6. Ireland",
+        "name": "Ireland",
+        "rank": 14,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.7. Pakistan",
+        "name": "Pakistan",
+        "rank": 15,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.8. Russia",
+        "name": "Russia",
+        "rank": 16,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.9. Philippines",
+        "name": "Philippines",
+        "rank": 17,
+        "type": "normal",
+        "age": 38818303,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.10. Singapore",
+        "name": "Singapore",
+        "rank": 18,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.11. United Kingdom",
+        "name": "United_Kingdom",
+        "rank": 19,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 2,
+        "label": "4.12. United States",
+        "name": "United_States",
+        "rank": 20,
+        "type": "normal",
+        "age": 44703223,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "5. World Contraception Day",
+        "name": "World_Contraception_Day",
+        "rank": 21,
+        "type": "normal",
+        "age": 47734907,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "6. See also",
+        "name": "See_also",
+        "rank": 22,
+        "type": "normal",
+        "age": 222633586,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "7. References",
+        "name": "References",
+        "rank": 23,
+        "type": "normal",
+        "age": 201642699,
+        "edits": 0
+      },
+      {
+        "group": 1,
+        "label": "8. External links",
+        "name": "External_links",
+        "rank": 24,
+        "type": "normal",
+        "age": 94159600,
+        "edits": 0
+      }
+    ],
+    "life": 1000000,
+    "position": 1381160256,
+    "revid": 577915834
+  }
+}

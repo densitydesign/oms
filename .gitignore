@@ -1,2 +1,7 @@
+logs/*
+!.gitkeep
+node_modules/
+tmp
 .DS_Store
-stuff/*
+.idea
+caesareansection/data/cs_images_elastic/img/caesareansection/data/cs_images_elastic/img/cs_thumb

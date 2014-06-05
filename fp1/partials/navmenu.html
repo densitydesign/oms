@@ -1,0 +1,8 @@
+<div class="overlay overlay-slidedown">
+  <button type="button" class="overlay-close">Close</button>
+  <nav>
+    <ul>
+        <li ng-repeat="section in sections" ng-if="section.nav" ng-click="utils.scrollToSection(section.id)"><a>{{section.label}}</a></li>
+    </ul>
+  </nav>
+</div>

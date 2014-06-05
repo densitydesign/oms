@@ -1,0 +1,44 @@
+<div class="container-fluid side-all">
+  <div class="row side-all">
+    <div class="col-md-3 col-sm-12 side-panel">
+      <div class="row side-all">
+        <div class="col-md-12 col-sm-9 col-xs-9 adva-cont" legend-step>
+        </div>
+        <div class="col-md-12 col-sm-3 col-xs-3 legend" ng-show="section.legend" legend-static>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 col-sm-12 main-viz">
+      <div id="graph">
+        <div class="container cont-analytics">
+          <div class="row section-row" style="height:100%">
+            <!-- Analytics --> 
+            <div class="col-md-7 col-sm-12 analytics quecont" style="height:100%" >
+              <div class="quetit" style="padding:1px">
+                <h3 class="section-title">results per query</h3>
+                <hr>
+              </div>
+              <div id="query"></div>
+            </div>
+            <!-- Bar Charts --> 
+            <div class="col-md-3 col-sm-12 analytics" style="height:100%">
+              <div style="height:25%" class="catcont">
+                <div class="cattit" style="padding:1px">
+                  <h3 class="section-title">results per category</h3>
+                  <hr>
+                </div>
+                <div id="category">
+                </div>
+              </div>
+              <div style="height:75%" class="domcont">
+                <div class="domtit" style="padding:1px">
+                  <h3 class="section-title">results per domain</h3>
+                  <hr>
+                </div>
+                <div id="domain" style="height:90%">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

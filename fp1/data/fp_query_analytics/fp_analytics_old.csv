@@ -1,0 +1,758 @@
+QUERY	TAG	TLD
+"'Fertility regulation'"	C	ca
+"hormonal cotraceptive"	A10D	others
+"hormonal cotraceptive"	A10C	others
+"hormonal cotraceptive"	A10D	ac.uk
+"hormonal cotraceptive"	A10D	ac.uk
+"condoms 'family planning'"	B2	ac.uk
+"'Family size'"	A03	ac.uk
+"condoms 'family planning'"	B4	others
+"pill contraception"	B2	ca
+"hormonal cotraceptive"	B2	ca
+"contraception"	B2	ca
+"condoms 'family planning'"	B2	ca
+"'Preventing pregnancy'"	B1	ca
+"'Preventing pregnancy'"	B2	ca
+"'Pregnancy prevention'"	B2	ca
+"'Planned parenthood'"	B1	ca
+"'Birth control'"	B2	ca
+"'Birth control'"	B2	ca
+"'Birth control'"	B2	ca
+"'Birth control methods'"	A13C	ca
+"'Birth control methods'"	B2	ca
+"'Birth control methods'"	B2	ca
+"'Birth control methods'"	C	ca
+"'Planned parenthood'"	B4	ca
+"'pill'+'family planning'"	A09	others
+"'Not having babies'"	A03	others
+"IUD 'family planning'"	B2	co.nz
+"condoms 'family planning'"	B2	co.nz
+"condoms 'family planning'"	B2	co.nz
+"'pill'+'family planning'"	A13C	co.nz
+"'Not having babies'"	A03	co.nz
+"'Fertility regulation'"	C	co.nz
+"pill contraception"	A10E	co.uk
+"pill contraception"	B2	co.uk
+"pill contraception"	B2	co.uk
+"IUD 'family planning'"	B2	co.uk
+"hormonal cotraceptive"	A10D	co.uk
+"hormonal cotraceptive"	B2	co.uk
+"hormonal cotraceptive"	B2	co.uk
+"hormonal cotraceptive"	B2	co.uk
+"contraception"	B2	co.uk
+"contraception"	B2	co.uk
+"contraception"	B2	co.uk
+"contraception"	B2	co.uk
+"contraception"	B2	co.uk
+"condoms contraception"	A11	co.uk
+"condoms 'family planning'"	A00	co.uk
+"condoms 'family planning'"	B2	co.uk
+"'Pregnancy prevention'"	A13B	co.uk
+"'pill'+'family planning'"	B1	co.uk
+"'pill'+'family planning'"	B1	co.uk
+"'pill'+'family planning'"	B2	co.uk
+"'pill'+'family planning'"	B2	co.uk
+"'pill'+'family planning'"	B2	co.uk
+"'pill'+'family planning'"	B2	co.uk
+"'Family size'"	A03	co.uk
+"'Family size'"	A03	co.uk
+"'Family size'"	A03	co.uk
+"pill contraception"	A10D	co.za
+"family planning"	B2	co.za
+"'Birth spacing'"	A11	co.za
+"'Preventing pregnancy'"	B2	com
+"pill contraception"	A06	com
+"pill contraception"	A06	com
+"pill contraception"	A06	com
+"pill contraception"	A06	com
+"pill contraception"	A06	com
+"pill contraception"	A06	com
+"pill contraception"	A10E	com
+"pill contraception"	A11	com
+"pill contraception"	B2	com
+"pill contraception"	B2	com
+"pill contraception"	B2	com
+"pill contraception"	B2	com
+"pill contraception"	B3	com
+"IUD 'family planning'"	A10D	com
+"IUD 'family planning'"	A10D	com
+"IUD 'family planning'"	A10D	com
+"IUD 'family planning'"	A11	com
+"IUD 'family planning'"	B2	com
+"IUD 'family planning'"	B2	com
+"hormonal cotraceptive"	A04	com
+"hormonal cotraceptive"	A04	com
+"hormonal cotraceptive"	A04	com
+"hormonal cotraceptive"	A10B	com
+"hormonal cotraceptive"	A10B	com
+"hormonal cotraceptive"	A10B	com
+"hormonal cotraceptive"	A10C	com
+"hormonal cotraceptive"	A10C	com
+"hormonal cotraceptive"	A10C	com
+"hormonal cotraceptive"	A10D	com
+"hormonal cotraceptive"	A10D	com
+"hormonal cotraceptive"	A10D	com
+"hormonal cotraceptive"	A10D	com
+"hormonal cotraceptive"	A10D	com
+"hormonal cotraceptive"	A10D	com
+"hormonal cotraceptive"	A10D	com
+"hormonal cotraceptive"	A10D	com
+"hormonal cotraceptive"	A10D	com
+"hormonal cotraceptive"	A10D	com
+"hormonal cotraceptive"	A10D	com
+"hormonal cotraceptive"	A13B	com
+"hormonal cotraceptive"	A13C	com
+"hormonal cotraceptive"	B2	com
+"hormonal cotraceptive"	B2	com
+"hormonal cotraceptive"	B2	com
+"hormonal cotraceptive"	B2	com
+"hormonal cotraceptive"	B2	com
+"hormonal cotraceptive"	B2	com
+"hormonal cotraceptive"	B2	com
+"hormonal cotraceptive"	B2	com
+"hormonal cotraceptive"	B2	com
+"hormonal cotraceptive"	B3	com
+"hormonal cotraceptive"	B3	com
+"hormonal cotraceptive"	C	com
+"hormonal cotraceptive"	C	com
+"hormonal cotraceptive"	C	com
+"family planning"	A00	com
+"family planning"	A00	com
+"family planning"	A01	com
+"family planning"	A04	com
+"family planning"	A07	com
+"family planning"	A07	com
+"family planning"	A07	com
+"family planning"	B4	com
+"family planning"	B4	com
+"family planning"	B4	com
+"contraception"	A00	com
+"contraception"	A00	com
+"contraception"	A00	com
+"contraception"	A00	com
+"contraception"	A00	com
+"contraception"	A06	com
+"contraception"	A06	com
+"contraception"	A06	com
+"contraception"	A06	com
+"contraception"	A06	com
+"contraception"	A06	com
+"contraception"	A06	com
+"contraception"	A06	com
+"contraception"	A06	com
+"contraception"	A06	com
+"contraception"	A06	com
+"contraception"	A07	com
+"contraception"	A07	com
+"contraception"	A07	com
+"contraception"	A10D	com
+"contraception"	A11	com
+"contraception"	A11	com
+"contraception"	A11	com
+"contraception"	A11	com
+"contraception"	A11	com
+"contraception"	A11	com
+"contraception"	A11	com
+"contraception"	A11	com
+"contraception"	A11	com
+"contraception"	A11	com
+"contraception"	B1	com
+"contraception"	B2	com
+"contraception"	B2	com
+"contraception"	B2	com
+"contraception"	B3	com
+"contraception"	B3	com
+"contraception"	B4	com
+"condoms contraception"	A11	com
+"condoms contraception"	A13B	com
+"condoms contraception"	B1	com
+"condoms contraception"	B1	com
+"condoms contraception"	B1	com
+"condoms contraception"	B2	com
+"condoms contraception"	B2	com
+"condoms contraception"	B2	com
+"condoms contraception"	B4	com
+"condoms 'family planning'"	A01	com
+"condoms 'family planning'"	A06	com
+"condoms 'family planning'"	A11	com
+"condoms 'family planning'"	A11	com
+"condoms 'family planning'"	B1	com
+"condoms 'family planning'"	B2	com
+"'Rhythm methods'"	A13B	com
+"'Rhythm methods'"	B2	com
+"'Rhythm methods'"	B2	com
+"'Rhythm methods'"	C	com
+"'Rhythm methods'"	C	com
+"'Rhythm methods'"	C	com
+"'Rhythm methods'"	C	com
+"'Rhythm methods'"	C	com
+"'Preventing pregnancy'"	A13E	com
+"'Preventing pregnancy'"	B1	com
+"'Preventing pregnancy'"	B1	com
+"'Preventing pregnancy'"	B1	com
+"'Preventing pregnancy'"	B2	com
+"'Preventing pregnancy'"	B2	com
+"'Preventing pregnancy'"	B2	com
+"'Preventing pregnancy'"	B2	com
+"'Preventing pregnancy'"	B2	com
+"'Pregnancy prevention'"	A04	com
+"'Pregnancy prevention'"	A13B	com
+"'Pregnancy prevention'"	A13B	com
+"'Pregnancy prevention'"	A13B	com
+"'Pregnancy prevention'"	A13B	com
+"'Pregnancy prevention'"	A13C	com
+"'Pregnancy prevention'"	A13D	com
+"'Planned parenthood'"	A02	com
+"'Planned parenthood'"	A06	com
+"'Planned parenthood'"	A07	com
+"'Planned parenthood'"	A07	com
+"'Planned parenthood'"	A07	com
+"'Planned parenthood'"	A07	com
+"'Planned parenthood'"	A07	com
+"'Planned parenthood'"	A07	com
+"'Planned parenthood'"	A07	com
+"'Planned parenthood'"	A07	com
+"'Planned parenthood'"	A07	com
+"'Planned parenthood'"	A07	com
+"'pill'+'family planning'"	A04	com
+"'pill'+'family planning'"	A04	com
+"'pill'+'family planning'"	A10D	com
+"'pill'+'family planning'"	A10D	com
+"'pill'+'family planning'"	B1	com
+"'pill'+'family planning'"	B1	com
+"'pill'+'family planning'"	B4	com
+"'pill'+'family planning'"	B4	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A03	com
+"'Not having babies'"	A11	com
+"'Not having babies'"	A11	com
+"'Not having babies'"	A13B	com
+"'Not having babies'"	A13B	com
+"'Not having babies'"	A13B	com
+"'Not having babies'"	A13B	com
+"'Not having babies'"	A13E	com
+"'Not having babies'"	A13E	com
+"'Not having babies'"	A13H	com
+"'Fertility regulation'"	C	com
+"'Fertility control'"	A07	com
+"'Fertility control'"	A09	com
+"'Fertility control'"	C	com
+"'Family size'"	A03	com
+"'Family size'"	A03	com
+"'Family size'"	A03	com
+"'Family size'"	A03	com
+"'Family size'"	A03	com
+"'Family size'"	A03	com
+"'Family size'"	A03	com
+"'Family size'"	A03	com
+"'Birth spacing'"	A10A	com
+"'Birth spacing'"	A10A	com
+"'Birth spacing'"	A10A	com
+"'Birth spacing'"	A10A	com
+"'Birth spacing'"	A10A	com
+"'Birth spacing'"	A10A	com
+"'Birth spacing'"	A10A	com
+"'Birth control'"	A01	com
+"'Birth control'"	A06	com
+"'Birth control'"	A06	com
+"'Birth control'"	A10D	com
+"'Birth control'"	A11	com
+"'Birth control'"	B1	com
+"'Birth control'"	B1	com
+"'Birth control'"	B2	com
+"'Birth control'"	B2	com
+"'Birth control'"	B2	com
+"'Birth control'"	B2	com
+"'Birth control'"	B2	com
+"'Birth control'"	B3	com
+"'Birth control methods'"	A13C	com
+"'Birth control methods'"	B2	com
+"'Birth control methods'"	B2	com
+"'Birth control methods'"	B2	com
+"'Birth control methods'"	B2	com
+"'Birth control methods'"	B2	com
+"'Birth control methods'"	B2	com
+"'Birth control methods'"	B2	com
+"'Birth control methods'"	B2	com
+"'Birth control methods'"	B2	com
+"pill contraception"	B2	com
+"IUD 'family planning'"	B1	com
+"IUD 'family planning'"	B2	com
+"hormonal cotraceptive"	B2	com
+"family planning"	B4	com
+"family planning"	B4	com
+"contraception"	B2	com
+"contraception"	B2	com
+"condoms 'family planning'"	B2	com
+"'pill'+'family planning'"	B2	com
+"'pill'+'family planning'"	B2	com
+"'Not having babies'"	A10A	com
+"'Birth control'"	B4	com
+"'Birth spacing'"	A10A	com
+"'Birth spacing'"	A10A	com
+"pill contraception"	B2	edu
+"IUD 'family planning'"	B2	edu
+"IUD 'family planning'"	B2	edu
+"hormonal cotraceptive"	A09	edu
+"hormonal cotraceptive"	A10C	edu
+"hormonal cotraceptive"	A10D	edu
+"hormonal cotraceptive"	B2	edu
+"hormonal cotraceptive"	B2	edu
+"contraception"	A00	edu
+"contraception"	B2	edu
+"contraception"	B2	edu
+"condoms contraception"	A13C	edu
+"condoms contraception"	A13C	edu
+"condoms contraception"	A13C	edu
+"condoms contraception"	B1	edu
+"condoms contraception"	B2	edu
+"condoms 'family planning'"	B2	edu
+"'Preventing pregnancy'"	A06	edu
+"'Preventing pregnancy'"	A13C	edu
+"'Pregnancy prevention'"	A02	edu
+"'Pregnancy prevention'"	A13B	edu
+"'Pregnancy prevention'"	B1	edu
+"'pill'+'family planning'"	B2	edu
+"'Fertility control'"	A01	edu
+"'Birth control methods'"	B2	edu
+"hormonal cotraceptive"	A10E	eu
+"contraception"	A00	eu
+"contraception"	B2	others
+"condoms 'family planning'"	B2	others
+"pill contraception"	A10B	gov
+"IUD 'family planning'"	B2	gov
+"hormonal cotraceptive"	A10B	gov
+"hormonal cotraceptive"	A10C	gov
+"hormonal cotraceptive"	A10C	gov
+"hormonal cotraceptive"	A10C	gov
+"hormonal cotraceptive"	A10D	gov
+"hormonal cotraceptive"	A10E	gov
+"family planning"	A00	gov
+"family planning"	A04	gov
+"family planning"	A06	gov
+"family planning"	A09	gov
+"family planning"	A09	gov
+"family planning"	B4	gov
+"family planning"	B4	gov
+"family planning"	B4	gov
+"family planning"	B4	gov
+"family planning"	B4	gov
+"family planning"	B4	gov
+"family planning"	B4	gov
+"family planning"	B4	gov
+"family planning"	B4	gov
+"family planning"	B4	gov
+"family planning"	B4	gov
+"contraception"	A06	gov
+"contraception"	A06	gov
+"contraception"	A09	gov
+"contraception"	B1	gov
+"contraception"	B2	gov
+"condoms contraception"	A13C	gov
+"condoms 'family planning'"	B2	gov
+"condoms 'family planning'"	B2	gov
+"'Preventing pregnancy'"	A13B	gov
+"'Preventing pregnancy'"	A13C	gov
+"'Preventing pregnancy'"	B2	gov
+"'Pregnancy prevention'"	A02	gov
+"'Pregnancy prevention'"	A02	gov
+"'Pregnancy prevention'"	A02	gov
+"'Pregnancy prevention'"	A02	gov
+"'Pregnancy prevention'"	A13B	gov
+"'Pregnancy prevention'"	A13B	gov
+"'Pregnancy prevention'"	A13B	gov
+"'Pregnancy prevention'"	A13C	gov
+"'Pregnancy prevention'"	A13G	gov
+"'Pregnancy prevention'"	A13G	gov
+"'Pregnancy prevention'"	B1	gov
+"'pill'+'family planning'"	B2	gov
+"'pill'+'family planning'"	B2	gov
+"'Birth spacing'"	A10A	gov
+"'Birth spacing'"	A10A	gov
+"'Birth control'"	A13G	gov
+"'Birth control'"	B1	gov
+"'Birth control'"	B2	gov
+"'Birth control methods'"	B1	gov
+"'Birth control methods'"	B2	gov
+"'Birth control methods'"	B2	gov
+"'Birth control methods'"	B2	gov
+"'Birth control methods'"	B4	gov
+"pill contraception"	B2	gov
+"pill contraception"	B2	gov
+"pill contraception"	B2	gov
+"contraception"	A02	gov
+"contraception"	A13C	gov
+"contraception"	A13C	gov
+"contraception"	B2	gov
+"condoms contraception"	B1	gov
+"condoms contraception"	B2	gov
+"condoms contraception"	B2	gov
+"condoms contraception"	B2	gov
+"'Birth spacing'"	A10A	gov
+"hormonal cotraceptive"	A10D	gov
+"'Preventing pregnancy'"	A13C	gov
+"'Fertility regulation'"	A06	gov
+"IUD 'family planning'"	B2	gov
+"hormonal cotraceptive"	B2	gov
+"contraception"	A06	gov
+"family planning"	B4	us
+"pill contraception"	A10D	ie
+"pill contraception"	B2	ie
+"pill contraception"	B2	ie
+"pill contraception"	B2	ie
+"family planning"	B4	ie
+"contraception"	B2	ie
+"contraception"	B2	ie
+"contraception"	B4	ie
+"contraception"	B4	ie
+"condoms contraception"	B2	ie
+"condoms contraception"	B2	ie
+"condoms contraception"	B2	ie
+"condoms contraception"	B2	ie
+"'pill'+'family planning'"	B2	ie
+"'pill'+'family planning'"	B2	ie
+"'Family size'"	A03	ie
+"'Fertility regulation'"	A09	in
+"'Birth spacing'"	A10A	in
+"'Family size'"	A03	in
+"'Rhythm methods'"	C	others
+"hormonal cotraceptive"	A10C	int
+"hormonal cotraceptive"	A10E	int
+"family planning"	A09	int
+"'Fertility regulation'"	B2	int
+"'Birth spacing'"	A10A	int
+"IUD 'family planning'"	B2	net
+"hormonal cotraceptive"	A10C	net
+"hormonal cotraceptive"	A10C	net
+"hormonal cotraceptive"	A10D	net
+"family planning"	A09	net
+"family planning"	B4	net
+"family planning"	B4	net
+"family planning"	B4	net
+"family planning"	C	net
+"condoms contraception"	A11	net
+"condoms contraception"	B2	net
+"'Rhythm methods'"	A11	net
+"'pill'+'family planning'"	B2	net
+"'Fertility regulation'"	A09	net
+"hormonal cotraceptive"	B2	others
+"pill contraception"	B2	org
+"pill contraception"	B2	org
+"IUD 'family planning'"	A09	org
+"IUD 'family planning'"	A13C	org
+"IUD 'family planning'"	B2	org
+"IUD 'family planning'"	B2	org
+"IUD 'family planning'"	B2	org
+"hormonal cotraceptive"	A06	org
+"hormonal cotraceptive"	A09	org
+"hormonal cotraceptive"	A09	org
+"hormonal cotraceptive"	A09	org
+"hormonal cotraceptive"	A10B	org
+"hormonal cotraceptive"	A10C	org
+"hormonal cotraceptive"	A10C	org
+"hormonal cotraceptive"	A10C	org
+"hormonal cotraceptive"	A10C	org
+"hormonal cotraceptive"	A10C	org
+"hormonal cotraceptive"	A10C	org
+"hormonal cotraceptive"	A10C	org
+"hormonal cotraceptive"	A10D	org
+"hormonal cotraceptive"	A10D	org
+"hormonal cotraceptive"	A10D	org
+"hormonal cotraceptive"	A10D	org
+"hormonal cotraceptive"	A10D	org
+"hormonal cotraceptive"	A10D	org
+"hormonal cotraceptive"	A10D	org
+"hormonal cotraceptive"	A11	org
+"hormonal cotraceptive"	A11	org
+"hormonal cotraceptive"	B1	org
+"hormonal cotraceptive"	B2	org
+"hormonal cotraceptive"	B2	org
+"hormonal cotraceptive"	B2	org
+"hormonal cotraceptive"	B2	org
+"hormonal cotraceptive"	B2	org
+"hormonal cotraceptive"	B2	org
+"hormonal cotraceptive"	B2	org
+"planned parenthood"	A00	org
+"family planning"	B2	org
+"family planning"	A00	org
+"family planning"	A00	org
+"family planning"	A00	org
+"family planning"	A00	org
+"family planning"	A00	org
+"family planning"	A00	org
+"family planning"	A00	org
+"family planning"	A00	org
+"family planning"	A00	org
+"family planning"	A00	org
+"family planning"	A01	org
+"family planning"	A01	org
+"family planning"	A01	org
+"family planning"	A09	org
+"family planning"	A09	org
+"family planning"	A09	org
+"family planning"	A09	org
+"family planning"	A11	org
+"family planning"	B1	org
+"family planning"	B1	org
+"family planning"	B2	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	C	org
+"contraception"	A00	org
+"contraception"	A00	org
+"contraception"	A00	org
+"contraception"	A00	org
+"contraception"	A01	org
+"contraception"	A06	org
+"contraception"	A07	org
+"contraception"	A07	org
+"contraception"	A11	org
+"contraception"	A11	org
+"contraception"	A11	org
+"contraception"	A13C	org
+"contraception"	A13E	org
+"contraception"	B2	org
+"contraception"	B2	org
+"contraception"	B2	org
+"contraception"	B2	org
+"contraception"	B2	org
+"contraception"	B2	org
+"contraception"	B2	org
+"contraception"	B2	org
+"condoms contraception"	A00	org
+"condoms contraception"	A07	org
+"condoms contraception"	A13C	org
+"condoms contraception"	A13C	org
+"condoms contraception"	B2	org
+"condoms contraception"	B2	org
+"condoms contraception"	B2	org
+"condoms 'family planning'"	A05	org
+"condoms 'family planning'"	A09	org
+"condoms 'family planning'"	A13C	org
+"condoms 'family planning'"	B1	org
+"condoms 'family planning'"	B1	org
+"condoms 'family planning'"	B3	org
+"condoms 'family planning'"	B4	org
+"'Rhythm methods'"	B2	org
+"'Rhythm methods'"	C	org
+"'Rhythm methods'"	C	org
+"'Preventing pregnancy'"	A06	org
+"'Preventing pregnancy'"	A09	org
+"'Preventing pregnancy'"	A10D	org
+"'Preventing pregnancy'"	A13B	org
+"'Preventing pregnancy'"	B1	org
+"'Preventing pregnancy'"	B2	org
+"'Preventing pregnancy'"	B2	org
+"'Preventing pregnancy'"	C	org
+"'Preventing pregnancy'"	C	org
+"'Pregnancy prevention'"	A13F	org
+"'Pregnancy prevention'"	A02	org
+"'Pregnancy prevention'"	A02	org
+"'Pregnancy prevention'"	A02	org
+"'Pregnancy prevention'"	A02	org
+"'Pregnancy prevention'"	A02	org
+"'Pregnancy prevention'"	A02	org
+"'Pregnancy prevention'"	A02	org
+"'Pregnancy prevention'"	A02	org
+"'Pregnancy prevention'"	A02	org
+"'Pregnancy prevention'"	A02	org
+"'Pregnancy prevention'"	A02	org
+"'Pregnancy prevention'"	A02	org
+"'Pregnancy prevention'"	A13A	org
+"'Pregnancy prevention'"	A13B	org
+"'Pregnancy prevention'"	A13B	org
+"'Pregnancy prevention'"	A13B	org
+"'Pregnancy prevention'"	A13B	org
+"'Pregnancy prevention'"	A13C	org
+"'Pregnancy prevention'"	A13C	org
+"'Pregnancy prevention'"	A13C	org
+"'Pregnancy prevention'"	A13D	org
+"'Pregnancy prevention'"	A13G	org
+"'Pregnancy prevention'"	A13G	org
+"'Pregnancy prevention'"	B1	org
+"'Pregnancy prevention'"	B4	org
+"'Planned parenthood'"	A00	org
+"'Planned parenthood'"	A06	org
+"'Planned parenthood'"	A06	org
+"'Planned parenthood'"	A06	org
+"'Planned parenthood'"	A06	org
+"'Planned parenthood'"	A06	org
+"'Planned parenthood'"	A06	org
+"'Planned parenthood'"	A07	org
+"'Planned parenthood'"	A07	org
+"'Planned parenthood'"	A07	org
+"'Planned parenthood'"	A13B	org
+"'Planned parenthood'"	A13F	org
+"'Planned parenthood'"	B4	org
+"'Planned parenthood'"	B4	org
+"'Planned parenthood'"	B4	org
+"'Planned parenthood'"	B4	org
+"'Planned parenthood'"	B4	org
+"'Planned parenthood'"	B4	org
+"'Planned parenthood'"	B4	org
+"'pill'+'family planning'"	A02	org
+"'pill'+'family planning'"	A13C	org
+"'pill'+'family planning'"	B1	org
+"'pill'+'family planning'"	B2	org
+"'Not having babies'"	A03	org
+"'Not having babies'"	A11	org
+"'Fertility regulation'"	A00	org
+"'Fertility regulation'"	C	org
+"'Fertility control'"	A08	org
+"'Family size'"	A03	org
+"'Family size'"	A03	org
+"'Family size'"	A09	org
+"'Birth spacing'"	A10A	org
+"'Birth spacing'"	A10A	org
+"'Birth spacing'"	A10A	org
+"'Birth spacing'"	A10A	org
+"'Birth spacing'"	A10A	org
+"'Birth spacing'"	A10A	org
+"'Birth spacing'"	A10A	org
+"'Birth control'"	A06	org
+"'Birth control'"	A06	org
+"'Birth control'"	A11	org
+"'Birth control'"	B2	org
+"'Birth control'"	B2	org
+"'Birth control'"	B2	org
+"'Birth control methods'"	A13C	org
+"'Birth control methods'"	B1	org
+"'Birth control methods'"	B1	org
+"'Birth control methods'"	B2	org
+"'Birth control methods'"	B2	org
+"'Birth control methods'"	B2	org
+"'Birth control methods'"	B2	org
+"'Birth control methods'"	B2	org
+"'Birth control methods'"	B2	org
+"'Birth control methods'"	B2	org
+"'Birth control methods'"	B2	org
+"'Birth control methods'"	B2	org
+"'Birth control methods'"	B4	org
+"'Birth control methods'"	B4	org
+"'Birth control methods'"	B4	org
+"pill contraception"	B2	org
+"pill contraception"	B2	org
+"IUD 'family planning'"	B2	org
+"IUD 'family planning'"	B2	org
+"IUD 'family planning'"	B2	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"contraception"	B2	org
+"contraception"	B2	org
+"contraception"	B2	org
+"contraception"	B2	org
+"contraception"	B4	org
+"condoms contraception"	B2	org
+"condoms 'family planning'"	B1	org
+"condoms 'family planning'"	B2	org
+"condoms 'family planning'"	B2	org
+"condoms 'family planning'"	B2	org
+"condoms 'family planning'"	B2	org
+"'pill'+'family planning'"	B2	org
+"'pill'+'family planning'"	B2	org
+"'Fertility control'"	A07	org
+"family planning"	A09	org
+"IUD 'family planning'"	B2	org
+"family planning"	B4	org
+"family planning"	A00	org
+"'Birth spacing'"	A10A	org
+"IUD 'family planning'"	B2	org
+"IUD 'family planning'"	B2	org
+"IUD 'family planning'"	B2	org
+"family planning"	A05	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"family planning"	B4	org
+"contraception"	B2	org
+"condoms 'family planning'"	B1	org
+"condoms 'family planning'"	B3	org
+"condoms 'family planning'"	B4	org
+"condoms 'family planning'"	B4	org
+"'pill'+'family planning'"	B2	org
+"'pill'+'family planning'"	B2	org
+"'pill'+'family planning'"	B2	org
+"'pill'+'family planning'"	B2	org
+"'pill'+'family planning'"	B2	org
+"'Fertility regulation'"	C	org
+"IUD 'family planning'"	B2	org
+"IUD 'family planning'"	B2	org
+"IUD 'family planning'"	B2	org
+"hormonal cotraceptive"	A10E	org
+"hormonal cotraceptive"	B2	org
+"family planning"	B4	org
+"contraception"	A02	org
+"contraception"	A13C	org
+"contraception"	B1	org
+"contraception"	B1	org
+"contraception"	B1	org
+"contraception"	B2	org
+"contraception"	B2	org
+"contraception"	B2	org
+"contraception"	B2	org
+"condoms 'family planning'"	A09	org
+"condoms 'family planning'"	B2	org
+"'pill'+'family planning'"	B2	org
+"'pill'+'family planning'"	B2	org
+"'pill'+'family planning'"	B2	org
+"'pill'+'family planning'"	B4	org
+"'pill'+'family planning'"	B4	org
+"'pill'+'family planning'"	A10A	others
+"family planning"	A00	ug
+"'pill'+'family planning'"	B2	ug
+"pill contraception"	B2	uk
+"pill contraception"	B2	uk
+"hormonal cotraceptive"	B2	uk
+"hormonal cotraceptive"	B2	uk
+"hormonal cotraceptive"	B2	uk
+"contraception"	B2	uk
+"contraception"	B2	uk
+"contraception"	B2	uk
+"contraception"	B2	uk
+"contraception"	B2	uk
+"condoms contraception"	B2	uk
+"condoms contraception"	B2	uk
+"condoms contraception"	B2	uk
+"condoms 'family planning'"	A13C	uk
+"'Preventing pregnancy'"	B2	uk
+"'Preventing pregnancy'"	B2	uk
+"'pill'+'family planning'"	B2	uk
+"'Birth control'"	B2	uk
+"family planning"	B4	us
+"family planning"	B4	us
+"'Pregnancy prevention'"	A13A	us
+"family planning"	B1	us
+"family planning"	B4	us
+"family planning"	B4	us
+"family planning"	B4	us
+'Pregnancy prevention'	A13B	us
