@@ -633,14 +633,18 @@ angular.module('who.directives', [])
           dataslope = {},
           slope,
           chart,
+          legendCont,
+          len,
           loaded = false;
 
         var container = element.find("#graph")[0],
-            containerPagination = element.find("#paginationStep")[0]
+            containerPagination = element.find("#paginationStep")[0],
+            graphHeight = element.find("#graph").height()
+
 
         var init = function(){
 
-          fileService.getFile('data/' + scope.section.id + '/slope_tfidf.json').then(
+          fileService.getFile('data/' + scope.section.id + '/FP_tfidf.json').then(
             function(data){
               dataslope.dataTFIDF = data;
               dataslope.dataTFIDF.forEach(function(d){
@@ -658,15 +662,13 @@ angular.module('who.directives', [])
                     f['value'] = d3.round(f['value'],2)
                 })
               })
-
-              console.log(dataslope.dataTFIDF)
             },
             function(error){
               element.find('#graph').html(error)
             }
           );
 
-          fileService.getFile('data/' + scope.section.id + '/slope_tf.json').then(
+          fileService.getFile('data/' + scope.section.id + '/FP_tf.json').then(
             function(data){
               
               //scope.loadingcomplete()
@@ -687,10 +689,11 @@ angular.module('who.directives', [])
                     f['value'] = d3.round(f['value'],2)
                 })
               })
-              var len = data[0].values.length;
-              slope = who.slopeChart()
+              len = data[0].values.length;
+              slope = who.spallozzoChart()
                 .graphHeight(len*15)
                 .graphWidth(element.find("#graph").width())
+                .showCat(["CORPUS"])
                 .on("clicked", function(d){
                   var words = slope.wordStep();
                   if(words.indexOf(d) < 0){
@@ -701,13 +704,32 @@ angular.module('who.directives', [])
                     chart.call(slope)                    
                   }
                 })
+                .on("sorted", function(d){
+                    slope.sorted(d)
+                    chart.call(slope)
+                })
 
-              chart = d3.select(container).style("overflow-y", "scroll").style("overflow-x", "hidden").append('div').attr("class", "slope-cont")
-                      .append("svg")
-                      .attr("width", element.find("#graph").width())
-                      .attr("height", len*15)
+              legendCont = d3.select(container)
+                            .append("div")
+                            .attr("class", "spallozzoLegend")
+                            .append("svg")
+                            .attr("width", element.find("#graph").width())
+                            .attr("height", 45)
 
-              chart.datum(dataslope.dataTF).call(slope)
+              chart = d3.select(container)
+                      .append("div")
+                      .attr("class", "slope-cont")
+                        .append("svg")
+                        .attr("width", element.find("#graph").width())
+                        .attr("height", len*15)
+
+              $(".slope-cont").slimScroll({
+                  height: graphHeight - 51 + "px",
+                  size: '5px',
+                  alwaysVisible: false
+                });
+              
+              chart.datum(dataslope.dataTF).call(slope.legendCont(legendCont))
 
               loaded = true;
 
@@ -733,26 +755,20 @@ angular.module('who.directives', [])
 
         var step = [
           {init: function(){
-            slope.showCat(false).showLines(false)
+            slope.showCat(["CORPUS"]).catStep([]).hidefilter(false).graphHeight(len*20)
             chart.call(slope)
             }
           },
           {init: function(){
-            slope.showLines(true).showCat(["CONTROVERSIES", "CONTROVERSIES. RISKS&BENEFITS", "CONTROVERSIES. YOUTH", "MEDICAL", "NATURAL FAMILY PLANNING"])
+            slope.showCat([ "Medical", "C:advocacy", "C:development"]).catStep([]).hidefilter(false).graphHeight(len*20)
             chart.call(slope)
             }
           }
         ]
 
-        // var slopeCat = {
-        //   "CONTROVERSIES" : ["C|advocacy","C|development","C|educationlifestyle/sexual health","C|family size","C|finances","C|human rights","C|law","C|politics","C|population growth", "C|programme","C|religion"],
-        //   "CONTROVERSIES. RISKS&BENEFITS": ["CRB|birth spacing","CRB|cancer","CRB|HIV","CRB|others","CRB|VTE"], 
-        //   "CONTROVERSIES. YOUTH": ["CY|capacity building","CY|communication","CY|education contraception","CY|law","CY|politics","CY|religion","CY|services","CY|statistics"],
-        //   "MEDICAL": ["M|lifestyle/sexual health", "M|methods","M|sales","M|services"]
-        // }
-
         scope.ctrlmodels[scope.section.id].totalItems = step.length
-        var pag = "<pagination previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
+        var pag = "<pager previous-text='&lsaquo; previous' next-text='next &rsaquo;' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pager>"
+        //var pag = "<pagination max-size='ctrlmodels." + scope.section.id + ".maxItems' previous-text='&lsaquo;' next-text='&rsaquo;' class='pagination-sm' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pagination>"
         var e = angular.element(pag)
         $(containerPagination).append(e)
         $compile(e)(scope)
@@ -769,53 +785,16 @@ angular.module('who.directives', [])
 
         scope.$watch('ctrlmodels.slopetfidf', function(newValue, oldValue){
             if (newValue !== oldValue){
-              chart.datum(dataslope[newValue]).call(slope.wordStep([]))
+              chart.datum(dataslope[newValue]).call(slope)
             }
         });
 
-        scope.$watch('ctrlmodels.slopescale', function(newValue, oldValue){
-            if (newValue !== oldValue){
-              slope.normalized(newValue)
-              chart.call(slope)
-            }
-        });
-
-        scope.$watch('ctrlmodels.fp_text_slope.slopeCatSel["CONTROVERSIES"]', function(newValue, oldValue){
-            if (newValue !== oldValue){
-                var slopeCat = slope.showCat()
-                slopeCat[0] = newValue;
-                slope.showCat(slopeCat)
-                chart.call(slope)               
-            }
-        });
-
-        scope.$watch('ctrlmodels.fp_text_slope.slopeCatSel["CONTROVERSIES. RISKS&BENEFITS"]', function(newValue, oldValue){
-            if (newValue !== oldValue){
-                var slopeCat = slope.showCat()
-                slopeCat[1] = newValue;
-                slope.showCat(slopeCat)
-                chart.call(slope)               
-            }
-        });
-
-        scope.$watch('ctrlmodels.fp_text_slope.slopeCatSel["CONTROVERSIES. YOUTH"]', function(newValue, oldValue){
-            if (newValue !== oldValue){
-                var slopeCat = slope.showCat()
-                slopeCat[2] = newValue;
-                slope.showCat(slopeCat)
-                chart.call(slope)               
-            }
-        });
-
-        scope.$watch('ctrlmodels.fp_text_slope.slopeCatSel["MEDICAL"]', function(newValue, oldValue){
-            if (newValue !== oldValue){
-                var slopeCat = slope.showCat()
-                slopeCat[3] = newValue;
-                slope.showCat(slopeCat)
-                chart.call(slope)               
-            }
-        });
-
+        // scope.$watch('ctrlmodels.slopescale', function(newValue, oldValue){
+        //     if (newValue !== oldValue){
+        //       slope.normalized(newValue)
+        //       chart.call(slope)
+        //     }
+        // });
 
         scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
           if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
@@ -823,6 +802,32 @@ angular.module('who.directives', [])
             }
         })
 
+        scope.$watch('ctrlmodels.fp_text_slope.slopeCatSel.one', function(newValue, oldValue){
+            if (newValue !== oldValue){
+                var slopeCat = slope.showCat()
+                slopeCat[0] = newValue;
+                slope.showCat(slopeCat).catStep([]).hidefilter(false).graphHeight(len*20)
+                chart.call(slope)               
+            }
+        });
+
+        scope.$watch('ctrlmodels.fp_text_slope.slopeCatSel.two', function(newValue, oldValue){
+            if (newValue !== oldValue){
+                var slopeCat = slope.showCat()
+                slopeCat[1] = newValue;
+                slope.showCat(slopeCat).catStep([]).hidefilter(false).graphHeight(len*20)
+                chart.call(slope)               
+            }
+        });
+
+        scope.$watch('ctrlmodels.fp_text_slope.slopeCatSel.three', function(newValue, oldValue){
+            if (newValue !== oldValue){
+                var slopeCat = slope.showCat()
+                slopeCat[2] = newValue;
+                slope.showCat(slopeCat).catStep([]).hidefilter(false).graphHeight(len*20)
+                chart.call(slope)               
+            }
+        });
 
       }
     };
@@ -1627,6 +1632,144 @@ angular.module('who.directives', [])
             init()
             });
           }
+        })
+
+      }
+    };
+  }])
+  .directive('barChartQuery',['fileService', '$timeout', function (fileService, $timeout) {
+    return {
+      restrict: 'A',
+      replace: false,
+      templateUrl: 'partials/barchartquery.html',
+      link: function postLink(scope, element, attrs) {
+
+          var csv,
+              tagContainer = element.find("#category")[0],
+              domainContainer = element.find("#domain")[0],
+              tagChart,
+              domainChart,
+              tag,
+              tags,
+              host,
+              hosts,
+              tld,
+              tlds,
+              category,
+              all,
+              selected,
+              loaded = false;
+
+
+           var init = function(){
+            fileService.getFile('data/' + scope.section.id + '/fp_analytics.tsv').then(
+              function(data){
+                //csv = data.hosts;
+                csv = d3.tsv.parse(data)
+
+                // Create the crossfilter for the relevant dimensions and groups.
+                category = crossfilter(csv);
+                all = category.groupAll()
+                tag = category.dimension(function(d) { return d.tag; })
+                tags = tag.group()
+                host = category.dimension(function(d) { return d.host; })
+                hosts = host.group()
+                //tld = category.dimension(function(d) { return d.tld; })
+                //tlds = tld.group()
+
+                // var pass = [];
+
+                // function reduceAdd(p, v) {
+                //   if(pass.indexOf(v.host) < 0){
+                //     pass.push(v.host)
+                //     ++p
+                //   }
+                //   return p;
+                // }
+
+                // function reduceRemove(p, v) {
+                //   if(pass.indexOf(v.host) > -1){
+                //     pass.splice(pass.indexOf(v.host),1)
+                //     --p
+                //   }
+                //   return p;
+                // }
+
+                // function reduceInitial() {
+                //   pass = []
+                //   return 0;
+                // }
+                
+                
+                // var tlds = tld.group().reduce(reduceAdd, reduceRemove, reduceInitial)
+                
+                selected = []
+                tagChart = who.barChart()
+                        .xMax(tags.top(1)[0].value)
+                        .dimension(tag)
+                        .group(tags)
+                        .responsive(true)
+                        //.order(["medical", "controversies", "experiences","none"])
+                        .on("clicked",function(d){
+                            if(selected.indexOf(d) < 0){
+                              selected.push(d)
+                            }
+                            else{
+                              selected.splice(selected.indexOf(d),1)
+                            }
+                            
+                            $timeout(function(){
+                              scope.ctrlmodels.fp_query_network.sel = selected
+                            })
+
+                        })
+
+                // domainChart = who.barChart()
+                //     .xMax(tags.top(1)[0].value)
+                //     .dimension(tld)
+                //     .group(tlds)
+                //     .responsive(true)
+                //     .cut(4)
+
+
+                tagContainer = d3.select(tagContainer)
+                                .on("click", function(d){
+                                  //domainContainer.call(domainChart)
+                                })
+                                .call(tagChart)
+
+                // domainContainer = d3.select(domainContainer)
+                //                   .on("click", function(){
+                //                     tagContainer.call(tagChart)
+                //                   })
+                //                 .call(domainChart)
+
+                loaded = true;                       
+              },
+              function(error){
+                var txt = error
+              }
+            );
+          }
+
+
+           $timeout(function (){
+              //init();
+          })
+
+
+        scope.$watch('utils.section', function(newValue, oldValue){
+         if(newValue == scope.section.id && loaded === false){
+           $timeout(function (){
+            init()
+            });
+          }
+        })
+
+        scope.$on('resetFilter', function(){
+              selected = []
+              scope.ctrlmodels.fp_query_network.sel = selected
+              tagContainer.call(tagChart.query([]))
         })
 
       }

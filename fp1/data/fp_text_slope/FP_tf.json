@@ -1,0 +1,3922 @@
+[
+{
+  "step" : "CORPUS",
+  "values" : [
+    {
+      "key" : "woman",
+      "value" : 0.027996161,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "pill",
+      "value" : 0.042215972,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "family",
+      "value" : 0.022281371,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "condom",
+      "value" : 0.034715893,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "method",
+      "value" : 0.034111076,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "child",
+      "value" : 0.023471118,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "pregnancy",
+      "value" : 0.019999042,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "access",
+      "value" : 0.025887968,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "company",
+      "value" : 0.020588793,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "baby",
+      "value" : 0.021318253,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "abortion",
+      "value" : 0.015008053,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "person",
+      "value" : 0.014753604,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "development",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "percent",
+      "value" : 0.019480906,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "demand",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "sex",
+      "value" : 0.024263943,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "teen",
+      "value" : 0.020974617,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "birth rate",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "cost",
+      "value" : 0.016852071,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "conversation ted",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "debate",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "abortion birth control",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "parent",
+      "value" : 0.021515902,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "information",
+      "value" : 0.02131497,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "person young",
+      "value" : 0.021255767,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "contraception",
+      "value" : 0.023798893,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "question",
+      "value" : 0.019991956,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "advocate strong",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "body",
+      "value" : 0.015753289,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "life",
+      "value" : 0.016159511,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "risk",
+      "value" : 0.018993033,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "ovulation",
+      "value" : 0.011507989,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "physician",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "pregnancy teen",
+      "value" : 0.024534093,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "couple",
+      "value" : 0.017320234,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "condom female",
+      "value" : 0.023752531,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "iud",
+      "value" : 0.027789782,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "abortion legal",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "student",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "cycle",
+      "value" : 0.015714854,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "action awareness",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "great man",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "prescription",
+      "value" : 0.01878161,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "study",
+      "value" : 0.01670312,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "development issue",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "parenthood planned",
+      "value" : 0.030066481,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "model",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "talk",
+      "value" : 0,
+      "step" : "CORPUS"
+    }
+  ]
+},
+    {
+        "step": "C:advocacy",
+        "values": [
+            {
+                "key": "woman",
+                "step": "C:advocacy",
+                "value": 0.5397660614400739
+            },
+            {
+                "key": "pill",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "family",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "condom",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "method",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "child",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "pregnancy",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "access",
+                "step": "C:advocacy",
+                "value": 0.32266431739048373
+            },
+            {
+                "key": "company",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "baby",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "abortion",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "development",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "percent",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "teen",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "cost",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "debate",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "parent",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "C:advocacy",
+                "value": 0.4976782279107861
+            },
+            {
+                "key": "person young",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "contraception",
+                "step": "C:advocacy",
+                "value": 0.3241076240419466
+            },
+            {
+                "key": "question",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "life",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "ovulation",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "couple",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "condom female",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "iud",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "abortion legal",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:advocacy",
+                "value": 0.3258487035551992
+            },
+            {
+                "key": "cycle",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "great man",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "prescription",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "parenthood planned",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "model",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "talk",
+                "step": "C:advocacy",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:development",
+        "values": [
+            {
+                "key": "woman",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "pill",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "family",
+                "step": "C:development",
+                "value": 0.17214833637315635
+            },
+            {
+                "key": "condom",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "method",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "child",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "pregnancy",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "access",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "baby",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "abortion",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "development",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "percent",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "teen",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "cost",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:development",
+                "value": 0.16666666666666666
+            },
+            {
+                "key": "debate",
+                "step": "C:development",
+                "value": 0.16666666666666666
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "parent",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "person young",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "contraception",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "C:development",
+                "value": 0.16666666666666666
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "life",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "ovulation",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "couple",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "condom female",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "iud",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "abortion legal",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "cycle",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "great man",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "prescription",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "parenthood planned",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "model",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "talk",
+                "step": "C:development",
+                "value": 0.16945996275605213
+            }
+        ]
+    },
+    {
+        "step": "C:education",
+        "values": [
+            {
+                "key": "woman",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "pill",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "family",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "condom",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "method",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "child",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "pregnancy",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "access",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "baby",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "abortion",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "development",
+                "step": "C:education",
+                "value": 0.2217391304347826
+            },
+            {
+                "key": "percent",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:education",
+                "value": 1.1734649122807017
+            },
+            {
+                "key": "teen",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "cost",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "debate",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "parent",
+                "step": "C:education",
+                "value": 0.5674018763619993
+            },
+            {
+                "key": "information",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "person young",
+                "step": "C:education",
+                "value": 0.3187124327666818
+            },
+            {
+                "key": "contraception",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "life",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "ovulation",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "C:education",
+                "value": 0.5102872518560706
+            },
+            {
+                "key": "couple",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "condom female",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "iud",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "abortion legal",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "cycle",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "great man",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "prescription",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "parenthood planned",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "model",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "talk",
+                "step": "C:education",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:family size",
+        "values": [
+            {
+                "key": "woman",
+                "step": "C:family size",
+                "value": 1.4446893799453606
+            },
+            {
+                "key": "pill",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "family",
+                "step": "C:family size",
+                "value": 1.0889847583457084
+            },
+            {
+                "key": "condom",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "method",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "child",
+                "step": "C:family size",
+                "value": 2.4563594628128347
+            },
+            {
+                "key": "pregnancy",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "access",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "baby",
+                "step": "C:family size",
+                "value": 0.6294193763917805
+            },
+            {
+                "key": "abortion",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "development",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "percent",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "teen",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "cost",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "debate",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "parent",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "person young",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "contraception",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "life",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "ovulation",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "couple",
+                "step": "C:family size",
+                "value": 0.5810674319196382
+            },
+            {
+                "key": "condom female",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "iud",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "abortion legal",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "cycle",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "great man",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "prescription",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "parenthood planned",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "model",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "talk",
+                "step": "C:family size",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:finances",
+        "values": [
+            {
+                "key": "woman",
+                "step": "C:finances",
+                "value": 0.2219643732636052
+            },
+            {
+                "key": "pill",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "family",
+                "step": "C:finances",
+                "value": 0.13092755947607593
+            },
+            {
+                "key": "condom",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "method",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "child",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "pregnancy",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "access",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:finances",
+                "value": 0.13118279569892471
+            },
+            {
+                "key": "baby",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "abortion",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "development",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "percent",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "teen",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "cost",
+                "step": "C:finances",
+                "value": 0.17061611374407581
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "debate",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "parent",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "person young",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "contraception",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "life",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "ovulation",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "couple",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "condom female",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "iud",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "abortion legal",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "cycle",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "great man",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "prescription",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "parenthood planned",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "model",
+                "step": "C:finances",
+                "value": 0.11848341232227487
+            },
+            {
+                "key": "talk",
+                "step": "C:finances",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:human rights",
+        "values": [
+            {
+                "key": "woman",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "pill",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "family",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "condom",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "method",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "child",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "pregnancy",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "access",
+                "step": "C:human rights",
+                "value": 0.0600942655145326
+            },
+            {
+                "key": "company",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "baby",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "abortion",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "C:human rights",
+                "value": 0.0600942655145326
+            },
+            {
+                "key": "development",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "percent",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "teen",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "cost",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "debate",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "parent",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "person young",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "contraception",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:human rights",
+                "value": 0.05263157894736842
+            },
+            {
+                "key": "body",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "life",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "ovulation",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "couple",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "condom female",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "iud",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "abortion legal",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "cycle",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:human rights",
+                "value": 0.05263157894736842
+            },
+            {
+                "key": "great man",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "prescription",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:human rights",
+                "value": 0.05263157894736842
+            },
+            {
+                "key": "parenthood planned",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "model",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "talk",
+                "step": "C:human rights",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:law",
+        "values": [
+            {
+                "key": "woman",
+                "step": "C:law",
+                "value": 1.2116206457908736
+            },
+            {
+                "key": "pill",
+                "step": "C:law",
+                "value": 0.7386962990013591
+            },
+            {
+                "key": "family",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "condom",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "method",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "child",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "pregnancy",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "access",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:law",
+                "value": 0.3699043958739667
+            },
+            {
+                "key": "baby",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "abortion",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "development",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "percent",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "teen",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "cost",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "debate",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "parent",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "person young",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "contraception",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "life",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "ovulation",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "C:law",
+                "value": 0.4618679951987526
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "couple",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "condom female",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "iud",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "abortion legal",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "cycle",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "great man",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "prescription",
+                "step": "C:law",
+                "value": 0.4431641481819338
+            },
+            {
+                "key": "study",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "parenthood planned",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "model",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "talk",
+                "step": "C:law",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:politics",
+        "values": [
+            {
+                "key": "woman",
+                "step": "C:politics",
+                "value": 0.7699325308772555
+            },
+            {
+                "key": "pill",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "family",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "condom",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "method",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "child",
+                "step": "C:politics",
+                "value": 0.6981643555164325
+            },
+            {
+                "key": "pregnancy",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "access",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "baby",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "abortion",
+                "step": "C:politics",
+                "value": 0.43106970325612187
+            },
+            {
+                "key": "person",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "development",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "percent",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "teen",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "cost",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "debate",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "parent",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "person young",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "contraception",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "life",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "ovulation",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "couple",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "condom female",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "iud",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "abortion legal",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "cycle",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "great man",
+                "step": "C:politics",
+                "value": 0.36764705882352944
+            },
+            {
+                "key": "prescription",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "parenthood planned",
+                "step": "C:politics",
+                "value": 0.6793790566099691
+            },
+            {
+                "key": "model",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "talk",
+                "step": "C:politics",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:population growth",
+        "values": [
+            {
+                "key": "woman",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "pill",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "family",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "condom",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "method",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "child",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "pregnancy",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "access",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "baby",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "abortion",
+                "step": "C:population growth",
+                "value": 0.02631578947368421
+            },
+            {
+                "key": "person",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "development",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "percent",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:population growth",
+                "value": 0.10526315789473684
+            },
+            {
+                "key": "sex",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "teen",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:population growth",
+                "value": 0.10526315789473684
+            },
+            {
+                "key": "cost",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "debate",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:population growth",
+                "value": 0.02631578947368421
+            },
+            {
+                "key": "parent",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "person young",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "contraception",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "life",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "ovulation",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "couple",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "condom female",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "iud",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "abortion legal",
+                "step": "C:population growth",
+                "value": 0.02631578947368421
+            },
+            {
+                "key": "student",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "cycle",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "great man",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "prescription",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "parenthood planned",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "model",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "talk",
+                "step": "C:population growth",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:programme",
+        "values": [
+            {
+                "key": "woman",
+                "step": "C:programme",
+                "value": 0.8828393590402307
+            },
+            {
+                "key": "pill",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "family",
+                "step": "C:programme",
+                "value": 0.4312880654189366
+            },
+            {
+                "key": "condom",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "method",
+                "step": "C:programme",
+                "value": 0.44160013088165695
+            },
+            {
+                "key": "child",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "pregnancy",
+                "step": "C:programme",
+                "value": 0.4369255573784636
+            },
+            {
+                "key": "access",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "baby",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "abortion",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "development",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "percent",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "teen",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "cost",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "debate",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "parent",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "person young",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "contraception",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "life",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "ovulation",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "couple",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "condom female",
+                "step": "C:programme",
+                "value": 0.37565217391304345
+            },
+            {
+                "key": "iud",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "abortion legal",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "cycle",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "great man",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "prescription",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "parenthood planned",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "model",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "talk",
+                "step": "C:programme",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:R/B",
+        "values": [
+            {
+                "key": "woman",
+                "step": "C:R/B",
+                "value": 5.019286361890693
+            },
+            {
+                "key": "pill",
+                "step": "C:R/B",
+                "value": 2.2025137951858778
+            },
+            {
+                "key": "family",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "condom",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "method",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "child",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "pregnancy",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "access",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "baby",
+                "step": "C:R/B",
+                "value": 1.2962189364833319
+            },
+            {
+                "key": "abortion",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "development",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "percent",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "teen",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "cost",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "debate",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "parent",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "person young",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "contraception",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "life",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "C:R/B",
+                "value": 1.7064040319741804
+            },
+            {
+                "key": "ovulation",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "couple",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "condom female",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "iud",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "abortion legal",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "cycle",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "great man",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "prescription",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "C:R/B",
+                "value": 2.2661056391972974
+            },
+            {
+                "key": "development issue",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "parenthood planned",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "model",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "talk",
+                "step": "C:R/B",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:religion",
+        "values": [
+            {
+                "key": "woman",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "pill",
+                "step": "C:religion",
+                "value": 0.4690494927690209
+            },
+            {
+                "key": "family",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "condom",
+                "step": "C:religion",
+                "value": 0.636257384681082
+            },
+            {
+                "key": "method",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "child",
+                "step": "C:religion",
+                "value": 0.5163480661158214
+            },
+            {
+                "key": "pregnancy",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "access",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "baby",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "abortion",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "C:religion",
+                "value": 0.6248601251135424
+            },
+            {
+                "key": "development",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "percent",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "teen",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "cost",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "debate",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "parent",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "person young",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "contraception",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "life",
+                "step": "C:religion",
+                "value": 0.49982850486334884
+            },
+            {
+                "key": "risk",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "ovulation",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "couple",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "condom female",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "iud",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "abortion legal",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "cycle",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "great man",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "prescription",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "parenthood planned",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "model",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "talk",
+                "step": "C:religion",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:youth",
+        "values": [
+            {
+                "key": "woman",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "pill",
+                "step": "C:youth",
+                "value": 1.391456924298163
+            },
+            {
+                "key": "family",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "condom",
+                "step": "C:youth",
+                "value": 1.7540067052219814
+            },
+            {
+                "key": "method",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "child",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "pregnancy",
+                "step": "C:youth",
+                "value": 0.9885982028051464
+            },
+            {
+                "key": "access",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "baby",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "abortion",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "development",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "percent",
+                "step": "C:youth",
+                "value": 1.3102469884847177
+            },
+            {
+                "key": "demand",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "teen",
+                "step": "C:youth",
+                "value": 0.9396986208539817
+            },
+            {
+                "key": "birth rate",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "cost",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "debate",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "parent",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "person young",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "contraception",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "life",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "ovulation",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "couple",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "condom female",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "iud",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "abortion legal",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "cycle",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "great man",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "prescription",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "parenthood planned",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "model",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "talk",
+                "step": "C:youth",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "Medical",
+        "values": [
+            {
+                "key": "woman",
+                "step": "Medical",
+                "value": 18.2462634976449
+            },
+            {
+                "key": "pill",
+                "step": "Medical",
+                "value": 24.699000046066068
+            },
+            {
+                "key": "family",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "condom",
+                "step": "Medical",
+                "value": 12.54466803561052
+            },
+            {
+                "key": "method",
+                "step": "Medical",
+                "value": 12.140382926144685
+            },
+            {
+                "key": "child",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "pregnancy",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "access",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "baby",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "abortion",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "development",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "percent",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "teen",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "cost",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "debate",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "parent",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "person young",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "contraception",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "life",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "ovulation",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "physician",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "couple",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "condom female",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "iud",
+                "step": "Medical",
+                "value": 7.29732622393761
+            },
+            {
+                "key": "abortion legal",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "cycle",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "great man",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "prescription",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "parenthood planned",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "model",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "talk",
+                "step": "Medical",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "NFP",
+        "values": [
+            {
+                "key": "woman",
+                "step": "NFP",
+                "value": 2.747096215056325
+            },
+            {
+                "key": "pill",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "family",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "condom",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "method",
+                "step": "NFP",
+                "value": 1.4241671079058826
+            },
+            {
+                "key": "child",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "pregnancy",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "access",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "baby",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "abortion",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "person",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "development",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "percent",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "teen",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "cost",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "debate",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "parent",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "information",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "person young",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "contraception",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "question",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "body",
+                "step": "NFP",
+                "value": 0.6088275465491056
+            },
+            {
+                "key": "life",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "risk",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "ovulation",
+                "step": "NFP",
+                "value": 0.5977076011168899
+            },
+            {
+                "key": "physician",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "pregnancy teen",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "couple",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "condom female",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "iud",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "abortion legal",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "cycle",
+                "step": "NFP",
+                "value": 0.9095507512347797
+            },
+            {
+                "key": "action awareness",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "great man",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "prescription",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "study",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "parenthood planned",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "model",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "talk",
+                "step": "NFP",
+                "value": 0
+            }
+        ]
+    }
+]

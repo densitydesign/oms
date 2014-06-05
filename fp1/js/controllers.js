@@ -26,7 +26,7 @@ angular.module('who.controllers', [])
       {id:"fp_intro",label:"Introduction to family planning", nav: true, step:false, template:"chapter-intro", protocol: false},
       {id:"fp_query_intro",label: "The web corpus", nav: true, step:false, template:"sub-chapter", protocol: false},
       {id:"fp_query_network",label: "The web corpus",nav: false,step:true, template:"viz-step", protocol: 'fp_query', legend:true},
-      {id:"fp_query_analytics",label: "The web corpus",nav: false, step:false, template:"analytics", protocol: 'fp_query'},
+      //{id:"fp_query_analytics",label: "The web corpus",nav: false, step:false, template:"analytics", protocol: 'fp_query'},
       {id:"fp_crawl_intro", label:"The web cartography", nav: true, step:false, template:"sub-chapter", protocol: false},
       {id:"fp_crawl_network", label:"The web cartography", nav: false, step:true, template:"viz-step", protocol: 'fp_crawl', legend:true},
       {id:"fp_text_intro",label:"The Issue analysis",nav: true, step:false,template:"sub-chapter", protocol: false},
@@ -69,17 +69,11 @@ angular.module('who.controllers', [])
           currentStep: 1,
           itemsPerPage: 1,
           maxItems: 5,
-          "slopeCat": {
-          "CONTROVERSIES" : ["CONTROVERSIES", "C|advocacy","C|development","C|educationlifestyle/sexual health","C|family size","C|finances","C|human rights","C|law","C|politics","C|population growth", "C|programme","C|religion"],
-          "CONTROVERSIES. RISKS&BENEFITS": [ "CONTROVERSIES. RISKS&BENEFITS","CRB|birth spacing","CRB|cancer","CRB|HIV","CRB|others","CRB|VTE"], 
-          "CONTROVERSIES. YOUTH": ["CONTROVERSIES. YOUTH", "CY|capacity building","CY|communication","CY|education contraception","CY|law","CY|politics","CY|religion","CY|services","CY|statistics"],
-          "MEDICAL": ["MEDICAL", "M|lifestyle/sexual health", "M|methods","M|sales","M|services"]
-          },
-          "slopeCatSel":{
-          "CONTROVERSIES" : "CONTROVERSIES",
-          "CONTROVERSIES. RISKS&BENEFITS": "CONTROVERSIES. RISKS&BENEFITS", 
-          "CONTROVERSIES. YOUTH": "CONTROVERSIES. YOUTH",
-          "MEDICAL": "MEDICAL"
+          slopeCat:["C:advocacy", "C:development", "C:education", "C:family size", "C:finances", "C:human rights", "C:law", "C:politics", "C:population growth", "C:programme", "C:R/B", "C:religion", "C:youth", "Medical", "NFP"],
+          slopeCatSel : {
+            one: "Medical", 
+            two : "C:advocacy", 
+            three: "C:development"
           }
         }
       }

@@ -13,16 +13,17 @@
     	xMax,
 	 	dimension,
 	 	group,
-	 	filter;
+    cut = Infinity,
+    order,
+	 	filter,
+    dispatch = d3.dispatch("clicked");
 
 
     function barChart(selection){
     	selection.each(function(data){
 
           var chart;
-
-
-             
+          
           if(responsive){
              width = $(selection.node()).width(), 
              height = $(selection.node()).height() > 0 ? $(selection.node()).height() : 600;
@@ -41,30 +42,37 @@
           }
 
         	var y = d3.scale.ordinal()
-    				.rangeRoundBands([0, height], .4);
+    				.rangeRoundBands([0, height], 0.7);
 
 			var x = d3.scale.linear()
-    				.range([0, width-160]);
+    				.range([0, width]);
 
 
     		x.domain([0, xMax]);
 
-    		y.domain(group.top(Infinity).map(function(d){return d.key}))
+        var groupData = group.top(cut);
+
+        if(order){
+          var orderScale = d3.scale.ordinal().range(d3.range(order.length)).domain(order)
+          groupData.sort(function (a,b) {return d3.ascending(orderScale(a.key), orderScale(b.key))})
+        }
+
+    		y.domain(groupData.map(function(d){return d.key}))
 
     		var chartContainer = chart.selectAll("g")
-    			.data([group.top(Infinity)])
+    			.data([groupData])
 
     		chartContainer
     			.enter()
     			.append("g")
-    			.attr("transform", "translate(" + 160 + ",0)");
+    			.attr("transform", "translate(0,0)");
 
     		chartContainer.exit().remove()
 
     		
         if(chartContainer.selectAll(".bgBar").empty()){
           
-          var bgData = $.extend(true, [], group.top(Infinity));
+          var bgData = $.extend(true, [], groupData);
 
         bgBars = chartContainer.selectAll(".bgBar")
             .data(bgData)
@@ -77,6 +85,30 @@
           .attr("width", function(d){ return x(d.value)})
           .filter(function(d){return x(d.value) >= 2})
           .attr("width", function(d){ return x(d.value) -2 })
+
+
+        }
+
+        if(chartContainer.selectAll(".bgLine").empty()){
+          
+        var bgData = $.extend(true, [], groupData);
+
+        var lineFunction = d3.svg.line()
+                          .x(function(d) { return d.x; })
+                          .y(function(d) { return d.y; })
+
+        bgLines = chartContainer.selectAll(".bgLine")
+            .data(bgData)
+
+        bgLines.enter().append("path")
+          .attr("class", "bgLine")
+          .attr("d", function(d){ return lineFunction(
+              [
+              {x:0,y:y(d.key)+y.rangeBand()/2},
+              {x:width,y:y(d.key)+y.rangeBand()/2}
+              ]
+            )})
+        
         }
 
         if (resize && !chartContainer.selectAll(".bgBar").empty()){
@@ -100,6 +132,7 @@
 		      .attr("width", function(d){ return x(d.value)})
 		      .style("cursor", "pointer")
 		      .on("click", function(d){
+            dispatch.clicked(d.key)
 		      	var bar = d3.select(this)
 		      	var cl = checkSelected(bar.attr("class"))
 		      	bar.attr("class", cl)
@@ -108,12 +141,14 @@
 		      	else(dimension.filter(function(d) { return query.indexOf(d) >= 0; }))
 		      })
 
+
         bars
 		    	.transition()
 		    	.duration(500)
 		      	.attr("width", function(d){ return x(d.value)})
             .attr("y", function(d) { return y(d.key); })
             .attr("height", function(d) { return y.rangeBand()})
+            .attr("class", "bar")
 
 		    bars.exit().remove()
 
@@ -122,16 +157,16 @@
 
 			yvalues.enter().append("text")
 			      .attr("class", "yvalue")
-			      .attr("y", function(d) { return y(d.key) + y.rangeBand() -2; })
-			      .attr("x", 3)
+			      .attr("y", function(d) { return y(d.key) - 4; })
+			      .attr("x", 0)
 			      .text(function(d){return d.value})
 
 
       		yvalues
       			.transition()
             .duration(500)
-            .attr("y", function(d) { return y(d.key) + y.rangeBand() -2; })
-            .attr("x", 3)
+            .attr("y", function(d) { return y(d.key) - 4; })
+            .attr("x", 0)
       			.tween("text", function(d) {
       				var i = d3.interpolateNumber(this.textContent, d.value);
         			return function(t) {
@@ -143,24 +178,22 @@
       			
 
 			var ylegend = chart.selectAll(".ylegend")
-      			.data(group.top(Infinity))
+      			.data(groupData)
 			    
 			ylegend.enter().append("text")
 			      .attr("class", "ylegend")
-			      .attr("y", function(d) { return y(d.key) + y.rangeBand() -2; })
-			      .attr("x", 3)
+			      .attr("y", function(d) { return y(d.key) -4; })
+			      .attr("x", 20)
 			      .text(function(d){return d.key})
 
 			ylegend
 				.text(function(d){return d.key})
         .transition()
         .duration(500)
-           .attr("y", function(d) { return y(d.key) + y.rangeBand() -2; })
-            .attr("x", 3)
+           .attr("y", function(d) { return y(d.key) -4; })
+            .attr("x", 20)
 
 			ylegend.exit().remove()
-
-			d3.rebind(chart, bars, "on")
 
       resize = false
 
@@ -215,6 +248,24 @@
       return barChart;
     }
 
+    barChart.cut = function(x){
+      if (!arguments.length) return cut;
+      cut = x;
+      return barChart;
+    }
+
+    barChart.order = function(x){
+      if (!arguments.length) return order;
+      order = x;
+      return barChart;
+    }
+
+    barChart.query = function(x){
+      if (!arguments.length) return query;
+      query = x;
+      return barChart;
+    }
+
     function checkSelected(x){
     	return x == 'bar' ? 'bar selected' : 'bar'
     }
@@ -224,6 +275,8 @@
     	if (index > -1){query.splice(index, 1)}
     	else {query.push(x)}
     }
+
+    d3.rebind(barChart, dispatch, "on")
 
     return barChart;
   }
