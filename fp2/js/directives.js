@@ -283,11 +283,8 @@ angular.module('who.directives', [])
                 .height($(containerViz).height()-3)
                 .width($(containerLegend).width())
 
-              var dataLegend = d3.select("[transform='translate(0,0)']").data()[0].value.clusters
-
-              // var prova = d3.select(containerViz).select("[transform='translate(0,0)']").data()[0]
-
-              // console.log(d3.values(prova)[0].clusters, dataLegend)
+              //var dataLegend = d3.select("[transform='translate(0,0)']").data()[0].value.clusters
+              var dataLegend = d3.select(containerViz).selectAll("[transform='translate(0,0)']").data()[0]
 
               chartLegend.datum(dataLegend).call(wikitoclegend)
               
@@ -318,28 +315,28 @@ angular.module('who.directives', [])
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2006-04-22T04:02:54Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
 
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            // var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            // chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2006-08-15T09:38:40Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
+            // var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            // chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2008-03-08T08:41:54Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
+            // var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            // chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
@@ -347,8 +344,8 @@ angular.module('who.directives', [])
             click = true
             var p = wikitoc.getPixel("2008-05-01T10:01:42Z")
             $(containerViz).animate( { scrollLeft: p }, 500)
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            // var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            // chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
@@ -356,17 +353,17 @@ angular.module('who.directives', [])
             click = true
             var p = wikitoc.getPixel("2012-12-13T16:36:51Z")
             $(containerViz).animate( { scrollLeft: p }, 500)
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            // var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            // chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2006-04-22T04:02:54Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
+            // var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            // chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           }
@@ -375,100 +372,101 @@ angular.module('who.directives', [])
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2001-11-09T05:40:54Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            
-            chartLegend.datum(dl).call(wikitoclegend)
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
+            //var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+
+            //chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2004-03-03T00:40:47Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
+            //var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+
+            //chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2006-07-25T00:50:10Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
+            //var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            //chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2011-05-21T09:14:42Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
+            //var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            //chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2002-02-25T15:51:15Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
+            //var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            //chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2004-03-03T00:40:47Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
+            //var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            //chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2006-07-26T21:07:17Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
+            //var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            //chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2006-10-06T06:45:19Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
+            //var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            //chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2011-05-21T09:14:42Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
+            //var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            //chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2012-08-09T23:00:26Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
+            //var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            //chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           },
           {init: function(){
             click = true
             var p = wikitoc.getPixel("2001-11-09T05:40:54Z")
-            $(containerViz).animate( { scrollLeft: p }, 500, "swing")
-            var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
-            chartLegend.datum(dl).call(wikitoclegend)
+            $(containerViz).animate( { scrollLeft: p }, 500, "linear")
+            //var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0].value.clusters;
+            //chartLegend.datum(dl).call(wikitoclegend)
             click =false
             }
           }
@@ -484,7 +482,10 @@ angular.module('who.directives', [])
             var threshold = 10
             for(var i = threshold; i >= 0; i--){
               var p = $( containerViz ).scrollLeft() + i
-              var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0]
+
+              //var dl = d3.select("[transform='translate(" + p + ",0)']").data()[0]
+              var dl = d3.select(containerViz).selectAll("[transform='translate(" + p + ",0)']").data()[0]
+
               if(typeof dl == "object" && !loading){
                  if(!dl.value) break;
                  dl = dl.value.clusters;

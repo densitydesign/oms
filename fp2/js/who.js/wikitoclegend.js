@@ -30,7 +30,7 @@
         legend.text(function(d){return d.label.replace(/(<([^>]+)>)/ig,"")})
               .attr("x", 0)
               .attr("text-decoration",null)
-              .transition()
+              //.transition()
               .attr("y", function(d){return d.y})
               .filter(function(d){
                 return d.type == "dead"
@@ -54,7 +54,7 @@
               .attr("text-decoration","line-through")
 
         legend.exit()
-              .transition()
+              //.transition()
               .attr("x", -200)
               .remove()
 
