@@ -81,6 +81,12 @@ angular.module('who.controllers', [])
           itemsPerPage: 1,
           maxItems: 4
         },
+        "cs_images_elastic":{
+          totalItems: 5,
+          currentStep: 1,
+          itemsPerPage: 1,
+          maxItems: 4
+        },
         "cs_aufeminin_forum":{
           totalItems: 5,
           currentStep: 1,

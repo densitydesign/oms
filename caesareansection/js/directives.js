@@ -1390,7 +1390,7 @@ angular.module('who.directives', [])
       }
     };
   }])
-  .directive('imagesElastic',['fileService', '$timeout', function (fileService, $timeout) {
+  .directive('imagesElastic',['fileService', '$timeout','$compile', function (fileService, $timeout, $compile) {
     return {
       restrict: 'A',
       replace: true,
@@ -1420,6 +1420,7 @@ angular.module('who.directives', [])
           tagScale,
           allLangs=[],
           vizContainer = element.find('#viz_googleimages')[0],
+          containerPagination = element.find("#paginationStep")[0],
           sliderContainer,
           radContainer,
           imgsContainer,
@@ -1906,6 +1907,47 @@ angular.module('who.directives', [])
 
        }
 
+      var step = [
+          {init: function(){
+              scope.ctrlmodels.imgslangs=[]; scope.ctrlmodels.imgstags=[]
+            }
+          },
+          {init: function(){
+            scope.ctrlmodels.imgslangs=['US']; scope.ctrlmodels.imgstags=[]
+            }
+          },
+          {init: function(){
+            scope.ctrlmodels.imgslangs=['UK']; scope.ctrlmodels.imgstags=[]
+            }
+          },
+          {init: function(){
+            scope.ctrlmodels.imgslangs=['FR']; scope.ctrlmodels.imgstags=[]
+            }
+          },
+          {init: function(){
+            scope.ctrlmodels.imgslangs=['IT']; scope.ctrlmodels.imgstags=[]
+            }
+          },
+          {init: function(){
+            scope.ctrlmodels.imgslangs=['US','UK']; scope.ctrlmodels.imgstags=[]
+            }
+          },
+          {init: function(){
+            scope.ctrlmodels.imgslangs=['IT','FR']; scope.ctrlmodels.imgstags=[]
+            }
+          },
+          {init: function(){
+            scope.ctrlmodels.imgslangs=[]; scope.ctrlmodels.imgstags=[]
+            }
+          }
+        ]
+
+        scope.ctrlmodels[scope.section.id].totalItems = step.length
+        var pag = "<pager previous-text='&lsaquo; previous' next-text='next &rsaquo;' total-items='ctrlmodels." + scope.section.id + ".totalItems' page='ctrlmodels." + scope.section.id + ".currentStep' items-per-page='ctrlmodels." + scope.section.id + ".itemsPerPage'></pager>"
+        var e = angular.element(pag)
+        $(containerPagination).append(e)
+        $compile(e)(scope)
+
       scope.$watchCollection('[ctrlmodels.imgslangs,ctrlmodels.imgstags]', function(newValues, oldValues){
 
               if(newValues!==oldValues && !scope.first) {
@@ -1937,6 +1979,12 @@ angular.module('who.directives', [])
           });
         }
       })
+
+      scope.$watch('ctrlmodels.'+ scope.section.id + '.currentStep', function(newValue, oldValue){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+                step[newValue-1].init()
+            }
+        })
 
       }
     }
