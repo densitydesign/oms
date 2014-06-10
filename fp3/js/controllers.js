@@ -69,11 +69,11 @@ angular.module('who.controllers', [])
           currentStep: 1,
           itemsPerPage: 1,
           maxItems: 5,
-          slopeCat:["C:advocacy", "C:development", "C:education", "C:family size", "C:finances", "C:human rights", "C:law", "C:politics", "C:population growth", "C:programme", "C:R/B", "C:religion", "C:youth", "Medical", "NFP"],
+          slopeCat:["advocacy", "contraception", "culture", "demography", "development", "economy", "environment", "health", "law", "methods", "policy", "religion", "rights", "social", "sustainability", "unmet need", "women", "youth"],
           slopeCatSel : {
-            one: "Medical", 
-            two : "C:advocacy", 
-            three: "C:development"
+            one: "advocacy", 
+            two : "contraception", 
+            three: "culture"
           }
         }
       }

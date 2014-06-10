@@ -690,9 +690,11 @@ angular.module('who.directives', [])
                     f['value'] = d3.round(f['value'],2)
                 })
               })
+
+
               len = data[0].values.length;
               slope = who.spallozzoChart()
-                .graphHeight(len*15)
+                .graphHeight(len*25)
                 .graphWidth(element.find("#graph").width())
                 .showCat(["CORPUS"])
                 .on("clicked", function(d){
@@ -722,7 +724,7 @@ angular.module('who.directives', [])
                       .attr("class", "slope-cont")
                         .append("svg")
                         .attr("width", element.find("#graph").width())
-                        .attr("height", len*15)
+                        .attr("height", len*25)
 
               $(".slope-cont").slimScroll({
                   height: graphHeight - 51 + "px",
@@ -756,12 +758,12 @@ angular.module('who.directives', [])
 
         var step = [
           {init: function(){
-            slope.showCat(["CORPUS"]).catStep([]).hidefilter(false).graphHeight(len*20)
+            slope.showCat(["CORPUS"]).catStep([]).hidefilter(false).sorted("CORPUS")
             chart.call(slope)
             }
           },
           {init: function(){
-            slope.showCat([ "Medical", "C:advocacy", "C:development"]).catStep([]).hidefilter(false).graphHeight(len*20)
+            slope.showCat([ "advocacy", "contraception", "culture"]).catStep([]).hidefilter(false).sorted("advocacy")
             chart.call(slope)
             }
           }
@@ -786,7 +788,9 @@ angular.module('who.directives', [])
 
         scope.$watch('ctrlmodels.slopetfidf', function(newValue, oldValue){
             if (newValue !== oldValue){
-              chart.datum(dataslope[newValue]).call(slope)
+              var len = dataslope[newValue][0].values.length;
+              chart.attr("height", len*25)
+              chart.datum(dataslope[newValue]).call(slope.graphHeight(len*25))
             }
         });
 
@@ -807,7 +811,7 @@ angular.module('who.directives', [])
             if (newValue !== oldValue){
                 var slopeCat = slope.showCat()
                 slopeCat[0] = newValue;
-                slope.showCat(slopeCat).catStep([]).hidefilter(false).graphHeight(len*20)
+                slope.showCat(slopeCat).catStep([]).hidefilter(false)
                 chart.call(slope)               
             }
         });
@@ -816,7 +820,7 @@ angular.module('who.directives', [])
             if (newValue !== oldValue){
                 var slopeCat = slope.showCat()
                 slopeCat[1] = newValue;
-                slope.showCat(slopeCat).catStep([]).hidefilter(false).graphHeight(len*20)
+                slope.showCat(slopeCat).catStep([]).hidefilter(false)
                 chart.call(slope)               
             }
         });
@@ -825,7 +829,7 @@ angular.module('who.directives', [])
             if (newValue !== oldValue){
                 var slopeCat = slope.showCat()
                 slopeCat[2] = newValue;
-                slope.showCat(slopeCat).catStep([]).hidefilter(false).graphHeight(len*20)
+                slope.showCat(slopeCat).catStep([]).hidefilter(false)
                 chart.call(slope)               
             }
         });

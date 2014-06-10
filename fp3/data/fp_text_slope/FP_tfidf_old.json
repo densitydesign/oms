@@ -1,0 +1,6082 @@
+[
+{
+  "step" : "CORPUS",
+  "values" : [
+    {
+      "key" : "abortion birth control",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "acceptable affordable product safe",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "acetate hormone medroxyprogesterone",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "act publication regulation",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "action awareness",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "action four strategies",
+      "value" : 1.089930993,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "active research sexually",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "advocate strong",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "affair social",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "analyst",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "approval",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "arizona state university",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "assault sexual",
+      "value" : 0.858881932,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "australia western",
+      "value" : 2.179861985,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "available contraception today",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "baby center",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "bad idea",
+      "value" : 2.179861985,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "billing box method ovulation tick",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "birth control woman",
+      "value" : 0.817448244,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "birth rate",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "birth rate today",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "birthrate century",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "booker cory",
+      "value" : 0.817448244,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "box",
+      "value" : 0.892028883,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "brain research",
+      "value" : 0.934226565,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "brand",
+      "value" : 0.817448244,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "broad scope",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "bureau global health usaid",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "central greater jersey new northern",
+      "value" : 2.179861985,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "child communication",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "clinic name",
+      "value" : 2.179861985,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "committee health reproductive",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "committee permanent",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "company",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "comprehensive education health",
+      "value" : 1.089930993,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "condom worshipper",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "conference first global",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "confidence skill",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "congestion",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "contraceptive product",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "control fertility",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "conversation ted",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "data sound technically",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "decision health important",
+      "value" : 1.089930993,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "decision health teen",
+      "value" : 1.089930993,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "demand",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "development issue",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "development rapid",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "dhoby ghaut",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "dignity",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "donation individual",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "durham",
+      "value" : 1.461609694,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "effect negative",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "emotional good relationship sexual",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "family international planning",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "federation parenthood planned",
+      "value" : 2.070845341,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "fhi headquarters",
+      "value" : 1.634896489,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "general nature",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "global network",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "heartland",
+      "value" : 2.179861985,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "hospital policy",
+      "value" : 1.089930993,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "loss memory",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "misuse possible situation",
+      "value" : 0.934226565,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "ncbi",
+      "value" : 0.934226565,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "new york",
+      "value" : 1.307917191,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "player",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "preparation prevention",
+      "value" : 1.089930993,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "press worldwide",
+      "value" : 0.934226565,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "provision",
+      "value" : 0.675779884,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "role significant",
+      "value" : 1.089930993,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "sex",
+      "value" : 1.35220015,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "student",
+      "value" : 0,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "thing worst",
+      "value" : 2.179861985,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "usa",
+      "value" : 1.634896489,
+      "step" : "CORPUS"
+    },
+    {
+      "key" : "volume",
+      "value" : 0.835205539,
+      "step" : "CORPUS"
+    }
+  ]
+},
+    {
+        "step": "C:advocacy",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "bad idea",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "broad scope",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "condom worshipper",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "decision health important",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "committee permanent",
+                "step": "C:advocacy",
+                "value": 0.0625
+            },
+            {
+                "key": "sex",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "player",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "durham",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "contraceptive product",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "global network",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "baby center",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "dignity",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "development rapid",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "usa",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "decision health teen",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "provision",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "effect negative",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "clinic name",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "analyst",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "new york",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "birth rate today",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "birthrate century",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "donation individual",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "brand",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "act publication regulation",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "C:advocacy",
+                "value": 0.0625
+            },
+            {
+                "key": "affair social",
+                "step": "C:advocacy",
+                "value": 0.0625
+            },
+            {
+                "key": "general nature",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "role significant",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "volume",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "family international planning",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "arizona state university",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:advocacy",
+                "value": 0.3258487035551992
+            },
+            {
+                "key": "congestion",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "approval",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "conference first global",
+                "step": "C:advocacy",
+                "value": 0.15384615384615385
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "control fertility",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "child communication",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "australia western",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "box",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "hospital policy",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "ncbi",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "thing worst",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "loss memory",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "heartland",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "press worldwide",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "available contraception today",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "preparation prevention",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "confidence skill",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "active research sexually",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "booker cory",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "assault sexual",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "data sound technically",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "brain research",
+                "step": "C:advocacy",
+                "value": 0
+            },
+            {
+                "key": "action four strategies",
+                "step": "C:advocacy",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:development",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "bad idea",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "broad scope",
+                "step": "C:development",
+                "value": 0.06666666666666667
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "condom worshipper",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "decision health important",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "committee permanent",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "player",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "durham",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:development",
+                "value": 0.16666666666666666
+            },
+            {
+                "key": "contraceptive product",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "global network",
+                "step": "C:development",
+                "value": 0.06666666666666667
+            },
+            {
+                "key": "baby center",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "dignity",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "development rapid",
+                "step": "C:development",
+                "value": 0.06666666666666667
+            },
+            {
+                "key": "usa",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "decision health teen",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "provision",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "effect negative",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "clinic name",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "analyst",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "C:development",
+                "value": 0.06666666666666667
+            },
+            {
+                "key": "new york",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "birth rate today",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "birthrate century",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "donation individual",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "brand",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "act publication regulation",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "affair social",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "role significant",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "volume",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "family international planning",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "arizona state university",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "congestion",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "approval",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "conference first global",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "control fertility",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "child communication",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "australia western",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "box",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "hospital policy",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "ncbi",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "thing worst",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "loss memory",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "heartland",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "press worldwide",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "available contraception today",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "preparation prevention",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "confidence skill",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "active research sexually",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "booker cory",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "assault sexual",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "data sound technically",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "brain research",
+                "step": "C:development",
+                "value": 0
+            },
+            {
+                "key": "action four strategies",
+                "step": "C:development",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:education",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "bad idea",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "broad scope",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "condom worshipper",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "decision health important",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "committee permanent",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:education",
+                "value": 1.1734649122807017
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "player",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "durham",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "contraceptive product",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "global network",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "baby center",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "dignity",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "development rapid",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "usa",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "decision health teen",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "provision",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "effect negative",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "clinic name",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "analyst",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "new york",
+                "step": "C:education",
+                "value": 0.2217391304347826
+            },
+            {
+                "key": "birth rate today",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "birthrate century",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "donation individual",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "brand",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "act publication regulation",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "affair social",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "role significant",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "volume",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "family international planning",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "arizona state university",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "congestion",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "approval",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "conference first global",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "control fertility",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "child communication",
+                "step": "C:education",
+                "value": 0.1
+            },
+            {
+                "key": "australia western",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "box",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "hospital policy",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "ncbi",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "thing worst",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "loss memory",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "heartland",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "press worldwide",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "available contraception today",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "preparation prevention",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "confidence skill",
+                "step": "C:education",
+                "value": 0.1
+            },
+            {
+                "key": "active research sexually",
+                "step": "C:education",
+                "value": 0.1
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "booker cory",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "assault sexual",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "data sound technically",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "brain research",
+                "step": "C:education",
+                "value": 0
+            },
+            {
+                "key": "action four strategies",
+                "step": "C:education",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:family size",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "bad idea",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "broad scope",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "condom worshipper",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "decision health important",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "committee permanent",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "player",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "C:family size",
+                "value": 0.0625
+            },
+            {
+                "key": "durham",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "contraceptive product",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "global network",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "baby center",
+                "step": "C:family size",
+                "value": 0.07775768535262206
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "dignity",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "development rapid",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "usa",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "decision health teen",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "provision",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "effect negative",
+                "step": "C:family size",
+                "value": 0.23074712643678158
+            },
+            {
+                "key": "clinic name",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "analyst",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "new york",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "birth rate today",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "birthrate century",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "donation individual",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "brand",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "act publication regulation",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "affair social",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "C:family size",
+                "value": 0.07142857142857142
+            },
+            {
+                "key": "role significant",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "volume",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "family international planning",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "arizona state university",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "congestion",
+                "step": "C:family size",
+                "value": 0.0625
+            },
+            {
+                "key": "approval",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "conference first global",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "control fertility",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "child communication",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "australia western",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "box",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "hospital policy",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "ncbi",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "thing worst",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "loss memory",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "heartland",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "press worldwide",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "available contraception today",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "preparation prevention",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "confidence skill",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "active research sexually",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "booker cory",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "assault sexual",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "data sound technically",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "brain research",
+                "step": "C:family size",
+                "value": 0
+            },
+            {
+                "key": "action four strategies",
+                "step": "C:family size",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:finances",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "bad idea",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "broad scope",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "condom worshipper",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "decision health important",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "committee permanent",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "player",
+                "step": "C:finances",
+                "value": 0.06666666666666667
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "durham",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "contraceptive product",
+                "step": "C:finances",
+                "value": 0.07399480201804005
+            },
+            {
+                "key": "global network",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "baby center",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "dignity",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "development rapid",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "usa",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "decision health teen",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "provision",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "effect negative",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "clinic name",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "analyst",
+                "step": "C:finances",
+                "value": 0.06666666666666667
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "new york",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "birth rate today",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "birthrate century",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "donation individual",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "brand",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "act publication regulation",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "affair social",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "role significant",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:finances",
+                "value": 0.13118279569892471
+            },
+            {
+                "key": "volume",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "family international planning",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "arizona state university",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "congestion",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "approval",
+                "step": "C:finances",
+                "value": 0.06666666666666667
+            },
+            {
+                "key": "conference first global",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "control fertility",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "child communication",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "australia western",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "box",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "hospital policy",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "ncbi",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "thing worst",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "loss memory",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "heartland",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "press worldwide",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "available contraception today",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "preparation prevention",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "confidence skill",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "active research sexually",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "booker cory",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "assault sexual",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "data sound technically",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "brain research",
+                "step": "C:finances",
+                "value": 0
+            },
+            {
+                "key": "action four strategies",
+                "step": "C:finances",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:human rights",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "bad idea",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "broad scope",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "condom worshipper",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "decision health important",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "committee permanent",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "player",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "durham",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "contraceptive product",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "global network",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "baby center",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "dignity",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "development rapid",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "usa",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "decision health teen",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "provision",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "effect negative",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "clinic name",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "analyst",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "new york",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "birth rate today",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "birthrate century",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "donation individual",
+                "step": "C:human rights",
+                "value": 0.05263157894736842
+            },
+            {
+                "key": "brand",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "act publication regulation",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "affair social",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "role significant",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "volume",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "family international planning",
+                "step": "C:human rights",
+                "value": 0.05263157894736842
+            },
+            {
+                "key": "arizona state university",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "congestion",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "approval",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "conference first global",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "control fertility",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "child communication",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "australia western",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "box",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:human rights",
+                "value": 0.05263157894736842
+            },
+            {
+                "key": "hospital policy",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "ncbi",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "thing worst",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "loss memory",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "heartland",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "press worldwide",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "available contraception today",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:human rights",
+                "value": 0.05263157894736842
+            },
+            {
+                "key": "preparation prevention",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:human rights",
+                "value": 0.05263157894736842
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "confidence skill",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "active research sexually",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "booker cory",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "assault sexual",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "data sound technically",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "brain research",
+                "step": "C:human rights",
+                "value": 0
+            },
+            {
+                "key": "action four strategies",
+                "step": "C:human rights",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:law",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "bad idea",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "broad scope",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "condom worshipper",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "decision health important",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "committee permanent",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "player",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "durham",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "contraceptive product",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "global network",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "baby center",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "dignity",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "development rapid",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "usa",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "decision health teen",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "provision",
+                "step": "C:law",
+                "value": 0.197143535683829
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "effect negative",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "clinic name",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "analyst",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "new york",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "birth rate today",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "birthrate century",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "donation individual",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "brand",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "act publication regulation",
+                "step": "C:law",
+                "value": 0.09090909090909091
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "affair social",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "role significant",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "volume",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "family international planning",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "arizona state university",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "congestion",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "approval",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "conference first global",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "control fertility",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "child communication",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "australia western",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "box",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "hospital policy",
+                "step": "C:law",
+                "value": 0.16666666666666666
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "ncbi",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "thing worst",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "loss memory",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "heartland",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "press worldwide",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "available contraception today",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "preparation prevention",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "confidence skill",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "active research sexually",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "booker cory",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "assault sexual",
+                "step": "C:law",
+                "value": 0.20238095238095238
+            },
+            {
+                "key": "data sound technically",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "brain research",
+                "step": "C:law",
+                "value": 0
+            },
+            {
+                "key": "action four strategies",
+                "step": "C:law",
+                "value": 0.16666666666666666
+            }
+        ]
+    },
+    {
+        "step": "C:politics",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "C:politics",
+                "value": 0.125
+            },
+            {
+                "key": "bad idea",
+                "step": "C:politics",
+                "value": 0.3333333333333333
+            },
+            {
+                "key": "broad scope",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "condom worshipper",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "decision health important",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "committee permanent",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "player",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "durham",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "contraceptive product",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "global network",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "baby center",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "dignity",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "development rapid",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "usa",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "decision health teen",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "provision",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "effect negative",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "clinic name",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "analyst",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "new york",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "birth rate today",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "birthrate century",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "donation individual",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "brand",
+                "step": "C:politics",
+                "value": 0.125
+            },
+            {
+                "key": "act publication regulation",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "affair social",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "role significant",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "volume",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "family international planning",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "arizona state university",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "congestion",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "approval",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "conference first global",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "control fertility",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "child communication",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "australia western",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "box",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "hospital policy",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "ncbi",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "thing worst",
+                "step": "C:politics",
+                "value": 0.3333333333333333
+            },
+            {
+                "key": "birth rate",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "loss memory",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "heartland",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "press worldwide",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "available contraception today",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "preparation prevention",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "confidence skill",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "active research sexually",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "booker cory",
+                "step": "C:politics",
+                "value": 0.125
+            },
+            {
+                "key": "assault sexual",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "data sound technically",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "brain research",
+                "step": "C:politics",
+                "value": 0
+            },
+            {
+                "key": "action four strategies",
+                "step": "C:politics",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:population growth",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "bad idea",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "broad scope",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "condom worshipper",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:population growth",
+                "value": 0.10526315789473684
+            },
+            {
+                "key": "decision health important",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "committee permanent",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "player",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "durham",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "contraceptive product",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "global network",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "baby center",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:population growth",
+                "value": 0.02631578947368421
+            },
+            {
+                "key": "dignity",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "development rapid",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "usa",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "decision health teen",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "provision",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "effect negative",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "clinic name",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "analyst",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "new york",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "birth rate today",
+                "step": "C:population growth",
+                "value": 0.02631578947368421
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "birthrate century",
+                "step": "C:population growth",
+                "value": 0.02631578947368421
+            },
+            {
+                "key": "donation individual",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "brand",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "act publication regulation",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "affair social",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "role significant",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "volume",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "family international planning",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "arizona state university",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "congestion",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "approval",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "conference first global",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "control fertility",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "child communication",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "australia western",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "box",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "hospital policy",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "ncbi",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "thing worst",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:population growth",
+                "value": 0.10526315789473684
+            },
+            {
+                "key": "loss memory",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "heartland",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "press worldwide",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "available contraception today",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "preparation prevention",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "confidence skill",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "active research sexually",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "booker cory",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "assault sexual",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "data sound technically",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "brain research",
+                "step": "C:population growth",
+                "value": 0
+            },
+            {
+                "key": "action four strategies",
+                "step": "C:population growth",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:programme",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "bad idea",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "broad scope",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "condom worshipper",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "decision health important",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "committee permanent",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "player",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "durham",
+                "step": "C:programme",
+                "value": 0.25
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "contraceptive product",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "global network",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "baby center",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "dignity",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "development rapid",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "usa",
+                "step": "C:programme",
+                "value": 0.25
+            },
+            {
+                "key": "decision health teen",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "provision",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "effect negative",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "clinic name",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "analyst",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "new york",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "birth rate today",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "birthrate century",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "donation individual",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "brand",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "act publication regulation",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "affair social",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "role significant",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "volume",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "family international planning",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "arizona state university",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "congestion",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "approval",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "conference first global",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "control fertility",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "child communication",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "australia western",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "box",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "hospital policy",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "C:programme",
+                "value": 0.25
+            },
+            {
+                "key": "ncbi",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "thing worst",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "loss memory",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "heartland",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "press worldwide",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "available contraception today",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "preparation prevention",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "C:programme",
+                "value": 0.08333333333333333
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "confidence skill",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "active research sexually",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "booker cory",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "assault sexual",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "data sound technically",
+                "step": "C:programme",
+                "value": 0.08333333333333333
+            },
+            {
+                "key": "brain research",
+                "step": "C:programme",
+                "value": 0
+            },
+            {
+                "key": "action four strategies",
+                "step": "C:programme",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:R/B",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "bad idea",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "broad scope",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "condom worshipper",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "decision health important",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "committee permanent",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "player",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "durham",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "contraceptive product",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "global network",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "baby center",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "dignity",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "development rapid",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "usa",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "decision health teen",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "provision",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "C:R/B",
+                "value": 0.14285714285714285
+            },
+            {
+                "key": "effect negative",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "clinic name",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "analyst",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "new york",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "birth rate today",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "birthrate century",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "donation individual",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "brand",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "act publication regulation",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "affair social",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "role significant",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "volume",
+                "step": "C:R/B",
+                "value": 0.14285714285714285
+            },
+            {
+                "key": "family international planning",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "arizona state university",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "congestion",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "approval",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "conference first global",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "control fertility",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "child communication",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "australia western",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "box",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "hospital policy",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "ncbi",
+                "step": "C:R/B",
+                "value": 0.14285714285714285
+            },
+            {
+                "key": "thing worst",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "loss memory",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "heartland",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "press worldwide",
+                "step": "C:R/B",
+                "value": 0.14285714285714285
+            },
+            {
+                "key": "available contraception today",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "preparation prevention",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "confidence skill",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "active research sexually",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "booker cory",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "assault sexual",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "data sound technically",
+                "step": "C:R/B",
+                "value": 0
+            },
+            {
+                "key": "brain research",
+                "step": "C:R/B",
+                "value": 0.14285714285714285
+            },
+            {
+                "key": "action four strategies",
+                "step": "C:R/B",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:religion",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "bad idea",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "broad scope",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "condom worshipper",
+                "step": "C:religion",
+                "value": 0.0625
+            },
+            {
+                "key": "demand",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "decision health important",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "committee permanent",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "player",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "durham",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "contraceptive product",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "global network",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "baby center",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "dignity",
+                "step": "C:religion",
+                "value": 0.18
+            },
+            {
+                "key": "development rapid",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "usa",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "decision health teen",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "provision",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "effect negative",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "clinic name",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "analyst",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "new york",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "birth rate today",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "birthrate century",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "donation individual",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "brand",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "act publication regulation",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "affair social",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "role significant",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "volume",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "family international planning",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "arizona state university",
+                "step": "C:religion",
+                "value": 0.0625
+            },
+            {
+                "key": "student",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "congestion",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "approval",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "conference first global",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "C:religion",
+                "value": 0.0625
+            },
+            {
+                "key": "control fertility",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "child communication",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "australia western",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "box",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "hospital policy",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "ncbi",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "thing worst",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "loss memory",
+                "step": "C:religion",
+                "value": 0.0625
+            },
+            {
+                "key": "heartland",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "press worldwide",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "available contraception today",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "preparation prevention",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "confidence skill",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "active research sexually",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "booker cory",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "assault sexual",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "data sound technically",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "brain research",
+                "step": "C:religion",
+                "value": 0
+            },
+            {
+                "key": "action four strategies",
+                "step": "C:religion",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "C:youth",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "bad idea",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "broad scope",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "condom worshipper",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "decision health important",
+                "step": "C:youth",
+                "value": 0.16666666666666666
+            },
+            {
+                "key": "committee permanent",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "player",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "durham",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "contraceptive product",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "global network",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "baby center",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "dignity",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "development rapid",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "usa",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "decision health teen",
+                "step": "C:youth",
+                "value": 0.16666666666666666
+            },
+            {
+                "key": "provision",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "effect negative",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "clinic name",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "analyst",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "new york",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "birth rate today",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "C:youth",
+                "value": 0.16666666666666666
+            },
+            {
+                "key": "birthrate century",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "donation individual",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "brand",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "act publication regulation",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "affair social",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "role significant",
+                "step": "C:youth",
+                "value": 0.16666666666666666
+            },
+            {
+                "key": "company",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "volume",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "family international planning",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "arizona state university",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "congestion",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "approval",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "conference first global",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "control fertility",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "child communication",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "australia western",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "box",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "hospital policy",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "ncbi",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "thing worst",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "loss memory",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "heartland",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "press worldwide",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "available contraception today",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "preparation prevention",
+                "step": "C:youth",
+                "value": 0.16666666666666666
+            },
+            {
+                "key": "development issue",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "confidence skill",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "active research sexually",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "booker cory",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "assault sexual",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "data sound technically",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "brain research",
+                "step": "C:youth",
+                "value": 0
+            },
+            {
+                "key": "action four strategies",
+                "step": "C:youth",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "Medical",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "bad idea",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "broad scope",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "Medical",
+                "value": 0.3333333333333333
+            },
+            {
+                "key": "condom worshipper",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "decision health important",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "committee permanent",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "player",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "durham",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "contraceptive product",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "global network",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "baby center",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "dignity",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "development rapid",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "usa",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "decision health teen",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "provision",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "effect negative",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "clinic name",
+                "step": "Medical",
+                "value": 0.3333333333333333
+            },
+            {
+                "key": "analyst",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "new york",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "birth rate today",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "birthrate century",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "donation individual",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "brand",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "act publication regulation",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "affair social",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "role significant",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "volume",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "family international planning",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "arizona state university",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "congestion",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "approval",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "conference first global",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "control fertility",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "child communication",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "australia western",
+                "step": "Medical",
+                "value": 0.3333333333333333
+            },
+            {
+                "key": "box",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "action awareness",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "hospital policy",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "ncbi",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "thing worst",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "loss memory",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "heartland",
+                "step": "Medical",
+                "value": 0.3333333333333333
+            },
+            {
+                "key": "press worldwide",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "available contraception today",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "advocate strong",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "preparation prevention",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "Medical",
+                "value": 0.5138888888888888
+            },
+            {
+                "key": "confidence skill",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "active research sexually",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "booker cory",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "assault sexual",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "data sound technically",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "brain research",
+                "step": "Medical",
+                "value": 0
+            },
+            {
+                "key": "action four strategies",
+                "step": "Medical",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "step": "NFP",
+        "values": [
+            {
+                "key": "birth control woman",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "bad idea",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "broad scope",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "central greater jersey new northern",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "condom worshipper",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "demand",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "decision health important",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "committee permanent",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "sex",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "billing box method ovulation tick",
+                "step": "NFP",
+                "value": 0.1
+            },
+            {
+                "key": "player",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "dhoby ghaut",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "durham",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "conversation ted",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "contraceptive product",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "global network",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "baby center",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "abortion birth control",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "dignity",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "development rapid",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "usa",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "decision health teen",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "provision",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "misuse possible situation",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "effect negative",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "clinic name",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "analyst",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "acceptable affordable product safe",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "new york",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "birth rate today",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "comprehensive education health",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "birthrate century",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "donation individual",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "brand",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "act publication regulation",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "committee health reproductive",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "affair social",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "general nature",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "role significant",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "company",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "volume",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "family international planning",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "arizona state university",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "student",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "congestion",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "approval",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "conference first global",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "acetate hormone medroxyprogesterone",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "control fertility",
+                "step": "NFP",
+                "value": 0.1
+            },
+            {
+                "key": "child communication",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "australia western",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "box",
+                "step": "NFP",
+                "value": 0.1
+            },
+            {
+                "key": "action awareness",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "hospital policy",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "fhi headquarters",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "ncbi",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "thing worst",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "birth rate",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "loss memory",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "heartland",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "press worldwide",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "available contraception today",
+                "step": "NFP",
+                "value": 0.1
+            },
+            {
+                "key": "advocate strong",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "preparation prevention",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "development issue",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "bureau global health usaid",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "federation parenthood planned",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "confidence skill",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "active research sexually",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "emotional good relationship sexual",
+                "step": "NFP",
+                "value": 0.1
+            },
+            {
+                "key": "booker cory",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "assault sexual",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "data sound technically",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "brain research",
+                "step": "NFP",
+                "value": 0
+            },
+            {
+                "key": "action four strategies",
+                "step": "NFP",
+                "value": 0
+            }
+        ]
+    }
+]
