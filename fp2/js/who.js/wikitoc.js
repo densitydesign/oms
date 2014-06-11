@@ -56,12 +56,13 @@
     		var yDomain = d3.range(maxChapter)
     		y.domain(yDomain)
 
-
+    		
 			data.forEach(function(d,i){
 				d.value.clusters.forEach(function(e,f){
 					e.key = d.key
 					e.y = y(f);
 					e.x = x2(d3.time.day.floor(new Date(d.key))) + (i*maxRectWidth); 
+					e.revid = d.value.revid
 				})
 			})
 

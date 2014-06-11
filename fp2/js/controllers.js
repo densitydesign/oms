@@ -70,13 +70,15 @@ angular.module('who.controllers', [])
           totalItems: 4,
           currentStep: 1,
           itemsPerPage: 1,
-          maxItems: 5
+          maxItems: 5,       
+          url: "https://en.wikipedia.org/w/index.php?title=Family_planning&oldid="
         },
       "fp_wiki_toc_bc":{
           totalItems: 4,
           currentStep: 1,
           itemsPerPage: 1,
-          maxItems: 5
+          maxItems: 5,
+          url: "https://en.wikipedia.org/w/index.php?title=Birth_control&oldid="
         },
       "fp_crawl_network":{
           totalItems: 5,

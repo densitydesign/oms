@@ -282,6 +282,7 @@ angular.module('who.directives', [])
               wikitoclegend = who.wikitoclegend()
                 .height($(containerViz).height()-3)
                 .width($(containerLegend).width())
+                .url(scope.ctrlmodels[scope.section.id].url)
 
               //var dataLegend = d3.select("[transform='translate(0,0)']").data()[0].value.clusters
               var dataLegend = d3.select(containerViz).selectAll("[transform='translate(0,0)']").data()[0]
@@ -1995,7 +1996,6 @@ angular.module('who.directives', [])
 		    map = L.mapbox.map('wikimap', 'fenicento.ha4jo7ff',{scrollWheelZoom:false})
 		        .setView([18.95, 18.08333], 2);
 		        
-		        console.log(map)
 			
 		    markers_cs = new L.MarkerClusterGroup({showCoverageOnHover:false,iconCreateFunction: bcCluster,spiderfyOnMaxZoom:true});
 		    markers_fp = new L.MarkerClusterGroup({showCoverageOnHover:false, iconCreateFunction: fpCluster,spiderfyOnMaxZoom:true});
