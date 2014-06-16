@@ -31,6 +31,7 @@ angular.module('who.controllers', [])
       {id:"fp_crawl_network", label:"The web cartography", nav: false, step:true, template:"viz-step", protocol: 'fp_crawl', legend:true},
       {id:"fp_text_intro",label:"The Issue analysis",nav: true, step:false,template:"sub-chapter", protocol: false},
       {id:"fp_text_slope",label:"The Issue analysis", nav: false, step:true, template:"viz-step-slope", protocol: 'fp_text'},
+      {id:"fp_text_scatter",label:"The Issue analysis", nav: false, step:true, template:"viz-scatter-plot", protocol: 'fp_text'},
       {id:"fp_outro",label:"Conclusion to family planning",nav: true, step:false, template:"sub-chapter", protocol: false}
     ]
 

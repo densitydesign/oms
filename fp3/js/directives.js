@@ -763,7 +763,7 @@ angular.module('who.directives', [])
             }
           },
           {init: function(){
-            slope.showCat([ "advocacy", "contraception", "culture"]).catStep([]).hidefilter(false).sorted("advocacy")
+            slope.showCat([ "advocacy", "contraception", "culture"]).catStep([]).hidefilter(false)//.sorted("advocacy")
             chart.call(slope)
             }
           }
@@ -2485,6 +2485,79 @@ angular.module('who.directives', [])
       
      }
      }])
+  .directive('vizScatterPlot',['fileService', '$timeout','$compile', function (fileService, $timeout, $compile) {
+    return {
+      restrict: 'A',
+      replace: true,
+      templateUrl: 'partials/scatter.html',
+      link: function postLink(scope, element, attrs) {
+
+        var counter = 0,
+          chart,
+          scatter,
+          loaded = false;
+
+        var container = element.find("#graph")[0],
+            containerPagination = element.find("#paginationStep")[0]
+
+        var init = function(){
+
+          fileService.getFile('data/' + scope.section.id + '/scatter.tsv').then(
+            function(data){
+              
+              var dataScatter =  d3.tsv.parse(data)
+
+              dataScatter.forEach(function(d){
+                d.area = +d.area;
+                d.x = +d.x;
+                d.y = +d.y;
+              })
+
+              var chart = d3.select(container)
+
+              scatter = who.scatterPlot()
+                            .height($(container).height()-3)
+                            .width($(container).width())
+
+              console.log(dataScatter)
+              chart.datum(dataScatter).call(scatter)
+              
+              loaded = true;
+
+            },
+            function(error){
+              element.find('#graph').html(error)
+            }
+          );
+        };
+
+        if (scope.$parent.$last === true) {
+                  scope.$emit('docReady');
+                  $timeout(function () {
+                       //init()
+                  });
+        }
+        else {
+           $timeout(function (){
+              //init();
+          })
+
+         }
+
+
+        //lazy loading
+        scope.$watch('utils.section', function(newValue, oldValue){
+         if(newValue == scope.section.id && loaded === false){
+           $timeout(function (){
+            //scope.loadingstart()
+            init()
+            });
+          }
+        })
+
+      }
+    };
+  }])
   .directive('navBar',[ 'fileService', '$timeout', function (fileService, $timeout){
     return {
       restrict: 'A',

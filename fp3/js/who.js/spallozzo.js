@@ -76,6 +76,7 @@
         	}
         	else{
         		var step = _data.map(function(d){return d.step})
+        		console.log(sorted, step)
         		var index = step.indexOf(sorted)
         		yDomain = _data[index].values.map(function(d){return d.key})
         	}
