@@ -322,6 +322,7 @@ angular.module('who.directives', [])
         })
 
         scope.$watch('ctrlmodels.'+ scope.section.id + '.zoom', function(newValue, oldValue){
+          console.log(newValue)
           if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
                 network.zoomCluster('Modularity Class',newValue)
                 //chart.call(network)
@@ -329,7 +330,8 @@ angular.module('who.directives', [])
         })
 
         scope.$watch('ctrlmodels.'+ scope.section.id + '.zoomNodes', function(newValue, oldValue){
-          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded ){
                 network.zoomNodes('clusters',newValue)
             }
 

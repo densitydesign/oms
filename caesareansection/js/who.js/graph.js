@@ -27,6 +27,7 @@
       bis1 = {nodes : [], edges: []},
       bis2 = {nodes : [], edges: []},
       scale,
+      dragged = false,
       dispatch = d3.dispatch("resetfilter", "clicked");
 
 
@@ -40,6 +41,39 @@
    * GLOBAL APP VARS:
    * ****************
    */
+
+  //drag and drop event listener
+  sigma.utils.pkg('sigma.events');
+
+  /**
+   * Dispatch 'drag' and 'drop' events by dealing with mouse events.
+   *
+   * @param {object} renderer The renderer to listen.
+   */
+  sigma.events.drag = function(renderer) {
+    sigma.classes.dispatcher.extend(this);
+
+    var _self = this,
+        _drag = false,
+        _x = 0,
+        _y = 0;
+
+      renderer.container.addEventListener('mousedown', function(e) {
+          _x = e.clientX;
+          _y = e.clientY;
+      })
+
+      renderer.container.addEventListener('mouseup', function(e) {
+
+        if(Math.abs(e.clientX - _x) || Math.abs(e.clientY - _y) > 1) {
+          _self.dispatchEvent('drag');
+        }else{
+          _self.dispatchEvent('drop');
+        }
+
+      })
+  };
+  // end drag and drop
 
   sigma.utils.pkg('sigma.canvas.labels');
   sigma.canvas.labels.def = function(node, context, settings) {
@@ -60,7 +94,7 @@
 
       context.fillText(
         node.label,
-        Math.round(node[prefix + 'x'] - (((node.label.length || node.file_label.length )* fontSize)/4) ),
+        Math.round(node[prefix + 'x'] - (((node.label ? node.label.length : node.file_label.length )* fontSize)/4) ),
         Math.round(node[prefix + 'y'] + fontSize + node.size)
       );
     }
@@ -313,6 +347,7 @@
                              
                       }
                     }else{
+
                       var cose = d3.entries(node.attributes).filter(function(d){return d.value =="true" }).map(function(d){return d.key})
                       var check = property.some(function(e,index,array){
                           if (cose.indexOf(propertyDict[e]) > -1)
@@ -320,6 +355,14 @@
                           else
                             return 0
                       })
+
+                      //chenk none
+
+                      if(property.indexOf("none") > -1){
+                        if( d3.entries(node.attributes).filter(function(d){return d.value =="false" }).length == 3 && node.attributes["Type"] != "query"){
+                          check = true;
+                        }
+                      }
 
                       if (!check){
                           node.target_color = '#F1F1F1'
@@ -334,6 +377,7 @@
                               node.target_color = "#42A8A8";
                             }
                         }
+
                       }
             });
           },
@@ -803,6 +847,7 @@ var networkconfig = {
   "parserFnc": function(graph){
 
         graph.nodes.forEach(function(n) {
+          
           n.file_label = n.label;
           n.file_color = n.color;
           n.file_size = n.size;
@@ -813,7 +858,10 @@ var networkconfig = {
           delete n.label;
 
           if (n.attributes["Type"] == "query")
-            {_options.innerCircleCount++;}
+            {
+              _options.innerCircleCount++;
+              n.file_label = n.file_label.toUpperCase()
+            }
           else if (n.attributes["Type"] == "host")
             {_options.innerUrlCount++;}
           else
@@ -877,12 +925,23 @@ var networkconfig = {
 
 
         applyView(0);
-        
+
+
+        var _dragListener = new sigma.events.drag(_s.renderers[0]);
+        _dragListener.bind('drag', function(e) {
+            dragged = true;
+        });
+
+        _dragListener.bind('drop', function(e) {
+            dragged = false;
+        });
+
       },
   "_views": [
         {
           init: function() {
             _s.unbind("clickNode");
+            _s.unbind("clickStage");
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -926,8 +985,12 @@ var networkconfig = {
             });
 
             _s.bind('clickStage', function(e) {
-                    dispatch.resetfilter()
-                });
+                        if(!dragged){
+                          dispatch.resetfilter()
+                          //applyView(_views.length-1)
+
+                        }
+              });
 
              _s.bind("clickNode", function(e) {
 
@@ -938,7 +1001,7 @@ var networkconfig = {
                 
                 var selected = e.data.node.selected
 
-                console.log(selected)
+                //console.log(selected)
 
                 if(selected){
                    e.data.node.selected = false
@@ -985,6 +1048,8 @@ var networkconfig = {
         {
           init: function() {
             _s.unbind("clickNode");
+            _s.unbind("clickStage");
+
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -1027,6 +1092,15 @@ var networkconfig = {
               edge.color = "rgba(17, 17, 17, 0.1)"
             });
 
+            _s.bind('clickStage', function(e) {
+                        if(!dragged){
+                          dispatch.resetfilter()
+                          //applyView(_views.length-1)
+
+                        }
+
+              });
+
              _s.bind("clickNode", function(e) {
 
                 
@@ -1036,7 +1110,7 @@ var networkconfig = {
                 
                 var selected = e.data.node.selected
 
-                console.log(selected)
+                //console.log(selected)
 
                 if(selected){
                    e.data.node.selected = false
@@ -1083,6 +1157,8 @@ var networkconfig = {
         {
           init: function() {
             _s.unbind("clickNode");
+            _s.unbind("clickStage");
+
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -1131,6 +1207,15 @@ var networkconfig = {
                 edge.color ="rgba(17, 17, 17, 0.1)"
               }
             });
+
+              _s.bind('clickStage', function(e) {
+                        if(!dragged){
+                          dispatch.resetfilter()
+                          //applyView(_views.length-1)
+
+                        }
+
+              });
 
              _s.bind("clickNode", function(e) {
 
@@ -1187,6 +1272,8 @@ var networkconfig = {
         {
           init: function() {
             _s.unbind("clickNode");
+            _s.unbind("clickStage");
+
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -1235,6 +1322,15 @@ var networkconfig = {
                 edge.color ="rgba(17, 17, 17, 0)"
               }
             });
+
+            _s.bind('clickStage', function(e) {
+                        if(!dragged){
+                          dispatch.resetfilter()
+                          //applyView(_views.length-1)
+
+                        }
+
+              });
 
              _s.bind("clickNode", function(e) {
 
@@ -1293,6 +1389,8 @@ var networkconfig = {
         {
           init: function() {
             _s.unbind("clickNode");
+            _s.unbind("clickStage");
+
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -1349,9 +1447,15 @@ var networkconfig = {
               }
             });
 
-            // _s.bind('clickStage', function(e) {
-            //         dispatch.resetfilter()
-            //     });
+
+            _s.bind('clickStage', function(e) {
+                        if(!dragged){
+                          dispatch.resetfilter()
+                          applyView(_views.length-1)
+
+                        }
+
+              });
 
             _s.bind("clickNode", function(e) {
 
@@ -1567,6 +1671,16 @@ var networkconfig = {
         // Read graph:
         _s.graph.read(_graph);
 
+
+        var _dragListener = new sigma.events.drag(_s.renderers[0]);
+        _dragListener.bind('drag', function(e) {
+            dragged = true;
+        });
+
+        _dragListener.bind('drop', function(e) {
+            dragged = false;
+        });
+
         // Apply first action:
         applyView(0);
       },
@@ -1579,6 +1693,8 @@ var networkconfig = {
            */
           init: function() {
             _s.unbind('clickNode');
+            _s.unbind('clickStage');
+
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount;
@@ -1602,9 +1718,10 @@ var networkconfig = {
             _s.graph.edges().forEach(function(edge, i, a) {
               edge.color = 'rgba(17, 17, 17, 0.1)'
             });
-            _s.bind('clickStage', function(e) {
-                    dispatch.resetfilter()
-                });
+
+            // _s.bind('clickStage', function(e) {
+            //         dispatch.resetfilter()
+            //     });
 
              _s.bind("clickNode", function(e) {
 
@@ -1670,6 +1787,8 @@ var networkconfig = {
            */
           init: function() {
             _s.unbind('clickNode');
+            _s.unbind('clickStage');
+
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -1700,9 +1819,9 @@ var networkconfig = {
               edge.color = 'rgba(17, 17, 17, 0.1)'
             });
 
-            _s.bind('clickStage', function(e) {
-                    dispatch.resetfilter()
-                });
+            // _s.bind('clickStage', function(e) {
+            //         dispatch.resetfilter()
+            //     });
 
              _s.bind("clickNode", function(e) {
 
@@ -1769,6 +1888,8 @@ var networkconfig = {
            */
           init: function() {
             _s.unbind('clickNode');
+            _s.unbind('clickStage');
+
             _s.graph.nodes().forEach(function(node, i, a) {
 
               var l = _options.innerCircleCount,
@@ -1791,9 +1912,10 @@ var networkconfig = {
             _s.graph.edges().forEach(function(edge, i, a) {
               edge.color = 'rgba(17, 17, 17, 0.1)'
             });
-            _s.bind('clickStage', function(e) {
-                    dispatch.resetfilter()
-                });
+
+            // _s.bind('clickStage', function(e) {
+            //         dispatch.resetfilter()
+            //     });
 
              _s.bind("clickNode", function(e) {
 
@@ -1860,6 +1982,8 @@ var networkconfig = {
            */
           init: function() {
             _s.unbind("clickNode");
+            _s.unbind('clickStage');
+            
             _s.graph.nodes().forEach(function(node, i, a) {
               var l = _options.innerCircleCount;
 
