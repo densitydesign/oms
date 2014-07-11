@@ -274,6 +274,12 @@ ol li
 	line-height: 170%;
 }
 
+#depth{
+	width:250px;
+	height: 20px;
+	background-image: url(../img/depth-colors.jpg);
+}
+
 .proto-content h2{
 	text-align:center;
 	font-family: 'Montserrat', sans-serif;
