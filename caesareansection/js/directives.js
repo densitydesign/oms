@@ -322,9 +322,16 @@ angular.module('who.directives', [])
         })
 
         scope.$watch('ctrlmodels.'+ scope.section.id + '.zoom', function(newValue, oldValue){
-          console.log(newValue)
-          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded && newValue != false){
                 network.zoomCluster('Modularity Class',newValue)
+                //chart.call(network)
+            }
+        })
+
+        scope.$watch('ctrlmodels.'+ scope.section.id + '.reset', function(newValue, oldValue){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+                network.zoomCluster('Modularity Class',false)
+                scope.ctrlmodels[scope.section.id].zoom = false
                 //chart.call(network)
             }
         })
@@ -539,24 +546,6 @@ angular.module('who.directives', [])
             slope 
               .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
               .catStep(["baby","cesarean delivery","section","birth","delivery","birth vaginal","pregnancy","delivery vaginal","vbac","child","infant","birth cesarean","life","contraction","fetus","position","future pregnancy","method","elective","date due","treatment","extra procedure","spacing","another baby","another child","baby boy","child first","births caesarean","caesarean","caesarean elective","caesarean section","birth labor","birth section","full term","opening surgical","ban vbac","attempted hbac","cbac","delivery instrumental surgical","cesarean either section","attempted birth vaginal","advanced skill surgical","anaesthesia spinal","caeasarean real section","caesarean delivery safe","caesarean low rate section","caesarean surgery","analgesia less","hbac","baby next","cesarean operation","cesarean story","child next","pregnancy whole","delivery forceps","delivery instrumental","delivery normal","delivery section","spontaneous"])
-              .hidefilter(true)
-
-            chart.call(slope)
-            }
-          },
-          {init: function(){
-            slope 
-              .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
-              .catStep(["uterus","placenta","abdomen","cord umbilical","body","head","bladder","foot","birth canal","wound","abdomen lower","area belly lower","heart","tummy"])
-              .hidefilter(true)
-
-            chart.call(slope)
-            }
-          },
-          {init: function(){
-            slope 
-              .showCat(["MEDICAL", "CONTROVERSIES", "EXPERIENCES"])
-              .catStep(["woman","mother","pregnant woman","primigravida","baby woman"])
               .hidefilter(true)
 
             chart.call(slope)

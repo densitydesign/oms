@@ -1719,9 +1719,11 @@ var networkconfig = {
               edge.color = 'rgba(17, 17, 17, 0.1)'
             });
 
-            // _s.bind('clickStage', function(e) {
-            //         dispatch.resetfilter()
-            //     });
+            _s.bind('clickStage', function(e) {
+                if(!dragged){
+                    dispatch.resetfilter()
+                  }
+                });
 
              _s.bind("clickNode", function(e) {
 
@@ -1796,7 +1798,7 @@ var networkconfig = {
 
               node.label = null;
               //node.target_size = _s.graph.degree(node.id) / _options.ratio;
-              if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
+              if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label.toUpperCase();
 
               node.target_size = node.file_size / _options.ratio;
               //node.target_size = _s.graph.degree(node.id) / _options.ratio;
@@ -1819,9 +1821,11 @@ var networkconfig = {
               edge.color = 'rgba(17, 17, 17, 0.1)'
             });
 
-            // _s.bind('clickStage', function(e) {
-            //         dispatch.resetfilter()
-            //     });
+            _s.bind('clickStage', function(e) {
+                if(!dragged){
+                    dispatch.resetfilter()
+                  }
+                });
 
              _s.bind("clickNode", function(e) {
 
@@ -1913,9 +1917,11 @@ var networkconfig = {
               edge.color = 'rgba(17, 17, 17, 0.1)'
             });
 
-            // _s.bind('clickStage', function(e) {
-            //         dispatch.resetfilter()
-            //     });
+            _s.bind('clickStage', function(e) {
+                if(!dragged){
+                    dispatch.resetfilter()
+                  }
+                });
 
              _s.bind("clickNode", function(e) {
 
@@ -1926,7 +1932,7 @@ var networkconfig = {
                 
                 var selected = e.data.node.selected
 
-                console.log(e.data.node)
+                //console.log(e.data.node)
 
                 if(selected){
                    e.data.node.selected = false
@@ -1996,6 +2002,20 @@ var networkconfig = {
               node.target_size = node.file_size / _options.ratio;
               //node.target_size = _s.graph.degree(node.id) / _options.ratio;
             });
+            _s.graph.edges().forEach(function(edge, i, a) {
+                            edge.color = 'rgba(17, 17, 17, 0.1)'
+
+              });
+
+            _s.bind('clickStage', function(e) {
+                        if(!dragged){
+                          dispatch.resetfilter()
+                          applyView(_views.length-1)
+
+                        }
+
+              });
+
             _s.bind('clickNode', function(e) {
                 var selected = e.data.node.selected
                 var cam = _s.cameras[0]

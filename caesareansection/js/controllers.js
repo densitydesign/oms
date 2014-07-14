@@ -65,7 +65,8 @@ angular.module('who.controllers', [])
           itemsPerPage: 1,
           maxItems: 4,
           zoom : false,
-          size : "deg"
+          size : "deg",
+          reset : 0
         },
       "cs_query_network":{
           totalItems: 5,
