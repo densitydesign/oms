@@ -1365,7 +1365,7 @@ var networkconfig = {
 "outerRadius": 1800,
 "duration": 500,
 "action": 0,
-"ratio": 4
+"ratio": 5
       },
   "settings": {
 "edgeColor": "default",
@@ -1838,7 +1838,7 @@ var networkconfig = {
 
               }
               else {
-                node.target_size = +node.attributes["Size"];
+                node.target_size = +node.attributes["Size"]/_options.ratio;
                 //node.target_color = "#C6C6C6"; 
                 node.target_color = "#42A8A8";
                 angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
@@ -1957,7 +1957,7 @@ var networkconfig = {
 
               }
               else {
-                node.target_size = +node.attributes["Size"];
+                node.target_size = +node.attributes["Size"]/ _options.ratio;
                 //node.target_color = "#C6C6C6"; 
                 node.target_color = "#42A8A8";
                 angle = Math.PI * 2 * (i - l - l3) / (l2) - Math.PI / 2;
