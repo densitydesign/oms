@@ -309,9 +309,17 @@ angular.module('who.directives', [])
         })
 
         scope.$watch('ctrlmodels.'+ scope.section.id + '.zoom', function(newValue, oldValue){
-          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded && newValue != false){
                 //network.zoomCluster('clusters',newValue)
                 network.zoomCluster('Modularity Class',newValue)
+                //chart.call(network)
+            }
+        })
+
+        scope.$watch('ctrlmodels.'+ scope.section.id + '.reset', function(newValue, oldValue){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+                network.zoomCluster('Modularity Class',false)
+                scope.ctrlmodels[scope.section.id].zoom = false
                 //chart.call(network)
             }
         })

@@ -987,8 +987,6 @@ var networkconfig = {
             _s.bind('clickStage', function(e) {
                         if(!dragged){
                           dispatch.resetfilter()
-                          //applyView(_views.length-1)
-
                         }
               });
 
@@ -1901,7 +1899,7 @@ var networkconfig = {
 
               node.label = null;
 
-              if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
+              if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label.toUpperCase();
 
               if (i < l)
                 node.target_color = "#42A8A8"; // TODO: Apply good color

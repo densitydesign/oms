@@ -29,8 +29,8 @@ angular.module('who.controllers', [])
       //{id:"fp_query_analytics",label: "The web corpus",nav: false, step:false, template:"analytics", protocol: 'fp_query'},
       {id:"fp_crawl_intro", label:"The web cartography", nav: true, step:false, template:"sub-chapter", protocol: false},
       {id:"fp_crawl_network", label:"The web cartography", nav: false, step:true, template:"viz-step", protocol: 'fp_crawl', legend:true},
-      {id:"fp_text_intro",label:"The Issue analysis",nav: true, step:false,template:"sub-chapter", protocol: false},
-      {id:"fp_text_slope",label:"The Issue analysis", nav: false, step:true, template:"viz-step-slope", protocol: 'fp_text'},
+      //{id:"fp_text_intro",label:"The Issue analysis",nav: true, step:false,template:"sub-chapter", protocol: false},
+      //{id:"fp_text_slope",label:"The Issue analysis", nav: false, step:true, template:"viz-step-slope", protocol: 'fp_text'},
       {id:"fp_outro",label:"Conclusion to family planning",nav: true, step:false, template:"sub-chapter", protocol: false}
     ]
 
@@ -54,7 +54,8 @@ angular.module('who.controllers', [])
           itemsPerPage: 1,
           maxItems: 5,
           zoom : false,
-          size:"deg"
+          size:"deg",
+          reset : 0
         },
       "fp_query_network":{
           totalItems: 5,
