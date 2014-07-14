@@ -2500,6 +2500,8 @@ angular.module('who.directives', [])
       templateUrl: 'partials/scatter.html',
       link: function postLink(scope, element, attrs) {
 
+        //area (TF)
+
         var counter = 0,
           chart,
           scatter,
@@ -2521,13 +2523,14 @@ angular.module('who.directives', [])
                 d.y = +d.y;
               })
 
+              dataScatter = dataScatter.filter(function(d){return d.area > 0})
+
               var chart = d3.select(container)
 
               scatter = who.scatterPlot()
                             .height($(container).height()-3)
                             .width($(container).width())
 
-              console.log(dataScatter)
               chart.datum(dataScatter).call(scatter)
               
               loaded = true;
@@ -2561,6 +2564,13 @@ angular.module('who.directives', [])
             init()
             });
           }
+        })
+
+        scope.$watch('ctrlmodels.'+ scope.section.id + '.reset', function(newValue, oldValue){
+          if(newValue !== oldValue && scope.utils.section === scope.section.id && loaded){
+                scatter.reset()
+                //chart.call(network)
+            }
         })
 
       }

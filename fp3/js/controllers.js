@@ -77,6 +77,9 @@ angular.module('who.controllers', [])
             two : "contraception", 
             three: "culture"
           }
+        },
+        "fp_text_scatter":{
+            reset:0
         }
       }
 
@@ -94,7 +97,7 @@ angular.module('who.controllers', [])
             paddingTop: '55px',
             paddingBottom: '55px',
             verticalCentered: false,
-            normalScrollElements: '#viz_googleimages .imgs, .slope-cont, div.proto, .links-node',
+            normalScrollElements: '#viz_googleimages .imgs, .slope-cont, div.proto, .links-node, .scatter-cont',
             onLeave: function(index, direction){
 
                 $(".tt").remove();
