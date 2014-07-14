@@ -26,6 +26,7 @@
           .attr('height', height)
         }
 
+        console.log(data)
 
         var legend = chart.selectAll('a').data(data, function(d){return d.name})
 
@@ -33,9 +34,10 @@
               .attr("xlink:href", function(d){return url + d.revid + "#" + d.name})
               .attr("target", "_blank")
               .select("text").text(function(d){return d.label.replace(/(<([^>]+)>)/ig,"")})
-              .attr("x", 0)
+              //.attr("x", 0)
               .attr("text-decoration",null)
               .attr("y", function(d){return d.y})
+              .attr("font-weight", function(d){return d.group == 1 ? "bold" : "normal"})
               .filter(function(d){
                 return d.type == "dead"
               })
@@ -50,17 +52,17 @@
               .attr("y", function(d){return d.y})
               .attr("dy", "0.8em")
               .attr("font-family", "Georgia, serif")
-              .attr("font-size", "10pt")
+              .attr("font-size", "9pt")
               .attr("text-decoration",null)
+              //.attr("text-anchor", "end")
+              .attr("font-weight", function(d){return d.group == 1 ? "bold" : "normal"})
               .text(function(d){return d.label.replace(/(<([^>]+)>)/ig,"")})
               .filter(function(d){
                 return d.type == "dead"
               })
               .attr("text-decoration","line-through")
 
-        legend.exit()
-              .attr("x", -200)
-              .remove()
+        legend.exit().remove()
 
 
       }); //end selection

@@ -55,7 +55,8 @@ angular.module('who.controllers', [])
           itemsPerPage: 1,
           maxItems: 5,
           zoom : false,
-          size:"deg"
+          size:"deg",
+          reset : 0
         },
       "fp_query_network":{
           totalItems: 5,

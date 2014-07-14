@@ -1035,7 +1035,7 @@ var networkconfig = {
 
               node.label = null;
               //node.target_size = _s.graph.degree(node.id) / _options.ratio;
-              if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label.toUpperCase();;
+              if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label.toUpperCase();
 
               node.target_size = node.file_size / _options.ratio;
               //node.target_size = _s.graph.degree(node.id) / _options.ratio;

@@ -28,6 +28,7 @@
       bis2 = {nodes : [], edges: []},
       scale,
       //dispatch = d3.dispatch("steplimit");
+      dragged = false,
       dispatch = d3.dispatch("resetfilter", "clicked");
 
 
@@ -41,6 +42,39 @@
    * GLOBAL APP VARS:
    * ****************
    */
+
+//drag and drop event listener
+  sigma.utils.pkg('sigma.events');
+
+  /**
+   * Dispatch 'drag' and 'drop' events by dealing with mouse events.
+   *
+   * @param {object} renderer The renderer to listen.
+   */
+  sigma.events.drag = function(renderer) {
+    sigma.classes.dispatcher.extend(this);
+
+    var _self = this,
+        _drag = false,
+        _x = 0,
+        _y = 0;
+
+      renderer.container.addEventListener('mousedown', function(e) {
+          _x = e.clientX;
+          _y = e.clientY;
+      })
+
+      renderer.container.addEventListener('mouseup', function(e) {
+
+        if(Math.abs(e.clientX - _x) || Math.abs(e.clientY - _y) > 1) {
+          _self.dispatchEvent('drag');
+        }else{
+          _self.dispatchEvent('drop');
+        }
+
+      })
+  };
+  // end drag and drop
 
   sigma.utils.pkg('sigma.canvas.labels');
   sigma.canvas.labels.def = function(node, context, settings) {
@@ -870,6 +904,8 @@ var networkconfig = {
            */
           init: function() {
             _s.unbind('clickNode');
+            _s.unbind('clickStage');
+
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount;
@@ -893,8 +929,11 @@ var networkconfig = {
             _s.graph.edges().forEach(function(edge, i, a) {
               edge.color = 'rgba(17, 17, 17, 0.1)'
             });
+
             _s.bind('clickStage', function(e) {
+                if(!dragged){
                     dispatch.resetfilter()
+                  }
                 });
 
              _s.bind("clickNode", function(e) {
@@ -961,14 +1000,16 @@ var networkconfig = {
            */
           init: function() {
             _s.unbind('clickNode');
+            _s.unbind('clickStage');
+
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
-                  labelToShow = ["who.int", "nih.gov", "ican-online.net", "theunnecesarean.com", "thelancet.com", "nhs.gov"];
+                  labelToShow = ["fhi360.org","gatesfoundation.org", "unfpa.org", "nhs.uk", "who.int", "nih.gov", "ican-online.net", "theunnecesarean.com", "thelancet.com", "nhs.gov"];
 
               node.label = null;
               //node.target_size = _s.graph.degree(node.id) / _options.ratio;
-              if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label;
+              if(labelToShow.indexOf(node.file_label.toLowerCase()) >= 0 ) node.label = node.file_label.toUpperCase();
 
               node.target_size = node.file_size / _options.ratio;
               //node.target_size = _s.graph.degree(node.id) / _options.ratio;
@@ -992,7 +1033,9 @@ var networkconfig = {
             });
 
             _s.bind('clickStage', function(e) {
+                if(!dragged){
                     dispatch.resetfilter()
+                  }
                 });
 
              _s.bind("clickNode", function(e) {
@@ -1060,10 +1103,12 @@ var networkconfig = {
            */
           init: function() {
             _s.unbind('clickNode');
+            _s.unbind('clickStage');
+
             _s.graph.nodes().forEach(function(node, i, a) {
 
               var l = _options.innerCircleCount,
-                  labelToShow = ["who.int", "nih.gov", "ican-online.net", "theunnecesarean.com", "thelancet.com", "nhs.gov"];
+                  labelToShow = ["fhi360.org","gatesfoundation.org", "unfpa.org", "nhs.uk", "who.int", "nih.gov", "ican-online.net", "theunnecesarean.com", "thelancet.com", "nhs.gov"];
 
               node.label = null;
 
@@ -1151,6 +1196,8 @@ var networkconfig = {
            */
           init: function() {
             _s.unbind("clickNode");
+            _s.unbind('clickStage');
+
             _s.graph.nodes().forEach(function(node, i, a) {
               var l = _options.innerCircleCount;
 
@@ -1163,6 +1210,21 @@ var networkconfig = {
               node.target_size = node.file_size / _options.ratio;
               //node.target_size = _s.graph.degree(node.id) / _options.ratio;
             });
+
+            _s.graph.edges().forEach(function(edge, i, a) {
+                            edge.color = 'rgba(17, 17, 17, 0.1)'
+
+              });
+
+            _s.bind('clickStage', function(e) {
+                        if(!dragged){
+                          dispatch.resetfilter()
+                          applyView(_views.length-1)
+
+                        }
+
+              });
+            
             _s.bind('clickNode', function(e) {
                 var selected = e.data.node.selected
                 var cam = _s.cameras[0]
@@ -1296,8 +1358,8 @@ var networkconfig = {
         } ,
   "parserURL": "data/cs_query_network/cs_query.json",
   "queryPosScale": d3.scale.ordinal()
-        .domain(['Rhythm methods', 'Preventing pregnancy', 'Birth control', 'Planned parenthood', 'Birth control methods', 'Fertility regulation', 'Fertility control', 'Birth spacing', 'Family size', 'Not having babies', 'contraception', 'hormonal cotraceptive', 'pill contraception', 'condoms contraception', 'condoms "family planning"', 'pill+"family planning"', 'IUD "family planning"', 'family planning', 'Pregnancy prevention'])
-        .range([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]),
+        .domain(['family planning "population control"','family planning "environmental development"', 'family planning "economic development"','family planning "sustainable development"','family planning "social development"','family planning "population growth"'])
+        .range([0,1,2,3,4,5]),
   "parserFnc": function(graph){
 
        graph.nodes.forEach(function(n) {
@@ -1311,7 +1373,10 @@ var networkconfig = {
           delete n.label;
 
           if (n.attributes["Type"] == "query")
-            {_options.innerCircleCount++;}
+            {
+              _options.innerCircleCount++;
+              n.file_label = n.file_label.toUpperCase()
+            }
           else if (n.attributes["Type"] == "host")
             {_options.innerUrlCount++;}
           else
@@ -1373,6 +1438,14 @@ var networkconfig = {
 
         _s.graph.read(_graph);
 
+        var _dragListener = new sigma.events.drag(_s.renderers[0]);
+        _dragListener.bind('drag', function(e) {
+            dragged = true;
+        });
+
+        _dragListener.bind('drop', function(e) {
+            dragged = false;
+        });
 
         applyView(0);
         
@@ -1381,6 +1454,8 @@ var networkconfig = {
         {
           init: function() {
             _s.unbind("clickNode");
+            _s.unbind("clickStage");
+
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -1424,7 +1499,9 @@ var networkconfig = {
             });
 
             _s.bind('clickStage', function(e) {
-                    dispatch.resetfilter()
+                    if(!dragged){
+                      dispatch.resetfilter()
+                    }
                 });
 
              _s.bind("clickNode", function(e) {
@@ -1483,6 +1560,8 @@ var networkconfig = {
         {
           init: function() {
             _s.unbind("clickNode");
+            _s.unbind("clickStage");
+
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -1524,6 +1603,12 @@ var networkconfig = {
             _s.graph.edges().forEach(function(edge, i, a) {
               edge.color = "rgba(17, 17, 17, 0.1)"
             });
+
+            _s.bind('clickStage', function(e) {
+                        if(!dragged){
+                          dispatch.resetfilter()
+                        }
+              });
 
              _s.bind("clickNode", function(e) {
 
@@ -1581,6 +1666,8 @@ var networkconfig = {
         {
           init: function() {
             _s.unbind("clickNode");
+            _s.unbind("clickStage");
+
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -1629,6 +1716,13 @@ var networkconfig = {
                 edge.color ="rgba(17, 17, 17, 0.1)"
               }
             });
+
+            _s.bind('clickStage', function(e) {
+                    if(!dragged){
+                      dispatch.resetfilter()
+                     }
+
+              });
 
              _s.bind("clickNode", function(e) {
 
@@ -1685,6 +1779,8 @@ var networkconfig = {
         {
           init: function() {
             _s.unbind("clickNode");
+            _s.unbind("clickStage");
+
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -1733,6 +1829,13 @@ var networkconfig = {
                 edge.color ="rgba(17, 17, 17, 0)"
               }
             });
+
+              _s.bind('clickStage', function(e) {
+                        if(!dragged){
+                          dispatch.resetfilter()
+                        }
+
+              });
 
              _s.bind("clickNode", function(e) {
 
@@ -1791,6 +1894,8 @@ var networkconfig = {
         {
           init: function() {
             _s.unbind("clickNode");
+            _s.unbind("clickStage");
+
             _s.graph.nodes().forEach(function(node, i, a) {
               var angle,
                   l = _options.innerCircleCount,
@@ -1847,9 +1952,14 @@ var networkconfig = {
               }
             });
 
-            // _s.bind('clickStage', function(e) {
-            //         dispatch.resetfilter()
-            //     });
+             _s.bind('clickStage', function(e) {
+                        if(!dragged){
+                          dispatch.resetfilter()
+                          applyView(_views.length-1)
+
+                        }
+
+              });
 
             _s.bind("clickNode", function(e) {
 
