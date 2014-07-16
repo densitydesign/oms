@@ -1987,6 +1987,7 @@ var networkconfig = {
           init: function() {
             _s.unbind("clickNode");
             _s.unbind('clickStage');
+            dispatch.resetfilter()
             
             _s.graph.nodes().forEach(function(node, i, a) {
               var l = _options.innerCircleCount;
@@ -2018,6 +2019,7 @@ var networkconfig = {
                 var selected = e.data.node.selected
                 var cam = _s.cameras[0]
                 if(selected){
+                  dispatch.resetfilter()
                   _s.graph.nodes().forEach(function(node, i, a) {
                         var l = _options.innerCircleCount;
                         node.label = node.file_label;
@@ -2049,6 +2051,10 @@ var networkconfig = {
                      var edges = nh.edges;
                      var idsN = nodes.map(function(d){return d.id});
                      var idsE = edges.map(function(d){return d.id});
+
+                      dispatch.resetfilter()
+                      dispatch.clicked(e.data.node, nodes)
+
                       _s.graph.nodes().forEach(function(node, i, a) {
                           if(node.id == e.data.node.id){
                             node.selected = true
