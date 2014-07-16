@@ -766,12 +766,12 @@ angular.module('who.directives', [])
 
         var step = [
           {init: function(){
-            slope.showCat(["CORPUS"]).catStep([]).hidefilter(false).sorted(0)
+            slope.showCat(["CORPUS"]).catStep([]).hidefilter(false).sorted("ENTITIES")
             chart.call(slope)
             }
           },
           {init: function(){
-            slope.showCat([ "advocacy", "contraception", "culture"]).catStep([]).hidefilter(false)//.sorted("advocacy")
+            slope.showCat([ "advocacy", "contraception", "culture"]).catStep([]).hidefilter(false).sorted("advocacy")
             chart.call(slope)
             }
           }
