@@ -846,9 +846,8 @@ var networkconfig = {
           n.file_y = n.y;
           n.type = 'who';
 
+
           delete n.label;
-
-
 
           if (n.attributes.crwl)
             _options.innerCircleCount++;

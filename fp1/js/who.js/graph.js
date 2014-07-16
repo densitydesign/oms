@@ -22,7 +22,7 @@
       _options,
       _views,
       views,
-      colorScale = d3.scale.category10().domain(["0","1","2","3","4","5","6","7","8","9","10"]).range(["#CA587B","#75D252","#7873CB","#46595E","#85D2AD","#C7A378","#CD5633","#CDBF45","#A7AFC9","#547135","#CB54C6"]),
+      colorScale = d3.scale.category10().domain(["0","1","2","3","4","5","6","7","8","9","10","11"]).range(["#CA587B","#75D252","#7873CB","#46595E","#85D2AD","#C7A378","#CD5633","#CDBF45","#A7AFC9","#547135","#CB54C6","#623726"]),
       queryPosition,
       bis1 = {nodes : [], edges: []},
       bis2 = {nodes : [], edges: []},
@@ -868,6 +868,7 @@ var networkconfig = {
 
           if (n.attributes.crwl)
             _options.innerCircleCount++;
+
         });
 
         graph.edges.forEach(function(e) {
