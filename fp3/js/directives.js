@@ -766,7 +766,7 @@ angular.module('who.directives', [])
 
         var step = [
           {init: function(){
-            slope.showCat(["CORPUS"]).catStep([]).hidefilter(false).sorted("CORPUS")
+            slope.showCat(["CORPUS"]).catStep([]).hidefilter(false).sorted(0)
             chart.call(slope)
             }
           },
