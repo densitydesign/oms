@@ -32,7 +32,7 @@ angular.module('who.controllers', [])
       // {id:"fp_text_intro",label:"The Issue analysis",nav: true, step:false,template:"sub-chapter", protocol: false},
       // {id:"fp_text_slope",label:"The Issue analysis", nav: false, step:true, template:"viz-step-slope", protocol: 'fp_text'},  
       {id:"fp_wiki_network_intro",label:"Family Planning and its sisters",nav: true, step:false,template:"sub-chapter", protocol: false},
-      {id:"fp_wiki_network_fp",label: "Family Planning and its sisters",nav: false,step:true, template:"viz-step", protocol: 'fp_wikinetwork', legend:true},
+      {id:"fp_wiki_network_fp",label: "Family Planning and its sisters",nav: false,step:true, template:"viz-step", protocol: 'fp_wikinetwork', legend:false},
       {id:"fp_wiki_edits_intro",label:"The geology of Wikipedia", nav: true, step:false, template:"sub-chapter", protocol: false},
       {id:"fp_wiki_edits_stacked",label:"The geology of Wikipedia", nav: false, step:false, template:"wiki-edits", protocol: 'fp_wikiedits'},
       //{id:"fp_wiki_anon_intro",label:"Hidden behind an IP address",nav: true, step:false, template:"sub-chapter", protocol: false},
