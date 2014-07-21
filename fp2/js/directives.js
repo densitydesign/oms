@@ -2235,6 +2235,8 @@ angular.module('who.directives', [])
 			var v=$(this).html().toLowerCase()
 			console.log(v)
 			//v=$( "input:radio:checked" ).val()
+            $(".toggle-wiki .active").removeClass("active")
+            $(this).addClass("active")
 			fpChart.change(v);
 			bcChart.change(v);
 		});
