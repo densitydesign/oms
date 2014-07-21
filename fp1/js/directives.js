@@ -2478,8 +2478,8 @@ angular.module('who.directives', [])
   
 		$('.wiki-stacked').on("click","button", function() {
 			var v=$(this).html().toLowerCase()
-			console.log(v)
-			//v=$( "input:radio:checked" ).val()
+			$(".wiki-toggle .active").removeClass("active")
+            $(this).addClass("active")
 			fpChart.change(v);
 			bcChart.change(v);
 		});
