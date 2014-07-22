@@ -26,14 +26,17 @@
           .attr('height', height)
         }
 
-        console.log(data)
 
         var legend = chart.selectAll('a').data(data, function(d){return d.name})
 
         legend
               .attr("xlink:href", function(d){return url + d.revid + "#" + d.name})
               .attr("target", "_blank")
-              .select("text").text(function(d){return d.label.replace(/(<([^>]+)>)/ig,"")})
+              .select("text").text(function(d){
+                var txt = d.label.replace(/(<([^>]+)>)/ig,"")
+                txt = txt.length > 30 ? txt.substring(0,30) + "..." : txt
+                return txt
+              })
               //.attr("x", 0)
               .attr("text-decoration",null)
               .attr("y", function(d){return d.y})
@@ -48,15 +51,19 @@
               .attr("target", "_blank")
               .append("text")
               .attr("class", function(d){return d.name})
-              .attr("x", 0)
+              .attr("x", width)
               .attr("y", function(d){return d.y})
               .attr("dy", "0.8em")
               .attr("font-family", "Georgia, serif")
               .attr("font-size", "9pt")
               .attr("text-decoration",null)
-              //.attr("text-anchor", "end")
+              .attr("text-anchor", "end")
               .attr("font-weight", function(d){return d.group == 1 ? "bold" : "normal"})
-              .text(function(d){return d.label.replace(/(<([^>]+)>)/ig,"")})
+              .text(function(d){
+                var txt = d.label.replace(/(<([^>]+)>)/ig,"")
+                txt = txt.length > 30 ? txt.substring(0,30) + "..." : txt
+                return txt
+              })
               .filter(function(d){
                 return d.type == "dead"
               })
