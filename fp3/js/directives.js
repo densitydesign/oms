@@ -771,7 +771,7 @@ angular.module('who.directives', [])
             }
           },
           {init: function(){
-            slope.showCat([ "advocacy", "contraception", "culture"]).catStep([]).hidefilter(false).sorted("advocacy")
+            slope.showCat([ "advocacy", "contraception", "culture"]).catStep([]).hidefilter(false)//.sorted("advocacy")
             chart.call(slope)
             }
           }

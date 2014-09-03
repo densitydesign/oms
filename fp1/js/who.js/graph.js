@@ -502,7 +502,7 @@
                 _s.unbind("clickNode");
                 _s.graph.nodes().forEach(function(node, i, a) {
 
-                var labelToShow = getMinAttribute(_dbGraph, 'in', 3, attribute, value)
+                var labelToShow = getMinAttribute(_dbGraph, 'in', 6, attribute, value)
  
               if (node.attributes[attribute] === value){
                  //node.label = node.file_label;
@@ -1342,7 +1342,7 @@ var networkconfig = {
           filter: null,
           settings: {
             drawEdges: true,
-            labelThreshold: 8,
+            labelThreshold: 5,
             enableCamera: true,
             mouseEnabled : true,
             touchEnabled : true

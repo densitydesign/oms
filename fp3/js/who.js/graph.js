@@ -95,7 +95,7 @@
 
       context.fillText(
         node.label,
-        Math.round(node[prefix + 'x'] - (((node.label.length || node.file_label.length )* fontSize)/4) ),
+        Math.round(node[prefix + 'x'] - (((node.label ? node.label.length : node.file_label.length )* fontSize)/4) ),
         Math.round(node[prefix + 'y'] + fontSize + node.size)
       );
     }
@@ -427,6 +427,7 @@
 
                if (node.attributes[attribute] === value){
 
+                  
                   node.label = node.file_label;
                  node.target_color = "#C6C6C6"; 
 
@@ -486,8 +487,8 @@
                 _s.unbind("clickNode");
                 _s.graph.nodes().forEach(function(node, i, a) {
 
-                var labelToShow = getMinAttribute(_dbGraph, 'in', 3, attribute, value)
- 
+                var labelToShow = getMinAttribute(_dbGraph, 'in', 6, attribute, value)
+              
               if (node.attributes[attribute] === value){
                  //node.label = node.file_label;
                  if(_s.graph.degree(node.id, 'in') >= labelToShow )
@@ -1312,7 +1313,7 @@ var networkconfig = {
           filter: null,
           settings: {
             drawEdges: true,
-            labelThreshold: 8,
+            labelThreshold: 6,
             enableCamera: true,
             mouseEnabled : true,
             touchEnabled : true
