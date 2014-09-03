@@ -1545,7 +1545,7 @@ angular.module('who.directives', [])
                                           scope.langsArr.push(d.key);
                                       }
                                       //ealstify list
-                                      elastify();
+                                      scope.elastify();
                                       scope.loadImages();
                                   }
                                   else {
@@ -1562,7 +1562,7 @@ angular.module('who.directives', [])
 
                                       }
                                       //	else{
-                                      elastify();
+                                      scope.elastify();
                                       scope.loadImages();
                                       //	}
                                   }
@@ -1596,13 +1596,13 @@ angular.module('who.directives', [])
                       function loadWhole() {
 
                           scope.langsArr = allLangs;
-                          elastify();
+                          scope.elastify();
                           scope.loadImages();
                           scope.langsArr = [];
 
                       }
 
-                      function elastify() {
+                     scope.elastify = function() {
                           var dt;
                           if (!scope.langsArr.length)  dt = rows.filter(function (e) {
                               return allLangs.indexOf(e.lang) >= 0
@@ -1741,6 +1741,25 @@ angular.module('who.directives', [])
                       }
 
 
+
+                      var removeDuplicatesInPlace = function (arr) {
+                          var i, j, cur, found;
+                          for (i = arr.length - 1; i >= 0; i--) {
+                              cur = arr[i];
+                              found = false;
+                              for (j = i - 1; !found && j >= 0; j--) {
+                                  if (cur.image === arr[j].image) {
+                                      if (i !== j) {
+                                          arr.splice(i, 1);
+                                      }
+                                      found = true;
+                                  }
+                              }
+                          }
+                          return arr;
+                      };
+
+
                       scope.loadImages = function () {
 
                           $(imgsContainer).empty();
@@ -1763,6 +1782,10 @@ angular.module('who.directives', [])
                               })
 
                           if (whole) scope.langsArr = [];
+
+                          console.log(currArray)
+                          currArray=removeDuplicatesInPlace(currArray)
+
 
                           count = currArray.length;
                           if (count <= paginate) load = count
@@ -1860,7 +1883,7 @@ angular.module('who.directives', [])
                           if (!scope.tagsArr.length) loadWhole()
                           else {
                               scope.langsArr = [];
-                              elastify();
+                              scope.elastify();
                               scope.loadImages();
                           }
                       })
@@ -1870,7 +1893,7 @@ angular.module('who.directives', [])
                           scope.tagsArr = []
                           if (!scope.langsArr.length) loadWhole()
                           else {
-                              elastify();
+                              scope.elastify();
                               scope.loadImages();
                           }
                       })
@@ -1954,7 +1977,7 @@ angular.module('who.directives', [])
                   scope.tagsArr.forEach(function (e, i) {
                       d3.selectAll("." + e.replace(/\s/g, '_')).classed("sel", true);
                   })
-
+                 scope.elastify();
                   scope.loadImages();
               }
           else if(scope.first) scope.first=false;
