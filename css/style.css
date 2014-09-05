@@ -1032,6 +1032,7 @@ ol li
 	font-family:'Montserrat';
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	text-align: left;
 }
 
 a {
