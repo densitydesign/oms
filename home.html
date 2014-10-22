@@ -15,12 +15,12 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target=".nav">
   <!-- Fixed navbar -->
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav nav-justified">
           <li><a href="#intro">about</a></li>
           <li><a href="#case-studies">case studies</a></li>
           <li><a href="#theory">theory</a></li>
@@ -52,6 +52,7 @@
         </div>
       </div>
     </div>
+   
     <div class="container-fluid" id="case-studies">
       <div class="row section-text-home">
         <h3>case studies</h3>
@@ -59,26 +60,26 @@
         <div class="row">
           <div class="col-md-6 col-sm-12 case-conteiner">
             <a href="fp1">
-            <div class="col-md-12 col-sm-12  case-studies-small" id="fp">
-              <div class="case-studies-text-small">
-                <h1>Family Planning</h1>
+              <div class="col-md-12 col-sm-12  case-studies-small" id="fp1">
+                <div class="case-studies-text-small">
+                  <h1>Family Planning</h1>
+                </div>
               </div>
-            </div>
-          </a>
-          <a href="fp2">
-            <div class="col-md-6 col-sm-6  case-studies-small" id="fp-wiki">
-              <div class="case-studies-text-smaller">
-                <h1>Family Planning On Wikipedia</h1>
+            </a>
+            <a href="fp2">
+              <div class="col-md-6 col-sm-6  case-studies-small" id="fp-wiki">
+                <div class="case-studies-text-smaller">
+                  <h1>Family Planning On Wikipedia</h1>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
             <a href="fp3">
-            <div class="col-md-6 col-sm-12  case-studies-small" id="fp">
-              <div class="case-studies-text-smaller">
-                <h1>Socio-economic focus on Family Planning</h1>
+              <div class="col-md-6 col-sm-12  case-studies-small" id="fp">
+                <div class="case-studies-text-smaller">
+                  <h1>Socio-economic focus on Family Planning</h1>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
           </div>
           <a href="caesareansection">
             <div class="col-md-6 col-sm-12  case-studies" id="cs">
@@ -100,9 +101,9 @@
               <a href="theory/theory.html#chapter4"><h1>How to observe and recompose Controversies?</h1></a>
               <a href="theory/theory.html#chapter5"><h1>How to give back Controversies to their publics?</h1></a>
             </div>
-
           </div>
         </div>
+      </div>
         <div id="partners">
           <div class="container section-text-home">
             <!-- WHO Org -->
@@ -149,206 +150,156 @@
             <h3>team</h3>
             <hr>
 
-            <!-- First Column  -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <!-- Member1  -->
-              <div class="member">
-                <div class="member-pic"><img src="img/profile.jpg" alt="some_text"></div>
-                <div class="member-details">
-                  <div class="member-text">
-                    Mario Merialdi
-                  </div>
-                  <div class="member-links">
-                    <i class="fa fa-twitter fa-lg"></i>
-                    <i data-toggle="collapse" data-target="#member1" class="fa fa-caret-square-o-down fa-lg"></i>
-                  </div>
-                </div>
-                <div id="member1" class="collapse member-bio">
-                  <h4>Role in the project</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </div>
+            <!-- Member  -->
+            <div class="col-md-6 col-sm-12 col-xs-12 member">
+              <div>
+                <h1>
+                  Mario Merialdi
+                </h1>
+                <h4>Role in the project</h4>
               </div>
-
-              <!-- Member2  -->
-              <div class="member">
-                <div class="member-pic"><img src="img/profile.jpg" alt="some_text"></div>
-                <div class="member-details">
-                  <div class="member-text">
-                    Donato Ricci 
-                  </div>
-                  <div class="member-links">
-                    <i class="fa fa-twitter fa-lg"></i>
-                    <i data-toggle="collapse" data-target="#member2" class="fa fa-caret-square-o-down fa-lg"></i>
-                  </div>
-                </div>
-                <div id="member2" class="collapse member-bio">
-                  <h4>Role in the project</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </div>
+              <div class="member-bio">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ultricies magna. Suspendisse ipsum nisi, consequat eu congue vel, gravida in turpis. Aliquam enim mauris, porta iaculis est sit amet, convallis tincidunt eros. Integer iaculis velit sit amet nulla rhoncus varius. Cras quis faucibus lorem. Nunc imperdiet consequat mauris, eget vestibulum diam. Nam quis dui et augue volutpat ultrices non vitae sem. Integer sed venenatis dolor. Ut at mi condimentum, eleifend purus at, ullamcorper dui.
+                </p>
               </div>
-
-              <!-- Member3  -->
-              <div class="member">
-                <div class="member-pic"><img src="img/profile.jpg" alt="some_text"></div>
-                <div class="member-details">
-                  <div class="member-text">
-                    Azzurra Pini
-                  </div>
-                  <div class="member-links">
-                    <i class="fa fa-twitter fa-lg"></i>
-                    <i data-toggle="collapse" data-target="#member3" class="fa fa-caret-square-o-down fa-lg"></i>
-                  </div>
-                </div>
-                <div id="member3" class="collapse member-bio">
-                  <h4>Role in the project</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Member3  -->
-              <div class="member">
-                <div class="member-pic"><img src="img/profile.jpg" alt="some_text"></div>
-                <div class="member-details">
-                  <div class="member-text">
-                    Daniele Ciminieri
-                  </div>
-                  <div class="member-links">
-                    <i class="fa fa-twitter fa-lg"></i>
-                    <i data-toggle="collapse" data-target="#member3" class="fa fa-caret-square-o-down fa-lg"></i>
-                  </div>
-                </div>
-                <div id="member3" class="collapse member-bio">
-                  <h4>Role in the project</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </div>
-              </div>
-
-
-            </div>
-
-            <!-- Second Column  -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-
-              <!-- Member4  -->
-              <div class="member">
-                <div class="member-pic"><img src="img/profile.jpg" alt="some_text"></div>
-                <div class="member-details">
-                  <div class="member-text">
-                    Asa Kristina Cuzin-Kihl 
-                  </div>
-                  <div class="member-links">
-                    <i class="fa fa-twitter fa-lg"></i>
-                    <i data-toggle="collapse" data-target="#member4" class="fa fa-caret-square-o-down fa-lg"></i>
-                  </div>
-                </div>
-                <div id="member4" class="collapse member-bio">
-                  <h4>Role in the project</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Member5  -->
-              <div class="member">
-                <div class="member-pic"><img src="img/profile.jpg" alt="some_text"></div>
-                <div class="member-details">
-                  <div class="member-text">
-                    Paolo Ciuccarelli
-                  </div>
-                  <div class="member-links">
-                    <i class="fa fa-twitter fa-lg"></i>
-                    <i data-toggle="collapse" data-target="#member5" class="fa fa-caret-square-o-down fa-lg"></i>
-                  </div>
-                </div>
-                <div id="member5" class="collapse member-bio">
-                  <h4>Role in the project</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Member6  -->
-              <div class="member">
-                <div class="member-pic"><img src="img/profile.jpg" alt="some_text"></div>
-                <div class="member-details">
-                  <div class="member-text">
-                    Matteo Azzi
-                  </div>
-                  <div class="member-links">
-                    <i class="fa fa-twitter fa-lg"></i>
-                    <i data-toggle="collapse" data-target="#member6" class="fa fa-caret-square-o-down fa-lg"></i>
-                  </div>
-                </div>
-                <div id="member6" class="collapse member-bio">
-                  <h4>Role in the project</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </div>
+              <div class="member-links">
+                <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-envelope fa-lg"></i>
               </div>
             </div>
 
-            <!-- Third Column  -->
-            <div class="col-md-4 col-sm-6 col-xs-12">
-
-              <!-- Member7  -->
-              <div class="member">
-                <div class="member-pic"><img src="img/profile.jpg" alt="some_text"></div>
-                <div class="member-details">
-                  <div class="member-text">
-                    Ana Pilar Bertran Lazaga
-                  </div>
-                  <div class="member-links">
-                    <i class="fa fa-twitter fa-lg"></i>
-                    <i data-toggle="collapse" data-target="#member7" class="fa fa-caret-square-o-down fa-lg"></i>
-                  </div>
-                </div>
-                <div id="member7" class="collapse member-bio">
-                  <h4>Role in the project</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </div>
+            <!-- Member  -->
+            <div class="col-md-6 col-sm-12 col-xs-12 member">
+              <div>
+                <h1>
+                  ASA KRISTINA CUZIN-KIHL
+                </h1>
+                <h4>Role in the project</h4>
               </div>
-
-              <!-- Member8  -->
-              <div class="member">
-                <div class="member-pic"><img src="img/profile.jpg" alt="some_text"></div>
-                <div class="member-details">
-                  <div class="member-text">
-                    Michele Mauri
-                  </div>
-                  <div class="member-links">
-                    <i class="fa fa-twitter fa-lg"></i>
-                    <i data-toggle="collapse" data-target="#member8" class="fa fa-caret-square-o-down fa-lg"></i>
-                  </div>
-                </div>
-                <div id="member8" class="collapse member-bio">
-                  <h4>Role in the project</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </div>
+              <div class="member-bio">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ultricies magna. Suspendisse ipsum nisi, consequat eu congue vel, gravida in turpis. Aliquam enim mauris, porta iaculis est sit amet, convallis tincidunt eros. Integer iaculis velit sit amet nulla rhoncus varius. Cras quis faucibus lorem. Nunc imperdiet consequat mauris, eget vestibulum diam. Nam quis dui et augue volutpat ultrices non vitae sem. Integer sed venenatis dolor. Ut at mi condimentum, eleifend purus at, ullamcorper dui.
+                </p>
               </div>
+              <div class="member-links">
+                <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-envelope fa-lg"></i>
+              </div>
+            </div>
 
-              <!-- Member9  -->
-              <div class="member">
-                <div class="member-pic"><img src="img/profile.jpg" alt="some_text"></div>
-                <div class="member-details">
-                  <div class="member-text">
-                    Giorgio Uboldi
-                  </div>
-                  <div class="member-links">
-                    <i class="fa fa-twitter fa-lg"></i>
-                    <i data-toggle="collapse" data-target="#member9" class="fa fa-caret-square-o-down fa-lg"></i>
-                  </div>
-                </div>
-                <div id="member9" class="collapse member-bio">
-                  <h4>Role in the project</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </div>
+            <!-- Member  -->
+            <div class="col-md-6 col-sm-12 col-xs-12 member">
+              <div>
+                <h1>
+                  ANA PILAR BERTRAN LAZAGA
+                </h1>
+                <h4>Role in the project</h4>
+              </div>
+              <div class="member-bio">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ultricies magna. Suspendisse ipsum nisi, consequat eu congue vel, gravida in turpis. Aliquam enim mauris, porta iaculis est sit amet, convallis tincidunt eros. Integer iaculis velit sit amet nulla rhoncus varius. Cras quis faucibus lorem. Nunc imperdiet consequat mauris, eget vestibulum diam. Nam quis dui et augue volutpat ultrices non vitae sem. Integer sed venenatis dolor. Ut at mi condimentum, eleifend purus at, ullamcorper dui.
+                </p>
+              </div>
+              <div class="member-links">
+                <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-envelope fa-lg"></i>
+              </div>
+            </div>
+
+            <!-- Member  -->
+            <div class="col-md-6 col-sm-12 col-xs-12 member">
+              <div>
+                <h1>
+                  Donato Ricci
+                </h1>
+                <h4>Role in the project</h4>
+              </div>
+              <div class="member-bio">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ultricies magna. Suspendisse ipsum nisi, consequat eu congue vel, gravida in turpis. Aliquam enim mauris, porta iaculis est sit amet, convallis tincidunt eros. Integer iaculis velit sit amet nulla rhoncus varius. Cras quis faucibus lorem. Nunc imperdiet consequat mauris, eget vestibulum diam. Nam quis dui et augue volutpat ultrices non vitae sem. Integer sed venenatis dolor. Ut at mi condimentum, eleifend purus at, ullamcorper dui.
+                </p>
+              </div>
+              <div class="member-links">
+                <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-envelope fa-lg"></i>
+              </div>
+            </div>
+
+            <!-- Member  -->
+            <div class="col-md-6 col-sm-12 col-xs-12 member">
+              <div>
+                <h1>
+                  MICHELE MAURI
+                </h1>
+                <h4>Role in the project</h4>
+              </div>
+              <div class="member-bio">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ultricies magna. Suspendisse ipsum nisi, consequat eu congue vel, gravida in turpis. Aliquam enim mauris, porta iaculis est sit amet, convallis tincidunt eros. Integer iaculis velit sit amet nulla rhoncus varius. Cras quis faucibus lorem. Nunc imperdiet consequat mauris, eget vestibulum diam. Nam quis dui et augue volutpat ultrices non vitae sem. Integer sed venenatis dolor. Ut at mi condimentum, eleifend purus at, ullamcorper dui.
+                </p>
+              </div>
+              <div class="member-links">
+                <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-envelope fa-lg"></i>
+              </div>
+            </div>
+
+            <!-- Member  -->
+            <div class="col-md-6 col-sm-12 col-xs-12 member">
+              <div>
+                <h1>
+                  MATTEO AZZI
+                </h1>
+                <h4>Role in the project</h4>
+              </div>
+              <div class="member-bio">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ultricies magna. Suspendisse ipsum nisi, consequat eu congue vel, gravida in turpis. Aliquam enim mauris, porta iaculis est sit amet, convallis tincidunt eros. Integer iaculis velit sit amet nulla rhoncus varius. Cras quis faucibus lorem. Nunc imperdiet consequat mauris, eget vestibulum diam. Nam quis dui et augue volutpat ultrices non vitae sem. Integer sed venenatis dolor. Ut at mi condimentum, eleifend purus at, ullamcorper dui.
+                </p>
+              </div>
+              <div class="member-links">
+                <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-envelope fa-lg"></i>
+              </div>
+            </div>
+
+            <!-- Member  -->
+            <div class="col-md-6 col-sm-12 col-xs-12 member">
+              <div>
+                <h1>
+                  AZZURRA PINI
+                </h1>
+                <h4>Role in the project</h4>
+              </div>
+              <div class="member-bio">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ultricies magna. Suspendisse ipsum nisi, consequat eu congue vel, gravida in turpis. Aliquam enim mauris, porta iaculis est sit amet, convallis tincidunt eros. Integer iaculis velit sit amet nulla rhoncus varius. Cras quis faucibus lorem. Nunc imperdiet consequat mauris, eget vestibulum diam. Nam quis dui et augue volutpat ultrices non vitae sem. Integer sed venenatis dolor. Ut at mi condimentum, eleifend purus at, ullamcorper dui.
+                </p>
+              </div>
+              <div class="member-links">
+                <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-envelope fa-lg"></i>
+              </div>
+            </div>
+
+            <!-- Member  -->
+            <div class="col-md-6 col-sm-12 col-xs-12 member">
+              <div>
+                <h1>
+                  DANIELE CIMINIERI
+                </h1>
+                <h4>Role in the project</h4>
+              </div>
+              <div class="member-bio">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ultricies magna. Suspendisse ipsum nisi, consequat eu congue vel, gravida in turpis. Aliquam enim mauris, porta iaculis est sit amet, convallis tincidunt eros. Integer iaculis velit sit amet nulla rhoncus varius. Cras quis faucibus lorem. Nunc imperdiet consequat mauris, eget vestibulum diam. Nam quis dui et augue volutpat ultrices non vitae sem. Integer sed venenatis dolor. Ut at mi condimentum, eleifend purus at, ullamcorper dui.
+                </p>
+              </div>
+              <div class="member-links">
+                <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-envelope fa-lg"></i>
+              </div>
+            </div>
+
+            <!-- Member  -->
+            <div class="col-md-6 col-sm-12 col-xs-12 member">
+              <div>
+                <h1>
+                  Giorgio Uboldi
+                </h1>
+                <h4>Role in the project</h4>
+              </div>
+              <div class="member-bio">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a ultricies magna. Suspendisse ipsum nisi, consequat eu congue vel, gravida in turpis. Aliquam enim mauris, porta iaculis est sit amet, convallis tincidunt eros. Integer iaculis velit sit amet nulla rhoncus varius. Cras quis faucibus lorem. Nunc imperdiet consequat mauris, eget vestibulum diam. Nam quis dui et augue volutpat ultrices non vitae sem. Integer sed venenatis dolor. Ut at mi condimentum, eleifend purus at, ullamcorper dui.
+                </p>
+              </div>
+              <div class="member-links">
+                <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-envelope fa-lg"></i>
               </div>
             </div>
           </div>
