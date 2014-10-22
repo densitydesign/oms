@@ -671,6 +671,15 @@ ul li {
 	padding-top: 180px;
 }
 
+.bg-intro-fp1{
+	background: url(../img/bg_home_FP1.jpg);
+	background-size: cover;
+	width:100%;
+	height:500px;
+	overflow:hidden;
+	padding-top: 180px;
+}
+
 .bg-intro-fp-wiki{
 	background: url(../img/bg_home_fp_wiki.jpg);
 	background-size: cover;
