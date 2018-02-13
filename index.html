@@ -52,7 +52,7 @@
         </div>
       </div>
     </div>
-   
+
     <div class="container-fluid" id="case-studies">
       <div class="row section-text-home">
         <h3>case studies</h3>
@@ -118,7 +118,7 @@
                 </p>
                 <a href="http://www.who.int/en/">
                   <i class="fa fa-external-link-square"> </i>
-                  <div class="link-website">WEBSITE </div> 
+                  <div class="link-website">WEBSITE </div>
                 </a>
               </div>
               <div class="col-md-4 member-bio">
@@ -127,7 +127,7 @@
                 </p>
                 <a href="http://www.medialab.sciences-po.fr/">
                   <i class="fa fa-external-link-square"> </i>
-                  <div class="link-website">WEBSITE </div> 
+                  <div class="link-website">WEBSITE </div>
                 </a>
               </div>
               <div class="col-md-4 member-bio">
@@ -138,12 +138,12 @@
                 </p>
                 <a href="http://www.densitydesign.org/">
                   <i class="fa fa-external-link-square"> </i>
-                  <div class="link-website">WEBSITE </div> 
+                  <div class="link-website">WEBSITE </div>
                 </a>
               </div>
             </div>
           </div>
-        </div>  
+        </div>
         <!-- Team  -->
         <div class="container"  id="team" >
           <div class="row section-text-home">
@@ -340,7 +340,7 @@
         </div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="lib/jquery/dist/jquery.min.js"></script>
+        <script src="lib/jQuery/dist/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
 
@@ -356,7 +356,7 @@
               var href = $.attr(this, 'href');
               $root.animate({
                 scrollTop: $(href).offset().top
-              }, 500, function () {   
+              }, 500, function () {
                 window.location.hash = href;
               });
               return false;
@@ -379,7 +379,7 @@
 
             height=$(this).position().top+4;
 
-            txt = notes[att]; 
+            txt = notes[att];
             $(".section-row").append('<div col-md-2 class="note '+att+'" style="top:'+height+'px">'+txt+'</div>');
           }
         })
